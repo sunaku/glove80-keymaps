@@ -1,0 +1,205 @@
+behaviors {
+
+    //
+    // Home row mods support for natural typing
+    // https://sunaku.github.io/home-row-mods.html
+    //
+    gqt: global-quick-tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "GLOBAL_QUICK_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <160>;
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+    };
+
+    //
+    // Custom shifted pairs for the Engram layout
+    // https://engram.dev/
+    //
+    one: one_and_pipe {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ONE_AND_PIPE";
+        #binding-cells = <0>;
+        bindings = <&kp N1>, <&kp PIPE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    two: two_and_equal {
+        compatible = "zmk,behavior-mod-morph";
+        label = "TWO_AND_EQUAL";
+        #binding-cells = <0>;
+        bindings = <&kp N2>, <&kp EQUAL>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    three: three_and_tilde {
+        compatible = "zmk,behavior-mod-morph";
+        label = "THREE_AND_TILDE";
+        #binding-cells = <0>;
+        bindings = <&kp N3>, <&kp TILDE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    four: four_and_plus {
+        compatible = "zmk,behavior-mod-morph";
+        label = "FOUR_AND_PLUS";
+        #binding-cells = <0>;
+        bindings = <&kp N4>, <&kp PLUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    five: five_and_less_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "FIVE_AND_LESS_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp N5>, <&kp LESS_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    six: six_and_greater_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SIX_AND_GREATER_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp N6>, <&kp GREATER_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    seven: seven_and_caret {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SEVEN_AND_CARET";
+        #binding-cells = <0>;
+        bindings = <&kp N7>, <&kp CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    eight: eight_and_ampersand {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EIGHT_AND_AMPERSAND";
+        #binding-cells = <0>;
+        bindings = <&kp N8>, <&kp AMPERSAND>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    nine: nine_and_percent {
+        compatible = "zmk,behavior-mod-morph";
+        label = "NINE_AND_PERCENT";
+        #binding-cells = <0>;
+        bindings = <&kp N9>, <&kp PERCENT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    zero: zero_and_asterisk {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ZERO_AND_ASTERISK";
+        #binding-cells = <0>;
+        bindings = <&kp N0>, <&kp ASTERISK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    apos: apostrophe_and_left_parenthesis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "APOSTROPHE_AND_LEFT_PARENTHESIS";
+        #binding-cells = <0>;
+        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    dquote: double_quotes_and_right_parenthesis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS";
+        #binding-cells = <0>;
+        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    comma: comma_and_semicolon {
+        compatible = "zmk,behavior-mod-morph";
+        label = "COMMA_AND_SEMICOLON";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp SEMICOLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    period: period_and_colon {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PERIOD_AND_COLON";
+        #binding-cells = <0>;
+        bindings = <&kp PERIOD>, <&kp COLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    question: question_and_exclamation {
+        compatible = "zmk,behavior-mod-morph";
+        label = "QUESTION_AND_EXCLAMATION";
+        #binding-cells = <0>;
+        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    hash: hash_and_dollar {
+        compatible = "zmk,behavior-mod-morph";
+        label = "HASH_AND_DOLLAR";
+        #binding-cells = <0>;
+        bindings = <&kp HASH>, <&kp DOLLAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    at: at_and_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "AT_AND_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&kp AT>, <&kp GRAVE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    slash: slash_and_backslash {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SLASH_AND_BACKSLASH";
+        #binding-cells = <0>;
+        bindings = <&kp SLASH>, <&kp BACKSLASH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+};
+
+macros {
+
+    //
+    // Approximation of Pascal Getreuer's word selection QMK macro
+    // https://getreuer.info/posts/keyboards/select-word/index.html
+    //
+    select_word: select_word {
+        compatible = "zmk,behavior-macro";
+        label = "select_word";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp RIGHT &kp LEFT>
+        , <&macro_press &kp LSHFT>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LCTRL &kp LSHIFT>
+        ;
+    };
+    extend_word: extend_word {
+        compatible = "zmk,behavior-macro";
+        label = "extend_word";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_press &kp LCTRL &kp LSHIFT>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LCTRL &kp LSHIFT>
+        ;
+    };
+    select_line: select_line {
+        compatible = "zmk,behavior-macro";
+        label = "select_line";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp HOME>
+        , <&macro_press &kp LSHIFT>
+        , <&macro_tap &kp END>
+        , <&macro_release &kp LSHIFT>
+        ;
+    };
+    extend_line: extend_line {
+        compatible = "zmk,behavior-macro";
+        label = "extend_line";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_press &kp LSHIFT>
+        , <&macro_tap &kp DOWN &kp HOME &kp END>
+        , <&macro_release &kp LSHIFT>
+        ;
+    };
+
+};

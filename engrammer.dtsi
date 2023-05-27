@@ -1,10 +1,74 @@
-gqt: global-quick-tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "GLOBAL_QUICK_TAP";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <160>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
+behaviors {
+
+    //
+    // Home row mods support for natural typing
+    // https://sunaku.github.io/home-row-mods.html
+    //
+    gqt: global-quick-tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "GLOBAL_QUICK_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <160>;
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+    };
+
+};
+
+macros {
+
+    //
+    // Approximation of Pascal Getreuer's word selection QMK macro
+    // https://getreuer.info/posts/keyboards/select-word/index.html
+    //
+    select_word: select_word {
+        compatible = "zmk,behavior-macro";
+        label = "select_word";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp RIGHT &kp LEFT>
+        , <&macro_press &kp LSHFT>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LCTRL &kp LSHIFT>
+        ;
+    };
+    extend_word: extend_word {
+        compatible = "zmk,behavior-macro";
+        label = "extend_word";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_press &kp LCTRL &kp LSHIFT>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LCTRL &kp LSHIFT>
+        ;
+    };
+    select_line: select_line {
+        compatible = "zmk,behavior-macro";
+        label = "select_line";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp HOME>
+        , <&macro_press &kp LSHIFT>
+        , <&macro_tap &kp END>
+        , <&macro_release &kp LSHIFT>
+        ;
+    };
+    extend_line: extend_line {
+        compatible = "zmk,behavior-macro";
+        label = "extend_line";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_press &kp LSHIFT>
+        , <&macro_tap &kp DOWN &kp HOME &kp END>
+        , <&macro_release &kp LSHIFT>
+        ;
+    };
+
 };

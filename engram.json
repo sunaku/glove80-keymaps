@@ -1,15 +1,14 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1685199564,
+  "date": 1685199631,
   "creator": "",
-  "parent_uuid": "d9ede4ef-a098-4dca-bf24-d1da72cf8cc6",
+  "parent_uuid": "ad00128e-f17e-4f15-83a5-a62f63759bad",
   "firmware_api_version": "1",
-  "title": "Sunaku's Layout v2 (Engrammer)",
-  "notes": "ZMK port of https://sunaku.github.io/ergohaven-remnant-keyboard.html featuring the Engrammer keyboard layout https://sunaku.github.io/engrammer-keyboard-layout.html\n\nNotes:\n- Mouse layer is empty since ZMK doesn't yet support mouse keys.\n- Sticky toggle for Miryoku layers isn't yet available due to ZMK limitation: https://github.com/zmkfirmware/zmk/issues/1299\n- Pascal Getreuer's famous \"Select Word\" macro for QMK isn't yet available for ZMK, so I've approximated it with separate select/extend word/line actions using ZMK macros.  See also https://getreuer.info/posts/keyboards/select-word/index.html\n\nChanges (since v1):\n- Mirror furthest lower thumb key to nearest upper thumb key.\n- Add separate select/extend actions for word/line selection.",
+  "title": "Sunaku's Layout v2 (Engram)",
+  "notes": "ZMK port of https://sunaku.github.io/ergohaven-remnant-keyboard.html but featuring the official Engram layout https://sunaku.github.io/engram-keyboard-layout.html\n\nNotes:\n- Mouse layer is empty since ZMK doesn't yet support mouse keys.\n- Sticky toggle for Miryoku layers isn't yet available due to ZMK limitation: https://github.com/zmkfirmware/zmk/issues/1299\n- Pascal Getreuer's famous \"Select Word\" macro for QMK isn't yet available for ZMK, so I've approximated it with separate select/extend word/line actions using ZMK macros.  See also https://getreuer.info/posts/keyboards/select-word/index.html\n\nChanges (since v1):\n- Mirror furthest lower thumb key to nearest upper thumb key.\n- Add separate select/extend actions for word/line selection.",
   "tags": [
     "sunaku",
-    "engrammer",
     "engram",
     "miryoku",
     "vim",
@@ -124,7 +123,97 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE",
+            "value": "LBKT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&one",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&two",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&three",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&four",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&five",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&six",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&seven",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&eight",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&nine",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&zero",
             "params": []
           }
         ]
@@ -133,109 +222,14 @@
         "value": "&kp",
         "params": [
           {
-            "value": "N1",
+            "value": "RBKT",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N2",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N3",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N4",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N5",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N6",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N7",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N8",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N9",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N0",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "EQUAL",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "BSLH",
-            "params": []
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&kp",
@@ -274,19 +268,19 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "SQT",
+            "value": "&apos",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "SEMI",
+            "value": "&dquote",
             "params": []
           }
         ]
@@ -377,19 +371,19 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "COMMA",
+            "value": "&comma",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "DOT",
+            "value": "&period",
             "params": []
           }
         ]
@@ -551,10 +545,10 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "FSLH",
+            "value": "&question",
             "params": []
           }
         ]
@@ -723,37 +717,32 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
         "params": [
           {
-            "value": "LPAR",
+            "value": "&hash",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "LBKT",
+            "value": "&at",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "RBKT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RPAR",
+            "value": "&slash",
             "params": []
           }
         ]
@@ -5137,6 +5126,6 @@
       }
     ]
   ],
-  "custom_defined_behaviors": "behaviors {\n\n    //\n    // Home row mods support for natural typing\n    // https://sunaku.github.io/home-row-mods.html\n    //\n    gqt: global-quick-tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"GLOBAL_QUICK_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <160>;\n        global-quick-tap;\n        bindings = <&kp>, <&kp>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's word selection QMK macro\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_press &kp LCTRL>\n        , <&macro_tap &kp RIGHT &kp LEFT>\n        , <&macro_press &kp LSHFT>\n        , <&macro_tap &kp RIGHT>\n        , <&macro_release &kp LCTRL &kp LSHIFT>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_press &kp LCTRL &kp LSHIFT>\n        , <&macro_tap &kp RIGHT>\n        , <&macro_release &kp LCTRL &kp LSHIFT>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME>\n        , <&macro_press &kp LSHIFT>\n        , <&macro_tap &kp END>\n        , <&macro_release &kp LSHIFT>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_press &kp LSHIFT>\n        , <&macro_tap &kp DOWN &kp HOME &kp END>\n        , <&macro_release &kp LSHIFT>\n        ;\n    };\n\n};",
+  "custom_defined_behaviors": "behaviors {\n\n    //\n    // Home row mods support for natural typing\n    // https://sunaku.github.io/home-row-mods.html\n    //\n    gqt: global-quick-tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"GLOBAL_QUICK_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <160>;\n        global-quick-tap;\n        bindings = <&kp>, <&kp>;\n    };\n\n    //\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    //\n    one: one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's word selection QMK macro\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_press &kp LCTRL>\n        , <&macro_tap &kp RIGHT &kp LEFT>\n        , <&macro_press &kp LSHFT>\n        , <&macro_tap &kp RIGHT>\n        , <&macro_release &kp LCTRL &kp LSHIFT>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_press &kp LCTRL &kp LSHIFT>\n        , <&macro_tap &kp RIGHT>\n        , <&macro_release &kp LCTRL &kp LSHIFT>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME>\n        , <&macro_press &kp LSHIFT>\n        , <&macro_tap &kp END>\n        , <&macro_release &kp LSHIFT>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_press &kp LSHIFT>\n        , <&macro_tap &kp DOWN &kp HOME &kp END>\n        , <&macro_release &kp LSHIFT>\n        ;\n    };\n\n};",
   "config_parameters": []
 }
