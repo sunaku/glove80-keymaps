@@ -15,6 +15,20 @@ behaviors {
         bindings = <&kp>, <&kp>;
     };
 
+    // enable key-repeat for layer-tap keys (Miryoku's thumb cluster keys)
+    // https://github.com/zmkfirmware/zmk/issues/288#issuecomment-770871538
+    // https://github.com/zmkfirmware/zmk/blob/main/app/dts/behaviors/layer_tap.dtsi
+    // https://discord.com/channels/877392805654306816/937645688244826154/1113213032957489154
+    qlt: behavior_layer_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYER_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <200>; // this is what's added!
+        bindings = <&mo>, <&kp>;
+    };
+
 };
 
 macros {
