@@ -1,12 +1,12 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1685260604,
+  "date": 1685434120,
   "creator": "",
-  "parent_uuid": "1c7b7512-3b0e-48d2-a0fa-b67d7eda02bd",
+  "parent_uuid": "e453017b-2315-4d2b-89c4-4c4921a59005",
   "firmware_api_version": "1",
-  "title": "Sunaku's Layout v3 (Engrammer)",
-  "notes": "ZMK port of https://sunaku.github.io/ergohaven-remnant-keyboard.html featuring the Engrammer keyboard layout https://sunaku.github.io/engrammer-keyboard-layout.html\n\nNotes:\n- Mouse layer is empty since ZMK doesn't yet support mouse keys.\n- Sticky toggle for Miryoku layers isn't yet available due to ZMK limitation: https://github.com/zmkfirmware/zmk/issues/1299\n- Pascal Getreuer's famous \"Select Word\" macro for QMK isn't yet available for ZMK, so I've approximated it with separate select/extend word/line actions using ZMK macros.  See also https://getreuer.info/posts/keyboards/select-word/index.html\n\nChanges (since v2):\n- Select Word macros: quicker, more atomic, less keystrokes.\n- Symbol layer: move .* to upper thumb keys; put ` on index.\n\nChanges (since v1):\n- Mirror furthest lower thumb key to nearest upper thumb key.\n- Add separate select/extend actions for word/line selection.",
+  "title": "Sunaku's Layout v4 (Engrammer)",
+  "notes": "ZMK port of https://sunaku.github.io/ergohaven-remnant-keyboard.html featuring the Engrammer keyboard layout https://sunaku.github.io/engrammer-keyboard-layout.html\n\nNotes:\n- Mouse layer is empty since ZMK doesn't yet support mouse keys.\n- Sticky toggle for Miryoku layers isn't yet available due to ZMK limitation: https://github.com/zmkfirmware/zmk/issues/1299\n- Pascal Getreuer's famous \"Select Word\" macro for QMK isn't yet available for ZMK, so I've approximated it with separate select/extend word/line actions using ZMK macros.  See also https://getreuer.info/posts/keyboards/select-word/index.html\n\nChanges (since v3):\n- Don't mirror lower thumb key on nearest upper one anymore.\n- Put arrow keys on nearest upper thumb keys for convenience.\n- Increase quick-tap-ms to 175ms to avoid same-hand misfires.\n- Symbol layer: prevent &trans for unused keys on left hand.\n- Symbol layer: put *.* on upper thumb keys for piano swipe.\n- Symbol layer: add easier ~/ on Glove80 (corners too hard).",
   "tags": [
     "sunaku",
     "engrammer",
@@ -494,14 +494,10 @@
         ]
       },
       {
-        "value": "&lt",
+        "value": "&kp",
         "params": [
           {
-            "value": 5,
-            "params": []
-          },
-          {
-            "value": "ESC",
+            "value": "UP",
             "params": []
           }
         ]
@@ -510,7 +506,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LCTRL",
+            "value": "DOWN",
             "params": []
           }
         ]
@@ -520,10 +516,14 @@
         "params": []
       },
       {
+        "value": "&lower",
+        "params": []
+      },
+      {
         "value": "&kp",
         "params": [
           {
-            "value": "LGUI",
+            "value": "LEFT",
             "params": []
           }
         ]
@@ -532,20 +532,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "RCTRL",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&lt",
-        "params": [
-          {
-            "value": 8,
-            "params": []
-          },
-          {
-            "value": "RET",
+            "value": "RIGHT",
             "params": []
           }
         ]
@@ -2649,13 +2636,8 @@
         "params": []
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "COMMA",
-            "params": []
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&kp",
@@ -3121,10 +3103,6 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "&trans",
         "params": []
       },
@@ -3141,13 +3119,12 @@
         "params": []
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "C_MUTE",
-            "params": []
-          }
-        ]
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&kp",
@@ -3310,23 +3287,23 @@
     ],
     [
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3661,7 +3638,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PRCNT",
+            "value": "STAR",
             "params": []
           }
         ]
@@ -3731,12 +3708,17 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "TILDE",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -3757,8 +3739,13 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "FSLH",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -4467,15 +4454,6 @@
         "params": []
       },
       {
-        "value": "&rgb_ug",
-        "params": [
-          {
-            "value": "RGB_TOG",
-            "params": []
-          }
-        ]
-      },
-      {
         "value": "&trans",
         "params": []
       },
@@ -4492,7 +4470,11 @@
         "params": []
       },
       {
-        "value": "&none",
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
         "params": []
       },
       {
@@ -5147,6 +5129,6 @@
       }
     ]
   ],
-  "custom_defined_behaviors": "behaviors {\n\n    //\n    // Home row mods support for natural typing\n    // https://sunaku.github.io/home-row-mods.html\n    //\n    gqt: global-quick-tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"GLOBAL_QUICK_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <160>;\n        global-quick-tap;\n        bindings = <&kp>, <&kp>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's SelectWord feature in QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n\n};",
+  "custom_defined_behaviors": "behaviors {\n\n    //\n    // Home row mods support for natural typing\n    // https://sunaku.github.io/home-row-mods.html\n    //\n    gqt: global-quick-tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"GLOBAL_QUICK_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <175>;\n        global-quick-tap;\n        bindings = <&kp>, <&kp>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's SelectWord feature in QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n\n};",
   "config_parameters": []
 }
