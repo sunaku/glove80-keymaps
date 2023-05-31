@@ -1,18 +1,19 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1685487957,
+  "date": 1685574647,
   "creator": "",
-  "parent_uuid": "bada94d0-701c-43d5-818e-c1c532abeb98",
+  "parent_uuid": "83ab1d04-3a50-4caf-b866-d5a4e18342c3",
   "firmware_api_version": "1",
-  "title": "Sunaku's Layout v5 (Engram)",
-  "notes": "ZMK port of https://sunaku.github.io/ergohaven-remnant-keyboard.html but featuring the official Engram layout https://engram.dev/\n\nNotes:\n- Mouse layer is empty since ZMK doesn't yet support mouse keys.\n- Sticky toggle for Miryoku layers isn't yet available due to ZMK limitation: https://github.com/zmkfirmware/zmk/issues/1299\n- Pascal Getreuer's famous \"Select Word\" macro for QMK isn't yet available for ZMK, so I've approximated it with separate select/extend word/line actions using ZMK macros.  See also https://getreuer.info/posts/keyboards/select-word/index.html\n\nChanges (since v4):\n- Enable key-repeat (via tap+hold) for &lt thumb keys that activate Miryoku layers.  Thanks to @bravekarma for guidance on this solution https://discord.com/channels/877392805654306816/937645688244826154/1113213032957489154",
+  "title": "Sunaku's Layout v6 (Engram)",
+  "notes": "Port of my Dactyl Manuform's QMK configuration [1], featuring the Engrammer layout [2] and Miryoku home row mods & layers.\n\n[1] https://sunaku.github.io/ergohaven-remnant-keyboard.html\n[2] https://sunaku.github.io/engrammer-keyboard-layout.html\n\nNotes:\n- Mouse layer is empty since ZMK doesn't yet support mouse keys.\n- Separate select/extend word/line macros approximate Pascal Getreuer's work https://getreuer.info/posts/keyboards/select-word/\n\nChanges (since v5):\n- Add \"Typing\" layer without home row mods to avoid misfires while practicing touch-typing.\n- Add layer locking shortcuts on furthest upper thumb keys + Miryoku thumb keys.  To unlock a locked layer, press the pinky shift key on the same hand as the current Miryoku thumb key, or the two furthest upper thumb keys (if unmapped).\n- Update &lt key-repeat (via double-tap & hold) for Miryoku thumb keys: thanks @dankessler for this elegant solution https://discord.com/channels/877392805654306816/937645688244826154/1113260457122332672",
   "tags": [
     "sunaku",
     "engram",
     "miryoku",
     "vim",
-    "gaming"
+    "gaming",
+    "typing"
   ],
   "unlisted": false,
   "layer_names": [
@@ -25,7 +26,8 @@
     "Symbol",
     "Mouse",
     "System",
-    "Gaming"
+    "Gaming",
+    "Typing"
   ],
   "layers": [
     [
@@ -626,55 +628,79 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&lt",
         "params": [
           {
-            "value": "&qlt 3 BACKSPACE",
+            "value": 3,
+            "params": []
+          },
+          {
+            "value": "BSPC",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&lt",
         "params": [
           {
-            "value": "&qlt 4 DELETE",
+            "value": 4,
+            "params": []
+          },
+          {
+            "value": "DEL",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&lt",
         "params": [
           {
-            "value": "&qlt 5 ESC",
+            "value": 5,
+            "params": []
+          },
+          {
+            "value": "ESC",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&lt",
         "params": [
           {
-            "value": "&qlt 8 ENTER",
+            "value": 8,
+            "params": []
+          },
+          {
+            "value": "RET",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&lt",
         "params": [
           {
-            "value": "&qlt 7 TAB",
+            "value": 7,
+            "params": []
+          },
+          {
+            "value": "TAB",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&lt",
         "params": [
           {
-            "value": "&qlt 6 SPACE",
+            "value": 6,
+            "params": []
+          },
+          {
+            "value": "SPACE",
             "params": []
           }
         ]
@@ -1110,12 +1136,22 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 10,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 9,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&to",
@@ -1127,16 +1163,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 9,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 10,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -1228,28 +1279,58 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 3,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 4,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 5,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 8,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 7,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&tog",
+        "params": [
+          {
+            "value": 6,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -2003,7 +2084,7 @@
         "value": "&to",
         "params": [
           {
-            "value": 3,
+            "value": 0,
             "params": []
           }
         ]
@@ -2550,7 +2631,7 @@
         "value": "&to",
         "params": [
           {
-            "value": 4,
+            "value": 0,
             "params": []
           }
         ]
@@ -3037,7 +3118,7 @@
         "value": "&to",
         "params": [
           {
-            "value": 5,
+            "value": 0,
             "params": []
           }
         ]
@@ -3667,7 +3748,7 @@
         "value": "&to",
         "params": [
           {
-            "value": 6,
+            "value": 0,
             "params": []
           }
         ]
@@ -4054,7 +4135,7 @@
         "value": "&to",
         "params": [
           {
-            "value": 7,
+            "value": 0,
             "params": []
           }
         ]
@@ -4471,7 +4552,7 @@
         "value": "&to",
         "params": [
           {
-            "value": 8,
+            "value": 0,
             "params": []
           }
         ]
@@ -4710,7 +4791,7 @@
         ]
       },
       {
-        "value": "&sk",
+        "value": "&kp",
         "params": [
           {
             "value": "B",
@@ -5092,8 +5173,380 @@
         "value": "&trans",
         "params": []
       }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "I",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "E",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "A",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "H",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "T",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "S",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "N",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "X",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "F",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      }
     ]
   ],
-  "custom_defined_behaviors": "behaviors {\n\n    //\n    // Home row mods support for natural typing\n    // https://sunaku.github.io/home-row-mods.html\n    //\n    gqt: global-quick-tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"GLOBAL_QUICK_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <175>;\n        global-quick-tap;\n        bindings = <&kp>, <&kp>;\n    };\n\n    // enable key-repeat for layer-tap keys (Miryoku's thumb cluster keys)\n    // https://github.com/zmkfirmware/zmk/issues/288#issuecomment-770871538\n    // https://github.com/zmkfirmware/zmk/blob/main/app/dts/behaviors/layer_tap.dtsi\n    // https://discord.com/channels/877392805654306816/937645688244826154/1113213032957489154\n    qlt: behavior_layer_tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"LAYER_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <200>; // this is what's added!\n        bindings = <&mo>, <&kp>;\n    };\n\n    //\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    //\n    one: one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's SelectWord feature in QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n\n};",
+  "custom_defined_behaviors": "behaviors {\n\n    //\n    // Home row mods support for natural typing\n    // https://sunaku.github.io/home-row-mods.html\n    //\n    gqt: global-quick-tap {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"GLOBAL_QUICK_TAP\";\n        #binding-cells = <2>;\n        flavor = \"tap-preferred\";\n        tapping-term-ms = <200>;\n        quick-tap-ms = <175>;\n        global-quick-tap;\n        bindings = <&kp>, <&kp>;\n    };\n\n    //\n    // Key-repeat for layer-tap keys (e.g. Backspace in Miryoku thumb keys)\n    // https://github.com/zmkfirmware/zmk/issues/288#issuecomment-770871538\n    // https://discord.com/channels/877392805654306816/937645688244826154/1113260457122332672\n    //\n    behavior_layer_tap {\n      quick_tap_ms = <200>;\n    };\n\n    //\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    //\n    one: one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's SelectWord feature in QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n\n};",
   "config_parameters": []
 }
