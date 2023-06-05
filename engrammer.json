@@ -1,12 +1,12 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1686000402,
+  "date": 1686012682,
   "creator": "",
-  "parent_uuid": "c81ef478-bb79-4af1-b6ec-5408fbcb4e45",
+  "parent_uuid": "aa0a89b3-6f11-4302-85f6-036c08ee53ad",
   "firmware_api_version": "1",
-  "title": "Sunaku's Layout v7 (Engrammer)",
-  "notes": "Port of my Dactyl Manuform's QMK configuration [1], featuring the Engrammer layout [2] and Miryoku home row mods & layers.\n\n[1] https://sunaku.github.io/ergohaven-remnant-keyboard.html\n[2] https://sunaku.github.io/engrammer-keyboard-layout.html\n\nChanges:\n- Thumb keys now form nearest triangle instead of lower arc.\n- Arrow keys are vertically stacked on furthest thumb keys.\n- Right hand home row mods now use R* keys (except LALT).\n- Caps Word is now configured to allow dash and numbers.\n- Shift home row mods are exempted from typing streak timeout.\n- Thumb keys use balanced hold-tap mode for faster activation.\n- Symbol layer puts percent on nearest upper and semicolon on furthest lower thumb key.\n- System layer puts HSV on inner fingers, effect/speed on outer, sleep/power are stacked.\n\nCaveats:\n- Mouse layer is empty: ZMK doesn't support mouse keys yet.\n- Separate select/extend word/line macros approximate Pascal Getreuer's work https://getreuer.info/posts/keyboards/select-word/",
+  "title": "Sunaku's Layout v8 (Engrammer)",
+  "notes": "Port of my Dactyl Manuform's QMK configuration [1], featuring the Engrammer layout [2] and Miryoku home row mods & layers.\n\n[1] https://sunaku.github.io/ergohaven-remnant-keyboard.html\n[2] https://sunaku.github.io/engrammer-keyboard-layout.html\n\nChanges:\n- Revert thumb keys from triangle (v7) back to lower arc (v6).\n\nCaveats:\n- Mouse layer is empty: ZMK doesn't support mouse keys yet.\n- Separate select/extend word/line macros approximate Pascal Getreuer's work https://getreuer.info/posts/keyboards/select-word/",
   "tags": [
     "sunaku",
     "engrammer",
@@ -496,28 +496,6 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb 5 ESC",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&lower",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RIGHT",
-            "params": []
-          }
-        ]
-      },
-      {
         "value": "&kp",
         "params": [
           {
@@ -527,14 +505,36 @@
         ]
       },
       {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "DOWN",
+            "params": []
+          }
+        ]
+      },
+      {
         "value": "&lower",
         "params": []
       },
       {
-        "value": "Custom",
+        "value": "&lower",
+        "params": []
+      },
+      {
+        "value": "&kp",
         "params": [
           {
-            "value": "&thumb 8 ENTER",
+            "value": "LEFT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RIGHT",
             "params": []
           }
         ]
@@ -652,19 +652,19 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "LEFT",
+            "value": "&thumb 5 ESC",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "DOWN",
+            "value": "&thumb 8 ENTER",
             "params": []
           }
         ]
@@ -1126,7 +1126,25 @@
         "value": "&tog",
         "params": [
           {
-            "value": 4,
+            "value": 9,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&tog",
+        "params": [
+          {
+            "value": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
             "params": []
           }
         ]
@@ -1153,25 +1171,7 @@
         "value": "&tog",
         "params": [
           {
-            "value": 10,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&to",
-        "params": [
-          {
-            "value": 0,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&tog",
-        "params": [
-          {
-            "value": 7,
+            "value": 9,
             "params": []
           }
         ]
@@ -1278,6 +1278,15 @@
         "value": "&tog",
         "params": [
           {
+            "value": 4,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&tog",
+        "params": [
+          {
             "value": 5,
             "params": []
           }
@@ -1287,25 +1296,16 @@
         "value": "&tog",
         "params": [
           {
-            "value": 9,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&tog",
-        "params": [
-          {
-            "value": 9,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&tog",
-        "params": [
-          {
             "value": 8,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&tog",
+        "params": [
+          {
+            "value": 7,
             "params": []
           }
         ]
@@ -2649,7 +2649,7 @@
         "params": []
       },
       {
-        "value": "&none",
+        "value": "&trans",
         "params": []
       },
       {
@@ -2751,7 +2751,7 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3238,11 +3238,11 @@
         "params": []
       },
       {
-        "value": "&none",
+        "value": "&trans",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4090,7 +4090,7 @@
         "params": []
       },
       {
-        "value": "&none",
+        "value": "&trans",
         "params": []
       },
       {
@@ -4164,7 +4164,7 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4602,11 +4602,11 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&none",
+        "value": "&trans",
         "params": []
       },
       {
@@ -5366,13 +5366,8 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LCTRL",
-            "params": []
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&trans",
@@ -5502,8 +5497,13 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LCTRL",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
