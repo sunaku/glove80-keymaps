@@ -4,6 +4,14 @@ behaviors {
         continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
     };
 
+    cappy: caps_word_lock {
+        compatible = "zmk,behavior-mod-morph";
+        label = "CAPS_WORD_LOCK";
+        #binding-cells = <0>;
+        bindings = <&caps_word>, <&kp CAPSLOCK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
     // Miryoku home row mods and thumb key layers
     // https://sunaku.github.io/home-row-mods.html
     homey: home_row_mods {
@@ -16,6 +24,16 @@ behaviors {
         quick-tap-ms = <160>;
         global-quick-tap; // with typing streak
     };
+    pinky: home_row_mods_pinky_gui {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "tap-preferred";
+        label = "HOME_ROW_MODS_PINKY_GUI";
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+        tapping-term-ms = <300>; // extra delay
+        quick-tap-ms = <160>;
+        global-quick-tap;
+    };
     index: home_row_mods_index_shift {
         compatible = "zmk,behavior-hold-tap";
         flavor = "tap-preferred";
@@ -25,16 +43,6 @@ behaviors {
         tapping-term-ms = <200>;
         quick-tap-ms = <160>;
         //global-quick-tap; // no typing streak
-    };
-    pinky: home_row_mods_pinky_gui {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        label = "HOME_ROW_MODS_PINKY_GUI";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-        tapping-term-ms = <320>; // extra delay
-        quick-tap-ms = <160>;
-        global-quick-tap;
     };
     thumb: miryoku_thumb_layer {
         compatible = "zmk,behavior-hold-tap";

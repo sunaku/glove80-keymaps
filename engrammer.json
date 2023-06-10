@@ -1,20 +1,20 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1686012682,
+  "date": 1686448060,
   "creator": "",
-  "parent_uuid": "aa0a89b3-6f11-4302-85f6-036c08ee53ad",
+  "parent_uuid": "40051a98-85e3-4566-bfc9-5f43986ae9f9",
   "firmware_api_version": "1",
-  "title": "Sunaku's Layout v8 (Engrammer)",
-  "notes": "Port of my Dactyl Manuform's QMK configuration [1], featuring the Engrammer layout [2] and Miryoku home row mods & layers.\n\n[1] https://sunaku.github.io/ergohaven-remnant-keyboard.html\n[2] https://sunaku.github.io/engrammer-keyboard-layout.html\n\nChanges:\n- Revert thumb keys from triangle (v7) back to lower arc (v6).\n\nCaveats:\n- Mouse layer is empty: ZMK doesn't support mouse keys yet.\n- Separate select/extend word/line macros approximate Pascal Getreuer's work https://getreuer.info/posts/keyboards/select-word/",
+  "title": "Sunaku's Layout v9 (Engrammer)",
+  "notes": "This is a port of my Dactyl Manuform's QMK keymap [1], featuring the Engrammer layout [2] with Miryoku inspired layers & home row mods [3].\n\n[1] https://sunaku.github.io/ergohaven-remnant-keyboard.html\n[2] https://sunaku.github.io/engrammer-keyboard-layout.html\n[3] https://sunaku.github.io/home-row-mods.html\n\nChanges:\n- Base layer: Swap ` and \\ to bring ` closer (aligned with '). Add &cappy for Shift + CapsWord = CapsLock.\n- Symbol layer: Replace ~/ with ,; for Vim. Swap @ and ~ and ?. Replace ' with `.\n- Miryoku: Triangle thumb cluster (v7) instead of lower arc (v6). Move \"layer unlock\" to any other thumb keys on same hand. Mask unused keys with &none.\n- Cursor layer: CapsLock => ScrollLock. Backspace => Insert. PrintScreen => moved to System layer. Swap SelectLine and ExtendWord. Add downloads shortcut.\n- Function layer: Add Capslock. Fix media control keycodes; add to thumb cluster.\n- Number layer: Add inequalities to thumb cluster.\n- Typing layer is now #10 after Gaming layer #9.",
   "tags": [
     "sunaku",
     "engrammer",
     "engram",
     "miryoku",
     "vim",
-    "typing",
-    "gaming"
+    "gaming",
+    "typing"
   ],
   "unlisted": false,
   "layer_names": [
@@ -27,8 +27,8 @@
     "Symbol",
     "Mouse",
     "System",
-    "Typing",
-    "Gaming"
+    "Gaming",
+    "Typing"
   ],
   "layers": [
     [
@@ -126,7 +126,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE",
+            "value": "BSLH",
             "params": []
           }
         ]
@@ -234,7 +234,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -339,8 +339,13 @@
         ]
       },
       {
-        "value": "&caps_word",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&cappy",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -496,6 +501,15 @@
         ]
       },
       {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb 5 ESC",
+            "params": []
+          }
+        ]
+      },
+      {
         "value": "&kp",
         "params": [
           {
@@ -514,14 +528,6 @@
         ]
       },
       {
-        "value": "&lower",
-        "params": []
-      },
-      {
-        "value": "&lower",
-        "params": []
-      },
-      {
         "value": "&kp",
         "params": [
           {
@@ -535,6 +541,15 @@
         "params": [
           {
             "value": "RIGHT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb 8 ENTER",
             "params": []
           }
         ]
@@ -652,22 +667,12 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb 5 ESC",
-            "params": []
-          }
-        ]
+        "value": "&lower",
+        "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb 8 ENTER",
-            "params": []
-          }
-        ]
+        "value": "&lower",
+        "params": []
       },
       {
         "value": "Custom",
@@ -1126,6 +1131,15 @@
         "value": "&tog",
         "params": [
           {
+            "value": 5,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&tog",
+        "params": [
+          {
             "value": 9,
             "params": []
           }
@@ -1136,24 +1150,6 @@
         "params": [
           {
             "value": 10,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&to",
-        "params": [
-          {
-            "value": 0,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&to",
-        "params": [
-          {
-            "value": 0,
             "params": []
           }
         ]
@@ -1172,6 +1168,15 @@
         "params": [
           {
             "value": 9,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&tog",
+        "params": [
+          {
+            "value": 8,
             "params": []
           }
         ]
@@ -1284,19 +1289,19 @@
         ]
       },
       {
-        "value": "&tog",
+        "value": "&to",
         "params": [
           {
-            "value": 5,
+            "value": 0,
             "params": []
           }
         ]
       },
       {
-        "value": "&tog",
+        "value": "&to",
         "params": [
           {
-            "value": 8,
+            "value": 0,
             "params": []
           }
         ]
@@ -1753,15 +1758,15 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -1769,55 +1774,55 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -1859,35 +1864,35 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -1908,7 +1913,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSPC",
+            "value": "INS",
             "params": []
           }
         ]
@@ -1954,8 +1959,13 @@
         "value": "&kp",
         "params": [
           {
-            "value": "INS",
-            "params": []
+            "value": "LC",
+            "params": [
+              {
+                "value": "K",
+                "params": []
+              }
+            ]
           }
         ]
       },
@@ -1963,7 +1973,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "CAPS",
+            "value": "SLCK",
             "params": []
           }
         ]
@@ -2005,7 +2015,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2062,7 +2072,50 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PSCRN",
+            "value": "LC",
+            "params": [
+              {
+                "value": "L",
+                "params": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RALT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
             "params": []
           }
         ]
@@ -2077,41 +2130,13 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&kp",
+        "value": "&to",
         "params": [
           {
-            "value": "RALT",
+            "value": 0,
             "params": []
           }
         ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
       },
       {
         "value": "&kp",
@@ -2140,7 +2165,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&select_line",
+            "value": "&extend_word",
             "params": []
           }
         ]
@@ -2202,7 +2227,7 @@
             "value": "LC",
             "params": [
               {
-                "value": "H",
+                "value": "J",
                 "params": []
               }
             ]
@@ -2210,23 +2235,7 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2234,12 +2243,38 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -2259,7 +2294,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&extend_word",
+            "value": "&select_line",
             "params": []
           }
         ]
@@ -2274,8 +2309,18 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LC",
+            "params": [
+              {
+                "value": "H",
+                "params": []
+              }
+            ]
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -2306,11 +2351,16 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "F3",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       }
     ],
@@ -2320,15 +2370,15 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2336,47 +2386,47 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2434,27 +2484,27 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2557,7 +2607,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2615,16 +2665,11 @@
         ]
       },
       {
-        "value": "&to",
-        "params": [
-          {
-            "value": 0,
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2637,40 +2682,70 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LT",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GT",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "COMMA",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -2727,27 +2802,7 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2755,14 +2810,44 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "COMMA",
+            "value": "EQUAL",
             "params": []
           }
         ]
@@ -2802,7 +2887,7 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       }
     ],
@@ -2812,15 +2897,15 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2828,47 +2913,47 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -2888,7 +2973,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "K_PREV",
+            "value": "C_PREV",
             "params": []
           }
         ]
@@ -2897,7 +2982,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "K_NEXT",
+            "value": "C_NEXT",
             "params": []
           }
         ]
@@ -2906,7 +2991,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "K_STOP",
+            "value": "C_STOP",
             "params": []
           }
         ]
@@ -2915,33 +3000,33 @@
         "value": "&kp",
         "params": [
           {
-            "value": "K_EJECT",
+            "value": "C_EJECT",
             "params": []
           }
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3002,7 +3087,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SLCK",
+            "value": "CAPS",
             "params": []
           }
         ]
@@ -3044,7 +3129,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3102,16 +3187,11 @@
         ]
       },
       {
-        "value": "&to",
-        "params": [
-          {
-            "value": 0,
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3124,40 +3204,65 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C_PREV",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C_NEXT",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C_MUTE",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -3214,31 +3319,7 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3246,10 +3327,49 @@
         "params": []
       },
       {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
         "value": "&kp",
         "params": [
           {
-            "value": "C_MUTE",
+            "value": "C_PP",
             "params": []
           }
         ]
@@ -3344,15 +3464,15 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3360,22 +3480,12 @@
         "params": []
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "TILDE",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "COMMA",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&kp",
@@ -3408,40 +3518,40 @@
         "value": "&kp",
         "params": [
           {
-            "value": "QMARK",
+            "value": "AT",
             "params": []
           }
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "AT",
+            "value": "TILDE",
             "params": []
           }
         ]
@@ -3468,7 +3578,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SQT",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -3486,33 +3596,33 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE",
+            "value": "QMARK",
             "params": []
           }
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3570,7 +3680,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3610,7 +3720,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3695,41 +3805,22 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&kp",
+        "value": "&to",
         "params": [
           {
-            "value": "RALT",
+            "value": 0,
             "params": []
           }
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&to",
@@ -3745,10 +3836,39 @@
         "params": []
       },
       {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
         "value": "&kp",
         "params": [
           {
-            "value": "TILDE",
+            "value": "RALT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "COMMA",
             "params": []
           }
         ]
@@ -3775,7 +3895,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "FSLH",
+            "value": "SEMI",
             "params": []
           }
         ]
@@ -3808,11 +3928,25 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
         "params": []
       },
       {
@@ -3820,45 +3954,41 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       }
     ],
     [
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3866,15 +3996,15 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -3882,127 +4012,127 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4042,80 +4172,43 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RALT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4128,39 +4221,25 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4168,49 +4247,120 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RALT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
         "params": []
       }
     ],
     [
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4218,15 +4368,15 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4234,59 +4384,59 @@
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4308,35 +4458,35 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4385,11 +4535,11 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4429,11 +4579,11 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -4473,121 +4623,14 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&rgb_ug",
-        "params": [
-          {
-            "value": "RGB_TOG",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "C_SLEEP_MODE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "C_PWR",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "RALT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&to",
-        "params": [
-          {
-            "value": 0,
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LA",
-            "params": [
-              {
-                "value": "PSCRN",
-                "params": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "PAUSE_BREAK",
+            "value": "K_LOCK",
             "params": []
           }
         ]
@@ -4602,184 +4645,90 @@
         ]
       },
       {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C_PWR",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
         "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      }
-    ],
-    [
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "C",
+            "value": "RALT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PSCRN",
             "params": []
           }
         ]
@@ -4788,7 +4737,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "I",
+            "value": "SLCK",
             "params": []
           }
         ]
@@ -4797,212 +4746,56 @@
         "value": "&kp",
         "params": [
           {
-            "value": "E",
+            "value": "PAUSE_BREAK",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "&to",
         "params": [
           {
-            "value": "A",
+            "value": 0,
             "params": []
           }
         ]
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&kp",
+        "value": "&to",
         "params": [
           {
-            "value": "H",
+            "value": 0,
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "&to",
         "params": [
           {
-            "value": "T",
+            "value": 0,
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "S",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "X",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       }
     ],
@@ -5506,8 +5299,395 @@
         ]
       },
       {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
         "value": "&trans",
         "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "I",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "E",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "A",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "H",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "T",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "S",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "N",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "X",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "F",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&to",
+        "params": [
+          {
+            "value": 0,
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -5539,6 +5719,6 @@
       }
     ]
   ],
-  "custom_defined_behaviors": "behaviors {\n\n    behavior_caps_word {\n        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;\n    };\n\n    // Miryoku home row mods and thumb key layers\n    // https://sunaku.github.io/home-row-mods.html\n    homey: home_row_mods {\n        compatible = \"zmk,behavior-hold-tap\";\n        flavor = \"tap-preferred\";\n        label = \"HOME_ROW_MODS\";\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n        tapping-term-ms = <250>;\n        quick-tap-ms = <160>;\n        global-quick-tap; // with typing streak\n    };\n    index: home_row_mods_index_shift {\n        compatible = \"zmk,behavior-hold-tap\";\n        flavor = \"tap-preferred\";\n        label = \"HOME_ROW_MODS_INDEX_SHIFT\";\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n        tapping-term-ms = <200>;\n        quick-tap-ms = <160>;\n        //global-quick-tap; // no typing streak\n    };\n    pinky: home_row_mods_pinky_gui {\n        compatible = \"zmk,behavior-hold-tap\";\n        flavor = \"tap-preferred\";\n        label = \"HOME_ROW_MODS_PINKY_GUI\";\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n        tapping-term-ms = <320>; // extra delay\n        quick-tap-ms = <160>;\n        global-quick-tap;\n    };\n    thumb: miryoku_thumb_layer {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"MIRYOKU_LAYER_TAP_WITH_REPEAT\";\n        #binding-cells = <2>;\n        flavor = \"balanced\"; // faster hold-tap\n        tapping-term-ms = <200>;\n        quick-tap-ms = <200>; // enable repeat\n        bindings = <&mo>, <&kp>;\n    };\n\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    one: one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    // Approximation of Pascal Getreuer's SelectWord feature in QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n\n};",
+  "custom_defined_behaviors": "behaviors {\n\n    behavior_caps_word {\n        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;\n    };\n\n    cappy: caps_word_lock {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"CAPS_WORD_LOCK\";\n        #binding-cells = <0>;\n        bindings = <&caps_word>, <&kp CAPSLOCK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    // Miryoku home row mods and thumb key layers\n    // https://sunaku.github.io/home-row-mods.html\n    homey: home_row_mods {\n        compatible = \"zmk,behavior-hold-tap\";\n        flavor = \"tap-preferred\";\n        label = \"HOME_ROW_MODS\";\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n        tapping-term-ms = <250>;\n        quick-tap-ms = <160>;\n        global-quick-tap; // with typing streak\n    };\n    pinky: home_row_mods_pinky_gui {\n        compatible = \"zmk,behavior-hold-tap\";\n        flavor = \"tap-preferred\";\n        label = \"HOME_ROW_MODS_PINKY_GUI\";\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n        tapping-term-ms = <300>; // extra delay\n        quick-tap-ms = <160>;\n        global-quick-tap;\n    };\n    index: home_row_mods_index_shift {\n        compatible = \"zmk,behavior-hold-tap\";\n        flavor = \"tap-preferred\";\n        label = \"HOME_ROW_MODS_INDEX_SHIFT\";\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n        tapping-term-ms = <200>;\n        quick-tap-ms = <160>;\n        //global-quick-tap; // no typing streak\n    };\n    thumb: miryoku_thumb_layer {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"MIRYOKU_LAYER_TAP_WITH_REPEAT\";\n        #binding-cells = <2>;\n        flavor = \"balanced\"; // faster hold-tap\n        tapping-term-ms = <200>;\n        quick-tap-ms = <200>; // enable repeat\n        bindings = <&mo>, <&kp>;\n    };\n\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    one: one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    // Approximation of Pascal Getreuer's SelectWord feature in QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    select_word: select_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_word\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"select_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-macro\";\n        label = \"extend_line\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n\n};",
   "config_parameters": []
 }
