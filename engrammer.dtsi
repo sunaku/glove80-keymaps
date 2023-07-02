@@ -1,12 +1,26 @@
+///////////////////////////////////////////////////////////////////
+// IMPORTANT: You need to set Firmware Version to "pr16.zephyr-3-2"
+// under Settings > Advanced Settings in the Glove80 Layout Editor!
+///////////////////////////////////////////////////////////////////
+//
+// Sunaku's Layout v10 (Engrammer)
+// https://sunaku.github.io/moergo-glove80-keyboard.html
+//
+// References:
+// https://github.com/caksoylar/zmk-config/blob/stock/config/3x5.dtsi
+//
+
 behaviors {
 
     //
     // Miryoku home row mods and thumb layer keys
     // https://sunaku.github.io/home-row-mods.html
     //
-    #define ALLOW_SAMESIDED_AFTER 5000
-    #define TYPING_STREAK_TIMEOUT 160 // global-quick-tap-ms
-    #define THUMB_LAYERS_TAP_TERM 200
+    #define TYPING_STREAK_TERM 160 // global-quick-tap-ms
+    #define INDEX_TSTREAK_TERM 40  // ...for index finger
+    #define INDEX_TAPPING_TERM 160
+    #define HOMEY_TAPPING_TERM 240
+    #define THUMB_TAPPING_TERM 200
     //
     // Glove80 key positions index for positional hold-tap
     // https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
@@ -50,9 +64,9 @@ behaviors {
         label = "HOME_ROW_MODS_LEFT_HAND";
         flavor = "balanced";
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // requires ZMK 3.2
-        tapping-term-ms = <ALLOW_SAMESIDED_AFTER>;
-        quick-tap-ms = <TYPING_STREAK_TIMEOUT>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_TAPPING_TERM>;
+        quick-tap-ms = <TYPING_STREAK_TERM>;
         global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
@@ -62,9 +76,9 @@ behaviors {
         label = "HOME_ROW_MODS_RIGHT_HAND";
         flavor = "balanced";
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // requires ZMK 3.2
-        tapping-term-ms = <ALLOW_SAMESIDED_AFTER>;
-        quick-tap-ms = <TYPING_STREAK_TIMEOUT>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_TAPPING_TERM>;
+        quick-tap-ms = <TYPING_STREAK_TERM>;
         global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
@@ -74,10 +88,10 @@ behaviors {
         label = "HOME_ROW_MODS_LEFT_INDEX_SHIFT";
         flavor = "balanced";
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // requires ZMK 3.2
-        tapping-term-ms = <ALLOW_SAMESIDED_AFTER>;
-        quick-tap-ms = <TYPING_STREAK_TIMEOUT>;
-        //global-quick-tap; // no typing streak
+        //hold-trigger-on-release; // don't wait for other mods
+        tapping-term-ms = <INDEX_TAPPING_TERM>;
+        quick-tap-ms = <INDEX_TSTREAK_TERM>;
+        global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -86,10 +100,10 @@ behaviors {
         label = "HOME_ROW_MODS_RIGHT_INDEX_SHIFT";
         flavor = "balanced";
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // requires ZMK 3.2
-        tapping-term-ms = <ALLOW_SAMESIDED_AFTER>;
-        quick-tap-ms = <TYPING_STREAK_TIMEOUT>;
-        //global-quick-tap; // no typing streak
+        //hold-trigger-on-release; // don't wait for other mods
+        tapping-term-ms = <INDEX_TAPPING_TERM>;
+        quick-tap-ms = <INDEX_TSTREAK_TERM>;
+        global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -97,17 +111,35 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         label = "MIRYOKU_LAYER_TAP_WITH_REPEAT";
         flavor = "balanced";
-        tapping-term-ms = <THUMB_LAYERS_TAP_TERM>;
-        quick-tap-ms = <TYPING_STREAK_TIMEOUT>; // enable repeat
+        tapping-term-ms = <THUMB_TAPPING_TERM>;
+        quick-tap-ms = <TYPING_STREAK_TERM>; // enable repeat
         //global-quick-tap; // no typing streak
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
 
-    // Shift + CapsWord = CapsLock
-    cappy: caps_word_lock {
+    // Shift + LEFT_PARENTHESIS = LESS_THAN
+    parang_left: left_parenthesis_and_less_than {
         compatible = "zmk,behavior-mod-morph";
-        label = "CAPS_WORD_LOCK";
+        label = "LEFT_PARENTHESIS_AND_LESS_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    // Shift + RIGHT_PARENTHESIS = GREATER_THAN
+    parang_right: right_parenthesis_and_greater_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    // Shift + CapsWord = CapsLock
+    cappy: capsword_and_capslock {
+        compatible = "zmk,behavior-mod-morph";
+        label = "CAPSWORD_AND_CAPSLOCK";
         #binding-cells = <0>;
         bindings = <&caps_word>, <&kp CAPSLOCK>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
