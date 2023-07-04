@@ -1,13 +1,12 @@
-///////////////////////////////////////////////////////////////////
-// IMPORTANT: You need to set Firmware Version to "pr16.zephyr-3-2"
-// under Settings > Advanced Settings in the Glove80 Layout Editor!
-///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+// IMPORTANT: You need to set Firmware Version to "pr16.zephyr-3-2" //
+// under Settings > Advanced Settings in the Glove80 Layout Editor! //
+//////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Layout v10 (Engrammer)
+// Sunaku's Layout v12 featuring Engram(mer) layout and Miryoku system
+//
 // https://sunaku.github.io/moergo-glove80-keyboard.html
-//
-// References:
-// https://github.com/caksoylar/zmk-config/blob/stock/config/3x5.dtsi
+// https://discord.com/channels/877392805654306816/1111469812850380831
 //
 
 behaviors {
@@ -92,6 +91,7 @@ behaviors {
         tapping-term-ms = <INDEX_TAPPING_TERM>;
         quick-tap-ms = <INDEX_TSTREAK_TERM>;
         global-quick-tap; // with typing streak
+        retro-tap;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -104,6 +104,7 @@ behaviors {
         tapping-term-ms = <INDEX_TAPPING_TERM>;
         quick-tap-ms = <INDEX_TSTREAK_TERM>;
         global-quick-tap; // with typing streak
+        retro-tap;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
