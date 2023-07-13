@@ -20,6 +20,7 @@ See [interactive layer map][6] for overview and documentation.
 - for Engrammer layout: https://my.glove80.com/#/layout/user/044c8d8e-9cd6-4702-929a-812ae4d53d37
 - for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/9ea4a427-cfac-455a-8510-b711c6addb87
 
+https://discord.com/channels/877392805654306816/1111469812850380831/1129292734025453628
 ## Installing 🪄
 
 - For the initial flash, use the "bootloader mass storage device mode" method
