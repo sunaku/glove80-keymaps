@@ -17,8 +17,8 @@ See [interactive layer map][6] for overview and documentation.
 
 ## Keymaps 🗺️
 
-- for Engrammer layout: https://my.glove80.com/#/layout/user/783b0cae-3226-4d6d-af5a-f0ec8b943276
-- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/3656697a-d320-42e8-9f9b-897916f041a3
+- for Engrammer layout: https://my.glove80.com/#/layout/user/30de5aba-f2f5-4028-9256-0d189781f0df
+- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/c2660294-835e-4756-a944-6e94fe46256b
 
 ## Installing 🪄
 

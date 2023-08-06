@@ -1,9 +1,9 @@
 //////////////////////////////////////////////////////////////////////
-// IMPORTANT: You need to set Firmware Version to "pr16.zephyr-3-2" //
+// IMPORTANT: You need to set Firmware Version to "pr19.zephyr-3-2" //
 // under Settings > Advanced Settings in the Glove80 Layout Editor! //
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Layout v16 featuring Engram(mer) layout and Miryoku system
+// Sunaku's Layout v17 featuring Engram(mer) layout and Miryoku system
 //
 // https://sunaku.github.io/moergo-glove80-keyboard.html
 // https://discord.com/channels/877392805654306816/1111469812850380831
@@ -35,7 +35,7 @@ behaviors {
     // provides instant modifier activation for keyboard-only usage, so this
     // setting is meant for combined keyboard/mouse usage such as mod-clicks.
     //
-    #define HOMEY_TAPPING_TERM 260 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_TAPPING_TERM 280 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     //
     // INDEX_TAPPING_TERM defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
@@ -332,9 +332,9 @@ macros {
     // Approximation of Pascal Getreuer's SelectWord trick from QMK
     // https://getreuer.info/posts/keyboards/select-word/index.html
     //
-    select_word: select_word {
+    select_word_right: select_word_right {
         compatible = "zmk,behavior-macro";
-        label = "select_word";
+        label = "SELECT_WORD_RIGHT";
         #binding-cells = <0>;
         tap-ms = <0>;
         wait-ms = <0>;
@@ -344,9 +344,9 @@ macros {
         , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>
         ;
     };
-    extend_word: extend_word {
+    extend_word_right: extend_word_right {
         compatible = "zmk,behavior-macro";
-        label = "extend_word";
+        label = "EXTEND_WORD_RIGHT";
         #binding-cells = <0>;
         tap-ms = <0>;
         wait-ms = <0>;
@@ -354,9 +354,9 @@ macros {
         = <&macro_tap &kp LC(LS(RIGHT))>
         ;
     };
-    select_line: select_line {
+    select_line_right: select_line_right {
         compatible = "zmk,behavior-macro";
-        label = "select_line";
+        label = "SELECT_LINE_RIGHT";
         #binding-cells = <0>;
         tap-ms = <0>;
         wait-ms = <0>;
@@ -364,15 +364,86 @@ macros {
         = <&macro_tap &kp HOME &kp LS(END)>
         ;
     };
-    extend_line: extend_line {
+    extend_line_right: extend_line_right {
         compatible = "zmk,behavior-macro";
-        label = "extend_line";
+        label = "EXTEND_LINE_RIGHT";
         #binding-cells = <0>;
         tap-ms = <0>;
         wait-ms = <0>;
         bindings
         = <&macro_tap &kp LS(DOWN) &kp LS(END)>
         ;
+    };
+    select_word_left: select_word_left {
+        compatible = "zmk,behavior-macro";
+        label = "SELECT_WORD_LEFT";
+        #binding-cells = <0>;
+        tap-ms = <0>;
+        wait-ms = <0>;
+        bindings
+        /* = <&macro_tap &kp LC(RIGHT)> */
+        = <&macro_tap &kp LC(LEFT)>
+        , <&macro_wait_time 1> // let cursor move to the next word!
+        , <&macro_tap &kp LC(RIGHT) &kp LC(LS(LEFT))>
+        ;
+    };
+    extend_word_left: extend_word_left {
+        compatible = "zmk,behavior-macro";
+        label = "EXTEND_WORD_LEFT";
+        #binding-cells = <0>;
+        tap-ms = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp LC(LS(LEFT))>
+        ;
+    };
+    select_line_left: select_line_left {
+        compatible = "zmk,behavior-macro";
+        label = "SELECT_LINE_LEFT";
+        #binding-cells = <0>;
+        tap-ms = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp END &kp LS(HOME)>
+        ;
+    };
+    extend_line_left: extend_line_left {
+        compatible = "zmk,behavior-macro";
+        label = "EXTEND_LINE_LEFT";
+        #binding-cells = <0>;
+        tap-ms = <0>;
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp LS(UP) &kp LS(HOME)>
+        ;
+    };
+    select_word: select_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_WORD";
+        #binding-cells = <0>;
+        bindings = <&select_word_right>, <&select_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    extend_word: extend_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXTEND_WORD";
+        #binding-cells = <0>;
+        bindings = <&extend_word_right>, <&extend_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    select_line: select_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_LINE";
+        #binding-cells = <0>;
+        bindings = <&select_line_right>, <&select_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    extend_line: extend_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXTEND_LINE";
+        #binding-cells = <0>;
+        bindings = <&extend_line_right>, <&extend_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
 };
