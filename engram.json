@@ -1,12 +1,12 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1692088223,
+  "date": 1692173976,
   "creator": "",
-  "parent_uuid": "9e910763-c795-4193-bc9f-572cfd8c190d",
+  "parent_uuid": "ef76828d-2733-486f-b922-c111fef43896",
   "firmware_api_version": "1",
-  "title": "Sunaku's Layout v18 (Engram)",
-  "notes": "My Glove80 keymap [1], featuring Arno's Engram 2.0 layout [2] with Miryoku layers & home row mods [3], as discussed on Discord [4].\n\n[1] https://sunaku.github.io/moergo-glove80-keyboard.html\n[2] https://sunaku.github.io/engram-keyboard-layout.html\n[3] https://sunaku.github.io/home-row-mods.html\n[4] https://discord.com/channels/877392805654306816/1111469812850380831\n\nChanges:\n- Miryoku: move ring finger RALT modifiers to upper row to avoid accidental triggers: I tend to hold X/F down when curling my ring fingers compared to when I extend them out to reach Y/W on the upper row.\n- Number layer: replace `<>=` in rightmost column with `kjG` for jumping to line numbers in Vim.\n- Number layer: add `|` on the rightmost bottom corner key for jumping to column numbers in Vim.",
+  "title": "Sunaku's Layout v19 (Engram)",
+  "notes": "My Glove80 keymap [1], featuring Arno's Engram 2.0 layout [2] with Miryoku layers & home row mods [3], as discussed on Discord [4].\n\n[1] https://sunaku.github.io/moergo-glove80-keyboard.html\n[2] https://sunaku.github.io/engram-keyboard-layout.html\n[3] https://sunaku.github.io/home-row-mods.html\n[4] https://discord.com/channels/877392805654306816/1111469812850380831\n\nChanges:\n- Cursor layer: Mirror undo/redo keys on left hand (similar to cut/copy/paste) for right-handed mouse usage.\n- Cursor layer: Move insert to rightmost bottom key and replace with backspace above left arrow on home row.\n- Symbol layer: Wrap parentheses `()` with square brackets `[]` and replace innermost `,` position with `;`.  This splits the `();` sequence apart but still maintains it as an inward roll.  This also establishes Vim's `,;` order for f/F/t/T jump repetition.\n- Function layer: Fix missing Media Player key assignment (on number 6).",
   "tags": [
     "sunaku",
     "engrammer",
@@ -1806,33 +1806,13 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "&kp",
         "params": [
           {
-            "value": "LC",
+            "value": "LS",
             "params": [
               {
-                "value": "LS",
+                "value": "LC",
                 "params": [
                   {
                     "value": "Z",
@@ -1848,10 +1828,60 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LC",
+            "value": "LS",
             "params": [
               {
-                "value": "LS",
+                "value": "LC",
+                "params": [
+                  {
+                    "value": "Y",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LS",
+            "params": [
+              {
+                "value": "LC",
+                "params": [
+                  {
+                    "value": "Z",
+                    "params": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LS",
+            "params": [
+              {
+                "value": "LC",
                 "params": [
                   {
                     "value": "Y",
@@ -1889,12 +1919,18 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LC",
+            "params": [
+              {
+                "value": "Z",
+                "params": []
+              }
+            ]
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -1903,7 +1939,7 @@
             "value": "LC",
             "params": [
               {
-                "value": "X",
+                "value": "Y",
                 "params": []
               }
             ]
@@ -1928,7 +1964,21 @@
         "value": "&kp",
         "params": [
           {
-            "value": "INS",
+            "value": "LC",
+            "params": [
+              {
+                "value": "X",
+                "params": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "BSPC",
             "params": []
           }
         ]
@@ -2356,10 +2406,10 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LC",
+            "value": "LS",
             "params": [
               {
-                "value": "LS",
+                "value": "LC",
                 "params": [
                   {
                     "value": "G",
@@ -2400,8 +2450,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "INS",
+            "params": []
+          }
+        ]
       }
     ],
     [
@@ -3007,8 +3062,13 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C_MEDIA_HOME",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -5809,6 +5869,6 @@
       }
     ]
   ],
-  "custom_defined_behaviors": "//////////////////////////////////////////////////////////////////////\n// IMPORTANT: You need to set Firmware Version to \"pr19.zephyr-3-2\" //\n// under Settings > Advanced Settings in the Glove80 Layout Editor! //\n//////////////////////////////////////////////////////////////////////\n//\n// Sunaku's Layout v18 featuring Engram(mer) layout and Miryoku system\n//\n// https://sunaku.github.io/moergo-glove80-keyboard.html\n// https://discord.com/channels/877392805654306816/1111469812850380831\n//\n\nbehaviors {\n\n    //\n    // Miryoku home row mods and thumb layer keys\n    // https://sunaku.github.io/home-row-mods.html\n    // https://github.com/urob/zmk-config#timeless-homerow-mods\n    //\n    // TYPING_STREAK_TERM defines how long you need to wait (milliseconds)\n    // after typing before you can use home row mods again.  It prevents\n    // unintended activation of home row mods when you're actively typing.\n    //\n    #define TYPING_STREAK_TERM 160 // global-quick-tap-ms\n    //\n    // KEY_REPEATING_TERM defines how much time you have left (milliseconds)\n    // after tapping a key to hold it again in order to make it auto-repeat.\n    //\n    #define KEY_REPEATING_TERM 300 // \"tap then hold\" for key auto-repeat\n    //\n    // HOMEY_TAPPING_TERM defines how long you need to hold (milliseconds)\n    // home row mod keys in order to send their modifiers to the computer\n    // (i.e. \"register\" them) for mod-click mouse usage (e.g. Ctrl-Click).\n    //\n    // NOTE: the \"balanced\" flavor of ZMK hold-tap for home row mods already\n    // provides instant modifier activation for keyboard-only usage, so this\n    // setting is meant for combined keyboard/mouse usage such as mod-clicks.\n    //\n    #define HOMEY_TAPPING_TERM 280 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER\n    //\n    // INDEX_TAPPING_TERM defines how long you need to hold (milliseconds)\n    // index finger keys in order to send their modifiers to the computer\n    // (i.e. \"register\" them) for mod-click mouse usage (e.g. Shift-Click).\n    //\n    // NOTE: the \"tap-preferred\" flavor of ZMK hold-tap for index finger keys\n    // lowers the risk of accidental modifier activation since typing streaks\n    // aren't enforced on them so as not to hinder their speed and dexterity.\n    //\n    #define INDEX_TAPPING_TERM 180\n    //\n    // THUMB_TAPPING_TERM defines how long you need to hold (milliseconds)\n    // a thumb key to activate a layer.  Shorter holds are treated as taps.\n    //\n    #define THUMB_TAPPING_TERM 200\n    //\n    // Glove80 key positions index for positional hold-tap\n    // https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248\n    // https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png\n    //\n    // |------------------------|------------------------|\n    // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |\n    // |                        |                        |\n    // |  0  1  2  3  4         |          5  6  7  8  9 |\n    // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |\n    // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |\n    // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |\n    // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |\n    // | 64 65 66 67 68         |         75 76 77 78 79 |\n    // |                69 52   |   57 74                |\n    // |                 70 53  |  56 73                 |\n    // |                  71 54 | 55 72                  |\n    // |------------------------|------------------------|\n    // | LEFT_HAND_MIRRORED     |    RIGHT_HAND_MIRRORED |\n    // |                        |                        |\n    // |  9  8  7  6  5         |          4  3  2  1  0 |\n    // | 21 20 19 18 17 16      |      15 14 13 12 11 10 |\n    // | 33 32 31 30 29 28      |      27 26 25 24 23 22 |\n    // | 45 44 43 42 41 40      |      39 38 37 36 35 34 |\n    // | 63 62 61 60 59 58      |      51 50 49 48 47 46 |\n    // | 79 78 77 76 75         |         68 67 66 65 64 |\n    // |                74 57   |   52 69                |\n    // |                 73 56  |  53 70                 |\n    // |                  71 54 | 55 72                  |\n    // |------------------------|------------------------|\n    //\n    #define LEFT_HAND_KEYS      \\\n          0  1  2  3  4         \\\n         10 11 12 13 14 15      \\\n         22 23 24 25 26 27      \\\n         34 35 36 37 38 39      \\\n         46 47 48 49 50 51      \\\n         64 65 66 67 68\n    #define RIGHT_HAND_KEYS     \\\n                                           5  6  7  8  9 \\\n                                       16 17 18 19 20 21 \\\n                                       28 29 30 31 32 33 \\\n                                       40 41 42 43 44 45 \\\n                                       58 59 60 61 62 63 \\\n                                          75 76 77 78 79\n    #define THUMB_KEYS          \\\n                        69 52       57 74                \\\n                         70 53     56 73                 \\\n                          71 54   55 72\n    //\n    // Home row mod-tap keys for all except index fingers\n    //\n    homey_left: miryoku_home_row_mods_left_hand {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_LEFT_HAND\";\n        flavor = \"balanced\";\n        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;\n        hold-trigger-on-release; // wait for other home row mods\n        tapping-term-ms = <HOMEY_TAPPING_TERM>;\n        quick-tap-ms = <TYPING_STREAK_TERM>;\n        global-quick-tap; // with typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    homey_right: miryoku_home_row_mods_right_hand {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_RIGHT_HAND\";\n        flavor = \"balanced\";\n        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;\n        hold-trigger-on-release; // wait for other home row mods\n        tapping-term-ms = <HOMEY_TAPPING_TERM>;\n        quick-tap-ms = <TYPING_STREAK_TERM>;\n        global-quick-tap; // with typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    //\n    // Special home row mod-tap keys for the index fingers\n    //\n    index_left: miryoku_home_row_mods_left_index_shift {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_LEFT_INDEX_SHIFT\";\n        flavor = \"tap-preferred\";\n        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;\n        //hold-trigger-on-release; // don't wait for other mods\n        tapping-term-ms = <INDEX_TAPPING_TERM>;\n        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat\n        //global-quick-tap; // no typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    index_right: miryoku_home_row_mods_right_index_shift {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_RIGHT_INDEX_SHIFT\";\n        flavor = \"tap-preferred\";\n        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;\n        //hold-trigger-on-release; // don't wait for other mods\n        tapping-term-ms = <INDEX_TAPPING_TERM>;\n        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat\n        //global-quick-tap; // no typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    //\n    // Thumb cluster hold-tap keys for Miryoku layers\n    //\n    thumb: miryoku_thumb_layer {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"MIRYOKU_LAYER_TAP_WITH_REPEAT\";\n        flavor = \"balanced\";\n        tapping-term-ms = <THUMB_TAPPING_TERM>;\n        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat\n        //global-quick-tap; // no typing streak\n        #binding-cells = <2>;\n        bindings = <&mo>, <&kp>;\n    };\n\n    // Shift + LEFT_PARENTHESIS = LESS_THAN\n    parang_left: left_parenthesis_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"LEFT_PARENTHESIS_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    // Shift + RIGHT_PARENTHESIS = GREATER_THAN\n    parang_right: right_parenthesis_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"RIGHT_PARENTHESIS_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    // Shift + CapsWord = CapsLock\n    cappy: capsword_and_capslock {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"CAPSWORD_AND_CAPSLOCK\";\n        #binding-cells = <0>;\n        bindings = <&caps_word>, <&kp CAPSLOCK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    //\n    // CapsWord - ported from Pascal Getreuer's extension for QMK\n    // https://zmk.dev/docs/behaviors/caps-word\n    // https://getreuer.info/posts/keyboards/caps-word/index.html\n    //\n    behavior_caps_word {\n        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;\n    };\n\n    //\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    //\n    one: engram_one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: engram_two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: engram_three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: engram_four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: engram_five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: engram_six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: engram_seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: engram_eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: engram_nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: engram_zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: engram_apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: engram_double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: engram_comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: engram_period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: engram_question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: engram_hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: engram_at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: engram_slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's SelectWord trick from QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word_right: select_word_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_WORD_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word_right: extend_word_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_WORD_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line_right: select_line_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_LINE_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line_right: extend_line_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_LINE_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n    select_word_left: select_word_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_WORD_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        /* = <&macro_tap &kp LC(RIGHT)> */\n        = <&macro_tap &kp LC(LEFT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(RIGHT) &kp LC(LS(LEFT))>\n        ;\n    };\n    extend_word_left: extend_word_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_WORD_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(LEFT))>\n        ;\n    };\n    select_line_left: select_line_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_LINE_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp END &kp LS(HOME)>\n        ;\n    };\n    extend_line_left: extend_line_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_LINE_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(UP) &kp LS(HOME)>\n        ;\n    };\n    select_word: select_word {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SELECT_WORD\";\n        #binding-cells = <0>;\n        bindings = <&select_word_right>, <&select_word_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EXTEND_WORD\";\n        #binding-cells = <0>;\n        bindings = <&extend_word_right>, <&extend_word_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SELECT_LINE\";\n        #binding-cells = <0>;\n        bindings = <&select_line_right>, <&select_line_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EXTEND_LINE\";\n        #binding-cells = <0>;\n        bindings = <&extend_line_right>, <&extend_line_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};",
+  "custom_defined_behaviors": "//////////////////////////////////////////////////////////////////////\n// IMPORTANT: You need to set Firmware Version to \"pr19.zephyr-3-2\" //\n// under Settings > Advanced Settings in the Glove80 Layout Editor! //\n//////////////////////////////////////////////////////////////////////\n//\n// Sunaku's Layout v19 featuring Engram(mer) layout and Miryoku system\n//\n// https://sunaku.github.io/moergo-glove80-keyboard.html\n// https://discord.com/channels/877392805654306816/1111469812850380831\n//\n\nbehaviors {\n\n    //\n    // Miryoku home row mods and thumb layer keys\n    // https://sunaku.github.io/home-row-mods.html\n    // https://github.com/urob/zmk-config#timeless-homerow-mods\n    //\n    // TYPING_STREAK_TERM defines how long you need to wait (milliseconds)\n    // after typing before you can use home row mods again.  It prevents\n    // unintended activation of home row mods when you're actively typing.\n    //\n    #define TYPING_STREAK_TERM 160 // global-quick-tap-ms\n    //\n    // KEY_REPEATING_TERM defines how much time you have left (milliseconds)\n    // after tapping a key to hold it again in order to make it auto-repeat.\n    //\n    #define KEY_REPEATING_TERM 300 // \"tap then hold\" for key auto-repeat\n    //\n    // HOMEY_TAPPING_TERM defines how long you need to hold (milliseconds)\n    // home row mod keys in order to send their modifiers to the computer\n    // (i.e. \"register\" them) for mod-click mouse usage (e.g. Ctrl-Click).\n    //\n    // NOTE: the \"balanced\" flavor of ZMK hold-tap for home row mods already\n    // provides instant modifier activation for keyboard-only usage, so this\n    // setting is meant for combined keyboard/mouse usage such as mod-clicks.\n    //\n    #define HOMEY_TAPPING_TERM 280 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER\n    //\n    // INDEX_TAPPING_TERM defines how long you need to hold (milliseconds)\n    // index finger keys in order to send their modifiers to the computer\n    // (i.e. \"register\" them) for mod-click mouse usage (e.g. Shift-Click).\n    //\n    // NOTE: the \"tap-preferred\" flavor of ZMK hold-tap for index finger keys\n    // lowers the risk of accidental modifier activation since typing streaks\n    // aren't enforced on them so as not to hinder their speed and dexterity.\n    //\n    #define INDEX_TAPPING_TERM 180\n    //\n    // THUMB_TAPPING_TERM defines how long you need to hold (milliseconds)\n    // a thumb key to activate a layer.  Shorter holds are treated as taps.\n    //\n    #define THUMB_TAPPING_TERM 200\n    //\n    // Glove80 key positions index for positional hold-tap\n    // https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248\n    // https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png\n    //\n    // |------------------------|------------------------|\n    // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |\n    // |                        |                        |\n    // |  0  1  2  3  4         |          5  6  7  8  9 |\n    // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |\n    // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |\n    // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |\n    // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |\n    // | 64 65 66 67 68         |         75 76 77 78 79 |\n    // |                69 52   |   57 74                |\n    // |                 70 53  |  56 73                 |\n    // |                  71 54 | 55 72                  |\n    // |------------------------|------------------------|\n    //\n    #define LEFT_HAND_KEYS      \\\n          0  1  2  3  4         \\\n         10 11 12 13 14 15      \\\n         22 23 24 25 26 27      \\\n         34 35 36 37 38 39      \\\n         46 47 48 49 50 51      \\\n         64 65 66 67 68\n    #define RIGHT_HAND_KEYS     \\\n                                           5  6  7  8  9 \\\n                                       16 17 18 19 20 21 \\\n                                       28 29 30 31 32 33 \\\n                                       40 41 42 43 44 45 \\\n                                       58 59 60 61 62 63 \\\n                                          75 76 77 78 79\n    #define THUMB_KEYS          \\\n                        69 52       57 74                \\\n                         70 53     56 73                 \\\n                          71 54   55 72\n    //\n    // Home row mod-tap keys for all except index fingers\n    //\n    homey_left: miryoku_home_row_mods_left_hand {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_LEFT_HAND\";\n        flavor = \"balanced\";\n        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;\n        hold-trigger-on-release; // wait for other home row mods\n        tapping-term-ms = <HOMEY_TAPPING_TERM>;\n        quick-tap-ms = <TYPING_STREAK_TERM>;\n        global-quick-tap; // with typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    homey_right: miryoku_home_row_mods_right_hand {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_RIGHT_HAND\";\n        flavor = \"balanced\";\n        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;\n        hold-trigger-on-release; // wait for other home row mods\n        tapping-term-ms = <HOMEY_TAPPING_TERM>;\n        quick-tap-ms = <TYPING_STREAK_TERM>;\n        global-quick-tap; // with typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    //\n    // Special home row mod-tap keys for the index fingers\n    //\n    index_left: miryoku_home_row_mods_left_index_shift {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_LEFT_INDEX_SHIFT\";\n        flavor = \"tap-preferred\";\n        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;\n        //hold-trigger-on-release; // don't wait for other mods\n        tapping-term-ms = <INDEX_TAPPING_TERM>;\n        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat\n        //global-quick-tap; // no typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    index_right: miryoku_home_row_mods_right_index_shift {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"HOME_ROW_MODS_RIGHT_INDEX_SHIFT\";\n        flavor = \"tap-preferred\";\n        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;\n        //hold-trigger-on-release; // don't wait for other mods\n        tapping-term-ms = <INDEX_TAPPING_TERM>;\n        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat\n        //global-quick-tap; // no typing streak\n        #binding-cells = <2>;\n        bindings = <&kp>, <&kp>;\n    };\n    //\n    // Thumb cluster hold-tap keys for Miryoku layers\n    //\n    thumb: miryoku_thumb_layer {\n        compatible = \"zmk,behavior-hold-tap\";\n        label = \"MIRYOKU_LAYER_TAP_WITH_REPEAT\";\n        flavor = \"balanced\";\n        tapping-term-ms = <THUMB_TAPPING_TERM>;\n        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat\n        //global-quick-tap; // no typing streak\n        #binding-cells = <2>;\n        bindings = <&mo>, <&kp>;\n    };\n\n    // Shift + LEFT_PARENTHESIS = LESS_THAN\n    parang_left: left_parenthesis_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"LEFT_PARENTHESIS_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    // Shift + RIGHT_PARENTHESIS = GREATER_THAN\n    parang_right: right_parenthesis_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"RIGHT_PARENTHESIS_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    // Shift + CapsWord = CapsLock\n    cappy: capsword_and_capslock {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"CAPSWORD_AND_CAPSLOCK\";\n        #binding-cells = <0>;\n        bindings = <&caps_word>, <&kp CAPSLOCK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n    //\n    // CapsWord - ported from Pascal Getreuer's extension for QMK\n    // https://zmk.dev/docs/behaviors/caps-word\n    // https://getreuer.info/posts/keyboards/caps-word/index.html\n    //\n    behavior_caps_word {\n        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;\n    };\n\n    //\n    // Custom shifted pairs for the Engram layout\n    // https://engram.dev/\n    //\n    one: engram_one_and_pipe {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_ONE_AND_PIPE\";\n        #binding-cells = <0>;\n        bindings = <&kp N1>, <&kp PIPE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    two: engram_two_and_equal {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_TWO_AND_EQUAL\";\n        #binding-cells = <0>;\n        bindings = <&kp N2>, <&kp EQUAL>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    three: engram_three_and_tilde {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_THREE_AND_TILDE\";\n        #binding-cells = <0>;\n        bindings = <&kp N3>, <&kp TILDE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    four: engram_four_and_plus {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_FOUR_AND_PLUS\";\n        #binding-cells = <0>;\n        bindings = <&kp N4>, <&kp PLUS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    five: engram_five_and_less_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_FIVE_AND_LESS_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N5>, <&kp LESS_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    six: engram_six_and_greater_than {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_SIX_AND_GREATER_THAN\";\n        #binding-cells = <0>;\n        bindings = <&kp N6>, <&kp GREATER_THAN>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    seven: engram_seven_and_caret {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_SEVEN_AND_CARET\";\n        #binding-cells = <0>;\n        bindings = <&kp N7>, <&kp CARET>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    eight: engram_eight_and_ampersand {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_EIGHT_AND_AMPERSAND\";\n        #binding-cells = <0>;\n        bindings = <&kp N8>, <&kp AMPERSAND>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    nine: engram_nine_and_percent {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_NINE_AND_PERCENT\";\n        #binding-cells = <0>;\n        bindings = <&kp N9>, <&kp PERCENT>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    zero: engram_zero_and_asterisk {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_ZERO_AND_ASTERISK\";\n        #binding-cells = <0>;\n        bindings = <&kp N0>, <&kp ASTERISK>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    apos: engram_apostrophe_and_left_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_APOSTROPHE_AND_LEFT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    dquote: engram_double_quotes_and_right_parenthesis {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS\";\n        #binding-cells = <0>;\n        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    comma: engram_comma_and_semicolon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_COMMA_AND_SEMICOLON\";\n        #binding-cells = <0>;\n        bindings = <&kp COMMA>, <&kp SEMICOLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    period: engram_period_and_colon {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_PERIOD_AND_COLON\";\n        #binding-cells = <0>;\n        bindings = <&kp PERIOD>, <&kp COLON>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    question: engram_question_and_exclamation {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_QUESTION_AND_EXCLAMATION\";\n        #binding-cells = <0>;\n        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    hash: engram_hash_and_dollar {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_HASH_AND_DOLLAR\";\n        #binding-cells = <0>;\n        bindings = <&kp HASH>, <&kp DOLLAR>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    at: engram_at_and_grave {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_AT_AND_GRAVE\";\n        #binding-cells = <0>;\n        bindings = <&kp AT>, <&kp GRAVE>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    slash: engram_slash_and_backslash {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"ENGRAM_SLASH_AND_BACKSLASH\";\n        #binding-cells = <0>;\n        bindings = <&kp SLASH>, <&kp BACKSLASH>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};\n\nmacros {\n\n    //\n    // Approximation of Pascal Getreuer's SelectWord trick from QMK\n    // https://getreuer.info/posts/keyboards/select-word/index.html\n    //\n    select_word_right: select_word_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_WORD_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(RIGHT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>\n        ;\n    };\n    extend_word_right: extend_word_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_WORD_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(RIGHT))>\n        ;\n    };\n    select_line_right: select_line_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_LINE_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp HOME &kp LS(END)>\n        ;\n    };\n    extend_line_right: extend_line_right {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_LINE_RIGHT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(DOWN) &kp LS(END)>\n        ;\n    };\n    select_word_left: select_word_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_WORD_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        /* = <&macro_tap &kp LC(RIGHT)> */\n        = <&macro_tap &kp LC(LEFT)>\n        , <&macro_wait_time 1> // let cursor move to the next word!\n        , <&macro_tap &kp LC(RIGHT) &kp LC(LS(LEFT))>\n        ;\n    };\n    extend_word_left: extend_word_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_WORD_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LC(LS(LEFT))>\n        ;\n    };\n    select_line_left: select_line_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"SELECT_LINE_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp END &kp LS(HOME)>\n        ;\n    };\n    extend_line_left: extend_line_left {\n        compatible = \"zmk,behavior-macro\";\n        label = \"EXTEND_LINE_LEFT\";\n        #binding-cells = <0>;\n        tap-ms = <0>;\n        wait-ms = <0>;\n        bindings\n        = <&macro_tap &kp LS(UP) &kp LS(HOME)>\n        ;\n    };\n    select_word: select_word {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SELECT_WORD\";\n        #binding-cells = <0>;\n        bindings = <&select_word_right>, <&select_word_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    extend_word: extend_word {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EXTEND_WORD\";\n        #binding-cells = <0>;\n        bindings = <&extend_word_right>, <&extend_word_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    select_line: select_line {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"SELECT_LINE\";\n        #binding-cells = <0>;\n        bindings = <&select_line_right>, <&select_line_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n    extend_line: extend_line {\n        compatible = \"zmk,behavior-mod-morph\";\n        label = \"EXTEND_LINE\";\n        #binding-cells = <0>;\n        bindings = <&extend_line_right>, <&extend_line_left>;\n        mods = <(MOD_LSFT|MOD_RSFT)>;\n    };\n\n};",
   "config_parameters": []
 }
