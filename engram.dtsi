@@ -1,9 +1,10 @@
 //////////////////////////////////////////////////////////////////////
-// IMPORTANT: You need to set Firmware Version to "pr19.zephyr-3-2" //
+// IMPORTANT: You need to set Firmware Version to "pr16.zephyr-3-2" //
+// or any other newer ZMK 3.2 based firmware (such as PR18 or PR19) //
 // under Settings > Advanced Settings in the Glove80 Layout Editor! //
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Layout v19 featuring Engram(mer) layout and Miryoku system
+// Sunaku's Layout v20 featuring Engram(mer) layout and Miryoku system
 //
 // https://sunaku.github.io/moergo-glove80-keyboard.html
 // https://discord.com/channels/877392805654306816/1111469812850380831
