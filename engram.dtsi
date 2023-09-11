@@ -4,7 +4,7 @@
 // under Settings > Advanced Settings in the Glove80 Layout Editor! //
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Layout v20 featuring Engram(mer) layout and Miryoku system
+// Sunaku's Layout v21 featuring Engram(mer) layout and Miryoku system
 //
 // https://sunaku.github.io/moergo-glove80-keyboard.html
 // https://discord.com/channels/877392805654306816/1111469812850380831
@@ -32,7 +32,7 @@ behaviors {
     // home row mod keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
-    // NOTE: the "balanced" flavor of ZMK hold-tap for home row mods already
+    // NOTE: The "balanced" flavor of ZMK hold-tap for home row mods already
     // provides instant modifier activation for keyboard-only usage, so this
     // setting is meant for combined keyboard/mouse usage such as mod-clicks.
     //
@@ -42,9 +42,18 @@ behaviors {
     // index finger keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
-    // NOTE: the "tap-preferred" flavor of ZMK hold-tap for index finger keys
-    // lowers the risk of accidental modifier activation since typing streaks
-    // aren't enforced on them so as not to hinder their speed and dexterity.
+    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
+    // allows faster activation of the Shift modifier (without having to wait
+    // for the modified key to be released as the "balanced" flavor requires).
+    // Typing streaks and the `hold-trigger-on-release` setting are disabled
+    // for the index fingers so as not to hinder their speed and dexterity.
+    //
+    // CAUTION: You'll need to perform inward rolls from pinky->ring->middle
+    // fingers toward the index fingers when activating multiple modifiers
+    // because `hold-trigger-on-release` is disabled for the index fingers.
+    // Otherwise, you may be surprised that the index fingers' modifier is
+    // sent immediately without the rest of your multi-mod chord when you
+    // perform outward rolls from your index fingers toward your pinkies.
     //
     #define INDEX_TAPPING_TERM 180
     //
