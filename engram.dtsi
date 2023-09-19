@@ -1,21 +1,27 @@
 //////////////////////////////////////////////////////////////////////
-// IMPORTANT: You need to set Firmware Version to "pr16.zephyr-3-2" //
-// or any other newer ZMK 3.2 based firmware (such as PR18 or PR19) //
-// under Settings > Advanced Settings in the Glove80 Layout Editor! //
+// NOTE: Use the `#define` settings below to customize this keymap! //
+//////////////////////////////////////////////////////////////////////
+// IMPORTANT: You need to set Firmware Version to "pr19.zephyr-3-2" //
+// under Settings > Advanced Settings in the Glove80 Layout Editor  //
+// if you want to use the `hold-trigger-on-release` feature in ZMK. //
+//////////////////////////////////////////////////////////////////////
+// CAUTION: PR19 firmware is not production quality; it has issues: //
+// https://discord.com/channels/877392805654306816/1137025078979203142
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Layout v21 featuring Engram(mer) layout and Miryoku system
-//
-// https://sunaku.github.io/moergo-glove80-keyboard.html
-// https://discord.com/channels/877392805654306816/1111469812850380831
+// Sunaku's Layout v22 featuring Arno's Engram 2.0 layout and Miryoku
+// - https://sunaku.github.io/moergo-glove80-keyboard.html
+// - https://sunaku.github.io/engram-keyboard-layout.html
+// - https://discord.com/channels/877392805654306816/1111469812850380831
 //
 
 behaviors {
 
-    //
-    // Miryoku home row mods and thumb layer keys
-    // https://sunaku.github.io/home-row-mods.html
-    // https://github.com/urob/zmk-config#timeless-homerow-mods
+    //////////////////////////////////////////////////////////////////
+    // Miryoku layers (thumb keys) and home row mods (non-thumb keys)
+    // - https://sunaku.github.io/home-row-mods.html
+    // - https://github.com/urob/zmk-config#timeless-homerow-mods
+    //////////////////////////////////////////////////////////////////
     //
     // TYPING_STREAK_TERM defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
@@ -32,21 +38,17 @@ behaviors {
     // home row mod keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
-    // NOTE: The "balanced" flavor of ZMK hold-tap for home row mods already
-    // provides instant modifier activation for keyboard-only usage, so this
-    // setting is meant for combined keyboard/mouse usage such as mod-clicks.
+    #define HOMEY_TAPPING_TERM 260 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     //
-    #define HOMEY_TAPPING_TERM 280 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for the pinky, ring, and middle fingers (which are assigned to Super,
+    // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
+    //
+    #define HOMEY_HOLDING_TYPE "tap-preferred"
     //
     // INDEX_TAPPING_TERM defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
-    //
-    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
-    // allows faster activation of the Shift modifier (without having to wait
-    // for the modified key to be released as the "balanced" flavor requires).
-    // Typing streaks and the `hold-trigger-on-release` setting are disabled
-    // for the index fingers so as not to hinder their speed and dexterity.
     //
     // CAUTION: You'll need to perform inward rolls from pinky->ring->middle
     // fingers toward the index fingers when activating multiple modifiers
@@ -57,14 +59,34 @@ behaviors {
     //
     #define INDEX_TAPPING_TERM 180
     //
+    // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for index fingers (which Miryoku assigns to Shift) on home row keys.
+    //
+    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
+    // allows faster activation of the Shift modifier (without having to wait
+    // for the modified key to be released as the "balanced" flavor requires).
+    // Typing streaks and the `hold-trigger-on-release` setting are disabled
+    // for the index fingers so as not to hinder their speed and dexterity.
+    //
+    #define INDEX_HOLDING_TYPE "tap-preferred"
+    //
     // THUMB_TAPPING_TERM defines how long you need to hold (milliseconds)
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
     #define THUMB_TAPPING_TERM 200
     //
+    // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for the thumbs (which are assigned to 6 layers in the Miryoku system).
+    //
+    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+    // activation for the symbol layer (if the tapped symbol key is released
+    // while the thumb layer key is still held down) for quicker programming.
+    //
+    #define THUMB_HOLDING_TYPE "balanced"
+    //
     // Glove80 key positions index for positional hold-tap
-    // https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
-    // https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
+    // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
+    // - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
     //
     // |------------------------|------------------------|
     // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
@@ -104,7 +126,7 @@ behaviors {
     homey_left: miryoku_home_row_mods_left_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_LEFT_HAND";
-        flavor = "balanced";
+        flavor = HOMEY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_TAPPING_TERM>;
@@ -116,7 +138,7 @@ behaviors {
     homey_right: miryoku_home_row_mods_right_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_RIGHT_HAND";
-        flavor = "balanced";
+        flavor = HOMEY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_TAPPING_TERM>;
@@ -131,7 +153,7 @@ behaviors {
     index_left: miryoku_home_row_mods_left_index_shift {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_LEFT_INDEX_SHIFT";
-        flavor = "tap-preferred";
+        flavor = INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <INDEX_TAPPING_TERM>;
@@ -143,7 +165,7 @@ behaviors {
     index_right: miryoku_home_row_mods_right_index_shift {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_RIGHT_INDEX_SHIFT";
-        flavor = "tap-preferred";
+        flavor = INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <INDEX_TAPPING_TERM>;
@@ -158,7 +180,7 @@ behaviors {
     thumb: miryoku_thumb_layer {
         compatible = "zmk,behavior-hold-tap";
         label = "MIRYOKU_LAYER_TAP_WITH_REPEAT";
-        flavor = "balanced";
+        flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_TAPPING_TERM>;
         quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat
         //global-quick-tap; // no typing streak
@@ -195,8 +217,8 @@ behaviors {
 
     //
     // CapsWord - ported from Pascal Getreuer's extension for QMK
-    // https://zmk.dev/docs/behaviors/caps-word
-    // https://getreuer.info/posts/keyboards/caps-word/index.html
+    // - https://zmk.dev/docs/behaviors/caps-word
+    // - https://getreuer.info/posts/keyboards/caps-word/index.html
     //
     behavior_caps_word {
         continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
@@ -204,7 +226,8 @@ behaviors {
 
     //
     // Custom shifted pairs for the Engram layout
-    // https://engram.dev/
+    // - https://engram.dev/
+    // - https://sunaku.github.io/engram-keyboard-layout.html
     //
     one: engram_one_and_pipe {
         compatible = "zmk,behavior-mod-morph";
@@ -337,10 +360,17 @@ behaviors {
 
 macros {
 
+    //////////////////////////////////////////////////////////////////
+    // Approximation of Pascal Getreuer's Select Word macro from QMK
+    // - https://getreuer.info/posts/keyboards/select-word/index.html
+    //////////////////////////////////////////////////////////////////
     //
-    // Approximation of Pascal Getreuer's SelectWord trick from QMK
-    // https://getreuer.info/posts/keyboards/select-word/index.html
+    // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+    // after moving the cursor before it selects a word.  A larger delay
+    // may allow the macro to move to the next word upon each invocation.
     //
+    #define SELECT_WORD_DELAY 10
+
     select_word_right: select_word_right {
         compatible = "zmk,behavior-macro";
         label = "SELECT_WORD_RIGHT";
@@ -349,7 +379,7 @@ macros {
         wait-ms = <0>;
         bindings
         = <&macro_tap &kp LC(RIGHT)>
-        , <&macro_wait_time 1> // let cursor move to the next word!
+        , <&macro_wait_time SELECT_WORD_DELAY> // let cursor move to the next word!
         , <&macro_tap &kp LC(LEFT) &kp LC(LS(RIGHT))>
         ;
     };
@@ -390,9 +420,8 @@ macros {
         tap-ms = <0>;
         wait-ms = <0>;
         bindings
-        /* = <&macro_tap &kp LC(RIGHT)> */
         = <&macro_tap &kp LC(LEFT)>
-        , <&macro_wait_time 1> // let cursor move to the next word!
+        , <&macro_wait_time SELECT_WORD_DELAY> // let cursor move to the next word!
         , <&macro_tap &kp LC(RIGHT) &kp LC(LS(LEFT))>
         ;
     };
