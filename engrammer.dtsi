@@ -32,7 +32,7 @@ behaviors {
     // KEY_REPEATING_TERM defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #define KEY_REPEATING_TERM 300 // "tap then hold" for key auto-repeat
+    #define KEY_REPEATING_TERM 200 // "tap then hold" for key auto-repeat
     //
     // HOMEY_TAPPING_TERM defines how long you need to hold (milliseconds)
     // home row mod keys in order to send their modifiers to the computer
@@ -73,7 +73,7 @@ behaviors {
     // THUMB_TAPPING_TERM defines how long you need to hold (milliseconds)
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
-    #define THUMB_TAPPING_TERM 200
+    #define THUMB_TAPPING_TERM 160
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
