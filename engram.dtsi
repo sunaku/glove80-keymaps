@@ -184,6 +184,7 @@ behaviors {
         tapping-term-ms = <THUMB_TAPPING_TERM>;
         quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat
         //global-quick-tap; // no typing streak
+        retro-tap; // allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
