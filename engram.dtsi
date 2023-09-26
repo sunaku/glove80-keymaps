@@ -27,7 +27,7 @@ behaviors {
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
-    #define TYPING_STREAK_TERM 160 // global-quick-tap-ms
+    #define TYPING_STREAK_TERM 80 // global-quick-tap-ms
     //
     // KEY_REPEATING_TERM defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
@@ -57,7 +57,7 @@ behaviors {
     // sent immediately without the rest of your multi-mod chord when you
     // perform outward rolls from your index fingers toward your pinkies.
     //
-    #define INDEX_TAPPING_TERM 180
+    #define INDEX_TAPPING_TERM 170
     //
     // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
@@ -157,8 +157,8 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <INDEX_TAPPING_TERM>;
-        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat
-        //global-quick-tap; // no typing streak
+        quick-tap-ms = <TYPING_STREAK_TERM>;
+        global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -169,8 +169,8 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <INDEX_TAPPING_TERM>;
-        quick-tap-ms = <KEY_REPEATING_TERM>; // enable repeat
-        //global-quick-tap; // no typing streak
+        quick-tap-ms = <TYPING_STREAK_TERM>;
+        global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
