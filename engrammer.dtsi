@@ -18,14 +18,13 @@
 
 behaviors {
 
+    //////////////////////////////////////////////////////////////////
     //
     // Miryoku layers and home row mods (ported from my QMK endgame)
     // - https://sunaku.github.io/home-row-mods.html#porting-to-zmk
     // - https://github.com/urob/zmk-config#timeless-homerow-mods
     //
-    //----------------------------------------------------------------
-    //               homey fingers (pinky, ring, middle)
-    //----------------------------------------------------------------
+    //////////////////////////////////////////////////////////////////
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the pinky, ring, and middle fingers (which are assigned to Super,
@@ -45,9 +44,6 @@ behaviors {
     //
     #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
     //
-    //----------------------------------------------------------------
-    //                          index fingers
-    //----------------------------------------------------------------
     //
     // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
@@ -78,10 +74,6 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #define INDEX_STREAK_DECAY 70 // global-quick-tap-ms
-    //
-    //----------------------------------------------------------------
-    //                              thumbs
-    //----------------------------------------------------------------
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
@@ -248,8 +240,10 @@ behaviors {
 macros {
 
     //////////////////////////////////////////////////////////////////
+    //
     // Approximation of Pascal Getreuer's Select Word macro from QMK
     // - https://getreuer.info/posts/keyboards/select-word/index.html
+    //
     //////////////////////////////////////////////////////////////////
     //
     // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
