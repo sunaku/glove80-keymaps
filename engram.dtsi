@@ -389,7 +389,16 @@ macros {
     // may allow the macro to move to the next word upon each invocation.
     //
     #define SELECT_WORD_DELAY 1
-
+    //
+    // select a word (jumps to next word upon each successive invocation)
+    //
+    select_word: select_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_WORD";
+        #binding-cells = <0>;
+        bindings = <&select_word_right>, <&select_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
     ZMK_MACRO(select_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
@@ -400,11 +409,14 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
     )
-    select_word: select_word {
+    //
+    // extend current selection by one word
+    //
+    extend_word: extend_word {
         compatible = "zmk,behavior-mod-morph";
-        label = "SELECT_WORD";
+        label = "EXTEND_WORD";
         #binding-cells = <0>;
-        bindings = <&select_word_right>, <&select_word_left>;
+        bindings = <&extend_word_right>, <&extend_word_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     ZMK_MACRO(extend_word_right,
@@ -417,11 +429,14 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp LC(LS(LEFT))>;
     )
-    extend_word: extend_word {
+    //
+    // select current line
+    //
+    select_line: select_line {
         compatible = "zmk,behavior-mod-morph";
-        label = "EXTEND_WORD";
+        label = "SELECT_LINE";
         #binding-cells = <0>;
-        bindings = <&extend_word_right>, <&extend_word_left>;
+        bindings = <&select_line_right>, <&select_line_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     ZMK_MACRO(select_line_right,
@@ -434,11 +449,14 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp END &kp LS(HOME)>;
     )
-    select_line: select_line {
+    //
+    // extend current selection by one line
+    //
+    extend_line: extend_line {
         compatible = "zmk,behavior-mod-morph";
-        label = "SELECT_LINE";
+        label = "EXTEND_LINE";
         #binding-cells = <0>;
-        bindings = <&select_line_right>, <&select_line_left>;
+        bindings = <&extend_line_right>, <&extend_line_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     ZMK_MACRO(extend_line_right,
@@ -451,12 +469,5 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp LS(UP) &kp LS(HOME)>;
     )
-    extend_line: extend_line {
-        compatible = "zmk,behavior-mod-morph";
-        label = "EXTEND_LINE";
-        #binding-cells = <0>;
-        bindings = <&extend_line_right>, <&extend_line_left>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
 
 };
