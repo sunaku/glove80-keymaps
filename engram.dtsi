@@ -9,11 +9,8 @@
 // https://discord.com/channels/877392805654306816/1137025078979203142
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v23 featuring Arno's Engram 2.0 layout and Miryoku
+// Sunaku's Keymap v24 featuring Arno's Engram 2.0 layout with Miryoku
 // - https://github.com/sunaku/glove80-keymaps
-// - https://sunaku.github.io/moergo-glove80-keyboard.html
-// - https://sunaku.github.io/engram-keyboard-layout.html
-// - https://discord.com/channels/877392805654306816/1111469812850380831
 //
 
 behaviors {
