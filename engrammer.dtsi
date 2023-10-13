@@ -41,7 +41,7 @@ behaviors {
     //
     #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
     //
-    // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
     //
     // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
@@ -50,9 +50,9 @@ behaviors {
     // Typing streaks and the `hold-trigger-on-release` setting are disabled
     // for the index fingers so as not to hinder their speed and dexterity.
     //
-    #define INDEX_HOLDING_TYPE "tap-preferred"
+    #define SHIFT_HOLDING_TYPE "tap-preferred"
     //
-    // INDEX_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // SHIFT_HOLDING_TIME defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
@@ -63,13 +63,13 @@ behaviors {
     // sent immediately without the rest of your multi-mod chord when you
     // perform outward rolls from your index fingers toward your pinkies.
     //
-    #define INDEX_HOLDING_TIME 170
+    #define SHIFT_HOLDING_TIME 170
     //
-    // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // SHIFT_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
-    #define INDEX_STREAK_DECAY 70 // global-quick-tap-ms
+    #define SHIFT_STREAK_DECAY 70 // global-quick-tap-ms
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
@@ -161,26 +161,26 @@ behaviors {
     //
     // Special home row mod-tap keys for the index fingers
     //
-    index_left: miryoku_home_row_mods_left_index_shift {
+    shift_left: miryoku_home_row_mods_left_shift_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_INDEX_SHIFT";
-        flavor = INDEX_HOLDING_TYPE;
+        label = "HOME_ROW_MODS_LEFT_SHIFT_SHIFT";
+        flavor = SHIFT_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
-        tapping-term-ms = <INDEX_HOLDING_TIME>;
-        quick-tap-ms = <INDEX_STREAK_DECAY>;
+        tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        quick-tap-ms = <SHIFT_STREAK_DECAY>;
         global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    index_right: miryoku_home_row_mods_right_index_shift {
+    shift_right: miryoku_home_row_mods_right_shift_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_RIGHT_INDEX_SHIFT";
-        flavor = INDEX_HOLDING_TYPE;
+        label = "HOME_ROW_MODS_RIGHT_SHIFT_SHIFT";
+        flavor = SHIFT_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
-        tapping-term-ms = <INDEX_HOLDING_TIME>;
-        quick-tap-ms = <INDEX_STREAK_DECAY>;
+        tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        quick-tap-ms = <SHIFT_STREAK_DECAY>;
         global-quick-tap; // with typing streak
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
@@ -199,7 +199,7 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-    thumb_space: miryoku_thumb_layer_spacebar {
+    space: miryoku_thumb_layer_spacebar {
         compatible = "zmk,behavior-hold-tap";
         label = "MIRYOKU_THUMB_LAYER_SPACEBAR";
         flavor = THUMB_HOLDING_TYPE;
