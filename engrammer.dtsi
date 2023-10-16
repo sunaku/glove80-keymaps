@@ -349,4 +349,177 @@ macros {
         bindings = <&kp LS(UP) &kp LS(HOME)>;
     )
 
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // World layer - international characters
+    //
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+    // between keystrokes while inputting the Unicode codepoint shortcut.
+    //
+    #define UNICODE_TAP_DELAY 1
+    //
+    // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
+    // into an actual Unicode codepoint.  This is Operating System dependent.
+    //
+    #define UNICODE_TRANSLATE(codepoint) \
+        UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
+    #define UNICODE_TRANSLATE_LINUX(codepoint) \
+                <&kp LC(LS(U))> \
+                , codepoint \
+                , <&kp ENTER>
+    #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
+                codepoint \
+                , <&kp LA(X)>
+    #define UNICODE_SEQUENCE(name, ...) \
+        ZMK_MACRO(name, \
+            wait-ms = <UNICODE_TAP_DELAY>; \
+            tap-ms = <UNICODE_TAP_DELAY>; \
+            bindings = __VA_ARGS__; \
+        )
+    #define UNICODE(name, codepoint) \
+        UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
+
+    UNICODE(latin_degree_sign,     <&kp N0 &kp N0 &kp B &kp N0 >) // °
+    UNICODE(latin_section_sign,    <&kp N0 &kp N0 &kp A &kp N7 >) // §
+    UNICODE(latin_paragraph_sign,  <&kp N0 &kp N0 &kp B &kp N6 >) // ¶
+    UNICODE(latin_o_ordinal,       <&kp N0 &kp N0 &kp B &kp A  >) // º
+    UNICODE(latin_a_ordinal,       <&kp N0 &kp N0 &kp A &kp A  >) // ª
+    UNICODE(latin_exclaim_left,    <&kp N0 &kp N0 &kp A &kp N1 >) // ¡
+    UNICODE(latin_question_left,   <&kp N0 &kp N0 &kp B &kp F  >) // ¿
+    UNICODE(latin_quote_left,      <&kp N0 &kp N0 &kp A &kp B  >) // «
+    UNICODE(latin_quote_right,     <&kp N0 &kp N0 &kp B &kp B  >) // »
+
+    UNICODE(latin_c_cedilla_lower, <&kp N0 &kp N0 &kp E &kp N7 >) // ç
+    UNICODE(latin_i_acute_lower,   <&kp N0 &kp N0 &kp E &kp D  >) // í
+    UNICODE(latin_e_acute_lower,   <&kp N0 &kp N0 &kp E &kp N9 >) // é
+    UNICODE(latin_a_acute_lower,   <&kp N0 &kp N0 &kp E &kp N1 >) // á
+    UNICODE(latin_y_acute_lower,   <&kp N0 &kp N0 &kp F &kp D  >) // ý
+    UNICODE(latin_o_acute_lower,   <&kp N0 &kp N0 &kp F &kp N3 >) // ó
+    UNICODE(latin_u_acute_lower,   <&kp N0 &kp N0 &kp F &kp A  >) // ú
+
+    UNICODE(latin_c_cedilla_upper, <&kp N0 &kp N0 &kp C &kp N7 >) // Ç
+    UNICODE(latin_i_acute_upper,   <&kp N0 &kp N0 &kp C &kp D  >) // Í
+    UNICODE(latin_e_acute_upper,   <&kp N0 &kp N0 &kp C &kp N9 >) // É
+    UNICODE(latin_a_acute_upper,   <&kp N0 &kp N0 &kp C &kp N1 >) // Á
+    UNICODE(latin_y_acute_upper,   <&kp N0 &kp N0 &kp D &kp D  >) // Ý
+    UNICODE(latin_o_acute_upper,   <&kp N0 &kp N0 &kp D &kp N3 >) // Ó
+    UNICODE(latin_u_acute_upper,   <&kp N0 &kp N0 &kp D &kp A  >) // Ú
+
+    latin_c_cedilla: latin_c_cedilla {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_C_CEDILLA";
+        #binding-cells = <0>;
+        bindings = <&latin_c_cedilla_lower>, <&latin_c_cedilla_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    latin_i_acute: latin_i_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_i_acute_lower>, <&latin_i_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    latin_e_acute: latin_e_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_e_acute_lower>, <&latin_e_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    latin_a_acute: latin_a_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_a_acute_lower>, <&latin_a_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    latin_y_acute: latin_y_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_y_acute_lower>, <&latin_y_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    latin_o_acute: latin_o_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_o_acute_lower>, <&latin_o_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    latin_u_acute: latin_u_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_u_acute_lower>, <&latin_u_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // Emoji layer - modern age pictograms
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    // function row
+    UNICODE(emoji_new_moon,             <&kp N1 &kp F  &kp N3 &kp N1 &kp N1 >) // 🌑
+    UNICODE(emoji_waxing_crescent_moon, <&kp N1 &kp F  &kp N3 &kp N1 &kp N2 >) // 🌒
+    UNICODE(emoji_first_quarter_moon,   <&kp N1 &kp F  &kp N3 &kp N1 &kp N3 >) // 🌓
+    UNICODE(emoji_waxing_gibbous_moon,  <&kp N1 &kp F  &kp N3 &kp N1 &kp N4 >) // 🌔
+    UNICODE(emoji_full_moon,            <&kp N1 &kp F  &kp N3 &kp N1 &kp N5 >) // 🌕
+
+    // number row
+    UNICODE(emoji_tada,                 <&kp N1 &kp F  &kp N3 &kp N8 &kp N9 >) // 🎉
+    UNICODE(emoji_heart,                <&kp N2 &kp N7 &kp N6 &kp N4        >) // ❤️
+    UNICODE(emoji_fire,                 <&kp N1 &kp F  &kp N5 &kp N2 &kp N5 >) // 🔥
+    UNICODE(emoji_muscle,               <&kp N1 &kp F  &kp N4 &kp A  &kp A  >) // 💪
+    UNICODE(emoji_person_climbing,      <&kp N1 &kp F  &kp N9 &kp D  &kp N7 >) // 🧗
+    UNICODE(emoji_rocket,               <&kp N1 &kp F  &kp N6 &kp N8 &kp N0 >) // 🚀
+
+    // upper row
+    UNICODE(emoji_sunglasses,           <&kp N1 &kp F  &kp N6 &kp N0 &kp E  >) // 😎
+    UNICODE(emoji_heart_eyes,           <&kp N1 &kp F  &kp N6 &kp N0 &kp D  >) // 😍
+    UNICODE(emoji_star_struck,          <&kp N1 &kp F  &kp N9 &kp N2 &kp N9 >) // 🤩
+    UNICODE(emoji_tear_smile,           <&kp N1 &kp F  &kp N9 &kp N7 &kp N2 >) // 🥲
+    UNICODE(emoji_scream,               <&kp N1 &kp F  &kp N6 &kp N3 &kp N1 >) // 😱
+    UNICODE_SEQUENCE(emoji_astronaut,                                          // 🧑‍🚀
+                      UNICODE_TRANSLATE(<&kp N1 &kp F  &kp N9 &kp D  &kp N1 >) // 🧑
+                     ,UNICODE_TRANSLATE(<&kp N2 &kp N0 &kp N0 &kp D         >) // ZWJ
+                     ,UNICODE_TRANSLATE(<&kp N1 &kp F  &kp N6 &kp N8 &kp N0 >))// 🚀
+
+    // home row
+    UNICODE(emoji_snap_fingers,         <&kp N1 &kp F  &kp A  &kp F  &kp N0 >) // 🫰
+    UNICODE(emoji_ok_hand,              <&kp N1 &kp F  &kp N4 &kp N4 &kp C  >) // 👌
+    UNICODE(emoji_pray,                 <&kp N1 &kp F  &kp N6 &kp N4 &kp F  >) // 🙏
+    UNICODE(emoji_sweat_smile,          <&kp N1 &kp F  &kp N6 &kp N0 &kp N5 >) // 😅
+    UNICODE(emoji_cold_sweat,           <&kp N1 &kp F  &kp N6 &kp N3 &kp N0 >) // 😰
+    UNICODE(emoji_exploding_head,       <&kp N1 &kp F  &kp N9 &kp N2 &kp F  >) // 🤯
+
+    // lower row
+    UNICODE(emoji_person_tipping_hand,  <&kp N1 &kp F  &kp N4 &kp N8 &kp N1 >) // 💁
+    UNICODE(emoji_person_gesturing_ok,  <&kp N1 &kp F  &kp N6 &kp N4 &kp N6 >) // 🙆
+    UNICODE(emoji_person_bowing,        <&kp N1 &kp F  &kp N6 &kp N4 &kp N7 >) // 🙇
+    UNICODE(emoji_person_raising_hand,  <&kp N1 &kp F  &kp N6 &kp N4 &kp B  >) // 🙋
+    UNICODE(emoji_person_gesturing_no,  <&kp N1 &kp F  &kp N6 &kp N4 &kp N5 >) // 🙅
+    UNICODE(emoji_person_shrugging,     <&kp N1 &kp F  &kp N9 &kp N3 &kp N7 >) // 🤷
+
+    // bottom row
+    UNICODE(emoji_checkoff,             <&kp N2 &kp N7 &kp N0 &kp N5        >) // ✅
+    UNICODE(emoji_100,                  <&kp N1 &kp F  &kp N4 &kp A &kp F   >) // 💯
+    UNICODE(emoji_warning,              <&kp N2 &kp N6 &kp A  &kp N0        >) // ⚠️
+    UNICODE(emoji_x,                    <&kp N2 &kp N7 &kp N4 &kp C         >) // ❌
+    UNICODE(emoji_question,             <&kp N2 &kp N7 &kp N5 &kp N3        >) // ❓
+
+    // thumb cluster upper arc
+    UNICODE(emoji_nerd,                 <&kp N1 &kp F  &kp N9 &kp N1 &kp N3 >) // 🤓
+    UNICODE(emoji_raised_hands,         <&kp N1 &kp F  &kp N6 &kp N4 &kp C  >) // 🙌
+    UNICODE(emoji_sparkles,             <&kp N2 &kp N7 &kp N2 &kp N8        >) // ✨
+
+    // thumb cluster lower arc
+    UNICODE(emoji_thinking,             <&kp N1 &kp F  &kp N9 &kp N1 &kp N4 >) // 🤔
+    UNICODE(emoji_thumbs_down,          <&kp N1 &kp F  &kp N4 &kp N4 &kp E  >) // 👎
+    UNICODE(emoji_thumbs_up,            <&kp N1 &kp F  &kp N4 &kp N4 &kp D  >) // 👍
+
 };
