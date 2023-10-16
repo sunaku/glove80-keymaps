@@ -421,102 +421,60 @@ macros {
     UNICODE(latin_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
     UNICODE(latin_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
 
-    //
-    // acute accents - the default, without any modifiers applied
-    //
+    <%
+      def keystrokes_from_character(character)
+        hexcodepoint = hexcodepoint_from_character(character)
+        keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
+      end
 
-    UNICODE(latin_c_cedilla_lower,   <&kp N0 &kp N0 &kp E  &kp N7 >) // ç
-    UNICODE(latin_i_acute_lower,     <&kp N0 &kp N0 &kp E  &kp D  >) // í
-    UNICODE(latin_e_acute_lower,     <&kp N0 &kp N0 &kp E  &kp N9 >) // é
-    UNICODE(latin_a_acute_lower,     <&kp N0 &kp N0 &kp E  &kp N1 >) // á
-    UNICODE(latin_y_acute_lower,     <&kp N0 &kp N0 &kp F  &kp D  >) // ý
-    UNICODE(latin_o_acute_lower,     <&kp N0 &kp N0 &kp F  &kp N3 >) // ó
-    UNICODE(latin_u_acute_lower,     <&kp N0 &kp N0 &kp F  &kp A  >) // ú
+      def hexcodepoint_from_character(character)
+        case character.codepoints
+        in [codepoint]
+          sprintf("%04X", codepoint)
+        end
+      end
 
-    UNICODE(latin_c_cedilla_upper,   <&kp N0 &kp N0 &kp C  &kp N7 >) // Ç
-    UNICODE(latin_i_acute_upper,     <&kp N0 &kp N0 &kp C  &kp D  >) // Í
-    UNICODE(latin_e_acute_upper,     <&kp N0 &kp N0 &kp C  &kp N9 >) // É
-    UNICODE(latin_a_acute_upper,     <&kp N0 &kp N0 &kp C  &kp N1 >) // Á
-    UNICODE(latin_y_acute_upper,     <&kp N0 &kp N0 &kp D  &kp D  >) // Ý
-    UNICODE(latin_o_acute_upper,     <&kp N0 &kp N0 &kp D  &kp N3 >) // Ó
-    UNICODE(latin_u_acute_upper,     <&kp N0 &kp N0 &kp D  &kp A  >) // Ú
+      def keystrokes_from_hexcodepoint(hexcodepoint)
+        hexcodepoint.chars.map do |hexbyte|
+          keycode = keycode_from_hexbyte(hexbyte)
+          keystroke = keystroke_from_keycode(keycode)
+        end.join(" ")
+      end
 
-    //
-    // grave accents - LCTRL
-    //
+      def keycode_from_hexbyte(hexbyte)
+        case hexbyte
+        when "0".."9" then "N" + hexbyte
+        else hexbyte
+        end
+      end
 
-    UNICODE(latin_i_grave_lower,     <&kp N0 &kp N0 &kp E  &kp C  >) // ì
-    UNICODE(latin_e_grave_lower,     <&kp N0 &kp N0 &kp E  &kp N8 >) // è
-    UNICODE(latin_a_grave_lower,     <&kp N0 &kp N0 &kp E  &kp N0 >) // à
-    UNICODE(latin_y_grave_lower,     <&kp N1 &kp E  &kp F  &kp N3 >) // ỳ
-    UNICODE(latin_o_grave_lower,     <&kp N0 &kp N0 &kp F  &kp N2 >) // ò
-    UNICODE(latin_u_grave_lower,     <&kp N0 &kp N0 &kp F  &kp N9 >) // ù
+      def keystroke_from_keycode(keycode)
+        sprintf("&kp %-2s", keycode)
+      end
 
-    UNICODE(latin_i_grave_upper,     <&kp N0 &kp N0 &kp C  &kp C  >) // Ì
-    UNICODE(latin_e_grave_upper,     <&kp N0 &kp N0 &kp C  &kp N8 >) // È
-    UNICODE(latin_a_grave_upper,     <&kp N0 &kp N0 &kp C  &kp N0 >) // À
-    UNICODE(latin_y_grave_upper,     <&kp N1 &kp E  &kp F  &kp N2 >) // Ỳ
-    UNICODE(latin_o_grave_upper,     <&kp N0 &kp N0 &kp D  &kp N2 >) // Ò
-    UNICODE(latin_u_grave_upper,     <&kp N0 &kp N0 &kp D  &kp N9 >) // Ù
+      require 'yaml'
+      world = YAML.load_file("world.yaml")
 
-    //
-    // diaeresis accents - RCTRL
-    //
+      macros = {}
+      world["characters"].each do |letter, transforms|
+        transforms.each do |accent, shiftings|
+          shiftings.each do |shift, character|
+            id = "latin_#{letter.downcase}_#{accent}_#{shift}"
+            macros[id] = character
+          end
+        end
+      end
+      macros_id_width = macros.keys.map(&:length).max
 
-    UNICODE(latin_i_diaeresis_lower, <&kp N0 &kp N0 &kp E  &kp F  >) // ï
-    UNICODE(latin_e_diaeresis_lower, <&kp N0 &kp N0 &kp E  &kp B  >) // ë
-    UNICODE(latin_a_diaeresis_lower, <&kp N0 &kp N0 &kp E  &kp N4 >) // ä
-    UNICODE(latin_y_diaeresis_lower, <&kp N0 &kp N0 &kp F  &kp F  >) // ÿ
-    UNICODE(latin_o_diaeresis_lower, <&kp N0 &kp N0 &kp F  &kp N6 >) // ö
-    UNICODE(latin_u_diaeresis_lower, <&kp N0 &kp N0 &kp F  &kp C  >) // ü
-
-    UNICODE(latin_i_diaeresis_upper, <&kp N0 &kp N0 &kp C  &kp F  >) // Ï
-    UNICODE(latin_e_diaeresis_upper, <&kp N0 &kp N0 &kp C  &kp B  >) // Ë
-    UNICODE(latin_a_diaeresis_upper, <&kp N0 &kp N0 &kp C  &kp N4 >) // Ä
-    UNICODE(latin_y_diaeresis_upper, <&kp N0 &kp N1 &kp N7 &kp N8 >) // Ÿ
-    UNICODE(latin_o_diaeresis_upper, <&kp N0 &kp N0 &kp D  &kp N6 >) // Ö
-    UNICODE(latin_u_diaeresis_upper, <&kp N0 &kp N0 &kp D  &kp C  >) // Ü
-
-    //
-    // tilde accents - LALT
-    //
-
-    UNICODE(latin_a_tilde_lower,      <&kp N0 &kp N0 &kp E  &kp N3 >) // ã
-    UNICODE(latin_o_tilde_lower,      <&kp N0 &kp N0 &kp F  &kp N5 >) // õ
-
-    UNICODE(latin_a_tilde_upper,      <&kp N0 &kp N0 &kp C  &kp N3 >) // Ã
-    UNICODE(latin_o_tilde_upper,      <&kp N0 &kp N0 &kp D  &kp N5 >) // Õ
-
-    //
-    // other accents - RALT
-    //
-
-    UNICODE(latin_e_ae_lower,         <&kp N0 &kp N0 &kp E  &kp N6 >) // æ
-    UNICODE(latin_e_ae_upper,         <&kp N0 &kp N0 &kp C  &kp N6 >) // Æ
-
-    UNICODE(latin_a_ring_lower,       <&kp N0 &kp N0 &kp E  &kp N5 >) // å
-    UNICODE(latin_a_ring_upper,       <&kp N0 &kp N0 &kp C  &kp N5 >) // Å
-
-    UNICODE(latin_o_slash_lower,      <&kp N0 &kp N0 &kp F  &kp N8 >) // ø
-    UNICODE(latin_o_slash_upper,      <&kp N0 &kp N0 &kp D  &kp N8 >) // Ø
-
-    //
-    // circumflex accents - RSHFT
-    //
-
-    UNICODE(latin_i_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp E  >) // î
-    UNICODE(latin_e_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp A  >) // ê
-    UNICODE(latin_a_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp N2 >) // â
-    UNICODE(latin_y_circumflex_lower, <&kp N0 &kp N1 &kp N7 &kp N7 >) // ŷ
-    UNICODE(latin_o_circumflex_lower, <&kp N0 &kp N0 &kp F  &kp N4 >) // ô
-    UNICODE(latin_u_circumflex_lower, <&kp N0 &kp N0 &kp F  &kp B  >) // û
-
-    UNICODE(latin_i_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp E  >) // Î
-    UNICODE(latin_e_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp A  >) // Ê
-    UNICODE(latin_a_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp N2 >) // Â
-    UNICODE(latin_y_circumflex_upper, <&kp N0 &kp N1 &kp N7 &kp N6 >) // Ŷ
-    UNICODE(latin_o_circumflex_upper, <&kp N0 &kp N0 &kp D  &kp N4 >) // Ô
-    UNICODE(latin_u_circumflex_upper, <&kp N0 &kp N0 &kp D  &kp B  >) // Û
+      macros.each do |id, character|
+        %>UNICODE(<%=
+          id.ljust(macros_id_width)
+        %>, <<%=
+          keystrokes_from_character(character)
+        %>>) // <%= character %>
+    <%
+      end
+    %>
 
     latin_c_cedilla: latin_c_cedilla {
         compatible = "zmk,behavior-mod-morph";
@@ -722,42 +680,14 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_Y";
         #binding-cells = <0>;
-        bindings = <&latin_y_acute>, <&latin_y_LCTL>;
+        bindings = <&latin_y_acute>, <&latin_y_diaeresis>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
-    };
-    latin_y_LCTL: latin_y_LCTL {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_LCTL";
-        #binding-cells = <0>;
-        bindings = <&latin_y_grave>, <&latin_y_RCTL>;
-        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
-    };
-    latin_y_RCTL: latin_y_RCTL {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_RCTL";
-        #binding-cells = <0>;
-        bindings = <&latin_y_diaeresis>, <&latin_y_circumflex>;
-        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
-    };
-    latin_y_circumflex: latin_y_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_y_circumflex_lower>, <&latin_y_circumflex_upper>;
-        mods = <MOD_LSFT>;
     };
     latin_y_diaeresis: latin_y_diaeresis {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_Y_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&latin_y_diaeresis_lower>, <&latin_y_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_y_grave: latin_y_grave {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_GRAVE";
-        #binding-cells = <0>;
-        bindings = <&latin_y_grave_lower>, <&latin_y_grave_upper>;
         mods = <MOD_LSFT>;
     };
     latin_y_acute: latin_y_acute {
