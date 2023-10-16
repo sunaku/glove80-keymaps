@@ -1,0 +1,47 @@
+precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT overrides all
+
+transforms:
+  C: { base: cedilla                                                                         }
+  I: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
+  E: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave,              RALT: ae    }
+  A: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: ring  }
+  Y: { base: acute, LCTL: diaeresis                                                          }
+  O: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: slash }
+  U: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
+
+characters:
+  C:
+    cedilla:    { lower: "ç", upper: "Ç" }
+  I:
+    acute:      { lower: "í", upper: "Í" }
+    diaeresis:  { lower: "ï", upper: "Ï" }
+    circumflex: { lower: "î", upper: "Î" }
+    grave:      { lower: "ì", upper: "Ì" }
+  E:
+    acute:      { lower: "é", upper: "É" }
+    diaeresis:  { lower: "ë", upper: "Ë" }
+    circumflex: { lower: "ê", upper: "Ê" }
+    grave:      { lower: "è", upper: "È" }
+    ae:         { lower: "æ", upper: "Æ" }
+  A:
+    acute:      { lower: "á", upper: "Á" }
+    diaeresis:  { lower: "ä", upper: "Ä" }
+    circumflex: { lower: "â", upper: "Â" }
+    grave:      { lower: "à", upper: "À" }
+    tilde:      { lower: "ã", upper: "Ã" }
+    ring:       { lower: "å", upper: "Å" }
+  Y:
+    acute:      { lower: "ý", upper: "Ý" }
+    diaeresis:  { lower: "ÿ", upper: "Ÿ" }
+  O:
+    acute:      { lower: "ó", upper: "Ó" }
+    diaeresis:  { lower: "ö", upper: "Ö" }
+    circumflex: { lower: "ô", upper: "Ô" }
+    grave:      { lower: "ò", upper: "Ò" }
+    tilde:      { lower: "õ", upper: "Õ" }
+    slash:      { lower: "ø", upper: "Ø" }
+  U:
+    acute:      { lower: "ú", upper: "Ú" }
+    diaeresis:  { lower: "ü", upper: "Ü" }
+    circumflex: { lower: "û", upper: "Û" }
+    grave:      { lower: "ù", upper: "Ù" }
