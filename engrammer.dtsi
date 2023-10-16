@@ -504,22 +504,22 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_I";
         #binding-cells = <0>;
-        bindings = <&latin_i_acute>, <&latin_i_LCTL_LALT_LGUI>;
-        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+        bindings = <&latin_i_acute>, <&latin_i_LCTL_RCTL_RSFT>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
-    latin_i_LCTL_LALT_LGUI: latin_i_LCTL_LALT_LGUI {
+    latin_i_LCTL_RCTL_RSFT: latin_i_LCTL_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_I_LCTL_LALT_LGUI";
+        label = "LATIN_I_LCTL_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_i_LCTL_LALT>, <&latin_i_circumflex>;
-        mods = <MOD_LGUI>;
+        bindings = <&latin_i_grave>, <&latin_i_RCTL_RSFT>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
     };
-    latin_i_LCTL_LALT: latin_i_LCTL_LALT {
+    latin_i_RCTL_RSFT: latin_i_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_I_LCTL_LALT";
+        label = "LATIN_I_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_i_grave>, <&latin_i_diaeresis>;
-        mods = <MOD_LALT>;
+        bindings = <&latin_i_diaeresis>, <&latin_i_circumflex>;
+        mods = <MOD_RSFT>;
     };
     latin_i_circumflex: latin_i_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -554,22 +554,22 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_E";
         #binding-cells = <0>;
-        bindings = <&latin_e_acute>, <&latin_e_LCTL_LALT_LGUI>;
-        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+        bindings = <&latin_e_acute>, <&latin_e_LCTL_RCTL_RSFT>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
-    latin_e_LCTL_LALT_LGUI: latin_e_LCTL_LALT_LGUI {
+    latin_e_LCTL_RCTL_RSFT: latin_e_LCTL_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_E_LCTL_LALT_LGUI";
+        label = "LATIN_E_LCTL_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_e_LCTL_LALT>, <&latin_e_circumflex>;
-        mods = <MOD_LGUI>;
+        bindings = <&latin_e_grave>, <&latin_e_RCTL_RSFT>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
     };
-    latin_e_LCTL_LALT: latin_e_LCTL_LALT {
+    latin_e_RCTL_RSFT: latin_e_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_E_LCTL_LALT";
+        label = "LATIN_E_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_e_grave>, <&latin_e_diaeresis>;
-        mods = <MOD_LALT>;
+        bindings = <&latin_e_diaeresis>, <&latin_e_circumflex>;
+        mods = <MOD_RSFT>;
     };
     latin_e_circumflex: latin_e_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -604,22 +604,22 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_A";
         #binding-cells = <0>;
-        bindings = <&latin_a_acute>, <&latin_a_LCTL_LALT_LGUI>;
-        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+        bindings = <&latin_a_acute>, <&latin_a_LCTL_RCTL_RSFT>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
-    latin_a_LCTL_LALT_LGUI: latin_a_LCTL_LALT_LGUI {
+    latin_a_LCTL_RCTL_RSFT: latin_a_LCTL_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_A_LCTL_LALT_LGUI";
+        label = "LATIN_A_LCTL_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_a_LCTL_LALT>, <&latin_a_circumflex>;
-        mods = <MOD_LGUI>;
+        bindings = <&latin_a_grave>, <&latin_a_RCTL_RSFT>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
     };
-    latin_a_LCTL_LALT: latin_a_LCTL_LALT {
+    latin_a_RCTL_RSFT: latin_a_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_A_LCTL_LALT";
+        label = "LATIN_A_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_a_grave>, <&latin_a_diaeresis>;
-        mods = <MOD_LALT>;
+        bindings = <&latin_a_diaeresis>, <&latin_a_circumflex>;
+        mods = <MOD_RSFT>;
     };
     latin_a_circumflex: latin_a_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -654,22 +654,22 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_Y";
         #binding-cells = <0>;
-        bindings = <&latin_y_acute>, <&latin_y_LCTL_LALT_LGUI>;
-        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+        bindings = <&latin_y_acute>, <&latin_y_LCTL_RCTL_RSFT>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
-    latin_y_LCTL_LALT_LGUI: latin_y_LCTL_LALT_LGUI {
+    latin_y_LCTL_RCTL_RSFT: latin_y_LCTL_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_LCTL_LALT_LGUI";
+        label = "LATIN_Y_LCTL_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_y_LCTL_LALT>, <&latin_y_circumflex>;
-        mods = <MOD_LGUI>;
+        bindings = <&latin_y_grave>, <&latin_y_RCTL_RSFT>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
     };
-    latin_y_LCTL_LALT: latin_y_LCTL_LALT {
+    latin_y_RCTL_RSFT: latin_y_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_LCTL_LALT";
+        label = "LATIN_Y_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_y_grave>, <&latin_y_diaeresis>;
-        mods = <MOD_LALT>;
+        bindings = <&latin_y_diaeresis>, <&latin_y_circumflex>;
+        mods = <MOD_RSFT>;
     };
     latin_y_circumflex: latin_y_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -704,22 +704,22 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_O";
         #binding-cells = <0>;
-        bindings = <&latin_o_acute>, <&latin_o_LCTL_LALT_LGUI>;
-        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+        bindings = <&latin_o_acute>, <&latin_o_LCTL_RCTL_RSFT>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
-    latin_o_LCTL_LALT_LGUI: latin_o_LCTL_LALT_LGUI {
+    latin_o_LCTL_RCTL_RSFT: latin_o_LCTL_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_O_LCTL_LALT_LGUI";
+        label = "LATIN_O_LCTL_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_o_LCTL_LALT>, <&latin_o_circumflex>;
-        mods = <MOD_LGUI>;
+        bindings = <&latin_o_grave>, <&latin_o_RCTL_RSFT>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
     };
-    latin_o_LCTL_LALT: latin_o_LCTL_LALT {
+    latin_o_RCTL_RSFT: latin_o_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_O_LCTL_LALT";
+        label = "LATIN_O_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_o_grave>, <&latin_o_diaeresis>;
-        mods = <MOD_LALT>;
+        bindings = <&latin_o_diaeresis>, <&latin_o_circumflex>;
+        mods = <MOD_RSFT>;
     };
     latin_o_circumflex: latin_o_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -754,22 +754,22 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_U";
         #binding-cells = <0>;
-        bindings = <&latin_u_acute>, <&latin_u_LCTL_LALT_LGUI>;
-        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+        bindings = <&latin_u_acute>, <&latin_u_LCTL_RCTL_RSFT>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
-    latin_u_LCTL_LALT_LGUI: latin_u_LCTL_LALT_LGUI {
+    latin_u_LCTL_RCTL_RSFT: latin_u_LCTL_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_U_LCTL_LALT_LGUI";
+        label = "LATIN_U_LCTL_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_u_LCTL_LALT>, <&latin_u_circumflex>;
-        mods = <MOD_LGUI>;
+        bindings = <&latin_u_grave>, <&latin_u_RCTL_RSFT>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
     };
-    latin_u_LCTL_LALT: latin_u_LCTL_LALT {
+    latin_u_RCTL_RSFT: latin_u_RCTL_RSFT {
         compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_U_LCTL_LALT";
+        label = "LATIN_U_RCTL_RSFT";
         #binding-cells = <0>;
-        bindings = <&latin_u_grave>, <&latin_u_diaeresis>;
-        mods = <MOD_LALT>;
+        bindings = <&latin_u_diaeresis>, <&latin_u_circumflex>;
+        mods = <MOD_RSFT>;
     };
     latin_u_circumflex: latin_u_circumflex {
         compatible = "zmk,behavior-mod-morph";
