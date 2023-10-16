@@ -543,6 +543,20 @@ macros {
         bindings = <&latin_i_grave>, <&latin_i_diaeresis>;
         mods = <MOD_LALT>;
     };
+    latin_i_circumflex: latin_i_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_i_circumflex_lower>, <&latin_i_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_i_diaeresis: latin_i_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_i_diaeresis_lower>, <&latin_i_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
     latin_i_grave: latin_i_grave {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_I_GRAVE";
@@ -555,20 +569,6 @@ macros {
         label = "LATIN_I_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_i_acute_lower>, <&latin_i_acute_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_i_diaeresis: latin_i_diaeresis {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_I_DIAERESIS";
-        #binding-cells = <0>;
-        bindings = <&latin_i_diaeresis_lower>, <&latin_i_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_i_circumflex: latin_i_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_I_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_i_circumflex_lower>, <&latin_i_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
@@ -593,6 +593,20 @@ macros {
         bindings = <&latin_e_grave>, <&latin_e_diaeresis>;
         mods = <MOD_LALT>;
     };
+    latin_e_circumflex: latin_e_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_e_circumflex_lower>, <&latin_e_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_e_diaeresis: latin_e_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_e_diaeresis_lower>, <&latin_e_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
     latin_e_grave: latin_e_grave {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_E_GRAVE";
@@ -605,20 +619,6 @@ macros {
         label = "LATIN_E_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_e_acute_lower>, <&latin_e_acute_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_e_diaeresis: latin_e_diaeresis {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_E_DIAERESIS";
-        #binding-cells = <0>;
-        bindings = <&latin_e_diaeresis_lower>, <&latin_e_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_e_circumflex: latin_e_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_E_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_e_circumflex_lower>, <&latin_e_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
@@ -643,6 +643,20 @@ macros {
         bindings = <&latin_a_grave>, <&latin_a_diaeresis>;
         mods = <MOD_LALT>;
     };
+    latin_a_circumflex: latin_a_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_a_circumflex_lower>, <&latin_a_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_a_diaeresis: latin_a_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_a_diaeresis_lower>, <&latin_a_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
     latin_a_grave: latin_a_grave {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_A_GRAVE";
@@ -655,20 +669,6 @@ macros {
         label = "LATIN_A_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_a_acute_lower>, <&latin_a_acute_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_a_diaeresis: latin_a_diaeresis {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_A_DIAERESIS";
-        #binding-cells = <0>;
-        bindings = <&latin_a_diaeresis_lower>, <&latin_a_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_a_circumflex: latin_a_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_A_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_a_circumflex_lower>, <&latin_a_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
@@ -693,6 +693,20 @@ macros {
         bindings = <&latin_y_grave>, <&latin_y_diaeresis>;
         mods = <MOD_LALT>;
     };
+    latin_y_circumflex: latin_y_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_y_circumflex_lower>, <&latin_y_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_y_diaeresis: latin_y_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_y_diaeresis_lower>, <&latin_y_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
     latin_y_grave: latin_y_grave {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_Y_GRAVE";
@@ -705,20 +719,6 @@ macros {
         label = "LATIN_Y_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_y_acute_lower>, <&latin_y_acute_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_y_diaeresis: latin_y_diaeresis {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_DIAERESIS";
-        #binding-cells = <0>;
-        bindings = <&latin_y_diaeresis_lower>, <&latin_y_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_y_circumflex: latin_y_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_Y_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_y_circumflex_lower>, <&latin_y_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
@@ -743,6 +743,20 @@ macros {
         bindings = <&latin_o_grave>, <&latin_o_diaeresis>;
         mods = <MOD_LALT>;
     };
+    latin_o_circumflex: latin_o_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_o_circumflex_lower>, <&latin_o_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_o_diaeresis: latin_o_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_o_diaeresis_lower>, <&latin_o_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
     latin_o_grave: latin_o_grave {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_O_GRAVE";
@@ -755,20 +769,6 @@ macros {
         label = "LATIN_O_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_o_acute_lower>, <&latin_o_acute_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_o_diaeresis: latin_o_diaeresis {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_O_DIAERESIS";
-        #binding-cells = <0>;
-        bindings = <&latin_o_diaeresis_lower>, <&latin_o_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_o_circumflex: latin_o_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_O_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_o_circumflex_lower>, <&latin_o_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
@@ -793,6 +793,20 @@ macros {
         bindings = <&latin_u_grave>, <&latin_u_diaeresis>;
         mods = <MOD_LALT>;
     };
+    latin_u_circumflex: latin_u_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_u_circumflex_lower>, <&latin_u_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_u_diaeresis: latin_u_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_u_diaeresis_lower>, <&latin_u_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
     latin_u_grave: latin_u_grave {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_U_GRAVE";
@@ -805,20 +819,6 @@ macros {
         label = "LATIN_U_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_u_acute_lower>, <&latin_u_acute_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_u_diaeresis: latin_u_diaeresis {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_U_DIAERESIS";
-        #binding-cells = <0>;
-        bindings = <&latin_u_diaeresis_lower>, <&latin_u_diaeresis_upper>;
-        mods = <MOD_LSFT>;
-    };
-    latin_u_circumflex: latin_u_circumflex {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LATIN_U_circumflex";
-        #binding-cells = <0>;
-        bindings = <&latin_u_circumflex_lower>, <&latin_u_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
