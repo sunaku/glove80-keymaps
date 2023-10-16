@@ -496,6 +496,24 @@ macros {
     UNICODE(latin_o_diaeresis_upper, <&kp N0 &kp N0 &kp D  &kp N6 >) // Ö
     UNICODE(latin_u_diaeresis_upper, <&kp N0 &kp N0 &kp D  &kp C  >) // Ü
 
+    //
+    // circumflex accents - GUI
+    //
+
+    UNICODE(latin_i_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp E  >) // î
+    UNICODE(latin_e_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp A  >) // ê
+    UNICODE(latin_a_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp N2 >) // â
+    UNICODE(latin_y_circumflex_lower, <&kp N0 &kp N1 &kp N7 &kp N7 >) // ŷ
+    UNICODE(latin_o_circumflex_lower, <&kp N0 &kp N0 &kp F  &kp N4 >) // ô
+    UNICODE(latin_u_circumflex_lower, <&kp N0 &kp N0 &kp F  &kp B  >) // û
+
+    UNICODE(latin_i_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp E  >) // Î
+    UNICODE(latin_e_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp A  >) // Ê
+    UNICODE(latin_a_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp N2 >) // Â
+    UNICODE(latin_y_circumflex_upper, <&kp N0 &kp N1 &kp N7 &kp N6 >) // Ŷ
+    UNICODE(latin_o_circumflex_upper, <&kp N0 &kp N0 &kp D  &kp N4 >) // Ô
+    UNICODE(latin_u_circumflex_upper, <&kp N0 &kp N0 &kp D  &kp B  >) // Û
+
     latin_c_cedilla: latin_c_cedilla {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_C_CEDILLA";
@@ -508,8 +526,15 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_I";
         #binding-cells = <0>;
-        bindings = <&latin_i_acute>, <&latin_i_LCTL_LALT>;
-        mods = <(MOD_LCTL|MOD_LALT)>;
+        bindings = <&latin_i_acute>, <&latin_i_LCTL_LALT_LGUI>;
+        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+    };
+    latin_i_LCTL_LALT_LGUI: latin_i_LCTL_LALT_LGUI {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_LCTL_LALT_LGUI";
+        #binding-cells = <0>;
+        bindings = <&latin_i_LCTL_LALT>, <&latin_i_circumflex>;
+        mods = <MOD_LGUI>;
     };
     latin_i_LCTL_LALT: latin_i_LCTL_LALT {
         compatible = "zmk,behavior-mod-morph";
@@ -539,13 +564,27 @@ macros {
         bindings = <&latin_i_diaeresis_lower>, <&latin_i_diaeresis_upper>;
         mods = <MOD_LSFT>;
     };
+    latin_i_circumflex: latin_i_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_i_circumflex_lower>, <&latin_i_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
 
     latin_e: latin_e {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_E";
         #binding-cells = <0>;
-        bindings = <&latin_e_acute>, <&latin_e_LCTL_LALT>;
-        mods = <(MOD_LCTL|MOD_LALT)>;
+        bindings = <&latin_e_acute>, <&latin_e_LCTL_LALT_LGUI>;
+        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+    };
+    latin_e_LCTL_LALT_LGUI: latin_e_LCTL_LALT_LGUI {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_LCTL_LALT_LGUI";
+        #binding-cells = <0>;
+        bindings = <&latin_e_LCTL_LALT>, <&latin_e_circumflex>;
+        mods = <MOD_LGUI>;
     };
     latin_e_LCTL_LALT: latin_e_LCTL_LALT {
         compatible = "zmk,behavior-mod-morph";
@@ -575,13 +614,27 @@ macros {
         bindings = <&latin_e_diaeresis_lower>, <&latin_e_diaeresis_upper>;
         mods = <MOD_LSFT>;
     };
+    latin_e_circumflex: latin_e_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_e_circumflex_lower>, <&latin_e_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
 
     latin_a: latin_a {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_A";
         #binding-cells = <0>;
-        bindings = <&latin_a_acute>, <&latin_a_LCTL_LALT>;
-        mods = <(MOD_LCTL|MOD_LALT)>;
+        bindings = <&latin_a_acute>, <&latin_a_LCTL_LALT_LGUI>;
+        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+    };
+    latin_a_LCTL_LALT_LGUI: latin_a_LCTL_LALT_LGUI {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_LCTL_LALT_LGUI";
+        #binding-cells = <0>;
+        bindings = <&latin_a_LCTL_LALT>, <&latin_a_circumflex>;
+        mods = <MOD_LGUI>;
     };
     latin_a_LCTL_LALT: latin_a_LCTL_LALT {
         compatible = "zmk,behavior-mod-morph";
@@ -611,13 +664,27 @@ macros {
         bindings = <&latin_a_diaeresis_lower>, <&latin_a_diaeresis_upper>;
         mods = <MOD_LSFT>;
     };
+    latin_a_circumflex: latin_a_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_a_circumflex_lower>, <&latin_a_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
 
     latin_y: latin_y {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_Y";
         #binding-cells = <0>;
-        bindings = <&latin_y_acute>, <&latin_y_LCTL_LALT>;
-        mods = <(MOD_LCTL|MOD_LALT)>;
+        bindings = <&latin_y_acute>, <&latin_y_LCTL_LALT_LGUI>;
+        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+    };
+    latin_y_LCTL_LALT_LGUI: latin_y_LCTL_LALT_LGUI {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_LCTL_LALT_LGUI";
+        #binding-cells = <0>;
+        bindings = <&latin_y_LCTL_LALT>, <&latin_y_circumflex>;
+        mods = <MOD_LGUI>;
     };
     latin_y_LCTL_LALT: latin_y_LCTL_LALT {
         compatible = "zmk,behavior-mod-morph";
@@ -647,13 +714,27 @@ macros {
         bindings = <&latin_y_diaeresis_lower>, <&latin_y_diaeresis_upper>;
         mods = <MOD_LSFT>;
     };
+    latin_y_circumflex: latin_y_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_y_circumflex_lower>, <&latin_y_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
 
     latin_o: latin_o {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_O";
         #binding-cells = <0>;
-        bindings = <&latin_o_acute>, <&latin_o_LCTL_LALT>;
-        mods = <(MOD_LCTL|MOD_LALT)>;
+        bindings = <&latin_o_acute>, <&latin_o_LCTL_LALT_LGUI>;
+        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+    };
+    latin_o_LCTL_LALT_LGUI: latin_o_LCTL_LALT_LGUI {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_LCTL_LALT_LGUI";
+        #binding-cells = <0>;
+        bindings = <&latin_o_LCTL_LALT>, <&latin_o_circumflex>;
+        mods = <MOD_LGUI>;
     };
     latin_o_LCTL_LALT: latin_o_LCTL_LALT {
         compatible = "zmk,behavior-mod-morph";
@@ -683,13 +764,27 @@ macros {
         bindings = <&latin_o_diaeresis_lower>, <&latin_o_diaeresis_upper>;
         mods = <MOD_LSFT>;
     };
+    latin_o_circumflex: latin_o_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_o_circumflex_lower>, <&latin_o_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
 
     latin_u: latin_u {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_U";
         #binding-cells = <0>;
-        bindings = <&latin_u_acute>, <&latin_u_LCTL_LALT>;
-        mods = <(MOD_LCTL|MOD_LALT)>;
+        bindings = <&latin_u_acute>, <&latin_u_LCTL_LALT_LGUI>;
+        mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
+    };
+    latin_u_LCTL_LALT_LGUI: latin_u_LCTL_LALT_LGUI {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_LCTL_LALT_LGUI";
+        #binding-cells = <0>;
+        bindings = <&latin_u_LCTL_LALT>, <&latin_u_circumflex>;
+        mods = <MOD_LGUI>;
     };
     latin_u_LCTL_LALT: latin_u_LCTL_LALT {
         compatible = "zmk,behavior-mod-morph";
@@ -717,6 +812,13 @@ macros {
         label = "LATIN_U_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&latin_u_diaeresis_lower>, <&latin_u_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_u_circumflex: latin_u_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_u_circumflex_lower>, <&latin_u_circumflex_upper>;
         mods = <MOD_LSFT>;
     };
 
