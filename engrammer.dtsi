@@ -448,6 +448,13 @@ macros {
     UNICODE(latin_o_acute_lower,   <&kp N0 &kp N0 &kp F &kp N3 >) // ó
     UNICODE(latin_u_acute_lower,   <&kp N0 &kp N0 &kp F &kp A  >) // ú
 
+    UNICODE(latin_i_grave_lower,   <&kp N0 &kp N0 &kp E &kp C  >) // ì
+    UNICODE(latin_e_grave_lower,   <&kp N0 &kp N0 &kp E &kp N8 >) // è
+    UNICODE(latin_a_grave_lower,   <&kp N0 &kp N0 &kp E &kp N0 >) // à
+    UNICODE(latin_y_grave_lower,   <&kp N1 &kp E  &kp F &kp N3 >) // ỳ
+    UNICODE(latin_o_grave_lower,   <&kp N0 &kp N0 &kp F &kp N2 >) // ò
+    UNICODE(latin_u_grave_lower,   <&kp N0 &kp N0 &kp F &kp N9 >) // ù
+
     UNICODE(latin_c_cedilla_upper, <&kp N0 &kp N0 &kp C &kp N7 >) // Ç
     UNICODE(latin_i_acute_upper,   <&kp N0 &kp N0 &kp C &kp D  >) // Í
     UNICODE(latin_e_acute_upper,   <&kp N0 &kp N0 &kp C &kp N9 >) // É
@@ -456,11 +463,33 @@ macros {
     UNICODE(latin_o_acute_upper,   <&kp N0 &kp N0 &kp D &kp N3 >) // Ó
     UNICODE(latin_u_acute_upper,   <&kp N0 &kp N0 &kp D &kp A  >) // Ú
 
+    UNICODE(latin_i_grave_upper,   <&kp N0 &kp N0 &kp C &kp C  >) // Ì
+    UNICODE(latin_e_grave_upper,   <&kp N0 &kp N0 &kp C &kp N8 >) // È
+    UNICODE(latin_a_grave_upper,   <&kp N0 &kp N0 &kp C &kp N0 >) // À
+    UNICODE(latin_y_grave_upper,   <&kp N1 &kp E  &kp F &kp N2 >) // Ỳ
+    UNICODE(latin_o_grave_upper,   <&kp N0 &kp N0 &kp D &kp N2 >) // Ò
+    UNICODE(latin_u_grave_upper,   <&kp N0 &kp N0 &kp D &kp N9 >) // Ù
+
     latin_c_cedilla: latin_c_cedilla {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_C_CEDILLA";
         #binding-cells = <0>;
         bindings = <&latin_c_cedilla_lower>, <&latin_c_cedilla_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    latin_i: latin_i {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I";
+        #binding-cells = <0>;
+        bindings = <&latin_i_acute>, <&latin_i_grave>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    latin_i_grave: latin_i_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_i_grave_lower>, <&latin_i_grave_upper>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     latin_i_acute: latin_i_acute {
@@ -470,11 +499,41 @@ macros {
         bindings = <&latin_i_acute_lower>, <&latin_i_acute_upper>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+
+    latin_e: latin_e {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E";
+        #binding-cells = <0>;
+        bindings = <&latin_e_acute>, <&latin_e_grave>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    latin_e_grave: latin_e_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_e_grave_lower>, <&latin_e_grave_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
     latin_e_acute: latin_e_acute {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_E_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_e_acute_lower>, <&latin_e_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    latin_a: latin_a {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A";
+        #binding-cells = <0>;
+        bindings = <&latin_a_acute>, <&latin_a_grave>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    latin_a_grave: latin_a_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_a_grave_lower>, <&latin_a_grave_upper>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     latin_a_acute: latin_a_acute {
@@ -484,6 +543,21 @@ macros {
         bindings = <&latin_a_acute_lower>, <&latin_a_acute_upper>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+
+    latin_y: latin_y {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y";
+        #binding-cells = <0>;
+        bindings = <&latin_y_acute>, <&latin_y_grave>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    latin_y_grave: latin_y_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_y_grave_lower>, <&latin_y_grave_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
     latin_y_acute: latin_y_acute {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_Y_ACUTE";
@@ -491,11 +565,41 @@ macros {
         bindings = <&latin_y_acute_lower>, <&latin_y_acute_upper>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+
+    latin_o: latin_o {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O";
+        #binding-cells = <0>;
+        bindings = <&latin_o_acute>, <&latin_o_grave>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    latin_o_grave: latin_o_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_o_grave_lower>, <&latin_o_grave_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
     latin_o_acute: latin_o_acute {
         compatible = "zmk,behavior-mod-morph";
         label = "LATIN_O_ACUTE";
         #binding-cells = <0>;
         bindings = <&latin_o_acute_lower>, <&latin_o_acute_upper>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    latin_u: latin_u {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U";
+        #binding-cells = <0>;
+        bindings = <&latin_u_acute>, <&latin_u_grave>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    latin_u_grave: latin_u_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_u_grave_lower>, <&latin_u_grave_upper>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     latin_u_acute: latin_u_acute {
