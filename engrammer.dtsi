@@ -239,28 +239,6 @@ behaviors {
     //////////////////////////////////////////////////////////////////
 
     //
-    // Shift + LEFT_PARENTHESIS = LESS_THAN
-    //
-    parang_left: left_parenthesis_and_less_than {
-        compatible = "zmk,behavior-mod-morph";
-        label = "LEFT_PARENTHESIS_AND_LESS_THAN";
-        #binding-cells = <0>;
-        bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //
-    // Shift + RIGHT_PARENTHESIS = GREATER_THAN
-    //
-    parang_right: right_parenthesis_and_greater_than {
-        compatible = "zmk,behavior-mod-morph";
-        label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
-        #binding-cells = <0>;
-        bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //
     // Shift + CapsWord = CapsLock
     //
     cappy: capsword_and_capslock {
