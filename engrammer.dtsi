@@ -12,6 +12,7 @@
 // Sunaku's Keymap v24 featuring the Engrammer layout with Miryoku
 // - https://github.com/sunaku/glove80-keymaps
 //
+//////////////////////////////////////////////////////////////////////
 
 behaviors {
 
@@ -22,24 +23,28 @@ behaviors {
     // - https://github.com/urob/zmk-config#timeless-homerow-mods
     //
     //////////////////////////////////////////////////////////////////
+
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the pinky, ring, and middle fingers (which are assigned to Super,
     // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
     //
     #define HOMEY_HOLDING_TYPE "tap-preferred"
+
     //
     // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
     // home row mod keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+
     //
     // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
     #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
+
     //
     // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
@@ -51,6 +56,7 @@ behaviors {
     // for the index fingers so as not to hinder their speed and dexterity.
     //
     #define SHIFT_HOLDING_TYPE "tap-preferred"
+
     //
     // SHIFT_HOLDING_TIME defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
@@ -64,12 +70,14 @@ behaviors {
     // perform outward rolls from your index fingers toward your pinkies.
     //
     #define SHIFT_HOLDING_TIME 170
+
     //
     // SHIFT_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
     #define SHIFT_STREAK_DECAY 70 // global-quick-tap-ms
+
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
@@ -79,26 +87,31 @@ behaviors {
     // while the thumb layer key is still held down) for quicker programming.
     //
     #define THUMB_HOLDING_TYPE "balanced"
+
     //
     // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
     #define THUMB_HOLDING_TIME 200
+
     //
     // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+
     //
     // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
     #define SPACE_HOLDING_TIME 170
+
     //
     // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+
     //
     // Glove80 key positions index for positional hold-tap
     // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
@@ -136,6 +149,7 @@ behaviors {
                         69 52       57 74                \
                          70 53     56 73                 \
                           71 54   55 72
+
     //
     // Home row mod-tap keys for all except index fingers
     //
@@ -163,6 +177,7 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
+
     //
     // Special home row mod-tap keys for the index fingers
     //
@@ -190,6 +205,7 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
+
     //
     // Thumb cluster hold-tap keys for Miryoku layers
     //
@@ -216,7 +232,15 @@ behaviors {
         bindings = <&mo>, <&kp>;
     };
 
+    //////////////////////////////////////////////////////////////////
+    //
+    // Custom shifted pairs
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
     // Shift + LEFT_PARENTHESIS = LESS_THAN
+    //
     parang_left: left_parenthesis_and_less_than {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_PARENTHESIS_AND_LESS_THAN";
@@ -225,7 +249,9 @@ behaviors {
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    //
     // Shift + RIGHT_PARENTHESIS = GREATER_THAN
+    //
     parang_right: right_parenthesis_and_greater_than {
         compatible = "zmk,behavior-mod-morph";
         label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
@@ -234,7 +260,9 @@ behaviors {
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    //
     // Shift + CapsWord = CapsLock
+    //
     cappy: capsword_and_capslock {
         compatible = "zmk,behavior-mod-morph";
         label = "CAPSWORD_AND_CAPSLOCK";
@@ -243,13 +271,23 @@ behaviors {
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    //////////////////////////////////////////////////////////////////
+    //
+    // ZMK global overrides
+    //
+    //////////////////////////////////////////////////////////////////
+
     //
     // CapsWord - ported from Pascal Getreuer's extension for QMK
     // - https://zmk.dev/docs/behaviors/caps-word
     // - https://getreuer.info/posts/keyboards/caps-word/index.html
     //
     behavior_caps_word {
-        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+        continue-list = <
+            UNDERSCORE MINUS
+            BACKSPACE DELETE
+            N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+        >;
     };
 
 };
@@ -262,12 +300,14 @@ macros {
     // - https://getreuer.info/posts/keyboards/select-word/index.html
     //
     //////////////////////////////////////////////////////////////////
+
     //
     // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
     // after moving the cursor before it selects a word.  A larger delay
     // may allow the macro to move to the next word upon each invocation.
     //
     #define SELECT_WORD_DELAY 1
+
     //
     // select a word (jumps to next word upon each successive invocation)
     //
@@ -288,6 +328,7 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
     )
+
     //
     // extend current selection by one word
     //
@@ -308,6 +349,7 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp LC(LS(LEFT))>;
     )
+
     //
     // select current line
     //
@@ -328,6 +370,7 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp END &kp LS(HOME)>;
     )
+
     //
     // extend current selection by one line
     //
@@ -354,30 +397,36 @@ macros {
     // World layer - international characters
     //
     //////////////////////////////////////////////////////////////////////////
+
     //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
     #define UNICODE_TAP_DELAY 1
+
     //
     // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
     // into an actual Unicode codepoint.  This is Operating System dependent.
     //
     #define UNICODE_TRANSLATE(codepoint) \
         UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
+
     #define UNICODE_TRANSLATE_LINUX(codepoint) \
                 <&kp LC(LS(U))> \
                 , codepoint \
                 , <&kp ENTER>
+
     #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
                 codepoint \
                 , <&kp LA(X)>
+
     #define UNICODE_SEQUENCE(name, ...) \
         ZMK_MACRO(name, \
             wait-ms = <UNICODE_TAP_DELAY>; \
             tap-ms = <UNICODE_TAP_DELAY>; \
             bindings = __VA_ARGS__; \
         )
+
     #define UNICODE(name, codepoint) \
         UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
 
