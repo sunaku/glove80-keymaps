@@ -1,0 +1,964 @@
+//////////////////////////////////////////////////////////////////////
+// NOTE: Use the `#define` settings below to customize this keymap! //
+//////////////////////////////////////////////////////////////////////
+// IMPORTANT: You need to set Firmware Version to "pr19.zephyr-3-2" //
+// under Settings > Advanced Settings in the Glove80 Layout Editor  //
+// if you want to use the `hold-trigger-on-release` feature in ZMK. //
+//////////////////////////////////////////////////////////////////////
+// CAUTION: PR19 firmware is not production quality; it has issues: //
+// https://discord.com/channels/877392805654306816/1137025078979203142
+//////////////////////////////////////////////////////////////////////
+//
+// Sunaku's Keymap v24 featuring the Engrammer layout with Miryoku
+// - https://github.com/sunaku/glove80-keymaps
+//
+//////////////////////////////////////////////////////////////////////
+
+behaviors {
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // Miryoku layers and home row mods (ported from my QMK endgame)
+    // - https://sunaku.github.io/home-row-mods.html#porting-to-zmk
+    // - https://github.com/urob/zmk-config#timeless-homerow-mods
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for the pinky, ring, and middle fingers (which are assigned to Super,
+    // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
+    //
+    #define HOMEY_HOLDING_TYPE "tap-preferred"
+
+    //
+    // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // home row mod keys in order to send their modifiers to the computer
+    // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
+    //
+    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+
+    //
+    // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // after typing before you can use home row mods again.  It prevents
+    // unintended activation of home row mods when you're actively typing.
+    //
+    #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
+
+    //
+    // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for index fingers (which Miryoku assigns to Shift) on home row keys.
+    //
+    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
+    // allows faster activation of the Shift modifier (without having to wait
+    // for the modified key to be released as the "balanced" flavor requires).
+    // Typing streaks and the `hold-trigger-on-release` setting are disabled
+    // for the index fingers so as not to hinder their speed and dexterity.
+    //
+    #define SHIFT_HOLDING_TYPE "tap-preferred"
+
+    //
+    // SHIFT_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // index finger keys in order to send their modifiers to the computer
+    // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
+    //
+    // CAUTION: You'll need to perform inward rolls from pinky->ring->middle
+    // fingers toward the index fingers when activating multiple modifiers
+    // because `hold-trigger-on-release` is disabled for the index fingers.
+    // Otherwise, you may be surprised that the index fingers' modifier is
+    // sent immediately without the rest of your multi-mod chord when you
+    // perform outward rolls from your index fingers toward your pinkies.
+    //
+    #define SHIFT_HOLDING_TIME 170
+
+    //
+    // SHIFT_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // after typing before you can use home row mods again.  It prevents
+    // unintended activation of home row mods when you're actively typing.
+    //
+    #define SHIFT_STREAK_DECAY 70 // global-quick-tap-ms
+
+    //
+    // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for the thumbs (which are assigned to 6 layers in the Miryoku system).
+    //
+    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+    // activation for the symbol layer (if the tapped symbol key is released
+    // while the thumb layer key is still held down) for quicker programming.
+    //
+    #define THUMB_HOLDING_TYPE "balanced"
+
+    //
+    // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // a thumb key to activate a layer.  Shorter holds are treated as taps.
+    //
+    #define THUMB_HOLDING_TIME 200
+
+    //
+    // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+
+    //
+    // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // the space thumb key to activate.  Shorter holds are treated as taps.
+    //
+    #define SPACE_HOLDING_TIME 170
+
+    //
+    // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+
+    //
+    // Glove80 key positions index for positional hold-tap
+    // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
+    // - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
+    //
+    // |------------------------|------------------------|
+    // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
+    // |                        |                        |
+    // |  0  1  2  3  4         |          5  6  7  8  9 |
+    // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
+    // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
+    // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
+    // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
+    // | 64 65 66 67 68         |         75 76 77 78 79 |
+    // |                69 52   |   57 74                |
+    // |                 70 53  |  56 73                 |
+    // |                  71 54 | 55 72                  |
+    // |------------------------|------------------------|
+    //
+    #define LEFT_HAND_KEYS      \
+          0  1  2  3  4         \
+         10 11 12 13 14 15      \
+         22 23 24 25 26 27      \
+         34 35 36 37 38 39      \
+         46 47 48 49 50 51      \
+         64 65 66 67 68
+    #define RIGHT_HAND_KEYS     \
+                                           5  6  7  8  9 \
+                                       16 17 18 19 20 21 \
+                                       28 29 30 31 32 33 \
+                                       40 41 42 43 44 45 \
+                                       58 59 60 61 62 63 \
+                                          75 76 77 78 79
+    #define THUMB_KEYS          \
+                        69 52       57 74                \
+                         70 53     56 73                 \
+                          71 54   55 72
+
+    //
+    // Home row mod-tap keys for all except index fingers
+    //
+    homey_left: miryoku_home_row_mods_left_hand {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_LEFT_HAND";
+        flavor = HOMEY_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+    homey_right: miryoku_home_row_mods_right_hand {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_RIGHT_HAND";
+        flavor = HOMEY_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    //
+    // Special home row mod-tap keys for the index fingers
+    //
+    shift_left: miryoku_home_row_mods_left_shift_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_LEFT_SHIFT_SHIFT";
+        flavor = SHIFT_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        //hold-trigger-on-release; // don't wait for other mods
+        tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        quick-tap-ms = <SHIFT_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+    shift_right: miryoku_home_row_mods_right_shift_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_RIGHT_SHIFT_SHIFT";
+        flavor = SHIFT_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        //hold-trigger-on-release; // don't wait for other mods
+        tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        quick-tap-ms = <SHIFT_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    //
+    // Thumb cluster hold-tap keys for Miryoku layers
+    //
+    thumb: miryoku_thumb_layer {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MIRYOKU_THUMB_LAYER";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        //global-quick-tap; // no typing streak
+        //retro-tap; // don't allow slow (hold-like) taps
+        #binding-cells = <2>;
+        bindings = <&mo>, <&kp>;
+    };
+    space: miryoku_thumb_layer_spacebar {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MIRYOKU_THUMB_LAYER_SPACEBAR";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <SPACE_HOLDING_TIME>;
+        quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+        //global-quick-tap; // no typing streak
+        retro-tap; // allow slow (hold-like) taps
+        #binding-cells = <2>;
+        bindings = <&mo>, <&kp>;
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // Custom shifted pairs
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // Shift + CapsWord = CapsLock
+    //
+    cappy: capsword_and_capslock {
+        compatible = "zmk,behavior-mod-morph";
+        label = "CAPSWORD_AND_CAPSLOCK";
+        #binding-cells = <0>;
+        bindings = <&caps_word>, <&kp CAPSLOCK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // ZMK global overrides
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // CapsWord - ported from Pascal Getreuer's extension for QMK
+    // - https://zmk.dev/docs/behaviors/caps-word
+    // - https://getreuer.info/posts/keyboards/caps-word/index.html
+    //
+    behavior_caps_word {
+        continue-list = <
+            UNDERSCORE MINUS
+            BACKSPACE DELETE
+            N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+        >;
+    };
+
+};
+
+macros {
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // Approximation of Pascal Getreuer's Select Word macro from QMK
+    // - https://getreuer.info/posts/keyboards/select-word/index.html
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+    // after moving the cursor before it selects a word.  A larger delay
+    // may allow the macro to move to the next word upon each invocation.
+    //
+    #define SELECT_WORD_DELAY 1
+
+    //
+    // select a word (jumps to next word upon each successive invocation)
+    //
+    select_word: select_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_WORD";
+        #binding-cells = <0>;
+        bindings = <&select_word_right>, <&select_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(select_word_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(RIGHT) &kp LC(LEFT) &kp LC(LS(RIGHT))>;
+    )
+    ZMK_MACRO(select_word_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
+    )
+
+    //
+    // extend current selection by one word
+    //
+    extend_word: extend_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXTEND_WORD";
+        #binding-cells = <0>;
+        bindings = <&extend_word_right>, <&extend_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(extend_word_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(LS(RIGHT))>;
+    )
+    ZMK_MACRO(extend_word_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(LS(LEFT))>;
+    )
+
+    //
+    // select current line
+    //
+    select_line: select_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_LINE";
+        #binding-cells = <0>;
+        bindings = <&select_line_right>, <&select_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(select_line_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp HOME &kp LS(END)>;
+    )
+    ZMK_MACRO(select_line_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp END &kp LS(HOME)>;
+    )
+
+    //
+    // extend current selection by one line
+    //
+    extend_line: extend_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXTEND_LINE";
+        #binding-cells = <0>;
+        bindings = <&extend_line_right>, <&extend_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(extend_line_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LS(DOWN) &kp LS(END)>;
+    )
+    ZMK_MACRO(extend_line_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LS(UP) &kp LS(HOME)>;
+    )
+
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // World layer - international characters
+    //
+    //      LALT RALT
+    // LSFT LCTL RCTL RSFT
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    //
+    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+    // between keystrokes while inputting the Unicode codepoint shortcut.
+    //
+    #define UNICODE_TAP_DELAY 1
+
+    //
+    // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
+    // into an actual Unicode codepoint.  This is Operating System dependent.
+    //
+    #define UNICODE_TRANSLATE(codepoint) \
+        UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
+
+    #define UNICODE_TRANSLATE_LINUX(codepoint) \
+                <&kp LC(LS(U))> \
+                , codepoint \
+                , <&kp ENTER>
+
+    #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
+                codepoint \
+                , <&kp LA(X)>
+
+    #define UNICODE_SEQUENCE(name, ...) \
+        ZMK_MACRO(name, \
+            wait-ms = <UNICODE_TAP_DELAY>; \
+            tap-ms = <UNICODE_TAP_DELAY>; \
+            bindings = __VA_ARGS__; \
+        )
+
+    #define UNICODE(name, codepoint) \
+        UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
+
+    UNICODE(latin_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
+    UNICODE(latin_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
+    UNICODE(latin_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
+    UNICODE(latin_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
+    UNICODE(latin_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
+    UNICODE(latin_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
+    UNICODE(latin_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
+    UNICODE(latin_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
+    UNICODE(latin_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
+
+    //
+    // acute accents - the default, without any modifiers applied
+    //
+
+    UNICODE(latin_c_cedilla_lower,   <&kp N0 &kp N0 &kp E  &kp N7 >) // ç
+    UNICODE(latin_i_acute_lower,     <&kp N0 &kp N0 &kp E  &kp D  >) // í
+    UNICODE(latin_e_acute_lower,     <&kp N0 &kp N0 &kp E  &kp N9 >) // é
+    UNICODE(latin_a_acute_lower,     <&kp N0 &kp N0 &kp E  &kp N1 >) // á
+    UNICODE(latin_y_acute_lower,     <&kp N0 &kp N0 &kp F  &kp D  >) // ý
+    UNICODE(latin_o_acute_lower,     <&kp N0 &kp N0 &kp F  &kp N3 >) // ó
+    UNICODE(latin_u_acute_lower,     <&kp N0 &kp N0 &kp F  &kp A  >) // ú
+
+    UNICODE(latin_c_cedilla_upper,   <&kp N0 &kp N0 &kp C  &kp N7 >) // Ç
+    UNICODE(latin_i_acute_upper,     <&kp N0 &kp N0 &kp C  &kp D  >) // Í
+    UNICODE(latin_e_acute_upper,     <&kp N0 &kp N0 &kp C  &kp N9 >) // É
+    UNICODE(latin_a_acute_upper,     <&kp N0 &kp N0 &kp C  &kp N1 >) // Á
+    UNICODE(latin_y_acute_upper,     <&kp N0 &kp N0 &kp D  &kp D  >) // Ý
+    UNICODE(latin_o_acute_upper,     <&kp N0 &kp N0 &kp D  &kp N3 >) // Ó
+    UNICODE(latin_u_acute_upper,     <&kp N0 &kp N0 &kp D  &kp A  >) // Ú
+
+    //
+    // grave accents - LCTRL
+    //
+
+    UNICODE(latin_i_grave_lower,     <&kp N0 &kp N0 &kp E  &kp C  >) // ì
+    UNICODE(latin_e_grave_lower,     <&kp N0 &kp N0 &kp E  &kp N8 >) // è
+    UNICODE(latin_a_grave_lower,     <&kp N0 &kp N0 &kp E  &kp N0 >) // à
+    UNICODE(latin_y_grave_lower,     <&kp N1 &kp E  &kp F  &kp N3 >) // ỳ
+    UNICODE(latin_o_grave_lower,     <&kp N0 &kp N0 &kp F  &kp N2 >) // ò
+    UNICODE(latin_u_grave_lower,     <&kp N0 &kp N0 &kp F  &kp N9 >) // ù
+
+    UNICODE(latin_i_grave_upper,     <&kp N0 &kp N0 &kp C  &kp C  >) // Ì
+    UNICODE(latin_e_grave_upper,     <&kp N0 &kp N0 &kp C  &kp N8 >) // È
+    UNICODE(latin_a_grave_upper,     <&kp N0 &kp N0 &kp C  &kp N0 >) // À
+    UNICODE(latin_y_grave_upper,     <&kp N1 &kp E  &kp F  &kp N2 >) // Ỳ
+    UNICODE(latin_o_grave_upper,     <&kp N0 &kp N0 &kp D  &kp N2 >) // Ò
+    UNICODE(latin_u_grave_upper,     <&kp N0 &kp N0 &kp D  &kp N9 >) // Ù
+
+    //
+    // diaeresis accents - RCTRL
+    //
+
+    UNICODE(latin_i_diaeresis_lower, <&kp N0 &kp N0 &kp E  &kp F  >) // ï
+    UNICODE(latin_e_diaeresis_lower, <&kp N0 &kp N0 &kp E  &kp B  >) // ë
+    UNICODE(latin_a_diaeresis_lower, <&kp N0 &kp N0 &kp E  &kp N4 >) // ä
+    UNICODE(latin_y_diaeresis_lower, <&kp N0 &kp N0 &kp F  &kp F  >) // ÿ
+    UNICODE(latin_o_diaeresis_lower, <&kp N0 &kp N0 &kp F  &kp N6 >) // ö
+    UNICODE(latin_u_diaeresis_lower, <&kp N0 &kp N0 &kp F  &kp C  >) // ü
+
+    UNICODE(latin_i_diaeresis_upper, <&kp N0 &kp N0 &kp C  &kp F  >) // Ï
+    UNICODE(latin_e_diaeresis_upper, <&kp N0 &kp N0 &kp C  &kp B  >) // Ë
+    UNICODE(latin_a_diaeresis_upper, <&kp N0 &kp N0 &kp C  &kp N4 >) // Ä
+    UNICODE(latin_y_diaeresis_upper, <&kp N0 &kp N1 &kp N7 &kp N8 >) // Ÿ
+    UNICODE(latin_o_diaeresis_upper, <&kp N0 &kp N0 &kp D  &kp N6 >) // Ö
+    UNICODE(latin_u_diaeresis_upper, <&kp N0 &kp N0 &kp D  &kp C  >) // Ü
+
+    //
+    // tilde accents - LALT
+    //
+
+    UNICODE(latin_a_tilde_lower,      <&kp N0 &kp N0 &kp E  &kp N3 >) // ã
+    UNICODE(latin_o_tilde_lower,      <&kp N0 &kp N0 &kp F  &kp N5 >) // õ
+
+    UNICODE(latin_a_tilde_upper,      <&kp N0 &kp N0 &kp C  &kp N3 >) // Ã
+    UNICODE(latin_o_tilde_upper,      <&kp N0 &kp N0 &kp D  &kp N5 >) // Õ
+
+    //
+    // other accents - RALT
+    //
+
+    UNICODE(latin_e_ae_lower,         <&kp N0 &kp N0 &kp E  &kp N6 >) // æ
+    UNICODE(latin_e_ae_upper,         <&kp N0 &kp N0 &kp C  &kp N6 >) // Æ
+
+    UNICODE(latin_a_ring_lower,       <&kp N0 &kp N0 &kp E  &kp N5 >) // å
+    UNICODE(latin_a_ring_upper,       <&kp N0 &kp N0 &kp C  &kp N5 >) // Å
+
+    UNICODE(latin_o_slash_lower,      <&kp N0 &kp N0 &kp F  &kp N8 >) // ø
+    UNICODE(latin_o_slash_upper,      <&kp N0 &kp N0 &kp D  &kp N8 >) // Ø
+
+    //
+    // circumflex accents - RSHFT
+    //
+
+    UNICODE(latin_i_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp E  >) // î
+    UNICODE(latin_e_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp A  >) // ê
+    UNICODE(latin_a_circumflex_lower, <&kp N0 &kp N0 &kp E  &kp N2 >) // â
+    UNICODE(latin_y_circumflex_lower, <&kp N0 &kp N1 &kp N7 &kp N7 >) // ŷ
+    UNICODE(latin_o_circumflex_lower, <&kp N0 &kp N0 &kp F  &kp N4 >) // ô
+    UNICODE(latin_u_circumflex_lower, <&kp N0 &kp N0 &kp F  &kp B  >) // û
+
+    UNICODE(latin_i_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp E  >) // Î
+    UNICODE(latin_e_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp A  >) // Ê
+    UNICODE(latin_a_circumflex_upper, <&kp N0 &kp N0 &kp C  &kp N2 >) // Â
+    UNICODE(latin_y_circumflex_upper, <&kp N0 &kp N1 &kp N7 &kp N6 >) // Ŷ
+    UNICODE(latin_o_circumflex_upper, <&kp N0 &kp N0 &kp D  &kp N4 >) // Ô
+    UNICODE(latin_u_circumflex_upper, <&kp N0 &kp N0 &kp D  &kp B  >) // Û
+
+    latin_c_cedilla: latin_c_cedilla {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_C_CEDILLA";
+        #binding-cells = <0>;
+        bindings = <&latin_c_cedilla_lower>, <&latin_c_cedilla_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    latin_i: latin_i {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I";
+        #binding-cells = <0>;
+        bindings = <&latin_i_acute>, <&latin_i_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_i_LCTL: latin_i_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_LCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_i_grave>, <&latin_i_RCTL>;
+        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_i_RCTL: latin_i_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_RCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_i_diaeresis>, <&latin_i_circumflex>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_i_circumflex: latin_i_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_i_circumflex_lower>, <&latin_i_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_i_diaeresis: latin_i_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_i_diaeresis_lower>, <&latin_i_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_i_grave: latin_i_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_i_grave_lower>, <&latin_i_grave_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_i_acute: latin_i_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_I_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_i_acute_lower>, <&latin_i_acute_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    latin_e: latin_e {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E";
+        #binding-cells = <0>;
+        bindings = <&latin_e_acute>, <&latin_e_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_e_LCTL: latin_e_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_LCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_e_grave>, <&latin_e_RCTL>;
+        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_e_RCTL: latin_e_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_RCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_e_diaeresis>, <&latin_e_LALT>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_e_LALT: latin_e_LALT {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_LALT";
+        #binding-cells = <0>;
+        bindings = <&latin_e_ae>, <&latin_e_circumflex>;
+        mods = <(MOD_RALT|MOD_RSFT)>;
+    };
+    latin_e_circumflex: latin_e_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_e_circumflex_lower>, <&latin_e_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_e_ae: latin_e_ae {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_ae";
+        #binding-cells = <0>;
+        bindings = <&latin_e_ae_lower>, <&latin_e_ae_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_e_diaeresis: latin_e_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_e_diaeresis_lower>, <&latin_e_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_e_grave: latin_e_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_e_grave_lower>, <&latin_e_grave_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_e_acute: latin_e_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_E_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_e_acute_lower>, <&latin_e_acute_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    latin_a: latin_a {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A";
+        #binding-cells = <0>;
+        bindings = <&latin_a_acute>, <&latin_a_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_a_LCTL: latin_a_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_LCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_a_grave>, <&latin_a_RCTL>;
+        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_a_RCTL: latin_a_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_RCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_a_diaeresis>, <&latin_a_LALT>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_a_LALT: latin_a_LALT {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_LALT";
+        #binding-cells = <0>;
+        bindings = <&latin_a_tilde>, <&latin_a_RALT>;
+        mods = <(MOD_RALT|MOD_RSFT)>;
+    };
+    latin_a_RALT: latin_a_RALT {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_RALT";
+        #binding-cells = <0>;
+        bindings = <&latin_a_ring>, <&latin_a_circumflex>;
+        mods = <(MOD_RSFT)>;
+    };
+    latin_a_tilde: latin_a_tilde {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_TILDE";
+        #binding-cells = <0>;
+        bindings = <&latin_a_tilde_lower>, <&latin_a_tilde_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_a_ring: latin_a_ring {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_ring";
+        #binding-cells = <0>;
+        bindings = <&latin_a_ring_lower>, <&latin_a_ring_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_a_circumflex: latin_a_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_a_circumflex_lower>, <&latin_a_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_a_diaeresis: latin_a_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_a_diaeresis_lower>, <&latin_a_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_a_grave: latin_a_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_a_grave_lower>, <&latin_a_grave_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_a_acute: latin_a_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_A_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_a_acute_lower>, <&latin_a_acute_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    latin_y: latin_y {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y";
+        #binding-cells = <0>;
+        bindings = <&latin_y_acute>, <&latin_y_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_y_LCTL: latin_y_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_LCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_y_grave>, <&latin_y_RCTL>;
+        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_y_RCTL: latin_y_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_RCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_y_diaeresis>, <&latin_y_circumflex>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_y_circumflex: latin_y_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_y_circumflex_lower>, <&latin_y_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_y_diaeresis: latin_y_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_y_diaeresis_lower>, <&latin_y_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_y_grave: latin_y_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_y_grave_lower>, <&latin_y_grave_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_y_acute: latin_y_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_Y_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_y_acute_lower>, <&latin_y_acute_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    latin_o: latin_o {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O";
+        #binding-cells = <0>;
+        bindings = <&latin_o_acute>, <&latin_o_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_o_LCTL: latin_o_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_LCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_o_grave>, <&latin_o_RCTL>;
+        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_o_RCTL: latin_o_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_RCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_o_diaeresis>, <&latin_o_LALT>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_o_LALT: latin_o_LALT {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_LALT";
+        #binding-cells = <0>;
+        bindings = <&latin_o_tilde>, <&latin_o_RALT>;
+        mods = <(MOD_RALT|MOD_RSFT)>;
+    };
+    latin_o_RALT: latin_o_RALT {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_RALT";
+        #binding-cells = <0>;
+        bindings = <&latin_o_slash>, <&latin_o_circumflex>;
+        mods = <(MOD_RSFT)>;
+    };
+    latin_o_circumflex: latin_o_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_o_circumflex_lower>, <&latin_o_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_o_slash: latin_o_slash {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_slash";
+        #binding-cells = <0>;
+        bindings = <&latin_o_slash_lower>, <&latin_o_slash_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_o_tilde: latin_o_tilde {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_TILDE";
+        #binding-cells = <0>;
+        bindings = <&latin_o_tilde_lower>, <&latin_o_tilde_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_o_diaeresis: latin_o_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_o_diaeresis_lower>, <&latin_o_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_o_grave: latin_o_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_o_grave_lower>, <&latin_o_grave_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_o_acute: latin_o_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_O_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_o_acute_lower>, <&latin_o_acute_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    latin_u: latin_u {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U";
+        #binding-cells = <0>;
+        bindings = <&latin_u_acute>, <&latin_u_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_u_LCTL: latin_u_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_LCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_u_grave>, <&latin_u_RCTL>;
+        mods = <(MOD_RCTL|MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_u_RCTL: latin_u_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_RCTL";
+        #binding-cells = <0>;
+        bindings = <&latin_u_diaeresis>, <&latin_u_circumflex>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_RSFT)>;
+    };
+    latin_u_circumflex: latin_u_circumflex {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_circumflex";
+        #binding-cells = <0>;
+        bindings = <&latin_u_circumflex_lower>, <&latin_u_circumflex_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_u_diaeresis: latin_u_diaeresis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_DIAERESIS";
+        #binding-cells = <0>;
+        bindings = <&latin_u_diaeresis_lower>, <&latin_u_diaeresis_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_u_grave: latin_u_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&latin_u_grave_lower>, <&latin_u_grave_upper>;
+        mods = <MOD_LSFT>;
+    };
+    latin_u_acute: latin_u_acute {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LATIN_U_ACUTE";
+        #binding-cells = <0>;
+        bindings = <&latin_u_acute_lower>, <&latin_u_acute_upper>;
+        mods = <MOD_LSFT>;
+    };
+
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // Emoji layer - modern age pictograms
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    // function row
+    UNICODE(emoji_new_moon,             <&kp N1 &kp F  &kp N3 &kp N1 &kp N1 >) // 🌑
+    UNICODE(emoji_waxing_crescent_moon, <&kp N1 &kp F  &kp N3 &kp N1 &kp N2 >) // 🌒
+    UNICODE(emoji_first_quarter_moon,   <&kp N1 &kp F  &kp N3 &kp N1 &kp N3 >) // 🌓
+    UNICODE(emoji_waxing_gibbous_moon,  <&kp N1 &kp F  &kp N3 &kp N1 &kp N4 >) // 🌔
+    UNICODE(emoji_full_moon,            <&kp N1 &kp F  &kp N3 &kp N1 &kp N5 >) // 🌕
+
+    // number row
+    UNICODE(emoji_tada,                 <&kp N1 &kp F  &kp N3 &kp N8 &kp N9 >) // 🎉
+    UNICODE(emoji_heart,                <&kp N2 &kp N7 &kp N6 &kp N4        >) // ❤️
+    UNICODE(emoji_fire,                 <&kp N1 &kp F  &kp N5 &kp N2 &kp N5 >) // 🔥
+    UNICODE(emoji_muscle,               <&kp N1 &kp F  &kp N4 &kp A  &kp A  >) // 💪
+    UNICODE(emoji_person_climbing,      <&kp N1 &kp F  &kp N9 &kp D  &kp N7 >) // 🧗
+    UNICODE(emoji_rocket,               <&kp N1 &kp F  &kp N6 &kp N8 &kp N0 >) // 🚀
+
+    // upper row
+    UNICODE(emoji_sunglasses,           <&kp N1 &kp F  &kp N6 &kp N0 &kp E  >) // 😎
+    UNICODE(emoji_heart_eyes,           <&kp N1 &kp F  &kp N6 &kp N0 &kp D  >) // 😍
+    UNICODE(emoji_star_struck,          <&kp N1 &kp F  &kp N9 &kp N2 &kp N9 >) // 🤩
+    UNICODE(emoji_tear_smile,           <&kp N1 &kp F  &kp N9 &kp N7 &kp N2 >) // 🥲
+    UNICODE(emoji_scream,               <&kp N1 &kp F  &kp N6 &kp N3 &kp N1 >) // 😱
+    UNICODE_SEQUENCE(emoji_astronaut,                                          // 🧑‍🚀
+                      UNICODE_TRANSLATE(<&kp N1 &kp F  &kp N9 &kp D  &kp N1 >) // 🧑
+                     ,UNICODE_TRANSLATE(<&kp N2 &kp N0 &kp N0 &kp D         >) // ZWJ
+                     ,UNICODE_TRANSLATE(<&kp N1 &kp F  &kp N6 &kp N8 &kp N0 >))// 🚀
+
+    // home row
+    UNICODE(emoji_snap_fingers,         <&kp N1 &kp F  &kp A  &kp F  &kp N0 >) // 🫰
+    UNICODE(emoji_ok_hand,              <&kp N1 &kp F  &kp N4 &kp N4 &kp C  >) // 👌
+    UNICODE(emoji_pray,                 <&kp N1 &kp F  &kp N6 &kp N4 &kp F  >) // 🙏
+    UNICODE(emoji_sweat_smile,          <&kp N1 &kp F  &kp N6 &kp N0 &kp N5 >) // 😅
+    UNICODE(emoji_cold_sweat,           <&kp N1 &kp F  &kp N6 &kp N3 &kp N0 >) // 😰
+    UNICODE(emoji_exploding_head,       <&kp N1 &kp F  &kp N9 &kp N2 &kp F  >) // 🤯
+
+    // lower row
+    UNICODE(emoji_person_tipping_hand,  <&kp N1 &kp F  &kp N4 &kp N8 &kp N1 >) // 💁
+    UNICODE(emoji_person_gesturing_ok,  <&kp N1 &kp F  &kp N6 &kp N4 &kp N6 >) // 🙆
+    UNICODE(emoji_person_bowing,        <&kp N1 &kp F  &kp N6 &kp N4 &kp N7 >) // 🙇
+    UNICODE(emoji_person_raising_hand,  <&kp N1 &kp F  &kp N6 &kp N4 &kp B  >) // 🙋
+    UNICODE(emoji_person_gesturing_no,  <&kp N1 &kp F  &kp N6 &kp N4 &kp N5 >) // 🙅
+    UNICODE(emoji_person_shrugging,     <&kp N1 &kp F  &kp N9 &kp N3 &kp N7 >) // 🤷
+
+    // bottom row
+    UNICODE(emoji_checkoff,             <&kp N2 &kp N7 &kp N0 &kp N5        >) // ✅
+    UNICODE(emoji_100,                  <&kp N1 &kp F  &kp N4 &kp A &kp F   >) // 💯
+    UNICODE(emoji_warning,              <&kp N2 &kp N6 &kp A  &kp N0        >) // ⚠️
+    UNICODE(emoji_x,                    <&kp N2 &kp N7 &kp N4 &kp C         >) // ❌
+    UNICODE(emoji_question,             <&kp N2 &kp N7 &kp N5 &kp N3        >) // ❓
+
+    // thumb cluster upper arc
+    UNICODE(emoji_nerd,                 <&kp N1 &kp F  &kp N9 &kp N1 &kp N3 >) // 🤓
+    UNICODE(emoji_raised_hands,         <&kp N1 &kp F  &kp N6 &kp N4 &kp C  >) // 🙌
+    UNICODE(emoji_sparkles,             <&kp N2 &kp N7 &kp N2 &kp N8        >) // ✨
+
+    // thumb cluster lower arc
+    UNICODE(emoji_thinking,             <&kp N1 &kp F  &kp N9 &kp N1 &kp N4 >) // 🤔
+    UNICODE(emoji_thumbs_down,          <&kp N1 &kp F  &kp N4 &kp N4 &kp E  >) // 👎
+    UNICODE(emoji_thumbs_up,            <&kp N1 &kp F  &kp N4 &kp N4 &kp D  >) // 👍
+
+};
