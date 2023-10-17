@@ -8,6 +8,7 @@ transforms:
   Y: { base: acute, LCTL: diaeresis                                                          }
   O: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: slash }
   U: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
+  N: { base: tilde                                                                           }
 
 characters:
   C:
@@ -45,3 +46,5 @@ characters:
     diaeresis:  { lower: "ü", upper: "Ü" }
     circumflex: { lower: "û", upper: "Û" }
     grave:      { lower: "ù", upper: "Ù" }
+  N:
+    tilde:      { lower: "ñ", upper: "Ñ" }
