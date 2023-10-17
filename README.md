@@ -46,6 +46,18 @@ also available in the `*.dtsi` files provided in this Git repository.
 "Advanced Settings" > "Enable local config" then go back to "Edit" and click
 "Download") and the `*.json` files provided in this Git repository.
 
+## Customizing
+
+You can customize the preset characters in the Emoji and World layers by
+editing their respective YAML source files in this repository.  Afterwards, 
+run the `rake` command to regenerate the "Custom Defined Behaviors" snippet.
+
+To install the prerequisite software for `rake` on a Debian GNU/Linux system:
+
+    apt install ruby rake
+
+See the "interactive layer map" link above for documentation on these files.
+
 ## Discussion
 
 See ["Glorious Engrammer" on Discord][7] for discussion & updates.
