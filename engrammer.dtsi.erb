@@ -383,6 +383,12 @@ macros {
     #define UNICODE_TAP_DELAY 1
 
     //
+    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+    // between emitting Unicode codepoints in multi-codepoint characters.
+    //
+    #define UNICODE_SEQ_DELAY 10
+
+    //
     // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
     // into an actual Unicode codepoint.  This is Operating System dependent.
     //
@@ -465,7 +471,7 @@ macros {
         if character.chars.length > 1
           sequence = character.chars.map do |c|
             "UNICODE_TRANSLATE(<#{keystrokes_from_character(c)}>)"
-          end.join(", ")
+          end.unshift("<&macro_wait_time UNICODE_SEQ_DELAY>").join(", ")
           %>
           /* <%= character %> */ UNICODE_SEQUENCE(<%= id %>, <%= sequence %>)
           <%

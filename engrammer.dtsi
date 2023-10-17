@@ -383,6 +383,12 @@ macros {
     #define UNICODE_TAP_DELAY 1
 
     //
+    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+    // between emitting Unicode codepoints in multi-codepoint characters.
+    //
+    #define UNICODE_SEQ_DELAY 10
+
+    //
     // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
     // into an actual Unicode codepoint.  This is Operating System dependent.
     //
@@ -944,7 +950,7 @@ macros {
 
           /* 🎉 */ UNICODE(emoji_tada, <&kp N1 &kp F &kp N3 &kp N8 &kp N9>)
 
-          /* ️❤️ */ UNICODE_SEQUENCE(emoji_heart, UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>), UNICODE_TRANSLATE(<&kp N2 &kp N7 &kp N6 &kp N4>), UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>))
+          /* ️❤️ */ UNICODE_SEQUENCE(emoji_heart, <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>), UNICODE_TRANSLATE(<&kp N2 &kp N7 &kp N6 &kp N4>), UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>))
 
           /* 🔥 */ UNICODE(emoji_fire, <&kp N1 &kp F &kp N5 &kp N2 &kp N5>)
 
@@ -964,7 +970,7 @@ macros {
 
           /* 😱 */ UNICODE(emoji_scream, <&kp N1 &kp F &kp N6 &kp N3 &kp N1>)
 
-          /* 🧑‍🚀 */ UNICODE_SEQUENCE(emoji_astronaut, UNICODE_TRANSLATE(<&kp N1 &kp F &kp N9 &kp D &kp N1>), UNICODE_TRANSLATE(<&kp N2 &kp N0 &kp N0 &kp D>), UNICODE_TRANSLATE(<&kp N1 &kp F &kp N6 &kp N8 &kp N0>))
+          /* 🧑‍🚀 */ UNICODE_SEQUENCE(emoji_astronaut, <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_TRANSLATE(<&kp N1 &kp F &kp N9 &kp D &kp N1>), UNICODE_TRANSLATE(<&kp N2 &kp N0 &kp N0 &kp D>), UNICODE_TRANSLATE(<&kp N1 &kp F &kp N6 &kp N8 &kp N0>))
 
           /* 🫰 */ UNICODE(emoji_snap_fingers, <&kp N1 &kp F &kp A &kp F &kp N0>)
 
@@ -994,7 +1000,7 @@ macros {
 
           /* 💯 */ UNICODE(emoji_100, <&kp N1 &kp F &kp N4 &kp A &kp F>)
 
-          /* ⚠️ */ UNICODE_SEQUENCE(emoji_warning, UNICODE_TRANSLATE(<&kp N2 &kp N6 &kp A &kp N0>), UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>))
+          /* ⚠️ */ UNICODE_SEQUENCE(emoji_warning, <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_TRANSLATE(<&kp N2 &kp N6 &kp A &kp N0>), UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>))
 
           /* ❌ */ UNICODE(emoji_x, <&kp N2 &kp N7 &kp N4 &kp C>)
 
