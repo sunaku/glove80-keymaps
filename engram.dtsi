@@ -894,6 +894,18 @@ macros {
             mods = <MOD_LSFT>;
         };
 
+          /* ñ */ UNICODE(world_n_tilde_lower, <&kp N0 &kp N0 &kp F &kp N1>)
+
+          /* Ñ */ UNICODE(world_n_tilde_upper, <&kp N0 &kp N0 &kp D &kp N1>)
+
+        world_n_tilde: world_n_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WORLD_N_TILDE";
+            #binding-cells = <0>;
+            bindings = <&world_n_tilde_lower>, <&world_n_tilde_upper>;
+            mods = <MOD_LSFT>;
+        };
+
       // transforms //////////////////////////////////////////////////////////
 
         world_i_base: world_i_base {
