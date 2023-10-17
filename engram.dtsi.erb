@@ -1,0 +1,681 @@
+//////////////////////////////////////////////////////////////////////
+// NOTE: Use the `#define` settings below to customize this keymap! //
+//////////////////////////////////////////////////////////////////////
+// IMPORTANT: You need to set Firmware Version to "pr19.zephyr-3-2" //
+// under Settings > Advanced Settings in the Glove80 Layout Editor  //
+// if you want to use the `hold-trigger-on-release` feature in ZMK. //
+//////////////////////////////////////////////////////////////////////
+// CAUTION: PR19 firmware is not production quality; it has issues: //
+// https://discord.com/channels/877392805654306816/1137025078979203142
+//////////////////////////////////////////////////////////////////////
+//
+// Sunaku's Keymap v24 featuring Arno's Engram 2.0 layout with Miryoku
+// - https://github.com/sunaku/glove80-keymaps
+//
+//////////////////////////////////////////////////////////////////////
+
+behaviors {
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // Miryoku layers and home row mods (ported from my QMK endgame)
+    // - https://sunaku.github.io/home-row-mods.html#porting-to-zmk
+    // - https://github.com/urob/zmk-config#timeless-homerow-mods
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for the pinky, ring, and middle fingers (which are assigned to Super,
+    // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
+    //
+    #define HOMEY_HOLDING_TYPE "tap-preferred"
+
+    //
+    // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // home row mod keys in order to send their modifiers to the computer
+    // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
+    //
+    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+
+    //
+    // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // after typing before you can use home row mods again.  It prevents
+    // unintended activation of home row mods when you're actively typing.
+    //
+    #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
+
+    //
+    // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for index fingers (which Miryoku assigns to Shift) on home row keys.
+    //
+    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
+    // allows faster activation of the Shift modifier (without having to wait
+    // for the modified key to be released as the "balanced" flavor requires).
+    // Typing streaks and the `hold-trigger-on-release` setting are disabled
+    // for the index fingers so as not to hinder their speed and dexterity.
+    //
+    #define SHIFT_HOLDING_TYPE "tap-preferred"
+
+    //
+    // SHIFT_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // index finger keys in order to send their modifiers to the computer
+    // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
+    //
+    // CAUTION: You'll need to perform inward rolls from pinky->ring->middle
+    // fingers toward the index fingers when activating multiple modifiers
+    // because `hold-trigger-on-release` is disabled for the index fingers.
+    // Otherwise, you may be surprised that the index fingers' modifier is
+    // sent immediately without the rest of your multi-mod chord when you
+    // perform outward rolls from your index fingers toward your pinkies.
+    //
+    #define SHIFT_HOLDING_TIME 170
+
+    //
+    // SHIFT_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // after typing before you can use home row mods again.  It prevents
+    // unintended activation of home row mods when you're actively typing.
+    //
+    #define SHIFT_STREAK_DECAY 70 // global-quick-tap-ms
+
+    //
+    // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for the thumbs (which are assigned to 6 layers in the Miryoku system).
+    //
+    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+    // activation for the symbol layer (if the tapped symbol key is released
+    // while the thumb layer key is still held down) for quicker programming.
+    //
+    #define THUMB_HOLDING_TYPE "balanced"
+
+    //
+    // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // a thumb key to activate a layer.  Shorter holds are treated as taps.
+    //
+    #define THUMB_HOLDING_TIME 200
+
+    //
+    // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+
+    //
+    // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // the space thumb key to activate.  Shorter holds are treated as taps.
+    //
+    #define SPACE_HOLDING_TIME 170
+
+    //
+    // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+
+    //
+    // Glove80 key positions index for positional hold-tap
+    // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
+    // - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
+    //
+    // |------------------------|------------------------|
+    // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
+    // |                        |                        |
+    // |  0  1  2  3  4         |          5  6  7  8  9 |
+    // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
+    // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
+    // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
+    // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
+    // | 64 65 66 67 68         |         75 76 77 78 79 |
+    // |                69 52   |   57 74                |
+    // |                 70 53  |  56 73                 |
+    // |                  71 54 | 55 72                  |
+    // |------------------------|------------------------|
+    //
+    #define LEFT_HAND_KEYS      \
+          0  1  2  3  4         \
+         10 11 12 13 14 15      \
+         22 23 24 25 26 27      \
+         34 35 36 37 38 39      \
+         46 47 48 49 50 51      \
+         64 65 66 67 68
+    #define RIGHT_HAND_KEYS     \
+                                           5  6  7  8  9 \
+                                       16 17 18 19 20 21 \
+                                       28 29 30 31 32 33 \
+                                       40 41 42 43 44 45 \
+                                       58 59 60 61 62 63 \
+                                          75 76 77 78 79
+    #define THUMB_KEYS          \
+                        69 52       57 74                \
+                         70 53     56 73                 \
+                          71 54   55 72
+
+    //
+    // Home row mod-tap keys for all except index fingers
+    //
+    homey_left: miryoku_home_row_mods_left_hand {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_LEFT_HAND";
+        flavor = HOMEY_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+    homey_right: miryoku_home_row_mods_right_hand {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_RIGHT_HAND";
+        flavor = HOMEY_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        quick-tap-ms = <HOMEY_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    //
+    // Special home row mod-tap keys for the index fingers
+    //
+    shift_left: miryoku_home_row_mods_left_shift_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_LEFT_SHIFT_SHIFT";
+        flavor = SHIFT_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        //hold-trigger-on-release; // don't wait for other mods
+        tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        quick-tap-ms = <SHIFT_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+    shift_right: miryoku_home_row_mods_right_shift_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_RIGHT_SHIFT_SHIFT";
+        flavor = SHIFT_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        //hold-trigger-on-release; // don't wait for other mods
+        tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        quick-tap-ms = <SHIFT_STREAK_DECAY>;
+        global-quick-tap; // with typing streak
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    //
+    // Thumb cluster hold-tap keys for Miryoku layers
+    //
+    thumb: miryoku_thumb_layer {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MIRYOKU_THUMB_LAYER";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        //global-quick-tap; // no typing streak
+        //retro-tap; // don't allow slow (hold-like) taps
+        #binding-cells = <2>;
+        bindings = <&mo>, <&kp>;
+    };
+    space: miryoku_thumb_layer_spacebar {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MIRYOKU_THUMB_LAYER_SPACEBAR";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <SPACE_HOLDING_TIME>;
+        quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+        //global-quick-tap; // no typing streak
+        retro-tap; // allow slow (hold-like) taps
+        #binding-cells = <2>;
+        bindings = <&mo>, <&kp>;
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // Custom shifted pairs
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // Shift + CapsWord = CapsLock
+    //
+    cappy: capsword_and_capslock {
+        compatible = "zmk,behavior-mod-morph";
+        label = "CAPSWORD_AND_CAPSLOCK";
+        #binding-cells = <0>;
+        bindings = <&caps_word>, <&kp CAPSLOCK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //
+    // Custom shifted pairs for the Engram layout
+    // - https://engram.dev/
+    // - https://sunaku.github.io/engram-keyboard-layout.html
+    //
+    engram_1: engram_one_and_pipe {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_ONE_AND_PIPE";
+        #binding-cells = <0>;
+        bindings = <&kp N1>, <&kp PIPE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_2: engram_two_and_equal {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_TWO_AND_EQUAL";
+        #binding-cells = <0>;
+        bindings = <&kp N2>, <&kp EQUAL>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_3: engram_three_and_tilde {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_THREE_AND_TILDE";
+        #binding-cells = <0>;
+        bindings = <&kp N3>, <&kp TILDE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_4: engram_four_and_plus {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_FOUR_AND_PLUS";
+        #binding-cells = <0>;
+        bindings = <&kp N4>, <&kp PLUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_5: engram_five_and_less_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_FIVE_AND_LESS_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp N5>, <&kp LESS_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_6: engram_six_and_greater_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_SIX_AND_GREATER_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp N6>, <&kp GREATER_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_7: engram_seven_and_caret {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_SEVEN_AND_CARET";
+        #binding-cells = <0>;
+        bindings = <&kp N7>, <&kp CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_8: engram_eight_and_ampersand {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_EIGHT_AND_AMPERSAND";
+        #binding-cells = <0>;
+        bindings = <&kp N8>, <&kp AMPERSAND>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_9: engram_nine_and_percent {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_NINE_AND_PERCENT";
+        #binding-cells = <0>;
+        bindings = <&kp N9>, <&kp PERCENT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_0: engram_zero_and_asterisk {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_ZERO_AND_ASTERISK";
+        #binding-cells = <0>;
+        bindings = <&kp N0>, <&kp ASTERISK>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_apos: engram_apostrophe_and_left_parenthesis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_APOSTROPHE_AND_LEFT_PARENTHESIS";
+        #binding-cells = <0>;
+        bindings = <&kp APOSTROPHE>, <&kp LEFT_PARENTHESIS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_dquote: engram_double_quotes_and_right_parenthesis {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS";
+        #binding-cells = <0>;
+        bindings = <&kp DOUBLE_QUOTES>, <&kp RIGHT_PARENTHESIS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_comma: engram_comma_and_semicolon {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_COMMA_AND_SEMICOLON";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp SEMICOLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_period: engram_period_and_colon {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_PERIOD_AND_COLON";
+        #binding-cells = <0>;
+        bindings = <&kp PERIOD>, <&kp COLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_question: engram_question_and_exclamation {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_QUESTION_AND_EXCLAMATION";
+        #binding-cells = <0>;
+        bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_hash: engram_hash_and_dollar {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_HASH_AND_DOLLAR";
+        #binding-cells = <0>;
+        bindings = <&kp HASH>, <&kp DOLLAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_at: engram_at_and_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_AT_AND_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&kp AT>, <&kp GRAVE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engram_slash: engram_slash_and_backslash {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ENGRAM_SLASH_AND_BACKSLASH";
+        #binding-cells = <0>;
+        bindings = <&kp SLASH>, <&kp BACKSLASH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // ZMK global overrides
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // CapsWord - ported from Pascal Getreuer's extension for QMK
+    // - https://zmk.dev/docs/behaviors/caps-word
+    // - https://getreuer.info/posts/keyboards/caps-word/index.html
+    //
+    behavior_caps_word {
+        continue-list = <
+            UNDERSCORE MINUS
+            BACKSPACE DELETE
+            N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+        >;
+    };
+
+};
+
+macros {
+
+    //////////////////////////////////////////////////////////////////
+    //
+    // Approximation of Pascal Getreuer's Select Word macro from QMK
+    // - https://getreuer.info/posts/keyboards/select-word/index.html
+    //
+    //////////////////////////////////////////////////////////////////
+
+    //
+    // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+    // after moving the cursor before it selects a word.  A larger delay
+    // may allow the macro to move to the next word upon each invocation.
+    //
+    #define SELECT_WORD_DELAY 1
+
+    //
+    // select a word (jumps to next word upon each successive invocation)
+    //
+    select_word: select_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_WORD";
+        #binding-cells = <0>;
+        bindings = <&select_word_right>, <&select_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(select_word_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(RIGHT) &kp LC(LEFT) &kp LC(LS(RIGHT))>;
+    )
+    ZMK_MACRO(select_word_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
+    )
+
+    //
+    // extend current selection by one word
+    //
+    extend_word: extend_word {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXTEND_WORD";
+        #binding-cells = <0>;
+        bindings = <&extend_word_right>, <&extend_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(extend_word_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(LS(RIGHT))>;
+    )
+    ZMK_MACRO(extend_word_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LC(LS(LEFT))>;
+    )
+
+    //
+    // select current line
+    //
+    select_line: select_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SELECT_LINE";
+        #binding-cells = <0>;
+        bindings = <&select_line_right>, <&select_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(select_line_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp HOME &kp LS(END)>;
+    )
+    ZMK_MACRO(select_line_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp END &kp LS(HOME)>;
+    )
+
+    //
+    // extend current selection by one line
+    //
+    extend_line: extend_line {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXTEND_LINE";
+        #binding-cells = <0>;
+        bindings = <&extend_line_right>, <&extend_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(extend_line_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LS(DOWN) &kp LS(END)>;
+    )
+    ZMK_MACRO(extend_line_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LS(UP) &kp LS(HOME)>;
+    )
+
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // World layer - international characters
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    //
+    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+    // between keystrokes while inputting the Unicode codepoint shortcut.
+    //
+    #define UNICODE_TAP_DELAY 1
+
+    //
+    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+    // between emitting Unicode codepoints in multi-codepoint characters.
+    //
+    #define UNICODE_SEQ_DELAY 10
+
+    //
+    // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
+    // into an actual Unicode codepoint.  This is Operating System dependent.
+    //
+    #define UNICODE_TRANSLATE(codepoint) \
+        UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
+
+    #define UNICODE_TRANSLATE_LINUX(codepoint) \
+                <&kp LC(LS(U))> \
+                , codepoint \
+                , <&kp ENTER>
+
+    #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
+                codepoint \
+                , <&kp LA(X)>
+
+    #define UNICODE_SEQUENCE(name, ...) \
+        ZMK_MACRO(name, \
+            wait-ms = <UNICODE_TAP_DELAY>; \
+            tap-ms = <UNICODE_TAP_DELAY>; \
+            bindings = __VA_ARGS__; \
+        )
+
+    #define UNICODE(name, codepoint) \
+        UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
+
+    UNICODE(world_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
+    UNICODE(world_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
+    UNICODE(world_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
+    UNICODE(world_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
+    UNICODE(world_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
+    UNICODE(world_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
+    UNICODE(world_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
+    UNICODE(world_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
+    UNICODE(world_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
+
+    <%
+      def keystrokes_from_character(character)
+        hexcodepoint = hexcodepoint_from_character(character)
+        keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
+      end
+
+      def hexcodepoint_from_character(character)
+        case character.codepoints
+        in [codepoint]
+          sprintf("%04X", codepoint)
+        end
+      end
+
+      def keystrokes_from_hexcodepoint(hexcodepoint)
+        hexcodepoint.chars.map do |hexbyte|
+          keycode = keycode_from_hexbyte(hexbyte)
+          keystroke = keystroke_from_keycode(keycode)
+        end.join(" ")
+      end
+
+      def keycode_from_hexbyte(hexbyte)
+        case hexbyte
+        when "0".."9" then "N" + hexbyte
+        else hexbyte
+        end
+      end
+
+      def keystroke_from_keycode(keycode)
+        "&kp #{keycode}"
+      end
+
+      emit_zmk_mod_morph = lambda do |id, plain, morphed, modifiers|
+        %>
+        <%= id %>: <%= id %> {
+            compatible = "zmk,behavior-mod-morph";
+            label = "<%= id.upcase %>";
+            #binding-cells = <0>;
+            bindings = <&<%= plain %>>, <&<%= morphed %>>;
+            mods = <<%= modifiers %>>;
+        };
+        <%
+      end
+
+      emit_unicode_macro = lambda do |id, character|
+        if character.chars.length > 1
+          sequence = character.chars.map do |c|
+            "UNICODE_TRANSLATE(<#{keystrokes_from_character(c)}>)"
+          end.unshift("<&macro_wait_time UNICODE_SEQ_DELAY>").join(", ")
+          %>
+          /* <%= character %> */ UNICODE_SEQUENCE(<%= id %>, <%= sequence %>)
+          <%
+        else
+          keystrokes = keystrokes_from_character(character)
+          %>
+          /* <%= character %> */ UNICODE(<%= id %>, <<%= keystrokes %>>)
+          <%
+        end
+      end
+
+      require 'yaml'
+      world = YAML.load_file("world.yaml")
+
+      def letter_id_prefix(letter)
+        "world_#{letter.downcase}_"
+      end
+
+      %>
+      // characters //////////////////////////////////////////////////////////
+      <%
+      world["characters"].each do |letter, transforms|
+        transforms.each do |modifier, shiftings|
+          accent_id = letter_id_prefix(letter) + modifier
+          shift_ids = shiftings.map do |shift, character|
+            id = "#{accent_id}_#{shift}"
+            emit_unicode_macro.(id, character)
+            id
+          end
+          emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
+        end
+      end
+
+      %>
+      // transforms //////////////////////////////////////////////////////////
+      <%
+      world["transforms"].each do |letter, transforms|
+        id_prefix = letter_id_prefix(letter)
+        remaining_precedence = world["precedence"] & transforms.keys
+        available_precedence = ["base"] + remaining_precedence
+
+        available_precedence.each_cons(2) do |modifier, next_modifier|
+          id        = id_prefix + modifier
+          accent_id = id_prefix + transforms[modifier]
+          next_id   = id_prefix + if remaining_precedence.length > 1
+                                    next_modifier
+                                  else
+                                    transforms[next_modifier]
+                                  end
+
+          next_modifiers = "(#{
+            remaining_precedence.map{ |m| "MOD_#{m}" }.join("|")
+          })"
+          emit_zmk_mod_morph.(id, accent_id, next_id, next_modifiers)
+          remaining_precedence.shift
+        end
+      end
+    %>
+
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // Emoji layer - modern age pictograms
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    <%
+      require 'yaml'
+      emoji = YAML.load_file("emoji.yaml")
+
+      emoji.each do |name, character|
+        emit_unicode_macro.("emoji_#{name}", character)
+      end
+    %>
+
+};
