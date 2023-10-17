@@ -408,15 +408,15 @@ macros {
     #define UNICODE(name, codepoint) \
         UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
 
-    UNICODE(latin_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
-    UNICODE(latin_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
-    UNICODE(latin_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
-    UNICODE(latin_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
-    UNICODE(latin_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
-    UNICODE(latin_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
-    UNICODE(latin_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
-    UNICODE(latin_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
-    UNICODE(latin_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
+    UNICODE(world_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
+    UNICODE(world_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
+    UNICODE(world_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
+    UNICODE(world_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
+    UNICODE(world_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
+    UNICODE(world_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
+    UNICODE(world_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
+    UNICODE(world_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
+    UNICODE(world_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
 
     <%
       def keystrokes_from_character(character)
@@ -472,7 +472,7 @@ macros {
       world = YAML.load_file("world.yaml")
 
       def letter_id_prefix(letter)
-        "latin_#{letter.downcase}_"
+        "world_#{letter.downcase}_"
       end
 
       %>
