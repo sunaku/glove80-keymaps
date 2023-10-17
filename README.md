@@ -9,18 +9,18 @@ layouts with [Miryoku][4] layers and [home row mods][5].
 [4]: https://github.com/manna-harbour/miryoku
 [5]: https://sunaku.github.io/home-row-mods.html
 
-## Legend 🚩
+## Legend
 
 See [interactive layer map][6] for overview and documentation.
 
 [6]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
 
-## Keymaps 🗺️
+## Keymaps
 
 - for Engrammer layout: https://my.glove80.com/#/layout/user/2ca35aae-67bf-4d9a-a5ee-38a2dc6520c4
 - for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/c950bf51-8758-406b-ab28-58d7bba4ade9
 
-## Installing 🪄
+## Installing
 
 > **NOTE:** Check out the handy [Quickstart Guide](
   https://github.com/sunaku/glove80-keymaps/wiki/Quickstart-Guide
@@ -36,7 +36,7 @@ keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perfor
 Guide) and then toggle the per-key RGB effects first on and then off. ⚡  This
 allows the newly installed firmware to take full effect. 💯
 
-## Upgrading 💹
+## Upgrading
 
 - Copy the ZMK snippet from the "Custom Defined Behaviors" text box in either
 keymap linked above and paste into yours.  The contents of that text box are
@@ -46,7 +46,7 @@ also available in the `*.dtsi` files provided in this Git repository.
 "Advanced Settings" > "Enable local config" then go back to "Edit" and click
 "Download") and the `*.json` files provided in this Git repository.
 
-## Discussion 🗣️
+## Discussion
 
 See ["Glorious Engrammer" on Discord][7] for discussion & updates.
 
