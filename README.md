@@ -22,6 +22,10 @@ See [interactive layer map][6] for overview and documentation.
 
 ## Installing 🪄
 
+> **NOTE:** Check out the handy [Quickstart Guide](
+  https://github.com/sunaku/glove80-keymaps/wiki/Quickstart-Guide
+) for a step-by-step tutorial that walks you through this, with screenshots!
+
 - For the initial flash, use the "bootloader mass storage device mode" method
 (see page 31 in the Glove80 User Guide).  Thereafter, use the `&bootloader`
 key on any Miryoku layer: hold its thumb key and tap the top outer corner key.
