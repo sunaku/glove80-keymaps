@@ -48,3 +48,14 @@ characters:
     grave:      { lower: "ù", upper: "Ù" }
   N:
     tilde:      { lower: "ñ", upper: "Ñ" }
+
+codepoints:
+  degree_sign: "°"
+  section_sign: "§"
+  paragraph_sign: "¶"
+  o_ordinal: "º"
+  a_ordinal: "ª"
+  exclaim_left: "¡"
+  question_left: "¿"
+  quote_left: "«"
+  quote_right: "»"

@@ -388,43 +388,43 @@ macros {
     //
     #define UNICODE_SEQ_DELAY 10
 
-    //
-    // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
-    // into an actual Unicode codepoint.  This is Operating System dependent.
-    //
-    #define UNICODE_TRANSLATE(codepoint) \
-        UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
-
-    #define UNICODE_TRANSLATE_LINUX(codepoint) \
-                <&kp LC(LS(U))> \
-                , codepoint \
-                , <&kp ENTER>
-
-    #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
-                codepoint \
-                , <&kp LA(X)>
-
-    #define UNICODE_SEQUENCE(name, ...) \
+    #define UNICODE(name, ...) \
         ZMK_MACRO(name, \
             wait-ms = <UNICODE_TAP_DELAY>; \
             tap-ms = <UNICODE_TAP_DELAY>; \
             bindings = __VA_ARGS__; \
         )
 
-    #define UNICODE(name, codepoint) \
-        UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
-
-    UNICODE(world_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
-    UNICODE(world_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
-    UNICODE(world_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
-    UNICODE(world_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
-    UNICODE(world_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
-    UNICODE(world_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
-    UNICODE(world_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
-    UNICODE(world_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
-    UNICODE(world_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
-
     <%
+      #
+      # @target_operating_system controls how a Unicode hex codepoint will be
+      # converted into a Unicode character, using very OS-specific shortcuts.
+      #
+      @target_operating_system = :linux
+      #@target_operating_system = :windows
+
+      def format_keystrokes_for_unicode(keystrokes)
+        send("format_keystrokes_for_#{@target_operating_system}_unicode", keystrokes)
+      rescue NameError
+        raise NotImplementedError, "#{@target_operating_system} is not yet supported"
+      end
+
+      def format_keystrokes_for_linux_unicode(keystrokes)
+        "<&kp LC(LS(U)) #{keystrokes} &kp ENTER>"
+      end
+
+      def format_keystrokes_for_windows_unicode(keystrokes)
+        [
+          "<&macro_press &kp LALT>",
+          "<&macro_tap &kp KP_PLUS #{
+            keystrokes
+              .sub(/^(&kp N0 ?)+/, '') # drop leading zeroes
+              .gsub(/\bN\d\b/, 'KP_\&') # use numeric keypad
+          }>",
+          "<&macro_release &kp LALT>",
+        ].join(", ")
+      end
+
       def keystrokes_from_character(character)
         hexcodepoint = hexcodepoint_from_character(character)
         keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
@@ -468,19 +468,17 @@ macros {
       end
 
       emit_unicode_macro = lambda do |id, character|
-        if character.chars.length > 1
-          sequence = character.chars.map do |c|
-            "UNICODE_TRANSLATE(<#{keystrokes_from_character(c)}>)"
-          end.unshift("<&macro_wait_time UNICODE_SEQ_DELAY>").join(", ")
-          %>
-          /* <%= character %> */ UNICODE_SEQUENCE(<%= id %>, <%= sequence %>)
-          <%
-        else
+        sequence = character.chars.map do |character|
           keystrokes = keystrokes_from_character(character)
-          %>
-          /* <%= character %> */ UNICODE(<%= id %>, <<%= keystrokes %>>)
-          <%
+          format_keystrokes_for_unicode(keystrokes)
         end
+
+        if sequence.length > 1
+          sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
+        end
+        %>
+        /* <%= character %> */ UNICODE(<%= id %>, <%= sequence.join(", ") %>)
+        <%
       end
 
       require 'yaml'
@@ -488,6 +486,13 @@ macros {
 
       def letter_id_prefix(letter)
         "world_#{letter.downcase}_"
+      end
+
+      %>
+      // codepoints //////////////////////////////////////////////////////////
+      <%
+      world["codepoints"].each do |name, character|
+        emit_unicode_macro.("world_#{name}", character)
       end
 
       %>
