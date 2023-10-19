@@ -397,29 +397,29 @@ macros {
 
       // codepoints //////////////////////////////////////////////////////////
 
-        /* ° */ UNICODE(world_degree_sign, <&kp LC(LS(U)) &kp N0 &kp N0 &kp B &kp N0 &kp ENTER>)
+        /* ° */ UNICODE(world_degree_sign, <&kp LC(LS(U)) &kp B &kp N0 &kp ENTER>)
 
-        /* § */ UNICODE(world_section_sign, <&kp LC(LS(U)) &kp N0 &kp N0 &kp A &kp N7 &kp ENTER>)
+        /* § */ UNICODE(world_section_sign, <&kp LC(LS(U)) &kp A &kp N7 &kp ENTER>)
 
-        /* ¶ */ UNICODE(world_paragraph_sign, <&kp LC(LS(U)) &kp N0 &kp N0 &kp B &kp N6 &kp ENTER>)
+        /* ¶ */ UNICODE(world_paragraph_sign, <&kp LC(LS(U)) &kp B &kp N6 &kp ENTER>)
 
-        /* º */ UNICODE(world_o_ordinal, <&kp LC(LS(U)) &kp N0 &kp N0 &kp B &kp A &kp ENTER>)
+        /* º */ UNICODE(world_o_ordinal, <&kp LC(LS(U)) &kp B &kp A &kp ENTER>)
 
-        /* ª */ UNICODE(world_a_ordinal, <&kp LC(LS(U)) &kp N0 &kp N0 &kp A &kp A &kp ENTER>)
+        /* ª */ UNICODE(world_a_ordinal, <&kp LC(LS(U)) &kp A &kp A &kp ENTER>)
 
-        /* ¡ */ UNICODE(world_exclaim_left, <&kp LC(LS(U)) &kp N0 &kp N0 &kp A &kp N1 &kp ENTER>)
+        /* ¡ */ UNICODE(world_exclaim_left, <&kp LC(LS(U)) &kp A &kp N1 &kp ENTER>)
 
-        /* ¿ */ UNICODE(world_question_left, <&kp LC(LS(U)) &kp N0 &kp N0 &kp B &kp F &kp ENTER>)
+        /* ¿ */ UNICODE(world_question_left, <&kp LC(LS(U)) &kp B &kp F &kp ENTER>)
 
-        /* « */ UNICODE(world_quote_left, <&kp LC(LS(U)) &kp N0 &kp N0 &kp A &kp B &kp ENTER>)
+        /* « */ UNICODE(world_quote_left, <&kp LC(LS(U)) &kp A &kp B &kp ENTER>)
 
-        /* » */ UNICODE(world_quote_right, <&kp LC(LS(U)) &kp N0 &kp N0 &kp B &kp B &kp ENTER>)
+        /* » */ UNICODE(world_quote_right, <&kp LC(LS(U)) &kp B &kp B &kp ENTER>)
 
       // characters //////////////////////////////////////////////////////////
 
-        /* ç */ UNICODE(world_c_cedilla_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N7 &kp ENTER>)
+        /* ç */ UNICODE(world_c_cedilla_lower, <&kp LC(LS(U)) &kp E &kp N7 &kp ENTER>)
 
-        /* Ç */ UNICODE(world_c_cedilla_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N7 &kp ENTER>)
+        /* Ç */ UNICODE(world_c_cedilla_upper, <&kp LC(LS(U)) &kp C &kp N7 &kp ENTER>)
 
         world_c_cedilla: world_c_cedilla {
             compatible = "zmk,behavior-mod-morph";
@@ -429,9 +429,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* í */ UNICODE(world_i_acute_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp D &kp ENTER>)
+        /* í */ UNICODE(world_i_acute_lower, <&kp LC(LS(U)) &kp E &kp D &kp ENTER>)
 
-        /* Í */ UNICODE(world_i_acute_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp D &kp ENTER>)
+        /* Í */ UNICODE(world_i_acute_upper, <&kp LC(LS(U)) &kp C &kp D &kp ENTER>)
 
         world_i_acute: world_i_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -441,9 +441,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ï */ UNICODE(world_i_diaeresis_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp F &kp ENTER>)
+        /* ï */ UNICODE(world_i_diaeresis_lower, <&kp LC(LS(U)) &kp E &kp F &kp ENTER>)
 
-        /* Ï */ UNICODE(world_i_diaeresis_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp F &kp ENTER>)
+        /* Ï */ UNICODE(world_i_diaeresis_upper, <&kp LC(LS(U)) &kp C &kp F &kp ENTER>)
 
         world_i_diaeresis: world_i_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -453,9 +453,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* î */ UNICODE(world_i_circumflex_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp E &kp ENTER>)
+        /* î */ UNICODE(world_i_circumflex_lower, <&kp LC(LS(U)) &kp E &kp E &kp ENTER>)
 
-        /* Î */ UNICODE(world_i_circumflex_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp E &kp ENTER>)
+        /* Î */ UNICODE(world_i_circumflex_upper, <&kp LC(LS(U)) &kp C &kp E &kp ENTER>)
 
         world_i_circumflex: world_i_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -465,9 +465,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ì */ UNICODE(world_i_grave_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp C &kp ENTER>)
+        /* ì */ UNICODE(world_i_grave_lower, <&kp LC(LS(U)) &kp E &kp C &kp ENTER>)
 
-        /* Ì */ UNICODE(world_i_grave_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp C &kp ENTER>)
+        /* Ì */ UNICODE(world_i_grave_upper, <&kp LC(LS(U)) &kp C &kp C &kp ENTER>)
 
         world_i_grave: world_i_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -477,9 +477,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* é */ UNICODE(world_e_acute_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N9 &kp ENTER>)
+        /* é */ UNICODE(world_e_acute_lower, <&kp LC(LS(U)) &kp E &kp N9 &kp ENTER>)
 
-        /* É */ UNICODE(world_e_acute_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N9 &kp ENTER>)
+        /* É */ UNICODE(world_e_acute_upper, <&kp LC(LS(U)) &kp C &kp N9 &kp ENTER>)
 
         world_e_acute: world_e_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -489,9 +489,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ë */ UNICODE(world_e_diaeresis_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp B &kp ENTER>)
+        /* ë */ UNICODE(world_e_diaeresis_lower, <&kp LC(LS(U)) &kp E &kp B &kp ENTER>)
 
-        /* Ë */ UNICODE(world_e_diaeresis_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp B &kp ENTER>)
+        /* Ë */ UNICODE(world_e_diaeresis_upper, <&kp LC(LS(U)) &kp C &kp B &kp ENTER>)
 
         world_e_diaeresis: world_e_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -501,9 +501,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ê */ UNICODE(world_e_circumflex_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp A &kp ENTER>)
+        /* ê */ UNICODE(world_e_circumflex_lower, <&kp LC(LS(U)) &kp E &kp A &kp ENTER>)
 
-        /* Ê */ UNICODE(world_e_circumflex_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp A &kp ENTER>)
+        /* Ê */ UNICODE(world_e_circumflex_upper, <&kp LC(LS(U)) &kp C &kp A &kp ENTER>)
 
         world_e_circumflex: world_e_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -513,9 +513,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* è */ UNICODE(world_e_grave_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N8 &kp ENTER>)
+        /* è */ UNICODE(world_e_grave_lower, <&kp LC(LS(U)) &kp E &kp N8 &kp ENTER>)
 
-        /* È */ UNICODE(world_e_grave_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N8 &kp ENTER>)
+        /* È */ UNICODE(world_e_grave_upper, <&kp LC(LS(U)) &kp C &kp N8 &kp ENTER>)
 
         world_e_grave: world_e_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -525,9 +525,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* æ */ UNICODE(world_e_ae_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N6 &kp ENTER>)
+        /* æ */ UNICODE(world_e_ae_lower, <&kp LC(LS(U)) &kp E &kp N6 &kp ENTER>)
 
-        /* Æ */ UNICODE(world_e_ae_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N6 &kp ENTER>)
+        /* Æ */ UNICODE(world_e_ae_upper, <&kp LC(LS(U)) &kp C &kp N6 &kp ENTER>)
 
         world_e_ae: world_e_ae {
             compatible = "zmk,behavior-mod-morph";
@@ -537,9 +537,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* á */ UNICODE(world_a_acute_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N1 &kp ENTER>)
+        /* á */ UNICODE(world_a_acute_lower, <&kp LC(LS(U)) &kp E &kp N1 &kp ENTER>)
 
-        /* Á */ UNICODE(world_a_acute_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N1 &kp ENTER>)
+        /* Á */ UNICODE(world_a_acute_upper, <&kp LC(LS(U)) &kp C &kp N1 &kp ENTER>)
 
         world_a_acute: world_a_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -549,9 +549,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ä */ UNICODE(world_a_diaeresis_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N4 &kp ENTER>)
+        /* ä */ UNICODE(world_a_diaeresis_lower, <&kp LC(LS(U)) &kp E &kp N4 &kp ENTER>)
 
-        /* Ä */ UNICODE(world_a_diaeresis_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N4 &kp ENTER>)
+        /* Ä */ UNICODE(world_a_diaeresis_upper, <&kp LC(LS(U)) &kp C &kp N4 &kp ENTER>)
 
         world_a_diaeresis: world_a_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -561,9 +561,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* â */ UNICODE(world_a_circumflex_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N2 &kp ENTER>)
+        /* â */ UNICODE(world_a_circumflex_lower, <&kp LC(LS(U)) &kp E &kp N2 &kp ENTER>)
 
-        /* Â */ UNICODE(world_a_circumflex_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N2 &kp ENTER>)
+        /* Â */ UNICODE(world_a_circumflex_upper, <&kp LC(LS(U)) &kp C &kp N2 &kp ENTER>)
 
         world_a_circumflex: world_a_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -573,9 +573,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* à */ UNICODE(world_a_grave_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N0 &kp ENTER>)
+        /* à */ UNICODE(world_a_grave_lower, <&kp LC(LS(U)) &kp E &kp N0 &kp ENTER>)
 
-        /* À */ UNICODE(world_a_grave_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N0 &kp ENTER>)
+        /* À */ UNICODE(world_a_grave_upper, <&kp LC(LS(U)) &kp C &kp N0 &kp ENTER>)
 
         world_a_grave: world_a_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -585,9 +585,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ã */ UNICODE(world_a_tilde_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N3 &kp ENTER>)
+        /* ã */ UNICODE(world_a_tilde_lower, <&kp LC(LS(U)) &kp E &kp N3 &kp ENTER>)
 
-        /* Ã */ UNICODE(world_a_tilde_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N3 &kp ENTER>)
+        /* Ã */ UNICODE(world_a_tilde_upper, <&kp LC(LS(U)) &kp C &kp N3 &kp ENTER>)
 
         world_a_tilde: world_a_tilde {
             compatible = "zmk,behavior-mod-morph";
@@ -597,9 +597,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* å */ UNICODE(world_a_ring_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp E &kp N5 &kp ENTER>)
+        /* å */ UNICODE(world_a_ring_lower, <&kp LC(LS(U)) &kp E &kp N5 &kp ENTER>)
 
-        /* Å */ UNICODE(world_a_ring_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp C &kp N5 &kp ENTER>)
+        /* Å */ UNICODE(world_a_ring_upper, <&kp LC(LS(U)) &kp C &kp N5 &kp ENTER>)
 
         world_a_ring: world_a_ring {
             compatible = "zmk,behavior-mod-morph";
@@ -609,9 +609,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ý */ UNICODE(world_y_acute_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp D &kp ENTER>)
+        /* ý */ UNICODE(world_y_acute_lower, <&kp LC(LS(U)) &kp F &kp D &kp ENTER>)
 
-        /* Ý */ UNICODE(world_y_acute_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp D &kp ENTER>)
+        /* Ý */ UNICODE(world_y_acute_upper, <&kp LC(LS(U)) &kp D &kp D &kp ENTER>)
 
         world_y_acute: world_y_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -621,9 +621,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ÿ */ UNICODE(world_y_diaeresis_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp F &kp ENTER>)
+        /* ÿ */ UNICODE(world_y_diaeresis_lower, <&kp LC(LS(U)) &kp F &kp F &kp ENTER>)
 
-        /* Ÿ */ UNICODE(world_y_diaeresis_upper, <&kp LC(LS(U)) &kp N0 &kp N1 &kp N7 &kp N8 &kp ENTER>)
+        /* Ÿ */ UNICODE(world_y_diaeresis_upper, <&kp LC(LS(U)) &kp N1 &kp N7 &kp N8 &kp ENTER>)
 
         world_y_diaeresis: world_y_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -633,9 +633,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ó */ UNICODE(world_o_acute_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N3 &kp ENTER>)
+        /* ó */ UNICODE(world_o_acute_lower, <&kp LC(LS(U)) &kp F &kp N3 &kp ENTER>)
 
-        /* Ó */ UNICODE(world_o_acute_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N3 &kp ENTER>)
+        /* Ó */ UNICODE(world_o_acute_upper, <&kp LC(LS(U)) &kp D &kp N3 &kp ENTER>)
 
         world_o_acute: world_o_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -645,9 +645,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ö */ UNICODE(world_o_diaeresis_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N6 &kp ENTER>)
+        /* ö */ UNICODE(world_o_diaeresis_lower, <&kp LC(LS(U)) &kp F &kp N6 &kp ENTER>)
 
-        /* Ö */ UNICODE(world_o_diaeresis_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N6 &kp ENTER>)
+        /* Ö */ UNICODE(world_o_diaeresis_upper, <&kp LC(LS(U)) &kp D &kp N6 &kp ENTER>)
 
         world_o_diaeresis: world_o_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -657,9 +657,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ô */ UNICODE(world_o_circumflex_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N4 &kp ENTER>)
+        /* ô */ UNICODE(world_o_circumflex_lower, <&kp LC(LS(U)) &kp F &kp N4 &kp ENTER>)
 
-        /* Ô */ UNICODE(world_o_circumflex_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N4 &kp ENTER>)
+        /* Ô */ UNICODE(world_o_circumflex_upper, <&kp LC(LS(U)) &kp D &kp N4 &kp ENTER>)
 
         world_o_circumflex: world_o_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -669,9 +669,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ò */ UNICODE(world_o_grave_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N2 &kp ENTER>)
+        /* ò */ UNICODE(world_o_grave_lower, <&kp LC(LS(U)) &kp F &kp N2 &kp ENTER>)
 
-        /* Ò */ UNICODE(world_o_grave_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N2 &kp ENTER>)
+        /* Ò */ UNICODE(world_o_grave_upper, <&kp LC(LS(U)) &kp D &kp N2 &kp ENTER>)
 
         world_o_grave: world_o_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -681,9 +681,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* õ */ UNICODE(world_o_tilde_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N5 &kp ENTER>)
+        /* õ */ UNICODE(world_o_tilde_lower, <&kp LC(LS(U)) &kp F &kp N5 &kp ENTER>)
 
-        /* Õ */ UNICODE(world_o_tilde_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N5 &kp ENTER>)
+        /* Õ */ UNICODE(world_o_tilde_upper, <&kp LC(LS(U)) &kp D &kp N5 &kp ENTER>)
 
         world_o_tilde: world_o_tilde {
             compatible = "zmk,behavior-mod-morph";
@@ -693,9 +693,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ø */ UNICODE(world_o_slash_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N8 &kp ENTER>)
+        /* ø */ UNICODE(world_o_slash_lower, <&kp LC(LS(U)) &kp F &kp N8 &kp ENTER>)
 
-        /* Ø */ UNICODE(world_o_slash_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N8 &kp ENTER>)
+        /* Ø */ UNICODE(world_o_slash_upper, <&kp LC(LS(U)) &kp D &kp N8 &kp ENTER>)
 
         world_o_slash: world_o_slash {
             compatible = "zmk,behavior-mod-morph";
@@ -705,9 +705,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ú */ UNICODE(world_u_acute_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp A &kp ENTER>)
+        /* ú */ UNICODE(world_u_acute_lower, <&kp LC(LS(U)) &kp F &kp A &kp ENTER>)
 
-        /* Ú */ UNICODE(world_u_acute_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp A &kp ENTER>)
+        /* Ú */ UNICODE(world_u_acute_upper, <&kp LC(LS(U)) &kp D &kp A &kp ENTER>)
 
         world_u_acute: world_u_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -717,9 +717,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ü */ UNICODE(world_u_diaeresis_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp C &kp ENTER>)
+        /* ü */ UNICODE(world_u_diaeresis_lower, <&kp LC(LS(U)) &kp F &kp C &kp ENTER>)
 
-        /* Ü */ UNICODE(world_u_diaeresis_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp C &kp ENTER>)
+        /* Ü */ UNICODE(world_u_diaeresis_upper, <&kp LC(LS(U)) &kp D &kp C &kp ENTER>)
 
         world_u_diaeresis: world_u_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -729,9 +729,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* û */ UNICODE(world_u_circumflex_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp B &kp ENTER>)
+        /* û */ UNICODE(world_u_circumflex_lower, <&kp LC(LS(U)) &kp F &kp B &kp ENTER>)
 
-        /* Û */ UNICODE(world_u_circumflex_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp B &kp ENTER>)
+        /* Û */ UNICODE(world_u_circumflex_upper, <&kp LC(LS(U)) &kp D &kp B &kp ENTER>)
 
         world_u_circumflex: world_u_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -741,9 +741,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ù */ UNICODE(world_u_grave_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N9 &kp ENTER>)
+        /* ù */ UNICODE(world_u_grave_lower, <&kp LC(LS(U)) &kp F &kp N9 &kp ENTER>)
 
-        /* Ù */ UNICODE(world_u_grave_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N9 &kp ENTER>)
+        /* Ù */ UNICODE(world_u_grave_upper, <&kp LC(LS(U)) &kp D &kp N9 &kp ENTER>)
 
         world_u_grave: world_u_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -753,9 +753,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-        /* ñ */ UNICODE(world_n_tilde_lower, <&kp LC(LS(U)) &kp N0 &kp N0 &kp F &kp N1 &kp ENTER>)
+        /* ñ */ UNICODE(world_n_tilde_lower, <&kp LC(LS(U)) &kp F &kp N1 &kp ENTER>)
 
-        /* Ñ */ UNICODE(world_n_tilde_upper, <&kp LC(LS(U)) &kp N0 &kp N0 &kp D &kp N1 &kp ENTER>)
+        /* Ñ */ UNICODE(world_n_tilde_upper, <&kp LC(LS(U)) &kp D &kp N1 &kp ENTER>)
 
         world_n_tilde: world_n_tilde {
             compatible = "zmk,behavior-mod-morph";
