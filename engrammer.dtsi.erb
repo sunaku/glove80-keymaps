@@ -397,30 +397,47 @@ macros {
 
     <%
       #
-      # @target_operating_system controls how a Unicode hex codepoint will be
-      # converted into a Unicode character, using very OS-specific shortcuts.
+      # @UNICODE_TARGET_OS defines which operating system you're targeting
+      # for use with the UNICODE() macro.  This is needed because each OS
+      # has different shortcuts for typing Unicode characters as hexcodes.
       #
-      @target_operating_system = :linux
-      #@target_operating_system = :windows
+      @UNICODE_TARGET_OS = :linux
+      #@UNICODE_TARGET_OS = :macos
+      #@UNICODE_TARGET_OS = :windows
 
       def format_keystrokes_for_unicode(keystrokes)
-        send("format_keystrokes_for_#{@target_operating_system}_unicode", keystrokes)
+        send("format_keystrokes_for_#{@UNICODE_TARGET_OS}_unicode", keystrokes)
       rescue NameError
-        raise NotImplementedError, "#{@target_operating_system} is not yet supported"
+        raise NotImplementedError, "#{@UNICODE_TARGET_OS} is not yet supported"
       end
 
       def format_keystrokes_for_linux_unicode(keystrokes)
-        "<&kp LC(LS(U)) #{keystrokes} &kp ENTER>"
+        "<&kp LC(LS(U)) #{
+          strip_leading_zeroes_from_keystrokes(keystrokes)
+        } &kp ENTER>"
+      end
+
+      def format_keystrokes_for_macos_unicode(keystrokes)
+        [
+          "<&macro_press &kp LALT>",
+          "<&macro_tap #{keystrokes}>",
+          "<&macro_release &kp LALT>",
+        ].join(", ")
       end
 
       def format_keystrokes_for_windows_unicode(keystrokes)
         [
           "<&macro_press &kp LALT>",
           "<&macro_tap &kp KP_PLUS #{
-            keystrokes.gsub(/\bN\d\b/, 'KP_\&') # use the numpad, not the number row
+            strip_leading_zeroes_from_keystrokes(keystrokes)
+            .gsub(/\bN\d\b/, 'KP_\&') # use numpad digits
           }>",
           "<&macro_release &kp LALT>",
         ].join(", ")
+      end
+
+      def strip_leading_zeroes_from_keystrokes(keystrokes)
+        keystrokes.sub(/^(&kp N0 ?)+/, '')
       end
 
       def keystrokes_from_character(character)
@@ -431,7 +448,7 @@ macros {
       def hexcodepoint_from_character(character)
         case character.codepoints
         in [codepoint]
-          sprintf("%X", codepoint)
+          sprintf("%04X", codepoint)
         end
       end
 
