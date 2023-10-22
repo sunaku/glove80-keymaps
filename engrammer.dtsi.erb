@@ -377,38 +377,28 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
-    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
-    // between keystrokes while inputting the Unicode codepoint shortcut.
+    // UNICODE_TARGET_OS defines which operating system you're targeting
+    // for use with the UNICODE() macro.  This is needed because each OS
+    // has different shortcuts for typing Unicode characters as hexcodes.
     //
-    #define UNICODE_TAP_DELAY 1
+    // NOTE: You may need to enable Unicode hexadecimal input in your OS:
+    // - https://ladedu.com/how-to-enter-unicode-characters-on-a-mac/
+    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
+    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
+    //<%
+      UNICODE_TARGET_OS = {
+        linux: 1,
+        macos: 2,
+        windows: 3
+      }.each do |os, number|
+    %>
+    <%= "//" if number > 1 %>#define UNICODE_TARGET_OS <%= number %> // <%= os %><%
+      end
 
-    //
-    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
-    // between emitting Unicode codepoints in multi-codepoint characters.
-    //
-    #define UNICODE_SEQ_DELAY 10
-
-    #define UNICODE(name, ...) \
-        ZMK_MACRO(name, \
-            wait-ms = <UNICODE_TAP_DELAY>; \
-            tap-ms = <UNICODE_TAP_DELAY>; \
-            bindings = __VA_ARGS__; \
-        )
-
-    <%
-      #
-      # @UNICODE_TARGET_OS defines which operating system you're targeting
-      # for use with the UNICODE() macro.  This is needed because each OS
-      # has different shortcuts for typing Unicode characters as hexcodes.
-      #
-      @UNICODE_TARGET_OS = :linux
-      #@UNICODE_TARGET_OS = :macos
-      #@UNICODE_TARGET_OS = :windows
-
-      def format_keystrokes_for_unicode(keystrokes)
-        send("format_keystrokes_for_#{@UNICODE_TARGET_OS}_unicode", keystrokes)
+      def format_keystrokes_for_unicode(keystrokes, os)
+        send("format_keystrokes_for_#{os}_unicode", keystrokes)
       rescue NameError
-        raise NotImplementedError, "#{@UNICODE_TARGET_OS} is not yet supported"
+        raise NotImplementedError, "#{os} is not yet supported"
       end
 
       def format_keystrokes_for_linux_unicode(keystrokes)
@@ -471,7 +461,7 @@ macros {
       end
 
       emit_zmk_mod_morph = lambda do |id, plain, morphed, modifiers|
-        %>
+      %>
         <%= id %>: <%= id %> {
             compatible = "zmk,behavior-mod-morph";
             label = "<%= id.upcase %>";
@@ -479,40 +469,74 @@ macros {
             bindings = <&<%= plain %>>, <&<%= morphed %>>;
             mods = <<%= modifiers %>>;
         };
-        <%
+      <%
       end
 
       emit_unicode_macro = lambda do |id, character|
+      %>
+      /* <%= character %> */ UNICODE(<%= id %>, <%
+      UNICODE_TARGET_OS.each do |os, os_number|
         sequence = character.chars.map do |character|
           keystrokes = keystrokes_from_character(character)
-          format_keystrokes_for_unicode(keystrokes)
+          format_keystrokes_for_unicode(keystrokes, os)
         end
 
         if sequence.length > 1
           sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
         end
-        %>
-        /* <%= character %> */ UNICODE(<%= id %>, <%= sequence.join(", ") %>)
-        <%
+      %>
+        #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
+          <%= sequence.join(", ") %>
+        <%= "#endif" if os_number == UNICODE_TARGET_OS.length %>
+      <%
       end
+      %>)
+      <%
+      end
+    %>
 
+    //
+    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+    // between keystrokes while inputting the Unicode codepoint shortcut.
+    //
+    #define UNICODE_TAP_DELAY 1
+
+    //
+    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+    // between emitting Unicode codepoints in multi-codepoint characters.
+    //
+    #define UNICODE_SEQ_DELAY 10
+
+    #define UNICODE(name, ...) \
+        ZMK_MACRO(name, \
+            wait-ms = <UNICODE_TAP_DELAY>; \
+            tap-ms = <UNICODE_TAP_DELAY>; \
+            bindings = __VA_ARGS__; \
+        )
+
+    //
+    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    //
+    <%
       require 'yaml'
       world = YAML.load_file("world.yaml")
 
       def letter_id_prefix(letter)
         "world_#{letter.downcase}_"
       end
-
-      %>
-      // codepoints //////////////////////////////////////////////////////////
-      <%
+    %>
+    //
+    // codepoints
+    //
+    <%
       world["codepoints"].each do |name, character|
         emit_unicode_macro.("world_#{name}", character)
       end
-
-      %>
-      // characters //////////////////////////////////////////////////////////
-      <%
+    %>
+    //
+    // characters
+    //
+    <%
       world["characters"].each do |letter, transforms|
         transforms.each do |modifier, shiftings|
           accent_id = letter_id_prefix(letter) + modifier
@@ -524,10 +548,11 @@ macros {
           emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
         end
       end
-
-      %>
-      // transforms //////////////////////////////////////////////////////////
-      <%
+    %>
+    //
+    // transforms
+    //
+    <%
       world["transforms"].each do |letter, transforms|
         id_prefix = letter_id_prefix(letter)
         remaining_precedence = world["precedence"] & transforms.keys
@@ -557,6 +582,9 @@ macros {
     //
     //////////////////////////////////////////////////////////////////////////
 
+    //
+    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    //
     <%
       require 'yaml'
       emoji = YAML.load_file("emoji.yaml")
