@@ -130,7 +130,9 @@ behaviors {
     // |                 70 53  |  56 73                 |
     // |                  71 54 | 55 72                  |
     // |------------------------|------------------------|
-    //
+    //<%
+      HANDS = %w[ left right ].cycle.each_cons(2).take(2).to_h
+    %>
     #define LEFT_HAND_KEYS      \
           0  1  2  3  4         \
          10 11 12 13 14 15      \
@@ -153,11 +155,13 @@ behaviors {
     //
     // Home row mod-tap keys for all except index fingers
     //
-    homey_left: miryoku_home_row_mods_left_hand {
+    <%
+      HANDS.each do |hand, opposite_hand|
+    %>homey_<%= hand %>: miryoku_home_row_mods_<%= hand %>_hand {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_HAND";
+        label = "HOME_ROW_MODS_<%= hand.upcase %>_HAND";
         flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
         quick-tap-ms = <HOMEY_STREAK_DECAY>;
@@ -165,27 +169,20 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    homey_right: miryoku_home_row_mods_right_hand {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_RIGHT_HAND";
-        flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        quick-tap-ms = <HOMEY_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
+    <%
+      end
+    %>
 
     //
     // Special home row mod-tap keys for the index fingers
     //
-    shift_left: miryoku_home_row_mods_left_shift_shift {
+    <%
+      HANDS.each do |hand, opposite_hand|
+    %>shift_<%= hand %>: miryoku_home_row_mods_<%= hand %>_shift_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_SHIFT_SHIFT";
+        label = "HOME_ROW_MODS_<%= hand.upcase %>_SHIFT_SHIFT";
         flavor = SHIFT_HOLDING_TYPE;
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <SHIFT_HOLDING_TIME>;
         quick-tap-ms = <SHIFT_STREAK_DECAY>;
@@ -193,18 +190,9 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    shift_right: miryoku_home_row_mods_right_shift_shift {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_RIGHT_SHIFT_SHIFT";
-        flavor = SHIFT_HOLDING_TYPE;
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-        //hold-trigger-on-release; // don't wait for other mods
-        tapping-term-ms = <SHIFT_HOLDING_TIME>;
-        quick-tap-ms = <SHIFT_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
+    <%
+      end
+    %>
 
     //
     // Thumb cluster hold-tap keys for Miryoku layers
