@@ -60,7 +60,12 @@ To install the prerequisite software for `rake` on a Debian GNU/Linux system:
 
     apt install ruby rake
 
-See the "interactive layer map" link above for documentation on these files.
+### Fine-tuning the timing
+
+Activate the typing layer, launch the [QMK Configurator's testing tool](
+https://config.qmk.fm/#/test ), and then pretend to use home row mods. Note the
+timing and duration of keystrokes reported by the tool and then use them to
+adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
 ## Discussion
 
