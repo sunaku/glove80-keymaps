@@ -9,7 +9,7 @@
 // https://discord.com/channels/877392805654306816/1137025078979203142
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v25 featuring Arno's Engram 2.0 layout with Miryoku
+// Sunaku's Keymap v26 featuring Arno's Engram 2.0 layout with Miryoku
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////
@@ -130,7 +130,9 @@ behaviors {
     // |                 70 53  |  56 73                 |
     // |                  71 54 | 55 72                  |
     // |------------------------|------------------------|
-    //
+    //<%
+      HANDS = %w[ left right ].cycle.each_cons(2).take(2).to_h
+    %>
     #define LEFT_HAND_KEYS      \
           0  1  2  3  4         \
          10 11 12 13 14 15      \
@@ -153,11 +155,13 @@ behaviors {
     //
     // Home row mod-tap keys for all except index fingers
     //
-    homey_left: miryoku_home_row_mods_left_hand {
+    <%
+      HANDS.each do |hand, opposite_hand|
+    %>homey_<%= hand %>: miryoku_home_row_mods_<%= hand %>_hand {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_HAND";
+        label = "HOME_ROW_MODS_<%= hand.upcase %>_HAND";
         flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
         quick-tap-ms = <HOMEY_STREAK_DECAY>;
@@ -165,27 +169,20 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    homey_right: miryoku_home_row_mods_right_hand {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_RIGHT_HAND";
-        flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        quick-tap-ms = <HOMEY_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
+    <%
+      end
+    %>
 
     //
     // Special home row mod-tap keys for the index fingers
     //
-    shift_left: miryoku_home_row_mods_left_shift_shift {
+    <%
+      HANDS.each do |hand, opposite_hand|
+    %>shift_<%= hand %>: miryoku_home_row_mods_<%= hand %>_shift_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_SHIFT_SHIFT";
+        label = "HOME_ROW_MODS_<%= hand.upcase %>_SHIFT_SHIFT";
         flavor = SHIFT_HOLDING_TYPE;
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <SHIFT_HOLDING_TIME>;
         quick-tap-ms = <SHIFT_STREAK_DECAY>;
@@ -193,18 +190,9 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    shift_right: miryoku_home_row_mods_right_shift_shift {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_RIGHT_SHIFT_SHIFT";
-        flavor = SHIFT_HOLDING_TYPE;
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-        //hold-trigger-on-release; // don't wait for other mods
-        tapping-term-ms = <SHIFT_HOLDING_TIME>;
-        quick-tap-ms = <SHIFT_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
+    <%
+      end
+    %>
 
     //
     // Thumb cluster hold-tap keys for Miryoku layers
@@ -509,54 +497,59 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
-    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
-    // between keystrokes while inputting the Unicode codepoint shortcut.
+    // UNICODE_TARGET_OS defines which operating system you're targeting
+    // for use with the UNICODE() macro.  This is needed because each OS
+    // has different shortcuts for typing Unicode characters as hexcodes.
     //
-    #define UNICODE_TAP_DELAY 1
+    // NOTE: You may need to enable Unicode hexadecimal input in your OS:
+    // - https://ladedu.com/how-to-enter-unicode-characters-on-a-mac/
+    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
+    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
+    //<%
+      UNICODE_TARGET_OS = {
+        linux: 1,
+        macos: 2,
+        windows: 3
+      }.each do |os, number|
+    %>
+    <%= "//" if number > 1 %>#define UNICODE_TARGET_OS <%= number %> // <%= os %><%
+      end
 
-    //
-    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
-    // between emitting Unicode codepoints in multi-codepoint characters.
-    //
-    #define UNICODE_SEQ_DELAY 10
+      def format_keystrokes_for_unicode(keystrokes, os)
+        send("format_keystrokes_for_#{os}_unicode", keystrokes)
+      rescue NameError
+        raise NotImplementedError, "#{os} is not yet supported"
+      end
 
-    //
-    // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
-    // into an actual Unicode codepoint.  This is Operating System dependent.
-    //
-    #define UNICODE_TRANSLATE(codepoint) \
-        UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
+      def format_keystrokes_for_linux_unicode(keystrokes)
+        "<&kp LC(LS(U)) #{
+          strip_leading_zeroes_from_keystrokes(keystrokes)
+        } &kp ENTER>"
+      end
 
-    #define UNICODE_TRANSLATE_LINUX(codepoint) \
-                <&kp LC(LS(U))> \
-                , codepoint \
-                , <&kp ENTER>
+      def format_keystrokes_for_macos_unicode(keystrokes)
+        [
+          "<&macro_press &kp LALT>",
+          "<&macro_tap #{keystrokes}>",
+          "<&macro_release &kp LALT>",
+        ].join(", ")
+      end
 
-    #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
-                codepoint \
-                , <&kp LA(X)>
+      def format_keystrokes_for_windows_unicode(keystrokes)
+        [
+          "<&macro_press &kp LALT>",
+          "<&macro_tap &kp KP_PLUS #{
+            strip_leading_zeroes_from_keystrokes(keystrokes)
+            .gsub(/\bN\d\b/, 'KP_\&') # use numpad digits
+          }>",
+          "<&macro_release &kp LALT>",
+        ].join(", ")
+      end
 
-    #define UNICODE_SEQUENCE(name, ...) \
-        ZMK_MACRO(name, \
-            wait-ms = <UNICODE_TAP_DELAY>; \
-            tap-ms = <UNICODE_TAP_DELAY>; \
-            bindings = __VA_ARGS__; \
-        )
+      def strip_leading_zeroes_from_keystrokes(keystrokes)
+        keystrokes.sub(/^(&kp N0 ?)+/, '')
+      end
 
-    #define UNICODE(name, codepoint) \
-        UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
-
-    UNICODE(world_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
-    UNICODE(world_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
-    UNICODE(world_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
-    UNICODE(world_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
-    UNICODE(world_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
-    UNICODE(world_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
-    UNICODE(world_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
-    UNICODE(world_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
-    UNICODE(world_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
-
-    <%
       def keystrokes_from_character(character)
         hexcodepoint = hexcodepoint_from_character(character)
         keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
@@ -588,7 +581,7 @@ macros {
       end
 
       emit_zmk_mod_morph = lambda do |id, plain, morphed, modifiers|
-        %>
+      %>
         <%= id %>: <%= id %> {
             compatible = "zmk,behavior-mod-morph";
             label = "<%= id.upcase %>";
@@ -596,35 +589,74 @@ macros {
             bindings = <&<%= plain %>>, <&<%= morphed %>>;
             mods = <<%= modifiers %>>;
         };
-        <%
+      <%
       end
 
       emit_unicode_macro = lambda do |id, character|
-        if character.chars.length > 1
-          sequence = character.chars.map do |c|
-            "UNICODE_TRANSLATE(<#{keystrokes_from_character(c)}>)"
-          end.unshift("<&macro_wait_time UNICODE_SEQ_DELAY>").join(", ")
-          %>
-          /* <%= character %> */ UNICODE_SEQUENCE(<%= id %>, <%= sequence %>)
-          <%
-        else
+      %>
+      /* <%= character %> */ UNICODE(<%= id %>, <%
+      UNICODE_TARGET_OS.each do |os, os_number|
+        sequence = character.chars.map do |character|
           keystrokes = keystrokes_from_character(character)
-          %>
-          /* <%= character %> */ UNICODE(<%= id %>, <<%= keystrokes %>>)
-          <%
+          format_keystrokes_for_unicode(keystrokes, os)
         end
-      end
 
+        if sequence.length > 1
+          sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
+        end
+      %>
+        #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
+          <%= sequence.join(", ") %>
+        <%= "#endif" if os_number == UNICODE_TARGET_OS.length %>
+      <%
+      end
+      %>)
+      <%
+      end
+    %>
+
+    //
+    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+    // between keystrokes while inputting the Unicode codepoint shortcut.
+    //
+    #define UNICODE_TAP_DELAY 1
+
+    //
+    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+    // between emitting Unicode codepoints in multi-codepoint characters.
+    //
+    #define UNICODE_SEQ_DELAY 10
+
+    #define UNICODE(name, ...) \
+        ZMK_MACRO(name, \
+            wait-ms = <UNICODE_TAP_DELAY>; \
+            tap-ms = <UNICODE_TAP_DELAY>; \
+            bindings = __VA_ARGS__; \
+        )
+
+    //
+    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    //
+    <%
       require 'yaml'
       world = YAML.load_file("world.yaml")
 
       def letter_id_prefix(letter)
         "world_#{letter.downcase}_"
       end
-
-      %>
-      // characters //////////////////////////////////////////////////////////
-      <%
+    %>
+    //
+    // codepoints
+    //
+    <%
+      world["codepoints"].each do |name, character|
+        emit_unicode_macro.("world_#{name}", character)
+      end
+    %>
+    //
+    // characters
+    //
+    <%
       world["characters"].each do |letter, transforms|
         transforms.each do |modifier, shiftings|
           accent_id = letter_id_prefix(letter) + modifier
@@ -636,10 +668,11 @@ macros {
           emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
         end
       end
-
-      %>
-      // transforms //////////////////////////////////////////////////////////
-      <%
+    %>
+    //
+    // transforms
+    //
+    <%
       world["transforms"].each do |letter, transforms|
         id_prefix = letter_id_prefix(letter)
         remaining_precedence = world["precedence"] & transforms.keys
@@ -669,6 +702,9 @@ macros {
     //
     //////////////////////////////////////////////////////////////////////////
 
+    //
+    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    //
     <%
       require 'yaml'
       emoji = YAML.load_file("emoji.yaml")

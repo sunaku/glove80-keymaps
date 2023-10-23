@@ -9,7 +9,7 @@
 // https://discord.com/channels/877392805654306816/1137025078979203142
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v25 featuring Arno's Engram 2.0 layout with Miryoku
+// Sunaku's Keymap v26 featuring Arno's Engram 2.0 layout with Miryoku
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////
@@ -509,6 +509,20 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
+    // UNICODE_TARGET_OS defines which operating system you're targeting
+    // for use with the UNICODE() macro.  This is needed because each OS
+    // has different shortcuts for typing Unicode characters as hexcodes.
+    //
+    // NOTE: You may need to enable Unicode hexadecimal input in your OS:
+    // - https://ladedu.com/how-to-enter-unicode-characters-on-a-mac/
+    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
+    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
+    //
+    #define UNICODE_TARGET_OS 1 // linux
+    //#define UNICODE_TARGET_OS 2 // macos
+    //#define UNICODE_TARGET_OS 3 // windows
+
+    //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
@@ -520,47 +534,156 @@ macros {
     //
     #define UNICODE_SEQ_DELAY 10
 
-    //
-    // UNICODE_TRANSLATE() defines how a textual codepoint will be converted
-    // into an actual Unicode codepoint.  This is Operating System dependent.
-    //
-    #define UNICODE_TRANSLATE(codepoint) \
-        UNICODE_TRANSLATE_LINUX(codepoint) // you can change this to WINDOWS
-
-    #define UNICODE_TRANSLATE_LINUX(codepoint) \
-                <&kp LC(LS(U))> \
-                , codepoint \
-                , <&kp ENTER>
-
-    #define UNICODE_TRANSLATE_WINDOWS(codepoint) \
-                codepoint \
-                , <&kp LA(X)>
-
-    #define UNICODE_SEQUENCE(name, ...) \
+    #define UNICODE(name, ...) \
         ZMK_MACRO(name, \
             wait-ms = <UNICODE_TAP_DELAY>; \
             tap-ms = <UNICODE_TAP_DELAY>; \
             bindings = __VA_ARGS__; \
         )
 
-    #define UNICODE(name, codepoint) \
-        UNICODE_SEQUENCE(name, UNICODE_TRANSLATE(codepoint))
+    //
+    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    //
 
-    UNICODE(world_degree_sign,       <&kp N0 &kp N0 &kp B  &kp N0 >) // °
-    UNICODE(world_section_sign,      <&kp N0 &kp N0 &kp A  &kp N7 >) // §
-    UNICODE(world_paragraph_sign,    <&kp N0 &kp N0 &kp B  &kp N6 >) // ¶
-    UNICODE(world_o_ordinal,         <&kp N0 &kp N0 &kp B  &kp A  >) // º
-    UNICODE(world_a_ordinal,         <&kp N0 &kp N0 &kp A  &kp A  >) // ª
-    UNICODE(world_exclaim_left,      <&kp N0 &kp N0 &kp A  &kp N1 >) // ¡
-    UNICODE(world_question_left,     <&kp N0 &kp N0 &kp B  &kp F  >) // ¿
-    UNICODE(world_quote_left,        <&kp N0 &kp N0 &kp A  &kp B  >) // «
-    UNICODE(world_quote_right,       <&kp N0 &kp N0 &kp B  &kp B  >) // »
+    //
+    // codepoints
+    //
 
-      // characters //////////////////////////////////////////////////////////
+      /* ° */ UNICODE(world_degree_sign,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp B &kp N0 &kp ENTER>
 
-          /* ç */ UNICODE(world_c_cedilla_lower, <&kp N0 &kp N0 &kp E &kp N7>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp N0>, <&macro_release &kp LALT>
 
-          /* Ç */ UNICODE(world_c_cedilla_upper, <&kp N0 &kp N0 &kp C &kp N7>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* § */ UNICODE(world_section_sign,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp A &kp N7 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N7>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp KP_N7>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ¶ */ UNICODE(world_paragraph_sign,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp B &kp N6 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp N6>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp KP_N6>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* º */ UNICODE(world_o_ordinal,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp B &kp A &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp A>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ª */ UNICODE(world_a_ordinal,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp A &kp A &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp A>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ¡ */ UNICODE(world_exclaim_left,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp A &kp N1 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ¿ */ UNICODE(world_question_left,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp B &kp F &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* « */ UNICODE(world_quote_left,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp A &kp B &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* » */ UNICODE(world_quote_right,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp B &kp B &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
+
+    //
+    // characters
+    //
+
+      /* ç */ UNICODE(world_c_cedilla_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N7 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N7>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N7>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ç */ UNICODE(world_c_cedilla_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N7 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N7>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N7>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_c_cedilla: world_c_cedilla {
             compatible = "zmk,behavior-mod-morph";
@@ -570,9 +693,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* í */ UNICODE(world_i_acute_lower, <&kp N0 &kp N0 &kp E &kp D>)
+      /* í */ UNICODE(world_i_acute_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp D &kp ENTER>
 
-          /* Í */ UNICODE(world_i_acute_upper, <&kp N0 &kp N0 &kp C &kp D>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp D>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Í */ UNICODE(world_i_acute_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp D &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp D>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_i_acute: world_i_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -582,9 +725,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ï */ UNICODE(world_i_diaeresis_lower, <&kp N0 &kp N0 &kp E &kp F>)
+      /* ï */ UNICODE(world_i_diaeresis_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp F &kp ENTER>
 
-          /* Ï */ UNICODE(world_i_diaeresis_upper, <&kp N0 &kp N0 &kp C &kp F>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ï */ UNICODE(world_i_diaeresis_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp F &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_i_diaeresis: world_i_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -594,9 +757,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* î */ UNICODE(world_i_circumflex_lower, <&kp N0 &kp N0 &kp E &kp E>)
+      /* î */ UNICODE(world_i_circumflex_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp E &kp ENTER>
 
-          /* Î */ UNICODE(world_i_circumflex_upper, <&kp N0 &kp N0 &kp C &kp E>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp E>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp E>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Î */ UNICODE(world_i_circumflex_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp E &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp E>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp E>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_i_circumflex: world_i_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -606,9 +789,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ì */ UNICODE(world_i_grave_lower, <&kp N0 &kp N0 &kp E &kp C>)
+      /* ì */ UNICODE(world_i_grave_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp C &kp ENTER>
 
-          /* Ì */ UNICODE(world_i_grave_upper, <&kp N0 &kp N0 &kp C &kp C>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ì */ UNICODE(world_i_grave_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp C &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_i_grave: world_i_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -618,9 +821,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* é */ UNICODE(world_e_acute_lower, <&kp N0 &kp N0 &kp E &kp N9>)
+      /* é */ UNICODE(world_e_acute_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N9 &kp ENTER>
 
-          /* É */ UNICODE(world_e_acute_upper, <&kp N0 &kp N0 &kp C &kp N9>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N9>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N9>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* É */ UNICODE(world_e_acute_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N9 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N9>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N9>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_e_acute: world_e_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -630,9 +853,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ë */ UNICODE(world_e_diaeresis_lower, <&kp N0 &kp N0 &kp E &kp B>)
+      /* ë */ UNICODE(world_e_diaeresis_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp B &kp ENTER>
 
-          /* Ë */ UNICODE(world_e_diaeresis_upper, <&kp N0 &kp N0 &kp C &kp B>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ë */ UNICODE(world_e_diaeresis_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp B &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_e_diaeresis: world_e_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -642,9 +885,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ê */ UNICODE(world_e_circumflex_lower, <&kp N0 &kp N0 &kp E &kp A>)
+      /* ê */ UNICODE(world_e_circumflex_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp A &kp ENTER>
 
-          /* Ê */ UNICODE(world_e_circumflex_upper, <&kp N0 &kp N0 &kp C &kp A>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp A>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ê */ UNICODE(world_e_circumflex_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp A &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp A>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_e_circumflex: world_e_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -654,9 +917,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* è */ UNICODE(world_e_grave_lower, <&kp N0 &kp N0 &kp E &kp N8>)
+      /* è */ UNICODE(world_e_grave_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N8 &kp ENTER>
 
-          /* È */ UNICODE(world_e_grave_upper, <&kp N0 &kp N0 &kp C &kp N8>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N8>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N8>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* È */ UNICODE(world_e_grave_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N8 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N8>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N8>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_e_grave: world_e_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -666,9 +949,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* æ */ UNICODE(world_e_ae_lower, <&kp N0 &kp N0 &kp E &kp N6>)
+      /* æ */ UNICODE(world_e_ae_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N6 &kp ENTER>
 
-          /* Æ */ UNICODE(world_e_ae_upper, <&kp N0 &kp N0 &kp C &kp N6>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N6>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N6>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Æ */ UNICODE(world_e_ae_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N6 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N6>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N6>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_e_ae: world_e_ae {
             compatible = "zmk,behavior-mod-morph";
@@ -678,9 +981,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* á */ UNICODE(world_a_acute_lower, <&kp N0 &kp N0 &kp E &kp N1>)
+      /* á */ UNICODE(world_a_acute_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N1 &kp ENTER>
 
-          /* Á */ UNICODE(world_a_acute_upper, <&kp N0 &kp N0 &kp C &kp N1>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Á */ UNICODE(world_a_acute_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N1 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_a_acute: world_a_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -690,9 +1013,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ä */ UNICODE(world_a_diaeresis_lower, <&kp N0 &kp N0 &kp E &kp N4>)
+      /* ä */ UNICODE(world_a_diaeresis_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N4 &kp ENTER>
 
-          /* Ä */ UNICODE(world_a_diaeresis_upper, <&kp N0 &kp N0 &kp C &kp N4>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N4>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ä */ UNICODE(world_a_diaeresis_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N4 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N4>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N4>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_a_diaeresis: world_a_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -702,9 +1045,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* â */ UNICODE(world_a_circumflex_lower, <&kp N0 &kp N0 &kp E &kp N2>)
+      /* â */ UNICODE(world_a_circumflex_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N2 &kp ENTER>
 
-          /* Â */ UNICODE(world_a_circumflex_upper, <&kp N0 &kp N0 &kp C &kp N2>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N2>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Â */ UNICODE(world_a_circumflex_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N2 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N2>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_a_circumflex: world_a_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -714,9 +1077,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* à */ UNICODE(world_a_grave_lower, <&kp N0 &kp N0 &kp E &kp N0>)
+      /* à */ UNICODE(world_a_grave_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N0 &kp ENTER>
 
-          /* À */ UNICODE(world_a_grave_upper, <&kp N0 &kp N0 &kp C &kp N0>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N0>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* À */ UNICODE(world_a_grave_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N0 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N0>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_a_grave: world_a_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -726,9 +1109,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ã */ UNICODE(world_a_tilde_lower, <&kp N0 &kp N0 &kp E &kp N3>)
+      /* ã */ UNICODE(world_a_tilde_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N3 &kp ENTER>
 
-          /* Ã */ UNICODE(world_a_tilde_upper, <&kp N0 &kp N0 &kp C &kp N3>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N3>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ã */ UNICODE(world_a_tilde_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N3 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N3>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_a_tilde: world_a_tilde {
             compatible = "zmk,behavior-mod-morph";
@@ -738,9 +1141,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* å */ UNICODE(world_a_ring_lower, <&kp N0 &kp N0 &kp E &kp N5>)
+      /* å */ UNICODE(world_a_ring_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp E &kp N5 &kp ENTER>
 
-          /* Å */ UNICODE(world_a_ring_upper, <&kp N0 &kp N0 &kp C &kp N5>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Å */ UNICODE(world_a_ring_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp C &kp N5 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_a_ring: world_a_ring {
             compatible = "zmk,behavior-mod-morph";
@@ -750,9 +1173,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ý */ UNICODE(world_y_acute_lower, <&kp N0 &kp N0 &kp F &kp D>)
+      /* ý */ UNICODE(world_y_acute_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp D &kp ENTER>
 
-          /* Ý */ UNICODE(world_y_acute_upper, <&kp N0 &kp N0 &kp D &kp D>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp D>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ý */ UNICODE(world_y_acute_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp D &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp D>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_y_acute: world_y_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -762,9 +1205,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ÿ */ UNICODE(world_y_diaeresis_lower, <&kp N0 &kp N0 &kp F &kp F>)
+      /* ÿ */ UNICODE(world_y_diaeresis_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp F &kp ENTER>
 
-          /* Ÿ */ UNICODE(world_y_diaeresis_upper, <&kp N0 &kp N1 &kp N7 &kp N8>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ÿ */ UNICODE(world_y_diaeresis_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp N7 &kp N8 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N1 &kp N7 &kp N8>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp KP_N7 &kp KP_N8>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_y_diaeresis: world_y_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -774,9 +1237,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ó */ UNICODE(world_o_acute_lower, <&kp N0 &kp N0 &kp F &kp N3>)
+      /* ó */ UNICODE(world_o_acute_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N3 &kp ENTER>
 
-          /* Ó */ UNICODE(world_o_acute_upper, <&kp N0 &kp N0 &kp D &kp N3>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N3>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ó */ UNICODE(world_o_acute_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N3 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N3>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_o_acute: world_o_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -786,9 +1269,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ö */ UNICODE(world_o_diaeresis_lower, <&kp N0 &kp N0 &kp F &kp N6>)
+      /* ö */ UNICODE(world_o_diaeresis_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N6 &kp ENTER>
 
-          /* Ö */ UNICODE(world_o_diaeresis_upper, <&kp N0 &kp N0 &kp D &kp N6>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N6>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N6>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ö */ UNICODE(world_o_diaeresis_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N6 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N6>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N6>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_o_diaeresis: world_o_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -798,9 +1301,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ô */ UNICODE(world_o_circumflex_lower, <&kp N0 &kp N0 &kp F &kp N4>)
+      /* ô */ UNICODE(world_o_circumflex_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N4 &kp ENTER>
 
-          /* Ô */ UNICODE(world_o_circumflex_upper, <&kp N0 &kp N0 &kp D &kp N4>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N4>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N4>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ô */ UNICODE(world_o_circumflex_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N4 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N4>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N4>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_o_circumflex: world_o_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -810,9 +1333,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ò */ UNICODE(world_o_grave_lower, <&kp N0 &kp N0 &kp F &kp N2>)
+      /* ò */ UNICODE(world_o_grave_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N2 &kp ENTER>
 
-          /* Ò */ UNICODE(world_o_grave_upper, <&kp N0 &kp N0 &kp D &kp N2>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N2>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ò */ UNICODE(world_o_grave_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N2 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N2>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_o_grave: world_o_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -822,9 +1365,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* õ */ UNICODE(world_o_tilde_lower, <&kp N0 &kp N0 &kp F &kp N5>)
+      /* õ */ UNICODE(world_o_tilde_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N5 &kp ENTER>
 
-          /* Õ */ UNICODE(world_o_tilde_upper, <&kp N0 &kp N0 &kp D &kp N5>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Õ */ UNICODE(world_o_tilde_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N5 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_o_tilde: world_o_tilde {
             compatible = "zmk,behavior-mod-morph";
@@ -834,9 +1397,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ø */ UNICODE(world_o_slash_lower, <&kp N0 &kp N0 &kp F &kp N8>)
+      /* ø */ UNICODE(world_o_slash_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N8 &kp ENTER>
 
-          /* Ø */ UNICODE(world_o_slash_upper, <&kp N0 &kp N0 &kp D &kp N8>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N8>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N8>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ø */ UNICODE(world_o_slash_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N8 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N8>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N8>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_o_slash: world_o_slash {
             compatible = "zmk,behavior-mod-morph";
@@ -846,9 +1429,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ú */ UNICODE(world_u_acute_lower, <&kp N0 &kp N0 &kp F &kp A>)
+      /* ú */ UNICODE(world_u_acute_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp A &kp ENTER>
 
-          /* Ú */ UNICODE(world_u_acute_upper, <&kp N0 &kp N0 &kp D &kp A>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp A>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ú */ UNICODE(world_u_acute_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp A &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp A>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_u_acute: world_u_acute {
             compatible = "zmk,behavior-mod-morph";
@@ -858,9 +1461,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ü */ UNICODE(world_u_diaeresis_lower, <&kp N0 &kp N0 &kp F &kp C>)
+      /* ü */ UNICODE(world_u_diaeresis_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp C &kp ENTER>
 
-          /* Ü */ UNICODE(world_u_diaeresis_upper, <&kp N0 &kp N0 &kp D &kp C>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ü */ UNICODE(world_u_diaeresis_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp C &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_u_diaeresis: world_u_diaeresis {
             compatible = "zmk,behavior-mod-morph";
@@ -870,9 +1493,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* û */ UNICODE(world_u_circumflex_lower, <&kp N0 &kp N0 &kp F &kp B>)
+      /* û */ UNICODE(world_u_circumflex_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp B &kp ENTER>
 
-          /* Û */ UNICODE(world_u_circumflex_upper, <&kp N0 &kp N0 &kp D &kp B>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Û */ UNICODE(world_u_circumflex_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp B &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_u_circumflex: world_u_circumflex {
             compatible = "zmk,behavior-mod-morph";
@@ -882,9 +1525,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ù */ UNICODE(world_u_grave_lower, <&kp N0 &kp N0 &kp F &kp N9>)
+      /* ù */ UNICODE(world_u_grave_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N9 &kp ENTER>
 
-          /* Ù */ UNICODE(world_u_grave_upper, <&kp N0 &kp N0 &kp D &kp N9>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N9>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N9>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ù */ UNICODE(world_u_grave_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N9 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N9>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N9>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_u_grave: world_u_grave {
             compatible = "zmk,behavior-mod-morph";
@@ -894,9 +1557,29 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-          /* ñ */ UNICODE(world_n_tilde_lower, <&kp N0 &kp N0 &kp F &kp N1>)
+      /* ñ */ UNICODE(world_n_tilde_lower,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp N1 &kp ENTER>
 
-          /* Ñ */ UNICODE(world_n_tilde_upper, <&kp N0 &kp N0 &kp D &kp N1>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* Ñ */ UNICODE(world_n_tilde_upper,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp D &kp N1 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
 
         world_n_tilde: world_n_tilde {
             compatible = "zmk,behavior-mod-morph";
@@ -906,7 +1589,9 @@ macros {
             mods = <MOD_LSFT>;
         };
 
-      // transforms //////////////////////////////////////////////////////////
+    //
+    // transforms
+    //
 
         world_i_base: world_i_base {
             compatible = "zmk,behavior-mod-morph";
@@ -1082,84 +1767,488 @@ macros {
     //
     //////////////////////////////////////////////////////////////////////////
 
-          /* 🌑 */ UNICODE(emoji_new_moon, <&kp N1 &kp F &kp N3 &kp N1 &kp N1>)
+    //
+    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    //
 
-          /* 🌒 */ UNICODE(emoji_waxing_crescent_moon, <&kp N1 &kp F &kp N3 &kp N1 &kp N2>)
+      /* 🌑 */ UNICODE(emoji_new_moon,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N1 &kp ENTER>
 
-          /* 🌓 */ UNICODE(emoji_first_quarter_moon, <&kp N1 &kp F &kp N3 &kp N1 &kp N3>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N1>, <&macro_release &kp LALT>
 
-          /* 🌔 */ UNICODE(emoji_waxing_gibbous_moon, <&kp N1 &kp F &kp N3 &kp N1 &kp N4>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🌕 */ UNICODE(emoji_full_moon, <&kp N1 &kp F &kp N3 &kp N1 &kp N5>)
+      /* 🌒 */ UNICODE(emoji_waxing_crescent_moon,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N2 &kp ENTER>
 
-          /* 🎉 */ UNICODE(emoji_tada, <&kp N1 &kp F &kp N3 &kp N8 &kp N9>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N2>, <&macro_release &kp LALT>
 
-          /* ️❤️ */ UNICODE_SEQUENCE(emoji_heart, <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>), UNICODE_TRANSLATE(<&kp N2 &kp N7 &kp N6 &kp N4>), UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>))
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🔥 */ UNICODE(emoji_fire, <&kp N1 &kp F &kp N5 &kp N2 &kp N5>)
+      /* 🌓 */ UNICODE(emoji_first_quarter_moon,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N3 &kp ENTER>
 
-          /* 💪 */ UNICODE(emoji_muscle, <&kp N1 &kp F &kp N4 &kp A &kp A>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N3>, <&macro_release &kp LALT>
 
-          /* 🧗 */ UNICODE(emoji_person_climbing, <&kp N1 &kp F &kp N9 &kp D &kp N7>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🚀 */ UNICODE(emoji_rocket, <&kp N1 &kp F &kp N6 &kp N8 &kp N0>)
+      /* 🌔 */ UNICODE(emoji_waxing_gibbous_moon,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N4 &kp ENTER>
 
-          /* 😎 */ UNICODE(emoji_sunglasses, <&kp N1 &kp F &kp N6 &kp N0 &kp E>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N4>, <&macro_release &kp LALT>
 
-          /* 😍 */ UNICODE(emoji_heart_eyes, <&kp N1 &kp F &kp N6 &kp N0 &kp D>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🤩 */ UNICODE(emoji_star_struck, <&kp N1 &kp F &kp N9 &kp N2 &kp N9>)
+      /* 🌕 */ UNICODE(emoji_full_moon,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N5 &kp ENTER>
 
-          /* 🥲 */ UNICODE(emoji_tear_smile, <&kp N1 &kp F &kp N9 &kp N7 &kp N2>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N5>, <&macro_release &kp LALT>
 
-          /* 😱 */ UNICODE(emoji_scream, <&kp N1 &kp F &kp N6 &kp N3 &kp N1>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🧑‍🚀 */ UNICODE_SEQUENCE(emoji_astronaut, <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_TRANSLATE(<&kp N1 &kp F &kp N9 &kp D &kp N1>), UNICODE_TRANSLATE(<&kp N2 &kp N0 &kp N0 &kp D>), UNICODE_TRANSLATE(<&kp N1 &kp F &kp N6 &kp N8 &kp N0>))
+      /* 🎉 */ UNICODE(emoji_tada,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N8 &kp N9 &kp ENTER>
 
-          /* 🫰 */ UNICODE(emoji_snap_fingers, <&kp N1 &kp F &kp A &kp F &kp N0>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N8 &kp N9>, <&macro_release &kp LALT>
 
-          /* 👌 */ UNICODE(emoji_ok_hand, <&kp N1 &kp F &kp N4 &kp N4 &kp C>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N8 &kp KP_N9>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🙏 */ UNICODE(emoji_pray, <&kp N1 &kp F &kp N6 &kp N4 &kp F>)
+      /* ️❤️ */ UNICODE(emoji_heart,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N2 &kp N7 &kp N6 &kp N4 &kp ENTER>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
 
-          /* 😅 */ UNICODE(emoji_sweat_smile, <&kp N1 &kp F &kp N6 &kp N0 &kp N5>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N6 &kp N4>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
 
-          /* 😰 */ UNICODE(emoji_cold_sweat, <&kp N1 &kp F &kp N6 &kp N3 &kp N0>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N6 &kp KP_N4>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🤯 */ UNICODE(emoji_exploding_head, <&kp N1 &kp F &kp N9 &kp N2 &kp F>)
+      /* 🔥 */ UNICODE(emoji_fire,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N5 &kp N2 &kp N5 &kp ENTER>
 
-          /* 💁 */ UNICODE(emoji_person_tipping_hand, <&kp N1 &kp F &kp N4 &kp N8 &kp N1>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N5 &kp N2 &kp N5>, <&macro_release &kp LALT>
 
-          /* 🙆 */ UNICODE(emoji_person_gesturing_ok, <&kp N1 &kp F &kp N6 &kp N4 &kp N6>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N5 &kp KP_N2 &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🙇 */ UNICODE(emoji_person_bowing, <&kp N1 &kp F &kp N6 &kp N4 &kp N7>)
+      /* 💪 */ UNICODE(emoji_muscle,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N4 &kp A &kp A &kp ENTER>
 
-          /* 🙋 */ UNICODE(emoji_person_raising_hand, <&kp N1 &kp F &kp N6 &kp N4 &kp B>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp A &kp A>, <&macro_release &kp LALT>
 
-          /* 🙅 */ UNICODE(emoji_person_gesturing_no, <&kp N1 &kp F &kp N6 &kp N4 &kp N5>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp A &kp A>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🤷 */ UNICODE(emoji_person_shrugging, <&kp N1 &kp F &kp N9 &kp N3 &kp N7>)
+      /* 🧗 */ UNICODE(emoji_person_climbing,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp D &kp N7 &kp ENTER>
 
-          /* ✅ */ UNICODE(emoji_checkoff, <&kp N2 &kp N7 &kp N0 &kp N5>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp D &kp N7>, <&macro_release &kp LALT>
 
-          /* 💯 */ UNICODE(emoji_100, <&kp N1 &kp F &kp N4 &kp A &kp F>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp D &kp KP_N7>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* ⚠️ */ UNICODE_SEQUENCE(emoji_warning, <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_TRANSLATE(<&kp N2 &kp N6 &kp A &kp N0>), UNICODE_TRANSLATE(<&kp F &kp E &kp N0 &kp F>))
+      /* 🚀 */ UNICODE(emoji_rocket,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N8 &kp N0 &kp ENTER>
 
-          /* ❌ */ UNICODE(emoji_x, <&kp N2 &kp N7 &kp N4 &kp C>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N8 &kp N0>, <&macro_release &kp LALT>
 
-          /* ❓ */ UNICODE(emoji_question, <&kp N2 &kp N7 &kp N5 &kp N3>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N8 &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🤓 */ UNICODE(emoji_nerd, <&kp N1 &kp F &kp N9 &kp N1 &kp N3>)
+      /* 😎 */ UNICODE(emoji_sunglasses,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp E &kp ENTER>
 
-          /* 🙌 */ UNICODE(emoji_raised_hands, <&kp N1 &kp F &kp N6 &kp N4 &kp C>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp E>, <&macro_release &kp LALT>
 
-          /* ✨ */ UNICODE(emoji_sparkles, <&kp N2 &kp N7 &kp N2 &kp N8>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N0 &kp E>, <&macro_release &kp LALT>
+        #endif
+      )
 
-          /* 🤔 */ UNICODE(emoji_thinking, <&kp N1 &kp F &kp N9 &kp N1 &kp N4>)
+      /* 😍 */ UNICODE(emoji_heart_eyes,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp D &kp ENTER>
 
-          /* 👎 */ UNICODE(emoji_thumbs_down, <&kp N1 &kp F &kp N4 &kp N4 &kp E>)
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp D>, <&macro_release &kp LALT>
 
-          /* 👍 */ UNICODE(emoji_thumbs_up, <&kp N1 &kp F &kp N4 &kp N4 &kp D>)
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N0 &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🤩 */ UNICODE(emoji_star_struck,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N2 &kp N9 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp N9>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N2 &kp KP_N9>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🥲 */ UNICODE(emoji_tear_smile,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N7 &kp N2 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N7 &kp N2>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N7 &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 😱 */ UNICODE(emoji_scream,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N3 &kp N1 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N3 &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N3 &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🧑‍🚀 */ UNICODE(emoji_astronaut,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp D &kp N1 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N2 &kp N0 &kp N0 &kp D &kp ENTER>, <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N8 &kp N0 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp D &kp N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N0 &kp D>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N8 &kp N0>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp D &kp KP_N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N0 &kp D>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N8 &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🫰 */ UNICODE(emoji_snap_fingers,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp A &kp F &kp N0 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp A &kp F &kp N0>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp A &kp F &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 👌 */ UNICODE(emoji_ok_hand,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N4 &kp N4 &kp C &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N4 &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N4 &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🙏 */ UNICODE(emoji_pray,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N4 &kp F &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 😅 */ UNICODE(emoji_sweat_smile,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp N5 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 😰 */ UNICODE(emoji_cold_sweat,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N3 &kp N0 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N3 &kp N0>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N3 &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🤯 */ UNICODE(emoji_exploding_head,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N2 &kp F &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N2 &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 💁 */ UNICODE(emoji_person_tipping_hand,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N4 &kp N8 &kp N1 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N8 &kp N1>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N8 &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🙆 */ UNICODE(emoji_person_gesturing_ok,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N4 &kp N6 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp N6>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🙇 */ UNICODE(emoji_person_bowing,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N4 &kp N7 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp N7>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🙋 */ UNICODE(emoji_person_raising_hand,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N4 &kp B &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp B>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp B>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🙅 */ UNICODE(emoji_person_gesturing_no,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N4 &kp N5 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🤷 */ UNICODE(emoji_person_shrugging,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N3 &kp N7 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N3 &kp N7>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N3 &kp KP_N7>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ✅ */ UNICODE(emoji_checkoff,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N7 &kp N0 &kp N5 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N0 &kp N5>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 💯 */ UNICODE(emoji_100,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N4 &kp A &kp F &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp A &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp A &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ⚠️ */ UNICODE(emoji_warning,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N6 &kp A &kp N0 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp A &kp N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N6 &kp A &kp KP_N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ❌ */ UNICODE(emoji_x,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N7 &kp N4 &kp C &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N4 &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N4 &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ❓ */ UNICODE(emoji_question,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N7 &kp N5 &kp N3 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N5 &kp N3>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N5 &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🤓 */ UNICODE(emoji_nerd,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N1 &kp N3 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N1 &kp N3>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N1 &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🙌 */ UNICODE(emoji_raised_hands,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N4 &kp C &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp C>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp C>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ✨ */ UNICODE(emoji_sparkles,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N7 &kp N2 &kp N8 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N2 &kp N8>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🤔 */ UNICODE(emoji_thinking,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N1 &kp N4 &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N1 &kp N4>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 👎 */ UNICODE(emoji_thumbs_down,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N4 &kp N4 &kp E &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N4 &kp E>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N4 &kp E>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 👍 */ UNICODE(emoji_thumbs_up,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N4 &kp N4 &kp D &kp ENTER>
+
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N4 &kp D>, <&macro_release &kp LALT>
+
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N4 &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
 
 };
