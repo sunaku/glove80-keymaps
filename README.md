@@ -22,19 +22,23 @@ See [interactive layer map][6] for overview and documentation.
 
 ## Installing
 
-> **NOTE:** Check out the handy [Quickstart Guide](
-  https://github.com/sunaku/glove80-keymaps/wiki/Quickstart-Guide
-) for a step-by-step tutorial that walks you through this, with screenshots!
+Refer to the handy [Quickstart Guide] for a step-by-step tutorial with screenshots!
+
+[Quickstart Guide]: https://github.com/sunaku/glove80-keymaps/wiki/Quickstart-Guide
+
+### Flashing
 
 - For the initial flash, use the "bootloader mass storage device mode" method
-(see page 31 in the Glove80 User Guide).  Thereafter, use the `&bootloader`
+(see page 31 in the [Glove80 User Guide]).  Thereafter, use the `&bootloader`
 key on any Miryoku layer: hold its thumb key and tap the top outer corner key.
 
 - If you're installing a different firmware version compared to what your
 keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perform a
-*configuration factory reset* on both halves (see page 36 in the Glove80 User
-Guide) and then toggle the per-key RGB effects first on and then off. ⚡  This
+*configuration factory reset* on both halves (see page 41 in the [Glove80 User
+Guide]) and then toggle the per-key RGB effects first on and then off. ⚡  This
 allows the newly installed firmware to take full effect. 💯
+
+[Glove80 User Guide]: https://www.moergo.com/files/glove80-user-guide.pdf
 
 ## Upgrading
 
