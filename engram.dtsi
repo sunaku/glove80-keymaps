@@ -47,6 +47,12 @@ behaviors {
     #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
 
     //
+    // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+
+    //
     // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
     //
@@ -78,6 +84,12 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #define SHIFT_STREAK_DECAY 70 // global-quick-tap-ms
+
+    //
+    // SHIFT_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #define SHIFT_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
 
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -161,8 +173,8 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        quick-tap-ms = <HOMEY_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -173,8 +185,8 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        quick-tap-ms = <HOMEY_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -189,8 +201,8 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <SHIFT_HOLDING_TIME>;
-        quick-tap-ms = <SHIFT_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
+        quick-tap-ms = <SHIFT_REPEAT_DECAY>;
+        require-prior-idle-ms = <SHIFT_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
@@ -201,8 +213,8 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <SHIFT_HOLDING_TIME>;
-        quick-tap-ms = <SHIFT_STREAK_DECAY>;
-        global-quick-tap; // with typing streak
+        quick-tap-ms = <SHIFT_REPEAT_DECAY>;
+        require-prior-idle-ms = <SHIFT_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
