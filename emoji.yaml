@@ -7,27 +7,27 @@ full_moon: "🌕"
 
 # number row
 tada: "🎉"
-heart: "️❤️"
 fire: "🔥"
+heart: "️❤️"
 muscle: "💪"
 person_climbing: "🧗"
 rocket: "🚀"
 
 # upper row
 sunglasses: "😎"
-heart_eyes: "😍"
 star_struck: "🤩"
-tear_smile: "🥲"
+joy: "😂"
+cold_sweat: "😰"
 scream: "😱"
-astronaut:  "🧑‍🚀"
+exploding_head: "🤯"
 
 # home row
 snap_fingers: "🫰"
 ok_hand: "👌"
 pray: "🙏"
 sweat_smile: "😅"
-cold_sweat: "😰"
-exploding_head: "🤯"
+disappointed: "😞"
+thinking: "🤔"
 
 # lower row
 person_tipping_hand: "💁"
@@ -45,11 +45,11 @@ x: "❌"
 question: "❓"
 
 # thumb cluster upper arc
+astronaut:  "🧑‍🚀"
 nerd: "🤓"
-raised_hands: "🙌"
 sparkles: "✨"
 
 # thumb cluster lower arc
-thinking: "🤔"
-thumbs_down: "👎"
+raised_hands: "🙌"
+point_up: "☝️"
 thumbs_up: "👍"
