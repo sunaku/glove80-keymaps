@@ -5,6 +5,12 @@ dtsi_files = FileList["*.dtsi.erb"].pathmap("%X").each do |f|
 end
 task :dtsi => dtsi_files
 
+require 'erb'
 rule ".dtsi" => ".dtsi.erb" do |t|
-  sh "erb #{t.source} | sed 's/ *$//' | cat -s > #{t.name}"
+  template = ERB.new(File.read(t.source), trim_mode: "<>")
+  template.filename = t.source
+  output = template.result()
+    .gsub(/ +$/, "")          # remove trailing spaces
+    .gsub(/(?<=\n\n)\n+/, "") # squeeze excess newlines
+  File.write(t.name, output)
 end
