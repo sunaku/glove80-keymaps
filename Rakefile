@@ -12,5 +12,6 @@ rule ".dtsi" => ".dtsi.erb" do |t|
   output = template.result()
     .gsub(/ +$/, "")          # remove trailing spaces
     .gsub(/(?<=\n\n)\n+/, "") # squeeze excess newlines
+    .gsub(/\n+(?= +#(?!define))/, "\n") # tighten #elif
   File.write(t.name, output)
 end
