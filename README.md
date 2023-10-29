@@ -11,9 +11,12 @@ layouts with [Miryoku][4] layers and [home row mods][5].
 
 ## Legend
 
-See [interactive layer map][6] for overview and documentation.
+See [interactive layer map][6] for overview and documentation.  
+
+NOTE: This is also available as a [printable PDF document][7].
 
 [6]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
+[7]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
 
 ## Keymaps
 
