@@ -287,6 +287,12 @@ macros {
     //
     #define SELECT_WORD_DELAY 1
 
+    ZMK_MACRO(select_none,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp UP &kp DOWN &kp LEFT &kp RIGHT>;
+    )
+
     //
     // select a word (jumps to next word upon each successive invocation)
     //
