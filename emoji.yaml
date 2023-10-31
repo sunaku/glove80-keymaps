@@ -1,4 +1,22 @@
+# modifiers
 zwj: "\u200d"
+male_sign: "♂️"
+female_sign: "♀️"
+light_skin_tone:        "🏻"
+medium_light_skin_tone: "🏼"
+medium_skin_tone:       "🏽"
+medium_dark_skin_tone:  "🏾"
+dark_skin_tone:         "🏿"
+
+# family & ages
+baby_bottle: "🍼"
+baby: "👶"
+boy: "👦"
+girl: "👧"
+man: "👨"
+woman: "👩"
+old_man: "👴"
+old_woman: "👵"
 
 # function row
 new_moon: "🌑"
