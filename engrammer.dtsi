@@ -302,7 +302,7 @@ macros {
     ZMK_MACRO(select_none,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp UP &kp DOWN &kp LEFT &kp RIGHT>;
+        bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
     )
 
     //
