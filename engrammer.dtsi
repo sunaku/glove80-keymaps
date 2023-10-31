@@ -1524,6 +1524,16 @@ macros {
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
     //
 
+      /* ‍ */ UNICODE(emoji_zwj,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N0 &kp N0 &kp D &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N0 &kp D>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N0 &kp D>, <&macro_release &kp LALT>
+        #endif
+      )
+
       /* 🌑 */ UNICODE(emoji_new_moon,
         #if UNICODE_TARGET_OS == 1
           <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N1 &kp ENTER>
