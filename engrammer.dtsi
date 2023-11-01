@@ -1521,6 +1521,25 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
+    // EMOJI_GENDER_SIGN_PRESET defines an Emoji gender sign for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_GENDER_SIGN_PRESET 0 // neutral
+    //#define EMOJI_GENDER_SIGN_PRESET 1 // male
+    //#define EMOJI_GENDER_SIGN_PRESET 2 // female
+
+    //
+    // EMOJI_SKIN_TONE_PRESET defines an Emoji skin tone for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_SKIN_TONE_PRESET 0 // neutral
+    //#define EMOJI_SKIN_TONE_PRESET 1 // light_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 2 // medium_light_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 3 // medium_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 4 // medium_dark_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 5 // dark_skin_tone
+
+    //
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
     //
 
@@ -2085,3 +2104,26 @@ macros {
       )
 
 };
+
+/*HACK*/};
+    #if EMOJI_GENDER_SIGN_PRESET == 0
+    emoji_gender_sign_preset: &none {};
+    #elif EMOJI_GENDER_SIGN_PRESET == 1
+    emoji_gender_sign_preset: &emoji_male_sign {};
+    #elif EMOJI_GENDER_SIGN_PRESET == 2
+    emoji_gender_sign_preset: &emoji_female_sign {};
+    #endif
+    #if EMOJI_SKIN_TONE_PRESET == 0
+    emoji_skin_tone_preset: &none {};
+    #elif EMOJI_SKIN_TONE_PRESET == 1
+    emoji_skin_tone_preset: &emoji_light_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 2
+    emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 3
+    emoji_skin_tone_preset: &emoji_medium_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 4
+    emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 5
+    emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+    #endif
+/*HACK*//{
