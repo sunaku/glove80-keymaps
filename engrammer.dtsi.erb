@@ -615,6 +615,16 @@ macros {
     //#define EMOJI_SKIN_TONE_PRESET 5 // dark_skin_tone
 
     //
+    // EMOJI_HAIR_STYLE_PRESET defines an Emoji hair style for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_HAIR_STYLE_PRESET 0 // neutral
+    //#define EMOJI_HAIR_STYLE_PRESET 1 // bald
+    //#define EMOJI_HAIR_STYLE_PRESET 2 // red_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 4 // white_hair
+
+    //
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
     //
     <%
@@ -651,6 +661,18 @@ macros {
     emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
     #elif EMOJI_SKIN_TONE_PRESET == 5
     emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+    #endif
+
+    #if EMOJI_HAIR_STYLE_PRESET == 0
+    emoji_hair_style_preset: &none {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 1
+    emoji_hair_style_preset: &emoji_bald {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 2
+    emoji_hair_style_preset: &emoji_red_hair {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 3
+    emoji_hair_style_preset: &emoji_curly_hair {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 4
+    emoji_hair_style_preset: &emoji_white_hair {};
     #endif
 <%
   end

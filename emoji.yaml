@@ -18,6 +18,12 @@ woman: "👩"
 old_man: "👴"
 old_woman: "👵"
 
+# hair styles
+white_hair: "🦳"
+curly_hair: "🦱"
+red_hair: "🦰"
+bald: "🦲"
+
 # function row
 new_moon: "🌑"
 waxing_crescent_moon: "🌒"

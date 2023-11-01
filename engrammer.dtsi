@@ -1540,6 +1540,16 @@ macros {
     //#define EMOJI_SKIN_TONE_PRESET 5 // dark_skin_tone
 
     //
+    // EMOJI_HAIR_STYLE_PRESET defines an Emoji hair style for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_HAIR_STYLE_PRESET 0 // neutral
+    //#define EMOJI_HAIR_STYLE_PRESET 1 // bald
+    //#define EMOJI_HAIR_STYLE_PRESET 2 // red_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 4 // white_hair
+
+    //
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
     //
 
@@ -1700,6 +1710,46 @@ macros {
           <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N7 &kp N5>, <&macro_release &kp LALT>
         #elif UNICODE_TARGET_OS == 3
           <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N7 &kp KP_N5>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦳 */ UNICODE(emoji_white_hair,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N3 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N3>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦱 */ UNICODE(emoji_curly_hair,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N1 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N1>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦰 */ UNICODE(emoji_red_hair,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N0 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N0>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦲 */ UNICODE(emoji_bald,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N2 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N2>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N2>, <&macro_release &kp LALT>
         #endif
       )
 
@@ -2125,5 +2175,16 @@ macros {
     emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
     #elif EMOJI_SKIN_TONE_PRESET == 5
     emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+    #endif
+    #if EMOJI_HAIR_STYLE_PRESET == 0
+    emoji_hair_style_preset: &none {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 1
+    emoji_hair_style_preset: &emoji_bald {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 2
+    emoji_hair_style_preset: &emoji_red_hair {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 3
+    emoji_hair_style_preset: &emoji_curly_hair {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 4
+    emoji_hair_style_preset: &emoji_white_hair {};
     #endif
 /*HACK*//{

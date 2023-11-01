@@ -1810,6 +1810,46 @@ macros {
         #endif
       )
 
+      /* 🦳 */ UNICODE(emoji_white_hair,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N3 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N3>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N3>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦱 */ UNICODE(emoji_curly_hair,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N1 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N1>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N1>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦰 */ UNICODE(emoji_red_hair,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N0 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N0>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N0>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* 🦲 */ UNICODE(emoji_bald,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp B &kp N2 &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N2>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N2>, <&macro_release &kp LALT>
+        #endif
+      )
+
       /* 🌑 */ UNICODE(emoji_new_moon,
         #if UNICODE_TARGET_OS == 1
           <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N1 &kp ENTER>
