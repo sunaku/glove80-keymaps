@@ -2,6 +2,10 @@
 zwj: "\u200d"
 male_sign: "♂️"
 female_sign: "♀️"
+right_arrow: "➡️"
+left_arrow: "⬅️"
+
+# skin tones
 light_skin_tone:        "🏻"
 medium_light_skin_tone: "🏼"
 medium_skin_tone:       "🏽"

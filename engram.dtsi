@@ -1680,6 +1680,26 @@ macros {
         #endif
       )
 
+      /* ➡️ */ UNICODE(emoji_right_arrow,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp N7 &kp A &kp N1 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp A &kp N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp A &kp KP_N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
+      /* ⬅️ */ UNICODE(emoji_left_arrow,
+        #if UNICODE_TARGET_OS == 1
+          <&kp LC(LS(U)) &kp N2 &kp B &kp N0 &kp N5 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+        #elif UNICODE_TARGET_OS == 2
+          <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp B &kp N0 &kp N5>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+        #elif UNICODE_TARGET_OS == 3
+          <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp B &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        #endif
+      )
+
       /* 🏻 */ UNICODE(emoji_light_skin_tone,
         #if UNICODE_TARGET_OS == 1
           <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp F &kp B &kp ENTER>
