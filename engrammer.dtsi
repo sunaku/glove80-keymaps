@@ -2177,34 +2177,34 @@ macros {
 
 /*HACK*/};
     #if EMOJI_GENDER_SIGN_PRESET == 0
-    emoji_gender_sign_preset: &none {};
+      emoji_gender_sign_preset: &none {};
     #elif EMOJI_GENDER_SIGN_PRESET == 1
-    emoji_gender_sign_preset: &emoji_male_sign {};
+      emoji_gender_sign_preset: &emoji_male_sign {};
     #elif EMOJI_GENDER_SIGN_PRESET == 2
-    emoji_gender_sign_preset: &emoji_female_sign {};
+      emoji_gender_sign_preset: &emoji_female_sign {};
     #endif
     #if EMOJI_SKIN_TONE_PRESET == 0
-    emoji_skin_tone_preset: &none {};
+      emoji_skin_tone_preset: &none {};
     #elif EMOJI_SKIN_TONE_PRESET == 1
-    emoji_skin_tone_preset: &emoji_light_skin_tone {};
+      emoji_skin_tone_preset: &emoji_light_skin_tone {};
     #elif EMOJI_SKIN_TONE_PRESET == 2
-    emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
+      emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
     #elif EMOJI_SKIN_TONE_PRESET == 3
-    emoji_skin_tone_preset: &emoji_medium_skin_tone {};
+      emoji_skin_tone_preset: &emoji_medium_skin_tone {};
     #elif EMOJI_SKIN_TONE_PRESET == 4
-    emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
+      emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
     #elif EMOJI_SKIN_TONE_PRESET == 5
-    emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+      emoji_skin_tone_preset: &emoji_dark_skin_tone {};
     #endif
     #if EMOJI_HAIR_STYLE_PRESET == 0
-    emoji_hair_style_preset: &none {};
+      emoji_hair_style_preset: &none {};
     #elif EMOJI_HAIR_STYLE_PRESET == 1
-    emoji_hair_style_preset: &emoji_bald {};
+      emoji_hair_style_preset: &emoji_bald {};
     #elif EMOJI_HAIR_STYLE_PRESET == 2
-    emoji_hair_style_preset: &emoji_red_hair {};
+      emoji_hair_style_preset: &emoji_red_hair {};
     #elif EMOJI_HAIR_STYLE_PRESET == 3
-    emoji_hair_style_preset: &emoji_curly_hair {};
+      emoji_hair_style_preset: &emoji_curly_hair {};
     #elif EMOJI_HAIR_STYLE_PRESET == 4
-    emoji_hair_style_preset: &emoji_white_hair {};
+      emoji_hair_style_preset: &emoji_white_hair {};
     #endif
 /*HACK*//{
