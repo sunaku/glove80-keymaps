@@ -10,7 +10,7 @@
 // https://discord.com/channels/877392805654306816/1165858059910918234
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v27 featuring Arno's Engram 2.0 layout with Miryoku
+// Sunaku's Keymap v28 featuring Arno's Engram 2.0 layout with Miryoku
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////
@@ -419,6 +419,12 @@ macros {
     //
     #define SELECT_WORD_DELAY 1
 
+    ZMK_MACRO(select_none,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+    )
+
     //
     // select a word (jumps to next word upon each successive invocation)
     //
@@ -626,6 +632,12 @@ macros {
       %>)
       <%
       end
+
+      emit_at_root_level = lambda do |&block|
+        # HACK: this is an SQL injection style attempt to temporarily escape
+        # to the root level of the DTSI to alias things under new shortnames
+        %>/*HACK*/};<% block.() %>/*HACK*//{<%
+      end
     %>
 
     //
@@ -716,6 +728,35 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
+    // EMOJI_GENDER_SIGN_PRESET defines an Emoji gender sign for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_GENDER_SIGN_PRESET 0 // neutral
+    //#define EMOJI_GENDER_SIGN_PRESET 1 // male
+    //#define EMOJI_GENDER_SIGN_PRESET 2 // female
+
+    //
+    // EMOJI_SKIN_TONE_PRESET defines an Emoji skin tone for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_SKIN_TONE_PRESET 0 // neutral
+    //#define EMOJI_SKIN_TONE_PRESET 1 // light_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 2 // medium_light_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 3 // medium_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 4 // medium_dark_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 5 // dark_skin_tone
+
+    //
+    // EMOJI_HAIR_STYLE_PRESET defines an Emoji hair style for use as a
+    // convenient inward-rolling shortcut on the home row of the layer.
+    //
+    #define EMOJI_HAIR_STYLE_PRESET 0 // neutral
+    //#define EMOJI_HAIR_STYLE_PRESET 1 // bald
+    //#define EMOJI_HAIR_STYLE_PRESET 2 // red_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 4 // white_hair
+
+    //
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
     //
     <%
@@ -728,3 +769,43 @@ macros {
     %>
 
 };
+
+<%
+  emit_at_root_level.() do
+%>
+    #if EMOJI_GENDER_SIGN_PRESET == 0
+      emoji_gender_sign_preset: &none {};
+    #elif EMOJI_GENDER_SIGN_PRESET == 1
+      emoji_gender_sign_preset: &emoji_male_sign {};
+    #elif EMOJI_GENDER_SIGN_PRESET == 2
+      emoji_gender_sign_preset: &emoji_female_sign {};
+    #endif
+
+    #if EMOJI_SKIN_TONE_PRESET == 0
+      emoji_skin_tone_preset: &none {};
+    #elif EMOJI_SKIN_TONE_PRESET == 1
+      emoji_skin_tone_preset: &emoji_light_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 2
+      emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 3
+      emoji_skin_tone_preset: &emoji_medium_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 4
+      emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
+    #elif EMOJI_SKIN_TONE_PRESET == 5
+      emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+    #endif
+
+    #if EMOJI_HAIR_STYLE_PRESET == 0
+      emoji_hair_style_preset: &none {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 1
+      emoji_hair_style_preset: &emoji_bald {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 2
+      emoji_hair_style_preset: &emoji_red_hair {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 3
+      emoji_hair_style_preset: &emoji_curly_hair {};
+    #elif EMOJI_HAIR_STYLE_PRESET == 4
+      emoji_hair_style_preset: &emoji_white_hair {};
+    #endif
+<%
+  end
+%>

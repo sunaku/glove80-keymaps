@@ -20,8 +20,8 @@ NOTE: This is also available as a [printable PDF document][7].
 
 ## Keymaps
 
-- for Engrammer layout: https://my.glove80.com/#/layout/user/93541575-ab8c-46d4-9328-956ff279bb50
-- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/0fc0025e-877c-4bf1-a107-02f69513d0cb
+- for Engrammer layout: https://my.glove80.com/#/layout/user/ff1c67b9-349c-4f91-bb58-32a8ffe998e0
+- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/f6fa95df-2318-4d55-a6f6-adb4b4b6955d
 
 ## Installing
 
