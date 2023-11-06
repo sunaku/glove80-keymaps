@@ -3,6 +3,8 @@
 These are [my Glove80][1] keymaps featuring the [Engram][2]([mer][3]) 
 layouts with [Miryoku][4] layers and [home row mods][5].
 
+>![Photograph of my Glove80 with Engrammer layout](https://raw.githubusercontent.com/sunaku/sunaku.github.io/master/moergo-glove80-keyboard-photograph.jpg)
+
 [1]: https://sunaku.github.io/moergo-glove80-keyboard.html
 [2]: https://sunaku.github.io/engram-keyboard-layout.html
 [3]: https://sunaku.github.io/engrammer-keyboard-layout.html
