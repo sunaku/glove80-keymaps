@@ -1,7 +1,7 @@
 # "Glorious Engrammer" keymaps for MoErgo Glove80
 
 These are [my Glove80][1] keymaps featuring the [Engram][2]([mer][3]) 
-layouts with [Miryoku][4] layers and [home row mods][5].
+layouts with [Miryoku][4] style layers and [home row mods][5].
 
 >![Photograph of my Glove80 with Engrammer layout](https://raw.githubusercontent.com/sunaku/sunaku.github.io/master/moergo-glove80-keyboard-photograph.jpg)
 
@@ -22,8 +22,8 @@ NOTE: This is also available as a [printable PDF document][7].
 
 ## Keymaps
 
-- for Engrammer layout: https://my.glove80.com/#/layout/user/ff1c67b9-349c-4f91-bb58-32a8ffe998e0
-- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/f6fa95df-2318-4d55-a6f6-adb4b4b6955d
+- for Engrammer layout: https://my.glove80.com/#/layout/user/a32711f5-014e-4581-b1e9-1351851f5559
+- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/96c41146-ce0f-4776-bf54-f53f38718939
 
 ## Installing
 
@@ -34,8 +34,7 @@ Refer to the handy [Quickstart Guide] for a step-by-step tutorial with screensho
 ### Flashing
 
 - For the initial flash, use the "bootloader mass storage device mode" method
-(see page 31 in the [Glove80 User Guide]).  Thereafter, use the `&bootloader`
-key on any Miryoku layer: hold its thumb key and tap the top outer corner key.
+(see page 31 in the [Glove80 User Guide]).
 
 - If you're installing a different firmware version compared to what your
 keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perform a

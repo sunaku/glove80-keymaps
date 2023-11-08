@@ -1,16 +1,10 @@
 //////////////////////////////////////////////////////////////////////
 // NOTE: Use the `#define` settings below to customize this keymap! //
-//////////////////////////////////////////////////////////////////////
-// IMPORTANT: You need to set Firmware Version to "pr21.zmk-update" //
-// under Settings > Advanced Settings in the Glove80 Layout Editor  //
-// if you want to use the `hold-trigger-on-release` feature in ZMK  //
-// and also the `require-prior-idle-ms` feature for home row mods.  //
-//////////////////////////////////////////////////////////////////////
-// CAUTION: The PR21 firmware is a beta preview to gather feedback: //
-// https://discord.com/channels/877392805654306816/1165858059910918234
+// You can override them here instead of modifying them down there. //
+// /* EXAMPLE: */  #define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair  //
 //////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v28 featuring Arno's Engram 2.0 layout with Miryoku
+// Sunaku's Keymap v29 featuring Arno's Engram 2.0 layout with Miryoku
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////
@@ -30,27 +24,35 @@ behaviors {
     // for the pinky, ring, and middle fingers (which are assigned to Super,
     // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
     //
+    #ifndef HOMEY_HOLDING_TYPE
     #define HOMEY_HOLDING_TYPE "tap-preferred"
+    #endif
 
     //
     // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
     // home row mod keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
+    #ifndef HOMEY_HOLDING_TIME
     #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #endif
 
     //
     // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
+    #ifndef HOMEY_STREAK_DECAY
     #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
+    #endif
 
     //
     // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
+    #ifndef HOMEY_REPEAT_DECAY
     #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
 
     //
     // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -62,7 +64,9 @@ behaviors {
     // Typing streaks and the `hold-trigger-on-release` setting are disabled
     // for the index fingers so as not to hinder their speed and dexterity.
     //
+    #ifndef SHIFT_HOLDING_TYPE
     #define SHIFT_HOLDING_TYPE "tap-preferred"
+    #endif
 
     //
     // SHIFT_HOLDING_TIME defines how long you need to hold (milliseconds)
@@ -76,20 +80,26 @@ behaviors {
     // sent immediately without the rest of your multi-mod chord when you
     // perform outward rolls from your index fingers toward your pinkies.
     //
+    #ifndef SHIFT_HOLDING_TIME
     #define SHIFT_HOLDING_TIME 170
+    #endif
 
     //
     // SHIFT_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
+    #ifndef SHIFT_STREAK_DECAY
     #define SHIFT_STREAK_DECAY 70 // global-quick-tap-ms
+    #endif
 
     //
     // SHIFT_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
+    #ifndef SHIFT_REPEAT_DECAY
     #define SHIFT_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
 
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -99,31 +109,41 @@ behaviors {
     // activation for the symbol layer (if the tapped symbol key is released
     // while the thumb layer key is still held down) for quicker programming.
     //
+    #ifndef THUMB_HOLDING_TYPE
     #define THUMB_HOLDING_TYPE "balanced"
+    #endif
 
     //
     // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
+    #ifndef THUMB_HOLDING_TIME
     #define THUMB_HOLDING_TIME 200
+    #endif
 
     //
     // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
+    #ifndef THUMB_REPEAT_DECAY
     #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
 
     //
     // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
+    #ifndef SPACE_HOLDING_TIME
     #define SPACE_HOLDING_TIME 170
+    #endif
 
     //
     // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
+    #ifndef SPACE_REPEAT_DECAY
     #define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+    #endif
 
     //
     // Glove80 key positions index for positional hold-tap
@@ -429,7 +449,9 @@ macros {
     // after moving the cursor before it selects a word.  A larger delay
     // may allow the macro to move to the next word upon each invocation.
     //
+    #ifndef SELECT_WORD_DELAY
     #define SELECT_WORD_DELAY 1
+    #endif
 
     ZMK_MACRO(select_none,
         wait-ms = <SELECT_WORD_DELAY>;
@@ -537,21 +559,27 @@ macros {
     // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
     // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
     //
+    #ifndef UNICODE_TARGET_OS
     #define UNICODE_TARGET_OS 1 // linux
     //#define UNICODE_TARGET_OS 2 // macos
     //#define UNICODE_TARGET_OS 3 // windows
+    #endif
 
     //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
+    #ifndef UNICODE_TAP_DELAY
     #define UNICODE_TAP_DELAY 1
+    #endif
 
     //
     // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
     // between emitting Unicode codepoints in multi-codepoint characters.
     //
+    #ifndef UNICODE_SEQ_DELAY
     #define UNICODE_SEQ_DELAY 10
+    #endif
 
     #define UNICODE(name, ...) \
         ZMK_MACRO(name, \
@@ -1656,30 +1684,36 @@ macros {
     // EMOJI_GENDER_SIGN_PRESET defines an Emoji gender sign for use as a
     // convenient inward-rolling shortcut on the home row of the layer.
     //
-    #define EMOJI_GENDER_SIGN_PRESET 0 // neutral
-    //#define EMOJI_GENDER_SIGN_PRESET 1 // male
+    #ifndef EMOJI_GENDER_SIGN_PRESET
+    //#define EMOJI_GENDER_SIGN_PRESET 0 // neutral
+    #define EMOJI_GENDER_SIGN_PRESET 1 // male
     //#define EMOJI_GENDER_SIGN_PRESET 2 // female
+    #endif
 
     //
     // EMOJI_SKIN_TONE_PRESET defines an Emoji skin tone for use as a
     // convenient inward-rolling shortcut on the home row of the layer.
     //
-    #define EMOJI_SKIN_TONE_PRESET 0 // neutral
+    #ifndef EMOJI_SKIN_TONE_PRESET
+    //#define EMOJI_SKIN_TONE_PRESET 0 // neutral
     //#define EMOJI_SKIN_TONE_PRESET 1 // light_skin_tone
     //#define EMOJI_SKIN_TONE_PRESET 2 // medium_light_skin_tone
     //#define EMOJI_SKIN_TONE_PRESET 3 // medium_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 4 // medium_dark_skin_tone
+    #define EMOJI_SKIN_TONE_PRESET 4 // medium_dark_skin_tone
     //#define EMOJI_SKIN_TONE_PRESET 5 // dark_skin_tone
+    #endif
 
     //
     // EMOJI_HAIR_STYLE_PRESET defines an Emoji hair style for use as a
     // convenient inward-rolling shortcut on the home row of the layer.
     //
-    #define EMOJI_HAIR_STYLE_PRESET 0 // neutral
+    #ifndef EMOJI_HAIR_STYLE_PRESET
+    //#define EMOJI_HAIR_STYLE_PRESET 0 // neutral
     //#define EMOJI_HAIR_STYLE_PRESET 1 // bald
     //#define EMOJI_HAIR_STYLE_PRESET 2 // red_hair
     //#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
-    //#define EMOJI_HAIR_STYLE_PRESET 4 // white_hair
+    #define EMOJI_HAIR_STYLE_PRESET 4 // white_hair
+    #endif
 
     //
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
