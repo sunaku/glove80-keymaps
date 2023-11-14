@@ -1,7 +1,11 @@
-# "Glorious Engrammer" keymaps for MoErgo Glove80
+# "Glorious Engrammer" keymap for MoErgo Glove80
 
-These are [my Glove80][1] keymaps featuring the [Engram][2]([mer][3]) 
-layouts with [Miryoku][4] style layers and [home row mods][5].
+This is [my Glove80][1] keymap featuring the [Engram][2]/[mer][3] 
+layouts with [Miryoku][4]-style layers and [home row mods][5].
+Other layouts (QWERTY, Dvorak, and Colemak/DH) and 
+familiar keys (arrows, pinky shifts, function row) 
+are also provided as "training wheels" to aid your
+transition to the full glory, at your convenience.
 
 >![Photograph of my Glove80 with Engrammer layout](https://raw.githubusercontent.com/sunaku/sunaku.github.io/master/moergo-glove80-keyboard-photograph.jpg)
 
@@ -11,25 +15,31 @@ layouts with [Miryoku][4] style layers and [home row mods][5].
 [4]: https://github.com/manna-harbour/miryoku
 [5]: https://sunaku.github.io/home-row-mods.html
 
-## Legend
+## Keymap
+
+https://my.glove80.com/#/layout/user/f565a122-5fcd-4d95-aa02-97776dc8a46d
+
+### Legend
 
 See [interactive layer map][6] for overview and documentation.  
+>NOTE: This is also available as a [printable PDF document][7].
 
-NOTE: This is also available as a [printable PDF document][7].
+See [release notes][8] for a visual overview of recent updates.
 
 [6]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
 [7]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
-
-## Keymaps
-
-- for Engrammer layout: https://my.glove80.com/#/layout/user/a32711f5-014e-4581-b1e9-1351851f5559
-- for Arno's Engram 2.0: https://my.glove80.com/#/layout/user/96c41146-ce0f-4776-bf54-f53f38718939
+[8]: https://github.com/sunaku/glove80-keymaps/releases
 
 ## Installing
 
-Refer to the handy [Quickstart Guide] for a step-by-step tutorial with screenshots!
+Open the [keymap link above](#keymap) and follow these instructions:
+1. Log in (account is required)
+2. Clone the keymap to customize and/or build it!
+3. Choose your base layout (place at top as layer number #0) via drag & drop.
+4. Customize the keymap behavior in this text box.
+5. Build the firmware and download the `*.uf2` file.
 
-[Quickstart Guide]: https://github.com/sunaku/glove80-keymaps/wiki/Quickstart-Guide
+![instructions](https://github.com/sunaku/glove80-keymaps/assets/9863/4eeafe4c-0ab3-4900-b241-f62b0467a394)
 
 ### Flashing
 
