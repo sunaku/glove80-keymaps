@@ -2,11 +2,13 @@ precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT
 
 transforms:
   I: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
-  E: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave,              RALT: ae    }
+  E: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, RALT: ae                 }
   A: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: ring  }
   Y: { base: acute, LCTL: diaeresis                                                          }
   O: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: slash }
   U: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
+  quotes: {
+       base: plain, LCTL: curly2,    RCTL: curly1,     RSFT: grave, LALT: angle              }
 
 characters:
   C:
@@ -46,6 +48,12 @@ characters:
     grave:      { lower: "ù", upper: "Ù" }
   N:
     tilde:      { lower: "ñ", upper: "Ñ" }
+  quotes:
+    plain:      { lower: "'", upper: '"' }
+    grave:      { lower: "`", upper: "´" }
+    angle:      { lower: "«", upper: "»" }
+    curly1:     { lower: "‘", upper: "’" }
+    curly2:     { lower: "“", upper: "”" }
 
 codepoints:
   degree_sign: "°"
@@ -55,5 +63,3 @@ codepoints:
   a_ordinal: "ª"
   exclaim_left: "¡"
   question_left: "¿"
-  quote_left: "«"
-  quote_right: "»"
