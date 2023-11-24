@@ -845,3 +845,157 @@ macros {
 <%
   end
 %>
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Mouse keys (control mouse via keyboard) -- requires PR23 beta firmware:
+// select "community.pr23.mouse-keys" from the drop-down menu located at
+// Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
+//
+// https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae
+// https://github.com/zmkfirmware/zmk/compare/main...urob:zmk:mouse-3.2
+// https://dev.glove80.com/#/layout/user/1d17ccc0-069c-4ec4-a2c3-69d941befc8f
+//
+//////////////////////////////////////////////////////////////////////////
+
+//
+// ENABLE_MOUSE_KEYS activates support for mouse keys if defined; otherwise
+// mouse keys are deactivated (they're transformed into no-ops) by default.
+// To use this feature, uncomment the following line (remove leading "//").
+//
+//#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware: see note above
+
+//
+// MOUSE_MOVE_DELAY defines how long to wait (milliseconds) before starting
+// to move the mouse pointer.
+//
+#ifndef MOUSE_MOVE_DELAY
+#define MOUSE_MOVE_DELAY 0
+#endif
+
+//
+// MOUSE_MOVE_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
+//
+// acceleration exponent 0: uniform speed
+// acceleration exponent 1: uniform acceleration
+// acceleration exponent 2: uniform jerk
+//
+#ifndef MOUSE_MOVE_ACCELERATION_EXPONENT
+#define MOUSE_MOVE_ACCELERATION_EXPONENT 1
+#endif
+
+//
+// MOUSE_MOVE_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
+// before the mouse pointer speed is suddenly boosted to the maximum value.
+//
+#ifndef MOUSE_MOVE_TIME_TO_MAXIMUM_SPEED
+#define MOUSE_MOVE_TIME_TO_MAXIMUM_SPEED 300
+#endif
+
+//
+// MOUSE_MOVE_MAXIMUM_SPEED defines how quickly the mouse pointer can move.
+//
+#ifndef MOUSE_MOVE_MAXIMUM_SPEED
+#define MOUSE_MOVE_MAXIMUM_SPEED 600
+#endif
+
+//
+// MOUSE_SCROLL_DELAY defines how long to wait (milliseconds) before starting
+// to move the mouse pointer.
+//
+#ifndef MOUSE_SCROLL_DELAY
+#define MOUSE_SCROLL_DELAY 0
+#endif
+
+//
+// MOUSE_SCROLL_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
+//
+// acceleration exponent 0: uniform speed
+// acceleration exponent 1: uniform acceleration
+// acceleration exponent 2: uniform jerk
+//
+#ifndef MOUSE_SCROLL_ACCELERATION_EXPONENT
+#define MOUSE_SCROLL_ACCELERATION_EXPONENT 0
+#endif
+
+//
+// MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
+// before the mouse pointer speed is suddenly boosted to the maximum value.
+//
+#ifndef MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED
+#define MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED 300
+#endif
+
+//
+// MOUSE_SCROLL_MAXIMUM_SPEED defines how quickly the mouse wheel can scroll.
+//
+#ifndef MOUSE_SCROLL_MAXIMUM_SPEED
+#define MOUSE_SCROLL_MAXIMUM_SPEED 10
+#endif
+
+<%
+  emit_at_root_level.() do
+%>
+#ifdef ENABLE_MOUSE_KEYS
+    // ==== MOUSE-KEY <section begins> ====
+    #include <dt-bindings/zmk/mouse.h>
+
+    &mmv {
+      delay-ms = <MOUSE_MOVE_DELAY>;
+      acceleration-exponent = <MOUSE_MOVE_ACCELERATION_EXPONENT>;
+      time-to-max-speed-ms = <MOUSE_MOVE_TIME_TO_MAXIMUM_SPEED>;
+      #define U_MOUSE_MOVE_MAX MOUSE_MOVE_MAXIMUM_SPEED
+    };
+
+    &mwh {
+      delay-ms = <MOUSE_SCROLL_DELAY>;
+      acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
+      time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
+      #define U_MOUSE_SCROLL_MAX MOUSE_SCROLL_MAXIMUM_SPEED
+    };
+
+    #undef MOVE_UP
+    #undef MOVE_DOWN
+    #undef MOVE_LEFT
+    #undef MOVE_RIGHT
+    #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+    #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+    #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+    #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+
+    #undef SCROLL_UP
+    #undef SCROLL_DOWN
+    #undef SCROLL_LEFT
+    #undef SCROLL_RIGHT
+    #define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+    #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+    #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+    #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+    // ==== MOUSE-KEY <section ends> =====
+#else
+    #define mkp none
+    #define mmv none
+    #define mwh none
+    #define LCLK
+    #define MCLK
+    #define RCLK
+    #define MB1
+    #define MB2
+    #define MB3
+    #define MB4
+    #define MB5
+    #define MB6
+    #define MB7
+    #define MB8
+    #define MOVE_UP
+    #define MOVE_DOWN
+    #define MOVE_LEFT
+    #define MOVE_RIGHT
+    #define SCROLL_UP
+    #define SCROLL_DOWN
+    #define SCROLL_LEFT
+    #define SCROLL_RIGHT
+#endif
+<%
+  end
+%>
