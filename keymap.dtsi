@@ -278,6 +278,32 @@ behaviors {
 
     //////////////////////////////////////////////////////////////////////////
     //
+    // Custom hold-taps
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    //
+    // CAPPY_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // cappy to type CapsLock.  Shorter holds are taps that type CapsWord.
+    //
+    #ifndef CAPPY_HOLDING_TIME
+    #define CAPPY_HOLDING_TIME 200
+    #endif
+
+    //
+    // Tap = CapsWord; Hold = CapsLock
+    //
+    cappy: capsword_and_capslock {
+        compatible = "zmk,behavior-hold-tap";
+        label = "CAPSWORD_AND_CAPSLOCK";
+        flavor = "tap-preferred";
+        tapping-term-ms = <CAPPY_HOLDING_TIME>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&caps_word>;
+    };
+
+    //////////////////////////////////////////////////////////////////////////
+    //
     // Custom shifted pairs
     //
     //////////////////////////////////////////////////////////////////////////
@@ -301,17 +327,6 @@ behaviors {
         label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
         #binding-cells = <0>;
         bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //
-    // Shift + CapsWord = CapsLock
-    //
-    cappy: capsword_and_capslock {
-        compatible = "zmk,behavior-mod-morph";
-        label = "CAPSWORD_AND_CAPSLOCK";
-        #binding-cells = <0>;
-        bindings = <&caps_word>, <&kp CAPSLOCK>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
