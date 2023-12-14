@@ -473,6 +473,20 @@ behaviors {
 
 macros {
 
+    //
+    // Linux Magic System Request Key - hold this down and type REISUB
+    // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
+    // - https://github.com/manna-harbour/miryoku/discussions/259
+    //
+    ZMK_MACRO(linux_magic_sysrq,
+        bindings
+            = <&macro_press &mo 0 &kp RALT>
+            , <&macro_tap &kp PRINTSCREEN>
+            , <&macro_pause_for_release>
+            , <&macro_release &mo 0 &kp RALT>
+            ;
+    )
+
     //////////////////////////////////////////////////////////////////////////
     //
     // Approximation of Pascal Getreuer's Select Word macro from QMK
