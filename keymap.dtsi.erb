@@ -241,6 +241,17 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
+    thumb_parang_left: miryoku_thumb_layer_on_parang_left {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MIRYOKU_THUMB_LAYER_ON_PARANG_LEFT";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        //global-quick-tap; // no typing streak
+        //retro-tap; // don't allow slow (hold-like) taps
+        #binding-cells = <2>;
+        bindings = <&mo>, <&parang_left>;
+    };
     space: miryoku_thumb_layer_spacebar {
         compatible = "zmk,behavior-hold-tap";
         label = "MIRYOKU_THUMB_LAYER_SPACEBAR";
@@ -258,6 +269,28 @@ behaviors {
     // Custom shifted pairs
     //
     //////////////////////////////////////////////////////////////////////////
+
+    //
+    // Shift + LEFT_PARENTHESIS = LESS_THAN
+    //
+    parang_left: left_parenthesis_and_less_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LEFT_PARENTHESIS_AND_LESS_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //
+    // Shift + RIGHT_PARENTHESIS = GREATER_THAN
+    //
+    parang_right: right_parenthesis_and_greater_than {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
 
     //
     // Shift + CapsWord = CapsLock
