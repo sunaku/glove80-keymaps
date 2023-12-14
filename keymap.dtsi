@@ -2650,42 +2650,24 @@ macros {
 /*HACK*/};
 #ifdef ENABLE_MOUSE_KEYS
     // ==== MOUSE-KEY <section begins> ====
+    #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOVE_MAXIMUM_SPEED
+    #define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
     #include <dt-bindings/zmk/mouse.h>
-
     &mmv {
       delay-ms = <MOUSE_MOVE_DELAY>;
       acceleration-exponent = <MOUSE_MOVE_ACCELERATION_EXPONENT>;
       time-to-max-speed-ms = <MOUSE_MOVE_TIME_TO_MAXIMUM_SPEED>;
-      #define U_MOUSE_MOVE_MAX MOUSE_MOVE_MAXIMUM_SPEED
     };
-
-    &mwh {
+    &msc {
       delay-ms = <MOUSE_SCROLL_DELAY>;
       acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
       time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
-      #define U_MOUSE_SCROLL_MAX MOUSE_SCROLL_MAXIMUM_SPEED
     };
-    #undef MOVE_UP
-    #undef MOVE_DOWN
-    #undef MOVE_LEFT
-    #undef MOVE_RIGHT
-    #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-    #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
-    #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-    #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
-    #undef SCROLL_UP
-    #undef SCROLL_DOWN
-    #undef SCROLL_LEFT
-    #undef SCROLL_RIGHT
-    #define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-    #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-    #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-    #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
     // ==== MOUSE-KEY <section ends> =====
 #else
     #define mkp none
     #define mmv none
-    #define mwh none
+    #define msc none
     #define LCLK
     #define MCLK
     #define RCLK
@@ -2701,9 +2683,9 @@ macros {
     #define MOVE_DOWN
     #define MOVE_LEFT
     #define MOVE_RIGHT
-    #define SCROLL_UP
-    #define SCROLL_DOWN
-    #define SCROLL_LEFT
-    #define SCROLL_RIGHT
+    #define SCRL_UP
+    #define SCRL_DOWN
+    #define SCRL_LEFT
+    #define SCRL_RIGHT
 #endif
 /*HACK*//{
