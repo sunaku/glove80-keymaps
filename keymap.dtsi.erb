@@ -9,6 +9,47 @@
 //
 //////////////////////////////////////////////////////////////////////
 
+//
+// OPERATING_SYSTEM defines which operating system you intend to use
+// with this keymap, because shortcuts vary across operating systems:
+//
+// - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
+//
+#ifndef OPERATING_SYSTEM<%
+  OPERATING_SYSTEMS = {
+    linux: 1,
+    macos: 2,
+    windows: 3
+  }.each do |os, number|
+%>
+<%= "//" if number > 1 %>#define OPERATING_SYSTEM <%= number %> // <%= os %><%
+  end
+%>
+#endif
+
+//
+// CURSOR_TARGET_OS defines which operating system you're targeting
+// for use with the cursor layer.  This is required because each OS
+// has different shortcuts for cursor motion and editing operations.
+//
+#ifndef CURSOR_TARGET_OS
+#define CURSOR_TARGET_OS OPERATING_SYSTEM
+#endif
+#if CURSOR_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
+  #define _C LG
+  #define _REDO _C(LS(Z))
+#else
+  #define _C LC
+  #define _REDO _C(Y)
+#endif
+#define _UNDO      _C(Z)
+#define _CUT       _C(X)
+#define _COPY      _C(C)
+#define _PASTE     _C(V)
+#define _FIND      _C(F)
+#define _FIND_NEXT _C(G)
+#define _FIND_PREV _C(LS(G))
+
 behaviors {
 
     //////////////////////////////////////////////////////////////////////////
@@ -522,12 +563,12 @@ macros {
     ZMK_MACRO(select_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LC(RIGHT) &kp LC(LEFT) &kp LC(LS(RIGHT))>;
+        bindings = <&kp _C(RIGHT) &kp _C(LEFT) &kp _C(LS(RIGHT))>;
     )
     ZMK_MACRO(select_word_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
+        bindings = <&kp _C(LEFT) &kp _C(RIGHT) &kp _C(LS(LEFT))>;
     )
 
     //
@@ -543,12 +584,12 @@ macros {
     ZMK_MACRO(extend_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LC(LS(RIGHT))>;
+        bindings = <&kp _C(LS(RIGHT))>;
     )
     ZMK_MACRO(extend_word_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LC(LS(LEFT))>;
+        bindings = <&kp _C(LS(LEFT))>;
     )
 
     //
@@ -601,7 +642,7 @@ macros {
 
     //
     // UNICODE_TARGET_OS defines which operating system you're targeting
-    // for use with the UNICODE() macro.  This is needed because each OS
+    // for the UNICODE() preprocessor macro to be used on, since each OS
     // has different shortcuts for typing Unicode characters as hexcodes.
     //
     // NOTE: You may need to enable Unicode hexadecimal input in your OS:
@@ -609,16 +650,8 @@ macros {
     // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
     // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
     //
-    #ifndef UNICODE_TARGET_OS<%
-      UNICODE_TARGET_OS = {
-        linux: 1,
-        macos: 2,
-        windows: 3
-      }.each do |os, number|
-    %>
-    <%= "//" if number > 1 %>#define UNICODE_TARGET_OS <%= number %> // <%= os %><%
-      end
-    %>
+    #ifndef UNICODE_TARGET_OS
+    #define UNICODE_TARGET_OS OPERATING_SYSTEM
     #endif
     <%
 
@@ -702,7 +735,7 @@ macros {
       emit_unicode_macro = lambda do |id, character|
       %>
       /* <%= character %> */ UNICODE(<%= id %>, <%
-      UNICODE_TARGET_OS.each do |os, os_number|
+      OPERATING_SYSTEMS.each do |os, os_number|
         sequence = character.chars.map do |character|
           keystrokes = keystrokes_from_character(character)
           format_keystrokes_for_unicode(keystrokes, os)
@@ -714,7 +747,7 @@ macros {
       %>
         #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
           <%= sequence.join(", ") %>
-        <%= "#endif" if os_number == UNICODE_TARGET_OS.length %>
+        <%= "#endif" if os_number == OPERATING_SYSTEMS.length %>
       <%
       end
       %>)
