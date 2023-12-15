@@ -101,7 +101,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 275 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
 
     //
@@ -110,7 +110,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 170 // global-quick-tap-ms
+    #define HOMEY_STREAK_DECAY 225 // global-quick-tap-ms
     #endif
 
     //
@@ -213,7 +213,7 @@ behaviors {
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
     #ifndef SPACE_HOLDING_TIME
-    #define SPACE_HOLDING_TIME 170
+    #define SPACE_HOLDING_TIME 200
     #endif
 
     //
@@ -221,7 +221,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY 200 // "tap then hold" for key auto-repeat
+    #define SPACE_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
     //
