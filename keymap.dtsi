@@ -24,19 +24,18 @@
 #if OPERATING_SYSTEM == 2
   #define _C         LG
   #define _REDO      _C(LS(Z))
-  #define _SLEEP     C_SLEEP_MODE
   #define _POWER     K_POWER
 #else
   #define _C         LC
   #define _REDO      _C(Y)
-  #define _SLEEP     C_SLEEP
   #define _POWER     C_POWER
 #endif
+#define   _SLEEP     C_SLEEP
 #if OPERATING_SYSTEM == 3
   #define _LOCK      LG(L)
 #elif OPERATING_SYSTEM == 2
   #define _LOCK      _C(LC(Q))
-#else
+#elif OPERATING_SYSTEM == 1
   #define _LOCK      K_LOCK
 #endif
 #define   _UNDO      _C(Z)
