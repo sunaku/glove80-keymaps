@@ -11,8 +11,9 @@
 
 //
 // OPERATING_SYSTEM defines which operating system you intend to use
-// with this keymap, because shortcuts vary across operating systems:
+// with this keymap, because shortcuts vary across operating systems.
 //
+// - https://zmk.dev/docs/codes
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
 #ifndef OPERATING_SYSTEM<%
@@ -26,29 +27,29 @@
   end
 %>
 #endif
-
-//
-// CURSOR_TARGET_OS defines which operating system you're targeting
-// for use with the cursor layer.  This is required because each OS
-// has different shortcuts for cursor motion and editing operations.
-//
-#ifndef CURSOR_TARGET_OS
-#define CURSOR_TARGET_OS OPERATING_SYSTEM
-#endif
-#if CURSOR_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
-  #define _C LG
-  #define _REDO _C(LS(Z))
+#if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
+  #define _C         LG
+  #define _REDO      _C(LS(Z))
+  #define _SLEEP     C_SLEEP_MODE
+  #define _POWER     K_POWER
 #else
-  #define _C LC
-  #define _REDO _C(Y)
+  #define _C         LC
+  #define _REDO      _C(Y)
+  #define _SLEEP     C_SLEEP
+  #define _POWER     C_POWER
 #endif
-#define _UNDO      _C(Z)
-#define _CUT       _C(X)
-#define _COPY      _C(C)
-#define _PASTE     _C(V)
-#define _FIND      _C(F)
-#define _FIND_NEXT _C(G)
-#define _FIND_PREV _C(LS(G))
+#if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
+  #define _LOCK      LG(L)
+#else
+  #define _LOCK      K_LOCK
+#endif
+#define   _UNDO      _C(Z)
+#define   _CUT       _C(X)
+#define   _COPY      _C(C)
+#define   _PASTE     _C(V)
+#define   _FIND      _C(F)
+#define   _FIND_NEXT _C(G)
+#define   _FIND_PREV _C(LS(G))
 
 //
 // Glove80 specific symbol overrides to support non "en-US" locales
