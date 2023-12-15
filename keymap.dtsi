@@ -104,7 +104,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 225 // global-quick-tap-ms
+    #define HOMEY_STREAK_DECAY 225
     #endif
 
     //
@@ -143,7 +143,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef SHIFT_STREAK_DECAY
-    #define SHIFT_STREAK_DECAY 125 // global-quick-tap-ms
+    #define SHIFT_STREAK_DECAY 125
     #endif
 
     //
@@ -175,7 +175,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef PLAIN_STREAK_DECAY
-    #define PLAIN_STREAK_DECAY 125 // global-quick-tap-ms
+    #define PLAIN_STREAK_DECAY 125
     #endif
 
     //
@@ -259,7 +259,7 @@ behaviors {
     //
     // Home row mod-tap keys for all except index fingers
     //
-    homey_left: miryoku_home_row_mods_left_hand {
+    homey_left: home_row_mods_left_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_LEFT_HAND";
         flavor = HOMEY_HOLDING_TYPE;
@@ -270,7 +270,7 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    homey_right: miryoku_home_row_mods_right_hand {
+    homey_right: home_row_mods_right_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_RIGHT_HAND";
         flavor = HOMEY_HOLDING_TYPE;
@@ -285,9 +285,9 @@ behaviors {
     //
     // Special home row mod-tap keys for the index fingers
     //
-    shift_left: miryoku_home_row_mods_left_shift_shift {
+    shift_left: home_row_shift_left_hand {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_SHIFT_SHIFT";
+        label = "HOME_ROW_SHIFT_LEFT_HAND";
         flavor = SHIFT_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
@@ -296,9 +296,9 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    shift_right: miryoku_home_row_mods_right_shift_shift {
+    shift_right: home_row_shift_right_hand {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_RIGHT_SHIFT_SHIFT";
+        label = "HOME_ROW_SHIFT_RIGHT_HAND";
         flavor = SHIFT_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
@@ -339,33 +339,27 @@ behaviors {
     //
     // Thumb cluster hold-tap keys for Miryoku layers
     //
-    thumb: miryoku_thumb_layer {
+    thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
-        label = "MIRYOKU_THUMB_LAYER";
+        label = "THUMB_LAYER_ACCESS";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        //global-quick-tap; // no typing streak
-        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-    thumb_parang_left: miryoku_thumb_layer_on_parang_left {
+    thumb_parang_left: thumb_layer_access_parang_left {
         compatible = "zmk,behavior-hold-tap";
-        label = "MIRYOKU_THUMB_LAYER_ON_PARANG_LEFT";
+        label = "THUMB_LAYER_ACCESS_PARANG_LEFT";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        //global-quick-tap; // no typing streak
-        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
-    space: miryoku_thumb_layer_spacebar {
+    space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
-        label = "MIRYOKU_THUMB_LAYER_SPACEBAR";
+        label = "THUMB_LAYER_ACCESS_SPACEBAR";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
-        //global-quick-tap; // no typing streak
-        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };

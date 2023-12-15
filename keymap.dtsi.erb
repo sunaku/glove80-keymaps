@@ -110,7 +110,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 225 // global-quick-tap-ms
+    #define HOMEY_STREAK_DECAY 225
     #endif
 
     //
@@ -149,7 +149,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef SHIFT_STREAK_DECAY
-    #define SHIFT_STREAK_DECAY 125 // global-quick-tap-ms
+    #define SHIFT_STREAK_DECAY 125
     #endif
 
     //
@@ -181,7 +181,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef PLAIN_STREAK_DECAY
-    #define PLAIN_STREAK_DECAY 125 // global-quick-tap-ms
+    #define PLAIN_STREAK_DECAY 125
     #endif
 
     //
@@ -269,7 +269,7 @@ behaviors {
     //
     <%
       HANDS.each do |hand, opposite_hand|
-    %>homey_<%= hand %>: miryoku_home_row_mods_<%= hand %>_hand {
+    %>homey_<%= hand %>: home_row_mods_<%= hand %>_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_<%= hand.upcase %>_HAND";
         flavor = HOMEY_HOLDING_TYPE;
@@ -289,9 +289,9 @@ behaviors {
     //
     <%
       HANDS.each do |hand, opposite_hand|
-    %>shift_<%= hand %>: miryoku_home_row_mods_<%= hand %>_shift_shift {
+    %>shift_<%= hand %>: home_row_shift_<%= hand %>_hand {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_<%= hand.upcase %>_SHIFT_SHIFT";
+        label = "HOME_ROW_SHIFT_<%= hand.upcase %>_HAND";
         flavor = SHIFT_HOLDING_TYPE;
         hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
@@ -334,33 +334,27 @@ behaviors {
     //
     // Thumb cluster hold-tap keys for Miryoku layers
     //
-    thumb: miryoku_thumb_layer {
+    thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
-        label = "MIRYOKU_THUMB_LAYER";
+        label = "THUMB_LAYER_ACCESS";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        //global-quick-tap; // no typing streak
-        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-    thumb_parang_left: miryoku_thumb_layer_on_parang_left {
+    thumb_parang_left: thumb_layer_access_parang_left {
         compatible = "zmk,behavior-hold-tap";
-        label = "MIRYOKU_THUMB_LAYER_ON_PARANG_LEFT";
+        label = "THUMB_LAYER_ACCESS_PARANG_LEFT";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        //global-quick-tap; // no typing streak
-        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
-    space: miryoku_thumb_layer_spacebar {
+    space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
-        label = "MIRYOKU_THUMB_LAYER_SPACEBAR";
+        label = "THUMB_LAYER_ACCESS_SPACEBAR";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
-        //global-quick-tap; // no typing streak
-        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
@@ -1134,3 +1128,4 @@ macros {
 <%
   end
 %>
+<%# vim:set filetype=dts: %>
