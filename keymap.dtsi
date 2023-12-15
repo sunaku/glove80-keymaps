@@ -207,7 +207,7 @@ behaviors {
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
     #ifndef SPACE_HOLDING_TIME
-    #define SPACE_HOLDING_TIME 200
+    #define SPACE_HOLDING_TIME 250
     #endif
 
     //
@@ -344,7 +344,7 @@ behaviors {
         tapping-term-ms = <SPACE_HOLDING_TIME>;
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
         //global-quick-tap; // no typing streak
-        retro-tap; // allow slow (hold-like) taps
+        //retro-tap; // don't allow slow (hold-like) taps
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
