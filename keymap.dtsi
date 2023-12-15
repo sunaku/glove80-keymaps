@@ -96,7 +96,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 275 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
 
     //
@@ -105,7 +105,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 225
+    #define HOMEY_STREAK_DECAY 230
     #endif
 
     //
@@ -135,7 +135,7 @@ behaviors {
     // perform outward rolls from your index fingers toward your pinkies.
     //
     #ifndef SHIFT_HOLDING_TIME
-    #define SHIFT_HOLDING_TIME 175
+    #define SHIFT_HOLDING_TIME 170
     #endif
 
     //
@@ -144,7 +144,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef SHIFT_STREAK_DECAY
-    #define SHIFT_STREAK_DECAY 125
+    #define SHIFT_STREAK_DECAY 130
     #endif
 
     //
@@ -167,7 +167,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
     #ifndef PLAIN_HOLDING_TIME
-    #define PLAIN_HOLDING_TIME 175
+    #define PLAIN_HOLDING_TIME 170
     #endif
 
     //
@@ -176,7 +176,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef PLAIN_STREAK_DECAY
-    #define PLAIN_STREAK_DECAY 125
+    #define PLAIN_STREAK_DECAY 130
     #endif
 
     //
