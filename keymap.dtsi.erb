@@ -40,6 +40,8 @@
 #endif
 #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
   #define _LOCK      LG(L)
+#elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
+  #define _LOCK      _C(LC(Q))
 #else
   #define _LOCK      K_LOCK
 #endif
