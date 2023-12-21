@@ -53,6 +53,13 @@
 #define   _FIND_PREV _C(LS(G))
 
 //
+// ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
+// of home row mods and layer access keys.  You can keep this disabled if
+// you prefer to use the &plain overlay method of key repetition instead.
+//
+//#define ENABLE_KEY_REPEAT
+
+//
 // Glove80 specific symbol overrides to support non "en-US" locales
 //
 #define AMPS  LS(N7)
@@ -115,6 +122,14 @@ behaviors {
     #endif
 
     //
+    // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #ifndef HOMEY_REPEAT_DECAY
+    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
+
+    //
     // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
     //
@@ -151,6 +166,14 @@ behaviors {
     //
     #ifndef SHIFT_STREAK_DECAY
     #define SHIFT_STREAK_DECAY 130
+    #endif
+
+    //
+    // SHIFT_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #ifndef SHIFT_REPEAT_DECAY
+    #define SHIFT_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
     //
@@ -206,6 +229,14 @@ behaviors {
     #endif
 
     //
+    // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #ifndef THUMB_REPEAT_DECAY
+    #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
+
+    //
     // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for spacebar (assigned to the right thumb's home position by default).
     //
@@ -223,6 +254,14 @@ behaviors {
     //
     #ifndef SPACE_HOLDING_TIME
     #define SPACE_HOLDING_TIME 200
+    #endif
+
+    //
+    // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #ifndef SPACE_REPEAT_DECAY
+    #define SPACE_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
     //
@@ -277,6 +316,9 @@ behaviors {
         hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        #ifdef ENABLE_KEY_REPEAT
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        #endif
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
@@ -297,6 +339,9 @@ behaviors {
         hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
         //hold-trigger-on-release; // don't wait for other mods
         tapping-term-ms = <SHIFT_HOLDING_TIME>;
+        #ifdef ENABLE_KEY_REPEAT
+        quick-tap-ms = <SHIFT_REPEAT_DECAY>;
+        #endif
         require-prior-idle-ms = <SHIFT_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
@@ -340,6 +385,9 @@ behaviors {
         label = "THUMB_LAYER_ACCESS";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
+        #ifdef ENABLE_KEY_REPEAT
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
@@ -348,6 +396,9 @@ behaviors {
         label = "THUMB_LAYER_ACCESS_PARANG_LEFT";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
+        #ifdef ENABLE_KEY_REPEAT
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
@@ -356,6 +407,9 @@ behaviors {
         label = "THUMB_LAYER_ACCESS_SPACEBAR";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
+        #ifdef ENABLE_KEY_REPEAT
+        quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
