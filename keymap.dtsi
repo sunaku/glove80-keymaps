@@ -25,10 +25,16 @@
   #define _C         LG
   #define _REDO      _C(LS(Z))
   #define _POWER     K_POWER
+  #define _W         LA
+  #define _HOME      _C(LEFT)
+  #define _END       _C(RIGHT)
 #else
   #define _C         LC
   #define _REDO      _C(Y)
   #define _POWER     C_POWER
+  #define _W         _C
+  #define _HOME      HOME
+  #define _END       END
 #endif
 #define   _SLEEP     C_SLEEP
 #if OPERATING_SYSTEM == 3
@@ -683,12 +689,12 @@ macros {
     ZMK_MACRO(select_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(RIGHT) &kp _C(LEFT) &kp _C(LS(RIGHT))>;
+        bindings = <&kp _W(RIGHT) &kp _W(LEFT) &kp _W(LS(RIGHT))>;
     )
     ZMK_MACRO(select_word_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(LEFT) &kp _C(RIGHT) &kp _C(LS(LEFT))>;
+        bindings = <&kp _W(LEFT) &kp _W(RIGHT) &kp _W(LS(LEFT))>;
     )
 
     //
@@ -704,12 +710,12 @@ macros {
     ZMK_MACRO(extend_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(LS(RIGHT))>;
+        bindings = <&kp _W(LS(RIGHT))>;
     )
     ZMK_MACRO(extend_word_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(LS(LEFT))>;
+        bindings = <&kp _W(LS(LEFT))>;
     )
 
     //
@@ -725,12 +731,12 @@ macros {
     ZMK_MACRO(select_line_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp HOME &kp LS(END)>;
+        bindings = <&kp _HOME &kp LS(_END)>;
     )
     ZMK_MACRO(select_line_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp END &kp LS(HOME)>;
+        bindings = <&kp _END &kp LS(_HOME)>;
     )
 
     //
@@ -746,12 +752,12 @@ macros {
     ZMK_MACRO(extend_line_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LS(DOWN) &kp LS(END)>;
+        bindings = <&kp LS(DOWN) &kp LS(_END)>;
     )
     ZMK_MACRO(extend_line_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LS(UP) &kp LS(HOME)>;
+        bindings = <&kp LS(UP) &kp LS(_HOME)>;
     )
 
     //////////////////////////////////////////////////////////////////////////
