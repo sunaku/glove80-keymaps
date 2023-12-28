@@ -16,47 +16,49 @@
 // - https://zmk.dev/docs/codes
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
-#ifndef OPERATING_SYSTEM<%
+#ifndef OPERATING_SYSTEM
+<%
   OPERATING_SYSTEMS = {
     linux: 1,
     macos: 2,
     windows: 3
   }.each do |os, number|
 %>
-<%= "//" if number > 1 %>#define OPERATING_SYSTEM <%= number %> // <%= os %><%
+<%= "//" if number > 1 %>#define OPERATING_SYSTEM <%= number %> // <%= os %>
+<%
   end
 %>
 #endif
 #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
-  #define _C         LG
-  #define _REDO      _C(LS(Z))
-  #define _POWER     K_POWER
-  #define _W         LA
-  #define _HOME      _C(LEFT)
-  #define _END       _C(RIGHT)
+    #define _C      LG
+    #define _REDO   _C(LS(Z))
+    #define _POWER  K_POWER
+    #define _W      LA
+    #define _HOME   _C(LEFT)
+    #define _END    _C(RIGHT)
 #else
-  #define _C         LC
-  #define _REDO      _C(Y)
-  #define _POWER     C_POWER
-  #define _W         _C
-  #define _HOME      HOME
-  #define _END       END
+    #define _C      LC
+    #define _REDO   _C(Y)
+    #define _POWER  C_POWER
+    #define _W      _C
+    #define _HOME   HOME
+    #define _END    END
 #endif
-#define   _SLEEP     C_SLEEP
+#define _SLEEP      C_SLEEP
 #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
-  #define _LOCK      LG(L)
+    #define _LOCK   LG(L)
 #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
-  #define _LOCK      _C(LC(Q))
+    #define _LOCK   _C(LC(Q))
 #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
-  #define _LOCK      K_LOCK
+    #define _LOCK   K_LOCK
 #endif
-#define   _UNDO      _C(Z)
-#define   _CUT       _C(X)
-#define   _COPY      _C(C)
-#define   _PASTE     _C(V)
-#define   _FIND      _C(F)
-#define   _FIND_NEXT _C(G)
-#define   _FIND_PREV _C(LS(G))
+#define _UNDO       _C(Z)
+#define _CUT        _C(X)
+#define _COPY       _C(C)
+#define _PASTE      _C(V)
+#define _FIND       _C(F)
+#define _FIND_NEXT  _C(G)
+#define _FIND_PREV  _C(LS(G))
 
 //
 // ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
@@ -288,7 +290,8 @@ behaviors {
     // |                 70 53  |  56 73                 |
     // |                  71 54 | 55 72                  |
     // |------------------------|------------------------|
-    //<%
+    //
+    <%
       HANDS = %w[ left right ].cycle.each_cons(2).take(2).to_h
     %>
     #define LEFT_HAND_KEYS      \
@@ -315,7 +318,8 @@ behaviors {
     //
     <%
       HANDS.each do |hand, opposite_hand|
-    %>homey_<%= hand %>: home_row_mods_<%= hand %>_hand {
+    %>
+    homey_<%= hand %>: home_row_mods_<%= hand %>_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_<%= hand.upcase %>_HAND";
         flavor = HOMEY_HOLDING_TYPE;
@@ -338,7 +342,8 @@ behaviors {
     //
     <%
       HANDS.each do |hand, opposite_hand|
-    %>shift_<%= hand %>: home_row_shift_<%= hand %>_hand {
+    %>
+    shift_<%= hand %>: home_row_shift_<%= hand %>_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_SHIFT_<%= hand.upcase %>_HAND";
         flavor = SHIFT_HOLDING_TYPE;
@@ -769,7 +774,6 @@ macros {
     #define UNICODE_TARGET_OS OPERATING_SYSTEM
     #endif
     <%
-
       def format_keystrokes_for_unicode(keystrokes, os)
         send("format_keystrokes_for_#{os}_unicode", keystrokes)
       rescue NameError
@@ -836,43 +840,45 @@ macros {
       end
 
       emit_zmk_mod_morph = lambda do |id, plain, morphed, modifiers|
-      %>
-        <%= id %>: <%= id %> {
-            compatible = "zmk,behavior-mod-morph";
-            label = "<%= id.upcase %>";
-            #binding-cells = <0>;
-            bindings = <&<%= plain %>>, <&<%= morphed %>>;
-            mods = <<%= modifiers %>>;
-        };
-      <%
+    %>
+    <%= id %>: <%= id %> {
+        compatible = "zmk,behavior-mod-morph";
+        label = "<%= id.upcase %>";
+        #binding-cells = <0>;
+        bindings = <&<%= plain %>>, <&<%= morphed %>>;
+        mods = <<%= modifiers %>>;
+    };
+    <%
       end
 
       emit_unicode_macro = lambda do |id, character|
-      %>
-      /* <%= character %> */ UNICODE(<%= id %>, <%
-      OPERATING_SYSTEMS.each do |os, os_number|
-        sequence = character.chars.map do |character|
-          keystrokes = keystrokes_from_character(character)
-          format_keystrokes_for_unicode(keystrokes, os)
-        end
+    %>
+    UNICODE(<%= id %>, /* <%= character %> */
+    <%
+        OPERATING_SYSTEMS.each do |os, os_number|
+          sequence = character.chars.map do |character|
+            keystrokes = keystrokes_from_character(character)
+            format_keystrokes_for_unicode(keystrokes, os)
+          end
 
-        if sequence.length > 1
-          sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
+          if sequence.length > 1
+            sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
+          end
+    %>
+      #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
+        <%= sequence.join(", ") %>
+      <%= "#endif" if os_number == OPERATING_SYSTEMS.length %>
+    <%
         end
-      %>
-        #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
-          <%= sequence.join(", ") %>
-        <%= "#endif" if os_number == OPERATING_SYSTEMS.length %>
-      <%
-      end
-      %>)
-      <%
+    %>
+    )
+    <%
       end
 
       emit_at_root_level = lambda do |&block|
         # HACK: this is an SQL injection style attempt to temporarily escape
         # to the root level of the DTSI to alias things under new shortnames
-        %>/*HACK*/};<% block.() %>/*HACK*//{<%
+        %>/*HACK*/};<% block.() %><%= "\n" %>/*HACK*//{<%
       end
     %>
 
@@ -910,6 +916,7 @@ macros {
         "world_#{letter.downcase}_"
       end
     %>
+
     //
     // codepoints
     //
@@ -918,6 +925,7 @@ macros {
         emit_unicode_macro.("world_#{name}", character)
       end
     %>
+
     //
     // characters
     //
@@ -934,6 +942,7 @@ macros {
         end
       end
     %>
+
     //
     // transforms
     //
@@ -1013,45 +1022,44 @@ macros {
         emit_unicode_macro.("emoji_#{name}", character)
       end
     %>
-
 };
 
 <%
   emit_at_root_level.() do
 %>
-    #if EMOJI_GENDER_SIGN_PRESET == 0
-      emoji_gender_sign_preset: &none {};
-    #elif EMOJI_GENDER_SIGN_PRESET == 1
-      emoji_gender_sign_preset: &emoji_male_sign {};
-    #elif EMOJI_GENDER_SIGN_PRESET == 2
-      emoji_gender_sign_preset: &emoji_female_sign {};
-    #endif
+#if EMOJI_GENDER_SIGN_PRESET == 0
+    emoji_gender_sign_preset: &none {};
+#elif EMOJI_GENDER_SIGN_PRESET == 1
+    emoji_gender_sign_preset: &emoji_male_sign {};
+#elif EMOJI_GENDER_SIGN_PRESET == 2
+    emoji_gender_sign_preset: &emoji_female_sign {};
+#endif
 
-    #if EMOJI_SKIN_TONE_PRESET == 0
-      emoji_skin_tone_preset: &none {};
-    #elif EMOJI_SKIN_TONE_PRESET == 1
-      emoji_skin_tone_preset: &emoji_light_skin_tone {};
-    #elif EMOJI_SKIN_TONE_PRESET == 2
-      emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
-    #elif EMOJI_SKIN_TONE_PRESET == 3
-      emoji_skin_tone_preset: &emoji_medium_skin_tone {};
-    #elif EMOJI_SKIN_TONE_PRESET == 4
-      emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
-    #elif EMOJI_SKIN_TONE_PRESET == 5
-      emoji_skin_tone_preset: &emoji_dark_skin_tone {};
-    #endif
+#if EMOJI_SKIN_TONE_PRESET == 0
+    emoji_skin_tone_preset: &none {};
+#elif EMOJI_SKIN_TONE_PRESET == 1
+    emoji_skin_tone_preset: &emoji_light_skin_tone {};
+#elif EMOJI_SKIN_TONE_PRESET == 2
+    emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
+#elif EMOJI_SKIN_TONE_PRESET == 3
+    emoji_skin_tone_preset: &emoji_medium_skin_tone {};
+#elif EMOJI_SKIN_TONE_PRESET == 4
+    emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
+#elif EMOJI_SKIN_TONE_PRESET == 5
+    emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+#endif
 
-    #if EMOJI_HAIR_STYLE_PRESET == 0
-      emoji_hair_style_preset: &none {};
-    #elif EMOJI_HAIR_STYLE_PRESET == 1
-      emoji_hair_style_preset: &emoji_bald {};
-    #elif EMOJI_HAIR_STYLE_PRESET == 2
-      emoji_hair_style_preset: &emoji_red_hair {};
-    #elif EMOJI_HAIR_STYLE_PRESET == 3
-      emoji_hair_style_preset: &emoji_curly_hair {};
-    #elif EMOJI_HAIR_STYLE_PRESET == 4
-      emoji_hair_style_preset: &emoji_white_hair {};
-    #endif
+#if EMOJI_HAIR_STYLE_PRESET == 0
+    emoji_hair_style_preset: &none {};
+#elif EMOJI_HAIR_STYLE_PRESET == 1
+    emoji_hair_style_preset: &emoji_bald {};
+#elif EMOJI_HAIR_STYLE_PRESET == 2
+    emoji_hair_style_preset: &emoji_red_hair {};
+#elif EMOJI_HAIR_STYLE_PRESET == 3
+    emoji_hair_style_preset: &emoji_curly_hair {};
+#elif EMOJI_HAIR_STYLE_PRESET == 4
+    emoji_hair_style_preset: &emoji_white_hair {};
+#endif
 <%
   end
 %>
@@ -1189,4 +1197,3 @@ macros {
 <%
   end
 %>
-<%# vim:set filetype=dts: %>
