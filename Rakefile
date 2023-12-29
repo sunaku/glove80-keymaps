@@ -19,4 +19,12 @@ rule ".dtsi" => ".dtsi.erb" do |t|
     .gsub(/ +$/, "") # remove trailing spaces
     .gsub(/\n+(?= +#(?!define))/, "\n") # tighten #elif
   File.write(t.name, output)
+
+  minified_output = output
+    .gsub(%r{^\s*//(?! ==== ).*}, "") # remove comment lines
+    .gsub(%r{(?<=[^\*])//.*}, "") # remove trailing comments
+    .gsub(/^\s+/, "") # remove indentation
+    .squeeze("\n") # remove blank lines
+    .squeeze(" ") # remove extra spaces
+  File.write(t.name + ".min", minified_output)
 end
