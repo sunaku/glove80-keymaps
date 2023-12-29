@@ -374,23 +374,23 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-    plain_engram_comma: plain_typing_layer_engram_comma {
+    plain_engram_COMMA: plain_typing_layer_engram_COMMA {
         compatible = "zmk,behavior-hold-tap";
         label = "PLAIN_TYPING_LAYER_ENGRAM_COMMA";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
-        bindings = <&mo>, <&engram_comma>;
+        bindings = <&mo>, <&engram_COMMA>;
     };
-    plain_engram_period: plain_typing_layer_engram_period {
+    plain_engram_DOT: plain_typing_layer_engram_DOT {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER_ENGRAM_PERIOD";
+        label = "PLAIN_TYPING_LAYER_ENGRAM_DOT";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
-        bindings = <&mo>, <&engram_period>;
+        bindings = <&mo>, <&engram_DOT>;
     };
 
     //
@@ -489,128 +489,128 @@ behaviors {
     // - https://engram.dev/
     // - https://sunaku.github.io/engram-keyboard-layout.html
     //
-    engram_1: engram_one_and_pipe {
+    engram_N1: engram_shift_N1_PIPE {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_ONE_AND_PIPE";
+        label = "ENGRAM_SHIFT_N1_PIPE";
         #binding-cells = <0>;
         bindings = <&kp N1>, <&kp PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_2: engram_two_and_equal {
+    engram_N2: engram_shift_N2_EQUAL {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_TWO_AND_EQUAL";
+        label = "ENGRAM_SHIFT_N2_EQUAL";
         #binding-cells = <0>;
         bindings = <&kp N2>, <&kp EQUAL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_3: engram_three_and_tilde {
+    engram_N3: engram_shift_N3_TILDE {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_THREE_AND_TILDE";
+        label = "ENGRAM_SHIFT_N3_TILDE";
         #binding-cells = <0>;
         bindings = <&kp N3>, <&kp TILDE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_4: engram_four_and_plus {
+    engram_N4: engram_shift_N4_PLUS {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_FOUR_AND_PLUS";
+        label = "ENGRAM_SHIFT_N4_PLUS";
         #binding-cells = <0>;
         bindings = <&kp N4>, <&kp PLUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_5: engram_five_and_less_than {
+    engram_N5: engram_shift_N5_LT {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_FIVE_AND_LESS_THAN";
+        label = "ENGRAM_SHIFT_N5_LT";
         #binding-cells = <0>;
         bindings = <&kp N5>, <&kp LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_6: engram_six_and_greater_than {
+    engram_N6: engram_shift_N6_GT {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SIX_AND_GREATER_THAN";
+        label = "ENGRAM_SHIFT_N6_GT";
         #binding-cells = <0>;
         bindings = <&kp N6>, <&kp GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_7: engram_seven_and_caret {
+    engram_N7: engram_shift_N7_CARET {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SEVEN_AND_CARET";
+        label = "ENGRAM_SHIFT_N7_CARET";
         #binding-cells = <0>;
         bindings = <&kp N7>, <&kp CARET>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_8: engram_eight_and_ampersand {
+    engram_N8: engram_shift_N8_AMPS {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_EIGHT_AND_AMPERSAND";
+        label = "ENGRAM_SHIFT_N8_AMPS";
         #binding-cells = <0>;
         bindings = <&kp N8>, <&kp AMPS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_9: engram_nine_and_percent {
+    engram_N9: engram_shift_N9_PRCNT {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_NINE_AND_PERCENT";
+        label = "ENGRAM_SHIFT_N9_PRCNT";
         #binding-cells = <0>;
         bindings = <&kp N9>, <&kp PRCNT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_0: engram_zero_and_asterisk {
+    engram_N0: engram_shift_N0_STAR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_ZERO_AND_ASTERISK";
+        label = "ENGRAM_SHIFT_N0_STAR";
         #binding-cells = <0>;
         bindings = <&kp N0>, <&kp STAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_apos: engram_apostrophe_and_left_parenthesis {
+    engram_SQT: engram_shift_SQT_LPAR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_APOSTROPHE_AND_LEFT_PARENTHESIS";
+        label = "ENGRAM_SHIFT_SQT_LPAR";
         #binding-cells = <0>;
         bindings = <&kp SQT>, <&kp LPAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_dquote: engram_double_quotes_and_right_parenthesis {
+    engram_DQT: engram_shift_DQT_RPAR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_DOUBLE_QUOTES_AND_RIGHT_PARENTHESIS";
+        label = "ENGRAM_SHIFT_DQT_RPAR";
         #binding-cells = <0>;
         bindings = <&kp DQT>, <&kp RPAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_comma: engram_comma_and_semicolon {
+    engram_COMMA: engram_shift_COMMA_SEMI {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_COMMA_AND_SEMICOLON";
+        label = "ENGRAM_SHIFT_COMMA_SEMI";
         #binding-cells = <0>;
         bindings = <&kp COMMA>, <&kp SEMI>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_period: engram_period_and_colon {
+    engram_DOT: engram_shift_DOT_COLON {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_PERIOD_AND_COLON";
+        label = "ENGRAM_SHIFT_DOT_COLON";
         #binding-cells = <0>;
         bindings = <&kp DOT>, <&kp COLON>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_question: engram_question_and_exclamation {
+    engram_QMARK: engram_shift_QMARK_EXCL {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_QUESTION_AND_EXCLAMATION";
+        label = "ENGRAM_SHIFT_QMARK_EXCL";
         #binding-cells = <0>;
         bindings = <&kp QMARK>, <&kp EXCL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_hash: engram_hash_and_dollar {
+    engram_HASH: engram_shift_HASH_DLLR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_HASH_AND_DOLLAR";
+        label = "ENGRAM_SHIFT_HASH_DLLR";
         #binding-cells = <0>;
         bindings = <&kp HASH>, <&kp DLLR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_at: engram_at_and_grave {
+    engram_AT: engram_shift_AT_GRAVE {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_AT_AND_GRAVE";
+        label = "ENGRAM_SHIFT_AT_GRAVE";
         #binding-cells = <0>;
         bindings = <&kp AT>, <&kp GRAVE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    engram_slash: engram_slash_and_backslash {
+    engram_FSLH: engram_shift_FSLH_BSLH {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SLASH_AND_BACKSLASH";
+        label = "ENGRAM_SHIFT_FSLH_BSLH";
         #binding-cells = <0>;
         bindings = <&kp FSLH>, <&kp BSLH>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
