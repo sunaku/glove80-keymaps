@@ -2193,6 +2193,33 @@ macros {
         <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N5>, <&macro_release &kp LALT>
       #endif
     )
+    UNICODE(emoji_waning_gibbous_moon, /* 🌖 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N6 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N6>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N6>, <&macro_release &kp LALT>
+      #endif
+    )
+    UNICODE(emoji_last_quarter_moon, /* 🌗 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N7 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N7>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N7>, <&macro_release &kp LALT>
+      #endif
+    )
+    UNICODE(emoji_waning_crescent_moon, /* 🌘 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N1 &kp N8 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N8>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N8>, <&macro_release &kp LALT>
+      #endif
+    )
     UNICODE(emoji_tada, /* 🎉 */
       #if UNICODE_TARGET_OS == 1
         <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N8 &kp N9 &kp ENTER>
