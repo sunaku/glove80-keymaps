@@ -1,88 +1,97 @@
-# modifiers
-zwj: "\u200d"
-male_sign: "♂️"
-female_sign: "♀️"
-right_arrow: "➡️"
-left_arrow: "⬅️"
+characters:
+  moon:
+    complete: { new:    "🌑", full:   "🌕" }
+    gibbous:  { waning: "🌖", waxing: "🌔" }
+    quarter:  { waning: "🌗", waxing: "🌓" }
+    crescent: { waning: "🌘", waxing: "🌒" }
 
-# skin tones
-light_skin_tone:        "🏻"
-medium_light_skin_tone: "🏼"
-medium_skin_tone:       "🏽"
-medium_dark_skin_tone:  "🏾"
-dark_skin_tone:         "🏿"
+codepoints:
 
-# family & ages
-baby_bottle: "🍼"
-baby: "👶"
-boy: "👦"
-girl: "👧"
-man: "👨"
-woman: "👩"
-old_man: "👴"
-old_woman: "👵"
+  # modifiers
+  zwj: "\u200d"
+  male_sign:   "♂️"
+  female_sign: "♀️"
+  right_arrow: "➡️"
+  left_arrow:  "⬅️"
 
-# hair styles
-white_hair: "🦳"
-curly_hair: "🦱"
-red_hair: "🦰"
-bald: "🦲"
+  # skin tones
+  light_skin_tone:        "🏻"
+  medium_light_skin_tone: "🏼"
+  medium_skin_tone:       "🏽"
+  medium_dark_skin_tone:  "🏾"
+  dark_skin_tone:         "🏿"
 
-# function row
-new_moon:             "🌑"
-waxing_crescent_moon: "🌒"
-first_quarter_moon:   "🌓"
-waxing_gibbous_moon:  "🌔"
-full_moon:            "🌕"
-waning_gibbous_moon:  "🌖"
-last_quarter_moon:    "🌗"
-waning_crescent_moon: "🌘"
+  # family & ages
+  baby_bottle: "🍼"
+  baby:        "👶"
+  boy:         "👦"
+  girl:        "👧"
+  man:         "👨"
+  woman:       "👩"
+  old_man:     "👴"
+  old_woman:   "👵"
 
-# number row
-tada: "🎉"
-fire: "🔥"
-heart: "️❤️"
-muscle: "💪"
-person_climbing: "🧗"
-rocket: "🚀"
+  # hair styles
+  white_hair: "🦳"
+  curly_hair: "🦱"
+  red_hair:   "🦰"
+  bald:       "🦲"
 
-# upper row
-sunglasses: "😎"
-star_struck: "🤩"
-joy: "😂"
-cold_sweat: "😰"
-scream: "😱"
-exploding_head: "🤯"
+  # function row
+  new_moon:             "🌑"
+  waxing_crescent_moon: "🌒"
+  first_quarter_moon:   "🌓"
+  waxing_gibbous_moon:  "🌔"
+  full_moon:            "🌕"
+  waning_gibbous_moon:  "🌖"
+  last_quarter_moon:    "🌗"
+  waning_crescent_moon: "🌘"
 
-# home row
-snap_fingers: "🫰"
-ok_hand: "👌"
-pray: "🙏"
-sweat_smile: "😅"
-disappointed: "😞"
-thinking: "🤔"
+  # number row
+  tada:            "🎉"
+  fire:            "🔥"
+  heart:           "️❤️"
+  muscle:          "💪"
+  person_climbing: "🧗"
+  rocket:          "🚀"
 
-# lower row
-person_tipping_hand: "💁"
-person_gesturing_ok: "🙆"
-person_bowing: "🙇"
-person_raising_hand: "🙋"
-person_gesturing_no: "🙅"
-person_shrugging: "🤷"
+  # upper row
+  sunglasses:     "😎"
+  star_struck:    "🤩"
+  joy:            "😂"
+  cold_sweat:     "😰"
+  scream:         "😱"
+  exploding_head: "🤯"
 
-# bottom row
-checkoff: "✅"
-100: "💯"
-warning: "⚠️"
-x: "❌"
-question: "❓"
+  # home row
+  snap_fingers: "🫰"
+  ok_hand:      "👌"
+  pray:         "🙏"
+  sweat_smile:  "😅"
+  disappointed: "😞"
+  thinking:     "🤔"
 
-# thumb cluster upper arc
-astronaut:  "🧑‍🚀"
-nerd: "🤓"
-sparkles: "✨"
+  # lower row
+  person_tipping_hand: "💁"
+  person_gesturing_ok: "🙆"
+  person_bowing:       "🙇"
+  person_raising_hand: "🙋"
+  person_gesturing_no: "🙅"
+  person_shrugging:    "🤷"
 
-# thumb cluster lower arc
-raised_hands: "🙌"
-point_up: "☝️"
-thumbs_up: "👍"
+  # bottom row
+  checkoff: "✅"
+  100:      "💯"
+  warning:  "⚠️"
+  x:        "❌"
+  question: "❓"
+
+  # thumb cluster upper arc
+  astronaut: "🧑‍🚀"
+  nerd:      "🤓"
+  sparkles:  "✨"
+
+  # thumb cluster lower arc
+  raised_hands: "🙌"
+  point_up:     "☝️"
+  thumbs_up:    "👍"

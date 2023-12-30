@@ -803,7 +803,7 @@ macros {
         )
 
     //
-    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    // NOTE: edit the world.yaml file and run `rake` to generate this:
     //
 
     //
@@ -1950,6 +1950,10 @@ macros {
     //
     // NOTE: edit the emoji.yaml file and run `rake` to generate this:
     //
+
+    //
+    // codepoints
+    //
     UNICODE(emoji_zwj, /* ‍ */
       #if UNICODE_TARGET_OS == 1
         <&kp LC(LS(U)) &kp N2 &kp N0 &kp N0 &kp D &kp ENTER>
@@ -2535,6 +2539,38 @@ macros {
         <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N4 &kp D>, <&macro_release &kp LALT>
       #endif
     )
+
+    //
+    // characters
+    //
+    emoji_moon_complete: emoji_moon_complete {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EMOJI_MOON_COMPLETE";
+        #binding-cells = <0>;
+        bindings = <&emoji_new_moon>, <&emoji_full_moon>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_moon_gibbous: emoji_moon_gibbous {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EMOJI_MOON_GIBBOUS";
+        #binding-cells = <0>;
+        bindings = <&emoji_waning_gibbous_moon>, <&emoji_waxing_gibbous_moon>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_moon_quarter: emoji_moon_quarter {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EMOJI_MOON_QUARTER";
+        #binding-cells = <0>;
+        bindings = <&emoji_last_quarter_moon>, <&emoji_first_quarter_moon>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_moon_crescent: emoji_moon_crescent {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EMOJI_MOON_CRESCENT";
+        #binding-cells = <0>;
+        bindings = <&emoji_waning_crescent_moon>, <&emoji_waxing_crescent_moon>;
+        mods = <MOD_LSFT>;
+    };
 };
 /*HACK*/};
 #if EMOJI_GENDER_SIGN_PRESET == 0

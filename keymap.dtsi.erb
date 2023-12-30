@@ -813,7 +813,7 @@ macros {
         )
 
     //
-    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+    // NOTE: edit the world.yaml file and run `rake` to generate this:
     //
     <%
       require 'yaml'
@@ -822,15 +822,22 @@ macros {
       def letter_id_prefix(letter)
         "world_#{letter.downcase}_"
       end
+
+      EMITTED_UNICODE_MACROS = {}
+      emit_unicode_codepoints = lambda do |codepoints, id_prefix|
+        codepoints.each do |name, codepoint|
+          id = "#{id_prefix}_#{name}"
+          emit_unicode_macro.(id, codepoint)
+          EMITTED_UNICODE_MACROS[codepoint] = id
+        end
+      end
     %>
 
     //
     // codepoints
     //
     <%
-      world["codepoints"].each do |name, character|
-        emit_unicode_macro.("world_#{name}", character)
-      end
+      emit_unicode_codepoints.(world["codepoints"], :world)
     %>
 
     //
@@ -924,9 +931,31 @@ macros {
     <%
       require 'yaml'
       emoji = YAML.load_file("emoji.yaml")
+    %>
 
-      emoji.each do |name, character|
-        emit_unicode_macro.("emoji_#{name}", character)
+    //
+    // codepoints
+    //
+    <%
+      emit_unicode_codepoints.(emoji["codepoints"], :emoji)
+    %>
+
+    //
+    // characters
+    //
+    <%
+      emoji["characters"].each do |letter, transforms|
+        transforms.each do |modifier, shiftings|
+          accent_id = "emoji_#{letter}_" + modifier
+          shift_ids = shiftings.map do |shift, character|
+            unless id = EMITTED_UNICODE_MACROS[character]
+              id = "#{accent_id}_#{shift}"
+              emit_unicode_macro.(id, character)
+            end
+            id
+          end
+          emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
+        end
       end
     %>
 };
