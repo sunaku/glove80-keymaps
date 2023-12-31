@@ -936,8 +936,11 @@ macros {
     //
     // NOTE: You may need to enable Unicode hexadecimal input in your OS:
     // - https://ladedu.com/how-to-enter-unicode-characters-on-a-mac/
-    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
-    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
+    // - https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+    //
+    // Specifically, Windows users should be running the WinCompose tool,
+    // which lets you type Unicode characters via hexadecimal codepoints:
+    // - https://github.com/samhocevar/wincompose
     //
     #ifndef UNICODE_TARGET_OS
     #define UNICODE_TARGET_OS OPERATING_SYSTEM
@@ -964,14 +967,9 @@ macros {
       end
 
       def format_keystrokes_for_windows_unicode(keystrokes)
-        [
-          "<&macro_press &kp LALT>",
-          "<&macro_tap &kp KP_PLUS #{
-            strip_leading_zeroes_from_keystrokes(keystrokes)
-            .gsub(/\bN\d\b/, 'KP_\&') # use numpad digits
-          }>",
-          "<&macro_release &kp LALT>",
-        ].join(", ")
+        "<&kp RA(U) #{
+          strip_leading_zeroes_from_keystrokes(keystrokes)
+        } &kp ENTER>"
       end
 
       def strip_leading_zeroes_from_keystrokes(keystrokes)

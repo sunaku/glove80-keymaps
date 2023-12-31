@@ -3310,8 +3310,11 @@ macros {
     //
     // NOTE: You may need to enable Unicode hexadecimal input in your OS:
     // - https://ladedu.com/how-to-enter-unicode-characters-on-a-mac/
-    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-linux
-    // - https://unicode-explorer.com/articles/how-to-type-unicode-characters-in-windows
+    // - https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+    //
+    // Specifically, Windows users should be running the WinCompose tool,
+    // which lets you type Unicode characters via hexadecimal codepoints:
+    // - https://github.com/samhocevar/wincompose
     //
     #ifndef UNICODE_TARGET_OS
     #define UNICODE_TARGET_OS OPERATING_SYSTEM
@@ -3353,7 +3356,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp B &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(world_section_sign, /* § */
@@ -3362,7 +3365,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp A &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(world_paragraph_sign, /* ¶ */
@@ -3371,7 +3374,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp B &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(world_o_ordinal, /* º */
@@ -3380,7 +3383,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp B &kp A &kp ENTER>
       #endif
     )
     UNICODE(world_a_ordinal, /* ª */
@@ -3389,7 +3392,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp A &kp A &kp ENTER>
       #endif
     )
     UNICODE(world_exclaim_left, /* ¡ */
@@ -3398,7 +3401,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp A &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(world_question_left, /* ¿ */
@@ -3407,7 +3410,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp B &kp F &kp ENTER>
       #endif
     )
 
@@ -3420,7 +3423,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(world_c_cedilla_upper, /* Ç */
@@ -3429,7 +3432,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N7 &kp ENTER>
       #endif
     )
     world_c_cedilla: world_c_cedilla {
@@ -3444,7 +3447,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp D &kp ENTER>
       #endif
     )
     UNICODE(world_i_acute_upper, /* Í */
@@ -3453,7 +3456,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp D &kp ENTER>
       #endif
     )
     world_i_acute: world_i_acute {
@@ -3468,7 +3471,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp F &kp ENTER>
       #endif
     )
     UNICODE(world_i_diaeresis_upper, /* Ï */
@@ -3477,7 +3480,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp F &kp ENTER>
       #endif
     )
     world_i_diaeresis: world_i_diaeresis {
@@ -3492,7 +3495,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp E>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp E>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp E &kp ENTER>
       #endif
     )
     UNICODE(world_i_circumflex_upper, /* Î */
@@ -3501,7 +3504,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp E>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp E>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp E &kp ENTER>
       #endif
     )
     world_i_circumflex: world_i_circumflex {
@@ -3516,7 +3519,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp C &kp ENTER>
       #endif
     )
     UNICODE(world_i_grave_upper, /* Ì */
@@ -3525,7 +3528,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp C &kp ENTER>
       #endif
     )
     world_i_grave: world_i_grave {
@@ -3540,7 +3543,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N9 &kp ENTER>
       #endif
     )
     UNICODE(world_e_acute_upper, /* É */
@@ -3549,7 +3552,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N9 &kp ENTER>
       #endif
     )
     world_e_acute: world_e_acute {
@@ -3564,7 +3567,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp B &kp ENTER>
       #endif
     )
     UNICODE(world_e_diaeresis_upper, /* Ë */
@@ -3573,7 +3576,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp B &kp ENTER>
       #endif
     )
     world_e_diaeresis: world_e_diaeresis {
@@ -3588,7 +3591,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp A &kp ENTER>
       #endif
     )
     UNICODE(world_e_circumflex_upper, /* Ê */
@@ -3597,7 +3600,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp A &kp ENTER>
       #endif
     )
     world_e_circumflex: world_e_circumflex {
@@ -3612,7 +3615,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N8 &kp ENTER>
       #endif
     )
     UNICODE(world_e_grave_upper, /* È */
@@ -3621,7 +3624,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N8 &kp ENTER>
       #endif
     )
     world_e_grave: world_e_grave {
@@ -3636,7 +3639,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(world_e_ae_upper, /* Æ */
@@ -3645,7 +3648,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N6 &kp ENTER>
       #endif
     )
     world_e_ae: world_e_ae {
@@ -3660,7 +3663,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(world_a_acute_upper, /* Á */
@@ -3669,7 +3672,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N1 &kp ENTER>
       #endif
     )
     world_a_acute: world_a_acute {
@@ -3684,7 +3687,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N4 &kp ENTER>
       #endif
     )
     UNICODE(world_a_diaeresis_upper, /* Ä */
@@ -3693,7 +3696,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N4 &kp ENTER>
       #endif
     )
     world_a_diaeresis: world_a_diaeresis {
@@ -3708,7 +3711,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N2 &kp ENTER>
       #endif
     )
     UNICODE(world_a_circumflex_upper, /* Â */
@@ -3717,7 +3720,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N2 &kp ENTER>
       #endif
     )
     world_a_circumflex: world_a_circumflex {
@@ -3732,7 +3735,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(world_a_grave_upper, /* À */
@@ -3741,7 +3744,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N0 &kp ENTER>
       #endif
     )
     world_a_grave: world_a_grave {
@@ -3756,7 +3759,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(world_a_tilde_upper, /* Ã */
@@ -3765,7 +3768,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N3 &kp ENTER>
       #endif
     )
     world_a_tilde: world_a_tilde {
@@ -3780,7 +3783,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp E &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp E &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp E &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(world_a_ring_upper, /* Å */
@@ -3789,7 +3792,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp C &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp C &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp C &kp N5 &kp ENTER>
       #endif
     )
     world_a_ring: world_a_ring {
@@ -3804,7 +3807,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp D &kp ENTER>
       #endif
     )
     UNICODE(world_y_acute_upper, /* Ý */
@@ -3813,7 +3816,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp D &kp ENTER>
       #endif
     )
     world_y_acute: world_y_acute {
@@ -3828,7 +3831,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp F &kp ENTER>
       #endif
     )
     UNICODE(world_y_diaeresis_upper, /* Ÿ */
@@ -3837,7 +3840,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N1 &kp N7 &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp KP_N7 &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp N7 &kp N8 &kp ENTER>
       #endif
     )
     world_y_diaeresis: world_y_diaeresis {
@@ -3852,7 +3855,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(world_o_acute_upper, /* Ó */
@@ -3861,7 +3864,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N3 &kp ENTER>
       #endif
     )
     world_o_acute: world_o_acute {
@@ -3876,7 +3879,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(world_o_diaeresis_upper, /* Ö */
@@ -3885,7 +3888,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N6 &kp ENTER>
       #endif
     )
     world_o_diaeresis: world_o_diaeresis {
@@ -3900,7 +3903,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N4 &kp ENTER>
       #endif
     )
     UNICODE(world_o_circumflex_upper, /* Ô */
@@ -3909,7 +3912,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N4 &kp ENTER>
       #endif
     )
     world_o_circumflex: world_o_circumflex {
@@ -3924,7 +3927,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N2 &kp ENTER>
       #endif
     )
     UNICODE(world_o_grave_upper, /* Ò */
@@ -3933,7 +3936,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N2 &kp ENTER>
       #endif
     )
     world_o_grave: world_o_grave {
@@ -3948,7 +3951,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(world_o_tilde_upper, /* Õ */
@@ -3957,7 +3960,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N5 &kp ENTER>
       #endif
     )
     world_o_tilde: world_o_tilde {
@@ -3972,7 +3975,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N8 &kp ENTER>
       #endif
     )
     UNICODE(world_o_slash_upper, /* Ø */
@@ -3981,7 +3984,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N8 &kp ENTER>
       #endif
     )
     world_o_slash: world_o_slash {
@@ -3996,7 +3999,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp A &kp ENTER>
       #endif
     )
     UNICODE(world_u_acute_upper, /* Ú */
@@ -4005,7 +4008,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp A &kp ENTER>
       #endif
     )
     world_u_acute: world_u_acute {
@@ -4020,7 +4023,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp C &kp ENTER>
       #endif
     )
     UNICODE(world_u_diaeresis_upper, /* Ü */
@@ -4029,7 +4032,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp C &kp ENTER>
       #endif
     )
     world_u_diaeresis: world_u_diaeresis {
@@ -4044,7 +4047,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp B &kp ENTER>
       #endif
     )
     UNICODE(world_u_circumflex_upper, /* Û */
@@ -4053,7 +4056,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp B &kp ENTER>
       #endif
     )
     world_u_circumflex: world_u_circumflex {
@@ -4068,7 +4071,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N9 &kp ENTER>
       #endif
     )
     UNICODE(world_u_grave_upper, /* Ù */
@@ -4077,7 +4080,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N9 &kp ENTER>
       #endif
     )
     world_u_grave: world_u_grave {
@@ -4092,7 +4095,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp F &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(world_n_tilde_upper, /* Ñ */
@@ -4101,7 +4104,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp D &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp D &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp D &kp N1 &kp ENTER>
       #endif
     )
     world_n_tilde: world_n_tilde {
@@ -4116,7 +4119,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp N2 &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(world_quotes_plain_upper, /* " */
@@ -4125,7 +4128,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp N2 &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N2 &kp ENTER>
       #endif
     )
     world_quotes_plain: world_quotes_plain {
@@ -4140,7 +4143,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp N6 &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N6 &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N6 &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(world_quotes_grave_upper, /* ´ */
@@ -4149,7 +4152,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp B &kp N4 &kp ENTER>
       #endif
     )
     world_quotes_grave: world_quotes_grave {
@@ -4164,7 +4167,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp A &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp A &kp B &kp ENTER>
       #endif
     )
     UNICODE(world_quotes_angle_upper, /* » */
@@ -4173,7 +4176,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp B &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp B &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp B &kp B &kp ENTER>
       #endif
     )
     world_quotes_angle: world_quotes_angle {
@@ -4188,7 +4191,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N1 &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N0 &kp N1 &kp N8 &kp ENTER>
       #endif
     )
     UNICODE(world_quotes_curly1_upper, /* ’ */
@@ -4197,7 +4200,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N1 &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N0 &kp N1 &kp N9 &kp ENTER>
       #endif
     )
     world_quotes_curly1: world_quotes_curly1 {
@@ -4212,7 +4215,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N1 &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N0 &kp N1 &kp C &kp ENTER>
       #endif
     )
     UNICODE(world_quotes_curly2_upper, /* ” */
@@ -4221,7 +4224,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N1 &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N0 &kp N1 &kp D &kp ENTER>
       #endif
     )
     world_quotes_curly2: world_quotes_curly2 {
@@ -4439,7 +4442,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N0 &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N0 &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N0 &kp N0 &kp D &kp ENTER>
       #endif
     )
     UNICODE(emoji_male_sign, /* ♂️ */
@@ -4448,7 +4451,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp N4 &kp N2>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N6 &kp KP_N4 &kp KP_N2>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N6 &kp N4 &kp N2 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_female_sign, /* ♀️ */
@@ -4457,7 +4460,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp N4 &kp N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N6 &kp KP_N4 &kp KP_N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N6 &kp N4 &kp N0 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_right_arrow, /* ➡️ */
@@ -4466,7 +4469,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp A &kp N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp A &kp KP_N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N7 &kp A &kp N1 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_left_arrow, /* ⬅️ */
@@ -4475,7 +4478,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp B &kp N0 &kp N5>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp B &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp B &kp N0 &kp N5 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_light_skin_tone, /* 🏻 */
@@ -4484,7 +4487,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp F &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp F &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp F &kp B &kp ENTER>
       #endif
     )
     UNICODE(emoji_medium_light_skin_tone, /* 🏼 */
@@ -4493,7 +4496,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp F &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp F &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp F &kp C &kp ENTER>
       #endif
     )
     UNICODE(emoji_medium_skin_tone, /* 🏽 */
@@ -4502,7 +4505,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp F &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp F &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp F &kp D &kp ENTER>
       #endif
     )
     UNICODE(emoji_medium_dark_skin_tone, /* 🏾 */
@@ -4511,7 +4514,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp F &kp E>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp F &kp E>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp F &kp E &kp ENTER>
       #endif
     )
     UNICODE(emoji_dark_skin_tone, /* 🏿 */
@@ -4520,7 +4523,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp F &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp F &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp F &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_baby_bottle, /* 🍼 */
@@ -4529,7 +4532,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N7 &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N7 &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N7 &kp C &kp ENTER>
       #endif
     )
     UNICODE(emoji_baby, /* 👶 */
@@ -4538,7 +4541,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N7 &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N7 &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N7 &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(emoji_boy, /* 👦 */
@@ -4547,7 +4550,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N6 &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N6 &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N6 &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(emoji_girl, /* 👧 */
@@ -4556,7 +4559,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N6 &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N6 &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N6 &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(emoji_man, /* 👨 */
@@ -4565,7 +4568,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N6 &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N6 &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N6 &kp N8 &kp ENTER>
       #endif
     )
     UNICODE(emoji_woman, /* 👩 */
@@ -4574,7 +4577,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N6 &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N6 &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N6 &kp N9 &kp ENTER>
       #endif
     )
     UNICODE(emoji_old_man, /* 👴 */
@@ -4583,7 +4586,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N7 &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N7 &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N7 &kp N4 &kp ENTER>
       #endif
     )
     UNICODE(emoji_old_woman, /* 👵 */
@@ -4592,7 +4595,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N7 &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N7 &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N7 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_white_hair, /* 🦳 */
@@ -4601,7 +4604,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp B &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(emoji_curly_hair, /* 🦱 */
@@ -4610,7 +4613,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp B &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(emoji_red_hair, /* 🦰 */
@@ -4619,7 +4622,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp B &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(emoji_bald, /* 🦲 */
@@ -4628,7 +4631,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp B &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp B &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp B &kp N2 &kp ENTER>
       #endif
     )
     UNICODE(emoji_new_moon, /* 🌑 */
@@ -4637,7 +4640,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(emoji_waxing_crescent_moon, /* 🌒 */
@@ -4646,7 +4649,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N2 &kp ENTER>
       #endif
     )
     UNICODE(emoji_first_quarter_moon, /* 🌓 */
@@ -4655,7 +4658,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(emoji_waxing_gibbous_moon, /* 🌔 */
@@ -4664,7 +4667,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N4 &kp ENTER>
       #endif
     )
     UNICODE(emoji_full_moon, /* 🌕 */
@@ -4673,7 +4676,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_waning_gibbous_moon, /* 🌖 */
@@ -4682,7 +4685,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(emoji_last_quarter_moon, /* 🌗 */
@@ -4691,7 +4694,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(emoji_waning_crescent_moon, /* 🌘 */
@@ -4700,7 +4703,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N1 &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N1 &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N1 &kp N8 &kp ENTER>
       #endif
     )
     UNICODE(emoji_tada, /* 🎉 */
@@ -4709,7 +4712,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N8 &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N3 &kp KP_N8 &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N8 &kp N9 &kp ENTER>
       #endif
     )
     UNICODE(emoji_fire, /* 🔥 */
@@ -4718,7 +4721,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N5 &kp N2 &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N5 &kp KP_N2 &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N5 &kp N2 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_heart, /* ️❤️ */
@@ -4727,7 +4730,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N6 &kp N4>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N6 &kp KP_N4>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N2 &kp N7 &kp N6 &kp N4 &kp ENTER>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_muscle, /* 💪 */
@@ -4736,7 +4739,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp A &kp A>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp A &kp A>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp A &kp A &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_climbing, /* 🧗 */
@@ -4745,7 +4748,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp D &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp D &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp D &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(emoji_rocket, /* 🚀 */
@@ -4754,7 +4757,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N8 &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N8 &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N8 &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(emoji_sunglasses, /* 😎 */
@@ -4763,7 +4766,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp E>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N0 &kp E>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp E &kp ENTER>
       #endif
     )
     UNICODE(emoji_star_struck, /* 🤩 */
@@ -4772,7 +4775,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp N9>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N2 &kp KP_N9>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N2 &kp N9 &kp ENTER>
       #endif
     )
     UNICODE(emoji_joy, /* 😂 */
@@ -4781,7 +4784,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N0 &kp KP_N2>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp N2 &kp ENTER>
       #endif
     )
     UNICODE(emoji_cold_sweat, /* 😰 */
@@ -4790,7 +4793,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N3 &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N3 &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N3 &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(emoji_scream, /* 😱 */
@@ -4799,7 +4802,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N3 &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N3 &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N3 &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(emoji_exploding_head, /* 🤯 */
@@ -4808,7 +4811,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N2 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N2 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_snap_fingers, /* 🫰 */
@@ -4817,7 +4820,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp A &kp F &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp A &kp F &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp A &kp F &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(emoji_ok_hand, /* 👌 */
@@ -4826,7 +4829,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N4 &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N4 &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N4 &kp C &kp ENTER>
       #endif
     )
     UNICODE(emoji_pray, /* 🙏 */
@@ -4835,7 +4838,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N4 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_sweat_smile, /* 😅 */
@@ -4844,7 +4847,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_disappointed, /* 😞 */
@@ -4853,7 +4856,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N1 &kp E>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N1 &kp E>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N1 &kp E &kp ENTER>
       #endif
     )
     UNICODE(emoji_thinking, /* 🤔 */
@@ -4862,7 +4865,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N1 &kp N4>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N1 &kp N4 &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_tipping_hand, /* 💁 */
@@ -4871,7 +4874,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N8 &kp N1>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N8 &kp KP_N1>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N8 &kp N1 &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_gesturing_ok, /* 🙆 */
@@ -4880,7 +4883,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp N6>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N4 &kp N6 &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_bowing, /* 🙇 */
@@ -4889,7 +4892,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N4 &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_raising_hand, /* 🙋 */
@@ -4898,7 +4901,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp B>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp B>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N4 &kp B &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_gesturing_no, /* 🙅 */
@@ -4907,7 +4910,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N4 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_person_shrugging, /* 🤷 */
@@ -4916,7 +4919,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N3 &kp N7>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N3 &kp KP_N7>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N3 &kp N7 &kp ENTER>
       #endif
     )
     UNICODE(emoji_checkoff, /* ✅ */
@@ -4925,7 +4928,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N0 &kp N5>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N7 &kp N0 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_100, /* 💯 */
@@ -4934,7 +4937,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp A &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp A &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp A &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_warning, /* ⚠️ */
@@ -4943,7 +4946,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp A &kp N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N6 &kp A &kp KP_N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N6 &kp A &kp N0 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_x, /* ❌ */
@@ -4952,7 +4955,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N4 &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N4 &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N7 &kp N4 &kp C &kp ENTER>
       #endif
     )
     UNICODE(emoji_question, /* ❓ */
@@ -4961,7 +4964,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N5 &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N5 &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N7 &kp N5 &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(emoji_astronaut, /* 🧑‍🚀 */
@@ -4970,7 +4973,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp D &kp N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp N0 &kp D>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N8 &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp D &kp KP_N1>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N0 &kp KP_N0 &kp D>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N8 &kp KP_N0>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp D &kp N1 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N2 &kp N0 &kp N0 &kp D &kp ENTER>, <&kp RA(U) &kp N1 &kp F &kp N6 &kp N8 &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(emoji_nerd, /* 🤓 */
@@ -4979,7 +4982,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N1 &kp N3>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N9 &kp KP_N1 &kp KP_N3>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N1 &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(emoji_sparkles, /* ✨ */
@@ -4988,7 +4991,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N2 &kp N8>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N7 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N7 &kp N2 &kp N8 &kp ENTER>
       #endif
     )
     UNICODE(emoji_raised_hands, /* 🙌 */
@@ -4997,7 +5000,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N4 &kp C>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N6 &kp KP_N4 &kp C>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N4 &kp C &kp ENTER>
       #endif
     )
     UNICODE(emoji_point_up, /* ☝️ */
@@ -5006,7 +5009,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp N1 &kp D>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N2 &kp KP_N6 &kp KP_N1 &kp D>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp F &kp E &kp KP_N0 &kp F>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N2 &kp N6 &kp N1 &kp D &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_thumbs_up, /* 👍 */
@@ -5015,7 +5018,7 @@ macros {
       #elif UNICODE_TARGET_OS == 2
         <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N4 &kp N4 &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_PLUS &kp KP_N1 &kp F &kp KP_N4 &kp KP_N4 &kp D>, <&macro_release &kp LALT>
+        <&kp RA(U) &kp N1 &kp F &kp N4 &kp N4 &kp D &kp ENTER>
       #endif
     )
 
