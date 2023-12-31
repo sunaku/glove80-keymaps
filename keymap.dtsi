@@ -1113,7 +1113,6 @@ behaviors {
     #endif
     left_pinky: homey_left_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_PINKY";
         flavor = LEFT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1131,7 +1130,6 @@ behaviors {
     };
     left_pinky_hold: homey_left_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_PINKY_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1147,7 +1145,6 @@ behaviors {
     };
     left_pinky_tap: homey_left_pinky_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_PINKY_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1177,7 +1174,6 @@ behaviors {
     #endif
     right_pinky: homey_right_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_PINKY";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1195,7 +1191,6 @@ behaviors {
     };
     right_pinky_hold: homey_right_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_PINKY_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1211,7 +1206,6 @@ behaviors {
     };
     right_pinky_tap: homey_right_pinky_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_PINKY_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1241,7 +1235,6 @@ behaviors {
     #endif
     left_ring1: homey_left_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING1";
         flavor = LEFT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1259,7 +1252,6 @@ behaviors {
     };
     left_ring1_hold: homey_left_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_RING1_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1275,7 +1267,6 @@ behaviors {
     };
     left_ring1_tap: homey_left_ring1_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_RING1_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1305,7 +1296,6 @@ behaviors {
     #endif
     right_ring1: homey_right_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING1";
         flavor = RIGHT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1323,7 +1313,6 @@ behaviors {
     };
     right_ring1_hold: homey_right_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_RING1_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1339,7 +1328,6 @@ behaviors {
     };
     right_ring1_tap: homey_right_ring1_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_RING1_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1369,7 +1357,6 @@ behaviors {
     #endif
     left_ring2: homey_left_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING2";
         flavor = LEFT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1387,7 +1374,6 @@ behaviors {
     };
     left_ring2_hold: homey_left_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_RING2_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1403,7 +1389,6 @@ behaviors {
     };
     left_ring2_tap: homey_left_ring2_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_RING2_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1433,7 +1418,6 @@ behaviors {
     #endif
     right_ring2: homey_right_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING2";
         flavor = RIGHT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1451,7 +1435,6 @@ behaviors {
     };
     right_ring2_hold: homey_right_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_RING2_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1467,7 +1450,6 @@ behaviors {
     };
     right_ring2_tap: homey_right_ring2_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_RING2_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1497,7 +1479,6 @@ behaviors {
     #endif
     left_middy: homey_left_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_MIDDY";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1515,7 +1496,6 @@ behaviors {
     };
     left_middy_hold: homey_left_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_MIDDY_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1531,7 +1511,6 @@ behaviors {
     };
     left_middy_tap: homey_left_middy_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_MIDDY_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1561,7 +1540,6 @@ behaviors {
     #endif
     right_middy: homey_right_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_MIDDY";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1579,7 +1557,6 @@ behaviors {
     };
     right_middy_hold: homey_right_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_MIDDY_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1595,7 +1572,6 @@ behaviors {
     };
     right_middy_tap: homey_right_middy_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_MIDDY_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1625,7 +1601,6 @@ behaviors {
     #endif
     left_index: homey_left_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_INDEX";
         flavor = LEFT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1643,7 +1618,6 @@ behaviors {
     };
     left_index_hold: homey_left_index_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_INDEX_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1659,7 +1633,6 @@ behaviors {
     };
     left_index_tap: homey_left_index_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_LEFT_INDEX_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1689,7 +1662,6 @@ behaviors {
     #endif
     right_index: homey_right_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_INDEX";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1707,7 +1679,6 @@ behaviors {
     };
     right_index_hold: homey_right_index_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_INDEX_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1723,7 +1694,6 @@ behaviors {
     };
     right_index_tap: homey_right_index_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_RIGHT_INDEX_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -1753,7 +1723,6 @@ behaviors {
     #endif
     left_ring1_pinky: homey_left_ring1_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING1_PINKY";
         flavor = LEFT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1784,7 +1753,6 @@ behaviors {
     #endif
     left_ring2_pinky: homey_left_ring2_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING2_PINKY";
         flavor = LEFT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1815,7 +1783,6 @@ behaviors {
     #endif
     left_middy_pinky: homey_left_middy_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_MIDDY_PINKY";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1846,7 +1813,6 @@ behaviors {
     #endif
     left_index_pinky: homey_left_index_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_INDEX_PINKY";
         flavor = LEFT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1877,7 +1843,6 @@ behaviors {
     #endif
     right_ring1_pinky: homey_right_ring1_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING1_PINKY";
         flavor = RIGHT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1908,7 +1873,6 @@ behaviors {
     #endif
     right_ring2_pinky: homey_right_ring2_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING2_PINKY";
         flavor = RIGHT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1939,7 +1903,6 @@ behaviors {
     #endif
     right_middy_pinky: homey_right_middy_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_MIDDY_PINKY";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -1970,7 +1933,6 @@ behaviors {
     #endif
     right_index_pinky: homey_right_index_pinky {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_INDEX_PINKY";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2001,7 +1963,6 @@ behaviors {
     #endif
     left_pinky_ring1: homey_left_pinky_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_PINKY_RING1";
         flavor = LEFT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2032,7 +1993,6 @@ behaviors {
     #endif
     left_ring2_ring1: homey_left_ring2_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING2_RING1";
         flavor = LEFT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2063,7 +2023,6 @@ behaviors {
     #endif
     left_middy_ring1: homey_left_middy_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_MIDDY_RING1";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2094,7 +2053,6 @@ behaviors {
     #endif
     left_index_ring1: homey_left_index_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_INDEX_RING1";
         flavor = LEFT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2125,7 +2083,6 @@ behaviors {
     #endif
     right_pinky_ring1: homey_right_pinky_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_PINKY_RING1";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2156,7 +2113,6 @@ behaviors {
     #endif
     right_ring2_ring1: homey_right_ring2_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING2_RING1";
         flavor = RIGHT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2187,7 +2143,6 @@ behaviors {
     #endif
     right_middy_ring1: homey_right_middy_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_MIDDY_RING1";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2218,7 +2173,6 @@ behaviors {
     #endif
     right_index_ring1: homey_right_index_ring1 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_INDEX_RING1";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2249,7 +2203,6 @@ behaviors {
     #endif
     left_pinky_ring2: homey_left_pinky_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_PINKY_RING2";
         flavor = LEFT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2280,7 +2233,6 @@ behaviors {
     #endif
     left_ring1_ring2: homey_left_ring1_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING1_RING2";
         flavor = LEFT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2311,7 +2263,6 @@ behaviors {
     #endif
     left_middy_ring2: homey_left_middy_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_MIDDY_RING2";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2342,7 +2293,6 @@ behaviors {
     #endif
     left_index_ring2: homey_left_index_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_INDEX_RING2";
         flavor = LEFT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2373,7 +2323,6 @@ behaviors {
     #endif
     right_pinky_ring2: homey_right_pinky_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_PINKY_RING2";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2404,7 +2353,6 @@ behaviors {
     #endif
     right_ring1_ring2: homey_right_ring1_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING1_RING2";
         flavor = RIGHT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2435,7 +2383,6 @@ behaviors {
     #endif
     right_middy_ring2: homey_right_middy_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_MIDDY_RING2";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2466,7 +2413,6 @@ behaviors {
     #endif
     right_index_ring2: homey_right_index_ring2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_INDEX_RING2";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2497,7 +2443,6 @@ behaviors {
     #endif
     left_pinky_middy: homey_left_pinky_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_PINKY_MIDDY";
         flavor = LEFT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2528,7 +2473,6 @@ behaviors {
     #endif
     left_ring1_middy: homey_left_ring1_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING1_MIDDY";
         flavor = LEFT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2559,7 +2503,6 @@ behaviors {
     #endif
     left_ring2_middy: homey_left_ring2_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING2_MIDDY";
         flavor = LEFT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2590,7 +2533,6 @@ behaviors {
     #endif
     left_index_middy: homey_left_index_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_INDEX_MIDDY";
         flavor = LEFT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2621,7 +2563,6 @@ behaviors {
     #endif
     right_pinky_middy: homey_right_pinky_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_PINKY_MIDDY";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2652,7 +2593,6 @@ behaviors {
     #endif
     right_ring1_middy: homey_right_ring1_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING1_MIDDY";
         flavor = RIGHT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2683,7 +2623,6 @@ behaviors {
     #endif
     right_ring2_middy: homey_right_ring2_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING2_MIDDY";
         flavor = RIGHT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2714,7 +2653,6 @@ behaviors {
     #endif
     right_index_middy: homey_right_index_middy {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_INDEX_MIDDY";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2745,7 +2683,6 @@ behaviors {
     #endif
     left_pinky_index: homey_left_pinky_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_PINKY_INDEX";
         flavor = LEFT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2776,7 +2713,6 @@ behaviors {
     #endif
     left_ring1_index: homey_left_ring1_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING1_INDEX";
         flavor = LEFT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2807,7 +2743,6 @@ behaviors {
     #endif
     left_ring2_index: homey_left_ring2_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_RING2_INDEX";
         flavor = LEFT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2838,7 +2773,6 @@ behaviors {
     #endif
     left_middy_index: homey_left_middy_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_LEFT_MIDDY_INDEX";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2869,7 +2803,6 @@ behaviors {
     #endif
     right_pinky_index: homey_right_pinky_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_PINKY_INDEX";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2900,7 +2833,6 @@ behaviors {
     #endif
     right_ring1_index: homey_right_ring1_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING1_INDEX";
         flavor = RIGHT_RING1_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2931,7 +2863,6 @@ behaviors {
     #endif
     right_ring2_index: homey_right_ring2_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_RING2_INDEX";
         flavor = RIGHT_RING2_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2962,7 +2893,6 @@ behaviors {
     #endif
     right_middy_index: homey_right_middy_index {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_RIGHT_MIDDY_INDEX";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -2985,7 +2915,6 @@ behaviors {
     //
     plain: plain_typing_layer {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
@@ -2994,7 +2923,6 @@ behaviors {
     };
     plain_engram_COMMA: plain_typing_layer_engram_COMMA {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER_ENGRAM_COMMA";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
@@ -3003,7 +2931,6 @@ behaviors {
     };
     plain_engram_DOT: plain_typing_layer_engram_DOT {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER_ENGRAM_DOT";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
@@ -3016,7 +2943,6 @@ behaviors {
     //
     thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
@@ -3027,7 +2953,6 @@ behaviors {
     };
     thumb_parang_left: thumb_layer_access_parang_left {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS_PARANG_LEFT";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
@@ -3038,7 +2963,6 @@ behaviors {
     };
     space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS_SPACEBAR";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
@@ -3067,7 +2991,6 @@ behaviors {
     //
     cappy: capsword_and_capslock {
         compatible = "zmk,behavior-hold-tap";
-        label = "CAPSWORD_AND_CAPSLOCK";
         flavor = "tap-preferred";
         tapping-term-ms = <CAPPY_HOLDING_TIME>;
         #binding-cells = <2>;
@@ -3085,7 +3008,6 @@ behaviors {
     //
     parang_left: left_parenthesis_and_less_than {
         compatible = "zmk,behavior-mod-morph";
-        label = "LEFT_PARENTHESIS_AND_LESS_THAN";
         #binding-cells = <0>;
         bindings = <&kp LPAR>, <&kp LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3096,7 +3018,6 @@ behaviors {
     //
     parang_right: right_parenthesis_and_greater_than {
         compatible = "zmk,behavior-mod-morph";
-        label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
         #binding-cells = <0>;
         bindings = <&kp RPAR>, <&kp GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3109,126 +3030,108 @@ behaviors {
     //
     engram_N1: engram_shift_N1_PIPE {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N1_PIPE";
         #binding-cells = <0>;
         bindings = <&kp N1>, <&kp PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N2: engram_shift_N2_EQUAL {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N2_EQUAL";
         #binding-cells = <0>;
         bindings = <&kp N2>, <&kp EQUAL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N3: engram_shift_N3_TILDE {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N3_TILDE";
         #binding-cells = <0>;
         bindings = <&kp N3>, <&kp TILDE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N4: engram_shift_N4_PLUS {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N4_PLUS";
         #binding-cells = <0>;
         bindings = <&kp N4>, <&kp PLUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N5: engram_shift_N5_LT {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N5_LT";
         #binding-cells = <0>;
         bindings = <&kp N5>, <&kp LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N6: engram_shift_N6_GT {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N6_GT";
         #binding-cells = <0>;
         bindings = <&kp N6>, <&kp GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N7: engram_shift_N7_CARET {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N7_CARET";
         #binding-cells = <0>;
         bindings = <&kp N7>, <&kp CARET>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N8: engram_shift_N8_AMPS {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N8_AMPS";
         #binding-cells = <0>;
         bindings = <&kp N8>, <&kp AMPS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N9: engram_shift_N9_PRCNT {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N9_PRCNT";
         #binding-cells = <0>;
         bindings = <&kp N9>, <&kp PRCNT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N0: engram_shift_N0_STAR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_N0_STAR";
         #binding-cells = <0>;
         bindings = <&kp N0>, <&kp STAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_SQT: engram_shift_SQT_LPAR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_SQT_LPAR";
         #binding-cells = <0>;
         bindings = <&kp SQT>, <&kp LPAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_DQT: engram_shift_DQT_RPAR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_DQT_RPAR";
         #binding-cells = <0>;
         bindings = <&kp DQT>, <&kp RPAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_COMMA: engram_shift_COMMA_SEMI {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_COMMA_SEMI";
         #binding-cells = <0>;
         bindings = <&kp COMMA>, <&kp SEMI>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_DOT: engram_shift_DOT_COLON {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_DOT_COLON";
         #binding-cells = <0>;
         bindings = <&kp DOT>, <&kp COLON>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_QMARK: engram_shift_QMARK_EXCL {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_QMARK_EXCL";
         #binding-cells = <0>;
         bindings = <&kp QMARK>, <&kp EXCL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_HASH: engram_shift_HASH_DLLR {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_HASH_DLLR";
         #binding-cells = <0>;
         bindings = <&kp HASH>, <&kp DLLR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_AT: engram_shift_AT_GRAVE {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_AT_GRAVE";
         #binding-cells = <0>;
         bindings = <&kp AT>, <&kp GRAVE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_FSLH: engram_shift_FSLH_BSLH {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_FSLH_BSLH";
         #binding-cells = <0>;
         bindings = <&kp FSLH>, <&kp BSLH>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3298,7 +3201,6 @@ macros {
     //
     select_word: select_word {
         compatible = "zmk,behavior-mod-morph";
-        label = "SELECT_WORD";
         #binding-cells = <0>;
         bindings = <&select_word_right>, <&select_word_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3319,7 +3221,6 @@ macros {
     //
     extend_word: extend_word {
         compatible = "zmk,behavior-mod-morph";
-        label = "EXTEND_WORD";
         #binding-cells = <0>;
         bindings = <&extend_word_right>, <&extend_word_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3340,7 +3241,6 @@ macros {
     //
     select_line: select_line {
         compatible = "zmk,behavior-mod-morph";
-        label = "SELECT_LINE";
         #binding-cells = <0>;
         bindings = <&select_line_right>, <&select_line_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3361,7 +3261,6 @@ macros {
     //
     extend_line: extend_line {
         compatible = "zmk,behavior-mod-morph";
-        label = "EXTEND_LINE";
         #binding-cells = <0>;
         bindings = <&extend_line_right>, <&extend_line_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -3514,7 +3413,6 @@ macros {
     )
     world_c_cedilla: world_c_cedilla {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_C_CEDILLA";
         #binding-cells = <0>;
         bindings = <&world_c_cedilla_lower>, <&world_c_cedilla_upper>;
         mods = <MOD_LSFT>;
@@ -3539,7 +3437,6 @@ macros {
     )
     world_i_acute: world_i_acute {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_ACUTE";
         #binding-cells = <0>;
         bindings = <&world_i_acute_lower>, <&world_i_acute_upper>;
         mods = <MOD_LSFT>;
@@ -3564,7 +3461,6 @@ macros {
     )
     world_i_diaeresis: world_i_diaeresis {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&world_i_diaeresis_lower>, <&world_i_diaeresis_upper>;
         mods = <MOD_LSFT>;
@@ -3589,7 +3485,6 @@ macros {
     )
     world_i_circumflex: world_i_circumflex {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_CIRCUMFLEX";
         #binding-cells = <0>;
         bindings = <&world_i_circumflex_lower>, <&world_i_circumflex_upper>;
         mods = <MOD_LSFT>;
@@ -3614,7 +3509,6 @@ macros {
     )
     world_i_grave: world_i_grave {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_GRAVE";
         #binding-cells = <0>;
         bindings = <&world_i_grave_lower>, <&world_i_grave_upper>;
         mods = <MOD_LSFT>;
@@ -3639,7 +3533,6 @@ macros {
     )
     world_e_acute: world_e_acute {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_ACUTE";
         #binding-cells = <0>;
         bindings = <&world_e_acute_lower>, <&world_e_acute_upper>;
         mods = <MOD_LSFT>;
@@ -3664,7 +3557,6 @@ macros {
     )
     world_e_diaeresis: world_e_diaeresis {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&world_e_diaeresis_lower>, <&world_e_diaeresis_upper>;
         mods = <MOD_LSFT>;
@@ -3689,7 +3581,6 @@ macros {
     )
     world_e_circumflex: world_e_circumflex {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_CIRCUMFLEX";
         #binding-cells = <0>;
         bindings = <&world_e_circumflex_lower>, <&world_e_circumflex_upper>;
         mods = <MOD_LSFT>;
@@ -3714,7 +3605,6 @@ macros {
     )
     world_e_grave: world_e_grave {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_GRAVE";
         #binding-cells = <0>;
         bindings = <&world_e_grave_lower>, <&world_e_grave_upper>;
         mods = <MOD_LSFT>;
@@ -3739,7 +3629,6 @@ macros {
     )
     world_e_ae: world_e_ae {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_AE";
         #binding-cells = <0>;
         bindings = <&world_e_ae_lower>, <&world_e_ae_upper>;
         mods = <MOD_LSFT>;
@@ -3764,7 +3653,6 @@ macros {
     )
     world_a_acute: world_a_acute {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_ACUTE";
         #binding-cells = <0>;
         bindings = <&world_a_acute_lower>, <&world_a_acute_upper>;
         mods = <MOD_LSFT>;
@@ -3789,7 +3677,6 @@ macros {
     )
     world_a_diaeresis: world_a_diaeresis {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&world_a_diaeresis_lower>, <&world_a_diaeresis_upper>;
         mods = <MOD_LSFT>;
@@ -3814,7 +3701,6 @@ macros {
     )
     world_a_circumflex: world_a_circumflex {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_CIRCUMFLEX";
         #binding-cells = <0>;
         bindings = <&world_a_circumflex_lower>, <&world_a_circumflex_upper>;
         mods = <MOD_LSFT>;
@@ -3839,7 +3725,6 @@ macros {
     )
     world_a_grave: world_a_grave {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_GRAVE";
         #binding-cells = <0>;
         bindings = <&world_a_grave_lower>, <&world_a_grave_upper>;
         mods = <MOD_LSFT>;
@@ -3864,7 +3749,6 @@ macros {
     )
     world_a_tilde: world_a_tilde {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_TILDE";
         #binding-cells = <0>;
         bindings = <&world_a_tilde_lower>, <&world_a_tilde_upper>;
         mods = <MOD_LSFT>;
@@ -3889,7 +3773,6 @@ macros {
     )
     world_a_ring: world_a_ring {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_RING";
         #binding-cells = <0>;
         bindings = <&world_a_ring_lower>, <&world_a_ring_upper>;
         mods = <MOD_LSFT>;
@@ -3914,7 +3797,6 @@ macros {
     )
     world_y_acute: world_y_acute {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_Y_ACUTE";
         #binding-cells = <0>;
         bindings = <&world_y_acute_lower>, <&world_y_acute_upper>;
         mods = <MOD_LSFT>;
@@ -3939,7 +3821,6 @@ macros {
     )
     world_y_diaeresis: world_y_diaeresis {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_Y_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&world_y_diaeresis_lower>, <&world_y_diaeresis_upper>;
         mods = <MOD_LSFT>;
@@ -3964,7 +3845,6 @@ macros {
     )
     world_o_acute: world_o_acute {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_ACUTE";
         #binding-cells = <0>;
         bindings = <&world_o_acute_lower>, <&world_o_acute_upper>;
         mods = <MOD_LSFT>;
@@ -3989,7 +3869,6 @@ macros {
     )
     world_o_diaeresis: world_o_diaeresis {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&world_o_diaeresis_lower>, <&world_o_diaeresis_upper>;
         mods = <MOD_LSFT>;
@@ -4014,7 +3893,6 @@ macros {
     )
     world_o_circumflex: world_o_circumflex {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_CIRCUMFLEX";
         #binding-cells = <0>;
         bindings = <&world_o_circumflex_lower>, <&world_o_circumflex_upper>;
         mods = <MOD_LSFT>;
@@ -4039,7 +3917,6 @@ macros {
     )
     world_o_grave: world_o_grave {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_GRAVE";
         #binding-cells = <0>;
         bindings = <&world_o_grave_lower>, <&world_o_grave_upper>;
         mods = <MOD_LSFT>;
@@ -4064,7 +3941,6 @@ macros {
     )
     world_o_tilde: world_o_tilde {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_TILDE";
         #binding-cells = <0>;
         bindings = <&world_o_tilde_lower>, <&world_o_tilde_upper>;
         mods = <MOD_LSFT>;
@@ -4089,7 +3965,6 @@ macros {
     )
     world_o_slash: world_o_slash {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_SLASH";
         #binding-cells = <0>;
         bindings = <&world_o_slash_lower>, <&world_o_slash_upper>;
         mods = <MOD_LSFT>;
@@ -4114,7 +3989,6 @@ macros {
     )
     world_u_acute: world_u_acute {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_ACUTE";
         #binding-cells = <0>;
         bindings = <&world_u_acute_lower>, <&world_u_acute_upper>;
         mods = <MOD_LSFT>;
@@ -4139,7 +4013,6 @@ macros {
     )
     world_u_diaeresis: world_u_diaeresis {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_DIAERESIS";
         #binding-cells = <0>;
         bindings = <&world_u_diaeresis_lower>, <&world_u_diaeresis_upper>;
         mods = <MOD_LSFT>;
@@ -4164,7 +4037,6 @@ macros {
     )
     world_u_circumflex: world_u_circumflex {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_CIRCUMFLEX";
         #binding-cells = <0>;
         bindings = <&world_u_circumflex_lower>, <&world_u_circumflex_upper>;
         mods = <MOD_LSFT>;
@@ -4189,7 +4061,6 @@ macros {
     )
     world_u_grave: world_u_grave {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_GRAVE";
         #binding-cells = <0>;
         bindings = <&world_u_grave_lower>, <&world_u_grave_upper>;
         mods = <MOD_LSFT>;
@@ -4214,7 +4085,6 @@ macros {
     )
     world_n_tilde: world_n_tilde {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_N_TILDE";
         #binding-cells = <0>;
         bindings = <&world_n_tilde_lower>, <&world_n_tilde_upper>;
         mods = <MOD_LSFT>;
@@ -4239,7 +4109,6 @@ macros {
     )
     world_quotes_plain: world_quotes_plain {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_PLAIN";
         #binding-cells = <0>;
         bindings = <&world_quotes_plain_lower>, <&world_quotes_plain_upper>;
         mods = <MOD_LSFT>;
@@ -4264,7 +4133,6 @@ macros {
     )
     world_quotes_grave: world_quotes_grave {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_GRAVE";
         #binding-cells = <0>;
         bindings = <&world_quotes_grave_lower>, <&world_quotes_grave_upper>;
         mods = <MOD_LSFT>;
@@ -4289,7 +4157,6 @@ macros {
     )
     world_quotes_angle: world_quotes_angle {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_ANGLE";
         #binding-cells = <0>;
         bindings = <&world_quotes_angle_lower>, <&world_quotes_angle_upper>;
         mods = <MOD_LSFT>;
@@ -4314,7 +4181,6 @@ macros {
     )
     world_quotes_curly1: world_quotes_curly1 {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_CURLY1";
         #binding-cells = <0>;
         bindings = <&world_quotes_curly1_lower>, <&world_quotes_curly1_upper>;
         mods = <MOD_LSFT>;
@@ -4339,7 +4205,6 @@ macros {
     )
     world_quotes_curly2: world_quotes_curly2 {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_CURLY2";
         #binding-cells = <0>;
         bindings = <&world_quotes_curly2_lower>, <&world_quotes_curly2_upper>;
         mods = <MOD_LSFT>;
@@ -4350,175 +4215,150 @@ macros {
     //
     world_i_base: world_i_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_BASE";
         #binding-cells = <0>;
         bindings = <&world_i_acute>, <&world_i_LCTL>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_i_LCTL: world_i_LCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_LCTL";
         #binding-cells = <0>;
         bindings = <&world_i_diaeresis>, <&world_i_RCTL>;
         mods = <(MOD_RCTL|MOD_RSFT)>;
     };
     world_i_RCTL: world_i_RCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_I_RCTL";
         #binding-cells = <0>;
         bindings = <&world_i_circumflex>, <&world_i_grave>;
         mods = <(MOD_RSFT)>;
     };
     world_e_base: world_e_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_BASE";
         #binding-cells = <0>;
         bindings = <&world_e_acute>, <&world_e_RALT>;
         mods = <(MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_e_RALT: world_e_RALT {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_RALT";
         #binding-cells = <0>;
         bindings = <&world_e_ae>, <&world_e_LCTL>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_e_LCTL: world_e_LCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_LCTL";
         #binding-cells = <0>;
         bindings = <&world_e_diaeresis>, <&world_e_RCTL>;
         mods = <(MOD_RCTL|MOD_RSFT)>;
     };
     world_e_RCTL: world_e_RCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_E_RCTL";
         #binding-cells = <0>;
         bindings = <&world_e_circumflex>, <&world_e_grave>;
         mods = <(MOD_RSFT)>;
     };
     world_a_base: world_a_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_BASE";
         #binding-cells = <0>;
         bindings = <&world_a_acute>, <&world_a_LALT>;
         mods = <(MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_a_LALT: world_a_LALT {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_LALT";
         #binding-cells = <0>;
         bindings = <&world_a_tilde>, <&world_a_RALT>;
         mods = <(MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_a_RALT: world_a_RALT {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_RALT";
         #binding-cells = <0>;
         bindings = <&world_a_ring>, <&world_a_LCTL>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_a_LCTL: world_a_LCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_LCTL";
         #binding-cells = <0>;
         bindings = <&world_a_diaeresis>, <&world_a_RCTL>;
         mods = <(MOD_RCTL|MOD_RSFT)>;
     };
     world_a_RCTL: world_a_RCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_A_RCTL";
         #binding-cells = <0>;
         bindings = <&world_a_circumflex>, <&world_a_grave>;
         mods = <(MOD_RSFT)>;
     };
     world_y_base: world_y_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_Y_BASE";
         #binding-cells = <0>;
         bindings = <&world_y_acute>, <&world_y_diaeresis>;
         mods = <(MOD_LCTL)>;
     };
     world_o_base: world_o_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_BASE";
         #binding-cells = <0>;
         bindings = <&world_o_acute>, <&world_o_LALT>;
         mods = <(MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_o_LALT: world_o_LALT {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_LALT";
         #binding-cells = <0>;
         bindings = <&world_o_tilde>, <&world_o_RALT>;
         mods = <(MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_o_RALT: world_o_RALT {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_RALT";
         #binding-cells = <0>;
         bindings = <&world_o_slash>, <&world_o_LCTL>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_o_LCTL: world_o_LCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_LCTL";
         #binding-cells = <0>;
         bindings = <&world_o_diaeresis>, <&world_o_RCTL>;
         mods = <(MOD_RCTL|MOD_RSFT)>;
     };
     world_o_RCTL: world_o_RCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_O_RCTL";
         #binding-cells = <0>;
         bindings = <&world_o_circumflex>, <&world_o_grave>;
         mods = <(MOD_RSFT)>;
     };
     world_u_base: world_u_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_BASE";
         #binding-cells = <0>;
         bindings = <&world_u_acute>, <&world_u_LCTL>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_u_LCTL: world_u_LCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_LCTL";
         #binding-cells = <0>;
         bindings = <&world_u_diaeresis>, <&world_u_RCTL>;
         mods = <(MOD_RCTL|MOD_RSFT)>;
     };
     world_u_RCTL: world_u_RCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_U_RCTL";
         #binding-cells = <0>;
         bindings = <&world_u_circumflex>, <&world_u_grave>;
         mods = <(MOD_RSFT)>;
     };
     world_quotes_base: world_quotes_base {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_BASE";
         #binding-cells = <0>;
         bindings = <&world_quotes_plain>, <&world_quotes_LALT>;
         mods = <(MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_quotes_LALT: world_quotes_LALT {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_LALT";
         #binding-cells = <0>;
         bindings = <&world_quotes_angle>, <&world_quotes_LCTL>;
         mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
     };
     world_quotes_LCTL: world_quotes_LCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_LCTL";
         #binding-cells = <0>;
         bindings = <&world_quotes_curly2>, <&world_quotes_RCTL>;
         mods = <(MOD_RCTL|MOD_RSFT)>;
     };
     world_quotes_RCTL: world_quotes_RCTL {
         compatible = "zmk,behavior-mod-morph";
-        label = "WORLD_QUOTES_RCTL";
         #binding-cells = <0>;
         bindings = <&world_quotes_curly1>, <&world_quotes_grave>;
         mods = <(MOD_RSFT)>;
@@ -5163,28 +5003,24 @@ macros {
     //
     emoji_moon_complete: emoji_moon_complete {
         compatible = "zmk,behavior-mod-morph";
-        label = "EMOJI_MOON_COMPLETE";
         #binding-cells = <0>;
         bindings = <&emoji_new_moon>, <&emoji_full_moon>;
         mods = <MOD_LSFT>;
     };
     emoji_moon_gibbous: emoji_moon_gibbous {
         compatible = "zmk,behavior-mod-morph";
-        label = "EMOJI_MOON_GIBBOUS";
         #binding-cells = <0>;
         bindings = <&emoji_waning_gibbous_moon>, <&emoji_waxing_gibbous_moon>;
         mods = <MOD_LSFT>;
     };
     emoji_moon_quarter: emoji_moon_quarter {
         compatible = "zmk,behavior-mod-morph";
-        label = "EMOJI_MOON_QUARTER";
         #binding-cells = <0>;
         bindings = <&emoji_last_quarter_moon>, <&emoji_first_quarter_moon>;
         mods = <MOD_LSFT>;
     };
     emoji_moon_crescent: emoji_moon_crescent {
         compatible = "zmk,behavior-mod-morph";
-        label = "EMOJI_MOON_CRESCENT";
         #binding-cells = <0>;
         bindings = <&emoji_waning_crescent_moon>, <&emoji_waxing_crescent_moon>;
         mods = <MOD_LSFT>;

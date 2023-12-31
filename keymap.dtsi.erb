@@ -528,7 +528,6 @@ behaviors {
     %>
     <%= target %>: homey_<%= target %> {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEY_<%= target.upcase %>";
         flavor = <%= source.upcase %>_HOLDING_TYPE;
         hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
@@ -564,7 +563,6 @@ behaviors {
     %>
     <%= target %>_hold: homey_<%= target %>_hold {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_<%= target.upcase %>_HOLD";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -580,7 +578,6 @@ behaviors {
     };
     <%= target %>_tap: homey_<%= target %>_tap {
         compatible = "zmk,behavior-macro-one-param";
-        label = "HOMEY_<%= target.upcase %>_TAP";
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <1>;
@@ -620,7 +617,6 @@ behaviors {
     //
     plain: plain_typing_layer {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
@@ -629,7 +625,6 @@ behaviors {
     };
     plain_engram_COMMA: plain_typing_layer_engram_COMMA {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER_ENGRAM_COMMA";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
@@ -638,7 +633,6 @@ behaviors {
     };
     plain_engram_DOT: plain_typing_layer_engram_DOT {
         compatible = "zmk,behavior-hold-tap";
-        label = "PLAIN_TYPING_LAYER_ENGRAM_DOT";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
@@ -651,7 +645,6 @@ behaviors {
     //
     thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
@@ -662,7 +655,6 @@ behaviors {
     };
     thumb_parang_left: thumb_layer_access_parang_left {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS_PARANG_LEFT";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
@@ -673,7 +665,6 @@ behaviors {
     };
     space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS_SPACEBAR";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
@@ -702,7 +693,6 @@ behaviors {
     //
     cappy: capsword_and_capslock {
         compatible = "zmk,behavior-hold-tap";
-        label = "CAPSWORD_AND_CAPSLOCK";
         flavor = "tap-preferred";
         tapping-term-ms = <CAPPY_HOLDING_TIME>;
         #binding-cells = <2>;
@@ -720,7 +710,6 @@ behaviors {
     //
     parang_left: left_parenthesis_and_less_than {
         compatible = "zmk,behavior-mod-morph";
-        label = "LEFT_PARENTHESIS_AND_LESS_THAN";
         #binding-cells = <0>;
         bindings = <&kp LPAR>, <&kp LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -731,7 +720,6 @@ behaviors {
     //
     parang_right: right_parenthesis_and_greater_than {
         compatible = "zmk,behavior-mod-morph";
-        label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
         #binding-cells = <0>;
         bindings = <&kp RPAR>, <&kp GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -767,7 +755,6 @@ behaviors {
     %>
     engram_<%= normal %>: engram_shift_<%= normal %>_<%= shifted %> {
         compatible = "zmk,behavior-mod-morph";
-        label = "ENGRAM_SHIFT_<%= normal.upcase %>_<%= shifted.upcase %>";
         #binding-cells = <0>;
         bindings = <&kp <%= normal %>>, <&kp <%= shifted %>>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -840,7 +827,6 @@ macros {
     //
     select_word: select_word {
         compatible = "zmk,behavior-mod-morph";
-        label = "SELECT_WORD";
         #binding-cells = <0>;
         bindings = <&select_word_right>, <&select_word_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -861,7 +847,6 @@ macros {
     //
     extend_word: extend_word {
         compatible = "zmk,behavior-mod-morph";
-        label = "EXTEND_WORD";
         #binding-cells = <0>;
         bindings = <&extend_word_right>, <&extend_word_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -882,7 +867,6 @@ macros {
     //
     select_line: select_line {
         compatible = "zmk,behavior-mod-morph";
-        label = "SELECT_LINE";
         #binding-cells = <0>;
         bindings = <&select_line_right>, <&select_line_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -903,7 +887,6 @@ macros {
     //
     extend_line: extend_line {
         compatible = "zmk,behavior-mod-morph";
-        label = "EXTEND_LINE";
         #binding-cells = <0>;
         bindings = <&extend_line_right>, <&extend_line_left>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1008,7 +991,6 @@ macros {
     %>
     <%= id %>: <%= id %> {
         compatible = "zmk,behavior-mod-morph";
-        label = "<%= id.upcase %>";
         #binding-cells = <0>;
         bindings = <&<%= plain %>>, <&<%= morphed %>>;
         mods = <<%= modifiers %>>;
