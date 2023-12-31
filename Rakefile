@@ -1,7 +1,7 @@
 task :default => :dtsi
 
 dtsi_files = FileList["*.dtsi.erb"].pathmap("%X").each do |f|
-  file f => FileList["#{f}.erb", "*.yaml", __FILE__]
+  file f => FileList["#{f}.erb", "*.{yaml,json,zmk}", __FILE__]
 end
 task :dtsi => dtsi_files
 

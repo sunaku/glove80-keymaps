@@ -1,13 +1,15 @@
-//////////////////////////////////////////////////////////////////////
-// NOTE: Use the `#define` settings below to customize this keymap! //
-// You can override them here instead of modifying them down there. //
-// /* EXAMPLE: */  #define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair  //
-//////////////////////////////////////////////////////////////////////
+// NOTE: Use the `#define` settings below to customize this keymap!
+// For example, here are the main optional features you can enable:
+#define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
+//#define ENABLE_KEY_REPEAT // permits "tap then hold" key repetition
+//#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware (see below)
+
+//////////////////////////////////////////////////////////////////////////////
 //
 // Sunaku's Keymap v32 -- "Glorious Engrammer"
 // - https://github.com/sunaku/glove80-keymaps
 //
-//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 //
 // OPERATING_SYSTEM defines which operating system you intend to use
@@ -19,8 +21,8 @@
 #ifndef OPERATING_SYSTEM
 <%
   OPERATING_SYSTEMS = {
-    linux: 1,
-    macos: 2,
+    linux:   1,
+    macos:   2,
     windows: 3
   }.each do |os, number|
 %>
@@ -61,13 +63,6 @@
 #define _FIND_PREV  _C(LS(G))
 
 //
-// ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
-// of home row mods and layer access keys.  You can keep this disabled if
-// you prefer to use the &plain overlay method of key repetition instead.
-//
-//#define ENABLE_KEY_REPEAT
-
-//
 // Glove80 specific symbol overrides to support non "en-US" locales
 //
 #define AMPS  LS(N7)
@@ -92,6 +87,69 @@
 #define TILDE LS(GRAVE)
 #define UNDER LS(MINUS)
 
+//
+// Keymap specific knowledge of the base layer's alpha + ZMK layout
+//
+<%
+  keymap_zmk = File.readlines("keymap.zmk")
+  POSITION_BY_INDEX = keymap_zmk.grep(/^#define POS_[LR]H_\w+ \d+/).map do |line|
+    (_define, name, value) = line.split
+    [name, Integer(value)]
+  end.to_h.invert
+
+  require 'json'
+  keymap = JSON.load_file("keymap.json")
+
+  layers = keymap["layer_names"].zip(keymap["layers"]).to_h
+  layers.each do |layer_name, layer_keys|
+    break if layer_name == "Lower"
+%>
+#if LAYER_<%= layer_name %> == 0
+<%
+    layer_keys.each_with_index do |key, index|
+      position = POSITION_BY_INDEX[index]
+      next if position =~ /_T\d+$/ # skip thumbs
+
+      behavior = key["value"]
+      params = key.dig("params", 0, "value")
+
+      mod = nil
+      tap = 0 # &kp 0 is functionally equivalent to &none
+      case behavior
+      when "&kp"
+        tap = params
+      when "Custom"
+        case params
+        when /\((\w+),\s*(\w+)\)/
+          mod = $1
+          tap = $2
+        when /engram_(\w+)/
+          tap = $1
+        when /parang_left/
+          tap = "LPAR"
+        when /parang_right/
+          tap = "RPAR"
+        when /([A-Z0-9_]+)(\s+0)*$/
+          tap = $1
+        end
+      end
+
+      coords = position[/^POS_(.+)/, 1]
+%>
+#define KEY_<%= coords %> <%= tap %>
+<%
+      if mod
+%>
+#define MOD_<%= coords %> <%= mod %>
+<%
+      end
+    end
+%>
+#endif
+<%
+  end
+%>
+
 behaviors {
 
     //////////////////////////////////////////////////////////////////////////
@@ -101,6 +159,23 @@ behaviors {
     // - https://github.com/urob/zmk-config#timeless-homerow-mods
     //
     //////////////////////////////////////////////////////////////////////////
+
+    //
+    // ENFORCE_BILATERAL cancels out single-handed home row mods activation by
+    // releasing any currently pressed mods and replacing them with plain taps.
+    //
+    // NOTE: You may still encounter "flashing mods" where an operating system
+    // action is triggered by the release of mods, such as LGUI which launches
+    // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
+    //
+    //#define ENFORCE_BILATERAL
+
+    //
+    // ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
+    // of home row mods and layer access keys.  You can keep this disabled if
+    // you prefer to use the &plain overlay method of key repetition instead.
+    //
+    //#define ENABLE_KEY_REPEAT
 
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -138,7 +213,44 @@ behaviors {
     #endif
 
     //
-    // SHIFT_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // CHORD_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+    // for chorded home row mods (secondary keypresses in multi-mod chords).
+    //
+    #ifndef CHORD_HOLDING_TYPE
+    #define CHORD_HOLDING_TYPE HOMEY_HOLDING_TYPE
+    #endif
+
+    //
+    // CHORD_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // home row mod keys in order to send their modifiers to the computer
+    // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
+    // This is specifically for secondary keypresses in multi-mod chords.
+    //
+    #ifndef CHORD_HOLDING_TIME
+    #define CHORD_HOLDING_TIME 150
+    #endif
+
+    //
+    // CHORD_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // after typing before you can use home row mods again.  It prevents
+    // unintended activation of home row mods when you're actively typing
+    // This is specifically for secondary keypresses in multi-mod chords.
+    //
+    #ifndef CHORD_STREAK_DECAY
+    #define CHORD_STREAK_DECAY HOMEY_STREAK_DECAY
+    #endif
+
+    //
+    // CHORD_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    // This is specifically for secondary keypresses in multi-mod chords.
+    //
+    #ifndef CHORD_REPEAT_DECAY
+    #define CHORD_REPEAT_DECAY HOMEY_REPEAT_DECAY
+    #endif
+
+    //
+    // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
     //
     // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
@@ -147,41 +259,34 @@ behaviors {
     // Typing streaks and the `hold-trigger-on-release` setting are disabled
     // for the index fingers so as not to hinder their speed and dexterity.
     //
-    #ifndef SHIFT_HOLDING_TYPE
-    #define SHIFT_HOLDING_TYPE "tap-preferred"
+    #ifndef INDEX_HOLDING_TYPE
+    #define INDEX_HOLDING_TYPE "tap-preferred"
     #endif
 
     //
-    // SHIFT_HOLDING_TIME defines how long you need to hold (milliseconds)
+    // INDEX_HOLDING_TIME defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
-    // CAUTION: You'll need to perform inward rolls from pinky->ring->middle
-    // fingers toward the index fingers when activating multiple modifiers
-    // because `hold-trigger-on-release` is disabled for the index fingers.
-    // Otherwise, you may be surprised that the index fingers' modifier is
-    // sent immediately without the rest of your multi-mod chord when you
-    // perform outward rolls from your index fingers toward your pinkies.
-    //
-    #ifndef SHIFT_HOLDING_TIME
-    #define SHIFT_HOLDING_TIME 170
+    #ifndef INDEX_HOLDING_TIME
+    #define INDEX_HOLDING_TIME 170
     #endif
 
     //
-    // SHIFT_STREAK_DECAY defines how long you need to wait (milliseconds)
+    // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
-    #ifndef SHIFT_STREAK_DECAY
-    #define SHIFT_STREAK_DECAY 130
+    #ifndef INDEX_STREAK_DECAY
+    #define INDEX_STREAK_DECAY 100
     #endif
 
     //
-    // SHIFT_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // INDEX_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #ifndef SHIFT_REPEAT_DECAY
-    #define SHIFT_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #ifndef INDEX_REPEAT_DECAY
+    #define INDEX_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
     //
@@ -195,7 +300,7 @@ behaviors {
     // for the index fingers so as not to hinder their speed and dexterity.
     //
     #ifndef PLAIN_HOLDING_TYPE
-    #define PLAIN_HOLDING_TYPE "tap-preferred"
+    #define PLAIN_HOLDING_TYPE INDEX_HOLDING_TYPE
     #endif
 
     //
@@ -204,7 +309,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
     #ifndef PLAIN_HOLDING_TIME
-    #define PLAIN_HOLDING_TIME 170
+    #define PLAIN_HOLDING_TIME INDEX_HOLDING_TIME
     #endif
 
     //
@@ -213,7 +318,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef PLAIN_STREAK_DECAY
-    #define PLAIN_STREAK_DECAY 130
+    #define PLAIN_STREAK_DECAY INDEX_STREAK_DECAY
     #endif
 
     //
@@ -253,7 +358,7 @@ behaviors {
     // while the thumb layer key is still held down) for quicker programming.
     //
     #ifndef SPACE_HOLDING_TYPE
-    #define SPACE_HOLDING_TYPE "balanced"
+    #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
     #endif
 
     //
@@ -261,7 +366,7 @@ behaviors {
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
     #ifndef SPACE_HOLDING_TIME
-    #define SPACE_HOLDING_TIME 200
+    #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
     #endif
 
     //
@@ -269,7 +374,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #define SPACE_REPEAT_DECAY THUMB_REPEAT_DECAY
     #endif
 
     //
@@ -292,7 +397,9 @@ behaviors {
     // |------------------------|------------------------|
     //
     <%
-      HANDS = %w[ left right ].cycle.each_cons(2).take(2).to_h
+      HANDS = %w[ left right ]
+      FINGERS = %w[ pinky ring1 ring2 middy index ]
+      PAIRED_HANDS = HANDS.cycle.each_cons(2).take(2).to_h
     %>
     #define LEFT_HAND_KEYS      \
           0  1  2  3  4         \
@@ -313,53 +420,204 @@ behaviors {
                          70 53     56 73                 \
                           71 54   55 72
 
+    #define LEFT_PINKY_KEY  KEY_LH_C5R4
+    #define LEFT_PINKY_MOD  MOD_LH_C5R4
+    #define RIGHT_PINKY_KEY KEY_RH_C5R4
+    #define RIGHT_PINKY_MOD MOD_RH_C5R4
+
+    #define LEFT_RING1_KEY  KEY_LH_C4R4
+    #define LEFT_RING1_MOD  MOD_LH_C4R4
+    #define RIGHT_RING1_KEY KEY_RH_C4R4
+    #define RIGHT_RING1_MOD MOD_RH_C4R4
+
+    #define LEFT_RING2_KEY  KEY_LH_C4R3
+    #define LEFT_RING2_MOD  MOD_LH_C4R3
+    #define RIGHT_RING2_KEY KEY_RH_C4R3
+    #define RIGHT_RING2_MOD MOD_RH_C4R3
+
+    #define LEFT_MIDDY_KEY  KEY_LH_C3R4
+    #define LEFT_MIDDY_MOD  MOD_LH_C3R4
+    #define RIGHT_MIDDY_KEY KEY_RH_C3R4
+    #define RIGHT_MIDDY_MOD MOD_RH_C3R4
+
+    #define LEFT_INDEX_KEY  KEY_LH_C2R4
+    #define LEFT_INDEX_MOD  MOD_LH_C2R4
+    #define RIGHT_INDEX_KEY KEY_RH_C2R4
+    #define RIGHT_INDEX_MOD MOD_RH_C2R4
+
+    #define LEFT_PLAIN_KEY  KEY_LH_C1R4
+    #define RIGHT_PLAIN_KEY KEY_RH_C1R4
+
     //
-    // Home row mod-tap keys for all except index fingers
+    // Home row mods with bilateral combinations support
     //
     <%
-      HANDS.each do |hand, opposite_hand|
+      HOME_ROW_MOD_SETTINGS = %w[
+        HOLDING_TYPE
+        HOLDING_TIME
+        STREAK_DECAY
+        REPEAT_DECAY
+      ]
+
+      def snake_case(*components)
+        components.join("_")
+      end
+
+      def camel_case(*components)
+        components.map(&:capitalize).join
+      end
+
+      def format_constant(*components)
+        snake_case(*components).upcase
+      end
+
+      HOME_ROW_MOD_INSTANCES =
+        FINGERS.flat_map do |finger|
+          HANDS.map do |hand|
+            [hand, finger]
+          end
+        end
+
+      FINGERS.each do |finger|
+        HOME_ROW_MOD_SETTINGS.each do |suffix|
+          finger_setting = format_constant(finger, suffix)
+          finger_chord_setting = format_constant(finger, :chord, suffix)
     %>
-    homey_<%= hand %>: home_row_mods_<%= hand %>_hand {
+    #ifndef <%= finger_setting %>
+    #define <%= finger_setting %> HOMEY_<%= suffix %>
+    #endif
+    #ifndef <%= finger_chord_setting %>
+    #define <%= finger_chord_setting %> CHORD_<%= suffix %>
+    #endif
+    <%
+          HANDS.each do |hand|
+            hand_finger_chord_setting = format_constant(hand, finger, :chord, suffix)
+    %>
+    #ifndef <%= hand_finger_chord_setting %>
+    #define <%= hand_finger_chord_setting %> <%= finger_chord_setting %>
+    #endif
+    <%
+          end
+        end
+      end
+
+      emit_home_row_mod = lambda do |hand, finger, chord|
+        source = snake_case(hand, finger) # without chord
+
+        target_components = [hand, finger, chord].compact
+        target_CamelCase = camel_case(*target_components)
+        target = snake_case(*target_components)
+
+        HOME_ROW_MOD_SETTINGS.each do |suffix|
+          setting = format_constant(target, suffix)
+
+          inherit_components =
+            if chord
+              [source, :chord, suffix]
+            else
+              [finger, suffix]
+            end
+
+          inherit = format_constant(*inherit_components)
+    %>
+    #ifndef <%= setting %>
+    #define <%= setting %> <%= inherit %>
+    #endif
+    <%
+        end
+    %>
+    <%= target %>: homey_<%= target %> {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_<%= hand.upcase %>_HAND";
-        flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
+        label = "HOMEY_<%= target.upcase %>";
+        flavor = <%= source.upcase %>_HOLDING_TYPE;
+        hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        tapping-term-ms = <<%= source.upcase %>_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
-        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
         #endif
-        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+        require-prior-idle-ms = <<%= source.upcase %>_STREAK_DECAY>;
         #binding-cells = <2>;
+        #ifdef ENFORCE_BILATERAL
+        <%
+          if chord
+        %>
+        bindings = <&kp>, <&<%= source %>_tap>;
+        <%
+          else
+        %>
+        bindings = <&<%= target %>_hold>, <&kp>;
+        <%
+          end
+        %>
+        #else
         bindings = <&kp>, <&kp>;
+        #endif
     };
     <%
+        if chord
+          constant = format_constant(hand, chord)
+    %>
+    #define <%= target_CamelCase %> <%= target %> <%= constant %>_MOD <%= constant %>_KEY
+    <%
+        else
+    %>
+    <%= target %>_hold: homey_<%= target %>_hold {
+        compatible = "zmk,behavior-macro-one-param";
+        label = "HOMEY_<%= target.upcase %>_HOLD";
+        wait-ms = <0>;
+        tap-ms = <0>;
+        #binding-cells = <1>;
+        bindings
+            = <&macro_param_1to1>
+            , <&macro_press &kp MACRO_PLACEHOLDER
+                            &mo LAYER_<%= target_CamelCase %>>
+            , <&macro_pause_for_release>
+            , <&macro_param_1to1>
+            , <&macro_release &kp MACRO_PLACEHOLDER
+                              &mo LAYER_<%= target_CamelCase %>>
+            ;
+    };
+    <%= target %>_tap: homey_<%= target %>_tap {
+        compatible = "zmk,behavior-macro-one-param";
+        label = "HOMEY_<%= target.upcase %>_TAP";
+        wait-ms = <0>;
+        tap-ms = <0>;
+        #binding-cells = <1>;
+        bindings
+            = <&macro_release
+                &kp LSFT &kp RSFT
+                &kp LALT &kp RALT
+                &kp LCTL &kp RCTL
+                &kp LGUI &kp LGUI>
+            , <&macro_tap &kp <%= target.upcase %>_KEY>
+            , <&macro_param_1to1>
+            , <&macro_tap &kp MACRO_PLACEHOLDER>
+            ;
+    };
+    #define <%= target_CamelCase %>(mod,key) <%= target %> mod key
+    <%
+        end
+      end
+
+      # level 1 for mod-tap keys on base layer
+      HOME_ROW_MOD_INSTANCES.each do |(hand,finger)|
+        emit_home_row_mod.(hand, finger, nil)
+      end
+
+      # level 2 for unilateral multi-mod chords
+      HOME_ROW_MOD_INSTANCES.permutation(2).each do
+        |((hand1,finger1), (hand2,finger2))|
+
+        if hand1 == hand2
+          emit_home_row_mod.(hand2, finger2, finger1)
+        end
       end
     %>
 
     //
-    // Special home row mod-tap keys for the index fingers
+    // Key repetition access keys on the index fingers
     //
-    <%
-      HANDS.each do |hand, opposite_hand|
-    %>
-    shift_<%= hand %>: home_row_shift_<%= hand %>_hand {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_SHIFT_<%= hand.upcase %>_HAND";
-        flavor = SHIFT_HOLDING_TYPE;
-        hold-trigger-key-positions = <<%= opposite_hand.upcase %>_HAND_KEYS THUMB_KEYS>;
-        //hold-trigger-on-release; // don't wait for other mods
-        tapping-term-ms = <SHIFT_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
-        quick-tap-ms = <SHIFT_REPEAT_DECAY>;
-        #endif
-        require-prior-idle-ms = <SHIFT_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
-    <%
-      end
-    %>
     plain: plain_typing_layer {
         compatible = "zmk,behavior-hold-tap";
         label = "PLAIN_TYPING_LAYER";
