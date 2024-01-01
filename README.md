@@ -67,6 +67,32 @@ also available in the `*.dtsi` files provided in this Git repository.
 
 ## Customizing
 
+### Overriding the defaults
+
+You can override the various `#define` settings that govern this keymap by
+adding them above the snippet in the "Custom Defined Behaviors" text box:
+
+```dts
+// add your overrides here, up at the very top:
+#define OPERATING_SYSTEM 3 // windows 
+#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
+
+// ... rest of snippet goes here, unchanged ...
+```
+
+For your reference, the following digram shows the default values for all
+settings and how they inherit from each other, so you can override them
+together as a group (by inheritance) or each individually (fine-grained).
+
+<details>
+  <summary><b>Diagram:</b> Default values for #define settings</summary>
+
+  ![diagram](define.svg)
+
+</details>
+
+### Unicode/Emoji characters
+
 You can customize the preset characters in the Emoji and World layers by
 editing their respective YAML source files in this repository.  Afterwards, 
 run the `rake` command to regenerate the "Custom Defined Behaviors" snippet.

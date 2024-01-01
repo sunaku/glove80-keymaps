@@ -1,4 +1,4 @@
-task :default => :dtsi
+task :default => [:dtsi, :dot]
 
 dtsi_files = FileList["*.dtsi.erb"].pathmap("%X").each do |f|
   file f => FileList["#{f}.erb", "*.{yaml,json,zmk}", __FILE__]
@@ -28,3 +28,11 @@ rule ".dtsi" => ".dtsi.erb" do |t|
     .squeeze(" ") # remove extra spaces
   File.write(t.name + ".min", minified_output)
 end
+
+file "define.dot" => ["define.dot.erb", "keymap.dtsi.min", __FILE__] do |t|
+  sh "erb #{t.prerequisites[0]} > #{t.name}"
+end
+file "define.svg" => "define.dot" do |t|
+  sh "dot -Tsvg #{t.prerequisites[0]} > #{t.name}"
+end
+task :dot => "define.svg"
