@@ -3413,6 +3413,33 @@ macros {
         <&kp RA(U) &kp B &kp F &kp ENTER>
       #endif
     )
+    UNICODE(world_currency_crypto, /* ₿ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N2 &kp N0 &kp B &kp F &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp B &kp F>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N2 &kp N0 &kp B &kp F &kp ENTER>
+      #endif
+    )
+    UNICODE(world_currency_cent, /* ¢ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp A &kp N2 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N2>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp A &kp N2 &kp ENTER>
+      #endif
+    )
+    UNICODE(world_currency_sign, /* ¤ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp A &kp N4 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N4>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp A &kp N4 &kp ENTER>
+      #endif
+    )
 
     //
     // characters
@@ -4233,6 +4260,63 @@ macros {
         bindings = <&world_quotes_curly2_lower>, <&world_quotes_curly2_upper>;
         mods = <MOD_LSFT>;
     };
+    UNICODE(world_currency_dollar_lower, /* $ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N2 &kp N4 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp N2 &kp N4>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N2 &kp N4 &kp ENTER>
+      #endif
+    )
+    world_currency_dollar: world_currency_dollar {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_dollar_lower>, <&world_currency_cent>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(world_currency_yen, /* ¥ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp A &kp N5 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N5>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp A &kp N5 &kp ENTER>
+      #endif
+    )
+    UNICODE(world_currency_euro, /* € */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N2 &kp N0 &kp A &kp C &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp A &kp C>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N2 &kp N0 &kp A &kp C &kp ENTER>
+      #endif
+    )
+    UNICODE(world_currency_won, /* ₩ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N2 &kp N0 &kp A &kp N9 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N0 &kp A &kp N9>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N2 &kp N0 &kp A &kp N9 &kp ENTER>
+      #endif
+    )
+    UNICODE(world_currency_pound, /* £ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp A &kp N3 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N0 &kp N0 &kp A &kp N3>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp A &kp N3 &kp ENTER>
+      #endif
+    )
+    world_currency_generic: world_currency_generic {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_sign>, <&world_currency_crypto>;
+        mods = <MOD_LSFT>;
+    };
 
     //
     // transforms
@@ -4385,6 +4469,36 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_curly1>, <&world_quotes_grave>;
+        mods = <(MOD_RSFT)>;
+    };
+    world_currency_base: world_currency_base {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_dollar>, <&world_currency_LALT>;
+        mods = <(MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
+    };
+    world_currency_LALT: world_currency_LALT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_yen>, <&world_currency_RALT>;
+        mods = <(MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
+    };
+    world_currency_RALT: world_currency_RALT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_won>, <&world_currency_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
+    };
+    world_currency_LCTL: world_currency_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_euro>, <&world_currency_RCTL>;
+        mods = <(MOD_RCTL|MOD_RSFT)>;
+    };
+    world_currency_RCTL: world_currency_RCTL {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_currency_pound>, <&world_currency_generic>;
         mods = <(MOD_RSFT)>;
     };
 

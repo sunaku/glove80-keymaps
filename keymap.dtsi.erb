@@ -1041,6 +1041,16 @@ macros {
     <%
       end
 
+      EMITTED_UNICODE_MACROS = {}
+      emit_unicode_macro_once = lambda do |id, character|
+        if emitted_id = EMITTED_UNICODE_MACROS[character]
+          emitted_id
+        else
+          emit_unicode_macro.(id, character)
+          EMITTED_UNICODE_MACROS[character] = id
+        end
+      end
+
       emit_at_root_level = lambda do |&block|
         # HACK: this is an SQL injection style attempt to temporarily escape
         # to the root level of the DTSI to alias things under new shortnames
@@ -1078,16 +1088,30 @@ macros {
       require 'yaml'
       world = YAML.load_file("world.yaml")
 
-      def letter_id_prefix(letter)
-        "world_#{letter.downcase}_"
+      def letter_id_prefix(id_prefix, letter)
+        "#{id_prefix}_#{letter.downcase}_"
       end
 
-      EMITTED_UNICODE_MACROS = {}
       emit_unicode_codepoints = lambda do |codepoints, id_prefix|
         codepoints.each do |name, codepoint|
           id = "#{id_prefix}_#{name}"
-          emit_unicode_macro.(id, codepoint)
-          EMITTED_UNICODE_MACROS[codepoint] = id
+          emit_unicode_macro_once.(id, codepoint)
+        end
+      end
+
+      emit_unicode_characters = lambda do |characters, id_prefix|
+        characters.each do |letter, transforms|
+          transforms.each do |modifier, shiftings_or_character|
+            accent_id = letter_id_prefix(id_prefix, letter) + modifier
+            if shiftings_or_character.respond_to? :map
+              shift_ids = shiftings_or_character.map do |shift, character|
+                emit_unicode_macro_once.("#{accent_id}_#{shift}", character)
+              end
+              emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
+            else
+              emit_unicode_macro_once.(accent_id, shiftings_or_character)
+            end
+          end
         end
       end
     %>
@@ -1103,17 +1127,7 @@ macros {
     // characters
     //
     <%
-      world["characters"].each do |letter, transforms|
-        transforms.each do |modifier, shiftings|
-          accent_id = letter_id_prefix(letter) + modifier
-          shift_ids = shiftings.map do |shift, character|
-            id = "#{accent_id}_#{shift}"
-            emit_unicode_macro.(id, character)
-            id
-          end
-          emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
-        end
-      end
+      emit_unicode_characters.(world["characters"], :world)
     %>
 
     //
@@ -1121,7 +1135,7 @@ macros {
     //
     <%
       world["transforms"].each do |letter, transforms|
-        id_prefix = letter_id_prefix(letter)
+        id_prefix = letter_id_prefix(:world, letter)
         remaining_precedence = world["precedence"] & transforms.keys
         available_precedence = ["base"] + remaining_precedence
 
@@ -1203,19 +1217,7 @@ macros {
     // characters
     //
     <%
-      emoji["characters"].each do |letter, transforms|
-        transforms.each do |modifier, shiftings|
-          accent_id = "emoji_#{letter}_" + modifier
-          shift_ids = shiftings.map do |shift, character|
-            unless id = EMITTED_UNICODE_MACROS[character]
-              id = "#{accent_id}_#{shift}"
-              emit_unicode_macro.(id, character)
-            end
-            id
-          end
-          emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
-        end
-      end
+      emit_unicode_characters.(emoji["characters"], :emoji)
     %>
 };
 

@@ -1,14 +1,16 @@
 precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT overrides all
 
 transforms:
-  I: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
-  E: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, RALT: ae                 }
-  A: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: ring  }
-  Y: { base: acute, LCTL: diaeresis                                                          }
-  O: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave, LALT: tilde, RALT: slash }
-  U: { base: acute, LCTL: diaeresis, RCTL: circumflex, RSFT: grave                           }
+  I: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave                             }
+  E: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   RALT: ae                 }
+  A: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde, RALT: ring  }
+  Y: { base: acute,  LCTL: diaeresis                                                            }
+  O: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde, RALT: slash }
+  U: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave                             }
   quotes: {
-       base: plain, LCTL: curly2,    RCTL: curly1,     RSFT: grave, LALT: angle              }
+       base: plain,  LCTL: curly2,    RCTL: curly1,     RSFT: grave,   LALT: angle              }
+  currency: {
+       base: dollar, LCTL: euro,      RCTL: pound,      RSFT: generic, LALT: yen,   RALT: won   }
 
 characters:
   C:
@@ -54,12 +56,23 @@ characters:
     angle:      { lower: "«", upper: "»" }
     curly1:     { lower: "‘", upper: "’" }
     curly2:     { lower: "“", upper: "”" }
+  currency:
+    dollar:     { lower: "$", upper: "¢" }
+    yen:                 "¥"
+    euro:                "€"
+    won:                 "₩"
+    pound:               "£"
+    generic:    { lower: "¤", upper: "₿" }
 
 codepoints:
-  degree_sign: "°"
-  section_sign: "§"
-  paragraph_sign: "¶"
-  o_ordinal: "º"
-  a_ordinal: "ª"
-  exclaim_left: "¡"
-  question_left: "¿"
+  degree_sign:     "°"
+  section_sign:    "§"
+  paragraph_sign:  "¶"
+  o_ordinal:       "º"
+  a_ordinal:       "ª"
+  exclaim_left:    "¡"
+  question_left:   "¿"
+  currency_crypto: "₿"
+  currency_cent:   "¢"
+  currency_sign:   "¤"
+  currency_crypto: "₿"
