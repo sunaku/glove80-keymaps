@@ -4751,6 +4751,105 @@ macros {
         <&kp RA(U) &kp N2 &kp B &kp N0 &kp N5 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
       #endif
     )
+    UNICODE(emoji_rainbow, /* 🌈 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N0 &kp N8 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N0 &kp N8>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N0 &kp N8 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_cloudy, /* ️☁️ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N2 &kp N6 &kp N0 &kp N1 &kp ENTER>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp N0 &kp N1>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N2 &kp N6 &kp N0 &kp N1 &kp ENTER>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_mostly_cloudy, /* 🌥 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N2 &kp N5 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N2 &kp N5>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N2 &kp N5 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_partly_cloudy, /* ⛅ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N2 &kp N6 &kp C &kp N5 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp C &kp N5>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N2 &kp N6 &kp C &kp N5 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_mostly_sunny, /* ️🌤️ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N2 &kp N4 &kp ENTER>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N2 &kp N4>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N1 &kp F &kp N3 &kp N2 &kp N4 &kp ENTER>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_sunny, /* ☀️ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N2 &kp N6 &kp N0 &kp N0 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N6 &kp N0 &kp N0>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N2 &kp N6 &kp N0 &kp N0 &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_sunrise, /* 🌅 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N0 &kp N5 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N0 &kp N5>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N0 &kp N5 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_sunrise_mountains, /* 🌄 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N0 &kp N4 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N0 &kp N4>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N0 &kp N4 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_cityscape, /* ️🏙️ */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp D &kp N9 &kp ENTER>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp D &kp N9>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N1 &kp F &kp N3 &kp D &kp N9 &kp ENTER>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_cityscape_dusk, /* ️🌇 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N0 &kp N7 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N0 &kp N7>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N1 &kp F &kp N3 &kp N0 &kp N7 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_cityscape_night, /* 🌃 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp N0 &kp N3 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N3 &kp N0 &kp N3>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N3 &kp N0 &kp N3 &kp ENTER>
+      #endif
+    )
     UNICODE(emoji_light_skin_tone, /* 🏻 */
       #if UNICODE_TARGET_OS == 1
         <&kp LC(LS(U)) &kp N1 &kp F &kp N3 &kp F &kp B &kp ENTER>
@@ -4985,15 +5084,6 @@ macros {
         <&kp RA(U) &kp N1 &kp F &kp N3 &kp N8 &kp N9 &kp ENTER>
       #endif
     )
-    UNICODE(emoji_fire, /* 🔥 */
-      #if UNICODE_TARGET_OS == 1
-        <&kp LC(LS(U)) &kp N1 &kp F &kp N5 &kp N2 &kp N5 &kp ENTER>
-      #elif UNICODE_TARGET_OS == 2
-        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N5 &kp N2 &kp N5>, <&macro_release &kp LALT>
-      #elif UNICODE_TARGET_OS == 3
-        <&kp RA(U) &kp N1 &kp F &kp N5 &kp N2 &kp N5 &kp ENTER>
-      #endif
-    )
     UNICODE(emoji_heart, /* ️❤️ */
       #if UNICODE_TARGET_OS == 1
         <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp LC(LS(U)) &kp N2 &kp N7 &kp N6 &kp N4 &kp ENTER>, <&kp LC(LS(U)) &kp F &kp E &kp N0 &kp F &kp ENTER>
@@ -5001,6 +5091,15 @@ macros {
         <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&macro_press &kp LALT>, <&macro_tap &kp N2 &kp N7 &kp N6 &kp N4>, <&macro_release &kp LALT>, <&macro_press &kp LALT>, <&macro_tap &kp F &kp E &kp N0 &kp F>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
         <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>, <&macro_wait_time UNICODE_SEQ_DELAY>, <&kp RA(U) &kp N2 &kp N7 &kp N6 &kp N4 &kp ENTER>, <&kp RA(U) &kp F &kp E &kp N0 &kp F &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_fire, /* 🔥 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N5 &kp N2 &kp N5 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N5 &kp N2 &kp N5>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N5 &kp N2 &kp N5 &kp ENTER>
       #endif
     )
     UNICODE(emoji_muscle, /* 💪 */
@@ -5030,13 +5129,22 @@ macros {
         <&kp RA(U) &kp N1 &kp F &kp N6 &kp N8 &kp N0 &kp ENTER>
       #endif
     )
-    UNICODE(emoji_sunglasses, /* 😎 */
+    UNICODE(emoji_joy, /* 😂 */
       #if UNICODE_TARGET_OS == 1
-        <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp E &kp ENTER>
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp N2 &kp ENTER>
       #elif UNICODE_TARGET_OS == 2
-        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp E>, <&macro_release &kp LALT>
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp N2>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp E &kp ENTER>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp N2 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_rofl, /* 🤣 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N2 &kp N3 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp N3>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N2 &kp N3 &kp ENTER>
       #endif
     )
     UNICODE(emoji_star_struck, /* 🤩 */
@@ -5048,13 +5156,31 @@ macros {
         <&kp RA(U) &kp N1 &kp F &kp N9 &kp N2 &kp N9 &kp ENTER>
       #endif
     )
-    UNICODE(emoji_joy, /* 😂 */
+    UNICODE(emoji_love_struck, /* 😍 */
       #if UNICODE_TARGET_OS == 1
-        <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp N2 &kp ENTER>
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N0 &kp D &kp ENTER>
       #elif UNICODE_TARGET_OS == 2
-        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp N2>, <&macro_release &kp LALT>
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N0 &kp D>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp N2 &kp ENTER>
+        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N0 &kp D &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_saluting_face, /* 🫡 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp A &kp E &kp N1 &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp A &kp E &kp N1>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp A &kp E &kp N1 &kp ENTER>
+      #endif
+    )
+    UNICODE(emoji_shocked_face, /* 🤯 */
+      #if UNICODE_TARGET_OS == 1
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N2 &kp F &kp ENTER>
+      #elif UNICODE_TARGET_OS == 2
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp F>, <&macro_release &kp LALT>
+      #elif UNICODE_TARGET_OS == 3
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N2 &kp F &kp ENTER>
       #endif
     )
     UNICODE(emoji_cold_sweat, /* 😰 */
@@ -5066,22 +5192,13 @@ macros {
         <&kp RA(U) &kp N1 &kp F &kp N6 &kp N3 &kp N0 &kp ENTER>
       #endif
     )
-    UNICODE(emoji_scream, /* 😱 */
+    UNICODE(emoji_monocle_face, /* 🧐 */
       #if UNICODE_TARGET_OS == 1
-        <&kp LC(LS(U)) &kp N1 &kp F &kp N6 &kp N3 &kp N1 &kp ENTER>
+        <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp D &kp N0 &kp ENTER>
       #elif UNICODE_TARGET_OS == 2
-        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N6 &kp N3 &kp N1>, <&macro_release &kp LALT>
+        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp D &kp N0>, <&macro_release &kp LALT>
       #elif UNICODE_TARGET_OS == 3
-        <&kp RA(U) &kp N1 &kp F &kp N6 &kp N3 &kp N1 &kp ENTER>
-      #endif
-    )
-    UNICODE(emoji_exploding_head, /* 🤯 */
-      #if UNICODE_TARGET_OS == 1
-        <&kp LC(LS(U)) &kp N1 &kp F &kp N9 &kp N2 &kp F &kp ENTER>
-      #elif UNICODE_TARGET_OS == 2
-        <&macro_press &kp LALT>, <&macro_tap &kp N1 &kp F &kp N9 &kp N2 &kp F>, <&macro_release &kp LALT>
-      #elif UNICODE_TARGET_OS == 3
-        <&kp RA(U) &kp N1 &kp F &kp N9 &kp N2 &kp F &kp ENTER>
+        <&kp RA(U) &kp N1 &kp F &kp N9 &kp D &kp N0 &kp ENTER>
       #endif
     )
     UNICODE(emoji_snap_fingers, /* 🫰 */
@@ -5317,6 +5434,18 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_waning_crescent_moon>, <&emoji_waxing_crescent_moon>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_face_eyes: emoji_face_eyes {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_star_struck>, <&emoji_love_struck>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_face_laughing: emoji_face_laughing {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_joy>, <&emoji_rofl>;
         mods = <MOD_LSFT>;
     };
 };

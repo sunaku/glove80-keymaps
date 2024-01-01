@@ -4,6 +4,9 @@ characters:
     gibbous:  { waning: "🌖", waxing: "🌔" }
     quarter:  { waning: "🌗", waxing: "🌓" }
     crescent: { waning: "🌘", waxing: "🌒" }
+  face:
+    eyes:     { star:   "🤩", heart:  "😍" }
+    laughing: { joy:    "😂", rofl:   "🤣" }
 
 codepoints:
 
@@ -13,6 +16,21 @@ codepoints:
   female_sign: "♀️"
   right_arrow: "➡️"
   left_arrow:  "⬅️"
+
+  # weather
+  rainbow: "🌈"
+  cloudy: "️☁️"
+  mostly_cloudy: "🌥"
+  partly_cloudy: "⛅"
+  mostly_sunny: "️🌤️"
+  sunny: "☀️"
+
+  # time of day
+  sunrise: "🌅"
+  sunrise_mountains: "🌄"
+  cityscape: "️🏙️"
+  cityscape_dusk: "️🌇"
+  cityscape_night: "🌃"
 
   # skin tones
   light_skin_tone:        "🏻"
@@ -49,19 +67,21 @@ codepoints:
 
   # number row
   tada:            "🎉"
-  fire:            "🔥"
   heart:           "️❤️"
+  fire:            "🔥"
   muscle:          "💪"
   person_climbing: "🧗"
   rocket:          "🚀"
 
   # upper row
-  sunglasses:     "😎"
-  star_struck:    "🤩"
   joy:            "😂"
+  rofl:           "🤣"
+  star_struck:    "🤩"
+  love_struck:    "😍"
+  saluting_face:  "🫡"
+  shocked_face:   "🤯"
   cold_sweat:     "😰"
-  scream:         "😱"
-  exploding_head: "🤯"
+  monocle_face:   "🧐"
 
   # home row
   snap_fingers: "🫰"
