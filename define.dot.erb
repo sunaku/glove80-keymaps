@@ -8,9 +8,13 @@ digraph settings {
   settings = {}
   `grep -A1 '^#ifndef' keymap.dtsi.min | grep '^#define'`.lines.each do |define|
     (_define, key, value) = define.split
-    if value =~ /^\d+$/
+    case value
+    when /^\d+$/
       numbers << value
       value = "NUMBER_#{value}"
+    when "\\"
+      warn({ skip: define })
+      next # skip this setting -- it's a complex multi-line definition
     end
     settings[key] = value
 %>

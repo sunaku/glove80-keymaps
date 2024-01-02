@@ -967,9 +967,9 @@ macros {
       end
 
       def format_keystrokes_for_windows_unicode(keystrokes)
-        "<&kp RA(U) #{
+        "<UNICODE_SEQ_WINDOWS(#{
           strip_leading_zeroes_from_keystrokes(keystrokes)
-        } &kp ENTER>"
+        })>"
       end
 
       def strip_leading_zeroes_from_keystrokes(keystrokes)
@@ -1080,6 +1080,19 @@ macros {
             tap-ms = <UNICODE_TAP_DELAY>; \
             bindings = __VA_ARGS__; \
         )
+
+    //
+    // UNICODE_SEQ_WINDOWS() specifies how Unicode hexadecimal codepoint
+    // keystrokes are transformed into Unicode characters under Windows.
+    //
+    // If you've configured WinCompose to use a different trigger hotkey,
+    // such as F13 instead of the default RA(U) shortcut, simply override
+    // this definition to adapt all UNICODE() function calls accordingly.
+    //
+    #ifndef UNICODE_SEQ_WINDOWS
+    #define UNICODE_SEQ_WINDOWS(keystrokes) \
+        &kp RA(U) keystrokes &kp ENTER
+    #endif
 
     //
     // NOTE: edit the world.yaml file and run `rake` to generate this:
