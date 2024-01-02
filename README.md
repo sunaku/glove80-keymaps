@@ -2,7 +2,7 @@
 
 This is [my Glove80][1] keymap featuring the [Engram][2]/[mer][3] 
 layouts with [Miryoku][4]-style layers and [home row mods][5].
-Other layouts (QWERTY, Dvorak, and Colemak/DH) and 
+Other layouts (QWERTY, Dvorak, Colemak, Workman) and 
 familiar keys (arrows, pinky shifts, function row) 
 are also provided as "training wheels" to aid your
 transition to the full glory, at your convenience.
@@ -17,7 +17,7 @@ transition to the full glory, at your convenience.
 
 ## Keymap
 
-https://my.glove80.com/#/layout/user/f3b57315-c3e5-4e75-89ba-07ebb9f84551
+https://my.glove80.com/#/layout/user/5b237589-6ea9-44ba-9f84-aeac86a2eb8e
 
 ### Legend
 
@@ -99,7 +99,7 @@ run the `rake` command to regenerate the "Custom Defined Behaviors" snippet.
 
 To install the prerequisite software for `rake` on a Debian GNU/Linux system:
 
-    apt install ruby rake
+    apt install rake
 
 ### Fine-tuning the timing
 
