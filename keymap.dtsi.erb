@@ -121,6 +121,21 @@
   require 'json'
   keymap = JSON.load_file("keymap.json")
 
+  def resolve_nested_keystrokes(key)
+    if key
+      value = key["value"]
+      params = key.dig("params", 0)
+
+      if value == "&kp"
+        resolve_nested_keystrokes(params)
+      elsif nested = resolve_nested_keystrokes(params)
+        "#{value}(#{nested})"
+      else
+        value
+      end
+    end
+  end
+
   layers = keymap["layer_names"].zip(keymap["layers"]).to_h
   layers.each do |layer_name, layer_keys|
     break if layer_name == "Lower"
@@ -138,7 +153,8 @@
       tap = 0 # &kp 0 is functionally equivalent to &none
       case behavior
       when "&kp"
-        tap = params
+        tap = resolve_nested_keystrokes(key)
+
       when "Custom"
         case params
         when /\((\w+),\s*(\w+)\)/
