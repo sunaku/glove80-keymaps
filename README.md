@@ -99,7 +99,7 @@ run the `rake` command to regenerate the "Custom Defined Behaviors" snippet.
 
 To install the prerequisite software for `rake` on a Debian GNU/Linux system:
 
-    apt install rake
+    apt install rake graphviz
 
 ### Fine-tuning the timing
 
@@ -107,6 +107,24 @@ Activate the typing layer, launch the [QMK Configurator's testing tool](
 https://config.qmk.fm/#/test ), and then pretend to use home row mods. Note the
 timing and duration of keystrokes reported by the tool and then use them to
 adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
+
+### Reordering home row mods
+
+If you change the default GACS order of home row mods on the base layer, then:
+
+1. Clone or download a copy of this Git repository (if you haven't already).
+
+2. Export your keymap as a JSON file (via "Advanced Settings" > "Enable local
+   config" then go back to "Edit" and click "Download").
+
+3. Overwrite the `keymap.json` file in this repository with your exported file.
+
+4. Run the `rake` command in this repository.
+
+5. Copy the new `keymap.dtsi` contents back to the "Custom Defined Behaviors"
+   text box in your keymap.
+
+You don't need to change the per-finger layers (such as "LeftPinky") manually.
 
 ## Discussion
 
