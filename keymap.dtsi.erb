@@ -969,9 +969,9 @@ macros {
       end
 
       def format_keystrokes_for_linux_unicode(keystrokes)
-        "<&kp LC(LS(U)) #{
+        "<UNICODE_SEQ_LINUX(#{
           strip_leading_zeroes_from_keystrokes(keystrokes)
-        } &kp ENTER>"
+        })>"
       end
 
       def format_keystrokes_for_macos_unicode(keystrokes)
@@ -1096,6 +1096,15 @@ macros {
             tap-ms = <UNICODE_TAP_DELAY>; \
             bindings = __VA_ARGS__; \
         )
+
+    //
+    // UNICODE_SEQ_LINUX() specifies how Unicode hexadecimal codepoint
+    // keystrokes are transformed into Unicode characters under Linux.
+    //
+    #ifndef UNICODE_SEQ_LINUX
+    #define UNICODE_SEQ_LINUX(keystrokes) \
+        &kp LC(LS(U)) keystrokes &kp ENTER
+    #endif
 
     //
     // UNICODE_SEQ_WINDOWS() specifies how Unicode hexadecimal codepoint
