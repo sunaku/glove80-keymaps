@@ -1127,6 +1127,13 @@ macros {
     #endif
 
     //
+    // COMPOSE_KEY_LINUX specifies the keycode for Linux Compose key.
+    //
+    #ifndef COMPOSE_KEY_LINUX
+    #define COMPOSE_KEY_LINUX RALT
+    #endif
+
+    //
     // NOTE: edit the world.yaml file and run `rake` to generate this:
     //
     <%
