@@ -143,9 +143,6 @@
 #if LAYER_<%= layer_name %> == 0
 <%
     layer_keys.each_with_index do |key, index|
-      position = POSITION_BY_INDEX[index]
-      next if position =~ /_T\d+$/ # skip thumbs
-
       behavior = key["value"]
       params = key.dig("params", 0, "value")
 
@@ -171,6 +168,7 @@
         end
       end
 
+      position = POSITION_BY_INDEX[index]
       coords = position[/^POS_(.+)/, 1]
 %>
 #define KEY_<%= coords %> <%= tap %>
