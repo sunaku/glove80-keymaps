@@ -128,9 +128,9 @@ You don't need to change the per-finger layers (such as "LeftPinky") manually.
 
 ## Discussion
 
-See ["Glorious Engrammer" on Discord][7] for discussion & updates.
+See ["Glorious Engrammer" on Discord][9] for discussion & updates.
 
-[7]: https://discord.com/channels/877392805654306816/1111469812850380831
+[9]: https://discord.com/channels/877392805654306816/1111469812850380831
 
 ## License
 
