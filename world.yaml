@@ -86,3 +86,128 @@ codepoints:
   currency_cent:   "¢"
   currency_sign:   "¤"
   currency_crypto: "₿"
+
+localizing:
+  # linux:   https://wiki.linuxquestions.org/wiki/Accented_Characters
+  # macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
+  # windows: https://sites.psu.edu/symbolcodes/windows/codealt/
+
+  "ç":
+    linux:
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp C>"
+    macos:
+      - "<&macro_tap &kp LA(C)>"
+    windows: #ALT+0231
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>"
+      - "<&macro_release &kp LALT>"
+
+  "Ç":
+    linux:
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp LS(C)>"
+    macos:
+      - "<&macro_tap &kp LA(LS(C))>"
+    windows: #ALT+0199
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>"
+      - "<&macro_release &kp LALT>"
+
+  "í":
+    linux:
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp I>"
+    macos:
+      - "<&macro_tap &kp LA(E) &kp I>"
+    windows: #ALT+0237
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7>"
+      - "<&macro_release &kp LALT>"
+
+  "Í":
+    linux:
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp LS(I)>"
+    macos:
+      - "<&macro_tap &kp LA(E) &kp LS(I)>"
+    windows: #ALT+0205
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5>"
+      - "<&macro_release &kp LALT>"
+
+  "ä":
+    linux:
+      - "<&macro_tap &kp RALT &kp DQT &kp A>"
+    macos:
+      - "<&macro_tap &kp LA(U) &kp A>"
+    windows: #ALT+0228
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>"
+      - "<&macro_release &kp LALT>"
+
+  "Ä":
+    linux:
+      - "<&macro_tap &kp RALT &kp DQT &kp LS(A)>"
+    macos:
+      - "<&macro_tap &kp LA(U) &kp LS(A)>"
+    windows: #ALT+0196
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>"
+      - "<&macro_release &kp LALT>"
+
+  "ö":
+    linux:
+      - "<&macro_tap &kp RALT &kp DQT &kp O>"
+    macos:
+      - "<&macro_tap &kp LA(U) &kp O>"
+    windows: #ALT+0246
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>"
+      - "<&macro_release &kp LALT>"
+
+  "Ö":
+    linux:
+      - "<&macro_tap &kp RALT &kp DQT &kp LS(O)>"
+    macos:
+      - "<&macro_tap &kp LA(U) &kp LS(O)>"
+    windows: #ALT+0214
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>"
+      - "<&macro_release &kp LALT>"
+
+  "ü":
+    linux:
+      - "<&macro_tap &kp RALT &kp DQT &kp U>"
+    macos:
+      - "<&macro_tap &kp LA(U) &kp U>"
+    windows: #ALT+0252
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>"
+      - "<&macro_release &kp LALT>"
+
+  "Ü":
+    linux:
+      - "<&macro_tap &kp RALT &kp DQT &kp LS(U)>"
+    macos:
+      - "<&macro_tap &kp LA(U) &kp LS(U)>"
+    windows: #ALT+0220
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>"
+      - "<&macro_release &kp LALT>"
+
+  "ß":
+    linux:
+      - "<&macro_tap &kp RALT &kp S &kp S>"
+    macos:
+      - "<&macro_tap &kp LA(S)>"
+    windows: #ALT+0223
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>"
+      - "<&macro_release &kp LALT>"
+
+  "€":
+    linux:
+      - "<&macro_tap &kp RALT &kp E &kp EQUAL>"
+    macos:
+      - "<&macro_tap &kp LA(LS(N2))>"
+    windows: #ALT+0128
+      - "<&macro_press &kp LALT>"
+      - "<&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>"
+      - "<&macro_release &kp LALT>"

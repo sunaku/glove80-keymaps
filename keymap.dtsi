@@ -3581,20 +3581,20 @@ macros {
     //
     UNICODE(world_c_cedilla_lower, /* ç */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp E &kp N7)
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp C>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N7)
+        <&macro_tap &kp LA(C)>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp E &kp N7)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>, <&macro_release &kp LALT>
       #endif
     )
     UNICODE(world_c_cedilla_upper, /* Ç */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp C &kp N7)
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp LS(C)>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N7)
+        <&macro_tap &kp LA(LS(C))>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp C &kp N7)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>, <&macro_release &kp LALT>
       #endif
     )
     world_c_cedilla: world_c_cedilla {
@@ -3605,20 +3605,20 @@ macros {
     };
     UNICODE(world_i_acute_lower, /* í */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp E &kp D)
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp I>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp D)
+        <&macro_tap &kp LA(E) &kp I>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp E &kp D)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7>, <&macro_release &kp LALT>
       #endif
     )
     UNICODE(world_i_acute_upper, /* Í */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp C &kp D)
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp LS(I)>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp D)
+        <&macro_tap &kp LA(E) &kp LS(I)>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp C &kp D)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>
       #endif
     )
     world_i_acute: world_i_acute {
@@ -3845,20 +3845,20 @@ macros {
     };
     UNICODE(world_a_diaeresis_lower, /* ä */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp E &kp N4)
+        <&macro_tap &kp RALT &kp DQT &kp A>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N4)
+        <&macro_tap &kp LA(U) &kp A>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp E &kp N4)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>
       #endif
     )
     UNICODE(world_a_diaeresis_upper, /* Ä */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp C &kp N4)
+        <&macro_tap &kp RALT &kp DQT &kp LS(A)>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N4)
+        <&macro_tap &kp LA(U) &kp LS(A)>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp C &kp N4)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>, <&macro_release &kp LALT>
       #endif
     )
     world_a_diaeresis: world_a_diaeresis {
@@ -4037,20 +4037,20 @@ macros {
     };
     UNICODE(world_o_diaeresis_lower, /* ö */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp F &kp N6)
+        <&macro_tap &kp RALT &kp DQT &kp O>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N6)
+        <&macro_tap &kp LA(U) &kp O>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp F &kp N6)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>
       #endif
     )
     UNICODE(world_o_diaeresis_upper, /* Ö */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp D &kp N6)
+        <&macro_tap &kp RALT &kp DQT &kp LS(O)>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N6)
+        <&macro_tap &kp LA(U) &kp LS(O)>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp D &kp N6)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>
       #endif
     )
     world_o_diaeresis: world_o_diaeresis {
@@ -4181,20 +4181,20 @@ macros {
     };
     UNICODE(world_u_diaeresis_lower, /* ü */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp F &kp C)
+        <&macro_tap &kp RALT &kp DQT &kp U>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp C)
+        <&macro_tap &kp LA(U) &kp U>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp F &kp C)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>, <&macro_release &kp LALT>
       #endif
     )
     UNICODE(world_u_diaeresis_upper, /* Ü */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp D &kp C)
+        <&macro_tap &kp RALT &kp DQT &kp LS(U)>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp C)
+        <&macro_tap &kp LA(U) &kp LS(U)>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp D &kp C)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>, <&macro_release &kp LALT>
       #endif
     )
     world_u_diaeresis: world_u_diaeresis {
@@ -4541,11 +4541,11 @@ macros {
     )
     UNICODE(world_currency_euro, /* € */
       #if UNICODE_TARGET_OS == 1
-        UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp A &kp C)
+        <&macro_tap &kp RALT &kp E &kp EQUAL>
       #elif UNICODE_TARGET_OS == 2
-        UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp A &kp C)
+        <&macro_tap &kp LA(LS(N2))>
       #elif UNICODE_TARGET_OS == 3
-        UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp A &kp C)
+        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>
       #endif
     )
     UNICODE(world_currency_won, /* ₩ */

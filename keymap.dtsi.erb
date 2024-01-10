@@ -1070,6 +1070,11 @@ macros {
           if sequence.length > 1
             sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
           end
+
+          # FIXME: global variable; pass it somehow instead
+          if localized = $localizing.dig(character, os.to_s)
+            sequence = localized
+          end
     %>
       #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
         <%= sequence.join(", ") %>
@@ -1160,6 +1165,7 @@ macros {
     <%
       require 'yaml'
       world = YAML.load_file("world.yaml")
+      $localizing = world["localizing"] # FIXME: global variable
 
       def letter_id_prefix(id_prefix, letter)
         "#{id_prefix}_#{letter.downcase}_"
