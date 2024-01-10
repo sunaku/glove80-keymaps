@@ -91,38 +91,43 @@ together as a group (by inheritance) or each individually (fine-grained).
 
 </details>
 
-### Unicode/Emoji characters
-
-You can customize the preset characters in the Emoji and World layers by
-editing their respective YAML source files in this repository.  Afterwards, 
-run the `rake` command to regenerate the "Custom Defined Behaviors" snippet.
-
-To install the prerequisite software for `rake` on a Debian GNU/Linux system:
-
-    apt install rake graphviz
-
-### Fine-tuning the timing
+#### Fine-tuning the timing
 
 Activate the typing layer, launch the [QMK Configurator's testing tool](
 https://config.qmk.fm/#/test ), and then pretend to use home row mods. Note the
 timing and duration of keystrokes reported by the tool and then use them to
 adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
-### Reordering home row mods
-
-If you change the default GACS order of home row mods on the base layer, then:
+### Compiling from source
 
 1. Clone or download a copy of this Git repository (if you haven't already).
 
-2. Export your keymap as a JSON file (via "Advanced Settings" > "Enable local
-   config" then go back to "Edit" and click "Download").
+2. Install dependencies OR skip this step if you have Docker on your system:
 
-3. Overwrite the `keymap.json` file in this repository with your exported file.
+    apt install rake graphviz
 
-4. Run the `rake` command in this repository.
+3. In your copy of this repository, run `rake` OR `./rake` if using Docker.
 
-5. Copy the new `keymap.dtsi` contents back to the "Custom Defined Behaviors"
-   text box in your keymap.
+#### Unicode/Emoji characters
+
+You can customize the preset characters in the Emoji and World layers by
+editing their respective YAML source files in this repository.  Afterwards, 
+run the `rake` command and then copy the new `keymap.dtsi` contents back into
+the "Custom Defined Behaviors" text box in the Layout Editor for your keymap.
+
+#### Reordering home row mods
+
+If you rearrange home row mods on your base layer in the Layout Editor, then:
+
+1. Export your keymap as a JSON file (via "Advanced Settings" > "Enable local
+   config" then go back to "Edit" and click "Download") in the Layout Editor.
+
+2. Overwrite the `keymap.json` file in this repository with your exported file.
+
+3. Run the `rake` command in this repository.
+
+4. Copy the new `keymap.dtsi` contents back into the "Custom Defined Behaviors"
+   text box in the Layout Editor for your keymap.
 
 You don't need to change the per-finger layers (such as "LeftPinky") manually.
 
