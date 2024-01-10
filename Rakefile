@@ -1,38 +1,58 @@
+require 'rake/clean'
+require 'erb'
+
 task :default => [:dtsi, :dot]
 
-dtsi_files = FileList["*.dtsi.erb"].pathmap("%X").each do |f|
-  file f => FileList["#{f}.erb", "*.{yaml,json,zmk}", __FILE__]
+#-----------------------------------------------------------------------------
+# ZMK configuration snippet (DTSI)
+#-----------------------------------------------------------------------------
+
+dtsi_files = FileList['*.dtsi.erb'].each do |erb|
+  dtsi = erb.pathmap('%X')
+  file dtsi => FileList[erb, '*.{yaml,json,zmk}', __FILE__]
+  CLEAN.include "#{erb}.tmp"
+
+  dtsi_min = "#{dtsi}.min"
+  file dtsi_min => dtsi
+  CLOBBER.include dtsi_min
 end
 task :dtsi => dtsi_files
 
-require 'erb'
-rule ".dtsi" => ".dtsi.erb" do |t|
+rule '.dtsi' => '.dtsi.erb' do |t|
   input = File.read(t.source)
     # NOTE: this may shift line numbers, hence dump *.tmp below
-    .gsub(/\n(?= *<%(?!=))/, "") # remove leading newline
+    .gsub(/\n(?= *<%(?!=))/, '') # remove leading newline
 
-  template = ERB.new(input, trim_mode: "<>")
-  template.filename = t.source + ".tmp"
+  template = ERB.new(input, trim_mode: '<>')
+  template.filename = t.source + '.tmp'
   File.write(template.filename, input) # for error line numbers
 
   output = template.result()
-    .gsub(/ +$/, "") # remove trailing spaces
+    .gsub(/ +$/, '') # remove trailing spaces
     .gsub(/\n+(?= +#(?!define))/, "\n") # tighten #elif
   File.write(t.name, output)
+end
 
-  minified_output = output
-    .gsub(%r{^\s*//(?! ==== ).*}, "") # remove comment lines
-    .gsub(%r{(?<=[^\*])//.*}, "") # remove trailing comments
-    .gsub(/^\s+/, "") # remove indentation
+rule '.dtsi.min' => '.dtsi' do |t|
+  minified = File.read(t.source)
+    .gsub(%r{^\s*//(?! ==== ).*}, '') # remove comment lines
+    .gsub(%r{(?<=[^\*])//.*}, '') # remove trailing comments
+    .gsub(/^\s+/, '') # remove indentation
     .squeeze("\n") # remove blank lines
-    .squeeze(" ") # remove extra spaces
-  File.write(t.name + ".min", minified_output)
+    .squeeze(' ') # remove extra spaces
+  File.write(t.name, minified)
 end
 
-file "define.dot" => ["define.dot.erb", "keymap.dtsi.min", __FILE__] do |t|
-  sh "erb #{t.prerequisites[0]} > #{t.name}"
-end
-file "define.svg" => "define.dot" do |t|
+#-----------------------------------------------------------------------------
+# Graphviz DOT for diagrams
+#-----------------------------------------------------------------------------
+
+task :dot => 'define.svg'
+
+file 'define.svg' => 'define.dot' do |t|
   sh "dot -Tsvg #{t.prerequisites[0]} > #{t.name}"
 end
-task :dot => "define.svg"
+
+file 'define.dot' => ['define.dot.erb', 'keymap.dtsi.min'] do |t|
+  sh "erb #{t.prerequisites[0]} > #{t.name}"
+end
