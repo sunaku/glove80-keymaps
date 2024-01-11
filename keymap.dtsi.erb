@@ -1160,6 +1160,19 @@ macros {
     #endif
 
     //
+    // COMPOSE_KEY_LINUX specifies the keycode for Compose key in Linux,
+    // which may be RALT by default but can be reconfigured as follows:
+    //
+    // $ setxkbmap -option compose:sclk # use ScrollLock as Compose key
+    //
+    // See xkeyboard-config(7) for possible choices for the Compose key:
+    // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
+    //
+    #ifndef COMPOSE_KEY_LINUX
+    #define COMPOSE_KEY_LINUX RALT
+    #endif
+
+    //
     // NOTE: edit the world.yaml file and run `rake` to generate this:
     //
     <%

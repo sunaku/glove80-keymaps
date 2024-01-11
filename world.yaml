@@ -134,7 +134,7 @@ localizing:
 
   "ä":
     linux:
-      - "<&macro_tap &kp RALT &kp DQT &kp A>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp A>"
     macos:
       - "<&macro_tap &kp LA(U) &kp A>"
     windows: #ALT+0228
@@ -144,7 +144,7 @@ localizing:
 
   "Ä":
     linux:
-      - "<&macro_tap &kp RALT &kp DQT &kp LS(A)>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(A)>"
     macos:
       - "<&macro_tap &kp LA(U) &kp LS(A)>"
     windows: #ALT+0196
@@ -154,7 +154,7 @@ localizing:
 
   "ö":
     linux:
-      - "<&macro_tap &kp RALT &kp DQT &kp O>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp O>"
     macos:
       - "<&macro_tap &kp LA(U) &kp O>"
     windows: #ALT+0246
@@ -164,7 +164,7 @@ localizing:
 
   "Ö":
     linux:
-      - "<&macro_tap &kp RALT &kp DQT &kp LS(O)>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(O)>"
     macos:
       - "<&macro_tap &kp LA(U) &kp LS(O)>"
     windows: #ALT+0214
@@ -174,7 +174,7 @@ localizing:
 
   "ü":
     linux:
-      - "<&macro_tap &kp RALT &kp DQT &kp U>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp U>"
     macos:
       - "<&macro_tap &kp LA(U) &kp U>"
     windows: #ALT+0252
@@ -184,7 +184,7 @@ localizing:
 
   "Ü":
     linux:
-      - "<&macro_tap &kp RALT &kp DQT &kp LS(U)>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(U)>"
     macos:
       - "<&macro_tap &kp LA(U) &kp LS(U)>"
     windows: #ALT+0220
@@ -194,7 +194,7 @@ localizing:
 
   "ß":
     linux:
-      - "<&macro_tap &kp RALT &kp S &kp S>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp S &kp S>"
     macos:
       - "<&macro_tap &kp LA(S)>"
     windows: #ALT+0223
@@ -204,7 +204,7 @@ localizing:
 
   "€":
     linux:
-      - "<&macro_tap &kp RALT &kp E &kp EQUAL>"
+      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp E &kp EQUAL>"
     macos:
       - "<&macro_tap &kp LA(LS(N2))>"
     windows: #ALT+0128

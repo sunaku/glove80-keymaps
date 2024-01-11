@@ -3479,6 +3479,19 @@ macros {
     #endif
 
     //
+    // COMPOSE_KEY_LINUX specifies the keycode for Compose key in Linux,
+    // which may be RALT by default but can be reconfigured as follows:
+    //
+    // $ setxkbmap -option compose:sclk # use ScrollLock as Compose key
+    //
+    // See xkeyboard-config(7) for possible choices for the Compose key:
+    // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
+    //
+    #ifndef COMPOSE_KEY_LINUX
+    #define COMPOSE_KEY_LINUX RALT
+    #endif
+
+    //
     // NOTE: edit the world.yaml file and run `rake` to generate this:
     //
 
@@ -3845,7 +3858,7 @@ macros {
     };
     UNICODE(world_a_diaeresis_lower, /* ä */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp DQT &kp A>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp A>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(U) &kp A>
       #elif UNICODE_TARGET_OS == 3
@@ -3854,7 +3867,7 @@ macros {
     )
     UNICODE(world_a_diaeresis_upper, /* Ä */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp DQT &kp LS(A)>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(A)>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(U) &kp LS(A)>
       #elif UNICODE_TARGET_OS == 3
@@ -4037,7 +4050,7 @@ macros {
     };
     UNICODE(world_o_diaeresis_lower, /* ö */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp DQT &kp O>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp O>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(U) &kp O>
       #elif UNICODE_TARGET_OS == 3
@@ -4046,7 +4059,7 @@ macros {
     )
     UNICODE(world_o_diaeresis_upper, /* Ö */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp DQT &kp LS(O)>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(O)>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(U) &kp LS(O)>
       #elif UNICODE_TARGET_OS == 3
@@ -4181,7 +4194,7 @@ macros {
     };
     UNICODE(world_u_diaeresis_lower, /* ü */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp DQT &kp U>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp U>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(U) &kp U>
       #elif UNICODE_TARGET_OS == 3
@@ -4190,7 +4203,7 @@ macros {
     )
     UNICODE(world_u_diaeresis_upper, /* Ü */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp DQT &kp LS(U)>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(U)>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(U) &kp LS(U)>
       #elif UNICODE_TARGET_OS == 3
@@ -4541,7 +4554,7 @@ macros {
     )
     UNICODE(world_currency_euro, /* € */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp RALT &kp E &kp EQUAL>
+        <&macro_tap &kp COMPOSE_KEY_LINUX &kp E &kp EQUAL>
       #elif UNICODE_TARGET_OS == 2
         <&macro_tap &kp LA(LS(N2))>
       #elif UNICODE_TARGET_OS == 3
