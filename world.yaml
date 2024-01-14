@@ -88,126 +88,70 @@ codepoints:
   currency_crypto: "₿"
 
 localizing:
+  #
+  # - "COMPOSE" is a special keyword that is replaced by COMPOSE_KEY_LINUX
+  # - "ALT+" is a special prefix that is replaced by COMPOSE_SEQ_WINDOWS()
+  #
   # linux:   https://wiki.linuxquestions.org/wiki/Accented_Characters
   # macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
   # windows: https://sites.psu.edu/symbolcodes/windows/codealt/
 
   "ç":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp C>"
-    macos:
-      - "<&macro_tap &kp LA(C)>"
-    windows: #ALT+0231
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE COMMA C
+    macos:   LA(C)
+    windows: ALT+0231
 
   "Ç":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp LS(C)>"
-    macos:
-      - "<&macro_tap &kp LA(LS(C))>"
-    windows: #ALT+0199
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE COMMA LS(C)
+    macos:   LA(LS(C))
+    windows: ALT+0199
 
   "í":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp I>"
-    macos:
-      - "<&macro_tap &kp LA(E) &kp I>"
-    windows: #ALT+0237
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE SQT I
+    macos:   LA(E) I
+    windows: ALT+0237
 
   "Í":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp LS(I)>"
-    macos:
-      - "<&macro_tap &kp LA(E) &kp LS(I)>"
-    windows: #ALT+0205
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE SQT LS(I)
+    macos:   LA(E) LS(I)
+    windows: ALT+0205
 
   "ä":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp A>"
-    macos:
-      - "<&macro_tap &kp LA(U) &kp A>"
-    windows: #ALT+0228
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE DQT A
+    macos:   LA(U) A
+    windows: ALT+0228
 
   "Ä":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(A)>"
-    macos:
-      - "<&macro_tap &kp LA(U) &kp LS(A)>"
-    windows: #ALT+0196
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE DQT LS(A)
+    macos:   LA(U) LS(A)
+    windows: ALT+0196
 
   "ö":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp O>"
-    macos:
-      - "<&macro_tap &kp LA(U) &kp O>"
-    windows: #ALT+0246
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE DQT O
+    macos:   LA(U) O
+    windows: ALT+0246
 
   "Ö":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(O)>"
-    macos:
-      - "<&macro_tap &kp LA(U) &kp LS(O)>"
-    windows: #ALT+0214
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE DQT LS(O)
+    macos:   LA(U) LS(O)
+    windows: ALT+0214
 
   "ü":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp U>"
-    macos:
-      - "<&macro_tap &kp LA(U) &kp U>"
-    windows: #ALT+0252
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE DQT U
+    macos:   LA(U) U
+    windows: ALT+0252
 
   "Ü":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(U)>"
-    macos:
-      - "<&macro_tap &kp LA(U) &kp LS(U)>"
-    windows: #ALT+0220
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE DQT LS(U)
+    macos:   LA(U) LS(U)
+    windows: ALT+0220
 
   "ß":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp S &kp S>"
-    macos:
-      - "<&macro_tap &kp LA(S)>"
-    windows: #ALT+0223
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE S S
+    macos:   LA(S)
+    windows: ALT+0223
 
   "€":
-    linux:
-      - "<&macro_tap &kp COMPOSE_KEY_LINUX &kp E &kp EQUAL>"
-    macos:
-      - "<&macro_tap &kp LA(LS(N2))>"
-    windows: #ALT+0128
-      - "<&macro_press &kp LALT>"
-      - "<&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>"
-      - "<&macro_release &kp LALT>"
+    linux:   COMPOSE E EQUAL
+    macos:   LA(LS(N2))
+    windows: ALT+0128

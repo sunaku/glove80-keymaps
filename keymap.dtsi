@@ -3492,6 +3492,32 @@ macros {
     #endif
 
     //
+    // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
+    //
+    #ifndef COMPOSE_SEQ_LINUX
+    #define COMPOSE_SEQ_LINUX(keystrokes) \
+        <&macro_tap &kp COMPOSE_KEY_LINUX keystrokes>
+    #endif
+
+    //
+    // COMPOSE_SEQ_MACOS() formats keystrokes for macOS character entry.
+    //
+    #ifndef COMPOSE_SEQ_MACOS
+    #define COMPOSE_SEQ_MACOS(keystrokes) \
+        <&macro_tap keystrokes>
+    #endif
+
+    //
+    // COMPOSE_SEQ_WINDOWS() wraps keystrokes in Windows AltCode sequence.
+    //
+    #ifndef COMPOSE_SEQ_WINDOWS
+    #define COMPOSE_SEQ_WINDOWS(keystrokes) \
+        <&macro_press &kp LALT>, \
+        <&macro_tap keystrokes>, \
+        <&macro_release &kp LALT>
+    #endif
+
+    //
     // NOTE: edit the world.yaml file and run `rake` to generate this:
     //
 
@@ -3594,20 +3620,20 @@ macros {
     //
     UNICODE(world_c_cedilla_lower, /* ç */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp C>
+        COMPOSE_SEQ_LINUX(&kp COMMA &kp C)
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(C)>
+        COMPOSE_SEQ_MACOS(&kp LA(C))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
       #endif
     )
     UNICODE(world_c_cedilla_upper, /* Ç */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp COMMA &kp LS(C)>
+        COMPOSE_SEQ_LINUX(&kp COMMA &kp LS(C))
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(LS(C))>
+        COMPOSE_SEQ_MACOS(&kp LA(LS(C)))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
       #endif
     )
     world_c_cedilla: world_c_cedilla {
@@ -3618,20 +3644,20 @@ macros {
     };
     UNICODE(world_i_acute_lower, /* í */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp I>
+        COMPOSE_SEQ_LINUX(&kp SQT &kp I)
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(E) &kp I>
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp I)
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7)
       #endif
     )
     UNICODE(world_i_acute_upper, /* Í */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp SQT &kp LS(I)>
+        COMPOSE_SEQ_LINUX(&kp SQT &kp LS(I))
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(E) &kp LS(I)>
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(I))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5)
       #endif
     )
     world_i_acute: world_i_acute {
@@ -3858,20 +3884,20 @@ macros {
     };
     UNICODE(world_a_diaeresis_lower, /* ä */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp A>
+        COMPOSE_SEQ_LINUX(&kp DQT &kp A)
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(U) &kp A>
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp A)
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8)
       #endif
     )
     UNICODE(world_a_diaeresis_upper, /* Ä */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(A)>
+        COMPOSE_SEQ_LINUX(&kp DQT &kp LS(A))
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(U) &kp LS(A)>
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(A))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6)
       #endif
     )
     world_a_diaeresis: world_a_diaeresis {
@@ -4050,20 +4076,20 @@ macros {
     };
     UNICODE(world_o_diaeresis_lower, /* ö */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp O>
+        COMPOSE_SEQ_LINUX(&kp DQT &kp O)
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(U) &kp O>
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp O)
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6)
       #endif
     )
     UNICODE(world_o_diaeresis_upper, /* Ö */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(O)>
+        COMPOSE_SEQ_LINUX(&kp DQT &kp LS(O))
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(U) &kp LS(O)>
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(O))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4)
       #endif
     )
     world_o_diaeresis: world_o_diaeresis {
@@ -4194,20 +4220,20 @@ macros {
     };
     UNICODE(world_u_diaeresis_lower, /* ü */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp U>
+        COMPOSE_SEQ_LINUX(&kp DQT &kp U)
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(U) &kp U>
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp U)
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2)
       #endif
     )
     UNICODE(world_u_diaeresis_upper, /* Ü */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp DQT &kp LS(U)>
+        COMPOSE_SEQ_LINUX(&kp DQT &kp LS(U))
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(U) &kp LS(U)>
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(U))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0)
       #endif
     )
     world_u_diaeresis: world_u_diaeresis {
@@ -4554,11 +4580,11 @@ macros {
     )
     UNICODE(world_currency_euro, /* € */
       #if UNICODE_TARGET_OS == 1
-        <&macro_tap &kp COMPOSE_KEY_LINUX &kp E &kp EQUAL>
+        COMPOSE_SEQ_LINUX(&kp E &kp EQUAL)
       #elif UNICODE_TARGET_OS == 2
-        <&macro_tap &kp LA(LS(N2))>
+        COMPOSE_SEQ_MACOS(&kp LA(LS(N2)))
       #elif UNICODE_TARGET_OS == 3
-        <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8)
       #endif
     )
     UNICODE(world_currency_won, /* ₩ */

@@ -1057,6 +1057,24 @@ macros {
     <%
       end
 
+      def resolve_localized_keystrokes(localized, os)
+        STDOUT.flush
+        keycodes =
+          case os
+          when :linux
+            localized.sub(/^COMPOSE\b/, '')
+          when :macos
+            localized
+          when :windows
+            localized.sub(/^ALT\+/, '').gsub(/\d/, 'KP_N\& ')
+          end
+          .split
+
+        keystrokes = keycodes.map{ |key| "&kp #{key}" }.join(' ')
+
+        ["COMPOSE_SEQ_#{os.to_s.upcase}(#{keystrokes})"]
+      end
+
       emit_unicode_macro = lambda do |id, character|
     %>
     UNICODE(<%= id %>, /* <%= character %> */
@@ -1073,7 +1091,7 @@ macros {
 
           # FIXME: global variable; pass it somehow instead
           if localized = $localizing.dig(character, os.to_s)
-            sequence = localized
+            sequence = resolve_localized_keystrokes(localized, os)
           end
     %>
       #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
@@ -1170,6 +1188,32 @@ macros {
     //
     #ifndef COMPOSE_KEY_LINUX
     #define COMPOSE_KEY_LINUX RALT
+    #endif
+
+    //
+    // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
+    //
+    #ifndef COMPOSE_SEQ_LINUX
+    #define COMPOSE_SEQ_LINUX(keystrokes) \
+        <&macro_tap &kp COMPOSE_KEY_LINUX keystrokes>
+    #endif
+
+    //
+    // COMPOSE_SEQ_MACOS() formats keystrokes for macOS character entry.
+    //
+    #ifndef COMPOSE_SEQ_MACOS
+    #define COMPOSE_SEQ_MACOS(keystrokes) \
+        <&macro_tap keystrokes>
+    #endif
+
+    //
+    // COMPOSE_SEQ_WINDOWS() wraps keystrokes in Windows AltCode sequence.
+    //
+    #ifndef COMPOSE_SEQ_WINDOWS
+    #define COMPOSE_SEQ_WINDOWS(keystrokes) \
+        <&macro_press &kp LALT>, \
+        <&macro_tap keystrokes>, \
+        <&macro_release &kp LALT>
     #endif
 
     //
