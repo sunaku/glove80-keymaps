@@ -143,6 +143,8 @@ If you rearrange the base layer (say, for a custom or alternative layout) then:
 
 1. Export your keymap as a JSON file (via "Advanced Settings" > "Enable local
    config" then go back to "Edit" and click "Download") in the Layout Editor.
+   ![Enable local config](https://github.com/sunaku/glove80-keymaps/assets/9863/5bf7ff67-94bc-4d8e-9673-271863966dd2)
+   ![Download JSON export](https://github.com/sunaku/glove80-keymaps/assets/9863/a7ad7155-e0e6-47e1-ad4c-c89b4d8521b9)
 
 2. Overwrite the `keymap.json` file in this repository with your exported file.
 
