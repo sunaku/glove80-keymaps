@@ -129,7 +129,6 @@
 #define KEY_LH_C6R3 GRAVE
 #define KEY_LH_C5R3 B
 #define KEY_LH_C4R3 Y
-#define MOD_LH_C4R3 RALT
 #define KEY_LH_C3R3 O
 #define KEY_LH_C2R3 U
 #define KEY_LH_C1R3 SQT
@@ -137,28 +136,19 @@
 #define KEY_RH_C2R3 L
 #define KEY_RH_C3R3 D
 #define KEY_RH_C4R3 W
-#define MOD_RH_C4R3 RALT
 #define KEY_RH_C5R3 V
 #define KEY_RH_C6R3 Z
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 C
-#define MOD_LH_C5R4 LGUI
 #define KEY_LH_C4R4 I
-#define MOD_LH_C4R4 LALT
 #define KEY_LH_C3R4 E
-#define MOD_LH_C3R4 LCTL
 #define KEY_LH_C2R4 A
-#define MOD_LH_C2R4 LSFT
 #define KEY_LH_C1R4 COMMA
 #define KEY_RH_C1R4 DOT
 #define KEY_RH_C2R4 H
-#define MOD_RH_C2R4 LSFT
 #define KEY_RH_C3R4 T
-#define MOD_RH_C3R4 LCTL
 #define KEY_RH_C4R4 S
-#define MOD_RH_C4R4 LALT
 #define KEY_RH_C5R4 N
-#define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 Q
 #define KEY_LH_C6R5 LSHFT
 #define KEY_LH_C5R5 G
@@ -221,7 +211,6 @@
 #define KEY_LH_C6R3 AT
 #define KEY_LH_C5R3 B
 #define KEY_LH_C4R3 Y
-#define MOD_LH_C4R3 RALT
 #define KEY_LH_C3R3 O
 #define KEY_LH_C2R3 U
 #define KEY_LH_C1R3 SQT
@@ -229,28 +218,19 @@
 #define KEY_RH_C2R3 L
 #define KEY_RH_C3R3 D
 #define KEY_RH_C4R3 W
-#define MOD_RH_C4R3 RALT
 #define KEY_RH_C5R3 V
 #define KEY_RH_C6R3 Z
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 C
-#define MOD_LH_C5R4 LGUI
 #define KEY_LH_C4R4 I
-#define MOD_LH_C4R4 LALT
 #define KEY_LH_C3R4 E
-#define MOD_LH_C3R4 LCTL
 #define KEY_LH_C2R4 A
-#define MOD_LH_C2R4 LSFT
 #define KEY_LH_C1R4 COMMA
 #define KEY_RH_C1R4 DOT
 #define KEY_RH_C2R4 H
-#define MOD_RH_C2R4 LSFT
 #define KEY_RH_C3R4 T
-#define MOD_RH_C3R4 LCTL
 #define KEY_RH_C4R4 S
-#define MOD_RH_C4R4 LALT
 #define KEY_RH_C5R4 N
-#define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 Q
 #define KEY_LH_C6R5 LSHFT
 #define KEY_LH_C5R5 G
@@ -313,7 +293,6 @@
 #define KEY_LH_C6R3 GRAVE
 #define KEY_LH_C5R3 SQT
 #define KEY_LH_C4R3 COMMA
-#define MOD_LH_C4R3 RALT
 #define KEY_LH_C3R3 DOT
 #define KEY_LH_C2R3 P
 #define KEY_LH_C1R3 Y
@@ -321,28 +300,19 @@
 #define KEY_RH_C2R3 G
 #define KEY_RH_C3R3 C
 #define KEY_RH_C4R3 R
-#define MOD_RH_C4R3 RALT
 #define KEY_RH_C5R3 L
 #define KEY_RH_C6R3 SLASH
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 A
-#define MOD_LH_C5R4 LGUI
 #define KEY_LH_C4R4 O
-#define MOD_LH_C4R4 LALT
 #define KEY_LH_C3R4 E
-#define MOD_LH_C3R4 LCTL
 #define KEY_LH_C2R4 U
-#define MOD_LH_C2R4 LSFT
 #define KEY_LH_C1R4 I
 #define KEY_RH_C1R4 D
 #define KEY_RH_C2R4 H
-#define MOD_RH_C2R4 LSFT
 #define KEY_RH_C3R4 T
-#define MOD_RH_C3R4 LCTL
 #define KEY_RH_C4R4 N
-#define MOD_RH_C4R4 LALT
 #define KEY_RH_C5R4 S
-#define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 MINUS
 #define KEY_LH_C6R5 LSHFT
 #define KEY_LH_C5R5 SEMI
@@ -405,7 +375,6 @@
 #define KEY_LH_C6R3 GRAVE
 #define KEY_LH_C5R3 Q
 #define KEY_LH_C4R3 D
-#define MOD_LH_C4R3 RALT
 #define KEY_LH_C3R3 R
 #define KEY_LH_C2R3 W
 #define KEY_LH_C1R3 B
@@ -413,28 +382,19 @@
 #define KEY_RH_C2R3 F
 #define KEY_RH_C3R3 U
 #define KEY_RH_C4R3 P
-#define MOD_RH_C4R3 RALT
 #define KEY_RH_C5R3 SEMI
 #define KEY_RH_C6R3 MINUS
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 A
-#define MOD_LH_C5R4 LGUI
 #define KEY_LH_C4R4 S
-#define MOD_LH_C4R4 LALT
 #define KEY_LH_C3R4 H
-#define MOD_LH_C3R4 LCTL
 #define KEY_LH_C2R4 T
-#define MOD_LH_C2R4 LSFT
 #define KEY_LH_C1R4 G
 #define KEY_RH_C1R4 Y
 #define KEY_RH_C2R4 N
-#define MOD_RH_C2R4 LSFT
 #define KEY_RH_C3R4 E
-#define MOD_RH_C3R4 LCTL
 #define KEY_RH_C4R4 O
-#define MOD_RH_C4R4 LALT
 #define KEY_RH_C5R4 I
-#define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 SQT
 #define KEY_LH_C6R5 LSHFT
 #define KEY_LH_C5R5 Z
@@ -497,7 +457,6 @@
 #define KEY_LH_C6R3 GRAVE
 #define KEY_LH_C5R3 Q
 #define KEY_LH_C4R3 W
-#define MOD_LH_C4R3 RALT
 #define KEY_LH_C3R3 F
 #define KEY_LH_C2R3 P
 #define KEY_LH_C1R3 G
@@ -505,28 +464,19 @@
 #define KEY_RH_C2R3 L
 #define KEY_RH_C3R3 U
 #define KEY_RH_C4R3 Y
-#define MOD_RH_C4R3 RALT
 #define KEY_RH_C5R3 SEMI
 #define KEY_RH_C6R3 MINUS
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 A
-#define MOD_LH_C5R4 LGUI
 #define KEY_LH_C4R4 R
-#define MOD_LH_C4R4 LALT
 #define KEY_LH_C3R4 S
-#define MOD_LH_C3R4 LCTL
 #define KEY_LH_C2R4 T
-#define MOD_LH_C2R4 LSFT
 #define KEY_LH_C1R4 D
 #define KEY_RH_C1R4 H
 #define KEY_RH_C2R4 N
-#define MOD_RH_C2R4 LSFT
 #define KEY_RH_C3R4 E
-#define MOD_RH_C3R4 LCTL
 #define KEY_RH_C4R4 I
-#define MOD_RH_C4R4 LALT
 #define KEY_RH_C5R4 O
-#define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 SQT
 #define KEY_LH_C6R5 LSHFT
 #define KEY_LH_C5R5 Z
@@ -589,7 +539,6 @@
 #define KEY_LH_C6R3 GRAVE
 #define KEY_LH_C5R3 Q
 #define KEY_LH_C4R3 W
-#define MOD_LH_C4R3 RALT
 #define KEY_LH_C3R3 E
 #define KEY_LH_C2R3 R
 #define KEY_LH_C1R3 T
@@ -597,28 +546,19 @@
 #define KEY_RH_C2R3 U
 #define KEY_RH_C3R3 I
 #define KEY_RH_C4R3 O
-#define MOD_RH_C4R3 RALT
 #define KEY_RH_C5R3 P
 #define KEY_RH_C6R3 MINUS
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 A
-#define MOD_LH_C5R4 LGUI
 #define KEY_LH_C4R4 S
-#define MOD_LH_C4R4 LALT
 #define KEY_LH_C3R4 D
-#define MOD_LH_C3R4 LCTL
 #define KEY_LH_C2R4 F
-#define MOD_LH_C2R4 LSFT
 #define KEY_LH_C1R4 G
 #define KEY_RH_C1R4 H
 #define KEY_RH_C2R4 J
-#define MOD_RH_C2R4 LSFT
 #define KEY_RH_C3R4 K
-#define MOD_RH_C3R4 LCTL
 #define KEY_RH_C4R4 L
-#define MOD_RH_C4R4 LALT
 #define KEY_RH_C5R4 SEMI
-#define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 SQT
 #define KEY_LH_C6R5 LSHFT
 #define KEY_LH_C5R5 Z
@@ -682,6 +622,68 @@ behaviors {
     // you prefer to use the &plain overlay method of key repetition instead.
     //
     //#define ENABLE_KEY_REPEAT
+
+    //
+    // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
+    // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
+    // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped.
+    //
+    #ifndef PINKY_FINGER_MOD
+      #if OPERATING_SYSTEM == 2
+        #define PINKY_FINGER_MOD LCTL
+      #else
+        #define PINKY_FINGER_MOD LGUI
+      #endif
+    #endif
+    #ifndef RING1_FINGER_MOD
+    #define RING1_FINGER_MOD LALT
+    #endif
+    #ifndef RING2_FINGER_MOD
+    #define RING2_FINGER_MOD RALT
+    #endif
+    #ifndef MIDDY_FINGER_MOD
+      #if OPERATING_SYSTEM == 2
+        #define MIDDY_FINGER_MOD LGUI
+      #else
+        #define MIDDY_FINGER_MOD LCTL
+      #endif
+    #endif
+    #ifndef INDEX_FINGER_MOD
+    #define INDEX_FINGER_MOD LSFT
+    #endif
+    //
+    // The following settings let you configure mods individually, per finger:
+    //
+    #ifndef LEFT_PINKY_MOD
+    #define LEFT_PINKY_MOD  PINKY_FINGER_MOD
+    #endif
+    #ifndef RIGHT_PINKY_MOD
+    #define RIGHT_PINKY_MOD PINKY_FINGER_MOD
+    #endif
+    #ifndef LEFT_RING1_MOD
+    #define LEFT_RING1_MOD  RING1_FINGER_MOD
+    #endif
+    #ifndef RIGHT_RING1_MOD
+    #define RIGHT_RING1_MOD RING1_FINGER_MOD
+    #endif
+    #ifndef LEFT_RING2_MOD
+    #define LEFT_RING2_MOD  RING2_FINGER_MOD
+    #endif
+    #ifndef RIGHT_RING2_MOD
+    #define RIGHT_RING2_MOD RING2_FINGER_MOD
+    #endif
+    #ifndef LEFT_MIDDY_MOD
+    #define LEFT_MIDDY_MOD  MIDDY_FINGER_MOD
+    #endif
+    #ifndef RIGHT_MIDDY_MOD
+    #define RIGHT_MIDDY_MOD MIDDY_FINGER_MOD
+    #endif
+    #ifndef LEFT_INDEX_MOD
+    #define LEFT_INDEX_MOD  INDEX_FINGER_MOD
+    #endif
+    #ifndef RIGHT_INDEX_MOD
+    #define RIGHT_INDEX_MOD INDEX_FINGER_MOD
+    #endif
 
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -922,31 +924,17 @@ behaviors {
                           71 54   55 72
 
     #define LEFT_PINKY_KEY  KEY_LH_C5R4
-    #define LEFT_PINKY_MOD  MOD_LH_C5R4
-    #define RIGHT_PINKY_KEY KEY_RH_C5R4
-    #define RIGHT_PINKY_MOD MOD_RH_C5R4
-
     #define LEFT_RING1_KEY  KEY_LH_C4R4
-    #define LEFT_RING1_MOD  MOD_LH_C4R4
-    #define RIGHT_RING1_KEY KEY_RH_C4R4
-    #define RIGHT_RING1_MOD MOD_RH_C4R4
-
     #define LEFT_RING2_KEY  KEY_LH_C4R3
-    #define LEFT_RING2_MOD  MOD_LH_C4R3
-    #define RIGHT_RING2_KEY KEY_RH_C4R3
-    #define RIGHT_RING2_MOD MOD_RH_C4R3
-
     #define LEFT_MIDDY_KEY  KEY_LH_C3R4
-    #define LEFT_MIDDY_MOD  MOD_LH_C3R4
-    #define RIGHT_MIDDY_KEY KEY_RH_C3R4
-    #define RIGHT_MIDDY_MOD MOD_RH_C3R4
-
     #define LEFT_INDEX_KEY  KEY_LH_C2R4
-    #define LEFT_INDEX_MOD  MOD_LH_C2R4
-    #define RIGHT_INDEX_KEY KEY_RH_C2R4
-    #define RIGHT_INDEX_MOD MOD_RH_C2R4
-
     #define LEFT_PLAIN_KEY  KEY_LH_C1R4
+
+    #define RIGHT_PINKY_KEY KEY_RH_C5R4
+    #define RIGHT_RING1_KEY KEY_RH_C4R4
+    #define RIGHT_RING2_KEY KEY_RH_C4R3
+    #define RIGHT_MIDDY_KEY KEY_RH_C3R4
+    #define RIGHT_INDEX_KEY KEY_RH_C2R4
     #define RIGHT_PLAIN_KEY KEY_RH_C1R4
 
     //
@@ -1252,7 +1240,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define LeftPinky(mod,key) left_pinky mod key
+    #define LeftPinky(key) left_pinky LEFT_PINKY_MOD key
     #ifndef RIGHT_PINKY_HOLDING_TYPE
     #define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
     #endif
@@ -1313,7 +1301,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define RightPinky(mod,key) right_pinky mod key
+    #define RightPinky(key) right_pinky RIGHT_PINKY_MOD key
     #ifndef LEFT_RING1_HOLDING_TYPE
     #define LEFT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
     #endif
@@ -1374,7 +1362,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define LeftRing1(mod,key) left_ring1 mod key
+    #define LeftRing1(key) left_ring1 LEFT_RING1_MOD key
     #ifndef RIGHT_RING1_HOLDING_TYPE
     #define RIGHT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
     #endif
@@ -1435,7 +1423,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define RightRing1(mod,key) right_ring1 mod key
+    #define RightRing1(key) right_ring1 RIGHT_RING1_MOD key
     #ifndef LEFT_RING2_HOLDING_TYPE
     #define LEFT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
     #endif
@@ -1496,7 +1484,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define LeftRing2(mod,key) left_ring2 mod key
+    #define LeftRing2(key) left_ring2 LEFT_RING2_MOD key
     #ifndef RIGHT_RING2_HOLDING_TYPE
     #define RIGHT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
     #endif
@@ -1557,7 +1545,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define RightRing2(mod,key) right_ring2 mod key
+    #define RightRing2(key) right_ring2 RIGHT_RING2_MOD key
     #ifndef LEFT_MIDDY_HOLDING_TYPE
     #define LEFT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
     #endif
@@ -1618,7 +1606,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define LeftMiddy(mod,key) left_middy mod key
+    #define LeftMiddy(key) left_middy LEFT_MIDDY_MOD key
     #ifndef RIGHT_MIDDY_HOLDING_TYPE
     #define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
     #endif
@@ -1679,7 +1667,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define RightMiddy(mod,key) right_middy mod key
+    #define RightMiddy(key) right_middy RIGHT_MIDDY_MOD key
     #ifndef LEFT_INDEX_HOLDING_TYPE
     #define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
     #endif
@@ -1740,7 +1728,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define LeftIndex(mod,key) left_index mod key
+    #define LeftIndex(key) left_index LEFT_INDEX_MOD key
     #ifndef RIGHT_INDEX_HOLDING_TYPE
     #define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
     #endif
@@ -1801,7 +1789,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define RightIndex(mod,key) right_index mod key
+    #define RightIndex(key) right_index RIGHT_INDEX_MOD key
     #ifndef LEFT_RING1_PINKY_HOLDING_TYPE
     #define LEFT_RING1_PINKY_HOLDING_TYPE LEFT_RING1_CHORD_HOLDING_TYPE
     #endif

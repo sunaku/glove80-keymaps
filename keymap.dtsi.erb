@@ -137,8 +137,7 @@
   end
 
   layers = keymap["layer_names"].zip(keymap["layers"]).to_h
-  layers.each do |layer_name, layer_keys|
-    break if layer_name == "Lower"
+  layers.first(6).each do |layer_name, layer_keys|
 %>
 #if LAYER_<%= layer_name %> == 0
 <%
@@ -146,7 +145,6 @@
       behavior = key["value"]
       params = key.dig("params", 0, "value")
 
-      mod = nil
       tap = 0 # &kp 0 is functionally equivalent to &none
       case behavior
       when "&kp"
@@ -154,9 +152,8 @@
 
       when "Custom"
         case params
-        when /\((\w+),\s*(\w+)\)/
-          mod = $1
-          tap = $2
+        when /(?:Left|Right)\w+\s*\(\s*(\w+)\s*\)/
+          tap = $1
         when /engram_(\w+)/
           tap = $1
         when /parang_left/
@@ -173,11 +170,6 @@
 %>
 #define KEY_<%= coords %> <%= tap %>
 <%
-      if mod
-%>
-#define MOD_<%= coords %> <%= mod %>
-<%
-      end
     end
 %>
 #endif
@@ -211,6 +203,68 @@ behaviors {
     // you prefer to use the &plain overlay method of key repetition instead.
     //
     //#define ENABLE_KEY_REPEAT
+
+    //
+    // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
+    // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
+    // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped.
+    //
+    #ifndef PINKY_FINGER_MOD
+      #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
+        #define PINKY_FINGER_MOD LCTL
+      #else
+        #define PINKY_FINGER_MOD LGUI
+      #endif
+    #endif
+    #ifndef RING1_FINGER_MOD
+    #define RING1_FINGER_MOD LALT
+    #endif
+    #ifndef RING2_FINGER_MOD
+    #define RING2_FINGER_MOD RALT
+    #endif
+    #ifndef MIDDY_FINGER_MOD
+      #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
+        #define MIDDY_FINGER_MOD LGUI
+      #else
+        #define MIDDY_FINGER_MOD LCTL
+      #endif
+    #endif
+    #ifndef INDEX_FINGER_MOD
+    #define INDEX_FINGER_MOD LSFT
+    #endif
+    //
+    // The following settings let you configure mods individually, per finger:
+    //
+    #ifndef LEFT_PINKY_MOD
+    #define LEFT_PINKY_MOD  PINKY_FINGER_MOD
+    #endif
+    #ifndef RIGHT_PINKY_MOD
+    #define RIGHT_PINKY_MOD PINKY_FINGER_MOD
+    #endif
+    #ifndef LEFT_RING1_MOD
+    #define LEFT_RING1_MOD  RING1_FINGER_MOD
+    #endif
+    #ifndef RIGHT_RING1_MOD
+    #define RIGHT_RING1_MOD RING1_FINGER_MOD
+    #endif
+    #ifndef LEFT_RING2_MOD
+    #define LEFT_RING2_MOD  RING2_FINGER_MOD
+    #endif
+    #ifndef RIGHT_RING2_MOD
+    #define RIGHT_RING2_MOD RING2_FINGER_MOD
+    #endif
+    #ifndef LEFT_MIDDY_MOD
+    #define LEFT_MIDDY_MOD  MIDDY_FINGER_MOD
+    #endif
+    #ifndef RIGHT_MIDDY_MOD
+    #define RIGHT_MIDDY_MOD MIDDY_FINGER_MOD
+    #endif
+    #ifndef LEFT_INDEX_MOD
+    #define LEFT_INDEX_MOD  INDEX_FINGER_MOD
+    #endif
+    #ifndef RIGHT_INDEX_MOD
+    #define RIGHT_INDEX_MOD INDEX_FINGER_MOD
+    #endif
 
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -456,31 +510,17 @@ behaviors {
                           71 54   55 72
 
     #define LEFT_PINKY_KEY  KEY_LH_C5R4
-    #define LEFT_PINKY_MOD  MOD_LH_C5R4
-    #define RIGHT_PINKY_KEY KEY_RH_C5R4
-    #define RIGHT_PINKY_MOD MOD_RH_C5R4
-
     #define LEFT_RING1_KEY  KEY_LH_C4R4
-    #define LEFT_RING1_MOD  MOD_LH_C4R4
-    #define RIGHT_RING1_KEY KEY_RH_C4R4
-    #define RIGHT_RING1_MOD MOD_RH_C4R4
-
     #define LEFT_RING2_KEY  KEY_LH_C4R3
-    #define LEFT_RING2_MOD  MOD_LH_C4R3
-    #define RIGHT_RING2_KEY KEY_RH_C4R3
-    #define RIGHT_RING2_MOD MOD_RH_C4R3
-
     #define LEFT_MIDDY_KEY  KEY_LH_C3R4
-    #define LEFT_MIDDY_MOD  MOD_LH_C3R4
-    #define RIGHT_MIDDY_KEY KEY_RH_C3R4
-    #define RIGHT_MIDDY_MOD MOD_RH_C3R4
-
     #define LEFT_INDEX_KEY  KEY_LH_C2R4
-    #define LEFT_INDEX_MOD  MOD_LH_C2R4
-    #define RIGHT_INDEX_KEY KEY_RH_C2R4
-    #define RIGHT_INDEX_MOD MOD_RH_C2R4
-
     #define LEFT_PLAIN_KEY  KEY_LH_C1R4
+
+    #define RIGHT_PINKY_KEY KEY_RH_C5R4
+    #define RIGHT_RING1_KEY KEY_RH_C4R4
+    #define RIGHT_RING2_KEY KEY_RH_C4R3
+    #define RIGHT_MIDDY_KEY KEY_RH_C3R4
+    #define RIGHT_INDEX_KEY KEY_RH_C2R4
     #define RIGHT_PLAIN_KEY KEY_RH_C1R4
 
     //
@@ -595,6 +635,7 @@ behaviors {
     #define <%= target_CamelCase %> <%= target %> <%= constant %>_MOD <%= constant %>_KEY
     <%
         else
+          constant = format_constant(hand, finger)
     %>
     <%= target %>_hold: homey_<%= target %>_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -627,7 +668,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define <%= target_CamelCase %>(mod,key) <%= target %> mod key
+    #define <%= target_CamelCase %>(key) <%= target %> <%= constant %>_MOD key
     <%
         end
       end

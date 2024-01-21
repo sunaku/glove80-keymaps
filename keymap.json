@@ -273,7 +273,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (RALT,Y)",
+            "value": "&LeftRing2 (Y)",
             "params": []
           }
         ]
@@ -336,7 +336,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (RALT,W)",
+            "value": "&RightRing2 (W)",
             "params": []
           }
         ]
@@ -372,7 +372,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (LGUI,C)",
+            "value": "&LeftPinky (C)",
             "params": []
           }
         ]
@@ -381,7 +381,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (LALT,I)",
+            "value": "&LeftRing1 (I)",
             "params": []
           }
         ]
@@ -390,7 +390,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (LCTL,E)",
+            "value": "&LeftMiddy (E)",
             "params": []
           }
         ]
@@ -399,7 +399,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (LSFT,A)",
+            "value": "&LeftIndex (A)",
             "params": []
           }
         ]
@@ -426,7 +426,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (LSFT,H)",
+            "value": "&RightIndex (H)",
             "params": []
           }
         ]
@@ -435,7 +435,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (LCTL,T)",
+            "value": "&RightMiddy (T)",
             "params": []
           }
         ]
@@ -444,7 +444,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (LALT,S)",
+            "value": "&RightRing1 (S)",
             "params": []
           }
         ]
@@ -453,7 +453,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (LGUI,N)",
+            "value": "&RightPinky (N)",
             "params": []
           }
         ]
@@ -975,7 +975,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (RALT,Y)",
+            "value": "&LeftRing2 (Y)",
             "params": []
           }
         ]
@@ -1038,7 +1038,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (RALT,W)",
+            "value": "&RightRing2 (W)",
             "params": []
           }
         ]
@@ -1074,7 +1074,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (LGUI,C)",
+            "value": "&LeftPinky (C)",
             "params": []
           }
         ]
@@ -1083,7 +1083,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (LALT,I)",
+            "value": "&LeftRing1 (I)",
             "params": []
           }
         ]
@@ -1092,7 +1092,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (LCTL,E)",
+            "value": "&LeftMiddy (E)",
             "params": []
           }
         ]
@@ -1101,7 +1101,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (LSFT,A)",
+            "value": "&LeftIndex (A)",
             "params": []
           }
         ]
@@ -1128,7 +1128,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (LSFT,H)",
+            "value": "&RightIndex (H)",
             "params": []
           }
         ]
@@ -1137,7 +1137,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (LCTL,T)",
+            "value": "&RightMiddy (T)",
             "params": []
           }
         ]
@@ -1146,7 +1146,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (LALT,S)",
+            "value": "&RightRing1 (S)",
             "params": []
           }
         ]
@@ -1155,7 +1155,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (LGUI,N)",
+            "value": "&RightPinky (N)",
             "params": []
           }
         ]
@@ -1677,7 +1677,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (RALT,COMMA)",
+            "value": "&LeftRing2 (COMMA)",
             "params": []
           }
         ]
@@ -1740,7 +1740,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (RALT,R)",
+            "value": "&RightRing2 (R)",
             "params": []
           }
         ]
@@ -1776,7 +1776,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (LGUI,A)",
+            "value": "&LeftPinky (A)",
             "params": []
           }
         ]
@@ -1785,7 +1785,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (LALT,O)",
+            "value": "&LeftRing1 (O)",
             "params": []
           }
         ]
@@ -1794,7 +1794,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (LCTL,E)",
+            "value": "&LeftMiddy (E)",
             "params": []
           }
         ]
@@ -1803,7 +1803,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (LSFT,U)",
+            "value": "&LeftIndex (U)",
             "params": []
           }
         ]
@@ -1830,7 +1830,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (LSFT,H)",
+            "value": "&RightIndex (H)",
             "params": []
           }
         ]
@@ -1839,7 +1839,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (LCTL,T)",
+            "value": "&RightMiddy (T)",
             "params": []
           }
         ]
@@ -1848,7 +1848,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (LALT,N)",
+            "value": "&RightRing1 (N)",
             "params": []
           }
         ]
@@ -1857,7 +1857,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (LGUI,S)",
+            "value": "&RightPinky (S)",
             "params": []
           }
         ]
@@ -2379,7 +2379,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (RALT,D)",
+            "value": "&LeftRing2 (D)",
             "params": []
           }
         ]
@@ -2442,7 +2442,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (RALT,P)",
+            "value": "&RightRing2 (P)",
             "params": []
           }
         ]
@@ -2478,7 +2478,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (LGUI,A)",
+            "value": "&LeftPinky (A)",
             "params": []
           }
         ]
@@ -2487,7 +2487,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (LALT,S)",
+            "value": "&LeftRing1 (S)",
             "params": []
           }
         ]
@@ -2496,7 +2496,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (LCTL,H)",
+            "value": "&LeftMiddy (H)",
             "params": []
           }
         ]
@@ -2505,7 +2505,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (LSFT,T)",
+            "value": "&LeftIndex (T)",
             "params": []
           }
         ]
@@ -2532,7 +2532,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (LSFT,N)",
+            "value": "&RightIndex (N)",
             "params": []
           }
         ]
@@ -2541,7 +2541,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (LCTL,E)",
+            "value": "&RightMiddy (E)",
             "params": []
           }
         ]
@@ -2550,7 +2550,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (LALT,O)",
+            "value": "&RightRing1 (O)",
             "params": []
           }
         ]
@@ -2559,7 +2559,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (LGUI,I)",
+            "value": "&RightPinky (I)",
             "params": []
           }
         ]
@@ -3081,7 +3081,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (RALT,W)",
+            "value": "&LeftRing2 (W)",
             "params": []
           }
         ]
@@ -3144,7 +3144,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (RALT,Y)",
+            "value": "&RightRing2 (Y)",
             "params": []
           }
         ]
@@ -3180,7 +3180,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (LGUI,A)",
+            "value": "&LeftPinky (A)",
             "params": []
           }
         ]
@@ -3189,7 +3189,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (LALT,R)",
+            "value": "&LeftRing1 (R)",
             "params": []
           }
         ]
@@ -3198,7 +3198,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (LCTL,S)",
+            "value": "&LeftMiddy (S)",
             "params": []
           }
         ]
@@ -3207,7 +3207,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (LSFT,T)",
+            "value": "&LeftIndex (T)",
             "params": []
           }
         ]
@@ -3234,7 +3234,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (LSFT,N)",
+            "value": "&RightIndex (N)",
             "params": []
           }
         ]
@@ -3243,7 +3243,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (LCTL,E)",
+            "value": "&RightMiddy (E)",
             "params": []
           }
         ]
@@ -3252,7 +3252,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (LALT,I)",
+            "value": "&RightRing1 (I)",
             "params": []
           }
         ]
@@ -3261,7 +3261,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (LGUI,O)",
+            "value": "&RightPinky (O)",
             "params": []
           }
         ]
@@ -3783,7 +3783,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (RALT,W)",
+            "value": "&LeftRing2 (W)",
             "params": []
           }
         ]
@@ -3846,7 +3846,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (RALT,O)",
+            "value": "&RightRing2 (O)",
             "params": []
           }
         ]
@@ -3882,7 +3882,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (LGUI,A)",
+            "value": "&LeftPinky (A)",
             "params": []
           }
         ]
@@ -3891,7 +3891,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (LALT,S)",
+            "value": "&LeftRing1 (S)",
             "params": []
           }
         ]
@@ -3900,7 +3900,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (LCTL,D)",
+            "value": "&LeftMiddy (D)",
             "params": []
           }
         ]
@@ -3909,7 +3909,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (LSFT,F)",
+            "value": "&LeftIndex (F)",
             "params": []
           }
         ]
@@ -3936,7 +3936,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (LSFT,J)",
+            "value": "&RightIndex (J)",
             "params": []
           }
         ]
@@ -3945,7 +3945,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (LCTL,K)",
+            "value": "&RightMiddy (K)",
             "params": []
           }
         ]
@@ -3954,7 +3954,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (LALT,L)",
+            "value": "&RightRing1 (L)",
             "params": []
           }
         ]
@@ -3963,7 +3963,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (LGUI,SEMI)",
+            "value": "&RightPinky (SEMI)",
             "params": []
           }
         ]

@@ -91,6 +91,28 @@ together as a group (by inheritance) or each individually (fine-grained).
 
 </details>
 
+#### Reordering home row mods
+
+The `*_FINGER_MOD` settings specify which modifiers are used by home row mod
+keys. Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order is the default -- unless
+you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
+
+```dts
+#define PINKY_FINGER_MOD LGUI
+#define RING1_FINGER_MOD LALT
+#define RING2_FINGER_MOD RALT
+#define MIDDY_FINGER_MOD LCTL
+#define INDEX_FINGER_MOD LSFT
+```
+
+The above settings mirror finger-mod assignments across both hands, but you can
+also make them different through the following additional settings if you want:
+
+```dts
+#define LEFT_PINKY_MOD  RALT
+#define RIGHT_PINKY_MOD LCTL
+```
+
 #### Fine-tuning the timing
 
 Activate the typing layer, launch the [QMK Configurator's testing tool](
@@ -115,9 +137,9 @@ editing their respective YAML source files in this repository.  Afterwards,
 run the `rake` command and then copy the new `keymap.dtsi` contents back into
 the "Custom Defined Behaviors" text box in the Layout Editor for your keymap.
 
-#### Reordering home row mods
+#### Rearranging the base layer
 
-If you rearrange home row mods on your base layer in the Layout Editor, then:
+If you rearrange the base layer (say, for a custom or alternative layout) then:
 
 1. Export your keymap as a JSON file (via "Advanced Settings" > "Enable local
    config" then go back to "Edit" and click "Download") in the Layout Editor.
