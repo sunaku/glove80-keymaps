@@ -698,6 +698,7 @@ behaviors {
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
+        retro-tap; // tap on standalone hold
     };
     plain_engram_COMMA: plain_typing_layer_engram_COMMA {
         compatible = "zmk,behavior-hold-tap";
@@ -706,6 +707,7 @@ behaviors {
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&engram_COMMA>;
+        retro-tap; // tap on standalone hold
     };
     plain_engram_DOT: plain_typing_layer_engram_DOT {
         compatible = "zmk,behavior-hold-tap";
@@ -714,6 +716,7 @@ behaviors {
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&engram_DOT>;
+        retro-tap; // tap on standalone hold
     };
 
     //
