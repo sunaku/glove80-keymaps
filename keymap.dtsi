@@ -2,7 +2,6 @@
 // For example, here are the main optional features you can enable:
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
 //#define ENABLE_KEY_REPEAT // permits "tap then hold" key repetition
-//#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware (see below)
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -5653,13 +5652,6 @@ macros {
 //////////////////////////////////////////////////////////////////////////
 
 //
-// ENABLE_MOUSE_KEYS activates support for mouse keys if defined; otherwise
-// mouse keys are deactivated (they're transformed into no-ops) by default.
-// To use this feature, uncomment the following line (remove leading "//").
-//
-//#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware: see note above
-
-//
 // MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
 // to move the mouse pointer.
 //
@@ -5727,7 +5719,7 @@ macros {
 #define MOUSE_SCROLL_MAXIMUM_SPEED 10
 #endif
 /*HACK*/};
-#ifdef ENABLE_MOUSE_KEYS
+#if __has_include(<zmk/events/mouse_tick.h>)
     // ==== MOUSE-KEY <section begins> ====
     #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
     #define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
