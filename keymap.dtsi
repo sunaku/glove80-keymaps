@@ -1,5 +1,6 @@
 // NOTE: Use the `#define` settings below to customize this keymap!
 // For example, here are the main optional features you can enable:
+#define DIFFICULTY_LEVEL  5 // 1:easy --> 5:hard (see levels below)
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
 //#define ENABLE_KEY_REPEAT // permits "tap then hold" key repetition
 
@@ -9,6 +10,46 @@
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
+
+//
+// DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
+// It's meant to help newcomers gradually work their way up to mastery.
+// You can disable this setting by omitting it or assigning a `0` zero.
+//
+// #define DIFFICULTY_LEVEL 0 // custom (no preset settings)
+// #define DIFFICULTY_LEVEL 1 // novice (500ms)
+// #define DIFFICULTY_LEVEL 2 // slower (400ms)
+// #define DIFFICULTY_LEVEL 3 // normal (300ms)
+// #define DIFFICULTY_LEVEL 4 // faster (200ms)
+// #define DIFFICULTY_LEVEL 5 // sunaku (see defaults below)
+//
+#ifdef DIFFICULTY_LEVEL
+#if DIFFICULTY_LEVEL == 1
+    #define CAPPY_HOLDING_TIME 500
+    #define HOMEY_HOLDING_TIME 500
+    #define INDEX_HOLDING_TIME 500
+    #define PLAIN_HOLDING_TIME 500
+    #define SPACE_HOLDING_TIME 500
+#elif DIFFICULTY_LEVEL == 2
+    #define CAPPY_HOLDING_TIME 400
+    #define HOMEY_HOLDING_TIME 400
+    #define INDEX_HOLDING_TIME 400
+    #define PLAIN_HOLDING_TIME 400
+    #define SPACE_HOLDING_TIME 400
+#elif DIFFICULTY_LEVEL == 3
+    #define CAPPY_HOLDING_TIME 300
+    #define HOMEY_HOLDING_TIME 300
+    #define INDEX_HOLDING_TIME 300
+    #define PLAIN_HOLDING_TIME 300
+    #define SPACE_HOLDING_TIME 300
+#elif DIFFICULTY_LEVEL == 4
+    #define CAPPY_HOLDING_TIME 200
+    #define HOMEY_HOLDING_TIME 200
+    #define INDEX_HOLDING_TIME 200
+    #define PLAIN_HOLDING_TIME 200
+    #define SPACE_HOLDING_TIME 200
+#endif
+#endif
 
 //
 // OPERATING_SYSTEM defines which operating system you intend to use
