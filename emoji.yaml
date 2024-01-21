@@ -1,12 +1,23 @@
 characters:
   moon:
-    complete: { new:    "🌑", full:   "🌕" }
-    gibbous:  { waning: "🌖", waxing: "🌔" }
-    quarter:  { waning: "🌗", waxing: "🌓" }
-    crescent: { waning: "🌘", waxing: "🌒" }
+    complete:  { new:     "🌑", full:    "🌕" }
+    gibbous:   { waning:  "🌖", waxing:  "🌔" }
+    quarter:   { waning:  "🌗", waxing:  "🌓" }
+    crescent:  { waning:  "🌘", waxing:  "🌒" }
   face:
-    eyes:     { star:   "🤩", heart:  "😍" }
-    laughing: { joy:    "😂", rofl:   "🤣" }
+    smile:     { up:      "🙂", down:    "🙃" }
+    laugh:     { joy:     "😂", rofl:    "🤣" }
+    eyes:      { star:    "🤩", heart:   "😍" }
+    joke:      { wink:    "😉", tounge:  "😜" }
+    fear:      { scared:  "😨", scream:  "😱" }
+    surprise:  { shocked: "🤯", dizzy:   "😵" }
+  gesture:
+    attention: { snap:    "🫰", wave:    "👋" }
+    approval:  { perfect: "👌", cool:    "😎" }
+    gratitude: { pray:    "🙏", salute:  "🫡" }
+    anxiety:   { smile:   "😅", rushed:  "😰" }
+    despair:   { sad:     "😞", cry:     "😢" }
+    curious:   { think:   "🤔", analyze: "🧐" }
 
 codepoints:
 
@@ -71,6 +82,7 @@ codepoints:
   fire:            "🔥"
   muscle:          "💪"
   person_climbing: "🧗"
+  lab_coat:        "🥼"
   rocket:          "🚀"
 
   # upper row

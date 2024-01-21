@@ -5274,6 +5274,15 @@ macros {
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp D &kp N7)
       #endif
     )
+    UNICODE(emoji_lab_coat, /* 🥼 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N7 &kp C)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N7 &kp C)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N7 &kp C)
+      #endif
+    )
     UNICODE(emoji_rocket, /* 🚀 */
       #if UNICODE_TARGET_OS == 1
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
@@ -5590,16 +5599,166 @@ macros {
         bindings = <&emoji_waning_crescent_moon>, <&emoji_waxing_crescent_moon>;
         mods = <MOD_LSFT>;
     };
+    UNICODE(emoji_face_smile_up, /* 🙂 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
+      #endif
+    )
+    UNICODE(emoji_face_smile_down, /* 🙃 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
+      #endif
+    )
+    emoji_face_smile: emoji_face_smile {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_face_smile_up>, <&emoji_face_smile_down>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_face_laugh: emoji_face_laugh {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_joy>, <&emoji_rofl>;
+        mods = <MOD_LSFT>;
+    };
     emoji_face_eyes: emoji_face_eyes {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_star_struck>, <&emoji_love_struck>;
         mods = <MOD_LSFT>;
     };
-    emoji_face_laughing: emoji_face_laughing {
+    UNICODE(emoji_face_joke_wink, /* 😉 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
+      #endif
+    )
+    UNICODE(emoji_face_joke_tounge, /* 😜 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp C)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N1 &kp C)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N1 &kp C)
+      #endif
+    )
+    emoji_face_joke: emoji_face_joke {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&emoji_joy>, <&emoji_rofl>;
+        bindings = <&emoji_face_joke_wink>, <&emoji_face_joke_tounge>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_face_fear_scared, /* 😨 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
+      #endif
+    )
+    UNICODE(emoji_face_fear_scream, /* 😱 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
+      #endif
+    )
+    emoji_face_fear: emoji_face_fear {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_face_fear_scared>, <&emoji_face_fear_scream>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_face_surprise_dizzy, /* 😵 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
+      #endif
+    )
+    emoji_face_surprise: emoji_face_surprise {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_shocked_face>, <&emoji_face_surprise_dizzy>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_gesture_attention_wave, /* 👋 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp B)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp B)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N4 &kp B)
+      #endif
+    )
+    emoji_gesture_attention: emoji_gesture_attention {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_snap_fingers>, <&emoji_gesture_attention_wave>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_gesture_approval_cool, /* 😎 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp E)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp E)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp E)
+      #endif
+    )
+    emoji_gesture_approval: emoji_gesture_approval {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_ok_hand>, <&emoji_gesture_approval_cool>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_gesture_gratitude: emoji_gesture_gratitude {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_pray>, <&emoji_saluting_face>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_gesture_anxiety: emoji_gesture_anxiety {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_sweat_smile>, <&emoji_cold_sweat>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_gesture_despair_cry, /* 😢 */
+      #if UNICODE_TARGET_OS == 1
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
+      #elif UNICODE_TARGET_OS == 2
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
+      #elif UNICODE_TARGET_OS == 3
+        UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
+      #endif
+    )
+    emoji_gesture_despair: emoji_gesture_despair {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_disappointed>, <&emoji_gesture_despair_cry>;
+        mods = <MOD_LSFT>;
+    };
+    emoji_gesture_curious: emoji_gesture_curious {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_thinking>, <&emoji_monocle_face>;
         mods = <MOD_LSFT>;
     };
 };
