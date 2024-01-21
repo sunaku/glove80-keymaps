@@ -17,7 +17,7 @@ transition to the full glory, at your convenience.
 
 ## Keymap
 
-https://my.glove80.com/#/layout/user/5b237589-6ea9-44ba-9f84-aeac86a2eb8e
+- https://my.glove80.com/#/layout/user/58f097f9-2d26-4399-a249-666e1bec9341
 
 ### Legend
 
