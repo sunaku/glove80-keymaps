@@ -1274,7 +1274,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp LEFT_PINKY_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1335,7 +1335,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp RIGHT_PINKY_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1396,7 +1396,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp LEFT_RING1_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1457,7 +1457,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp RIGHT_RING1_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1518,7 +1518,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp LEFT_RING2_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1579,7 +1579,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp RIGHT_RING2_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1640,7 +1640,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp LEFT_MIDDY_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1701,7 +1701,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp RIGHT_MIDDY_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1762,7 +1762,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp LEFT_INDEX_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -1823,7 +1823,7 @@ behaviors {
                 &kp LSFT &kp RSFT
                 &kp LALT &kp RALT
                 &kp LCTL &kp RCTL
-                &kp LGUI &kp LGUI>
+                &kp LGUI &kp RGUI>
             , <&macro_tap &kp RIGHT_INDEX_KEY>
             , <&macro_param_1to1>
             , <&macro_tap &kp MACRO_PLACEHOLDER>
