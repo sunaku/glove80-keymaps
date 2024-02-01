@@ -2,7 +2,6 @@
 // For example, here are the main optional features you can enable:
 #define DIFFICULTY_LEVEL  5 // 1:easy --> 5:hard (see levels below)
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
-//#define ENABLE_KEY_REPEAT // permits "tap then hold" key repetition
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -661,13 +660,6 @@ behaviors {
     //#define ENFORCE_BILATERAL
 
     //
-    // ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
-    // of home row mods and layer access keys.  You can keep this disabled if
-    // you prefer to use the &plain overlay method of key repetition instead.
-    //
-    //#define ENABLE_KEY_REPEAT
-
-    //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
     // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
     // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped.
@@ -926,7 +918,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY THUMB_REPEAT_DECAY
+    #define SPACE_REPEAT_DECAY 150
     #endif
 
     //
@@ -1242,9 +1234,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1303,9 +1293,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1364,9 +1352,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1425,9 +1411,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1486,9 +1470,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1547,9 +1529,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1608,9 +1588,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1669,9 +1647,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1730,9 +1706,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1791,9 +1765,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1852,9 +1824,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1882,9 +1852,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1912,9 +1880,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1942,9 +1908,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -1972,9 +1936,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2002,9 +1964,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2032,9 +1992,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2062,9 +2020,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2092,9 +2048,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2122,9 +2076,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2152,9 +2104,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2182,9 +2132,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2212,9 +2160,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2242,9 +2188,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2272,9 +2216,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2302,9 +2244,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2332,9 +2272,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2362,9 +2300,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2392,9 +2328,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2422,9 +2356,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2452,9 +2384,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2482,9 +2412,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2512,9 +2440,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2542,9 +2468,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2572,9 +2496,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2602,9 +2524,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2632,9 +2552,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2662,9 +2580,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2692,9 +2608,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2722,9 +2636,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2752,9 +2664,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2782,9 +2692,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2812,9 +2720,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2842,9 +2748,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2872,9 +2776,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2902,9 +2804,7 @@ behaviors {
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2932,9 +2832,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2962,9 +2860,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -2992,9 +2888,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -3022,9 +2916,7 @@ behaviors {
         hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -3073,9 +2965,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
@@ -3083,9 +2973,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
@@ -3093,9 +2981,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
-        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };

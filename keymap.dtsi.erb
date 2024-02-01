@@ -2,7 +2,6 @@
 // For example, here are the main optional features you can enable:
 #define DIFFICULTY_LEVEL  5 // 1:easy --> 5:hard (see levels below)
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
-//#define ENABLE_KEY_REPEAT // permits "tap then hold" key repetition
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -235,13 +234,6 @@ behaviors {
     // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
     //
     //#define ENFORCE_BILATERAL
-
-    //
-    // ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
-    // of home row mods and layer access keys.  You can keep this disabled if
-    // you prefer to use the &plain overlay method of key repetition instead.
-    //
-    //#define ENABLE_KEY_REPEAT
 
     //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
@@ -502,7 +494,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY THUMB_REPEAT_DECAY
+    #define SPACE_REPEAT_DECAY 150
     #endif
 
     //
@@ -646,9 +638,7 @@ behaviors {
         hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <<%= source.upcase %>_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
-        #endif
         require-prior-idle-ms = <<%= source.upcase %>_STREAK_DECAY>;
         #binding-cells = <2>;
         #ifdef ENFORCE_BILATERAL
@@ -765,9 +755,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
@@ -775,9 +763,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = THUMB_HOLDING_TYPE;
         tapping-term-ms = <THUMB_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
@@ -785,9 +771,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = SPACE_HOLDING_TYPE;
         tapping-term-ms = <SPACE_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
-        #endif
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
