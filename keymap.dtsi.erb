@@ -176,8 +176,9 @@
 
   layers = keymap["layer_names"].zip(keymap["layers"]).to_h
   layers.first(6).each do |layer_name, layer_keys|
+    layer_constant = "LAYER_#{layer_name}"
 %>
-#if LAYER_<%= layer_name %> == 0
+#if defined(<%= layer_constant %>) && <%= layer_constant %> == 0
 <%
     layer_keys.each_with_index do |key, index|
       behavior = key["value"]

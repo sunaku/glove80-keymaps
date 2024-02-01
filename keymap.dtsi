@@ -147,7 +147,7 @@
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
-#if LAYER_Engrammer == 0
+#if defined(LAYER_Engrammer) && LAYER_Engrammer == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
@@ -229,7 +229,7 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
-#if LAYER_Engram == 0
+#if defined(LAYER_Engram) && LAYER_Engram == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
@@ -311,7 +311,7 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
-#if LAYER_Dvorak == 0
+#if defined(LAYER_Dvorak) && LAYER_Dvorak == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
@@ -393,7 +393,7 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
-#if LAYER_Workman == 0
+#if defined(LAYER_Workman) && LAYER_Workman == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
@@ -475,7 +475,7 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
-#if LAYER_Colemak == 0
+#if defined(LAYER_Colemak) && LAYER_Colemak == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
@@ -557,7 +557,7 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
-#if LAYER_QWERTY == 0
+#if defined(LAYER_QWERTY) && LAYER_QWERTY == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
