@@ -866,6 +866,14 @@ behaviors {
     #endif
 
     //
+    // PLAIN_REPEAT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a key to hold it again in order to make it auto-repeat.
+    //
+    #ifndef PLAIN_REPEAT_DECAY
+    #define PLAIN_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
+
+    //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
     //
@@ -2934,6 +2942,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
+        quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
@@ -2943,6 +2952,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
+        quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&engram_COMMA>;
@@ -2952,6 +2962,7 @@ behaviors {
         compatible = "zmk,behavior-hold-tap";
         flavor = PLAIN_HOLDING_TYPE;
         tapping-term-ms = <PLAIN_HOLDING_TIME>;
+        quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&engram_DOT>;
