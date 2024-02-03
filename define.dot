@@ -635,7 +635,7 @@ digraph settings {
 
     RIGHT_MIDDY_INDEX_REPEAT_DECAY -> RIGHT_MIDDY_CHORD_REPEAT_DECAY
 
-    CAPPY_HOLDING_TIME -> NUMBER_200
+    CAPPY_HOLDING_TIME -> NUMBER_500
 
     SELECT_WORD_DELAY -> NUMBER_1
 
@@ -696,6 +696,8 @@ digraph settings {
       NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=diamond]
+    
+      NUMBER_500 [label="500", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_10 [label="10", style=filled, fillcolor=yellow, shape=diamond]
     

@@ -3008,7 +3008,7 @@ behaviors {
     // cappy to type CapsLock.  Shorter holds are taps that type CapsWord.
     //
     #ifndef CAPPY_HOLDING_TIME
-    #define CAPPY_HOLDING_TIME 200
+    #define CAPPY_HOLDING_TIME 500
     #endif
 
     //
