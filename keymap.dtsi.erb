@@ -34,7 +34,7 @@
 %>
 #<%= "el" if level > 1 %>if DIFFICULTY_LEVEL == <%= level %>
 <%
-    %w[ CAPPY HOMEY INDEX PLAIN SPACE ].each do |category|
+    %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
 %>
     #define <%= category %>_HOLDING_TIME <%= threshold %>
 <%
@@ -785,31 +785,6 @@ behaviors {
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
-    };
-
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // Custom hold-taps
-    //
-    //////////////////////////////////////////////////////////////////////////
-
-    //
-    // CAPPY_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // cappy to type CapsLock.  Shorter holds are taps that type CapsWord.
-    //
-    #ifndef CAPPY_HOLDING_TIME
-    #define CAPPY_HOLDING_TIME 500
-    #endif
-
-    //
-    // Tap = CapsWord; Hold = CapsLock
-    //
-    cappy: capsword_and_capslock {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        tapping-term-ms = <CAPPY_HOLDING_TIME>;
-        #binding-cells = <2>;
-        bindings = <&kp>, <&caps_word>;
     };
 
     //////////////////////////////////////////////////////////////////////////

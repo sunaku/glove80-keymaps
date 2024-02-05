@@ -363,13 +363,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&cappy CAPSLOCK 0",
-            "params": []
-          }
-        ]
+        "value": "&caps_word",
+        "params": []
       },
       {
         "value": "Custom",
@@ -1065,13 +1060,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&cappy CAPSLOCK 0",
-            "params": []
-          }
-        ]
+        "value": "&caps_word",
+        "params": []
       },
       {
         "value": "Custom",
@@ -1767,13 +1757,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&cappy CAPSLOCK 0",
-            "params": []
-          }
-        ]
+        "value": "&caps_word",
+        "params": []
       },
       {
         "value": "Custom",
@@ -2469,13 +2454,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&cappy CAPSLOCK 0",
-            "params": []
-          }
-        ]
+        "value": "&caps_word",
+        "params": []
       },
       {
         "value": "Custom",
@@ -3171,13 +3151,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&cappy CAPSLOCK 0",
-            "params": []
-          }
-        ]
+        "value": "&caps_word",
+        "params": []
       },
       {
         "value": "Custom",
@@ -3873,13 +3848,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&cappy CAPSLOCK 0",
-            "params": []
-          }
-        ]
+        "value": "&caps_word",
+        "params": []
       },
       {
         "value": "Custom",

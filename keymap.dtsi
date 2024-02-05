@@ -24,25 +24,21 @@
 //
 #ifdef DIFFICULTY_LEVEL
 #if DIFFICULTY_LEVEL == 1
-    #define CAPPY_HOLDING_TIME 500
     #define HOMEY_HOLDING_TIME 500
     #define INDEX_HOLDING_TIME 500
     #define PLAIN_HOLDING_TIME 500
     #define SPACE_HOLDING_TIME 500
 #elif DIFFICULTY_LEVEL == 2
-    #define CAPPY_HOLDING_TIME 400
     #define HOMEY_HOLDING_TIME 400
     #define INDEX_HOLDING_TIME 400
     #define PLAIN_HOLDING_TIME 400
     #define SPACE_HOLDING_TIME 400
 #elif DIFFICULTY_LEVEL == 3
-    #define CAPPY_HOLDING_TIME 300
     #define HOMEY_HOLDING_TIME 300
     #define INDEX_HOLDING_TIME 300
     #define PLAIN_HOLDING_TIME 300
     #define SPACE_HOLDING_TIME 300
 #elif DIFFICULTY_LEVEL == 4
-    #define CAPPY_HOLDING_TIME 200
     #define HOMEY_HOLDING_TIME 200
     #define INDEX_HOLDING_TIME 200
     #define PLAIN_HOLDING_TIME 200
@@ -181,7 +177,7 @@
 #define KEY_RH_C4R3 W
 #define KEY_RH_C5R3 V
 #define KEY_RH_C6R3 Z
-#define KEY_LH_C6R4 CAPSLOCK
+#define KEY_LH_C6R4 0
 #define KEY_LH_C5R4 C
 #define KEY_LH_C4R4 I
 #define KEY_LH_C3R4 E
@@ -263,7 +259,7 @@
 #define KEY_RH_C4R3 W
 #define KEY_RH_C5R3 V
 #define KEY_RH_C6R3 Z
-#define KEY_LH_C6R4 CAPSLOCK
+#define KEY_LH_C6R4 0
 #define KEY_LH_C5R4 C
 #define KEY_LH_C4R4 I
 #define KEY_LH_C3R4 E
@@ -345,7 +341,7 @@
 #define KEY_RH_C4R3 R
 #define KEY_RH_C5R3 L
 #define KEY_RH_C6R3 SLASH
-#define KEY_LH_C6R4 CAPSLOCK
+#define KEY_LH_C6R4 0
 #define KEY_LH_C5R4 A
 #define KEY_LH_C4R4 O
 #define KEY_LH_C3R4 E
@@ -427,7 +423,7 @@
 #define KEY_RH_C4R3 P
 #define KEY_RH_C5R3 SEMI
 #define KEY_RH_C6R3 MINUS
-#define KEY_LH_C6R4 CAPSLOCK
+#define KEY_LH_C6R4 0
 #define KEY_LH_C5R4 A
 #define KEY_LH_C4R4 S
 #define KEY_LH_C3R4 H
@@ -509,7 +505,7 @@
 #define KEY_RH_C4R3 Y
 #define KEY_RH_C5R3 SEMI
 #define KEY_RH_C6R3 MINUS
-#define KEY_LH_C6R4 CAPSLOCK
+#define KEY_LH_C6R4 0
 #define KEY_LH_C5R4 A
 #define KEY_LH_C4R4 R
 #define KEY_LH_C3R4 S
@@ -591,7 +587,7 @@
 #define KEY_RH_C4R3 O
 #define KEY_RH_C5R3 P
 #define KEY_RH_C6R3 MINUS
-#define KEY_LH_C6R4 CAPSLOCK
+#define KEY_LH_C6R4 0
 #define KEY_LH_C5R4 A
 #define KEY_LH_C4R4 S
 #define KEY_LH_C3R4 D
@@ -2995,31 +2991,6 @@ behaviors {
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
-    };
-
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // Custom hold-taps
-    //
-    //////////////////////////////////////////////////////////////////////////
-
-    //
-    // CAPPY_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // cappy to type CapsLock.  Shorter holds are taps that type CapsWord.
-    //
-    #ifndef CAPPY_HOLDING_TIME
-    #define CAPPY_HOLDING_TIME 500
-    #endif
-
-    //
-    // Tap = CapsWord; Hold = CapsLock
-    //
-    cappy: capsword_and_capslock {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        tapping-term-ms = <CAPPY_HOLDING_TIME>;
-        #binding-cells = <2>;
-        bindings = <&kp>, <&caps_word>;
     };
 
     //////////////////////////////////////////////////////////////////////////
