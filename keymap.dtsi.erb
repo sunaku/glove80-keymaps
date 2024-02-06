@@ -174,7 +174,8 @@
   end
 
   layers = keymap["layer_names"].zip(keymap["layers"]).to_h
-  layers.first(6).each do |layer_name, layer_keys|
+  ALPHA_LAYERS = layers.first(6)
+  ALPHA_LAYERS.each do |layer_name, layer_keys|
     layer_constant = "LAYER_#{layer_name}"
 %>
 #if defined(<%= layer_constant %>) && <%= layer_constant %> == 0
@@ -190,7 +191,7 @@
 
       when "Custom"
         case params
-        when /(?:Left|Right)\w+\s*\(\s*(\w+)\s*\)/
+        when /(?:Left|Right)\w+\s*\(\s*(\w+)/
           tap = $1
         when /engram_(\w+)/
           tap = $1
@@ -639,8 +640,10 @@ behaviors {
     #endif
     <%
         end
+
+        for target_variant in [nil, :_bilateral] do
     %>
-    <%= target %>: homey_<%= target %> {
+    <%= target %><%= target_variant %>: homey_<%= target %><%= target_variant %> {
         compatible = "zmk,behavior-hold-tap";
         flavor = <%= source.upcase %>_HOLDING_TYPE;
         hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
@@ -649,27 +652,31 @@ behaviors {
         quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
         require-prior-idle-ms = <<%= source.upcase %>_STREAK_DECAY>;
         #binding-cells = <2>;
-        #ifdef ENFORCE_BILATERAL
         <%
-          if chord
+          if target_variant
+            if chord
         %>
         bindings = <&kp>, <&<%= source %>_tap>;
         <%
-          else
+            else
         %>
         bindings = <&<%= target %>_hold>, <&kp>;
         <%
+            end
+          else
+        %>
+        bindings = <&kp>, <&kp>;
+        <%
           end
         %>
-        #else
-        bindings = <&kp>, <&kp>;
-        #endif
     };
     <%
+        end
+
         if chord
           constant = format_constant(hand, chord)
     %>
-    #define <%= target_CamelCase %> <%= target %> <%= constant %>_MOD <%= constant %>_KEY
+    #define <%= target_CamelCase %> <%= target %>_bilateral <%= constant %>_MOD <%= constant %>_KEY
     <%
         else
           constant = format_constant(hand, finger)
@@ -705,8 +712,20 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #define <%= target_CamelCase %>(key) <%= target %> <%= constant %>_MOD key
+    #define <%= target_CamelCase %>(key, layer_index) <%= target_CamelCase %>_unroll(layer_index) (key)
+    #define <%= target_CamelCase %>_unroll(layer_index) <%= target_CamelCase %>_concat(<%= target_CamelCase %>_layer, layer_index)
+    #define <%= target_CamelCase %>_concat(prefix, layer_index) prefix ## layer_index
+    #ifdef ENFORCE_BILATERAL
+    #define <%= target %>_layer0_variant <%= target %>_bilateral
+    #else
+    #define <%= target %>_layer0_variant <%= target %>
+    #endif
     <%
+          ALPHA_LAYERS.each_with_index do |(layer_name, _layer_keys), layer_index|
+    %>
+    #define <%= target_CamelCase %>_layer<%= layer_index %>(key) <%= target %><%= "_layer0_variant" if layer_index.zero? %> <%= constant %>_MOD key
+    <%
+          end
         end
       end
 

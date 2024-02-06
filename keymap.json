@@ -276,7 +276,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (Y)",
+            "value": "&LeftRing2 (Y, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -339,7 +339,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (W)",
+            "value": "&RightRing2 (W, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -370,7 +370,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (C)",
+            "value": "&LeftPinky (C, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -379,7 +379,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (I)",
+            "value": "&LeftRing1 (I, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -388,7 +388,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (E)",
+            "value": "&LeftMiddy (E, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -397,7 +397,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (A)",
+            "value": "&LeftIndex (A, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -424,7 +424,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (H)",
+            "value": "&RightIndex (H, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -433,7 +433,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (T)",
+            "value": "&RightMiddy (T, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -442,7 +442,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (S)",
+            "value": "&RightRing1 (S, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -451,7 +451,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (N)",
+            "value": "&RightPinky (N, LAYER_Engrammer)",
             "params": []
           }
         ]
@@ -973,7 +973,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (Y)",
+            "value": "&LeftRing2 (Y, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1036,7 +1036,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (W)",
+            "value": "&RightRing2 (W, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1067,7 +1067,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (C)",
+            "value": "&LeftPinky (C, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1076,7 +1076,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (I)",
+            "value": "&LeftRing1 (I, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1085,7 +1085,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (E)",
+            "value": "&LeftMiddy (E, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1094,7 +1094,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (A)",
+            "value": "&LeftIndex (A, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1121,7 +1121,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (H)",
+            "value": "&RightIndex (H, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1130,7 +1130,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (T)",
+            "value": "&RightMiddy (T, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1139,7 +1139,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (S)",
+            "value": "&RightRing1 (S, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1148,7 +1148,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (N)",
+            "value": "&RightPinky (N, LAYER_Engram)",
             "params": []
           }
         ]
@@ -1670,7 +1670,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (COMMA)",
+            "value": "&LeftRing2 (COMMA, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1733,7 +1733,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (R)",
+            "value": "&RightRing2 (R, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1764,7 +1764,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (A)",
+            "value": "&LeftPinky (A, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1773,7 +1773,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (O)",
+            "value": "&LeftRing1 (O, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1782,7 +1782,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (E)",
+            "value": "&LeftMiddy (E, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1791,7 +1791,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (U)",
+            "value": "&LeftIndex (U, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1818,7 +1818,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (H)",
+            "value": "&RightIndex (H, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1827,7 +1827,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (T)",
+            "value": "&RightMiddy (T, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1836,7 +1836,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (N)",
+            "value": "&RightRing1 (N, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -1845,7 +1845,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (S)",
+            "value": "&RightPinky (S, LAYER_Dvorak)",
             "params": []
           }
         ]
@@ -2367,7 +2367,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (D)",
+            "value": "&LeftRing2 (D, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2430,7 +2430,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (P)",
+            "value": "&RightRing2 (P, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2461,7 +2461,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (A)",
+            "value": "&LeftPinky (A, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2470,7 +2470,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (S)",
+            "value": "&LeftRing1 (S, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2479,7 +2479,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (H)",
+            "value": "&LeftMiddy (H, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2488,7 +2488,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (T)",
+            "value": "&LeftIndex (T, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2515,7 +2515,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (N)",
+            "value": "&RightIndex (N, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2524,7 +2524,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (E)",
+            "value": "&RightMiddy (E, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2533,7 +2533,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (O)",
+            "value": "&RightRing1 (O, LAYER_Workman)",
             "params": []
           }
         ]
@@ -2542,7 +2542,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (I)",
+            "value": "&RightPinky (I, LAYER_Workman)",
             "params": []
           }
         ]
@@ -3064,7 +3064,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (W)",
+            "value": "&LeftRing2 (W, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3127,7 +3127,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (Y)",
+            "value": "&RightRing2 (Y, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3158,7 +3158,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (A)",
+            "value": "&LeftPinky (A, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3167,7 +3167,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (R)",
+            "value": "&LeftRing1 (R, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3176,7 +3176,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (S)",
+            "value": "&LeftMiddy (S, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3185,7 +3185,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (T)",
+            "value": "&LeftIndex (T, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3212,7 +3212,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (N)",
+            "value": "&RightIndex (N, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3221,7 +3221,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (E)",
+            "value": "&RightMiddy (E, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3230,7 +3230,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (I)",
+            "value": "&RightRing1 (I, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3239,7 +3239,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (O)",
+            "value": "&RightPinky (O, LAYER_Colemak)",
             "params": []
           }
         ]
@@ -3761,7 +3761,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing2 (W)",
+            "value": "&LeftRing2 (W, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3824,7 +3824,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing2 (O)",
+            "value": "&RightRing2 (O, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3855,7 +3855,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftPinky (A)",
+            "value": "&LeftPinky (A, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3864,7 +3864,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftRing1 (S)",
+            "value": "&LeftRing1 (S, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3873,7 +3873,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (D)",
+            "value": "&LeftMiddy (D, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3882,7 +3882,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (F)",
+            "value": "&LeftIndex (F, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3909,7 +3909,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndex (J)",
+            "value": "&RightIndex (J, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3918,7 +3918,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightMiddy (K)",
+            "value": "&RightMiddy (K, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3927,7 +3927,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightRing1 (L)",
+            "value": "&RightRing1 (L, LAYER_QWERTY)",
             "params": []
           }
         ]
@@ -3936,7 +3936,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightPinky (SEMI)",
+            "value": "&RightPinky (SEMI, LAYER_QWERTY)",
             "params": []
           }
         ]
