@@ -3,7 +3,7 @@ digraph settings {
 
   subgraph defaults {
 
-    OPERATING_SYSTEM -> NUMBER_1
+    OPERATING_SYSTEM -> "'L'"
 
     RING1_FINGER_MOD -> LALT
 
@@ -31,7 +31,7 @@ digraph settings {
 
     RIGHT_INDEX_MOD -> INDEX_FINGER_MOD
 
-    HOMEY_HOLDING_TYPE -> "tap-preferred"
+    HOMEY_HOLDING_TYPE -> "\"tap-preferred\""
 
     HOMEY_HOLDING_TIME -> NUMBER_270
 
@@ -47,7 +47,7 @@ digraph settings {
 
     CHORD_REPEAT_DECAY -> HOMEY_REPEAT_DECAY
 
-    INDEX_HOLDING_TYPE -> "tap-preferred"
+    INDEX_HOLDING_TYPE -> "\"tap-preferred\""
 
     INDEX_HOLDING_TIME -> NUMBER_170
 
@@ -63,7 +63,7 @@ digraph settings {
 
     PLAIN_REPEAT_DECAY -> NUMBER_300
 
-    THUMB_HOLDING_TYPE -> "balanced"
+    THUMB_HOLDING_TYPE -> "\"balanced\""
 
     THUMB_HOLDING_TIME -> NUMBER_200
 
@@ -673,13 +673,13 @@ digraph settings {
     graph [rank=same]
 
     
-      "tap-preferred" [label="\"tap-preferred\"", style=filled, fillcolor=cyan, shape=diamond]
+      "'L'" [label="'L'", style=filled, fillcolor=cyan, shape=diamond]
     
-      "balanced" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=diamond]
+      "\"tap-preferred\"" [label="\"tap-preferred\"", style=filled, fillcolor=cyan, shape=diamond]
+    
+      "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=diamond]
     
 
-    
-      NUMBER_1 [label="1", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_270 [label="270", style=filled, fillcolor=yellow, shape=diamond]
     
@@ -694,6 +694,8 @@ digraph settings {
       NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=diamond]
+    
+      NUMBER_1 [label="1", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_10 [label="10", style=filled, fillcolor=yellow, shape=diamond]
     

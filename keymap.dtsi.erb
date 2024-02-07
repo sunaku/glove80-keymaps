@@ -54,12 +54,12 @@
 #ifndef OPERATING_SYSTEM
 <%
   OPERATING_SYSTEMS = {
-    linux:   1,
-    macos:   2,
-    windows: 3
-  }.each do |os, number|
+    linux:   "'L'",
+    macos:   "'M'",
+    windows: "'W'"
+  }.each_with_index do |(os, char), index|
 %>
-<%= "//" if number > 1 %>#define OPERATING_SYSTEM <%= number %> // <%= os %>
+<%= "//" if index > 0 %>#define OPERATING_SYSTEM <%= char %> // <%= os %>
 <%
   end
 %>
@@ -1164,7 +1164,7 @@ macros {
     %>
     UNICODE(<%= id %>, /* <%= character %> */
     <%
-        OPERATING_SYSTEMS.each do |os, os_number|
+        OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
           sequence = character.chars.map do |character|
             keystrokes = keystrokes_from_character(character)
             format_keystrokes_for_unicode(keystrokes, os)
@@ -1179,9 +1179,9 @@ macros {
             sequence = resolve_localized_keystrokes(localized, os)
           end
     %>
-      #<%= "el" if os_number > 1 %>if UNICODE_TARGET_OS == <%= os_number %>
+      #<%= "el" if os_index > 0 %>if UNICODE_TARGET_OS == <%= os_char %>
         <%= sequence.join(", ") %>
-      <%= "#endif" if os_number == OPERATING_SYSTEMS.length %>
+      <%= "#endif" if os_index + 1 == OPERATING_SYSTEMS.length %>
     <%
         end
     %>

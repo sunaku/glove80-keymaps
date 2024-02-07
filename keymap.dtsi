@@ -54,11 +54,11 @@
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
 #ifndef OPERATING_SYSTEM
-#define OPERATING_SYSTEM 1 // linux
-//#define OPERATING_SYSTEM 2 // macos
-//#define OPERATING_SYSTEM 3 // windows
+#define OPERATING_SYSTEM 'L' // linux
+//#define OPERATING_SYSTEM 'M' // macos
+//#define OPERATING_SYSTEM 'W' // windows
 #endif
-#if OPERATING_SYSTEM == 2
+#if OPERATING_SYSTEM == 'M'
     #define _C      LG
     #define _A_TAB  LGUI
     #define _G_TAB  LALT
@@ -78,11 +78,11 @@
     #define _END    END
 #endif
 #define _SLEEP      C_SLEEP
-#if OPERATING_SYSTEM == 3
+#if OPERATING_SYSTEM == 'W'
     #define _LOCK   LG(L)
-#elif OPERATING_SYSTEM == 2
+#elif OPERATING_SYSTEM == 'M'
     #define _LOCK   _C(LC(Q))
-#elif OPERATING_SYSTEM == 1
+#elif OPERATING_SYSTEM == 'L'
     #define _LOCK   K_LOCK
 #endif
 #define _UNDO       _C(Z)
@@ -689,7 +689,7 @@ behaviors {
     // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped.
     //
     #ifndef PINKY_FINGER_MOD
-      #if OPERATING_SYSTEM == 2
+      #if OPERATING_SYSTEM == 'M'
         #define PINKY_FINGER_MOD LCTL
       #else
         #define PINKY_FINGER_MOD LGUI
@@ -702,7 +702,7 @@ behaviors {
     #define RING2_FINGER_MOD RALT
     #endif
     #ifndef MIDDY_FINGER_MOD
-      #if OPERATING_SYSTEM == 2
+      #if OPERATING_SYSTEM == 'M'
         #define MIDDY_FINGER_MOD LGUI
       #else
         #define MIDDY_FINGER_MOD LCTL
@@ -3926,92 +3926,92 @@ macros {
     // codepoints
     //
     UNICODE(world_degree_sign, /* ° */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp B &kp N0)
       #endif
     )
     UNICODE(world_section_sign, /* § */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp N7)
       #endif
     )
     UNICODE(world_paragraph_sign, /* ¶ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp B &kp N6)
       #endif
     )
     UNICODE(world_o_ordinal, /* º */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp B &kp A)
       #endif
     )
     UNICODE(world_a_ordinal, /* ª */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp A)
       #endif
     )
     UNICODE(world_exclaim_left, /* ¡ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp N1)
       #endif
     )
     UNICODE(world_question_left, /* ¿ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp B &kp F)
       #endif
     )
     UNICODE(world_currency_crypto, /* ₿ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp B &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp B &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp B &kp F)
       #endif
     )
     UNICODE(world_currency_cent, /* ¢ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp N2)
       #endif
     )
     UNICODE(world_currency_sign, /* ¤ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp N4)
       #endif
     )
@@ -4020,20 +4020,20 @@ macros {
     // characters
     //
     UNICODE(world_c_cedilla_lower, /* ç */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp COMMA &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(C))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
       #endif
     )
     UNICODE(world_c_cedilla_upper, /* Ç */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp COMMA &kp LS(C))
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(LS(C)))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
       #endif
     )
@@ -4044,20 +4044,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_acute_lower, /* í */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp SQT &kp I)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp I)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7)
       #endif
     )
     UNICODE(world_i_acute_upper, /* Í */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(I))
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(I))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5)
       #endif
     )
@@ -4068,20 +4068,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_diaeresis_lower, /* ï */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp F)
       #endif
     )
     UNICODE(world_i_diaeresis_upper, /* Ï */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp F)
       #endif
     )
@@ -4092,20 +4092,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_circumflex_lower, /* î */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp E)
       #endif
     )
     UNICODE(world_i_circumflex_upper, /* Î */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp E)
       #endif
     )
@@ -4116,20 +4116,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_grave_lower, /* ì */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp C)
       #endif
     )
     UNICODE(world_i_grave_upper, /* Ì */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp C)
       #endif
     )
@@ -4140,20 +4140,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_acute_lower, /* é */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N9)
       #endif
     )
     UNICODE(world_e_acute_upper, /* É */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N9)
       #endif
     )
@@ -4164,20 +4164,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_diaeresis_lower, /* ë */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp B)
       #endif
     )
     UNICODE(world_e_diaeresis_upper, /* Ë */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp B)
       #endif
     )
@@ -4188,20 +4188,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_circumflex_lower, /* ê */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp A)
       #endif
     )
     UNICODE(world_e_circumflex_upper, /* Ê */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp A)
       #endif
     )
@@ -4212,20 +4212,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_grave_lower, /* è */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N8)
       #endif
     )
     UNICODE(world_e_grave_upper, /* È */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N8)
       #endif
     )
@@ -4236,20 +4236,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_ae_lower, /* æ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N6)
       #endif
     )
     UNICODE(world_e_ae_upper, /* Æ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N6)
       #endif
     )
@@ -4260,20 +4260,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_acute_lower, /* á */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N1)
       #endif
     )
     UNICODE(world_a_acute_upper, /* Á */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N1)
       #endif
     )
@@ -4284,20 +4284,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_diaeresis_lower, /* ä */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp DQT &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8)
       #endif
     )
     UNICODE(world_a_diaeresis_upper, /* Ä */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(A))
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(A))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6)
       #endif
     )
@@ -4308,20 +4308,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_circumflex_lower, /* â */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N2)
       #endif
     )
     UNICODE(world_a_circumflex_upper, /* Â */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N2)
       #endif
     )
@@ -4332,20 +4332,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_grave_lower, /* à */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N0)
       #endif
     )
     UNICODE(world_a_grave_upper, /* À */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N0)
       #endif
     )
@@ -4356,20 +4356,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_tilde_lower, /* ã */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N3)
       #endif
     )
     UNICODE(world_a_tilde_upper, /* Ã */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N3)
       #endif
     )
@@ -4380,20 +4380,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_ring_lower, /* å */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp E &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp E &kp N5)
       #endif
     )
     UNICODE(world_a_ring_upper, /* Å */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp C &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp C &kp N5)
       #endif
     )
@@ -4404,20 +4404,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_y_acute_lower, /* ý */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp D)
       #endif
     )
     UNICODE(world_y_acute_upper, /* Ý */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp D)
       #endif
     )
@@ -4428,20 +4428,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_y_diaeresis_lower, /* ÿ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp F)
       #endif
     )
     UNICODE(world_y_diaeresis_upper, /* Ÿ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp N7 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N1 &kp N7 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp N7 &kp N8)
       #endif
     )
@@ -4452,20 +4452,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_acute_lower, /* ó */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N3)
       #endif
     )
     UNICODE(world_o_acute_upper, /* Ó */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N3)
       #endif
     )
@@ -4476,20 +4476,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_diaeresis_lower, /* ö */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp DQT &kp O)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp O)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6)
       #endif
     )
     UNICODE(world_o_diaeresis_upper, /* Ö */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(O))
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(O))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4)
       #endif
     )
@@ -4500,20 +4500,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_circumflex_lower, /* ô */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N4)
       #endif
     )
     UNICODE(world_o_circumflex_upper, /* Ô */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N4)
       #endif
     )
@@ -4524,20 +4524,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_grave_lower, /* ò */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N2)
       #endif
     )
     UNICODE(world_o_grave_upper, /* Ò */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N2)
       #endif
     )
@@ -4548,20 +4548,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_tilde_lower, /* õ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N5)
       #endif
     )
     UNICODE(world_o_tilde_upper, /* Õ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N5)
       #endif
     )
@@ -4572,20 +4572,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_slash_lower, /* ø */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N8)
       #endif
     )
     UNICODE(world_o_slash_upper, /* Ø */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N8)
       #endif
     )
@@ -4596,20 +4596,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_acute_lower, /* ú */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp A)
       #endif
     )
     UNICODE(world_u_acute_upper, /* Ú */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp A)
       #endif
     )
@@ -4620,20 +4620,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_diaeresis_lower, /* ü */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp DQT &kp U)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp U)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2)
       #endif
     )
     UNICODE(world_u_diaeresis_upper, /* Ü */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(U))
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(U))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0)
       #endif
     )
@@ -4644,20 +4644,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_circumflex_lower, /* û */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp B)
       #endif
     )
     UNICODE(world_u_circumflex_upper, /* Û */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp B)
       #endif
     )
@@ -4668,20 +4668,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_grave_lower, /* ù */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N9)
       #endif
     )
     UNICODE(world_u_grave_upper, /* Ù */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N9)
       #endif
     )
@@ -4692,20 +4692,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_n_tilde_lower, /* ñ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp N1)
       #endif
     )
     UNICODE(world_n_tilde_upper, /* Ñ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp D &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp D &kp N1)
       #endif
     )
@@ -4716,20 +4716,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_angle_lower, /* ‹ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N3 &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N3 &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N3 &kp N9)
       #endif
     )
     UNICODE(world_quotes_left_angle_upper, /* « */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp B)
       #endif
     )
@@ -4740,20 +4740,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_curly_lower, /* ‘ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N1 &kp N8)
       #endif
     )
     UNICODE(world_quotes_left_curly_upper, /* “ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N1 &kp C)
       #endif
     )
@@ -4764,20 +4764,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_low_lower, /* ‚ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N1 &kp A)
       #endif
     )
     UNICODE(world_quotes_left_low_upper, /* „ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N1 &kp E)
       #endif
     )
@@ -4788,20 +4788,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_corner1_lower, /* 「 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N3 &kp N0 &kp N0 &kp C)
       #endif
     )
     UNICODE(world_quotes_left_corner1_upper, /* ﹁ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N4 &kp N1)
       #endif
     )
@@ -4812,20 +4812,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_corner2_lower, /* 『 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N3 &kp N0 &kp N0 &kp E)
       #endif
     )
     UNICODE(world_quotes_left_corner2_upper, /* ﹃ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N4 &kp N3)
       #endif
     )
@@ -4836,29 +4836,29 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_grave, /* ` */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N6 &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp N6 &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N6 &kp N0)
       #endif
     )
     UNICODE(world_quotes_right_angle_lower, /* › */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N3 &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N3 &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N3 &kp A)
       #endif
     )
     UNICODE(world_quotes_right_angle_upper, /* » */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp B &kp B)
       #endif
     )
@@ -4869,20 +4869,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_curly_lower, /* ’ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N1 &kp N9)
       #endif
     )
     UNICODE(world_quotes_right_curly_upper, /* ” */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N1 &kp D)
       #endif
     )
@@ -4899,20 +4899,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_corner1_lower, /* 」 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N3 &kp N0 &kp N0 &kp D)
       #endif
     )
     UNICODE(world_quotes_right_corner1_upper, /* ﹂ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N4 &kp N2)
       #endif
     )
@@ -4923,20 +4923,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_corner2_lower, /* 』 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N3 &kp N0 &kp N0 &kp F)
       #endif
     )
     UNICODE(world_quotes_right_corner2_upper, /* ﹄ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N4 &kp N4)
       #endif
     )
@@ -4947,20 +4947,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_grave, /* ´ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp B &kp N4)
       #endif
     )
     UNICODE(world_currency_dollar_lower, /* $ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp N2 &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N4)
       #endif
     )
@@ -4971,38 +4971,38 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(world_currency_yen, /* ¥ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp N5)
       #endif
     )
     UNICODE(world_currency_euro, /* € */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         COMPOSE_SEQ_LINUX(&kp E &kp EQUAL)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         COMPOSE_SEQ_MACOS(&kp LA(LS(N2)))
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8)
       #endif
     )
     UNICODE(world_currency_won, /* ₩ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp A &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp A &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp A &kp N9)
       #endif
     )
     UNICODE(world_currency_pound, /* £ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp A &kp N3)
       #endif
     )
@@ -5282,713 +5282,713 @@ macros {
     // codepoints
     //
     UNICODE(emoji_zwj, /* ‍ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N0 &kp D)
       #endif
     )
     UNICODE(emoji_male_sign, /* ♂️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N4 &kp N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N4 &kp N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp N4 &kp N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_female_sign, /* ♀️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N4 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N4 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp N4 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_right_arrow, /* ➡️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp A &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp A &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N7 &kp A &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_left_arrow, /* ⬅️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp B &kp N0 &kp N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp B &kp N0 &kp N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp B &kp N0 &kp N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_rainbow, /* 🌈 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N0 &kp N8)
       #endif
     )
     UNICODE(emoji_cloudy, /* ️☁️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N0 &kp N1), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N0 &kp N1), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp N0 &kp N1), UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_mostly_cloudy, /* 🌥 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N2 &kp N5)
       #endif
     )
     UNICODE(emoji_partly_cloudy, /* ⛅ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp C &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp C &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp C &kp N5)
       #endif
     )
     UNICODE(emoji_mostly_sunny, /* ️🌤️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_sunny, /* ☀️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N0 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N0 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp N0 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_sunrise, /* 🌅 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N0 &kp N5)
       #endif
     )
     UNICODE(emoji_sunrise_mountains, /* 🌄 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N0 &kp N4)
       #endif
     )
     UNICODE(emoji_cityscape, /* ️🏙️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_cityscape_dusk, /* ️🌇 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N0 &kp N7)
       #endif
     )
     UNICODE(emoji_cityscape_night, /* 🌃 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N0 &kp N3)
       #endif
     )
     UNICODE(emoji_light_skin_tone, /* 🏻 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp F &kp B)
       #endif
     )
     UNICODE(emoji_medium_light_skin_tone, /* 🏼 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp F &kp C)
       #endif
     )
     UNICODE(emoji_medium_skin_tone, /* 🏽 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp F &kp D)
       #endif
     )
     UNICODE(emoji_medium_dark_skin_tone, /* 🏾 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp F &kp E)
       #endif
     )
     UNICODE(emoji_dark_skin_tone, /* 🏿 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp F &kp F)
       #endif
     )
     UNICODE(emoji_baby_bottle, /* 🍼 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N7 &kp C)
       #endif
     )
     UNICODE(emoji_baby, /* 👶 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N7 &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N7 &kp N6)
       #endif
     )
     UNICODE(emoji_boy, /* 👦 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N6 &kp N6)
       #endif
     )
     UNICODE(emoji_girl, /* 👧 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N6 &kp N7)
       #endif
     )
     UNICODE(emoji_man, /* 👨 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N6 &kp N8)
       #endif
     )
     UNICODE(emoji_woman, /* 👩 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N6 &kp N9)
       #endif
     )
     UNICODE(emoji_old_man, /* 👴 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N7 &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N7 &kp N4)
       #endif
     )
     UNICODE(emoji_old_woman, /* 👵 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N7 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N7 &kp N5)
       #endif
     )
     UNICODE(emoji_white_hair, /* 🦳 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp B &kp N3)
       #endif
     )
     UNICODE(emoji_curly_hair, /* 🦱 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp B &kp N1)
       #endif
     )
     UNICODE(emoji_red_hair, /* 🦰 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp B &kp N0)
       #endif
     )
     UNICODE(emoji_bald, /* 🦲 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp B &kp N2)
       #endif
     )
     UNICODE(emoji_new_moon, /* 🌑 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N1)
       #endif
     )
     UNICODE(emoji_waxing_crescent_moon, /* 🌒 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N2)
       #endif
     )
     UNICODE(emoji_first_quarter_moon, /* 🌓 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N3)
       #endif
     )
     UNICODE(emoji_waxing_gibbous_moon, /* 🌔 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N4)
       #endif
     )
     UNICODE(emoji_full_moon, /* 🌕 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N5)
       #endif
     )
     UNICODE(emoji_waning_gibbous_moon, /* 🌖 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N6)
       #endif
     )
     UNICODE(emoji_last_quarter_moon, /* 🌗 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N7)
       #endif
     )
     UNICODE(emoji_waning_crescent_moon, /* 🌘 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N1 &kp N8)
       #endif
     )
     UNICODE(emoji_tada, /* 🎉 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N8 &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N8 &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N3 &kp N8 &kp N9)
       #endif
     )
     UNICODE(emoji_heart, /* ️❤️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N6 &kp N4), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N6 &kp N4), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N2 &kp N7 &kp N6 &kp N4), UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_fire, /* 🔥 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N5 &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N5 &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N5 &kp N2 &kp N5)
       #endif
     )
     UNICODE(emoji_muscle, /* 💪 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp A &kp A)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp A &kp A)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp A &kp A)
       #endif
     )
     UNICODE(emoji_person_climbing, /* 🧗 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp D &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp D &kp N7)
       #endif
     )
     UNICODE(emoji_lab_coat, /* 🥼 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N7 &kp C)
       #endif
     )
     UNICODE(emoji_rocket, /* 🚀 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #endif
     )
     UNICODE(emoji_joy, /* 😂 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp N2)
       #endif
     )
     UNICODE(emoji_rofl, /* 🤣 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N2 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N2 &kp N3)
       #endif
     )
     UNICODE(emoji_star_struck, /* 🤩 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N2 &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N2 &kp N9)
       #endif
     )
     UNICODE(emoji_love_struck, /* 😍 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp D)
       #endif
     )
     UNICODE(emoji_saluting_face, /* 🫡 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp E &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp E &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp A &kp E &kp N1)
       #endif
     )
     UNICODE(emoji_shocked_face, /* 🤯 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N2 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N2 &kp F)
       #endif
     )
     UNICODE(emoji_cold_sweat, /* 😰 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N3 &kp N0)
       #endif
     )
     UNICODE(emoji_monocle_face, /* 🧐 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp D &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp D &kp N0)
       #endif
     )
     UNICODE(emoji_snap_fingers, /* 🫰 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp F &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp F &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp A &kp F &kp N0)
       #endif
     )
     UNICODE(emoji_ok_hand, /* 👌 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N4 &kp C)
       #endif
     )
     UNICODE(emoji_pray, /* 🙏 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp F)
       #endif
     )
     UNICODE(emoji_sweat_smile, /* 😅 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp N5)
       #endif
     )
     UNICODE(emoji_disappointed, /* 😞 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N1 &kp E)
       #endif
     )
     UNICODE(emoji_thinking, /* 🤔 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N1 &kp N4)
       #endif
     )
     UNICODE(emoji_person_tipping_hand, /* 💁 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N8 &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N8 &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N8 &kp N1)
       #endif
     )
     UNICODE(emoji_person_gesturing_ok, /* 🙆 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N6)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N6)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N6)
       #endif
     )
     UNICODE(emoji_person_bowing, /* 🙇 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N7)
       #endif
     )
     UNICODE(emoji_person_raising_hand, /* 🙋 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp B)
       #endif
     )
     UNICODE(emoji_person_gesturing_no, /* 🙅 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N5)
       #endif
     )
     UNICODE(emoji_person_shrugging, /* 🤷 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N3 &kp N7)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N3 &kp N7)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N3 &kp N7)
       #endif
     )
     UNICODE(emoji_checkoff, /* ✅ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N7 &kp N0 &kp N5)
       #endif
     )
     UNICODE(emoji_100, /* 💯 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp A &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp A &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp A &kp F)
       #endif
     )
     UNICODE(emoji_warning, /* ⚠️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp A &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp A &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp A &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_x, /* ❌ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N7 &kp N4 &kp C)
       #endif
     )
     UNICODE(emoji_question, /* ❓ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N5 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N5 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N7 &kp N5 &kp N3)
       #endif
     )
     UNICODE(emoji_astronaut, /* 🧑‍🚀 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #endif
     )
     UNICODE(emoji_nerd, /* 🤓 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N9 &kp N1 &kp N3)
       #endif
     )
     UNICODE(emoji_sparkles, /* ✨ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N7 &kp N2 &kp N8)
       #endif
     )
     UNICODE(emoji_raised_hands, /* 🙌 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp C)
       #endif
     )
     UNICODE(emoji_point_up, /* ☝️ */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N1 &kp D), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N1 &kp D), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N2 &kp N6 &kp N1 &kp D), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp F &kp E &kp N0 &kp F)
       #endif
     )
     UNICODE(emoji_thumbs_up, /* 👍 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp D)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp D)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N4 &kp D)
       #endif
     )
@@ -6021,20 +6021,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_smile_up, /* 🙂 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
       #endif
     )
     UNICODE(emoji_face_smile_down, /* 🙃 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
       #endif
     )
@@ -6057,20 +6057,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_joke_wink, /* 😉 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
       #endif
     )
     UNICODE(emoji_face_joke_tounge, /* 😜 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N1 &kp C)
       #endif
     )
@@ -6081,20 +6081,20 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_fear_scared, /* 😨 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
       #endif
     )
     UNICODE(emoji_face_fear_scream, /* 😱 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
       #endif
     )
@@ -6105,11 +6105,11 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_surprise_dizzy, /* 😵 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
       #endif
     )
@@ -6120,11 +6120,11 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_attention_wave, /* 👋 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N4 &kp N4 &kp B)
       #endif
     )
@@ -6135,11 +6135,11 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_approval_cool, /* 😎 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N0 &kp E)
       #endif
     )
@@ -6162,11 +6162,11 @@ macros {
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_despair_cry, /* 😢 */
-      #if UNICODE_TARGET_OS == 1
+      #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
-      #elif UNICODE_TARGET_OS == 2
+      #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
-      #elif UNICODE_TARGET_OS == 3
+      #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
       #endif
     )

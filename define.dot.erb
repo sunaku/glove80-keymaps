@@ -9,6 +9,8 @@ digraph settings {
   `grep -A1 '^#ifndef' keymap.dtsi.min | grep '^#define'`.lines.each do |define|
     (_define, key, value) = define.split
     case value
+    when /^["']/
+      value = value.inspect
     when /^\d+$/
       numbers << value
       value = "NUMBER_#{value}"
@@ -28,7 +30,7 @@ digraph settings {
     graph [rank=same]
 
     <% settings.values.grep(/^".*"$/).uniq.each do |string| %>
-      <%= string %> [label=<%= string.inspect %>, style=filled, fillcolor=cyan, shape=diamond]
+      <%= string %> [label=<%= string %>, style=filled, fillcolor=cyan, shape=diamond]
     <% end %>
 
     <% numbers.each do |number| %>
