@@ -94,6 +94,34 @@
 #define _FIND_PREV  _C(LS(G))
 
 //
+// USE_NUMPAD_DIGITS puts `KP_N*` keycodes into the Number layer,
+// which would otherwise use `N*` number row keycodes by default.
+//
+#ifdef USE_NUMPAD_DIGITS
+#define _0 KP_N0
+#define _1 KP_N1
+#define _2 KP_N2
+#define _3 KP_N3
+#define _4 KP_N4
+#define _5 KP_N5
+#define _6 KP_N6
+#define _7 KP_N7
+#define _8 KP_N8
+#define _9 KP_N9
+#else
+#define _0 N0
+#define _1 N1
+#define _2 N2
+#define _3 N3
+#define _4 N4
+#define _5 N5
+#define _6 N6
+#define _7 N7
+#define _8 N8
+#define _9 N9
+#endif
+
+//
 // Glove80 specific symbol overrides to support non "en-US" locales
 //
 #undef  AMPS

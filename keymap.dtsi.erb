@@ -100,6 +100,29 @@
 #define _FIND_PREV  _C(LS(G))
 
 //
+// USE_NUMPAD_DIGITS puts `KP_N*` keycodes into the Number layer,
+// which would otherwise use `N*` number row keycodes by default.
+//
+<%
+  emit_numerical_digits = lambda do |prefix|
+    for n in 0..9 do
+%>
+#define _<%= n %> <%= prefix %>N<%= n %>
+<%
+    end
+  end
+%>
+#ifdef USE_NUMPAD_DIGITS
+<%
+  emit_numerical_digits.("KP_")
+%>
+#else
+<%
+  emit_numerical_digits.(nil)
+%>
+#endif
+
+//
 // Glove80 specific symbol overrides to support non "en-US" locales
 //
 #undef  AMPS

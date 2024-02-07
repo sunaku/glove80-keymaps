@@ -10604,28 +10604,28 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N7",
+            "value": "&kp _7",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N8",
+            "value": "&kp _8",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N9",
+            "value": "&kp _9",
             "params": []
           }
         ]
@@ -10707,28 +10707,28 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N4",
+            "value": "&kp _4",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N5",
+            "value": "&kp _5",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N6",
+            "value": "&kp _6",
             "params": []
           }
         ]
@@ -10849,28 +10849,28 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N1",
+            "value": "&kp _1",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N2",
+            "value": "&kp _2",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N3",
+            "value": "&kp _3",
             "params": []
           }
         ]
@@ -10969,10 +10969,10 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "N0",
+            "value": "&kp _0",
             "params": []
           }
         ]
