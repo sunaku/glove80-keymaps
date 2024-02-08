@@ -1,0 +1,260 @@
+[
+  {
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+  },
+  [
+    {
+      "c": "#ffcdd2",
+      "p": "CHICKLET",
+      "a": 7
+    },
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    {
+      "x": 7
+    },
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10"
+  ],
+  [
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    "+\n=",
+    {
+      "c": "#ffccbc",
+      "f": 4
+    },
+    "!\n1",
+    "@\n2",
+    "#\n3",
+    "$\n4",
+    "%\n5",
+    {
+      "c": "#cccccc",
+      "a": 4,
+      "w": 5,
+      "h": 4,
+      "d": true
+    },
+    "<center><h2>Gaming Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    {
+      "c": "#ffccbc",
+      "a": 5
+    },
+    "^\n6",
+    "&\n7",
+    "*\n8",
+    "(\n9",
+    ")\n0",
+    {
+      "c": "#ffecb3"
+    },
+    "|\n\\"
+  ],
+  [
+    "_\n-",
+    {
+      "f": 5
+    },
+    "~\n`",
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "B",
+    "N\n\n\n\nAltGr",
+    "M",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    "\"\n'",
+    {
+      "x": 5,
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "B",
+    "N",
+    "M",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    "<\n,",
+    ">\n.",
+    {
+      "f": 4
+    },
+    "?\n/"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "T",
+    {
+      "c": "#e1bee7"
+    },
+    "Tab\n\n\n\nWin",
+    {
+      "c": "#cccccc"
+    },
+    "Q\n\n\n\nAlt",
+    {
+      "c": "#dcedc8"
+    },
+    "W\n\n\n\nCtrl",
+    {
+      "c": "#cccccc"
+    },
+    "E\n\n\n\nShift",
+    "R",
+    {
+      "x": 5
+    },
+    "T\n\n\n\nCtrl",
+    {
+      "n": true
+    },
+    "Y\n\n\n\nShift",
+    "U\n\n\n\nAltGr",
+    "I\n\n\n\nAlt",
+    "O\n\n\n\nWin",
+    "P"
+  ],
+  [
+    "G",
+    {
+      "c": "#bbdefb"
+    },
+    "Shift",
+    {
+      "c": "#dcedc8"
+    },
+    "A",
+    "S",
+    {
+      "n": true
+    },
+    "D",
+    {
+      "c": "#cccccc"
+    },
+    "F",
+    {
+      "x": 5
+    },
+    "G",
+    "H",
+    "J",
+    "K",
+    "L",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    ":\n;"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "V",
+    {
+      "c": "#bbdefb"
+    },
+    "Ctrl",
+    {
+      "c": "#cccccc"
+    },
+    "Z",
+    "X",
+    "C",
+    {
+      "c": "#e1bee7"
+    },
+    "Escape\n\n\n\nFunction",
+    "Enter",
+    {
+      "c": "#ffcdd2"
+    },
+    "Pause",
+    {
+      "x": 1,
+      "c": "#e1bee7"
+    },
+    "Back space",
+    "Delete",
+    "Enter\n\n\n\nSystem",
+    {
+      "c": "#ffecb3",
+      "f": 5
+    },
+    "(",
+    {
+      "a": 5,
+      "f": 3
+    },
+    "{\n[",
+    "}\n]",
+    {
+      "a": 7,
+      "f": 5
+    },
+    ")",
+    {
+      "c": "#757575",
+      "t": "#EEEEEE",
+      "f": 3
+    },
+    "Magic"
+  ],
+  [
+    {
+      "x": 5,
+      "c": "#e1bee7",
+      "t": "#000000",
+      "n": true
+    },
+    "Space\n\n\n\nCursor",
+    {
+      "c": "#bbdefb"
+    },
+    "Alt\n\n\n\nNumber",
+    "Win",
+    {
+      "x": 1,
+      "c": "#757575",
+      "t": "#EEEEEE"
+    },
+    "Unlock layer",
+    {
+      "c": "#e1bee7",
+      "t": "#000000"
+    },
+    "Tab\n\n\n\nMouse",
+    {
+      "n": true
+    },
+    "Space\n\n\n\nSymbol"
+  ]
+]

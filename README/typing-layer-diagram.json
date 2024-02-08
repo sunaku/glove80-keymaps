@@ -1,0 +1,271 @@
+[
+  {
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+  },
+  [
+    {
+      "c": "#ffcdd2",
+      "p": "CHICKLET",
+      "a": 7
+    },
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    {
+      "x": 7
+    },
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10"
+  ],
+  [
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    "+\n=",
+    {
+      "c": "#ffccbc",
+      "f": 4
+    },
+    "!\n1",
+    "@\n2",
+    "#\n3",
+    "$\n4",
+    "%\n5",
+    {
+      "c": "#cccccc",
+      "a": 4,
+      "w": 5,
+      "h": 4,
+      "d": true
+    },
+    "<center><h2>Typing Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    {
+      "c": "#ffccbc",
+      "a": 5
+    },
+    "^\n6",
+    "&\n7",
+    "*\n8",
+    "(\n9",
+    ")\n0",
+    {
+      "c": "#ffecb3"
+    },
+    "|\n\\"
+  ],
+  [
+    {
+      "f": 5
+    },
+    "~\n`",
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "B",
+    "Y\n\n\n\nAltGr",
+    "O",
+    "U",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    "\"\n'",
+    {
+      "x": 5
+    },
+    ":\n;",
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "L",
+    "D",
+    "W\n\n\n\nAltGr",
+    "V",
+    "Z"
+  ],
+  [
+    {
+      "c": "#bbdefb",
+      "a": 5,
+      "fa": [
+        1
+      ]
+    },
+    "Caps lock\nCaps word",
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "C\n\n\n\nWin",
+    {
+      "f": 3
+    },
+    "I\n\n\n\nAlt",
+    {
+      "f": 3
+    },
+    "E\n\n\n\nCtrl",
+    {
+      "f": 3,
+      "n": true
+    },
+    "A\n\n\n\nShift",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 5
+    },
+    "<\n,",
+    {
+      "x": 5
+    },
+    ">\n.",
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3,
+      "n": true
+    },
+    "H\n\n\n\nShift",
+    "T\n\n\n\nCtrl",
+    "S\n\n\n\nAlt",
+    "N\n\n\n\nWin",
+    "Q"
+  ],
+  [
+    {
+      "c": "#bbdefb"
+    },
+    "Shift",
+    {
+      "c": "#cccccc"
+    },
+    "G",
+    "X",
+    "J",
+    "K",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 4
+    },
+    "_\n-",
+    {
+      "x": 5
+    },
+    "?\n/",
+    {
+      "c": "#cccccc",
+      "a": 7,
+      "f": 3
+    },
+    "R",
+    "M",
+    "F",
+    "P",
+    {
+      "c": "#bbdefb"
+    },
+    "Shift"
+  ],
+  [
+    {
+      "c": "#757575",
+      "t": "#EEEEEE"
+    },
+    "Magic",
+    {
+      "c": "#dcedc8",
+      "t": "#000000"
+    },
+    "Home",
+    "Page up",
+    "Page down",
+    "End",
+    {
+      "c": "#e1bee7"
+    },
+    "Escape\n\n\n\nFunction",
+    {
+      "c": "#dcedc8",
+      "fa": [
+        9
+      ]
+    },
+    "&uArr;",
+    "&dArr;",
+    {
+      "x": 1
+    },
+    "&lArr;",
+    "&rArr;",
+    {
+      "c": "#e1bee7",
+      "f": 3
+    },
+    "Enter\n\n\n\nSystem",
+    {
+      "c": "#ffecb3",
+      "a": 5,
+      "f": 4
+    },
+    "<\n(",
+    {
+      "f": 3
+    },
+    "{\n[",
+    "}\n]",
+    {
+      "f": 4
+    },
+    ">\n)",
+    {
+      "c": "#757575",
+      "t": "#EEEEEE",
+      "a": 7,
+      "f": 3
+    },
+    "Magic"
+  ],
+  [
+    {
+      "x": 5,
+      "c": "#e1bee7",
+      "t": "#000000",
+      "n": true
+    },
+    "Back space\n\n\n\nCursor",
+    "Delete\n\n\n\nNumber",
+    {
+      "c": "#757575",
+      "t": "#EEEEEE"
+    },
+    "Unlock layer",
+    {
+      "x": 1
+    },
+    "Unlock layer",
+    {
+      "c": "#e1bee7",
+      "t": "#000000"
+    },
+    "Tab\n\n\n\nMouse",
+    {
+      "n": true
+    },
+    "Space\n\n\n\nSymbol"
+  ]
+]
