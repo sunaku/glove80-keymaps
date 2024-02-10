@@ -93,6 +93,8 @@ Instead, you have two options for engaging auto-repeat on dual-function keys:
 2. Using repetition access keys: first hold a `&plain` layer access key and
    then hold the key you want to repeat for the desired amount of repetition.
 
+![Using repetition access keys](https://github.com/sunaku/glove80-keymaps/assets/9863/de0078c5-eeda-40fc-8c5b-39b7c0338cdc)
+
 ### Alpha layouts
 
 This keymap lets you dynamically switch to alpha layouts (such as QWERTY and
