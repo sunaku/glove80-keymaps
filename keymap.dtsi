@@ -94,31 +94,46 @@
 #define _FIND_PREV  _C(LS(G))
 
 //
-// USE_NUMPAD_DIGITS puts `KP_N*` keycodes into the Number layer,
-// which would otherwise use `N*` number row keycodes by default.
+// USE_NUMPAD_KEYCODES puts `KP_*` keycodes into the Number layer.
 //
-#ifdef USE_NUMPAD_DIGITS
-#define _0 KP_N0
-#define _1 KP_N1
-#define _2 KP_N2
-#define _3 KP_N3
-#define _4 KP_N4
-#define _5 KP_N5
-#define _6 KP_N6
-#define _7 KP_N7
-#define _8 KP_N8
-#define _9 KP_N9
+#ifdef USE_NUMPAD_KEYCODES
+#define _KP_N0 KP_N0
+#define _KP_N1 KP_N1
+#define _KP_N2 KP_N2
+#define _KP_N3 KP_N3
+#define _KP_N4 KP_N4
+#define _KP_N5 KP_N5
+#define _KP_N6 KP_N6
+#define _KP_N7 KP_N7
+#define _KP_N8 KP_N8
+#define _KP_N9 KP_N9
+#define _KP_PLUS KP_PLUS
+#define _KP_MINUS KP_MINUS
+#define _KP_ASTERISK KP_ASTERISK
+#define _KP_SLASH KP_SLASH
+#define _KP_COMMA KP_COMMA
+#define _KP_DOT KP_DOT
+#define _KP_EQUAL KP_EQUAL
+#define _KP_ENTER KP_ENTER
 #else
-#define _0 N0
-#define _1 N1
-#define _2 N2
-#define _3 N3
-#define _4 N4
-#define _5 N5
-#define _6 N6
-#define _7 N7
-#define _8 N8
-#define _9 N9
+#define _KP_N0 N0
+#define _KP_N1 N1
+#define _KP_N2 N2
+#define _KP_N3 N3
+#define _KP_N4 N4
+#define _KP_N5 N5
+#define _KP_N6 N6
+#define _KP_N7 N7
+#define _KP_N8 N8
+#define _KP_N9 N9
+#define _KP_PLUS PLUS
+#define _KP_MINUS MINUS
+#define _KP_ASTERISK ASTERISK
+#define _KP_SLASH SLASH
+#define _KP_COMMA COMMA
+#define _KP_DOT DOT
+#define _KP_EQUAL EQUAL
+#define _KP_ENTER ENTER
 #endif
 
 //
