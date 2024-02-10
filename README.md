@@ -30,6 +30,98 @@ See [release notes][8] for a visual overview of recent updates.
 [7]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
 [8]: https://github.com/sunaku/glove80-keymaps/releases
 
+## Guide
+
+Welcome to the *Glorious Engrammer* keymap! 🧑‍🚀🚀✨  This introductory
+guide will orient you to the world of custom layouts, keymaps, and firmware. 💁
+
+### Operating system
+
+First, let's configure this keymap to better suit your operating system by
+adding one of the following lines (just copy+paste whichever is appropriate)
+atop the "Custom Defined Behaviors" text box in your clone of this keymap:
+
+```dts
+#define OPERATING_SYSTEM 'L' // Linux
+#define OPERATING_SYSTEM 'M' // macOS
+#define OPERATING_SYSTEM 'W' // Windows
+```
+
+### Home row mods
+
+Next, let's become familiar with the powerful concept of [home row mods][HRM],
+which are dual-function keys that send normal keycodes (such as the letter `A`
+or the number `1`) when tapped or modifiers (such as Shift or Ctrl) when held.
+
+![Concept diagram of *home row mods* on a row-staggered keyboard][HRM_diagram]
+
+[HRM]:         https://sunaku.github.io/home-row-mods.html 
+[HRM_diagram]: https://sunaku.github.io/home-row-mods.png  
+
+The diagram above shows the default "GACS" order of home row mods in this keymap:
+- "G" means `LGUI`, which is the Win key in Windows, Cmd in macOS, Super in Linux.
+- "A" means `LALT`, which is the Alt key in Windows and Linux, Option in macOS.
+- "C" means `LCTL`, which is the Control key in Windows, macOS, and Linux alike.
+- "S" means `LSFT`, which is the Shift key in Windows, macOS, and Linux alike.
+
+**NOTE:** If you set your operating system to macOS in the preceding section,
+the home row mods order will be automatically rearranged into "CAGS" because
+macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
+
+### Layer access keys
+
+This keymap borrows heavily from the [legendary Miryoku][4] system, featuring:
+
+- Six specialized layers: Cursor, Number, Function, Symbol, Mouse, System
+- Layer access via thumb keys: Backspace, Delete, Escape, Enter, Tab, Space
+- Home row mods on the base layer and on same-hand of all layer access keys
+
+The idea is that you can always access modifiers with the same hand as the
+layer access key (which your thumb is holding down) to modify keystrokes on
+that respective layer.  This way, you don't need to lift your hands off the
+keyboard or your fingers away from their home position to execute shortcuts. 
+
+### Key auto-repeat
+
+Since dual-function keys (such as home row mods and layer access keys) have a
+special effect when held, they won't auto-repeat when held like a normal key.
+Instead, you have two options for engaging auto-repeat on dual-function keys:
+
+1. Use the "Tap then hold" method: first tap (press and release) and then hold
+   (press and don't release until the desired amount of repetition is reached).
+
+2. Using repetition access keys: first hold a `&plain` layer access key and
+   then hold the key you want to repeat for the desired amount of repetition.
+
+### Alpha layouts
+
+This keymap lets you dynamically switch to alpha layouts (such as QWERTY and
+Dvorak) other than the one you chose for your base layer during installation,
+by holding the Magic key and tapping the respective number key for that layer.
+
+| Shortcut  | Layer number | Alpha layout                        |
+| --------- | ------------ | ----------------------------------- |
+| Magic+`=` | 0            | Engrammer (base layer; your choice) |
+| Magic+`1` | 1            | Engram                              |
+| Magic+`2` | 2            | Halmak                              |
+| Magic+`3` | 3            | Dvorak                              |
+| Magic+`4` | 4            | Colemak                             |
+| Magic+`5` | 5            | QWERTY                              |
+| Magic+`6` | 6            | Minimak                             |
+| Magic+`7` | 7            | Norman                              |
+| Magic+`8` | 8            | Workman                             |
+
+For the first 5 alpha layouts, the respective number key for each layout will
+illuminate when you tap the Magic key.  For example, suppose that we activate
+the QWERTY layout by typing Magic+`5` and that we've forgotten about it after
+some time... 😅 how can we know which alpha layout is currently active?  Well,
+by simply tapping the Magic key, we'll see that number 5 illuminates in pink 🚨
+thereby indicating that the QWERTY alpha layout (at layer number 5) is active.
+
+However, note that number row illumination isn't available for layer 6 onwards.
+That's just how the Glove80's firmware is currently implemented today; you have
+the option of implementing such enhancements by editing its ZMK code if desired.
+
 ## Installing
 
 Open the [keymap link above](#keymap) and follow these instructions:
