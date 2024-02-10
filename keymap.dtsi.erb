@@ -828,6 +828,13 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
+    thumb_lower_shift: lower_layer_or_sticky_shift {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "tap-preferred";
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        #binding-cells = <2>;
+        bindings = <&mo>, <&sk>;
+    };
     space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
         flavor = SPACE_HOLDING_TYPE;
@@ -836,12 +843,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // Custom shifted pairs
-    //
-    //////////////////////////////////////////////////////////////////////////
 
     //
     // Shift + LEFT_PARENTHESIS = LESS_THAN
