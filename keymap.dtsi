@@ -3845,12 +3845,12 @@ macros {
     // has different shortcuts for typing Unicode characters as hexcodes.
     //
     // NOTE: You may need to enable Unicode hexadecimal input in your OS:
-    // - https://ladedu.com/how-to-enter-unicode-characters-on-a-mac/
-    // - https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+    // - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+    // - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+    // - (Windows) https://github.com/samhocevar/wincompose
     //
     // Specifically, Windows users should be running the WinCompose tool,
-    // which lets you type Unicode characters via hexadecimal codepoints:
-    // - https://github.com/samhocevar/wincompose
+    // which lets you type Unicode characters via hexadecimal codepoints.
     //
     #ifndef UNICODE_TARGET_OS
     #define UNICODE_TARGET_OS OPERATING_SYSTEM

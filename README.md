@@ -124,6 +124,19 @@ However, note that number row illumination isn't available for layer 6 onwards.
 That's just how the Glove80's firmware is currently implemented today; you have
 the option of implementing such enhancements by editing its ZMK code if desired.
 
+### Unicode and Emoji
+
+Unicode characters (including Emoji 🔥) are typed through ZMK macros (sequences
+of multiple keystrokes) generated from the `world.yaml` and `emoji.yaml` files
+by the `rake` command.  However, in order for these macros to take effect, you
+may need to enable support for Unicode hexadecimal character input in your OS:
+
+- (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+- (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+- (Windows) https://github.com/samhocevar/wincompose
+
+Specifically, Windows users should be running the WinCompose tool linked above.
+
 ## Installing
 
 Open the [keymap link above](#keymap) and follow these instructions:
