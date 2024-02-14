@@ -35,7 +35,7 @@ digraph settings {
 
     HOMEY_HOLDING_TIME -> NUMBER_270
 
-    HOMEY_STREAK_DECAY -> NUMBER_230
+    HOMEY_STREAK_DECAY -> NUMBER_250
 
     HOMEY_REPEAT_DECAY -> NUMBER_300
 
@@ -51,7 +51,7 @@ digraph settings {
 
     INDEX_HOLDING_TIME -> NUMBER_170
 
-    INDEX_STREAK_DECAY -> NUMBER_100
+    INDEX_STREAK_DECAY -> NUMBER_150
 
     INDEX_REPEAT_DECAY -> NUMBER_300
 
@@ -683,15 +683,13 @@ digraph settings {
     
       NUMBER_270 [label="270", style=filled, fillcolor=yellow, shape=diamond]
     
-      NUMBER_230 [label="230", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_250 [label="250", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_300 [label="300", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_170 [label="170", style=filled, fillcolor=yellow, shape=diamond]
-    
-      NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=diamond]
     

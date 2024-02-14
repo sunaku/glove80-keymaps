@@ -784,7 +784,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 230
+    #define HOMEY_STREAK_DECAY 250
     #endif
 
     //
@@ -861,7 +861,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY 100
+    #define INDEX_STREAK_DECAY 150
     #endif
 
     //
