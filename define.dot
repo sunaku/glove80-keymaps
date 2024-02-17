@@ -5,6 +5,8 @@ digraph settings {
 
     OPERATING_SYSTEM -> "'L'"
 
+    COMBO_FIRING_DECAY -> NUMBER_50
+
     RING1_FINGER_MOD -> LALT
 
     RING2_FINGER_MOD -> RALT
@@ -680,6 +682,8 @@ digraph settings {
       "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=diamond]
     
 
+    
+      NUMBER_50 [label="50", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_270 [label="270", style=filled, fillcolor=yellow, shape=diamond]
     

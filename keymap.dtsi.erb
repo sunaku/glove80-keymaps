@@ -248,6 +248,27 @@
   end
 %>
 
+combos {
+    compatible = "zmk,combos";
+
+    //
+    // COMBO_FIRING_DECAY defines how much time you have left (milliseconds)
+    // after pressing the first key in a ZMK combo to finish the whole chord.
+    //
+    #ifndef COMBO_FIRING_DECAY
+    #define COMBO_FIRING_DECAY 50
+    #endif
+
+    #ifdef LAYER_Gaming
+    combo_gaming_layer_toggle {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T3 POS_LH_T6>;
+        bindings = <&tog LAYER_Gaming>;
+        layers = <0 LAYER_Gaming>;
+    };
+    #endif
+};
+
 behaviors {
 
     //////////////////////////////////////////////////////////////////////////
