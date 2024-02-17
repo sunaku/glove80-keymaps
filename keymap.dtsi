@@ -1,6 +1,6 @@
 // NOTE: Use the `#define` settings below to customize this keymap!
 // For example, here are the main optional features you can enable:
-#define DIFFICULTY_LEVEL  5 // 1:easy --> 5:hard (see levels below)
+#define DIFFICULTY_LEVEL  0 // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
 
 //////////////////////////////////////////////////////////////////////////////
@@ -15,12 +15,12 @@
 // It's meant to help newcomers gradually work their way up to mastery.
 // You can disable this setting by omitting it or assigning a `0` zero.
 //
-// #define DIFFICULTY_LEVEL 0 // custom (no preset settings)
+// #define DIFFICULTY_LEVEL 0 // custom (see defaults below)
 // #define DIFFICULTY_LEVEL 1 // novice (500ms)
 // #define DIFFICULTY_LEVEL 2 // slower (400ms)
 // #define DIFFICULTY_LEVEL 3 // normal (300ms)
 // #define DIFFICULTY_LEVEL 4 // faster (200ms)
-// #define DIFFICULTY_LEVEL 5 // sunaku (see defaults below)
+// #define DIFFICULTY_LEVEL 5 // expert (150ms)
 //
 #ifdef DIFFICULTY_LEVEL
 #if DIFFICULTY_LEVEL == 1
@@ -43,6 +43,11 @@
     #define INDEX_HOLDING_TIME 200
     #define PLAIN_HOLDING_TIME 200
     #define SPACE_HOLDING_TIME 200
+#elif DIFFICULTY_LEVEL == 5
+    #define HOMEY_HOLDING_TIME 150
+    #define INDEX_HOLDING_TIME 150
+    #define PLAIN_HOLDING_TIME 150
+    #define SPACE_HOLDING_TIME 150
 #endif
 #endif
 
