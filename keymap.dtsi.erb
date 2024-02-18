@@ -863,7 +863,7 @@ behaviors {
         flavor = "tap-preferred";
         tapping-term-ms = <THUMB_HOLDING_TIME>;
         #binding-cells = <2>;
-        bindings = <&mo>, <&sk>;
+        bindings = <&mo>, <&sticky_key_oneshot>;
     };
     space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
@@ -931,6 +931,39 @@ behaviors {
     <%
       end
     %>
+
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // &sk (sticky key) variant that is truly one-shot
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    //
+    // STICKY_1SHOT_DECAY defines how much time you have left (milliseconds)
+    // after tapping a sticky key before it expires (won't apply to next tap).
+    //
+    #ifndef STICKY_1SHOT_DECAY
+    #define STICKY_1SHOT_DECAY 500
+    #endif
+
+    sticky_key_oneshot: sticky_key_oneshot_macro {
+        compatible = "zmk,behavior-macro-one-param";
+        wait-ms = <0>;
+        tap-ms = <0>;
+        #binding-cells = <1>;
+        bindings
+            = <&macro_param_1to1>
+            , <&macro_tap &sticky_key_quickrel MACRO_PLACEHOLDER>
+            ;
+    };
+    sticky_key_quickrel: sticky_key_quick_release {
+        compatible = "zmk,behavior-sticky-key";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <STICKY_1SHOT_DECAY>;
+        quick-release;
+        ignore-modifiers;
+    };
 
     //////////////////////////////////////////////////////////////////////////
     //

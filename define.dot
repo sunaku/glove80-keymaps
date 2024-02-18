@@ -637,6 +637,8 @@ digraph settings {
 
     RIGHT_MIDDY_INDEX_REPEAT_DECAY -> RIGHT_MIDDY_CHORD_REPEAT_DECAY
 
+    STICKY_1SHOT_DECAY -> NUMBER_500
+
     SELECT_WORD_DELAY -> NUMBER_1
 
     UNICODE_TARGET_OS -> OPERATING_SYSTEM
@@ -696,6 +698,8 @@ digraph settings {
       NUMBER_170 [label="170", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=diamond]
+    
+      NUMBER_500 [label="500", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_1 [label="1", style=filled, fillcolor=yellow, shape=diamond]
     
