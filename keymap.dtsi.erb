@@ -692,6 +692,7 @@ behaviors {
 
         for target_variant in [nil, :_bilateral] do
     %>
+    <%= "#ifdef ENFORCE_BILATERAL" if target_variant %>
     <%= target %><%= target_variant %>: homey_<%= target %><%= target_variant %> {
         compatible = "zmk,behavior-hold-tap";
         flavor = <%= source.upcase %>_HOLDING_TYPE;
@@ -719,6 +720,7 @@ behaviors {
           end
         %>
     };
+    <%= "#endif" if target_variant %>
     <%
         end
 
@@ -730,6 +732,7 @@ behaviors {
         else
           constant = format_constant(hand, finger)
     %>
+    #ifdef ENFORCE_BILATERAL
     <%= target %>_hold: homey_<%= target %>_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -761,6 +764,7 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
+    #endif
     #define <%= target_CamelCase %>(key, layer_index) <%= target_CamelCase %>_unroll(layer_index) (key)
     #define <%= target_CamelCase %>_unroll(layer_index) <%= target_CamelCase %>_concat(<%= target_CamelCase %>_layer, layer_index)
     #define <%= target_CamelCase %>_concat(prefix, layer_index) prefix ## layer_index
