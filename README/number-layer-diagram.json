@@ -35,12 +35,15 @@
       "a": 5
     },
     "|\n\\",
-    "!\n1",
     {
-      "c": "#dcedc8",
+      "c": "#e1bee7",
       "g": false,
       "a": 7,
       "f": 6
+    },
+    "_",
+    {
+      "c": "#dcedc8"
     },
     "d",
     "e",
@@ -51,7 +54,7 @@
       "a": 5,
       "f": 3
     },
-    "%\n5",
+    "<\n,",
     {
       "g": false,
       "a": 4,
@@ -70,15 +73,11 @@
     {
       "c": "#ffcdd2"
     },
-    "#",
     "$",
+    "#",
+    "@",
     {
-      "c": "#ffecb3",
-      "f": 9
-    },
-    "~",
-    {
-      "f": 6
+      "c": "#ffecb3"
     },
     "!",
     {
@@ -104,9 +103,10 @@
     "b",
     "c",
     {
-      "c": "#e1bee7"
+      "c": "#a5d6a7",
+      "f": 3
     },
-    "_",
+    "Enter",
     {
       "x": 5,
       "c": "#ffccbc",
@@ -148,15 +148,12 @@
     },
     "Shift\n\n\n\nShift",
     {
-      "g": true,
-      "a": 5
+      "c": "#a5d6a7"
     },
-    "<\n,",
+    "Tab",
     {
       "x": 5,
       "c": "#ffccbc",
-      "g": false,
-      "a": 7,
       "f": 6
     },
     "+",
@@ -180,25 +177,25 @@
   ],
   [
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#C0CA33",
       "f": 3
     },
-    "Shift",
-    {
-      "g": false
-    },
-    "Shift <small>(sticky)</small>",
-    {
-      "c": "#C0CA33"
-    },
     "Undo",
+    {
+      "c": "#bbdefb",
+      "t": "#00000"
+    },
+    "Select all",
+    {
+      "t": "#000000"
+    },
+    "Select line\n\n\n\nMouse",
+    "Select word\n\n\n\nSymbol",
     {
       "c": "#a5d6a7"
     },
     "Back space",
     "Space",
-    "Tab",
     {
       "x": 5,
       "c": "#ffccbc",
@@ -224,22 +221,23 @@
   ],
   [
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#C0CA33",
       "f": 3
     },
-    "F5",
-    "Home",
-    {
-      "c": "#C0CA33",
-      "g": false
-    },
     "Redo",
+    {
+      "c": "#cccccc"
+    },
+    "Shift <small>(sticky)</small>",
+    {
+      "c": "#bbdefb"
+    },
+    "Extend line",
+    "Extend word",
     {
       "c": "#a5d6a7"
     },
     "Delete",
-    "Enter",
     {
       "c": "#D1C4E9",
       "g": true,
@@ -283,24 +281,22 @@
     },
     ">\n)",
     {
-      "c": "#ffcdd2",
+      "c": "#ffecb3",
       "a": 7,
-      "f": 6
+      "f": 9
     },
-    "@"
+    "~"
   ],
   [
     {
       "x": 5,
-      "c": "#D1C4E9",
-      "g": true,
+      "c": "#a5d6a7",
       "p": "SPACE",
-      "f": 3,
-      "n": true
+      "f": 3
     },
-    "Back space\n\n\n\nCursor",
+    "Alt-Tab\n\n\n\nCursor",
     {
-      "g": false,
+      "c": "#D1C4E9",
       "fa": [
         9
       ],

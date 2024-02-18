@@ -101,33 +101,22 @@
     "Z"
   ],
   [
-    {
-      "a": 5,
-      "fa": [
-        1
-      ]
-    },
-    "Caps lock\nCaps word",
+    "Caps word",
     {
       "c": "#FFCDD2",
-      "p": "SPACE",
-      "a": 7,
-      "f": 3
+      "p": "SPACE"
     },
     "C\n\n\n\nWin",
     {
-      "c": "#FFCCBC",
-      "f": 3
+      "c": "#FFCCBC"
     },
     "I\n\n\n\nAlt",
     {
-      "c": "#FFECB3",
-      "f": 3
+      "c": "#FFECB3"
     },
     "E\n\n\n\nCtrl",
     {
       "c": "#DCEDC8",
-      "f": 3,
       "n": true
     },
     "A\n\n\n\nShift",
@@ -222,12 +211,12 @@
         9
       ]
     },
-    "&uArr;",
+    "&lArr;",
     "&dArr;",
     {
       "x": 1
     },
-    "&lArr;",
+    "&uArr;",
     "&rArr;",
     {
       "c": "#D1C4E9",
@@ -272,18 +261,16 @@
     "Delete\n\n\n\nNumber",
     {
       "c": "#757575",
-      "t": "#EEEEEE",
-      "p": "CHICKLET"
+      "t": "#EEEEEE"
     },
-    "Lower",
+    "Shift <small>(1-shot)</small>\n\n\n\nLower",
     {
       "x": 1
     },
-    "Lower",
+    "Shift <small>(1-shot)</small>\n\n\n\nLower",
     {
       "c": "#D1C4E9",
-      "t": "#000000",
-      "p": "SPACE"
+      "t": "#000000"
     },
     "Tab\n\n\n\nMouse",
     {

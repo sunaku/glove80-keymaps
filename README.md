@@ -1,9 +1,9 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80][1] keymap featuring the [Engram][2]/[mer][3] 
+This is [my Glove80][1] keymap featuring the [Engram][2]/[mer][3]
 layouts with [Miryoku][4]-style layers and [home row mods][5].
-Other layouts (QWERTY, Dvorak, Colemak, Workman) and 
-familiar keys (arrows, pinky shifts, function row) 
+Other layouts (QWERTY, Dvorak, Colemak/DH, etc.) and
+familiar keys (arrows, pinky shifts, function row)
 are also provided as "training wheels" to aid your
 transition to the full glory, at your convenience.
 
@@ -15,13 +15,40 @@ transition to the full glory, at your convenience.
 [4]: https://github.com/manna-harbour/miryoku
 [5]: https://sunaku.github.io/home-row-mods.html
 
+<!-- vim-markdown-toc GFM -->
+
+* [Keymap](#keymap)
+    * [Legend](#legend)
+* [Guide](#guide)
+    * [Operating system](#operating-system)
+    * [Home row mods](#home-row-mods)
+        * [One-shot shifts](#one-shot-shifts)
+    * [Layer access keys](#layer-access-keys)
+    * [Key auto-repeat](#key-auto-repeat)
+    * [Alpha layouts](#alpha-layouts)
+    * [Unicode and Emoji](#unicode-and-emoji)
+* [Installing](#installing)
+    * [Flashing](#flashing)
+* [Upgrading](#upgrading)
+* [Customizing](#customizing)
+    * [Overriding the defaults](#overriding-the-defaults)
+        * [Reordering home row mods](#reordering-home-row-mods)
+        * [Fine-tuning the timing](#fine-tuning-the-timing)
+    * [Compiling from source](#compiling-from-source)
+        * [Unicode/Emoji characters](#unicodeemoji-characters)
+        * [Rearranging the base layer](#rearranging-the-base-layer)
+* [Discussion](#discussion)
+* [License](#license)
+
+<!-- vim-markdown-toc -->
+
 ## Keymap
 
-- https://my.glove80.com/#/layout/user/58f097f9-2d26-4399-a249-666e1bec9341
+- https://my.glove80.com/#/layout/user/05c7da03-20bd-494e-a795-d382a5a96621
 
 ### Legend
 
-See [interactive layer map][6] for overview and documentation.  
+See [interactive layer map][6] for overview and documentation.
 >NOTE: This is also available as a [printable PDF document][7].
 
 See [release notes][8] for a visual overview of recent updates.
@@ -55,8 +82,8 @@ or the number `1`) when tapped or modifiers (such as Shift or Ctrl) when held.
 
 ![Concept diagram of *home row mods* on a row-staggered keyboard][HRM_diagram]
 
-[HRM]:         https://sunaku.github.io/home-row-mods.html 
-[HRM_diagram]: https://sunaku.github.io/home-row-mods.png  
+[HRM]:         https://sunaku.github.io/home-row-mods.html
+[HRM_diagram]: https://sunaku.github.io/home-row-mods.png
 
 The diagram above shows the default "GACS" order of home row mods in this keymap:
 - "G" means `LGUI`, which is the Win key in Windows, Cmd in macOS, Super in Linux.
@@ -67,6 +94,13 @@ The diagram above shows the default "GACS" order of home row mods in this keymap
 **NOTE:** If you set your operating system to macOS in the preceding section,
 the home row mods order will be automatically rearranged into "CAGS" because
 macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
+
+#### One-shot shifts
+
+The Lower keys on the base layer provide one-shot sticky shift functionality,
+whereby tapping them temporarily activates a sticky Shift that applies itself
+to the next key you tap.  This can be useful for single letter capitalization,
+such as for the frequent "I" in English or when typing camel/PascalCase names.
 
 ### Layer access keys
 
@@ -79,7 +113,7 @@ This keymap borrows heavily from the [legendary Miryoku][4] system, featuring:
 The idea is that you can always access modifiers with the same hand as the
 layer access key (which your thumb is holding down) to modify keystrokes on
 that respective layer.  This way, you don't need to lift your hands off the
-keyboard or your fingers away from their home position to execute shortcuts. 
+keyboard or your fingers away from their home position to execute shortcuts.
 
 ### Key auto-repeat
 
@@ -105,13 +139,13 @@ by holding the Magic key and tapping the respective number key for that layer.
 | --------- | ------------ | ----------------------------------- |
 | Magic+`=` | 0            | Engrammer (base layer; your choice) |
 | Magic+`1` | 1            | Engram                              |
-| Magic+`2` | 2            | Halmak                              |
-| Magic+`3` | 3            | Dvorak                              |
-| Magic+`4` | 4            | Colemak                             |
+| Magic+`2` | 2            | Dvorak                              |
+| Magic+`3` | 3            | Colemak                             |
+| Magic+`4` | 4            | ColemakDHm                          |
 | Magic+`5` | 5            | QWERTY                              |
-| Magic+`6` | 6            | Minimak                             |
-| Magic+`7` | 7            | Norman                              |
-| Magic+`8` | 8            | Workman                             |
+| Magic+`6` | 6            | Norman                              |
+| Magic+`7` | 7            | Workman                             |
+| Magic+`8` | 8            | Halmak                              |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
@@ -135,7 +169,7 @@ may need to enable support for Unicode hexadecimal character input in your OS:
 - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 - (Windows) https://github.com/samhocevar/wincompose
 
-Specifically, Windows users should be running the WinCompose tool linked above.
+Specifically, Windows users need to be running the WinCompose tool linked above.
 
 ## Installing
 
@@ -181,7 +215,7 @@ adding them above the snippet in the "Custom Defined Behaviors" text box:
 
 ```dts
 // add your overrides here, up at the very top:
-#define OPERATING_SYSTEM 3 // windows 
+#define OPERATING_SYSTEM 3 // windows
 #define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
 
 // ... rest of snippet goes here, unchanged ...
@@ -233,14 +267,14 @@ adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
 2. Install dependencies OR skip this step if you have Docker on your system:
 
-    apt install rake graphviz
+       apt install rake graphviz
 
 3. In your copy of this repository, run `rake` OR `./rake` if using Docker.
 
 #### Unicode/Emoji characters
 
 You can customize the preset characters in the Emoji and World layers by
-editing their respective YAML source files in this repository.  Afterwards, 
+editing their respective YAML source files in this repository.  Afterwards,
 run the `rake` command and then copy the new `keymap.dtsi` contents back into
 the "Custom Defined Behaviors" text box in the Layout Editor for your keymap.
 

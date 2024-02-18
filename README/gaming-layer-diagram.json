@@ -174,7 +174,20 @@
   ],
   [
     {
+      "y": -0.5,
+      "x": 7,
+      "c": "#a5d6a7",
+      "p": "FLAT",
+      "f": 2,
+      "h": 2.5
+    },
+    "Toggle <small>base layer</small>"
+  ],
+  [
+    {
+      "y": -0.5,
       "c": "#cccccc",
+      "p": "CHICKLET",
       "a": 7,
       "f": 3
     },

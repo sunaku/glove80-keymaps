@@ -159,21 +159,21 @@
   [
     "Down loads",
     {
-      "c": "#e1bee7"
-    },
-    "Find",
-    {
-      "c": "#bbdefb"
-    },
-    "Select word\n\n\n\nSymbol",
-    "Select line\n\n\n\nMouse",
-    {
+      "c": "#bbdefb",
       "t": "#00000"
     },
     "Select all",
     {
-      "c": "#ffecb3",
       "t": "#000000"
+    },
+    "Select line\n\n\n\nMouse",
+    "Select word\n\n\n\nSymbol",
+    {
+      "c": "#e1bee7"
+    },
+    "Find",
+    {
+      "c": "#ffecb3"
     },
     "Paste",
     {
@@ -201,8 +201,8 @@
     {
       "c": "#bbdefb"
     },
-    "Extend word",
     "Extend line",
+    "Extend word",
     {
       "c": "#e1bee7"
     },
