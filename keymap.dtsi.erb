@@ -1470,9 +1470,9 @@ macros {
     // convenient inward-rolling shortcut on the home row of the layer.
     //
     #ifndef EMOJI_GENDER_SIGN_PRESET
-    //#define EMOJI_GENDER_SIGN_PRESET 0 // neutral
-    #define EMOJI_GENDER_SIGN_PRESET 1 // male
-    //#define EMOJI_GENDER_SIGN_PRESET 2 // female
+    #define EMOJI_GENDER_SIGN_PRESET 'N' // neutral
+    //#define EMOJI_GENDER_SIGN_PRESET 'M' // male
+    //#define EMOJI_GENDER_SIGN_PRESET 'F' // female
     #endif
 
     //
@@ -1480,12 +1480,12 @@ macros {
     // convenient inward-rolling shortcut on the home row of the layer.
     //
     #ifndef EMOJI_SKIN_TONE_PRESET
-    //#define EMOJI_SKIN_TONE_PRESET 0 // neutral
-    //#define EMOJI_SKIN_TONE_PRESET 1 // light_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 2 // medium_light_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 3 // medium_skin_tone
-    #define EMOJI_SKIN_TONE_PRESET 4 // medium_dark_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 5 // dark_skin_tone
+    #define EMOJI_SKIN_TONE_PRESET 'N' // neutral
+    //#define EMOJI_SKIN_TONE_PRESET 'L' // light_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 'l' // medium_light_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 'M' // medium_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 'd' // medium_dark_skin_tone
+    //#define EMOJI_SKIN_TONE_PRESET 'D' // dark_skin_tone
     #endif
 
     //
@@ -1493,11 +1493,11 @@ macros {
     // convenient inward-rolling shortcut on the home row of the layer.
     //
     #ifndef EMOJI_HAIR_STYLE_PRESET
-    //#define EMOJI_HAIR_STYLE_PRESET 0 // neutral
-    //#define EMOJI_HAIR_STYLE_PRESET 1 // bald
-    //#define EMOJI_HAIR_STYLE_PRESET 2 // red_hair
-    //#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
-    #define EMOJI_HAIR_STYLE_PRESET 4 // white_hair
+    #define EMOJI_HAIR_STYLE_PRESET 'N' // neutral
+    //#define EMOJI_HAIR_STYLE_PRESET 'B' // bald
+    //#define EMOJI_HAIR_STYLE_PRESET 'R' // red_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 'C' // curly_hair
+    //#define EMOJI_HAIR_STYLE_PRESET 'W' // white_hair
     #endif
 
     //
@@ -1526,37 +1526,37 @@ macros {
 <%
   emit_at_root_level.() do
 %>
-#if EMOJI_GENDER_SIGN_PRESET == 0
+#if EMOJI_GENDER_SIGN_PRESET == 'N'
     emoji_gender_sign_preset: &none {};
-#elif EMOJI_GENDER_SIGN_PRESET == 1
+#elif EMOJI_GENDER_SIGN_PRESET == 'M'
     emoji_gender_sign_preset: &emoji_male_sign {};
-#elif EMOJI_GENDER_SIGN_PRESET == 2
+#elif EMOJI_GENDER_SIGN_PRESET == 'F'
     emoji_gender_sign_preset: &emoji_female_sign {};
 #endif
 
-#if EMOJI_SKIN_TONE_PRESET == 0
+#if EMOJI_SKIN_TONE_PRESET == 'N'
     emoji_skin_tone_preset: &none {};
-#elif EMOJI_SKIN_TONE_PRESET == 1
+#elif EMOJI_SKIN_TONE_PRESET == 'L'
     emoji_skin_tone_preset: &emoji_light_skin_tone {};
-#elif EMOJI_SKIN_TONE_PRESET == 2
+#elif EMOJI_SKIN_TONE_PRESET == 'l'
     emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
-#elif EMOJI_SKIN_TONE_PRESET == 3
+#elif EMOJI_SKIN_TONE_PRESET == 'M'
     emoji_skin_tone_preset: &emoji_medium_skin_tone {};
-#elif EMOJI_SKIN_TONE_PRESET == 4
+#elif EMOJI_SKIN_TONE_PRESET == 'd'
     emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
-#elif EMOJI_SKIN_TONE_PRESET == 5
+#elif EMOJI_SKIN_TONE_PRESET == 'D'
     emoji_skin_tone_preset: &emoji_dark_skin_tone {};
 #endif
 
-#if EMOJI_HAIR_STYLE_PRESET == 0
+#if EMOJI_HAIR_STYLE_PRESET == 'N'
     emoji_hair_style_preset: &none {};
-#elif EMOJI_HAIR_STYLE_PRESET == 1
+#elif EMOJI_HAIR_STYLE_PRESET == 'B'
     emoji_hair_style_preset: &emoji_bald {};
-#elif EMOJI_HAIR_STYLE_PRESET == 2
+#elif EMOJI_HAIR_STYLE_PRESET == 'R'
     emoji_hair_style_preset: &emoji_red_hair {};
-#elif EMOJI_HAIR_STYLE_PRESET == 3
+#elif EMOJI_HAIR_STYLE_PRESET == 'C'
     emoji_hair_style_preset: &emoji_curly_hair {};
-#elif EMOJI_HAIR_STYLE_PRESET == 4
+#elif EMOJI_HAIR_STYLE_PRESET == 'W'
     emoji_hair_style_preset: &emoji_white_hair {};
 #endif
 <%

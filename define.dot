@@ -649,11 +649,11 @@ digraph settings {
 
     COMPOSE_KEY_LINUX -> RALT
 
-    EMOJI_GENDER_SIGN_PRESET -> NUMBER_1
+    EMOJI_GENDER_SIGN_PRESET -> "'N'"
 
-    EMOJI_SKIN_TONE_PRESET -> NUMBER_4
+    EMOJI_SKIN_TONE_PRESET -> "'N'"
 
-    EMOJI_HAIR_STYLE_PRESET -> NUMBER_4
+    EMOJI_HAIR_STYLE_PRESET -> "'N'"
 
     MOUSE_MOTION_DELAY -> NUMBER_0
 
@@ -683,6 +683,8 @@ digraph settings {
     
       "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=diamond]
     
+      "'N'" [label="'N'", style=filled, fillcolor=cyan, shape=diamond]
+    
 
     
       NUMBER_50 [label="50", style=filled, fillcolor=yellow, shape=diamond]
@@ -704,8 +706,6 @@ digraph settings {
       NUMBER_1 [label="1", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_10 [label="10", style=filled, fillcolor=yellow, shape=diamond]
-    
-      NUMBER_4 [label="4", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_0 [label="0", style=filled, fillcolor=yellow, shape=diamond]
     
