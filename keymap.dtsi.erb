@@ -20,29 +20,17 @@
 // #define DIFFICULTY_LEVEL 2 // slower (400ms)
 // #define DIFFICULTY_LEVEL 3 // normal (300ms)
 // #define DIFFICULTY_LEVEL 4 // faster (200ms)
-// #define DIFFICULTY_LEVEL 5 // expert (150ms)
+// #define DIFFICULTY_LEVEL 5 // expert (100ms)
 //
-#ifdef DIFFICULTY_LEVEL
+#if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
+#define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
 <%
-  {
-    1 => 500,
-    2 => 400,
-    3 => 300,
-    4 => 200,
-    5 => 150
-  }
-  .each do |level, threshold|
+  %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
 %>
-#<%= "el" if level > 1 %>if DIFFICULTY_LEVEL == <%= level %>
+#define <%= category %>_HOLDING_TIME DIFFICULTY_THRESHOLD
 <%
-    %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
-%>
-    #define <%= category %>_HOLDING_TIME <%= threshold %>
-<%
-    end
   end
 %>
-#endif
 #endif
 
 //
