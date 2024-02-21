@@ -20,6 +20,7 @@ transition to the full glory, at your convenience.
 * [Keymap](#keymap)
     * [Legend](#legend)
 * [Guide](#guide)
+    * [Factory layout](#factory-layout)
     * [Operating system](#operating-system)
     * [Home row mods](#home-row-mods)
         * [One-shot shifts](#one-shot-shifts)
@@ -61,6 +62,19 @@ See [release notes][8] for a visual overview of recent updates.
 
 Welcome to the *Glorious Engrammer* keymap! 🧑‍🚀🚀✨  This introductory
 guide will orient you to the world of custom layouts, keymaps, and firmware. 💁
+
+### Factory layout
+
+Before we get started, let's talk about your escape route back to familiarity.
+
+If you're a new user (perhaps you've just unboxed your Glove80 or you haven't
+customized its default keymap), you might find the Factory layer to be useful:
+
+1. Press & hold the Magic key (bottom left corner key on left half of Glove80)
+2. Tap the left hand's T3 key (furthest key on the upper arc of thumb cluster)
+
+This shortcut will toggle the Factory layer on/off and allow you to experiment
+with this keymap while maintaining an easy escape route to the factory default.
 
 ### Operating system
 
