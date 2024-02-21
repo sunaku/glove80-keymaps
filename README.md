@@ -154,8 +154,8 @@ by holding the Magic key and tapping the respective number key for that layer.
 | Magic+`=` | 0            | Engrammer (base layer; your choice) |
 | Magic+`1` | 1            | Engram                              |
 | Magic+`2` | 2            | Dvorak                              |
-| Magic+`3` | 3            | Colemak                             |
-| Magic+`4` | 4            | ColemakDHm                          |
+| Magic+`3` | 3            | ColemakDHm                          |
+| Magic+`4` | 4            | Colemak                             |
 | Magic+`5` | 5            | QWERTY                              |
 | Magic+`6` | 6            | Norman                              |
 | Magic+`7` | 7            | Workman                             |
@@ -229,8 +229,8 @@ adding them above the snippet in the "Custom Defined Behaviors" text box:
 
 ```dts
 // add your overrides here, up at the very top:
-#define OPERATING_SYSTEM 3 // windows
-#define EMOJI_HAIR_STYLE_PRESET 3 // curly_hair
+#define OPERATING_SYSTEM 'W' // windows
+#define EMOJI_HAIR_STYLE_PRESET 'C' // curly_hair
 
 // ... rest of snippet goes here, unchanged ...
 ```
