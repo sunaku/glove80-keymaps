@@ -58,6 +58,19 @@ See [release notes][8] for a visual overview of recent updates.
 [7]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
 [8]: https://github.com/sunaku/glove80-keymaps/releases
 
+[![Base layer](README/base-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#layers)
+[![Lower layer](README/lower-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#lower-layer)
+[![Cursor layer](README/cursor-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#cursor-layer)
+[![Number layer](README/number-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#number-layer)
+[![Function layer](README/function-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#function-layer)
+[![Emoji layer](README/emoji-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#emoji-layer)
+[![Symbol layer](README/symbol-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#symbol-layer)
+[![Mouse layer](README/mouse-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#mouse-layer)
+[![System layer](README/system-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#system-layer)
+[![World layer](README/world-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#world-layer)
+[![Typing layer](README/typing-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#typing-layer)
+[![Gaming layer](README/gaming-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#gaming-layer)
+
 ## Guide
 
 Welcome to the *Glorious Engrammer* keymap! 🧑‍🚀🚀✨  This introductory
