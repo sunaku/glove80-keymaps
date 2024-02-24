@@ -27,8 +27,11 @@
 #define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
 <%
   %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
+    setting = "#{category}_HOLDING_TIME"
 %>
-#define <%= category %>_HOLDING_TIME DIFFICULTY_THRESHOLD
+#ifndef <%= setting %>
+#define <%= setting %> DIFFICULTY_THRESHOLD
+#endif
 <%
   end
 %>
