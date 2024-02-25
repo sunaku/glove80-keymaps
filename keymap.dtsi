@@ -2,6 +2,7 @@
 // For example, here are the main optional features you can enable:
 #define DIFFICULTY_LEVEL  0 // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
+#define WORLD_USE_COMPOSE   // use native Compose in place of Unicode
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -4339,6 +4340,12 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
+    // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
+    // for characters in the "localizing" section of the `world.yaml` file.
+    //
+    //#define WORLD_USE_COMPOSE
+
+    //
     // UNICODE_TARGET_OS defines which operating system you're targeting
     // for the UNICODE() preprocessor macro to be used on, since each OS
     // has different shortcuts for typing Unicode characters as hexcodes.
@@ -4553,20 +4560,44 @@ macros {
     //
     UNICODE(world_c_cedilla_lower, /* ç */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp COMMA &kp C)
+        #else
+        UNICODE_SEQ_LINUX(&kp E &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(C))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp E &kp N7)
+        #endif
       #endif
     )
     UNICODE(world_c_cedilla_upper, /* Ç */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp COMMA &kp LS(C))
+        #else
+        UNICODE_SEQ_LINUX(&kp C &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(LS(C)))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp C &kp N7)
+        #endif
       #endif
     )
     world_c_cedilla: world_c_cedilla {
@@ -4577,20 +4608,44 @@ macros {
     };
     UNICODE(world_i_acute_lower, /* í */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp SQT &kp I)
+        #else
+        UNICODE_SEQ_LINUX(&kp E &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp I)
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp E &kp D)
+        #endif
       #endif
     )
     UNICODE(world_i_acute_upper, /* Í */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(I))
+        #else
+        UNICODE_SEQ_LINUX(&kp C &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(I))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp C &kp D)
+        #endif
       #endif
     )
     world_i_acute: world_i_acute {
@@ -4817,20 +4872,44 @@ macros {
     };
     UNICODE(world_a_diaeresis_lower, /* ä */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp DQT &kp A)
+        #else
+        UNICODE_SEQ_LINUX(&kp E &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp A)
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp E &kp N4)
+        #endif
       #endif
     )
     UNICODE(world_a_diaeresis_upper, /* Ä */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(A))
+        #else
+        UNICODE_SEQ_LINUX(&kp C &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(A))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp C &kp N4)
+        #endif
       #endif
     )
     world_a_diaeresis: world_a_diaeresis {
@@ -5009,20 +5088,44 @@ macros {
     };
     UNICODE(world_o_diaeresis_lower, /* ö */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp DQT &kp O)
+        #else
+        UNICODE_SEQ_LINUX(&kp F &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp O)
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp F &kp N6)
+        #endif
       #endif
     )
     UNICODE(world_o_diaeresis_upper, /* Ö */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(O))
+        #else
+        UNICODE_SEQ_LINUX(&kp D &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(O))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp D &kp N6)
+        #endif
       #endif
     )
     world_o_diaeresis: world_o_diaeresis {
@@ -5153,20 +5256,44 @@ macros {
     };
     UNICODE(world_u_diaeresis_lower, /* ü */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp DQT &kp U)
+        #else
+        UNICODE_SEQ_LINUX(&kp F &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp U)
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp F &kp C)
+        #endif
       #endif
     )
     UNICODE(world_u_diaeresis_upper, /* Ü */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(U))
+        #else
+        UNICODE_SEQ_LINUX(&kp D &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(U))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp D &kp C)
+        #endif
       #endif
     )
     world_u_diaeresis: world_u_diaeresis {
@@ -5513,11 +5640,23 @@ macros {
     )
     UNICODE(world_currency_euro, /* € */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_LINUX(&kp E &kp EQUAL)
+        #else
+        UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp A &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_MACOS(&kp LA(LS(N2)))
+        #else
+        UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp A &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N2 &kp N0 &kp A &kp C)
+        #endif
       #endif
     )
     UNICODE(world_currency_won, /* ₩ */

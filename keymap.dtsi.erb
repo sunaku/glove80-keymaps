@@ -2,6 +2,7 @@
 // For example, here are the main optional features you can enable:
 #define DIFFICULTY_LEVEL  0 // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
+#define WORLD_USE_COMPOSE   // use native Compose in place of Unicode
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1144,6 +1145,12 @@ macros {
     //////////////////////////////////////////////////////////////////////////
 
     //
+    // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
+    // for characters in the "localizing" section of the `world.yaml` file.
+    //
+    //#define WORLD_USE_COMPOSE
+
+    //
     // UNICODE_TARGET_OS defines which operating system you're targeting
     // for the UNICODE() preprocessor macro to be used on, since each OS
     // has different shortcuts for typing Unicode characters as hexcodes.
@@ -1259,13 +1266,30 @@ macros {
             sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
           end
 
-          # FIXME: global variable; pass it somehow instead
-          if localized = $localizing.dig(character, os.to_s)
-            sequence = resolve_localized_keystrokes(localized, os)
-          end
+          localized_sequence =
+            # FIXME: global variable; pass it somehow instead
+            if localized = $localizing.dig(character, os.to_s)
+              resolve_localized_keystrokes(localized, os)
+            end
     %>
       #<%= "el" if os_index > 0 %>if UNICODE_TARGET_OS == <%= os_char %>
+    <%
+          if localized_sequence
+    %>
+        #ifdef WORLD_USE_COMPOSE
+        <%= localized_sequence.join(", ") %>
+        #else
+    <%
+          end
+    %>
         <%= sequence.join(", ") %>
+    <%
+          if localized_sequence
+    %>
+        #endif
+    <%
+          end
+    %>
       <%= "#endif" if os_index + 1 == OPERATING_SYSTEMS.length %>
     <%
         end
