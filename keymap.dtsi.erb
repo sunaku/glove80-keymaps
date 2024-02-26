@@ -1253,8 +1253,10 @@ macros {
       end
 
       emit_unicode_macro = lambda do |id, character|
+        macro_id = id + "_macro"
+        emit_zmk_mod_morph.(id, macro_id, macro_id, "(~0)")
     %>
-    UNICODE(<%= id %>, /* <%= character %> */
+    UNICODE(<%= macro_id %>, /* <%= character %> */
     <%
         OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
           sequence = character.chars.map do |character|
