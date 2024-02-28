@@ -6506,7 +6506,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N8)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N8)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N8)
       #endif
@@ -6536,7 +6536,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N2 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N2 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N2 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N2 &kp N5)
       #endif
@@ -6566,7 +6566,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
+        UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N2 &kp N4), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
@@ -6596,7 +6596,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N5)
       #endif
@@ -6611,7 +6611,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N4)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N4)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N4)
       #endif
@@ -6626,7 +6626,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
+        UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp D &kp N9), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
@@ -6641,7 +6641,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N7)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N7)
+        UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N7)
       #endif
@@ -6656,7 +6656,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N3)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N0 &kp N3)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N3)
       #endif
@@ -6671,7 +6671,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp B)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp B)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp B)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp B)
       #endif
@@ -6686,7 +6686,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp C)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp C)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp C)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp C)
       #endif
@@ -6701,7 +6701,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp D)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp D)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp D)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp D)
       #endif
@@ -6716,7 +6716,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp E)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp E)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp E)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp E)
       #endif
@@ -6731,7 +6731,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp F &kp F)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp F)
       #endif
@@ -6746,7 +6746,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N7 &kp C)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N7 &kp C)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N7 &kp C)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N7 &kp C)
       #endif
@@ -6761,7 +6761,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N6)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N7 &kp N6)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N7 &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N7 &kp N6)
       #endif
@@ -6776,7 +6776,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N6)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N6)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N6)
       #endif
@@ -6791,7 +6791,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N7)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N7)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N7)
       #endif
@@ -6806,7 +6806,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N8)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N8)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N8)
       #endif
@@ -6821,7 +6821,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N9)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N6 &kp N9)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N9)
       #endif
@@ -6836,7 +6836,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N4)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N7 &kp N4)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N7 &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N7 &kp N4)
       #endif
@@ -6851,7 +6851,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N7 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N7 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N7 &kp N5)
       #endif
@@ -6866,7 +6866,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N3)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N3)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N3)
       #endif
@@ -6881,7 +6881,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N1)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N1)
       #endif
@@ -6896,7 +6896,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N0)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N0)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N0)
       #endif
@@ -6911,7 +6911,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N2)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp B &kp N2)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N2)
       #endif
@@ -6926,7 +6926,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N1)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N1)
       #endif
@@ -6941,7 +6941,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N2)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N2)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N2)
       #endif
@@ -6956,7 +6956,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N3)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N3)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N3)
       #endif
@@ -6971,7 +6971,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N4)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N4)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N4)
       #endif
@@ -6986,7 +6986,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N5)
       #endif
@@ -7001,7 +7001,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N6)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N6)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N6)
       #endif
@@ -7016,7 +7016,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N7)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N7)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N7)
       #endif
@@ -7031,7 +7031,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N8)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N1 &kp N8)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N8)
       #endif
@@ -7046,7 +7046,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N8 &kp N9)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N3 &kp N8 &kp N9)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N8 &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N8 &kp N9)
       #endif
@@ -7076,7 +7076,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N5 &kp N2 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N5 &kp N2 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp D &kp N2 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N5 &kp N2 &kp N5)
       #endif
@@ -7091,7 +7091,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp A &kp A)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp A &kp A)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp A &kp A)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp A &kp A)
       #endif
@@ -7106,7 +7106,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N7)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp D &kp N7)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp D &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp D &kp N7)
       #endif
@@ -7121,7 +7121,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N7 &kp C)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N7 &kp C)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N7 &kp C)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N7 &kp C)
       #endif
@@ -7136,7 +7136,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N8 &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #endif
@@ -7151,7 +7151,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N2)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N2)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp N2)
       #endif
@@ -7166,7 +7166,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp N3)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N2 &kp N3)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N2 &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N2 &kp N3)
       #endif
@@ -7181,7 +7181,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp N9)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N2 &kp N9)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N2 &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N2 &kp N9)
       #endif
@@ -7196,7 +7196,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp D)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp D)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp D)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp D)
       #endif
@@ -7211,7 +7211,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp E &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp E &kp N1)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp E &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp E &kp N1)
       #endif
@@ -7226,7 +7226,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N2 &kp F)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N2 &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N2 &kp F)
       #endif
@@ -7241,7 +7241,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N0)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N0)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N3 &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N3 &kp N0)
       #endif
@@ -7256,7 +7256,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N0)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp D &kp N0)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp D &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp D &kp N0)
       #endif
@@ -7271,7 +7271,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp F &kp N0)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp F &kp N0)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp F &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp F &kp N0)
       #endif
@@ -7286,7 +7286,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp C)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp C)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp C)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp C)
       #endif
@@ -7301,7 +7301,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp F)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp F)
       #endif
@@ -7316,7 +7316,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp N5)
       #endif
@@ -7331,7 +7331,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp E)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N1 &kp E)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N1 &kp E)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N1 &kp E)
       #endif
@@ -7346,7 +7346,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N1 &kp N4)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N1 &kp N4)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N1 &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N1 &kp N4)
       #endif
@@ -7361,7 +7361,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N8 &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N8 &kp N1)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N8 &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N8 &kp N1)
       #endif
@@ -7376,7 +7376,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N6)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N6)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N6)
       #endif
@@ -7391,7 +7391,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N7)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N7)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N7)
       #endif
@@ -7406,7 +7406,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp B)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp B)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp B)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp B)
       #endif
@@ -7421,7 +7421,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N5)
       #endif
@@ -7436,7 +7436,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N3 &kp N7)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N3 &kp N7)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N3 &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N3 &kp N7)
       #endif
@@ -7466,7 +7466,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp A &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp A &kp F)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp A &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp A &kp F)
       #endif
@@ -7526,7 +7526,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N8 &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #endif
@@ -7541,7 +7541,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N1 &kp N3)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N9 &kp N1 &kp N3)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N1 &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N1 &kp N3)
       #endif
@@ -7571,7 +7571,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp C)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp C)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp C)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp C)
       #endif
@@ -7601,7 +7601,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp D)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp D)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp D)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp D)
       #endif
@@ -7644,7 +7644,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp N8 &kp N4)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp N8 &kp N4)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp N8 &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp N8 &kp N4)
       #endif
@@ -7665,7 +7665,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N2)
       #endif
@@ -7680,7 +7680,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N3)
       #endif
@@ -7713,7 +7713,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp N9)
       #endif
@@ -7728,7 +7728,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp C)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N1 &kp C)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N1 &kp C)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N1 &kp C)
       #endif
@@ -7749,7 +7749,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N2 &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N2 &kp N8)
       #endif
@@ -7764,7 +7764,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N3 &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N3 &kp N1)
       #endif
@@ -7785,7 +7785,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N3 &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N3 &kp N5)
       #endif
@@ -7806,7 +7806,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp B)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp B)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp B)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp B)
       #endif
@@ -7827,7 +7827,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp E)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N0 &kp E)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp E)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp E)
       #endif
@@ -7860,7 +7860,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N2 &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N2 &kp N2)
       #endif
@@ -7887,7 +7887,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp F &kp N5)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp F &kp N5)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp F &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp F &kp N5)
       #endif
@@ -7908,7 +7908,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp E)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp E)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp E)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp E)
       #endif
@@ -7929,7 +7929,7 @@ macros {
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp F)
       #elif UNICODE_TARGET_OS == 'M'
-        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp F)
+        UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp F)
       #elif UNICODE_TARGET_OS == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp F)
       #endif
