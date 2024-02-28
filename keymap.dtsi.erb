@@ -199,8 +199,8 @@
   end
 
   layers = keymap["layer_names"].zip(keymap["layers"]).to_h
-  alpha_layers_count = keymap["layer_names"].find_index("Typing")
-  ALPHA_LAYERS = layers.first(alpha_layers_count).each do |layer_name, layer_keys|
+  ALPHA_LAYERS_COUNT = keymap["layer_names"].find_index("Typing")
+  ALPHA_LAYERS = layers.first(ALPHA_LAYERS_COUNT).each do |layer_name, layer_keys|
     layer_constant = "LAYER_#{layer_name}"
 %>
 #if defined(<%= layer_constant %>) && <%= layer_constant %> == 0
@@ -258,6 +258,15 @@ combos {
         key-positions = <POS_LH_T3 POS_LH_T6>;
         bindings = <&tog LAYER_Gaming>;
         layers = <0 LAYER_Gaming>;
+    };
+    #endif
+
+    #ifdef _A_TAB
+    combo_alt_tab_switcher {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T4 POS_LH_T5>;
+        bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
+        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
     };
     #endif
 };
