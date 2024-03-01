@@ -1550,7 +1550,6 @@ behaviors {
     #ifndef LEFT_PINKY_REPEAT_DECAY
     #define LEFT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
     #endif
-
     left_pinky: homey_left_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -1562,7 +1561,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_pinky_bilateral: homey_left_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -1574,8 +1572,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&left_pinky_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     left_pinky_hold: homey_left_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -1607,7 +1603,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define LeftPinky(key, layer_index) LeftPinky_unroll(layer_index) (key)
     #define LeftPinky_unroll(layer_index) LeftPinky_concat(LeftPinky_layer, layer_index)
     #define LeftPinky_concat(prefix, layer_index) prefix ## layer_index
@@ -1637,7 +1632,6 @@ behaviors {
     #ifndef RIGHT_PINKY_REPEAT_DECAY
     #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
     #endif
-
     right_pinky: homey_right_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -1649,7 +1643,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_pinky_bilateral: homey_right_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -1661,8 +1654,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&right_pinky_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     right_pinky_hold: homey_right_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -1694,7 +1685,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define RightPinky(key, layer_index) RightPinky_unroll(layer_index) (key)
     #define RightPinky_unroll(layer_index) RightPinky_concat(RightPinky_layer, layer_index)
     #define RightPinky_concat(prefix, layer_index) prefix ## layer_index
@@ -1724,7 +1714,6 @@ behaviors {
     #ifndef LEFT_RING1_REPEAT_DECAY
     #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
     #endif
-
     left_ring1: homey_left_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -1736,7 +1725,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring1_bilateral: homey_left_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -1748,8 +1736,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&left_ring1_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     left_ring1_hold: homey_left_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -1781,7 +1767,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define LeftRing1(key, layer_index) LeftRing1_unroll(layer_index) (key)
     #define LeftRing1_unroll(layer_index) LeftRing1_concat(LeftRing1_layer, layer_index)
     #define LeftRing1_concat(prefix, layer_index) prefix ## layer_index
@@ -1811,7 +1796,6 @@ behaviors {
     #ifndef RIGHT_RING1_REPEAT_DECAY
     #define RIGHT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
     #endif
-
     right_ring1: homey_right_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -1823,7 +1807,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring1_bilateral: homey_right_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -1835,8 +1818,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&right_ring1_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     right_ring1_hold: homey_right_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -1868,7 +1849,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define RightRing1(key, layer_index) RightRing1_unroll(layer_index) (key)
     #define RightRing1_unroll(layer_index) RightRing1_concat(RightRing1_layer, layer_index)
     #define RightRing1_concat(prefix, layer_index) prefix ## layer_index
@@ -1898,7 +1878,6 @@ behaviors {
     #ifndef LEFT_RING2_REPEAT_DECAY
     #define LEFT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
     #endif
-
     left_ring2: homey_left_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -1910,7 +1889,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring2_bilateral: homey_left_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -1922,8 +1900,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&left_ring2_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     left_ring2_hold: homey_left_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -1955,7 +1931,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define LeftRing2(key, layer_index) LeftRing2_unroll(layer_index) (key)
     #define LeftRing2_unroll(layer_index) LeftRing2_concat(LeftRing2_layer, layer_index)
     #define LeftRing2_concat(prefix, layer_index) prefix ## layer_index
@@ -1985,7 +1960,6 @@ behaviors {
     #ifndef RIGHT_RING2_REPEAT_DECAY
     #define RIGHT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
     #endif
-
     right_ring2: homey_right_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -1997,7 +1971,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring2_bilateral: homey_right_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -2009,8 +1982,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&right_ring2_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     right_ring2_hold: homey_right_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -2042,7 +2013,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define RightRing2(key, layer_index) RightRing2_unroll(layer_index) (key)
     #define RightRing2_unroll(layer_index) RightRing2_concat(RightRing2_layer, layer_index)
     #define RightRing2_concat(prefix, layer_index) prefix ## layer_index
@@ -2072,7 +2042,6 @@ behaviors {
     #ifndef LEFT_MIDDY_REPEAT_DECAY
     #define LEFT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
     #endif
-
     left_middy: homey_left_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -2084,7 +2053,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_middy_bilateral: homey_left_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -2096,8 +2064,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&left_middy_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     left_middy_hold: homey_left_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -2129,7 +2095,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define LeftMiddy(key, layer_index) LeftMiddy_unroll(layer_index) (key)
     #define LeftMiddy_unroll(layer_index) LeftMiddy_concat(LeftMiddy_layer, layer_index)
     #define LeftMiddy_concat(prefix, layer_index) prefix ## layer_index
@@ -2159,7 +2124,6 @@ behaviors {
     #ifndef RIGHT_MIDDY_REPEAT_DECAY
     #define RIGHT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
     #endif
-
     right_middy: homey_right_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -2171,7 +2135,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_middy_bilateral: homey_right_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -2183,8 +2146,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&right_middy_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     right_middy_hold: homey_right_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -2216,7 +2177,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define RightMiddy(key, layer_index) RightMiddy_unroll(layer_index) (key)
     #define RightMiddy_unroll(layer_index) RightMiddy_concat(RightMiddy_layer, layer_index)
     #define RightMiddy_concat(prefix, layer_index) prefix ## layer_index
@@ -2246,7 +2206,6 @@ behaviors {
     #ifndef LEFT_INDEX_REPEAT_DECAY
     #define LEFT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
     #endif
-
     left_index: homey_left_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -2258,7 +2217,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_index_bilateral: homey_left_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -2270,8 +2228,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&left_index_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     left_index_hold: homey_left_index_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -2303,7 +2259,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define LeftIndex(key, layer_index) LeftIndex_unroll(layer_index) (key)
     #define LeftIndex_unroll(layer_index) LeftIndex_concat(LeftIndex_layer, layer_index)
     #define LeftIndex_concat(prefix, layer_index) prefix ## layer_index
@@ -2333,7 +2288,6 @@ behaviors {
     #ifndef RIGHT_INDEX_REPEAT_DECAY
     #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
     #endif
-
     right_index: homey_right_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -2345,7 +2299,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_index_bilateral: homey_right_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -2357,8 +2310,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&right_index_hold>, <&kp>;
     };
-    #endif
-    #ifdef ENFORCE_BILATERAL
     right_index_hold: homey_right_index_hold {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;
@@ -2390,7 +2341,6 @@ behaviors {
             , <&macro_tap &kp MACRO_PLACEHOLDER>
             ;
     };
-    #endif
     #define RightIndex(key, layer_index) RightIndex_unroll(layer_index) (key)
     #define RightIndex_unroll(layer_index) RightIndex_concat(RightIndex_layer, layer_index)
     #define RightIndex_concat(prefix, layer_index) prefix ## layer_index
@@ -2420,7 +2370,6 @@ behaviors {
     #ifndef LEFT_RING1_PINKY_REPEAT_DECAY
     #define LEFT_RING1_PINKY_REPEAT_DECAY LEFT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     left_ring1_pinky: homey_left_ring1_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -2432,7 +2381,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring1_pinky_bilateral: homey_left_ring1_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -2444,7 +2392,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring1_tap>;
     };
-    #endif
     #define LeftRing1Pinky left_ring1_pinky_bilateral LEFT_PINKY_MOD LEFT_PINKY_KEY
     #ifndef LEFT_RING2_PINKY_HOLDING_TYPE
     #define LEFT_RING2_PINKY_HOLDING_TYPE LEFT_RING2_CHORD_HOLDING_TYPE
@@ -2458,7 +2405,6 @@ behaviors {
     #ifndef LEFT_RING2_PINKY_REPEAT_DECAY
     #define LEFT_RING2_PINKY_REPEAT_DECAY LEFT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     left_ring2_pinky: homey_left_ring2_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -2470,7 +2416,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring2_pinky_bilateral: homey_left_ring2_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -2482,7 +2427,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring2_tap>;
     };
-    #endif
     #define LeftRing2Pinky left_ring2_pinky_bilateral LEFT_PINKY_MOD LEFT_PINKY_KEY
     #ifndef LEFT_MIDDY_PINKY_HOLDING_TYPE
     #define LEFT_MIDDY_PINKY_HOLDING_TYPE LEFT_MIDDY_CHORD_HOLDING_TYPE
@@ -2496,7 +2440,6 @@ behaviors {
     #ifndef LEFT_MIDDY_PINKY_REPEAT_DECAY
     #define LEFT_MIDDY_PINKY_REPEAT_DECAY LEFT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     left_middy_pinky: homey_left_middy_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -2508,7 +2451,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_middy_pinky_bilateral: homey_left_middy_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -2520,7 +2462,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_middy_tap>;
     };
-    #endif
     #define LeftMiddyPinky left_middy_pinky_bilateral LEFT_PINKY_MOD LEFT_PINKY_KEY
     #ifndef LEFT_INDEX_PINKY_HOLDING_TYPE
     #define LEFT_INDEX_PINKY_HOLDING_TYPE LEFT_INDEX_CHORD_HOLDING_TYPE
@@ -2534,7 +2475,6 @@ behaviors {
     #ifndef LEFT_INDEX_PINKY_REPEAT_DECAY
     #define LEFT_INDEX_PINKY_REPEAT_DECAY LEFT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     left_index_pinky: homey_left_index_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -2546,7 +2486,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_index_pinky_bilateral: homey_left_index_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -2558,7 +2497,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_index_tap>;
     };
-    #endif
     #define LeftIndexPinky left_index_pinky_bilateral LEFT_PINKY_MOD LEFT_PINKY_KEY
     #ifndef RIGHT_RING1_PINKY_HOLDING_TYPE
     #define RIGHT_RING1_PINKY_HOLDING_TYPE RIGHT_RING1_CHORD_HOLDING_TYPE
@@ -2572,7 +2510,6 @@ behaviors {
     #ifndef RIGHT_RING1_PINKY_REPEAT_DECAY
     #define RIGHT_RING1_PINKY_REPEAT_DECAY RIGHT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     right_ring1_pinky: homey_right_ring1_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -2584,7 +2521,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring1_pinky_bilateral: homey_right_ring1_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -2596,7 +2532,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring1_tap>;
     };
-    #endif
     #define RightRing1Pinky right_ring1_pinky_bilateral RIGHT_PINKY_MOD RIGHT_PINKY_KEY
     #ifndef RIGHT_RING2_PINKY_HOLDING_TYPE
     #define RIGHT_RING2_PINKY_HOLDING_TYPE RIGHT_RING2_CHORD_HOLDING_TYPE
@@ -2610,7 +2545,6 @@ behaviors {
     #ifndef RIGHT_RING2_PINKY_REPEAT_DECAY
     #define RIGHT_RING2_PINKY_REPEAT_DECAY RIGHT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     right_ring2_pinky: homey_right_ring2_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -2622,7 +2556,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring2_pinky_bilateral: homey_right_ring2_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -2634,7 +2567,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring2_tap>;
     };
-    #endif
     #define RightRing2Pinky right_ring2_pinky_bilateral RIGHT_PINKY_MOD RIGHT_PINKY_KEY
     #ifndef RIGHT_MIDDY_PINKY_HOLDING_TYPE
     #define RIGHT_MIDDY_PINKY_HOLDING_TYPE RIGHT_MIDDY_CHORD_HOLDING_TYPE
@@ -2648,7 +2580,6 @@ behaviors {
     #ifndef RIGHT_MIDDY_PINKY_REPEAT_DECAY
     #define RIGHT_MIDDY_PINKY_REPEAT_DECAY RIGHT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     right_middy_pinky: homey_right_middy_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -2660,7 +2591,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_middy_pinky_bilateral: homey_right_middy_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -2672,7 +2602,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_middy_tap>;
     };
-    #endif
     #define RightMiddyPinky right_middy_pinky_bilateral RIGHT_PINKY_MOD RIGHT_PINKY_KEY
     #ifndef RIGHT_INDEX_PINKY_HOLDING_TYPE
     #define RIGHT_INDEX_PINKY_HOLDING_TYPE RIGHT_INDEX_CHORD_HOLDING_TYPE
@@ -2686,7 +2615,6 @@ behaviors {
     #ifndef RIGHT_INDEX_PINKY_REPEAT_DECAY
     #define RIGHT_INDEX_PINKY_REPEAT_DECAY RIGHT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     right_index_pinky: homey_right_index_pinky {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -2698,7 +2626,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_index_pinky_bilateral: homey_right_index_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -2710,7 +2637,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_index_tap>;
     };
-    #endif
     #define RightIndexPinky right_index_pinky_bilateral RIGHT_PINKY_MOD RIGHT_PINKY_KEY
     #ifndef LEFT_PINKY_RING1_HOLDING_TYPE
     #define LEFT_PINKY_RING1_HOLDING_TYPE LEFT_PINKY_CHORD_HOLDING_TYPE
@@ -2724,7 +2650,6 @@ behaviors {
     #ifndef LEFT_PINKY_RING1_REPEAT_DECAY
     #define LEFT_PINKY_RING1_REPEAT_DECAY LEFT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     left_pinky_ring1: homey_left_pinky_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -2736,7 +2661,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_pinky_ring1_bilateral: homey_left_pinky_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -2748,7 +2672,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_pinky_tap>;
     };
-    #endif
     #define LeftPinkyRing1 left_pinky_ring1_bilateral LEFT_RING1_MOD LEFT_RING1_KEY
     #ifndef LEFT_RING2_RING1_HOLDING_TYPE
     #define LEFT_RING2_RING1_HOLDING_TYPE LEFT_RING2_CHORD_HOLDING_TYPE
@@ -2762,7 +2685,6 @@ behaviors {
     #ifndef LEFT_RING2_RING1_REPEAT_DECAY
     #define LEFT_RING2_RING1_REPEAT_DECAY LEFT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     left_ring2_ring1: homey_left_ring2_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -2774,7 +2696,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring2_ring1_bilateral: homey_left_ring2_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -2786,7 +2707,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring2_tap>;
     };
-    #endif
     #define LeftRing2Ring1 left_ring2_ring1_bilateral LEFT_RING1_MOD LEFT_RING1_KEY
     #ifndef LEFT_MIDDY_RING1_HOLDING_TYPE
     #define LEFT_MIDDY_RING1_HOLDING_TYPE LEFT_MIDDY_CHORD_HOLDING_TYPE
@@ -2800,7 +2720,6 @@ behaviors {
     #ifndef LEFT_MIDDY_RING1_REPEAT_DECAY
     #define LEFT_MIDDY_RING1_REPEAT_DECAY LEFT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     left_middy_ring1: homey_left_middy_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -2812,7 +2731,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_middy_ring1_bilateral: homey_left_middy_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -2824,7 +2742,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_middy_tap>;
     };
-    #endif
     #define LeftMiddyRing1 left_middy_ring1_bilateral LEFT_RING1_MOD LEFT_RING1_KEY
     #ifndef LEFT_INDEX_RING1_HOLDING_TYPE
     #define LEFT_INDEX_RING1_HOLDING_TYPE LEFT_INDEX_CHORD_HOLDING_TYPE
@@ -2838,7 +2755,6 @@ behaviors {
     #ifndef LEFT_INDEX_RING1_REPEAT_DECAY
     #define LEFT_INDEX_RING1_REPEAT_DECAY LEFT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     left_index_ring1: homey_left_index_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -2850,7 +2766,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_index_ring1_bilateral: homey_left_index_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -2862,7 +2777,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_index_tap>;
     };
-    #endif
     #define LeftIndexRing1 left_index_ring1_bilateral LEFT_RING1_MOD LEFT_RING1_KEY
     #ifndef RIGHT_PINKY_RING1_HOLDING_TYPE
     #define RIGHT_PINKY_RING1_HOLDING_TYPE RIGHT_PINKY_CHORD_HOLDING_TYPE
@@ -2876,7 +2790,6 @@ behaviors {
     #ifndef RIGHT_PINKY_RING1_REPEAT_DECAY
     #define RIGHT_PINKY_RING1_REPEAT_DECAY RIGHT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     right_pinky_ring1: homey_right_pinky_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -2888,7 +2801,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_pinky_ring1_bilateral: homey_right_pinky_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -2900,7 +2812,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_pinky_tap>;
     };
-    #endif
     #define RightPinkyRing1 right_pinky_ring1_bilateral RIGHT_RING1_MOD RIGHT_RING1_KEY
     #ifndef RIGHT_RING2_RING1_HOLDING_TYPE
     #define RIGHT_RING2_RING1_HOLDING_TYPE RIGHT_RING2_CHORD_HOLDING_TYPE
@@ -2914,7 +2825,6 @@ behaviors {
     #ifndef RIGHT_RING2_RING1_REPEAT_DECAY
     #define RIGHT_RING2_RING1_REPEAT_DECAY RIGHT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     right_ring2_ring1: homey_right_ring2_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -2926,7 +2836,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring2_ring1_bilateral: homey_right_ring2_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -2938,7 +2847,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring2_tap>;
     };
-    #endif
     #define RightRing2Ring1 right_ring2_ring1_bilateral RIGHT_RING1_MOD RIGHT_RING1_KEY
     #ifndef RIGHT_MIDDY_RING1_HOLDING_TYPE
     #define RIGHT_MIDDY_RING1_HOLDING_TYPE RIGHT_MIDDY_CHORD_HOLDING_TYPE
@@ -2952,7 +2860,6 @@ behaviors {
     #ifndef RIGHT_MIDDY_RING1_REPEAT_DECAY
     #define RIGHT_MIDDY_RING1_REPEAT_DECAY RIGHT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     right_middy_ring1: homey_right_middy_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -2964,7 +2871,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_middy_ring1_bilateral: homey_right_middy_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -2976,7 +2882,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_middy_tap>;
     };
-    #endif
     #define RightMiddyRing1 right_middy_ring1_bilateral RIGHT_RING1_MOD RIGHT_RING1_KEY
     #ifndef RIGHT_INDEX_RING1_HOLDING_TYPE
     #define RIGHT_INDEX_RING1_HOLDING_TYPE RIGHT_INDEX_CHORD_HOLDING_TYPE
@@ -2990,7 +2895,6 @@ behaviors {
     #ifndef RIGHT_INDEX_RING1_REPEAT_DECAY
     #define RIGHT_INDEX_RING1_REPEAT_DECAY RIGHT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     right_index_ring1: homey_right_index_ring1 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -3002,7 +2906,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_index_ring1_bilateral: homey_right_index_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -3014,7 +2917,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_index_tap>;
     };
-    #endif
     #define RightIndexRing1 right_index_ring1_bilateral RIGHT_RING1_MOD RIGHT_RING1_KEY
     #ifndef LEFT_PINKY_RING2_HOLDING_TYPE
     #define LEFT_PINKY_RING2_HOLDING_TYPE LEFT_PINKY_CHORD_HOLDING_TYPE
@@ -3028,7 +2930,6 @@ behaviors {
     #ifndef LEFT_PINKY_RING2_REPEAT_DECAY
     #define LEFT_PINKY_RING2_REPEAT_DECAY LEFT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     left_pinky_ring2: homey_left_pinky_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -3040,7 +2941,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_pinky_ring2_bilateral: homey_left_pinky_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -3052,7 +2952,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_pinky_tap>;
     };
-    #endif
     #define LeftPinkyRing2 left_pinky_ring2_bilateral LEFT_RING2_MOD LEFT_RING2_KEY
     #ifndef LEFT_RING1_RING2_HOLDING_TYPE
     #define LEFT_RING1_RING2_HOLDING_TYPE LEFT_RING1_CHORD_HOLDING_TYPE
@@ -3066,7 +2965,6 @@ behaviors {
     #ifndef LEFT_RING1_RING2_REPEAT_DECAY
     #define LEFT_RING1_RING2_REPEAT_DECAY LEFT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     left_ring1_ring2: homey_left_ring1_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -3078,7 +2976,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring1_ring2_bilateral: homey_left_ring1_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -3090,7 +2987,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring1_tap>;
     };
-    #endif
     #define LeftRing1Ring2 left_ring1_ring2_bilateral LEFT_RING2_MOD LEFT_RING2_KEY
     #ifndef LEFT_MIDDY_RING2_HOLDING_TYPE
     #define LEFT_MIDDY_RING2_HOLDING_TYPE LEFT_MIDDY_CHORD_HOLDING_TYPE
@@ -3104,7 +3000,6 @@ behaviors {
     #ifndef LEFT_MIDDY_RING2_REPEAT_DECAY
     #define LEFT_MIDDY_RING2_REPEAT_DECAY LEFT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     left_middy_ring2: homey_left_middy_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -3116,7 +3011,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_middy_ring2_bilateral: homey_left_middy_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -3128,7 +3022,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_middy_tap>;
     };
-    #endif
     #define LeftMiddyRing2 left_middy_ring2_bilateral LEFT_RING2_MOD LEFT_RING2_KEY
     #ifndef LEFT_INDEX_RING2_HOLDING_TYPE
     #define LEFT_INDEX_RING2_HOLDING_TYPE LEFT_INDEX_CHORD_HOLDING_TYPE
@@ -3142,7 +3035,6 @@ behaviors {
     #ifndef LEFT_INDEX_RING2_REPEAT_DECAY
     #define LEFT_INDEX_RING2_REPEAT_DECAY LEFT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     left_index_ring2: homey_left_index_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -3154,7 +3046,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_index_ring2_bilateral: homey_left_index_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -3166,7 +3057,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_index_tap>;
     };
-    #endif
     #define LeftIndexRing2 left_index_ring2_bilateral LEFT_RING2_MOD LEFT_RING2_KEY
     #ifndef RIGHT_PINKY_RING2_HOLDING_TYPE
     #define RIGHT_PINKY_RING2_HOLDING_TYPE RIGHT_PINKY_CHORD_HOLDING_TYPE
@@ -3180,7 +3070,6 @@ behaviors {
     #ifndef RIGHT_PINKY_RING2_REPEAT_DECAY
     #define RIGHT_PINKY_RING2_REPEAT_DECAY RIGHT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     right_pinky_ring2: homey_right_pinky_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -3192,7 +3081,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_pinky_ring2_bilateral: homey_right_pinky_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -3204,7 +3092,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_pinky_tap>;
     };
-    #endif
     #define RightPinkyRing2 right_pinky_ring2_bilateral RIGHT_RING2_MOD RIGHT_RING2_KEY
     #ifndef RIGHT_RING1_RING2_HOLDING_TYPE
     #define RIGHT_RING1_RING2_HOLDING_TYPE RIGHT_RING1_CHORD_HOLDING_TYPE
@@ -3218,7 +3105,6 @@ behaviors {
     #ifndef RIGHT_RING1_RING2_REPEAT_DECAY
     #define RIGHT_RING1_RING2_REPEAT_DECAY RIGHT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     right_ring1_ring2: homey_right_ring1_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -3230,7 +3116,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring1_ring2_bilateral: homey_right_ring1_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -3242,7 +3127,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring1_tap>;
     };
-    #endif
     #define RightRing1Ring2 right_ring1_ring2_bilateral RIGHT_RING2_MOD RIGHT_RING2_KEY
     #ifndef RIGHT_MIDDY_RING2_HOLDING_TYPE
     #define RIGHT_MIDDY_RING2_HOLDING_TYPE RIGHT_MIDDY_CHORD_HOLDING_TYPE
@@ -3256,7 +3140,6 @@ behaviors {
     #ifndef RIGHT_MIDDY_RING2_REPEAT_DECAY
     #define RIGHT_MIDDY_RING2_REPEAT_DECAY RIGHT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     right_middy_ring2: homey_right_middy_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -3268,7 +3151,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_middy_ring2_bilateral: homey_right_middy_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -3280,7 +3162,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_middy_tap>;
     };
-    #endif
     #define RightMiddyRing2 right_middy_ring2_bilateral RIGHT_RING2_MOD RIGHT_RING2_KEY
     #ifndef RIGHT_INDEX_RING2_HOLDING_TYPE
     #define RIGHT_INDEX_RING2_HOLDING_TYPE RIGHT_INDEX_CHORD_HOLDING_TYPE
@@ -3294,7 +3175,6 @@ behaviors {
     #ifndef RIGHT_INDEX_RING2_REPEAT_DECAY
     #define RIGHT_INDEX_RING2_REPEAT_DECAY RIGHT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     right_index_ring2: homey_right_index_ring2 {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -3306,7 +3186,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_index_ring2_bilateral: homey_right_index_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -3318,7 +3197,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_index_tap>;
     };
-    #endif
     #define RightIndexRing2 right_index_ring2_bilateral RIGHT_RING2_MOD RIGHT_RING2_KEY
     #ifndef LEFT_PINKY_MIDDY_HOLDING_TYPE
     #define LEFT_PINKY_MIDDY_HOLDING_TYPE LEFT_PINKY_CHORD_HOLDING_TYPE
@@ -3332,7 +3210,6 @@ behaviors {
     #ifndef LEFT_PINKY_MIDDY_REPEAT_DECAY
     #define LEFT_PINKY_MIDDY_REPEAT_DECAY LEFT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     left_pinky_middy: homey_left_pinky_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -3344,7 +3221,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_pinky_middy_bilateral: homey_left_pinky_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -3356,7 +3232,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_pinky_tap>;
     };
-    #endif
     #define LeftPinkyMiddy left_pinky_middy_bilateral LEFT_MIDDY_MOD LEFT_MIDDY_KEY
     #ifndef LEFT_RING1_MIDDY_HOLDING_TYPE
     #define LEFT_RING1_MIDDY_HOLDING_TYPE LEFT_RING1_CHORD_HOLDING_TYPE
@@ -3370,7 +3245,6 @@ behaviors {
     #ifndef LEFT_RING1_MIDDY_REPEAT_DECAY
     #define LEFT_RING1_MIDDY_REPEAT_DECAY LEFT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     left_ring1_middy: homey_left_ring1_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -3382,7 +3256,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring1_middy_bilateral: homey_left_ring1_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -3394,7 +3267,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring1_tap>;
     };
-    #endif
     #define LeftRing1Middy left_ring1_middy_bilateral LEFT_MIDDY_MOD LEFT_MIDDY_KEY
     #ifndef LEFT_RING2_MIDDY_HOLDING_TYPE
     #define LEFT_RING2_MIDDY_HOLDING_TYPE LEFT_RING2_CHORD_HOLDING_TYPE
@@ -3408,7 +3280,6 @@ behaviors {
     #ifndef LEFT_RING2_MIDDY_REPEAT_DECAY
     #define LEFT_RING2_MIDDY_REPEAT_DECAY LEFT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     left_ring2_middy: homey_left_ring2_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -3420,7 +3291,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring2_middy_bilateral: homey_left_ring2_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -3432,7 +3302,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring2_tap>;
     };
-    #endif
     #define LeftRing2Middy left_ring2_middy_bilateral LEFT_MIDDY_MOD LEFT_MIDDY_KEY
     #ifndef LEFT_INDEX_MIDDY_HOLDING_TYPE
     #define LEFT_INDEX_MIDDY_HOLDING_TYPE LEFT_INDEX_CHORD_HOLDING_TYPE
@@ -3446,7 +3315,6 @@ behaviors {
     #ifndef LEFT_INDEX_MIDDY_REPEAT_DECAY
     #define LEFT_INDEX_MIDDY_REPEAT_DECAY LEFT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     left_index_middy: homey_left_index_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -3458,7 +3326,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_index_middy_bilateral: homey_left_index_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_INDEX_HOLDING_TYPE;
@@ -3470,7 +3337,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_index_tap>;
     };
-    #endif
     #define LeftIndexMiddy left_index_middy_bilateral LEFT_MIDDY_MOD LEFT_MIDDY_KEY
     #ifndef RIGHT_PINKY_MIDDY_HOLDING_TYPE
     #define RIGHT_PINKY_MIDDY_HOLDING_TYPE RIGHT_PINKY_CHORD_HOLDING_TYPE
@@ -3484,7 +3350,6 @@ behaviors {
     #ifndef RIGHT_PINKY_MIDDY_REPEAT_DECAY
     #define RIGHT_PINKY_MIDDY_REPEAT_DECAY RIGHT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     right_pinky_middy: homey_right_pinky_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -3496,7 +3361,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_pinky_middy_bilateral: homey_right_pinky_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -3508,7 +3372,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_pinky_tap>;
     };
-    #endif
     #define RightPinkyMiddy right_pinky_middy_bilateral RIGHT_MIDDY_MOD RIGHT_MIDDY_KEY
     #ifndef RIGHT_RING1_MIDDY_HOLDING_TYPE
     #define RIGHT_RING1_MIDDY_HOLDING_TYPE RIGHT_RING1_CHORD_HOLDING_TYPE
@@ -3522,7 +3385,6 @@ behaviors {
     #ifndef RIGHT_RING1_MIDDY_REPEAT_DECAY
     #define RIGHT_RING1_MIDDY_REPEAT_DECAY RIGHT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     right_ring1_middy: homey_right_ring1_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -3534,7 +3396,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring1_middy_bilateral: homey_right_ring1_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -3546,7 +3407,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring1_tap>;
     };
-    #endif
     #define RightRing1Middy right_ring1_middy_bilateral RIGHT_MIDDY_MOD RIGHT_MIDDY_KEY
     #ifndef RIGHT_RING2_MIDDY_HOLDING_TYPE
     #define RIGHT_RING2_MIDDY_HOLDING_TYPE RIGHT_RING2_CHORD_HOLDING_TYPE
@@ -3560,7 +3420,6 @@ behaviors {
     #ifndef RIGHT_RING2_MIDDY_REPEAT_DECAY
     #define RIGHT_RING2_MIDDY_REPEAT_DECAY RIGHT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     right_ring2_middy: homey_right_ring2_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -3572,7 +3431,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring2_middy_bilateral: homey_right_ring2_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -3584,7 +3442,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring2_tap>;
     };
-    #endif
     #define RightRing2Middy right_ring2_middy_bilateral RIGHT_MIDDY_MOD RIGHT_MIDDY_KEY
     #ifndef RIGHT_INDEX_MIDDY_HOLDING_TYPE
     #define RIGHT_INDEX_MIDDY_HOLDING_TYPE RIGHT_INDEX_CHORD_HOLDING_TYPE
@@ -3598,7 +3455,6 @@ behaviors {
     #ifndef RIGHT_INDEX_MIDDY_REPEAT_DECAY
     #define RIGHT_INDEX_MIDDY_REPEAT_DECAY RIGHT_INDEX_CHORD_REPEAT_DECAY
     #endif
-
     right_index_middy: homey_right_index_middy {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -3610,7 +3466,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_index_middy_bilateral: homey_right_index_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_INDEX_HOLDING_TYPE;
@@ -3622,7 +3477,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_index_tap>;
     };
-    #endif
     #define RightIndexMiddy right_index_middy_bilateral RIGHT_MIDDY_MOD RIGHT_MIDDY_KEY
     #ifndef LEFT_PINKY_INDEX_HOLDING_TYPE
     #define LEFT_PINKY_INDEX_HOLDING_TYPE LEFT_PINKY_CHORD_HOLDING_TYPE
@@ -3636,7 +3490,6 @@ behaviors {
     #ifndef LEFT_PINKY_INDEX_REPEAT_DECAY
     #define LEFT_PINKY_INDEX_REPEAT_DECAY LEFT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     left_pinky_index: homey_left_pinky_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -3648,7 +3501,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_pinky_index_bilateral: homey_left_pinky_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_PINKY_HOLDING_TYPE;
@@ -3660,7 +3512,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_pinky_tap>;
     };
-    #endif
     #define LeftPinkyIndex left_pinky_index_bilateral LEFT_INDEX_MOD LEFT_INDEX_KEY
     #ifndef LEFT_RING1_INDEX_HOLDING_TYPE
     #define LEFT_RING1_INDEX_HOLDING_TYPE LEFT_RING1_CHORD_HOLDING_TYPE
@@ -3674,7 +3525,6 @@ behaviors {
     #ifndef LEFT_RING1_INDEX_REPEAT_DECAY
     #define LEFT_RING1_INDEX_REPEAT_DECAY LEFT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     left_ring1_index: homey_left_ring1_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -3686,7 +3536,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring1_index_bilateral: homey_left_ring1_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING1_HOLDING_TYPE;
@@ -3698,7 +3547,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring1_tap>;
     };
-    #endif
     #define LeftRing1Index left_ring1_index_bilateral LEFT_INDEX_MOD LEFT_INDEX_KEY
     #ifndef LEFT_RING2_INDEX_HOLDING_TYPE
     #define LEFT_RING2_INDEX_HOLDING_TYPE LEFT_RING2_CHORD_HOLDING_TYPE
@@ -3712,7 +3560,6 @@ behaviors {
     #ifndef LEFT_RING2_INDEX_REPEAT_DECAY
     #define LEFT_RING2_INDEX_REPEAT_DECAY LEFT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     left_ring2_index: homey_left_ring2_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -3724,7 +3571,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_ring2_index_bilateral: homey_left_ring2_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_RING2_HOLDING_TYPE;
@@ -3736,7 +3582,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_ring2_tap>;
     };
-    #endif
     #define LeftRing2Index left_ring2_index_bilateral LEFT_INDEX_MOD LEFT_INDEX_KEY
     #ifndef LEFT_MIDDY_INDEX_HOLDING_TYPE
     #define LEFT_MIDDY_INDEX_HOLDING_TYPE LEFT_MIDDY_CHORD_HOLDING_TYPE
@@ -3750,7 +3595,6 @@ behaviors {
     #ifndef LEFT_MIDDY_INDEX_REPEAT_DECAY
     #define LEFT_MIDDY_INDEX_REPEAT_DECAY LEFT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     left_middy_index: homey_left_middy_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -3762,7 +3606,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     left_middy_index_bilateral: homey_left_middy_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = LEFT_MIDDY_HOLDING_TYPE;
@@ -3774,7 +3617,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&left_middy_tap>;
     };
-    #endif
     #define LeftMiddyIndex left_middy_index_bilateral LEFT_INDEX_MOD LEFT_INDEX_KEY
     #ifndef RIGHT_PINKY_INDEX_HOLDING_TYPE
     #define RIGHT_PINKY_INDEX_HOLDING_TYPE RIGHT_PINKY_CHORD_HOLDING_TYPE
@@ -3788,7 +3630,6 @@ behaviors {
     #ifndef RIGHT_PINKY_INDEX_REPEAT_DECAY
     #define RIGHT_PINKY_INDEX_REPEAT_DECAY RIGHT_PINKY_CHORD_REPEAT_DECAY
     #endif
-
     right_pinky_index: homey_right_pinky_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -3800,7 +3641,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_pinky_index_bilateral: homey_right_pinky_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_PINKY_HOLDING_TYPE;
@@ -3812,7 +3652,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_pinky_tap>;
     };
-    #endif
     #define RightPinkyIndex right_pinky_index_bilateral RIGHT_INDEX_MOD RIGHT_INDEX_KEY
     #ifndef RIGHT_RING1_INDEX_HOLDING_TYPE
     #define RIGHT_RING1_INDEX_HOLDING_TYPE RIGHT_RING1_CHORD_HOLDING_TYPE
@@ -3826,7 +3665,6 @@ behaviors {
     #ifndef RIGHT_RING1_INDEX_REPEAT_DECAY
     #define RIGHT_RING1_INDEX_REPEAT_DECAY RIGHT_RING1_CHORD_REPEAT_DECAY
     #endif
-
     right_ring1_index: homey_right_ring1_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -3838,7 +3676,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring1_index_bilateral: homey_right_ring1_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING1_HOLDING_TYPE;
@@ -3850,7 +3687,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring1_tap>;
     };
-    #endif
     #define RightRing1Index right_ring1_index_bilateral RIGHT_INDEX_MOD RIGHT_INDEX_KEY
     #ifndef RIGHT_RING2_INDEX_HOLDING_TYPE
     #define RIGHT_RING2_INDEX_HOLDING_TYPE RIGHT_RING2_CHORD_HOLDING_TYPE
@@ -3864,7 +3700,6 @@ behaviors {
     #ifndef RIGHT_RING2_INDEX_REPEAT_DECAY
     #define RIGHT_RING2_INDEX_REPEAT_DECAY RIGHT_RING2_CHORD_REPEAT_DECAY
     #endif
-
     right_ring2_index: homey_right_ring2_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -3876,7 +3711,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_ring2_index_bilateral: homey_right_ring2_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_RING2_HOLDING_TYPE;
@@ -3888,7 +3722,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_ring2_tap>;
     };
-    #endif
     #define RightRing2Index right_ring2_index_bilateral RIGHT_INDEX_MOD RIGHT_INDEX_KEY
     #ifndef RIGHT_MIDDY_INDEX_HOLDING_TYPE
     #define RIGHT_MIDDY_INDEX_HOLDING_TYPE RIGHT_MIDDY_CHORD_HOLDING_TYPE
@@ -3902,7 +3735,6 @@ behaviors {
     #ifndef RIGHT_MIDDY_INDEX_REPEAT_DECAY
     #define RIGHT_MIDDY_INDEX_REPEAT_DECAY RIGHT_MIDDY_CHORD_REPEAT_DECAY
     #endif
-
     right_middy_index: homey_right_middy_index {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -3914,7 +3746,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-    #ifdef ENFORCE_BILATERAL
     right_middy_index_bilateral: homey_right_middy_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
         flavor = RIGHT_MIDDY_HOLDING_TYPE;
@@ -3926,7 +3757,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&kp>, <&right_middy_tap>;
     };
-    #endif
     #define RightMiddyIndex right_middy_index_bilateral RIGHT_INDEX_MOD RIGHT_INDEX_KEY
 
     //
