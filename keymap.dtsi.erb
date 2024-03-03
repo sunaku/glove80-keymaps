@@ -1171,6 +1171,22 @@ macros {
     #ifndef UNICODE_TARGET_OS
     #define UNICODE_TARGET_OS OPERATING_SYSTEM
     #endif
+
+    #if UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:linux] %>
+        #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
+    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
+        #define UNICODE_MORPH_MODS MOD_LALT
+    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:windows] %>
+        #define UNICODE_MORPH_MODS MOD_RALT
+    #endif
+
+    #if UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:linux] %>
+        #define COMPOSE_MORPH_MODS MOD_RALT /* TODO: should reflect COMPOSE_KEY_LINUX */
+    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
+        #define COMPOSE_MORPH_MODS 0
+    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:windows] %>
+        #define COMPOSE_MORPH_MODS MOD_LALT
+    #endif
     <%
       def format_keystrokes_for_unicode(keystrokes, os)
         send("format_keystrokes_for_#{os}_unicode", keystrokes)
@@ -1259,10 +1275,12 @@ macros {
 
       emit_unicode_macro = lambda do |id, character|
         macro_id = id + "_macro"
-        emit_zmk_mod_morph.(id, macro_id, macro_id, "(~0)")
     %>
     UNICODE(<%= macro_id %>, /* <%= character %> */
     <%
+        # FIXME: global variable; pass it somehow instead
+        localizations = $localizing[character]
+
         OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
           sequence = character.chars.map do |character|
             keystrokes = keystrokes_from_character(character)
@@ -1272,26 +1290,24 @@ macros {
           if sequence.length > 1
             sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
           end
-
-          localized_sequence =
-            # FIXME: global variable; pass it somehow instead
-            if localized = $localizing.dig(character, os.to_s)
-              resolve_localized_keystrokes(localized, os)
-            end
     %>
       #<%= "el" if os_index > 0 %>if UNICODE_TARGET_OS == <%= os_char %>
     <%
-          if localized_sequence
+          if localizations
     %>
         #ifdef WORLD_USE_COMPOSE
-        <%= localized_sequence.join(", ") %>
+        <%=
+          localization_for_os = localizations.fetch(os.to_s)
+          localized_keystrokes = resolve_localized_keystrokes(localization_for_os, os)
+          localized_keystrokes.join(", ")
+        %>
         #else
     <%
           end
     %>
         <%= sequence.join(", ") %>
     <%
-          if localized_sequence
+          if localizations
     %>
         #endif
     <%
@@ -1303,6 +1319,9 @@ macros {
     %>
     )
     <%
+        mods = localizations ? "COMPOSE_MORPH_MODS" : "UNICODE_MORPH_MODS"
+        mask = "(~(#{mods}))" # the negation suppresses any unrelated mods
+        emit_zmk_mod_morph.(id, macro_id, macro_id, mask)
       end
 
       EMITTED_UNICODE_MACROS = {}
