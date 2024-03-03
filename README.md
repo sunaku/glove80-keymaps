@@ -211,15 +211,17 @@ Open the [keymap link above](#keymap) and follow these instructions:
 
 ### Flashing
 
-- For the initial flash, follow "Loading new ZMK firmware onto your Glove80"
-(see page 28 of the [Glove80 User Guide]) or, if that doesn't work, try the
-"bootloader mass storage device mode" method (see page 31 in the user guide).
+- For the initial flash, refer to "Loading new ZMK firmware onto your Glove80"
+(see pages 29-31 of the [Glove80 User Guide]) or, if that doesn't work, try
+referring to the "Entering bootloader mass storage device mode on power-up"
+method of "Putting Glove80 into Bootloader for firmware loading"(see pages
+31-32 of the [Glove80 User Guide]).
 
-- If you're installing a different firmware version compared to what your
-keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perform a
-"Configuration Factory Reset" on both halves (see page 41 in the [Glove80 User
-Guide]) and then turn RGB effects on, watch them illuminate, and finally turn
-them back off.  This allows the newly installed firmware to take full effect.
+- When installing a firmware version that is different than what was
+previously installed, then ⚠️ **after flashing both halves** ⚠️ refer to
+"Configuration factory reset and re-pairing left and right halves" (see pages
+42-43 of the [Glove80 User Guide]). This allows the newly installed firmware
+to take full effect.
 
 [Glove80 User Guide]: https://www.moergo.com/files/glove80-user-guide.pdf
 
