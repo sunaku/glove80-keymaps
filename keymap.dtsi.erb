@@ -1172,6 +1172,120 @@ macros {
     #define UNICODE_TARGET_OS OPERATING_SYSTEM
     #endif
 
+    //
+    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+    // between keystrokes while inputting the Unicode codepoint shortcut.
+    //
+    #ifndef UNICODE_TAP_DELAY
+    #define UNICODE_TAP_DELAY 1
+    #endif
+
+    //
+    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+    // between emitting Unicode codepoints in multi-codepoint characters.
+    //
+    #ifndef UNICODE_SEQ_DELAY
+    #define UNICODE_SEQ_DELAY 10
+    #endif
+
+    #define UNICODE(name, ...) \
+        ZMK_MACRO(name, \
+            wait-ms = <UNICODE_TAP_DELAY>; \
+            tap-ms = <UNICODE_TAP_DELAY>; \
+            bindings = __VA_ARGS__; \
+        )
+
+    //
+    // UNICODE_SEQ_LINUX() specifies how Unicode hexadecimal codepoint
+    // keystrokes are transformed into Unicode characters under Linux.
+    //
+    #ifndef UNICODE_SEQ_LINUX
+    #define UNICODE_SEQ_LINUX(keystrokes) \
+        <&macro_tap &kp LC(LS(U)) keystrokes &kp ENTER>
+    #endif
+
+    //
+    // UNICODE_SEQ_MACOS() specifies how Unicode hexadecimal codepoint
+    // keystrokes are transformed into Unicode characters under macOS.
+    //
+    #ifndef UNICODE_SEQ_MACOS
+    #define UNICODE_SEQ_MACOS(keystrokes) \
+        <&macro_press &kp LALT> ,\
+        <&macro_tap keystrokes> ,\
+        <&macro_release &kp LALT>
+    #endif
+
+    //
+    // UNICODE_SEQ_WINDOWS() specifies how Unicode hexadecimal codepoint
+    // keystrokes are transformed into Unicode characters under Windows.
+    //
+    // If you've configured WinCompose to use a different trigger hotkey,
+    // such as F13 instead of the default RA(U) shortcut, simply override
+    // this definition to adapt all UNICODE() function calls accordingly.
+    //
+    #ifndef UNICODE_SEQ_WINDOWS
+    #define UNICODE_SEQ_WINDOWS(keystrokes) \
+        <&macro_tap &kp RA(U) keystrokes &kp ENTER>
+    #endif
+
+    //
+    // COMPOSE_KEY_LINUX specifies the keycode for Compose key in Linux,
+    // which may be RALT by default but can be reconfigured as follows:
+    //
+    // $ setxkbmap -option compose:sclk # use ScrollLock as Compose key
+    //
+    // See xkeyboard-config(7) for possible choices for the Compose key:
+    // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
+    //
+    // #define COMPOSE_KEY_LINUX RALT            // compose:ralt
+    // #define COMPOSE_KEY_LINUX LGUI            // compose:lwin
+    // #define COMPOSE_KEY_LINUX RA(LGUI)        // compose:lwin-altgr
+    // #define COMPOSE_KEY_LINUX RGUI            // compose:rwin
+    // #define COMPOSE_KEY_LINUX RA(RGUI)        // compose:rwin-altgr
+    // #define COMPOSE_KEY_LINUX K_MENU          // compose:menu
+    // #define COMPOSE_KEY_LINUX RA(K_MENU)      // compose:menu-altgr
+    // #define COMPOSE_KEY_LINUX LCTL            // compose:lctrl
+    // #define COMPOSE_KEY_LINUX RA(LCTL)        // compose:lctrl-altgr
+    // #define COMPOSE_KEY_LINUX RCTL            // compose:rctrl
+    // #define COMPOSE_KEY_LINUX RA(RCTL)        // compose:rctrl-altgr
+    // #define COMPOSE_KEY_LINUX CAPS            // compose:caps
+    // #define COMPOSE_KEY_LINUX RA(CAPS)        // compose:caps-altgr
+    // #define COMPOSE_KEY_LINUX NON_US_BSLH     // compose:102
+    // #define COMPOSE_KEY_LINUX RA(NON_US_BSLH) // compose:102-altgr
+    // #define COMPOSE_KEY_LINUX PAUSE_BREAK     // compose:paus
+    // #define COMPOSE_KEY_LINUX PSCRN           // compose:prsc
+    // #define COMPOSE_KEY_LINUX SLCK            // compose:sclk
+    //
+    #ifndef COMPOSE_KEY_LINUX
+    #define COMPOSE_KEY_LINUX RALT
+    #endif
+
+    //
+    // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
+    //
+    #ifndef COMPOSE_SEQ_LINUX
+    #define COMPOSE_SEQ_LINUX(keystrokes) \
+        <&macro_tap &kp COMPOSE_KEY_LINUX keystrokes>
+    #endif
+
+    //
+    // COMPOSE_SEQ_MACOS() formats keystrokes for macOS character entry.
+    //
+    #ifndef COMPOSE_SEQ_MACOS
+    #define COMPOSE_SEQ_MACOS(keystrokes) \
+        <&macro_tap keystrokes>
+    #endif
+
+    //
+    // COMPOSE_SEQ_WINDOWS() wraps keystrokes in Windows AltCode sequence.
+    //
+    #ifndef COMPOSE_SEQ_WINDOWS
+    #define COMPOSE_SEQ_WINDOWS(keystrokes) \
+        <&macro_press &kp LALT>, \
+        <&macro_tap keystrokes>, \
+        <&macro_release &kp LALT>
+    #endif
+
     #if UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:linux] %>
         #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
     #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
@@ -1181,12 +1295,58 @@ macros {
     #endif
 
     #if UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:linux] %>
-        #define COMPOSE_MORPH_MODS MOD_RALT /* TODO: should reflect COMPOSE_KEY_LINUX */
+        // $ grep "compose:" /usr/share/X11/xkb/rules/base.lst
+        // compose:ralt         Right Alt
+        #if COMPOSE_KEY_LINUX == RALT
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:lwin         Left Win
+        #elif COMPOSE_KEY_LINUX == LGUI
+            #define COMPOSE_MORPH_MODS MOD_LGUI
+        // compose:lwin-altgr   3rd level of Left Win
+        #elif COMPOSE_KEY_LINUX == RA(LGUI)
+            #define COMPOSE_MORPH_MODS (MOD_LGUI|MOD_RALT)
+        // compose:rwin         Right Win
+        #elif COMPOSE_KEY_LINUX == RGUI
+            #define COMPOSE_MORPH_MODS MOD_RGUI
+        // compose:rwin-altgr   3rd level of Right Win
+        #elif COMPOSE_KEY_LINUX == RA(RGUI)
+            #define COMPOSE_MORPH_MODS (MOD_RGUI|MOD_RALT)
+        // compose:menu         Menu
+        // compose:menu-altgr   3rd level of Menu
+        #elif COMPOSE_KEY_LINUX == RA(K_MENU)
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:lctrl        Left Ctrl
+        #elif COMPOSE_KEY_LINUX == LCTL
+            #define COMPOSE_MORPH_MODS MOD_LCTL
+        // compose:lctrl-altgr  3rd level of Left Ctrl
+        #elif COMPOSE_KEY_LINUX == RA(LCTL)
+            #define COMPOSE_MORPH_MODS (MOD_LCTL|MOD_RALT)
+        // compose:rctrl        Right Ctrl
+        #elif COMPOSE_KEY_LINUX == RCTL
+            #define COMPOSE_MORPH_MODS MOD_RCTL
+        // compose:rctrl-altgr  3rd level of Right Ctrl
+        #elif COMPOSE_KEY_LINUX == RA(RCTL)
+            #define COMPOSE_MORPH_MODS (MOD_RCTL|MOD_RALT)
+        // compose:caps         Caps Lock
+        // compose:caps-altgr   3rd level of Caps Lock
+        #elif COMPOSE_KEY_LINUX == RA(CAPS)
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:102          The "&lt; &gt;" key
+        // compose:102-altgr    3rd level of the "&lt; &gt;" key
+        #elif COMPOSE_KEY_LINUX == RA(NON_US_BSLH)
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:paus         Pause
+        // compose:prsc         PrtSc
+        // compose:sclk         Scroll Lock
+        #else
+            #define COMPOSE_MORPH_MODS 0
+        #endif
     #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
         #define COMPOSE_MORPH_MODS 0
     #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:windows] %>
         #define COMPOSE_MORPH_MODS MOD_LALT
     #endif
+
     <%
       def format_keystrokes_for_unicode(keystrokes, os)
         send("format_keystrokes_for_#{os}_unicode", keystrokes)
@@ -1340,101 +1500,6 @@ macros {
         %>/*HACK*/};<% block.() %><%= "\n" %>/*HACK*//{<%
       end
     %>
-
-    //
-    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
-    // between keystrokes while inputting the Unicode codepoint shortcut.
-    //
-    #ifndef UNICODE_TAP_DELAY
-    #define UNICODE_TAP_DELAY 1
-    #endif
-
-    //
-    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
-    // between emitting Unicode codepoints in multi-codepoint characters.
-    //
-    #ifndef UNICODE_SEQ_DELAY
-    #define UNICODE_SEQ_DELAY 10
-    #endif
-
-    #define UNICODE(name, ...) \
-        ZMK_MACRO(name, \
-            wait-ms = <UNICODE_TAP_DELAY>; \
-            tap-ms = <UNICODE_TAP_DELAY>; \
-            bindings = __VA_ARGS__; \
-        )
-
-    //
-    // UNICODE_SEQ_LINUX() specifies how Unicode hexadecimal codepoint
-    // keystrokes are transformed into Unicode characters under Linux.
-    //
-    #ifndef UNICODE_SEQ_LINUX
-    #define UNICODE_SEQ_LINUX(keystrokes) \
-        <&macro_tap &kp LC(LS(U)) keystrokes &kp ENTER>
-    #endif
-
-    //
-    // UNICODE_SEQ_MACOS() specifies how Unicode hexadecimal codepoint
-    // keystrokes are transformed into Unicode characters under macOS.
-    //
-    #ifndef UNICODE_SEQ_MACOS
-    #define UNICODE_SEQ_MACOS(keystrokes) \
-        <&macro_press &kp LALT> ,\
-        <&macro_tap keystrokes> ,\
-        <&macro_release &kp LALT>
-    #endif
-
-    //
-    // UNICODE_SEQ_WINDOWS() specifies how Unicode hexadecimal codepoint
-    // keystrokes are transformed into Unicode characters under Windows.
-    //
-    // If you've configured WinCompose to use a different trigger hotkey,
-    // such as F13 instead of the default RA(U) shortcut, simply override
-    // this definition to adapt all UNICODE() function calls accordingly.
-    //
-    #ifndef UNICODE_SEQ_WINDOWS
-    #define UNICODE_SEQ_WINDOWS(keystrokes) \
-        <&macro_tap &kp RA(U) keystrokes &kp ENTER>
-    #endif
-
-    //
-    // COMPOSE_KEY_LINUX specifies the keycode for Compose key in Linux,
-    // which may be RALT by default but can be reconfigured as follows:
-    //
-    // $ setxkbmap -option compose:sclk # use ScrollLock as Compose key
-    //
-    // See xkeyboard-config(7) for possible choices for the Compose key:
-    // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
-    //
-    #ifndef COMPOSE_KEY_LINUX
-    #define COMPOSE_KEY_LINUX RALT
-    #endif
-
-    //
-    // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
-    //
-    #ifndef COMPOSE_SEQ_LINUX
-    #define COMPOSE_SEQ_LINUX(keystrokes) \
-        <&macro_tap &kp COMPOSE_KEY_LINUX keystrokes>
-    #endif
-
-    //
-    // COMPOSE_SEQ_MACOS() formats keystrokes for macOS character entry.
-    //
-    #ifndef COMPOSE_SEQ_MACOS
-    #define COMPOSE_SEQ_MACOS(keystrokes) \
-        <&macro_tap keystrokes>
-    #endif
-
-    //
-    // COMPOSE_SEQ_WINDOWS() wraps keystrokes in Windows AltCode sequence.
-    //
-    #ifndef COMPOSE_SEQ_WINDOWS
-    #define COMPOSE_SEQ_WINDOWS(keystrokes) \
-        <&macro_press &kp LALT>, \
-        <&macro_tap keystrokes>, \
-        <&macro_release &kp LALT>
-    #endif
 
     //
     // NOTE: edit the world.yaml file and run `rake` to generate this:

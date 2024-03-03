@@ -4199,20 +4199,6 @@ macros {
     #ifndef UNICODE_TARGET_OS
     #define UNICODE_TARGET_OS OPERATING_SYSTEM
     #endif
-    #if UNICODE_TARGET_OS == 'L'
-        #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
-    #elif UNICODE_TARGET_OS == 'M'
-        #define UNICODE_MORPH_MODS MOD_LALT
-    #elif UNICODE_TARGET_OS == 'W'
-        #define UNICODE_MORPH_MODS MOD_RALT
-    #endif
-    #if UNICODE_TARGET_OS == 'L'
-        #define COMPOSE_MORPH_MODS MOD_RALT /* TODO: should reflect COMPOSE_KEY_LINUX */
-    #elif UNICODE_TARGET_OS == 'M'
-        #define COMPOSE_MORPH_MODS 0
-    #elif UNICODE_TARGET_OS == 'W'
-        #define COMPOSE_MORPH_MODS MOD_LALT
-    #endif
 
     //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
@@ -4279,6 +4265,25 @@ macros {
     // See xkeyboard-config(7) for possible choices for the Compose key:
     // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
     //
+    // #define COMPOSE_KEY_LINUX RALT            // compose:ralt
+    // #define COMPOSE_KEY_LINUX LGUI            // compose:lwin
+    // #define COMPOSE_KEY_LINUX RA(LGUI)        // compose:lwin-altgr
+    // #define COMPOSE_KEY_LINUX RGUI            // compose:rwin
+    // #define COMPOSE_KEY_LINUX RA(RGUI)        // compose:rwin-altgr
+    // #define COMPOSE_KEY_LINUX K_MENU          // compose:menu
+    // #define COMPOSE_KEY_LINUX RA(K_MENU)      // compose:menu-altgr
+    // #define COMPOSE_KEY_LINUX LCTL            // compose:lctrl
+    // #define COMPOSE_KEY_LINUX RA(LCTL)        // compose:lctrl-altgr
+    // #define COMPOSE_KEY_LINUX RCTL            // compose:rctrl
+    // #define COMPOSE_KEY_LINUX RA(RCTL)        // compose:rctrl-altgr
+    // #define COMPOSE_KEY_LINUX CAPS            // compose:caps
+    // #define COMPOSE_KEY_LINUX RA(CAPS)        // compose:caps-altgr
+    // #define COMPOSE_KEY_LINUX NON_US_BSLH     // compose:102
+    // #define COMPOSE_KEY_LINUX RA(NON_US_BSLH) // compose:102-altgr
+    // #define COMPOSE_KEY_LINUX PAUSE_BREAK     // compose:paus
+    // #define COMPOSE_KEY_LINUX PSCRN           // compose:prsc
+    // #define COMPOSE_KEY_LINUX SLCK            // compose:sclk
+    //
     #ifndef COMPOSE_KEY_LINUX
     #define COMPOSE_KEY_LINUX RALT
     #endif
@@ -4308,6 +4313,66 @@ macros {
         <&macro_tap keystrokes>, \
         <&macro_release &kp LALT>
     #endif
+    #if UNICODE_TARGET_OS == 'L'
+        #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
+    #elif UNICODE_TARGET_OS == 'M'
+        #define UNICODE_MORPH_MODS MOD_LALT
+    #elif UNICODE_TARGET_OS == 'W'
+        #define UNICODE_MORPH_MODS MOD_RALT
+    #endif
+    #if UNICODE_TARGET_OS == 'L'
+        // $ grep "compose:" /usr/share/X11/xkb/rules/base.lst
+        // compose:ralt         Right Alt
+        #if COMPOSE_KEY_LINUX == RALT
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:lwin         Left Win
+        #elif COMPOSE_KEY_LINUX == LGUI
+            #define COMPOSE_MORPH_MODS MOD_LGUI
+        // compose:lwin-altgr   3rd level of Left Win
+        #elif COMPOSE_KEY_LINUX == RA(LGUI)
+            #define COMPOSE_MORPH_MODS (MOD_LGUI|MOD_RALT)
+        // compose:rwin         Right Win
+        #elif COMPOSE_KEY_LINUX == RGUI
+            #define COMPOSE_MORPH_MODS MOD_RGUI
+        // compose:rwin-altgr   3rd level of Right Win
+        #elif COMPOSE_KEY_LINUX == RA(RGUI)
+            #define COMPOSE_MORPH_MODS (MOD_RGUI|MOD_RALT)
+        // compose:menu         Menu
+        // compose:menu-altgr   3rd level of Menu
+        #elif COMPOSE_KEY_LINUX == RA(K_MENU)
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:lctrl        Left Ctrl
+        #elif COMPOSE_KEY_LINUX == LCTL
+            #define COMPOSE_MORPH_MODS MOD_LCTL
+        // compose:lctrl-altgr  3rd level of Left Ctrl
+        #elif COMPOSE_KEY_LINUX == RA(LCTL)
+            #define COMPOSE_MORPH_MODS (MOD_LCTL|MOD_RALT)
+        // compose:rctrl        Right Ctrl
+        #elif COMPOSE_KEY_LINUX == RCTL
+            #define COMPOSE_MORPH_MODS MOD_RCTL
+        // compose:rctrl-altgr  3rd level of Right Ctrl
+        #elif COMPOSE_KEY_LINUX == RA(RCTL)
+            #define COMPOSE_MORPH_MODS (MOD_RCTL|MOD_RALT)
+        // compose:caps         Caps Lock
+        // compose:caps-altgr   3rd level of Caps Lock
+        #elif COMPOSE_KEY_LINUX == RA(CAPS)
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:102          The "&lt; &gt;" key
+        // compose:102-altgr    3rd level of the "&lt; &gt;" key
+        #elif COMPOSE_KEY_LINUX == RA(NON_US_BSLH)
+            #define COMPOSE_MORPH_MODS MOD_RALT
+        // compose:paus         Pause
+        // compose:prsc         PrtSc
+        // compose:sclk         Scroll Lock
+        #else
+            #define COMPOSE_MORPH_MODS 0
+        #endif
+    #elif UNICODE_TARGET_OS == 'M'
+        #define COMPOSE_MORPH_MODS 0
+    #elif UNICODE_TARGET_OS == 'W'
+        #define COMPOSE_MORPH_MODS MOD_LALT
+    #endif
+
 
     //
     // NOTE: edit the world.yaml file and run `rake` to generate this:
