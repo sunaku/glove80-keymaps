@@ -1365,9 +1365,10 @@ macros {
       end
 
       def format_keystrokes_for_windows_unicode(keystrokes)
-        "UNICODE_SEQ_WINDOWS(#{
-          strip_leading_zeroes_from_keystrokes(keystrokes)
-        })"
+        # prepend a single zero to prevent shorthand sequence
+        # expansion, such as "RA(U) A" being converted into ă
+        # https://github.com/samhocevar/wincompose/issues/323
+        "UNICODE_SEQ_WINDOWS(&kp N0 #{keystrokes})"
       end
 
       def strip_leading_zeroes_from_keystrokes(keystrokes)
