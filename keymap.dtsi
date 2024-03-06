@@ -4387,7 +4387,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp B &kp N0)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N0)
       #endif
     )
     world_degree_sign: world_degree_sign {
@@ -4402,7 +4402,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N7)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp N7)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N7)
       #endif
     )
     world_section_sign: world_section_sign {
@@ -4417,7 +4417,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp B &kp N6)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N6)
       #endif
     )
     world_paragraph_sign: world_paragraph_sign {
@@ -4432,7 +4432,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp A)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp B &kp A)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp A)
       #endif
     )
     world_o_ordinal: world_o_ordinal {
@@ -4447,7 +4447,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp A)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp A)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp A)
       #endif
     )
     world_a_ordinal: world_a_ordinal {
@@ -4462,7 +4462,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp N1)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N1)
       #endif
     )
     world_exclaim_left: world_exclaim_left {
@@ -4477,7 +4477,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp F)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp B &kp F)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp F)
       #endif
     )
     world_question_left: world_question_left {
@@ -4507,7 +4507,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp N2)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N2)
       #endif
     )
     world_currency_cent: world_currency_cent {
@@ -4522,7 +4522,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N4)
       #endif
     )
     world_currency_sign: world_currency_sign {
@@ -4552,7 +4552,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N7)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N7)
         #endif
       #endif
     )
@@ -4579,7 +4579,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N7)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N7)
         #endif
       #endif
     )
@@ -4612,7 +4612,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp D)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp D)
         #endif
       #endif
     )
@@ -4639,7 +4639,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp D)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp D)
         #endif
       #endif
     )
@@ -4661,7 +4661,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp F)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp F)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp F)
       #endif
     )
     world_i_diaeresis_lower: world_i_diaeresis_lower {
@@ -4676,7 +4676,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp F)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp F)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp F)
       #endif
     )
     world_i_diaeresis_upper: world_i_diaeresis_upper {
@@ -4697,7 +4697,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp E)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp E)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp E)
       #endif
     )
     world_i_circumflex_lower: world_i_circumflex_lower {
@@ -4712,7 +4712,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp E)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp E)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp E)
       #endif
     )
     world_i_circumflex_upper: world_i_circumflex_upper {
@@ -4733,7 +4733,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp C)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp C)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp C)
       #endif
     )
     world_i_grave_lower: world_i_grave_lower {
@@ -4748,7 +4748,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp C)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp C)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp C)
       #endif
     )
     world_i_grave_upper: world_i_grave_upper {
@@ -4769,7 +4769,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N9)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N9)
       #endif
     )
     world_e_acute_lower: world_e_acute_lower {
@@ -4784,7 +4784,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N9)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N9)
       #endif
     )
     world_e_acute_upper: world_e_acute_upper {
@@ -4805,7 +4805,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp B)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp B)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp B)
       #endif
     )
     world_e_diaeresis_lower: world_e_diaeresis_lower {
@@ -4820,7 +4820,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp B)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp B)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp B)
       #endif
     )
     world_e_diaeresis_upper: world_e_diaeresis_upper {
@@ -4841,7 +4841,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp A)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp A)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp A)
       #endif
     )
     world_e_circumflex_lower: world_e_circumflex_lower {
@@ -4856,7 +4856,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp A)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp A)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp A)
       #endif
     )
     world_e_circumflex_upper: world_e_circumflex_upper {
@@ -4877,7 +4877,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N8)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N8)
       #endif
     )
     world_e_grave_lower: world_e_grave_lower {
@@ -4892,7 +4892,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N8)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N8)
       #endif
     )
     world_e_grave_upper: world_e_grave_upper {
@@ -4913,7 +4913,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N6)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N6)
       #endif
     )
     world_e_ae_lower: world_e_ae_lower {
@@ -4928,7 +4928,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N6)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N6)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N6)
       #endif
     )
     world_e_ae_upper: world_e_ae_upper {
@@ -4949,7 +4949,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N1)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N1)
       #endif
     )
     world_a_acute_lower: world_a_acute_lower {
@@ -4964,7 +4964,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N1)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N1)
       #endif
     )
     world_a_acute_upper: world_a_acute_upper {
@@ -4996,7 +4996,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N4)
         #endif
       #endif
     )
@@ -5023,7 +5023,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N4)
         #endif
       #endif
     )
@@ -5045,7 +5045,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N2)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N2)
       #endif
     )
     world_a_circumflex_lower: world_a_circumflex_lower {
@@ -5060,7 +5060,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N2)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N2)
       #endif
     )
     world_a_circumflex_upper: world_a_circumflex_upper {
@@ -5081,7 +5081,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N0)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N0)
       #endif
     )
     world_a_grave_lower: world_a_grave_lower {
@@ -5096,7 +5096,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N0)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N0)
       #endif
     )
     world_a_grave_upper: world_a_grave_upper {
@@ -5117,7 +5117,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N3)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N3)
       #endif
     )
     world_a_tilde_lower: world_a_tilde_lower {
@@ -5132,7 +5132,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N3)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N3)
       #endif
     )
     world_a_tilde_upper: world_a_tilde_upper {
@@ -5153,7 +5153,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp E &kp N5)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N5)
       #endif
     )
     world_a_ring_lower: world_a_ring_lower {
@@ -5168,7 +5168,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp C &kp N5)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N5)
       #endif
     )
     world_a_ring_upper: world_a_ring_upper {
@@ -5189,7 +5189,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp D)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp D)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp D)
       #endif
     )
     world_y_acute_lower: world_y_acute_lower {
@@ -5204,7 +5204,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp D)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp D)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp D)
       #endif
     )
     world_y_acute_upper: world_y_acute_upper {
@@ -5225,7 +5225,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp F)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp F)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp F)
       #endif
     )
     world_y_diaeresis_lower: world_y_diaeresis_lower {
@@ -5240,7 +5240,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N1 &kp N7 &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N1 &kp N7 &kp N8)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp N7 &kp N8)
       #endif
     )
     world_y_diaeresis_upper: world_y_diaeresis_upper {
@@ -5261,7 +5261,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N3)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N3)
       #endif
     )
     world_o_acute_lower: world_o_acute_lower {
@@ -5276,7 +5276,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N3)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N3)
       #endif
     )
     world_o_acute_upper: world_o_acute_upper {
@@ -5308,7 +5308,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N6)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N6)
         #endif
       #endif
     )
@@ -5335,7 +5335,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N6)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N6)
         #endif
       #endif
     )
@@ -5357,7 +5357,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N4)
       #endif
     )
     world_o_circumflex_lower: world_o_circumflex_lower {
@@ -5372,7 +5372,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N4)
       #endif
     )
     world_o_circumflex_upper: world_o_circumflex_upper {
@@ -5393,7 +5393,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N2)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N2)
       #endif
     )
     world_o_grave_lower: world_o_grave_lower {
@@ -5408,7 +5408,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N2)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N2)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N2)
       #endif
     )
     world_o_grave_upper: world_o_grave_upper {
@@ -5429,7 +5429,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N5)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N5)
       #endif
     )
     world_o_tilde_lower: world_o_tilde_lower {
@@ -5444,7 +5444,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N5)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N5)
       #endif
     )
     world_o_tilde_upper: world_o_tilde_upper {
@@ -5465,7 +5465,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N8)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N8)
       #endif
     )
     world_o_slash_lower: world_o_slash_lower {
@@ -5480,7 +5480,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N8)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N8)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N8)
       #endif
     )
     world_o_slash_upper: world_o_slash_upper {
@@ -5501,7 +5501,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp A)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp A)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp A)
       #endif
     )
     world_u_acute_lower: world_u_acute_lower {
@@ -5516,7 +5516,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp A)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp A)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp A)
       #endif
     )
     world_u_acute_upper: world_u_acute_upper {
@@ -5548,7 +5548,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp C)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp C)
         #endif
       #endif
     )
@@ -5575,7 +5575,7 @@ macros {
         #ifdef WORLD_USE_COMPOSE
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0)
         #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp C)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp C)
         #endif
       #endif
     )
@@ -5597,7 +5597,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp B)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp B)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp B)
       #endif
     )
     world_u_circumflex_lower: world_u_circumflex_lower {
@@ -5612,7 +5612,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp B)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp B)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp B)
       #endif
     )
     world_u_circumflex_upper: world_u_circumflex_upper {
@@ -5633,7 +5633,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N9)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N9)
       #endif
     )
     world_u_grave_lower: world_u_grave_lower {
@@ -5648,7 +5648,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N9)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N9)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N9)
       #endif
     )
     world_u_grave_upper: world_u_grave_upper {
@@ -5669,7 +5669,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp F &kp N1)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N1)
       #endif
     )
     world_n_tilde_lower: world_n_tilde_lower {
@@ -5684,7 +5684,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N1)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp D &kp N1)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N1)
       #endif
     )
     world_n_tilde_upper: world_n_tilde_upper {
@@ -5720,7 +5720,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp B)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp B)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp B)
       #endif
     )
     world_quotes_left_angle_upper: world_quotes_left_angle_upper {
@@ -5885,7 +5885,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp N6 &kp N0)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp N6 &kp N0)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N6 &kp N0)
       #endif
     )
     world_quotes_left_grave: world_quotes_left_grave {
@@ -5915,7 +5915,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp B)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp B &kp B)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp B)
       #endif
     )
     world_quotes_right_angle_upper: world_quotes_right_angle_upper {
@@ -6050,7 +6050,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp B &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N4)
       #endif
     )
     world_quotes_right_grave: world_quotes_right_grave {
@@ -6065,7 +6065,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp N2 &kp N4)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp N2 &kp N4)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N4)
       #endif
     )
     world_currency_dollar_lower: world_currency_dollar_lower {
@@ -6086,7 +6086,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N5)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp N5)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N5)
       #endif
     )
     world_currency_yen: world_currency_yen {
@@ -6143,7 +6143,7 @@ macros {
       #elif UNICODE_TARGET_OS == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N3)
       #elif UNICODE_TARGET_OS == 'W'
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp N0 &kp N0 &kp A &kp N3)
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N3)
       #endif
     )
     world_currency_pound: world_currency_pound {

@@ -1368,7 +1368,9 @@ macros {
         # prepend a single zero to prevent shorthand sequence
         # expansion, such as "RA(U) A" being converted into ă
         # https://github.com/samhocevar/wincompose/issues/323
-        "UNICODE_SEQ_WINDOWS(&kp N0 #{keystrokes})"
+        "UNICODE_SEQ_WINDOWS(&kp N0 #{
+          strip_leading_zeroes_from_keystrokes(keystrokes)
+        })"
       end
 
       def strip_leading_zeroes_from_keystrokes(keystrokes)
