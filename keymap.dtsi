@@ -7640,6 +7640,27 @@ macros {
         bindings = <&emoji_waning_crescent_moon>, <&emoji_waxing_crescent_moon>;
         mods = <MOD_LSFT>;
     };
+    UNICODE(emoji_moon_stars_magic_macro, /* 🪄 */
+      #if UNICODE_TARGET_OS == 'L'
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp N8 &kp N4)
+      #elif UNICODE_TARGET_OS == 'M'
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp N8 &kp N4)
+      #elif UNICODE_TARGET_OS == 'W'
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp N8 &kp N4)
+      #endif
+    )
+    emoji_moon_stars_magic: emoji_moon_stars_magic {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_moon_stars_magic_macro>, <&emoji_moon_stars_magic_macro>;
+        mods = <(~(UNICODE_MORPH_MODS))>;
+    };
+    emoji_moon_stars: emoji_moon_stars {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_sparkles>, <&emoji_moon_stars_magic>;
+        mods = <MOD_LSFT>;
+    };
     UNICODE(emoji_face_smile_up_macro, /* 🙂 */
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
@@ -7860,6 +7881,69 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_thinking>, <&emoji_monocle_face>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_gesture_point_you_macro, /* 🫵 */
+      #if UNICODE_TARGET_OS == 'L'
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp F &kp N5)
+      #elif UNICODE_TARGET_OS == 'M'
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp A &kp F &kp N5)
+      #elif UNICODE_TARGET_OS == 'W'
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp F &kp N5)
+      #endif
+    )
+    emoji_gesture_point_you: emoji_gesture_point_you {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_gesture_point_you_macro>, <&emoji_gesture_point_you_macro>;
+        mods = <(~(UNICODE_MORPH_MODS))>;
+    };
+    emoji_gesture_point: emoji_gesture_point {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_point_up>, <&emoji_gesture_point_you>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_gesture_thumbs_down_macro, /* 👎 */
+      #if UNICODE_TARGET_OS == 'L'
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp E)
+      #elif UNICODE_TARGET_OS == 'M'
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp E)
+      #elif UNICODE_TARGET_OS == 'W'
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp E)
+      #endif
+    )
+    emoji_gesture_thumbs_down: emoji_gesture_thumbs_down {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_gesture_thumbs_down_macro>, <&emoji_gesture_thumbs_down_macro>;
+        mods = <(~(UNICODE_MORPH_MODS))>;
+    };
+    emoji_gesture_thumbs: emoji_gesture_thumbs {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_thumbs_up>, <&emoji_gesture_thumbs_down>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(emoji_gesture_hands_clap_macro, /* 👏 */
+      #if UNICODE_TARGET_OS == 'L'
+        UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp F)
+      #elif UNICODE_TARGET_OS == 'M'
+        UNICODE_SEQ_MACOS(&kp N1 &kp F &kp N4 &kp N4 &kp F)
+      #elif UNICODE_TARGET_OS == 'W'
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp F)
+      #endif
+    )
+    emoji_gesture_hands_clap: emoji_gesture_hands_clap {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_gesture_hands_clap_macro>, <&emoji_gesture_hands_clap_macro>;
+        mods = <(~(UNICODE_MORPH_MODS))>;
+    };
+    emoji_gesture_hands: emoji_gesture_hands {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&emoji_raised_hands>, <&emoji_gesture_hands_clap>;
         mods = <MOD_LSFT>;
     };
 };

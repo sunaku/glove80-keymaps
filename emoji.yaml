@@ -4,6 +4,7 @@ characters:
     gibbous:   { waning:  "🌖", waxing:  "🌔" }
     quarter:   { waning:  "🌗", waxing:  "🌓" }
     crescent:  { waning:  "🌘", waxing:  "🌒" }
+    stars:     { sparkle: "✨", magic:   "🪄" }
   face:
     smile:     { up:      "🙂", down:    "🙃" }
     laugh:     { joy:     "😂", rofl:    "🤣" }
@@ -18,6 +19,9 @@ characters:
     anxiety:   { smile:   "😅", rushed:  "😰" }
     despair:   { sad:     "😞", cry:     "😢" }
     curious:   { think:   "🤔", analyze: "🧐" }
+    point:     { up:      "☝️", you:     "🫵" }
+    thumbs:    { up:      "👍", down:    "👎" }
+    hands:     { up:      "🙌", clap:    "👏" }
 
 codepoints:
 
