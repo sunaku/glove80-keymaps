@@ -1,22 +1,22 @@
 precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT overrides all
 
 transforms:
-  I: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                 }
-  E: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   RALT: ae                     }
-  A: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: ring    }
-  Y: { base: acute,  LCTL: diaeresis                                                                }
-  O: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: slash   }
-  U: { base: acute,  LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                 }
+  I: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                 }
+  E: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   RALT: ae                     }
+  A: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: ring    }
+  Y: { base: acute,   LCTL: diaeresis                                                                }
+  O: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: slash   }
+  U: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                 }
+  consonants:
+     { base: cedilla, LCTL: ntilde,    RCTL: eszett                                                  }
   quotes_left:
-     { base: angle,  LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
+     { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
   quotes_right:
-     { base: angle,  LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
+     { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
   currency:
-     { base: dollar, LCTL: euro,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won     }
+     { base: dollar,  LCTL: euro,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won     }
 
 characters:
-  C:
-    cedilla:    { lower: "ç",  upper: "Ç"  }
   I:
     acute:      { lower: "í",  upper: "Í"  }
     diaeresis:  { lower: "ï",  upper: "Ï"  }
@@ -50,10 +50,10 @@ characters:
     diaeresis:  { lower: "ü",  upper: "Ü"  }
     circumflex: { lower: "û",  upper: "Û"  }
     grave:      { lower: "ù",  upper: "Ù"  }
-  S:
-    sharp:      { lower: "ß",  upper: "ẞ"  }
-  N:
-    tilde:      { lower: "ñ",  upper: "Ñ"  }
+  consonants:
+    cedilla:    { lower: "ç",  upper: "Ç"  }
+    eszett:     { lower: "ß",  upper: "ẞ"  }
+    ntilde:     { lower: "ñ",  upper: "Ñ"  }
   quotes_left:
     angle:      { lower: "‹",  upper: "«"  }
     curly:      { lower: "‘",  upper: "“"  }
