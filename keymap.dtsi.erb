@@ -1377,15 +1377,24 @@ macros {
         keystrokes.sub(/^(&kp N0 ?)+/, '')
       end
 
-      def keystrokes_from_character(character)
-        hexcodepoint = hexcodepoint_from_character(character)
+      def keystrokes_from_character(character, os)
+        hexcodepoint = hexcodepoint_from_character(character, os)
         keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
       end
 
-      def hexcodepoint_from_character(character)
+      def hexcodepoint_from_character(character, os)
         case character.codepoints
         in [codepoint]
-          sprintf("%04X", codepoint)
+          # macOS expects two UTF-16 instead UTF-32
+          # https://apple.stackexchange.com/a/183056
+          if os == :macos && codepoint >= 0x10000
+            codepoint -= 0x10000
+            high_surrogate = 0xD800 + (codepoint >> 10)
+            low_surrogate = 0xDC00 + (codepoint & 0x3FF)
+            sprintf("%04X%04X", high_surrogate, low_surrogate)
+          else
+            sprintf("%04X", codepoint)
+          end
         end
       end
 
@@ -1446,7 +1455,7 @@ macros {
 
         OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
           sequence = character.chars.map do |character|
-            keystrokes = keystrokes_from_character(character)
+            keystrokes = keystrokes_from_character(character, os)
             format_keystrokes_for_unicode(keystrokes, os)
           end
 
