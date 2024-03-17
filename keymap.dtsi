@@ -4383,108 +4383,188 @@ macros {
     //
     UNICODE(world_degree_sign_macro, /* ° */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp O &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(LS(N8)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N0)
+        #endif
       #endif
     )
     world_degree_sign: world_degree_sign {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_degree_sign_macro>, <&world_degree_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_section_sign_macro, /* § */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp S &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp A &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(N6))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N7)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N7)
+        #endif
       #endif
     )
     world_section_sign: world_section_sign {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_section_sign_macro>, <&world_section_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_paragraph_sign_macro, /* ¶ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp P &kp EXCL)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(N7))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N6)
+        #endif
       #endif
     )
     world_paragraph_sign: world_paragraph_sign {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_paragraph_sign_macro>, <&world_paragraph_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_o_ordinal_macro, /* º */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp CARET &kp UNDER &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(N0))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp A)
+        #endif
       #endif
     )
     world_o_ordinal: world_o_ordinal {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_ordinal_macro>, <&world_o_ordinal_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_a_ordinal_macro, /* ª */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp CARET &kp UNDER &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp A &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(N9))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N0)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp A)
+        #endif
       #endif
     )
     world_a_ordinal: world_a_ordinal {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_ordinal_macro>, <&world_a_ordinal_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_exclaim_left_macro, /* ¡ */
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(N1))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N1)
+        #endif
       #endif
     )
     world_exclaim_left: world_exclaim_left {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_exclaim_left_macro>, <&world_exclaim_left_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_question_left_macro, /* ¿ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp EXCL &kp EXCL)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(LS(FSLH)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp F)
+        #endif
       #endif
     )
     world_question_left: world_question_left {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_question_left_macro>, <&world_question_left_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
     };
     UNICODE(world_currency_crypto_macro, /* ₿ */
       #if UNICODE_TARGET_OS == 'L'

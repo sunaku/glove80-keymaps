@@ -438,3 +438,41 @@ localizing:
     linux:   COMPOSE TILDE LS(N)
     macos:   LA(N) LS(N)
     windows: ALT+0209
+
+  ###
+  ## signs
+  #
+
+  "°":
+    linux:   COMPOSE O O
+    macos:   LA(LS(N8))
+    windows: ALT+0176
+
+  "¡":
+    macos:   LA(N1)
+    windows: ALT+0161
+
+  "¿":
+    linux:   COMPOSE EXCL EXCL
+    macos:   LA(LS(FSLH))
+    windows: ALT+0191
+
+  "§":
+    linux:   COMPOSE S O
+    macos:   LA(N6)
+    windows: ALT+0167
+
+  "¶":
+    linux:   COMPOSE P EXCL
+    macos:   LA(N7)
+    windows: ALT+0182
+
+  "º":
+    linux:   COMPOSE CARET UNDER O
+    macos:   LA(N0)
+    windows: ALT+0186
+
+  "ª":
+    linux:   COMPOSE CARET UNDER A
+    macos:   LA(N9)
+    windows: ALT+0170
