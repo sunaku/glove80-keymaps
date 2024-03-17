@@ -6256,11 +6256,7 @@ macros {
         UNICODE_SEQ_MACOS(&kp N1 &kp E &kp N9 &kp E)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_WINDOWS(&kp KP_N7 &kp KP_N8 &kp KP_N3 &kp KP_N8)
-        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp E &kp N9 &kp E)
-        #endif
       #endif
     )
     world_consonants_eszett_upper: world_consonants_eszett_upper {

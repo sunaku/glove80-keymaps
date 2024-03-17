@@ -423,7 +423,7 @@ localizing:
   "ẞ":
     linux:   COMPOSE LS(S) LS(S)
     macos:   LA(LS(S))
-    windows: ALT+7838
+    windows: # NOTE: U+1E9E has no alt-code per charmap.exe
 
   ###
   ## N

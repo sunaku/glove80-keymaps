@@ -1464,11 +1464,12 @@ macros {
     %>
       #<%= "el" if os_index > 0 %>if UNICODE_TARGET_OS == <%= os_char %>
     <%
-          if localizations
+          localization_for_os = localizations[os.to_s] if localizations
+
+          if localization_for_os
     %>
         #ifdef WORLD_USE_COMPOSE
         <%=
-          localization_for_os = localizations.fetch(os.to_s)
           localized_keystrokes = resolve_localized_keystrokes(localization_for_os, os)
           localized_keystrokes.join(", ")
         %>
@@ -1478,7 +1479,7 @@ macros {
     %>
         <%= sequence.join(", ") %>
     <%
-          if localizations
+          if localization_for_os
     %>
         #endif
     <%
