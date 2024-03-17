@@ -88,6 +88,7 @@ codepoints:
   currency_cent:   "¢"
   currency_sign:   "¤"
   currency_crypto: "₿"
+  micro_sign: "µ"
 
 localizing:
   #
@@ -456,6 +457,11 @@ localizing:
     linux:   COMPOSE EXCL EXCL
     macos:   LA(LS(FSLH))
     windows: ALT+0191
+
+  "µ":
+    linux:   COMPOSE M U
+    macos:   LA(M)
+    windows: ALT+0181
 
   "§":
     linux:   COMPOSE S O

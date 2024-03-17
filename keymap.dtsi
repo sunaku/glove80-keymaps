@@ -4611,6 +4611,33 @@ macros {
         bindings = <&world_currency_sign_macro>, <&world_currency_sign_macro>;
         mods = <(~(UNICODE_MORPH_MODS))>;
     };
+    UNICODE(world_micro_sign_macro, /* µ */
+      #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_LINUX(&kp M &kp U)
+        #else
+        UNICODE_SEQ_LINUX(&kp B &kp N5)
+        #endif
+      #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_MACOS(&kp LA(M))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N5)
+        #endif
+      #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N1)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N5)
+        #endif
+      #endif
+    )
+    world_micro_sign: world_micro_sign {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_micro_sign_macro>, <&world_micro_sign_macro>;
+        mods = <(~(COMPOSE_MORPH_MODS))>;
+    };
 
     //
     // characters
