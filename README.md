@@ -1,19 +1,17 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80][1] keymap featuring the [Engram][2]/[mer][3]
-layouts with [Miryoku][4]-style layers and [home row mods][5].
-Other layouts (QWERTY, Dvorak, Colemak/DH, etc.) and
-familiar keys (arrows, pinky shifts, function row)
-are also provided as "training wheels" to aid your
-transition to the full glory, at your convenience.
+This is [my Glove80] keymap featuring the [Engram] and [Engrammer] layouts with
+[Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
+Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
+also provided as "training wheels" to aid your transition to the full glory.
 
->![Photograph of my Glove80 with Engrammer layout](https://raw.githubusercontent.com/sunaku/sunaku.github.io/master/moergo-glove80-keyboard-photograph.jpg)
+>![Photograph of my Glove80 with Engrammer layout](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
 
-[1]: https://sunaku.github.io/moergo-glove80-keyboard.html
-[2]: https://sunaku.github.io/engram-keyboard-layout.html
-[3]: https://sunaku.github.io/engrammer-keyboard-layout.html
-[4]: https://github.com/manna-harbour/miryoku
-[5]: https://sunaku.github.io/home-row-mods.html
+[my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
+[Engram]:        https://sunaku.github.io/engram-keyboard-layout.html
+[Engrammer]:     https://sunaku.github.io/engrammer-keyboard-layout.html
+[Miryoku]:       https://github.com/manna-harbour/miryoku
+[home row mods]: https://sunaku.github.io/home-row-mods.html
 
 <!-- vim-markdown-toc GFM -->
 
@@ -49,14 +47,14 @@ transition to the full glory, at your convenience.
 
 ### Legend
 
-See [interactive layer map][6] for overview and documentation.
->NOTE: This is also available as a [printable PDF document][7].
+See [interactive layer map][map] for overview and documentation.
+>NOTE: This is also available as a [printable PDF document][pdf].
 
-See [release notes][8] for a visual overview of recent updates.
+See [release notes][rel] for a visual overview of recent updates.
 
-[6]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
-[7]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
-[8]: https://github.com/sunaku/glove80-keymaps/releases
+[map]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
+[pdf]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
+[rel]: https://github.com/sunaku/glove80-keymaps/releases
 
 [![Base layer](README/base-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#layers)
 [![Lower layer](README/lower-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#lower-layer)
@@ -103,14 +101,11 @@ atop the "Custom Defined Behaviors" text box in your clone of this keymap:
 
 ### Home row mods
 
-Next, let's become familiar with the powerful concept of [home row mods][HRM],
-which are dual-function keys that send normal keycodes (such as the letter `A`
+Next, let's become familiar with the concept of [home row mods], which are
+dual-function keys that *either* send normal keycodes (such as the letter `A`
 or the number `1`) when tapped or modifiers (such as Shift or Ctrl) when held.
 
-![Concept diagram of *home row mods* on a row-staggered keyboard][HRM_diagram]
-
-[HRM]:         https://sunaku.github.io/home-row-mods.html
-[HRM_diagram]: https://sunaku.github.io/home-row-mods.png
+![Concept diagram of *home row mods* on a row-staggered keyboard](https://sunaku.github.io/home-row-mods.png)
 
 The diagram above shows the default "GACS" order of home row mods in this keymap:
 - "G" means `LGUI`, which is the Win key in Windows, Cmd in macOS, Super in Linux.
@@ -131,7 +126,7 @@ such as for the frequent "I" in English or when typing camel/PascalCase names.
 
 ### Layer access keys
 
-This keymap borrows heavily from the [legendary Miryoku][4] system, featuring:
+This keymap borrows heavily from the legendary [Miryoku] system, featuring:
 
 - Six specialized layers: Cursor, Number, Function, Symbol, Mouse, System
 - Layer access via thumb keys: Backspace, Delete, Escape, Enter, Tab, Space
@@ -341,10 +336,10 @@ You don't need to change the per-finger layers (such as "LeftPinky") manually.
 
 ## Discussion
 
-Join the [`#glorious-engrammer`][9] channel on [MoErgo's discord server][10].
+Join the [`#glorious-engrammer`][ch] channel on [MoErgo's discord server][sv].
 
-[9]: https://discord.com/channels/877392805654306816/1111469812850380831
-[10]: https://www.moergo.com/discord
+[ch]: https://discord.com/channels/877392805654306816/1111469812850380831
+[sv]: https://www.moergo.com/discord
 
 ## License
 
