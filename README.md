@@ -244,16 +244,11 @@ adding them above the snippet in the "Custom Defined Behaviors" text box:
 // ... rest of snippet goes here, unchanged ...
 ```
 
-For your reference, the following digram shows the default values for all
+For your reference, the following diagram shows the default values for all
 settings and how they inherit from each other, so you can override them
 together as a group (by inheritance) or each individually (fine-grained).
 
-<details>
-  <summary><b>Diagram:</b> Default values for #define settings</summary>
-
-  ![diagram](define.svg)
-
-</details>
+![Default values and inheritance for all `#define` settings](define.svg)
 
 #### Reordering home row mods
 
