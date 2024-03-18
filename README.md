@@ -211,17 +211,18 @@ Open the [keymap link above](#keymap) and follow these instructions:
 
 ### Flashing
 
-- For the initial flash, follow "Loading new ZMK firmware onto your Glove80"
-(see page 29 of the [Glove80 User Guide]) or, if that doesn't work, try the
-"bootloader mass storage device mode" method (see page 31 in the user guide).
+- For the initial flash, see ["Loading new ZMK firmware onto your Glove80"](
+https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#loading-new-zmk-firmware-onto-your-glove80
+) and use the ["Entering bootloader mass storage device mode on power-up"](
+https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#entering-bootloader-mass-storage-device-mode-on-power-up
+) fail-safe on both halves.  Subsequent flashes can target just the left half.
 
 - If you're installing a different firmware version compared to what your
 keyboard currently has, then ⚠️ **after flashing both halves** ⚠️ perform a
-"Configuration Factory Reset" on both halves (see page 42 in the [Glove80 User
-Guide]) and then turn RGB effects on, watch them illuminate, and finally turn
-them back off.  This allows the newly installed firmware to take full effect.
-
-[Glove80 User Guide]: https://www.moergo.com/files/glove80-user-guide.pdf
+["Configuration Factory Reset and re-pair left & right halves procedure"](
+https://docs.moergo.com/glove80-user-guide/troubleshooting/#configuration-factory-reset-and-re-pairing-left-and-right-halves
+) on both halves and then turn RGB effects on, watch them illuminate, and
+finally turn them back off for the newly installed firmware to take effect.
 
 ## Upgrading
 
