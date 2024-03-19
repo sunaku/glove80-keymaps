@@ -5,18 +5,33 @@ This is [my Glove80] keymap featuring the [Engram] and [Engrammer] layouts with
 Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
 also provided as "training wheels" to aid your transition to the full glory.
 
->![Photograph of my Glove80 with Engrammer layout](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
-
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Engram]:        https://sunaku.github.io/engram-keyboard-layout.html
 [Engrammer]:     https://sunaku.github.io/engrammer-keyboard-layout.html
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [home row mods]: https://sunaku.github.io/home-row-mods.html
 
+## Keymap
+
+Version 35 (2024-02-18)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v35
+- Release: https://my.glove80.com/#/layout/user/05c7da03-20bd-494e-a795-d382a5a96621
+
+### Legend
+
+See [interactive layer map][map] for overview and documentation.
+>NOTE: This is also available as a [printable PDF document][pdf].
+
+See [release notes][rel] for a visual overview of recent updates.
+
+[map]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
+[pdf]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
+[rel]: https://github.com/sunaku/glove80-keymaps/releases
+
+### Contents
+
 <!-- vim-markdown-toc GFM -->
 
-* [Keymap](#keymap)
-    * [Legend](#legend)
 * [Guide](#guide)
     * [Factory layout](#factory-layout)
     * [Operating system](#operating-system)
@@ -40,34 +55,6 @@ also provided as "training wheels" to aid your transition to the full glory.
 * [License](#license)
 
 <!-- vim-markdown-toc -->
-
-## Keymap
-
-- https://my.glove80.com/#/layout/user/05c7da03-20bd-494e-a795-d382a5a96621
-
-### Legend
-
-See [interactive layer map][map] for overview and documentation.
->NOTE: This is also available as a [printable PDF document][pdf].
-
-See [release notes][rel] for a visual overview of recent updates.
-
-[map]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
-[pdf]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
-[rel]: https://github.com/sunaku/glove80-keymaps/releases
-
-[![Base layer](README/base-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#layers)
-[![Lower layer](README/lower-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#lower-layer)
-[![Cursor layer](README/cursor-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#cursor-layer)
-[![Number layer](README/number-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#number-layer)
-[![Function layer](README/function-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#function-layer)
-[![Emoji layer](README/emoji-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#emoji-layer)
-[![Symbol layer](README/symbol-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#symbol-layer)
-[![Mouse layer](README/mouse-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#mouse-layer)
-[![System layer](README/system-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#system-layer)
-[![World layer](README/world-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#world-layer)
-[![Typing layer](README/typing-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#typing-layer)
-[![Gaming layer](README/gaming-layer-diagram.png)](https://sunaku.github.io/moergo-glove80-keyboard.html#gaming-layer)
 
 ## Guide
 
