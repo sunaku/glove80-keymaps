@@ -4253,7 +4253,7 @@ macros {
     //
     #ifndef UNICODE_SEQ_WINDOWS
     #define UNICODE_SEQ_WINDOWS(keystrokes) \
-        <&macro_tap &kp RA(U) keystrokes &kp ENTER>
+        <&macro_tap &kp RALT &kp U keystrokes &kp ENTER>
     #endif
 
     //
