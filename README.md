@@ -36,6 +36,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Factory layout](#factory-layout)
     * [Operating system](#operating-system)
     * [Home row mods](#home-row-mods)
+        * [Difficulty level](#difficulty-level)
         * [One-shot shifts](#one-shot-shifts)
     * [Layer access keys](#layer-access-keys)
     * [Key auto-repeat](#key-auto-repeat)
@@ -103,6 +104,34 @@ The diagram above shows the default "GACS" order of home row mods in this keymap
 **NOTE:** If you set your operating system to macOS in the preceding section,
 the home row mods order will be automatically rearranged into "CAGS" because
 macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
+
+#### Difficulty level
+
+In order to help ease your transition to using [home row mods], this keymap
+provides a difficulty level setting (like in a video game) that you can set:
+
+```dts
+//
+// DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
+// It's meant to help newcomers gradually work their way up to mastery.
+// You can disable this setting by omitting it or assigning a `0` zero.
+//
+#define DIFFICULTY_LEVEL 0 // custom (see defaults below)
+#define DIFFICULTY_LEVEL 1 // novice (500ms)
+#define DIFFICULTY_LEVEL 2 // slower (400ms)
+#define DIFFICULTY_LEVEL 3 // normal (300ms)
+#define DIFFICULTY_LEVEL 4 // faster (200ms)
+#define DIFFICULTY_LEVEL 5 // expert (100ms)
+```
+
+Unless you're already proficient in using home row mods, you might consider
+choosing an appropriate difficulty level to match your current abilities and
+gradually increase the difficulty level as you work your way up to mastery.
+
+On the contrary, you can disable the difficulty level feature altogether by
+removing the `#define DIFFICULTY_LEVEL` line or by setting its value to zero.
+Then, you can experience the default values of all settings (representing my
+personal fine-tuned configuration) or directly override them per your taste.
 
 #### One-shot shifts
 
