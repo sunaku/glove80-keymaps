@@ -745,12 +745,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_<%= target_CamelCase %>>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_<%= target_CamelCase %>
+            , <&macro_press &mo LAYER_<%= target_CamelCase %>>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_<%= target_CamelCase %>>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_<%= target_CamelCase %>
+            , <&macro_release &mo LAYER_<%= target_CamelCase %>>
+            #endif
             ;
     };
     <%= target %>_tap: homey_<%= target %>_tap {

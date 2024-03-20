@@ -1592,12 +1592,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_LeftPinky>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftPinky
+            , <&macro_press &mo LAYER_LeftPinky>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_LeftPinky>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftPinky
+            , <&macro_release &mo LAYER_LeftPinky>
+            #endif
             ;
     };
     left_pinky_tap: homey_left_pinky_tap {
@@ -1674,12 +1678,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_RightPinky>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightPinky
+            , <&macro_press &mo LAYER_RightPinky>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_RightPinky>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightPinky
+            , <&macro_release &mo LAYER_RightPinky>
+            #endif
             ;
     };
     right_pinky_tap: homey_right_pinky_tap {
@@ -1756,12 +1764,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_LeftRing1>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftRing1
+            , <&macro_press &mo LAYER_LeftRing1>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_LeftRing1>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftRing1
+            , <&macro_release &mo LAYER_LeftRing1>
+            #endif
             ;
     };
     left_ring1_tap: homey_left_ring1_tap {
@@ -1838,12 +1850,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_RightRing1>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightRing1
+            , <&macro_press &mo LAYER_RightRing1>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_RightRing1>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightRing1
+            , <&macro_release &mo LAYER_RightRing1>
+            #endif
             ;
     };
     right_ring1_tap: homey_right_ring1_tap {
@@ -1920,12 +1936,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_LeftRing2>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftRing2
+            , <&macro_press &mo LAYER_LeftRing2>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_LeftRing2>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftRing2
+            , <&macro_release &mo LAYER_LeftRing2>
+            #endif
             ;
     };
     left_ring2_tap: homey_left_ring2_tap {
@@ -2002,12 +2022,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_RightRing2>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightRing2
+            , <&macro_press &mo LAYER_RightRing2>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_RightRing2>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightRing2
+            , <&macro_release &mo LAYER_RightRing2>
+            #endif
             ;
     };
     right_ring2_tap: homey_right_ring2_tap {
@@ -2084,12 +2108,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_LeftMiddy>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftMiddy
+            , <&macro_press &mo LAYER_LeftMiddy>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_LeftMiddy>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftMiddy
+            , <&macro_release &mo LAYER_LeftMiddy>
+            #endif
             ;
     };
     left_middy_tap: homey_left_middy_tap {
@@ -2166,12 +2194,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_RightMiddy>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightMiddy
+            , <&macro_press &mo LAYER_RightMiddy>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_RightMiddy>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightMiddy
+            , <&macro_release &mo LAYER_RightMiddy>
+            #endif
             ;
     };
     right_middy_tap: homey_right_middy_tap {
@@ -2248,12 +2280,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_LeftIndex>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftIndex
+            , <&macro_press &mo LAYER_LeftIndex>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_LeftIndex>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_LeftIndex
+            , <&macro_release &mo LAYER_LeftIndex>
+            #endif
             ;
     };
     left_index_tap: homey_left_index_tap {
@@ -2330,12 +2366,16 @@ behaviors {
         #binding-cells = <1>;
         bindings
             = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER
-                            &mo LAYER_RightIndex>
+            , <&macro_press &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightIndex
+            , <&macro_press &mo LAYER_RightIndex>
+            #endif
             , <&macro_pause_for_release>
             , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER
-                              &mo LAYER_RightIndex>
+            , <&macro_release &kp MACRO_PLACEHOLDER>
+            #ifdef LAYER_RightIndex
+            , <&macro_release &mo LAYER_RightIndex>
+            #endif
             ;
     };
     right_index_tap: homey_right_index_tap {
