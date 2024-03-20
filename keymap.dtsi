@@ -4396,108 +4396,250 @@ macros {
     //
     UNICODE(world_degree_sign_macro, /* ° */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_degree_sign
+        COMPOSE_SEQ_LINUX(&kp O &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_degree_sign
+        COMPOSE_SEQ_MACOS(&kp LA(LS(N8)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_degree_sign
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N0)
+        #endif
       #endif
     )
     world_degree_sign: world_degree_sign {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_degree_sign_macro>, <&world_degree_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_degree_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_section_sign_macro, /* § */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_section_sign
+        COMPOSE_SEQ_LINUX(&kp S &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp A &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_section_sign
+        COMPOSE_SEQ_MACOS(&kp LA(N6))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N7)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_section_sign
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N7)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N7)
+        #endif
       #endif
     )
     world_section_sign: world_section_sign {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_section_sign_macro>, <&world_section_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_section_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_paragraph_sign_macro, /* ¶ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_paragraph_sign
+        COMPOSE_SEQ_LINUX(&kp P &kp EXCL)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_paragraph_sign
+        COMPOSE_SEQ_MACOS(&kp LA(N7))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_paragraph_sign
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N6)
+        #endif
       #endif
     )
     world_paragraph_sign: world_paragraph_sign {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_paragraph_sign_macro>, <&world_paragraph_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_paragraph_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_ordinal_macro, /* º */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_ordinal
+        COMPOSE_SEQ_LINUX(&kp CARET &kp UNDER &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_ordinal
+        COMPOSE_SEQ_MACOS(&kp LA(N0))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_ordinal
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp A)
+        #endif
       #endif
     )
     world_o_ordinal: world_o_ordinal {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_ordinal_macro>, <&world_o_ordinal_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_ordinal
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_ordinal_macro, /* ª */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ordinal
+        COMPOSE_SEQ_LINUX(&kp CARET &kp UNDER &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp A &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ordinal
+        COMPOSE_SEQ_MACOS(&kp LA(N9))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ordinal
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N0)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp A)
+        #endif
       #endif
     )
     world_a_ordinal: world_a_ordinal {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_ordinal_macro>, <&world_a_ordinal_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_ordinal
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_exclaim_left_macro, /* ¡ */
       #if UNICODE_TARGET_OS == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N1)
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_exclaim_left
+        COMPOSE_SEQ_MACOS(&kp LA(N1))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_exclaim_left
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N1)
+        #endif
       #endif
     )
     world_exclaim_left: world_exclaim_left {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_exclaim_left_macro>, <&world_exclaim_left_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_exclaim_left
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_question_left_macro, /* ¿ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_question_left
+        COMPOSE_SEQ_LINUX(&kp EXCL &kp EXCL)
+        #else
         UNICODE_SEQ_LINUX(&kp B &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_question_left
+        COMPOSE_SEQ_MACOS(&kp LA(LS(FSLH)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_question_left
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp F)
+        #endif
       #endif
     )
     world_question_left: world_question_left {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_question_left_macro>, <&world_question_left_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_question_left
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_crypto_macro, /* ₿ */
       #if UNICODE_TARGET_OS == 'L'
@@ -4512,7 +4654,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_crypto_macro>, <&world_currency_crypto_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_crypto
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_cent_macro, /* ¢ */
       #if UNICODE_TARGET_OS == 'L'
@@ -4527,7 +4675,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_cent_macro>, <&world_currency_cent_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_cent
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_sign_macro, /* ¤ */
       #if UNICODE_TARGET_OS == 'L'
@@ -4542,87 +4696,72 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_sign_macro>, <&world_currency_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    UNICODE(world_micro_sign_macro, /* µ */
+      #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_micro_sign
+        COMPOSE_SEQ_LINUX(&kp M &kp U)
+        #else
+        UNICODE_SEQ_LINUX(&kp B &kp N5)
+        #endif
+      #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_micro_sign
+        COMPOSE_SEQ_MACOS(&kp LA(M))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N5)
+        #endif
+      #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_micro_sign
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N1)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N5)
+        #endif
+      #endif
+    )
+    world_micro_sign: world_micro_sign {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_micro_sign_macro>, <&world_micro_sign_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_micro_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
 
     //
     // characters
     //
-    UNICODE(world_c_cedilla_lower_macro, /* ç */
-      #if UNICODE_TARGET_OS == 'L'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_LINUX(&kp COMMA &kp C)
-        #else
-        UNICODE_SEQ_LINUX(&kp E &kp N7)
-        #endif
-      #elif UNICODE_TARGET_OS == 'M'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_MACOS(&kp LA(C))
-        #else
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N7)
-        #endif
-      #elif UNICODE_TARGET_OS == 'W'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
-        #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N7)
-        #endif
-      #endif
-    )
-    world_c_cedilla_lower: world_c_cedilla_lower {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&world_c_cedilla_lower_macro>, <&world_c_cedilla_lower_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
-    };
-    UNICODE(world_c_cedilla_upper_macro, /* Ç */
-      #if UNICODE_TARGET_OS == 'L'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_LINUX(&kp COMMA &kp LS(C))
-        #else
-        UNICODE_SEQ_LINUX(&kp C &kp N7)
-        #endif
-      #elif UNICODE_TARGET_OS == 'M'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_MACOS(&kp LA(LS(C)))
-        #else
-        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N7)
-        #endif
-      #elif UNICODE_TARGET_OS == 'W'
-        #ifdef WORLD_USE_COMPOSE
-        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
-        #else
-        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N7)
-        #endif
-      #endif
-    )
-    world_c_cedilla_upper: world_c_cedilla_upper {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&world_c_cedilla_upper_macro>, <&world_c_cedilla_upper_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
-    };
-    world_c_cedilla: world_c_cedilla {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&world_c_cedilla_lower>, <&world_c_cedilla_upper>;
-        mods = <MOD_LSFT>;
-    };
     UNICODE(world_i_acute_lower_macro, /* í */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp I)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp D)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp I)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp D)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp D)
@@ -4633,23 +4772,32 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_acute_lower_macro>, <&world_i_acute_lower_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_acute_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_i_acute_upper_macro, /* Í */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(I))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp D)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(I))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp D)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp D)
@@ -4660,7 +4808,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_acute_upper_macro>, <&world_i_acute_upper_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_acute_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_i_acute: world_i_acute {
         compatible = "zmk,behavior-mod-morph";
@@ -4670,33 +4824,75 @@ macros {
     };
     UNICODE(world_i_diaeresis_lower_macro, /* ï */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
+        COMPOSE_SEQ_LINUX(&kp DQT &kp I)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp I)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N9)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp F)
+        #endif
       #endif
     )
     world_i_diaeresis_lower: world_i_diaeresis_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_diaeresis_lower_macro>, <&world_i_diaeresis_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_i_diaeresis_upper_macro, /* Ï */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
+        COMPOSE_SEQ_LINUX(&kp DQT &kp LS(I))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(I))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N7)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp F)
+        #endif
       #endif
     )
     world_i_diaeresis_upper: world_i_diaeresis_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_diaeresis_upper_macro>, <&world_i_diaeresis_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_i_diaeresis: world_i_diaeresis {
         compatible = "zmk,behavior-mod-morph";
@@ -4706,33 +4902,75 @@ macros {
     };
     UNICODE(world_i_circumflex_lower_macro, /* î */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
+        COMPOSE_SEQ_LINUX(&kp CARET &kp I)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp E)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp I)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp E)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N8)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp E)
+        #endif
       #endif
     )
     world_i_circumflex_lower: world_i_circumflex_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_circumflex_lower_macro>, <&world_i_circumflex_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_i_circumflex_upper_macro, /* Î */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
+        COMPOSE_SEQ_LINUX(&kp CARET &kp LS(I))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp E)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(I))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp E)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp E)
+        #endif
       #endif
     )
     world_i_circumflex_upper: world_i_circumflex_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_circumflex_upper_macro>, <&world_i_circumflex_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_i_circumflex: world_i_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -4742,33 +4980,75 @@ macros {
     };
     UNICODE(world_i_grave_lower_macro, /* ì */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_grave_lower
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp I)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_grave_lower
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp I)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_grave_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp C)
+        #endif
       #endif
     )
     world_i_grave_lower: world_i_grave_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_grave_lower_macro>, <&world_i_grave_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_grave_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_i_grave_upper_macro, /* Ì */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_grave_upper
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(I))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_grave_upper
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(I))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp C)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_i_grave_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp C)
+        #endif
       #endif
     )
     world_i_grave_upper: world_i_grave_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_i_grave_upper_macro>, <&world_i_grave_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_i_grave_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_i_grave: world_i_grave {
         compatible = "zmk,behavior-mod-morph";
@@ -4778,33 +5058,75 @@ macros {
     };
     UNICODE(world_e_acute_lower_macro, /* é */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_acute_lower
+        COMPOSE_SEQ_LINUX(&kp SQT &kp E)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_acute_lower
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp E)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_acute_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N3)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N9)
+        #endif
       #endif
     )
     world_e_acute_lower: world_e_acute_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_acute_lower_macro>, <&world_e_acute_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_acute_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_e_acute_upper_macro, /* É */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_acute_upper
+        COMPOSE_SEQ_LINUX(&kp SQT &kp LS(E))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_acute_upper
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(E))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_acute_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N9)
+        #endif
       #endif
     )
     world_e_acute_upper: world_e_acute_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_acute_upper_macro>, <&world_e_acute_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_acute_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_e_acute: world_e_acute {
         compatible = "zmk,behavior-mod-morph";
@@ -4814,33 +5136,75 @@ macros {
     };
     UNICODE(world_e_diaeresis_lower_macro, /* ë */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
+        COMPOSE_SEQ_LINUX(&kp DQT &kp E)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp E)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N5)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp B)
+        #endif
       #endif
     )
     world_e_diaeresis_lower: world_e_diaeresis_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_diaeresis_lower_macro>, <&world_e_diaeresis_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_e_diaeresis_upper_macro, /* Ë */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
+        COMPOSE_SEQ_LINUX(&kp DQT &kp LS(E))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(E))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N3)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp B)
+        #endif
       #endif
     )
     world_e_diaeresis_upper: world_e_diaeresis_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_diaeresis_upper_macro>, <&world_e_diaeresis_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_e_diaeresis: world_e_diaeresis {
         compatible = "zmk,behavior-mod-morph";
@@ -4850,33 +5214,75 @@ macros {
     };
     UNICODE(world_e_circumflex_lower_macro, /* ê */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
+        COMPOSE_SEQ_LINUX(&kp CARET &kp E)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp E)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N4)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp A)
+        #endif
       #endif
     )
     world_e_circumflex_lower: world_e_circumflex_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_circumflex_lower_macro>, <&world_e_circumflex_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_e_circumflex_upper_macro, /* Ê */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
+        COMPOSE_SEQ_LINUX(&kp CARET &kp LS(E))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(E))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp A)
+        #endif
       #endif
     )
     world_e_circumflex_upper: world_e_circumflex_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_circumflex_upper_macro>, <&world_e_circumflex_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_e_circumflex: world_e_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -4886,33 +5292,75 @@ macros {
     };
     UNICODE(world_e_grave_lower_macro, /* è */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_grave_lower
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp E)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_grave_lower
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp E)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_grave_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N8)
+        #endif
       #endif
     )
     world_e_grave_lower: world_e_grave_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_grave_lower_macro>, <&world_e_grave_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_grave_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_e_grave_upper_macro, /* È */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_grave_upper
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(E))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_grave_upper
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(E))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_grave_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N0)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N8)
+        #endif
       #endif
     )
     world_e_grave_upper: world_e_grave_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_grave_upper_macro>, <&world_e_grave_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_grave_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_e_grave: world_e_grave {
         compatible = "zmk,behavior-mod-morph";
@@ -4922,33 +5370,75 @@ macros {
     };
     UNICODE(world_e_ae_lower_macro, /* æ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_ae_lower
+        COMPOSE_SEQ_LINUX(&kp A &kp E)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_ae_lower
+        COMPOSE_SEQ_MACOS(&kp LA(SQT))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_ae_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N0)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N6)
+        #endif
       #endif
     )
     world_e_ae_lower: world_e_ae_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_ae_lower_macro>, <&world_e_ae_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_ae_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_e_ae_upper_macro, /* Æ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_ae_upper
+        COMPOSE_SEQ_LINUX(&kp LS(A) &kp LS(E))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_ae_upper
+        COMPOSE_SEQ_MACOS(&kp LA(LS(SQT)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N6)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_e_ae_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N8)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N6)
+        #endif
       #endif
     )
     world_e_ae_upper: world_e_ae_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_e_ae_upper_macro>, <&world_e_ae_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_e_ae_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_e_ae: world_e_ae {
         compatible = "zmk,behavior-mod-morph";
@@ -4958,33 +5448,75 @@ macros {
     };
     UNICODE(world_a_acute_lower_macro, /* á */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_acute_lower
+        COMPOSE_SEQ_LINUX(&kp SQT &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_acute_lower
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp A)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_acute_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N1)
+        #endif
       #endif
     )
     world_a_acute_lower: world_a_acute_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_acute_lower_macro>, <&world_a_acute_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_acute_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_acute_upper_macro, /* Á */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_acute_upper
+        COMPOSE_SEQ_LINUX(&kp SQT &kp LS(A))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_acute_upper
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(A))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_acute_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N3)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N1)
+        #endif
       #endif
     )
     world_a_acute_upper: world_a_acute_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_acute_upper_macro>, <&world_a_acute_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_acute_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_a_acute: world_a_acute {
         compatible = "zmk,behavior-mod-morph";
@@ -4995,18 +5527,21 @@ macros {
     UNICODE(world_a_diaeresis_lower_macro, /* ä */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N4)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp A)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N4)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N4)
@@ -5017,23 +5552,32 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_diaeresis_lower_macro>, <&world_a_diaeresis_lower_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_diaeresis_upper_macro, /* Ä */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N4)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N4)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N4)
@@ -5044,7 +5588,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_diaeresis_upper_macro>, <&world_a_diaeresis_upper_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_a_diaeresis: world_a_diaeresis {
         compatible = "zmk,behavior-mod-morph";
@@ -5054,33 +5604,75 @@ macros {
     };
     UNICODE(world_a_circumflex_lower_macro, /* â */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
+        COMPOSE_SEQ_LINUX(&kp CARET &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp A)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N2)
+        #endif
       #endif
     )
     world_a_circumflex_lower: world_a_circumflex_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_circumflex_lower_macro>, <&world_a_circumflex_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_circumflex_upper_macro, /* Â */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
+        COMPOSE_SEQ_LINUX(&kp CARET &kp LS(A))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(A))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N4)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N2)
+        #endif
       #endif
     )
     world_a_circumflex_upper: world_a_circumflex_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_circumflex_upper_macro>, <&world_a_circumflex_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_a_circumflex: world_a_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -5090,33 +5682,75 @@ macros {
     };
     UNICODE(world_a_grave_lower_macro, /* à */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_grave_lower
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_grave_lower
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp A)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_grave_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N4)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N0)
+        #endif
       #endif
     )
     world_a_grave_lower: world_a_grave_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_grave_lower_macro>, <&world_a_grave_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_grave_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_grave_upper_macro, /* À */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_grave_upper
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(A))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_grave_upper
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(A))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N0)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_grave_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N0)
+        #endif
       #endif
     )
     world_a_grave_upper: world_a_grave_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_grave_upper_macro>, <&world_a_grave_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_grave_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_a_grave: world_a_grave {
         compatible = "zmk,behavior-mod-morph";
@@ -5126,33 +5760,75 @@ macros {
     };
     UNICODE(world_a_tilde_lower_macro, /* ã */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
+        COMPOSE_SEQ_LINUX(&kp TILDE &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
+        COMPOSE_SEQ_MACOS(&kp LA(N) &kp A)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N7)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N3)
+        #endif
       #endif
     )
     world_a_tilde_lower: world_a_tilde_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_tilde_lower_macro>, <&world_a_tilde_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_tilde_upper_macro, /* Ã */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
+        COMPOSE_SEQ_LINUX(&kp TILDE &kp LS(A))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
+        COMPOSE_SEQ_MACOS(&kp LA(N) &kp LS(A))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N5)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N3)
+        #endif
       #endif
     )
     world_a_tilde_upper: world_a_tilde_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_tilde_upper_macro>, <&world_a_tilde_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_a_tilde: world_a_tilde {
         compatible = "zmk,behavior-mod-morph";
@@ -5162,33 +5838,75 @@ macros {
     };
     UNICODE(world_a_ring_lower_macro, /* å */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ring_lower
+        COMPOSE_SEQ_LINUX(&kp O &kp A)
+        #else
         UNICODE_SEQ_LINUX(&kp E &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ring_lower
+        COMPOSE_SEQ_MACOS(&kp LA(A))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ring_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N9)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N5)
+        #endif
       #endif
     )
     world_a_ring_lower: world_a_ring_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_ring_lower_macro>, <&world_a_ring_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_ring_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_a_ring_upper_macro, /* Å */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ring_upper
+        COMPOSE_SEQ_LINUX(&kp O &kp LS(A))
+        #else
         UNICODE_SEQ_LINUX(&kp C &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ring_upper
+        COMPOSE_SEQ_MACOS(&kp LA(LS(A)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_a_ring_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N7)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N5)
+        #endif
       #endif
     )
     world_a_ring_upper: world_a_ring_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_a_ring_upper_macro>, <&world_a_ring_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_a_ring_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_a_ring: world_a_ring {
         compatible = "zmk,behavior-mod-morph";
@@ -5198,33 +5916,75 @@ macros {
     };
     UNICODE(world_y_acute_lower_macro, /* ý */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_acute_lower
+        COMPOSE_SEQ_LINUX(&kp SQT &kp Y)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_acute_lower
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp Y)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_acute_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N3)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp D)
+        #endif
       #endif
     )
     world_y_acute_lower: world_y_acute_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_y_acute_lower_macro>, <&world_y_acute_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_y_acute_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_y_acute_upper_macro, /* Ý */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_acute_upper
+        COMPOSE_SEQ_LINUX(&kp SQT &kp LS(Y))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_acute_upper
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(Y))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp D)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_acute_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp D)
+        #endif
       #endif
     )
     world_y_acute_upper: world_y_acute_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_y_acute_upper_macro>, <&world_y_acute_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_y_acute_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_y_acute: world_y_acute {
         compatible = "zmk,behavior-mod-morph";
@@ -5234,33 +5994,75 @@ macros {
     };
     UNICODE(world_y_diaeresis_lower_macro, /* ÿ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
+        COMPOSE_SEQ_LINUX(&kp DQT &kp Y)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp Y)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp F)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N5)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp F)
+        #endif
       #endif
     )
     world_y_diaeresis_lower: world_y_diaeresis_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_y_diaeresis_lower_macro>, <&world_y_diaeresis_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_y_diaeresis_upper_macro, /* Ÿ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
+        COMPOSE_SEQ_LINUX(&kp DQT &kp LS(Y))
+        #else
         UNICODE_SEQ_LINUX(&kp N1 &kp N7 &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
+        COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(Y))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N1 &kp N7 &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N9)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp N7 &kp N8)
+        #endif
       #endif
     )
     world_y_diaeresis_upper: world_y_diaeresis_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_y_diaeresis_upper_macro>, <&world_y_diaeresis_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_y_diaeresis: world_y_diaeresis {
         compatible = "zmk,behavior-mod-morph";
@@ -5270,33 +6072,75 @@ macros {
     };
     UNICODE(world_o_acute_lower_macro, /* ó */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_acute_lower
+        COMPOSE_SEQ_LINUX(&kp SQT &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_acute_lower
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp O)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_acute_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N3)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N3)
+        #endif
       #endif
     )
     world_o_acute_lower: world_o_acute_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_acute_lower_macro>, <&world_o_acute_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_acute_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_acute_upper_macro, /* Ó */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_acute_upper
+        COMPOSE_SEQ_LINUX(&kp SQT &kp LS(O))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_acute_upper
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(O))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N3)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_acute_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N3)
+        #endif
       #endif
     )
     world_o_acute_upper: world_o_acute_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_acute_upper_macro>, <&world_o_acute_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_acute_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_o_acute: world_o_acute {
         compatible = "zmk,behavior-mod-morph";
@@ -5307,18 +6151,21 @@ macros {
     UNICODE(world_o_diaeresis_lower_macro, /* ö */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N6)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp O)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N6)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N6)
@@ -5329,23 +6176,32 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_diaeresis_lower_macro>, <&world_o_diaeresis_lower_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_diaeresis_upper_macro, /* Ö */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N6)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N6)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N6)
@@ -5356,7 +6212,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_diaeresis_upper_macro>, <&world_o_diaeresis_upper_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_o_diaeresis: world_o_diaeresis {
         compatible = "zmk,behavior-mod-morph";
@@ -5366,33 +6228,75 @@ macros {
     };
     UNICODE(world_o_circumflex_lower_macro, /* ô */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
+        COMPOSE_SEQ_LINUX(&kp CARET &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp O)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N4)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N4)
+        #endif
       #endif
     )
     world_o_circumflex_lower: world_o_circumflex_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_circumflex_lower_macro>, <&world_o_circumflex_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_circumflex_upper_macro, /* Ô */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
+        COMPOSE_SEQ_LINUX(&kp CARET &kp LS(O))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(O))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N4)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N4)
+        #endif
       #endif
     )
     world_o_circumflex_upper: world_o_circumflex_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_circumflex_upper_macro>, <&world_o_circumflex_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_o_circumflex: world_o_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -5402,33 +6306,75 @@ macros {
     };
     UNICODE(world_o_grave_lower_macro, /* ò */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_grave_lower
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_grave_lower
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp O)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_grave_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N2)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N2)
+        #endif
       #endif
     )
     world_o_grave_lower: world_o_grave_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_grave_lower_macro>, <&world_o_grave_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_grave_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_grave_upper_macro, /* Ò */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_grave_upper
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(O))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_grave_upper
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(O))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N2)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_grave_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N0)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N2)
+        #endif
       #endif
     )
     world_o_grave_upper: world_o_grave_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_grave_upper_macro>, <&world_o_grave_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_grave_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_o_grave: world_o_grave {
         compatible = "zmk,behavior-mod-morph";
@@ -5438,33 +6384,75 @@ macros {
     };
     UNICODE(world_o_tilde_lower_macro, /* õ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
+        COMPOSE_SEQ_LINUX(&kp TILDE &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
+        COMPOSE_SEQ_MACOS(&kp LA(N) &kp O)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N5)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N5)
+        #endif
       #endif
     )
     world_o_tilde_lower: world_o_tilde_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_tilde_lower_macro>, <&world_o_tilde_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_tilde_upper_macro, /* Õ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
+        COMPOSE_SEQ_LINUX(&kp TILDE &kp LS(O))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
+        COMPOSE_SEQ_MACOS(&kp LA(N) &kp LS(O))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N5)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N3)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N5)
+        #endif
       #endif
     )
     world_o_tilde_upper: world_o_tilde_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_tilde_upper_macro>, <&world_o_tilde_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_o_tilde: world_o_tilde {
         compatible = "zmk,behavior-mod-morph";
@@ -5474,33 +6462,75 @@ macros {
     };
     UNICODE(world_o_slash_lower_macro, /* ø */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_slash_lower
+        COMPOSE_SEQ_LINUX(&kp FSLH &kp O)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_slash_lower
+        COMPOSE_SEQ_MACOS(&kp LA(O))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_slash_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N8)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N8)
+        #endif
       #endif
     )
     world_o_slash_lower: world_o_slash_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_slash_lower_macro>, <&world_o_slash_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_slash_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_o_slash_upper_macro, /* Ø */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_slash_upper
+        COMPOSE_SEQ_LINUX(&kp FSLH &kp LS(O))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_slash_upper
+        COMPOSE_SEQ_MACOS(&kp LA(LS(O)))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N8)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_o_slash_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N6)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N8)
+        #endif
       #endif
     )
     world_o_slash_upper: world_o_slash_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_o_slash_upper_macro>, <&world_o_slash_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_o_slash_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_o_slash: world_o_slash {
         compatible = "zmk,behavior-mod-morph";
@@ -5510,33 +6540,75 @@ macros {
     };
     UNICODE(world_u_acute_lower_macro, /* ú */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_acute_lower
+        COMPOSE_SEQ_LINUX(&kp SQT &kp U)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_acute_lower
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp U)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_acute_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N0)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp A)
+        #endif
       #endif
     )
     world_u_acute_lower: world_u_acute_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_acute_lower_macro>, <&world_u_acute_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_acute_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_u_acute_upper_macro, /* Ú */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_acute_upper
+        COMPOSE_SEQ_LINUX(&kp SQT &kp LS(U))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_acute_upper
+        COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(U))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp A)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_acute_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N8)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp A)
+        #endif
       #endif
     )
     world_u_acute_upper: world_u_acute_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_acute_upper_macro>, <&world_u_acute_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_acute_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_u_acute: world_u_acute {
         compatible = "zmk,behavior-mod-morph";
@@ -5547,18 +6619,21 @@ macros {
     UNICODE(world_u_diaeresis_lower_macro, /* ü */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp U)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp C)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp U)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp C)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp C)
@@ -5569,23 +6644,32 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_diaeresis_lower_macro>, <&world_u_diaeresis_lower_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_u_diaeresis_upper_macro, /* Ü */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(U))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp C)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(U))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp C)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp C)
@@ -5596,7 +6680,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_diaeresis_upper_macro>, <&world_u_diaeresis_upper_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_u_diaeresis: world_u_diaeresis {
         compatible = "zmk,behavior-mod-morph";
@@ -5606,33 +6696,75 @@ macros {
     };
     UNICODE(world_u_circumflex_lower_macro, /* û */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
+        COMPOSE_SEQ_LINUX(&kp CARET &kp U)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp U)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp B)
+        #endif
       #endif
     )
     world_u_circumflex_lower: world_u_circumflex_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_circumflex_lower_macro>, <&world_u_circumflex_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_u_circumflex_upper_macro, /* Û */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
+        COMPOSE_SEQ_LINUX(&kp CARET &kp LS(U))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
+        COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(U))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp B)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N9)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp B)
+        #endif
       #endif
     )
     world_u_circumflex_upper: world_u_circumflex_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_circumflex_upper_macro>, <&world_u_circumflex_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_u_circumflex: world_u_circumflex {
         compatible = "zmk,behavior-mod-morph";
@@ -5642,33 +6774,75 @@ macros {
     };
     UNICODE(world_u_grave_lower_macro, /* ù */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_grave_lower
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp U)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_grave_lower
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp U)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_grave_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N9)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N9)
+        #endif
       #endif
     )
     world_u_grave_lower: world_u_grave_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_grave_lower_macro>, <&world_u_grave_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_grave_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_u_grave_upper_macro, /* Ù */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_grave_upper
+        COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(U))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_grave_upper
+        COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(U))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N9)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_u_grave_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N7)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N9)
+        #endif
       #endif
     )
     world_u_grave_upper: world_u_grave_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_u_grave_upper_macro>, <&world_u_grave_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_u_grave_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_u_grave: world_u_grave {
         compatible = "zmk,behavior-mod-morph";
@@ -5676,40 +6850,233 @@ macros {
         bindings = <&world_u_grave_lower>, <&world_u_grave_upper>;
         mods = <MOD_LSFT>;
     };
-    UNICODE(world_n_tilde_lower_macro, /* ñ */
+    UNICODE(world_consonants_cedilla_lower_macro, /* ç */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
+        COMPOSE_SEQ_LINUX(&kp COMMA &kp C)
+        #else
+        UNICODE_SEQ_LINUX(&kp E &kp N7)
+        #endif
+      #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
+        COMPOSE_SEQ_MACOS(&kp LA(C))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N7)
+        #endif
+      #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp E &kp N7)
+        #endif
+      #endif
+    )
+    world_consonants_cedilla_lower: world_consonants_cedilla_lower {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_cedilla_lower_macro>, <&world_consonants_cedilla_lower_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    UNICODE(world_consonants_cedilla_upper_macro, /* Ç */
+      #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
+        COMPOSE_SEQ_LINUX(&kp COMMA &kp LS(C))
+        #else
+        UNICODE_SEQ_LINUX(&kp C &kp N7)
+        #endif
+      #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
+        COMPOSE_SEQ_MACOS(&kp LA(LS(C)))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N7)
+        #endif
+      #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp C &kp N7)
+        #endif
+      #endif
+    )
+    world_consonants_cedilla_upper: world_consonants_cedilla_upper {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_cedilla_upper_macro>, <&world_consonants_cedilla_upper_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    world_consonants_cedilla: world_consonants_cedilla {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_cedilla_lower>, <&world_consonants_cedilla_upper>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(world_consonants_eszett_lower_macro, /* ß */
+      #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
+        COMPOSE_SEQ_LINUX(&kp S &kp S)
+        #else
+        UNICODE_SEQ_LINUX(&kp D &kp F)
+        #endif
+      #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
+        COMPOSE_SEQ_MACOS(&kp LA(S))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp F)
+        #endif
+      #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp F)
+        #endif
+      #endif
+    )
+    world_consonants_eszett_lower: world_consonants_eszett_lower {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_eszett_lower_macro>, <&world_consonants_eszett_lower_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    UNICODE(world_consonants_eszett_upper_macro, /* ẞ */
+      #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_upper
+        COMPOSE_SEQ_LINUX(&kp LS(S) &kp LS(S))
+        #else
+        UNICODE_SEQ_LINUX(&kp N1 &kp E &kp N9 &kp E)
+        #endif
+      #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_upper
+        COMPOSE_SEQ_MACOS(&kp LA(LS(S)))
+        #else
+        UNICODE_SEQ_MACOS(&kp N1 &kp E &kp N9 &kp E)
+        #endif
+      #elif UNICODE_TARGET_OS == 'W'
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp E &kp N9 &kp E)
+      #endif
+    )
+    world_consonants_eszett_upper: world_consonants_eszett_upper {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_eszett_upper_macro>, <&world_consonants_eszett_upper_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_consonants_eszett_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    world_consonants_eszett: world_consonants_eszett {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_eszett_lower>, <&world_consonants_eszett_upper>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(world_consonants_ntilde_lower_macro, /* ñ */
+      #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
+        COMPOSE_SEQ_LINUX(&kp TILDE &kp N)
+        #else
         UNICODE_SEQ_LINUX(&kp F &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
+        COMPOSE_SEQ_MACOS(&kp LA(N) &kp N)
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N1)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp N1)
+        #endif
       #endif
     )
-    world_n_tilde_lower: world_n_tilde_lower {
+    world_consonants_ntilde_lower: world_consonants_ntilde_lower {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&world_n_tilde_lower_macro>, <&world_n_tilde_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        bindings = <&world_consonants_ntilde_lower_macro>, <&world_consonants_ntilde_lower_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
-    UNICODE(world_n_tilde_upper_macro, /* Ñ */
+    UNICODE(world_consonants_ntilde_upper_macro, /* Ñ */
       #if UNICODE_TARGET_OS == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
+        COMPOSE_SEQ_LINUX(&kp TILDE &kp LS(N))
+        #else
         UNICODE_SEQ_LINUX(&kp D &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
+        COMPOSE_SEQ_MACOS(&kp LA(N) &kp LS(N))
+        #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N1)
+        #endif
       #elif UNICODE_TARGET_OS == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N9)
+        #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp D &kp N1)
+        #endif
       #endif
     )
-    world_n_tilde_upper: world_n_tilde_upper {
+    world_consonants_ntilde_upper: world_consonants_ntilde_upper {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&world_n_tilde_upper_macro>, <&world_n_tilde_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        bindings = <&world_consonants_ntilde_upper_macro>, <&world_consonants_ntilde_upper_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
-    world_n_tilde: world_n_tilde {
+    world_consonants_ntilde: world_consonants_ntilde {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&world_n_tilde_lower>, <&world_n_tilde_upper>;
+        bindings = <&world_consonants_ntilde_lower>, <&world_consonants_ntilde_upper>;
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_angle_lower_macro, /* ‹ */
@@ -5725,7 +7092,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_angle_lower_macro>, <&world_quotes_left_angle_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_angle_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_left_angle_upper_macro, /* « */
       #if UNICODE_TARGET_OS == 'L'
@@ -5740,7 +7113,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_angle_upper_macro>, <&world_quotes_left_angle_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_angle_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_left_angle: world_quotes_left_angle {
         compatible = "zmk,behavior-mod-morph";
@@ -5761,7 +7140,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_curly_lower_macro>, <&world_quotes_left_curly_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_curly_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_left_curly_upper_macro, /* “ */
       #if UNICODE_TARGET_OS == 'L'
@@ -5776,7 +7161,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_curly_upper_macro>, <&world_quotes_left_curly_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_curly_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_left_curly: world_quotes_left_curly {
         compatible = "zmk,behavior-mod-morph";
@@ -5797,7 +7188,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_low_lower_macro>, <&world_quotes_left_low_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_low_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_left_low_upper_macro, /* „ */
       #if UNICODE_TARGET_OS == 'L'
@@ -5812,7 +7209,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_low_upper_macro>, <&world_quotes_left_low_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_low_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_left_low: world_quotes_left_low {
         compatible = "zmk,behavior-mod-morph";
@@ -5833,7 +7236,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_corner1_lower_macro>, <&world_quotes_left_corner1_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_corner1_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_left_corner1_upper_macro, /* ﹁ */
       #if UNICODE_TARGET_OS == 'L'
@@ -5848,7 +7257,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_corner1_upper_macro>, <&world_quotes_left_corner1_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_corner1_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_left_corner1: world_quotes_left_corner1 {
         compatible = "zmk,behavior-mod-morph";
@@ -5869,7 +7284,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_corner2_lower_macro>, <&world_quotes_left_corner2_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_corner2_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_left_corner2_upper_macro, /* ﹃ */
       #if UNICODE_TARGET_OS == 'L'
@@ -5884,7 +7305,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_corner2_upper_macro>, <&world_quotes_left_corner2_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_corner2_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_left_corner2: world_quotes_left_corner2 {
         compatible = "zmk,behavior-mod-morph";
@@ -5905,7 +7332,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_left_grave_macro>, <&world_quotes_left_grave_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_left_grave
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_right_angle_lower_macro, /* › */
       #if UNICODE_TARGET_OS == 'L'
@@ -5920,7 +7353,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_angle_lower_macro>, <&world_quotes_right_angle_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_angle_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_right_angle_upper_macro, /* » */
       #if UNICODE_TARGET_OS == 'L'
@@ -5935,7 +7374,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_angle_upper_macro>, <&world_quotes_right_angle_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_angle_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_right_angle: world_quotes_right_angle {
         compatible = "zmk,behavior-mod-morph";
@@ -5956,7 +7401,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_curly_lower_macro>, <&world_quotes_right_curly_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_curly_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_right_curly_upper_macro, /* ” */
       #if UNICODE_TARGET_OS == 'L'
@@ -5971,7 +7422,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_curly_upper_macro>, <&world_quotes_right_curly_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_curly_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_right_curly: world_quotes_right_curly {
         compatible = "zmk,behavior-mod-morph";
@@ -5998,7 +7455,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_corner1_lower_macro>, <&world_quotes_right_corner1_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_corner1_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_right_corner1_upper_macro, /* ﹂ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6013,7 +7476,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_corner1_upper_macro>, <&world_quotes_right_corner1_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_corner1_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_right_corner1: world_quotes_right_corner1 {
         compatible = "zmk,behavior-mod-morph";
@@ -6034,7 +7503,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_corner2_lower_macro>, <&world_quotes_right_corner2_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_corner2_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_quotes_right_corner2_upper_macro, /* ﹄ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6049,7 +7524,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_corner2_upper_macro>, <&world_quotes_right_corner2_upper_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_corner2_upper
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_quotes_right_corner2: world_quotes_right_corner2 {
         compatible = "zmk,behavior-mod-morph";
@@ -6070,7 +7551,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_quotes_right_grave_macro>, <&world_quotes_right_grave_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_quotes_right_grave
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_dollar_lower_macro, /* $ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6085,7 +7572,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_dollar_lower_macro>, <&world_currency_dollar_lower_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_dollar_lower
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_currency_dollar: world_currency_dollar {
         compatible = "zmk,behavior-mod-morph";
@@ -6106,23 +7599,32 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_yen_macro>, <&world_currency_yen_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_yen
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_euro_macro, /* € */
       #if UNICODE_TARGET_OS == 'L'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_currency_euro
         COMPOSE_SEQ_LINUX(&kp E &kp EQUAL)
         #else
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp A &kp C)
         #endif
       #elif UNICODE_TARGET_OS == 'M'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_currency_euro
         COMPOSE_SEQ_MACOS(&kp LA(LS(N2)))
         #else
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp A &kp C)
         #endif
       #elif UNICODE_TARGET_OS == 'W'
         #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_currency_euro
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8)
         #else
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp A &kp C)
@@ -6133,7 +7635,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_euro_macro>, <&world_currency_euro_macro>;
-        mods = <(~(COMPOSE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_euro
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_won_macro, /* ₩ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6148,7 +7656,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_won_macro>, <&world_currency_won_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_won
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(world_currency_pound_macro, /* £ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6163,7 +7677,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&world_currency_pound_macro>, <&world_currency_pound_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_currency_pound
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     world_currency_generic: world_currency_generic {
         compatible = "zmk,behavior-mod-morph";
@@ -6300,6 +7820,18 @@ macros {
         #binding-cells = <0>;
         bindings = <&world_u_circumflex>, <&world_u_grave>;
         mods = <(MOD_RSFT)>;
+    };
+    world_consonants_base: world_consonants_base {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_cedilla>, <&world_consonants_LCTL>;
+        mods = <(MOD_LCTL|MOD_RCTL)>;
+    };
+    world_consonants_LCTL: world_consonants_LCTL {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_consonants_ntilde>, <&world_consonants_eszett>;
+        mods = <(MOD_RCTL)>;
     };
     world_quotes_left_base: world_quotes_left_base {
         compatible = "zmk,behavior-mod-morph";
@@ -6453,7 +7985,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_zwj_macro>, <&emoji_zwj_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_zwj
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_male_sign_macro, /* ♂️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6468,7 +8006,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_male_sign_macro>, <&emoji_male_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_male_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_female_sign_macro, /* ♀️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6483,7 +8027,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_female_sign_macro>, <&emoji_female_sign_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_female_sign
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_right_arrow_macro, /* ➡️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6498,7 +8048,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_right_arrow_macro>, <&emoji_right_arrow_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_right_arrow
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_left_arrow_macro, /* ⬅️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6513,7 +8069,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_left_arrow_macro>, <&emoji_left_arrow_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_left_arrow
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_rainbow_macro, /* 🌈 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6528,7 +8090,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_rainbow_macro>, <&emoji_rainbow_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_rainbow
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_cloudy_macro, /* ️☁️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6543,7 +8111,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_cloudy_macro>, <&emoji_cloudy_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_cloudy
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_mostly_cloudy_macro, /* 🌥 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6558,7 +8132,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_mostly_cloudy_macro>, <&emoji_mostly_cloudy_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_mostly_cloudy
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_partly_cloudy_macro, /* ⛅ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6573,7 +8153,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_partly_cloudy_macro>, <&emoji_partly_cloudy_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_partly_cloudy
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_mostly_sunny_macro, /* ️🌤️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6588,7 +8174,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_mostly_sunny_macro>, <&emoji_mostly_sunny_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_mostly_sunny
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_sunny_macro, /* ☀️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6603,7 +8195,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_sunny_macro>, <&emoji_sunny_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_sunny
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_sunrise_macro, /* 🌅 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6618,7 +8216,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_sunrise_macro>, <&emoji_sunrise_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_sunrise
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_sunrise_mountains_macro, /* 🌄 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6633,7 +8237,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_sunrise_mountains_macro>, <&emoji_sunrise_mountains_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_sunrise_mountains
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_cityscape_macro, /* ️🏙️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -6648,7 +8258,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_cityscape_macro>, <&emoji_cityscape_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_cityscape
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_cityscape_dusk_macro, /* ️🌇 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6663,7 +8279,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_cityscape_dusk_macro>, <&emoji_cityscape_dusk_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_cityscape_dusk
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_cityscape_night_macro, /* 🌃 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6678,7 +8300,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_cityscape_night_macro>, <&emoji_cityscape_night_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_cityscape_night
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_light_skin_tone_macro, /* 🏻 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6693,7 +8321,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_light_skin_tone_macro>, <&emoji_light_skin_tone_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_light_skin_tone
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_medium_light_skin_tone_macro, /* 🏼 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6708,7 +8342,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_medium_light_skin_tone_macro>, <&emoji_medium_light_skin_tone_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_medium_light_skin_tone
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_medium_skin_tone_macro, /* 🏽 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6723,7 +8363,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_medium_skin_tone_macro>, <&emoji_medium_skin_tone_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_medium_skin_tone
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_medium_dark_skin_tone_macro, /* 🏾 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6738,7 +8384,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_medium_dark_skin_tone_macro>, <&emoji_medium_dark_skin_tone_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_medium_dark_skin_tone
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_dark_skin_tone_macro, /* 🏿 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6753,7 +8405,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_dark_skin_tone_macro>, <&emoji_dark_skin_tone_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_dark_skin_tone
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_baby_bottle_macro, /* 🍼 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6768,7 +8426,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_baby_bottle_macro>, <&emoji_baby_bottle_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_baby_bottle
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_baby_macro, /* 👶 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6783,7 +8447,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_baby_macro>, <&emoji_baby_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_baby
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_boy_macro, /* 👦 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6798,7 +8468,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_boy_macro>, <&emoji_boy_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_boy
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_girl_macro, /* 👧 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6813,7 +8489,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_girl_macro>, <&emoji_girl_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_girl
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_man_macro, /* 👨 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6828,7 +8510,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_man_macro>, <&emoji_man_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_man
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_woman_macro, /* 👩 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6843,7 +8531,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_woman_macro>, <&emoji_woman_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_woman
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_old_man_macro, /* 👴 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6858,7 +8552,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_old_man_macro>, <&emoji_old_man_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_old_man
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_old_woman_macro, /* 👵 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6873,7 +8573,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_old_woman_macro>, <&emoji_old_woman_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_old_woman
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_white_hair_macro, /* 🦳 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6888,7 +8594,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_white_hair_macro>, <&emoji_white_hair_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_white_hair
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_curly_hair_macro, /* 🦱 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6903,7 +8615,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_curly_hair_macro>, <&emoji_curly_hair_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_curly_hair
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_red_hair_macro, /* 🦰 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6918,7 +8636,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_red_hair_macro>, <&emoji_red_hair_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_red_hair
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_bald_macro, /* 🦲 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6933,7 +8657,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_bald_macro>, <&emoji_bald_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_bald
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_new_moon_macro, /* 🌑 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6948,7 +8678,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_new_moon_macro>, <&emoji_new_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_new_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_waxing_crescent_moon_macro, /* 🌒 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6963,7 +8699,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_waxing_crescent_moon_macro>, <&emoji_waxing_crescent_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_waxing_crescent_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_first_quarter_moon_macro, /* 🌓 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6978,7 +8720,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_first_quarter_moon_macro>, <&emoji_first_quarter_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_first_quarter_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_waxing_gibbous_moon_macro, /* 🌔 */
       #if UNICODE_TARGET_OS == 'L'
@@ -6993,7 +8741,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_waxing_gibbous_moon_macro>, <&emoji_waxing_gibbous_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_waxing_gibbous_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_full_moon_macro, /* 🌕 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7008,7 +8762,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_full_moon_macro>, <&emoji_full_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_full_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_waning_gibbous_moon_macro, /* 🌖 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7023,7 +8783,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_waning_gibbous_moon_macro>, <&emoji_waning_gibbous_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_waning_gibbous_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_last_quarter_moon_macro, /* 🌗 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7038,7 +8804,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_last_quarter_moon_macro>, <&emoji_last_quarter_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_last_quarter_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_waning_crescent_moon_macro, /* 🌘 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7053,7 +8825,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_waning_crescent_moon_macro>, <&emoji_waning_crescent_moon_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_waning_crescent_moon
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_tada_macro, /* 🎉 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7068,7 +8846,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_tada_macro>, <&emoji_tada_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_tada
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_heart_macro, /* ️❤️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7083,7 +8867,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_heart_macro>, <&emoji_heart_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_heart
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_fire_macro, /* 🔥 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7098,7 +8888,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_fire_macro>, <&emoji_fire_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_fire
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_muscle_macro, /* 💪 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7113,7 +8909,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_muscle_macro>, <&emoji_muscle_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_muscle
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_climbing_macro, /* 🧗 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7128,7 +8930,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_climbing_macro>, <&emoji_person_climbing_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_climbing
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_lab_coat_macro, /* 🥼 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7143,7 +8951,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_lab_coat_macro>, <&emoji_lab_coat_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_lab_coat
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_rocket_macro, /* 🚀 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7158,7 +8972,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_rocket_macro>, <&emoji_rocket_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_rocket
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_joy_macro, /* 😂 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7173,7 +8993,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_joy_macro>, <&emoji_joy_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_joy
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_rofl_macro, /* 🤣 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7188,7 +9014,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_rofl_macro>, <&emoji_rofl_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_rofl
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_star_struck_macro, /* 🤩 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7203,7 +9035,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_star_struck_macro>, <&emoji_star_struck_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_star_struck
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_love_struck_macro, /* 😍 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7218,7 +9056,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_love_struck_macro>, <&emoji_love_struck_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_love_struck
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_saluting_face_macro, /* 🫡 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7233,7 +9077,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_saluting_face_macro>, <&emoji_saluting_face_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_saluting_face
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_shocked_face_macro, /* 🤯 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7248,7 +9098,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_shocked_face_macro>, <&emoji_shocked_face_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_shocked_face
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_cold_sweat_macro, /* 😰 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7263,7 +9119,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_cold_sweat_macro>, <&emoji_cold_sweat_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_cold_sweat
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_monocle_face_macro, /* 🧐 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7278,7 +9140,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_monocle_face_macro>, <&emoji_monocle_face_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_monocle_face
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_snap_fingers_macro, /* 🫰 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7293,7 +9161,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_snap_fingers_macro>, <&emoji_snap_fingers_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_snap_fingers
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_ok_hand_macro, /* 👌 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7308,7 +9182,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_ok_hand_macro>, <&emoji_ok_hand_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_ok_hand
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_pray_macro, /* 🙏 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7323,7 +9203,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_pray_macro>, <&emoji_pray_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_pray
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_sweat_smile_macro, /* 😅 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7338,7 +9224,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_sweat_smile_macro>, <&emoji_sweat_smile_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_sweat_smile
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_disappointed_macro, /* 😞 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7353,7 +9245,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_disappointed_macro>, <&emoji_disappointed_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_disappointed
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_thinking_macro, /* 🤔 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7368,7 +9266,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_thinking_macro>, <&emoji_thinking_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_thinking
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_tipping_hand_macro, /* 💁 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7383,7 +9287,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_tipping_hand_macro>, <&emoji_person_tipping_hand_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_tipping_hand
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_gesturing_ok_macro, /* 🙆 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7398,7 +9308,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_gesturing_ok_macro>, <&emoji_person_gesturing_ok_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_gesturing_ok
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_bowing_macro, /* 🙇 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7413,7 +9329,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_bowing_macro>, <&emoji_person_bowing_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_bowing
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_raising_hand_macro, /* 🙋 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7428,7 +9350,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_raising_hand_macro>, <&emoji_person_raising_hand_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_raising_hand
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_gesturing_no_macro, /* 🙅 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7443,7 +9371,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_gesturing_no_macro>, <&emoji_person_gesturing_no_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_gesturing_no
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_person_shrugging_macro, /* 🤷 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7458,7 +9392,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_person_shrugging_macro>, <&emoji_person_shrugging_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_shrugging
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_checkoff_macro, /* ✅ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7473,7 +9413,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_checkoff_macro>, <&emoji_checkoff_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_checkoff
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_100_macro, /* 💯 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7488,7 +9434,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_100_macro>, <&emoji_100_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_100
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_warning_macro, /* ⚠️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7503,7 +9455,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_warning_macro>, <&emoji_warning_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_warning
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_x_macro, /* ❌ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7518,7 +9476,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_x_macro>, <&emoji_x_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_x
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_question_macro, /* ❓ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7533,7 +9497,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_question_macro>, <&emoji_question_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_question
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_astronaut_macro, /* 🧑‍🚀 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7548,7 +9518,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_astronaut_macro>, <&emoji_astronaut_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_astronaut
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_nerd_macro, /* 🤓 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7563,7 +9539,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_nerd_macro>, <&emoji_nerd_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_nerd
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_sparkles_macro, /* ✨ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7578,7 +9560,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_sparkles_macro>, <&emoji_sparkles_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_sparkles
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_raised_hands_macro, /* 🙌 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7593,7 +9581,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_raised_hands_macro>, <&emoji_raised_hands_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_raised_hands
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_point_up_macro, /* ☝️ */
       #if UNICODE_TARGET_OS == 'L'
@@ -7608,7 +9602,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_point_up_macro>, <&emoji_point_up_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_point_up
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_thumbs_up_macro, /* 👍 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7623,7 +9623,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_thumbs_up_macro>, <&emoji_thumbs_up_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_thumbs_up
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
 
     //
@@ -7666,7 +9672,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_moon_stars_magic_macro>, <&emoji_moon_stars_magic_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_moon_stars_magic
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_moon_stars: emoji_moon_stars {
         compatible = "zmk,behavior-mod-morph";
@@ -7687,7 +9699,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_smile_up_macro>, <&emoji_face_smile_up_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_smile_up
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_face_smile_down_macro, /* 🙃 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7702,7 +9720,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_smile_down_macro>, <&emoji_face_smile_down_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_smile_down
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_face_smile: emoji_face_smile {
         compatible = "zmk,behavior-mod-morph";
@@ -7735,7 +9759,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_joke_wink_macro>, <&emoji_face_joke_wink_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_joke_wink
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_face_joke_tounge_macro, /* 😜 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7750,7 +9780,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_joke_tounge_macro>, <&emoji_face_joke_tounge_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_joke_tounge
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_face_joke: emoji_face_joke {
         compatible = "zmk,behavior-mod-morph";
@@ -7771,7 +9807,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_fear_scared_macro>, <&emoji_face_fear_scared_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_fear_scared
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     UNICODE(emoji_face_fear_scream_macro, /* 😱 */
       #if UNICODE_TARGET_OS == 'L'
@@ -7786,7 +9828,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_fear_scream_macro>, <&emoji_face_fear_scream_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_fear_scream
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_face_fear: emoji_face_fear {
         compatible = "zmk,behavior-mod-morph";
@@ -7807,7 +9855,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_face_surprise_dizzy_macro>, <&emoji_face_surprise_dizzy_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_surprise_dizzy
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_face_surprise: emoji_face_surprise {
         compatible = "zmk,behavior-mod-morph";
@@ -7828,7 +9882,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_gesture_attention_wave_macro>, <&emoji_gesture_attention_wave_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_attention_wave
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_gesture_attention: emoji_gesture_attention {
         compatible = "zmk,behavior-mod-morph";
@@ -7849,7 +9909,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_gesture_approval_cool_macro>, <&emoji_gesture_approval_cool_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_approval_cool
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_gesture_approval: emoji_gesture_approval {
         compatible = "zmk,behavior-mod-morph";
@@ -7882,7 +9948,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_gesture_despair_cry_macro>, <&emoji_gesture_despair_cry_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_despair_cry
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_gesture_despair: emoji_gesture_despair {
         compatible = "zmk,behavior-mod-morph";
@@ -7909,7 +9981,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_gesture_point_you_macro>, <&emoji_gesture_point_you_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_point_you
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_gesture_point: emoji_gesture_point {
         compatible = "zmk,behavior-mod-morph";
@@ -7930,7 +10008,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_gesture_thumbs_down_macro>, <&emoji_gesture_thumbs_down_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_thumbs_down
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_gesture_thumbs: emoji_gesture_thumbs {
         compatible = "zmk,behavior-mod-morph";
@@ -7951,7 +10035,13 @@ macros {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&emoji_gesture_hands_clap_macro>, <&emoji_gesture_hands_clap_macro>;
-        mods = <(~(UNICODE_MORPH_MODS))>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_hands_clap
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
     };
     emoji_gesture_hands: emoji_gesture_hands {
         compatible = "zmk,behavior-mod-morph";

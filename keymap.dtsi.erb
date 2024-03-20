@@ -1422,7 +1422,6 @@ macros {
       end
 
       def resolve_localized_keystrokes(localized, os)
-        STDOUT.flush
         keycodes =
           case os
           when :linux
@@ -1440,7 +1439,8 @@ macros {
       end
 
       emit_unicode_macro = lambda do |id, character|
-        macro_id = id + "_macro"
+        macro_id = "#{id}_macro"
+        has_compose = "WORLD_USE_COMPOSE_FOR_#{id}"
     %>
     UNICODE(<%= macro_id %>, /* <%= character %> */
     <%
@@ -1459,11 +1459,13 @@ macros {
     %>
       #<%= "el" if os_index > 0 %>if UNICODE_TARGET_OS == <%= os_char %>
     <%
-          if localizations
+          localization_for_os = localizations[os.to_s] if localizations
+
+          if localization_for_os
     %>
         #ifdef WORLD_USE_COMPOSE
+        #define <%= has_compose %>
         <%=
-          localization_for_os = localizations.fetch(os.to_s)
           localized_keystrokes = resolve_localized_keystrokes(localization_for_os, os)
           localized_keystrokes.join(", ")
         %>
@@ -1473,7 +1475,7 @@ macros {
     %>
         <%= sequence.join(", ") %>
     <%
-          if localizations
+          if localization_for_os
     %>
         #endif
     <%
@@ -1485,8 +1487,15 @@ macros {
     %>
     )
     <%
-        mods = localizations ? "COMPOSE_MORPH_MODS" : "UNICODE_MORPH_MODS"
-        mask = "(~(#{mods}))" # the negation suppresses any unrelated mods
+        mask = [
+          "(~(", # the negation suppresses any unrelated mods
+            "#ifdef #{has_compose}",
+              "COMPOSE_MORPH_MODS",
+            "#else",
+              "UNICODE_MORPH_MODS",
+            "#endif",
+          "))"
+        ].join("\n")
         emit_zmk_mod_morph.(id, macro_id, macro_id, mask)
       end
 
