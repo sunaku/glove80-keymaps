@@ -43,6 +43,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Key auto-repeat](#key-auto-repeat)
     * [Alpha layouts](#alpha-layouts)
     * [Unicode and Emoji](#unicode-and-emoji)
+        * [OS-native compose](#os-native-compose)
 * [Installing](#installing)
     * [Flashing](#flashing)
 * [Upgrading](#upgrading)
@@ -241,7 +242,22 @@ may need to enable support for Unicode hexadecimal character input in your OS:
 - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 - (Windows) https://github.com/samhocevar/wincompose
 
-Specifically, Windows users need to be running the WinCompose tool linked above.
+See also: the `UNICODE_*_DELAY` settings and the `UNICODE_SEQ_*` functions.
+
+#### OS-native compose
+
+If you prefer using your operating system's built-in shortcuts (rather than
+Unicode) to type international characters in the World layer, activate this:
+
+```cpp
+//
+// WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
+// for characters in the "localizing" section of the `world.yaml` file.
+//
+#define WORLD_USE_COMPOSE
+```
+
+See also: the `COMPOSE_KEY_LINUX` setting and the `COMPOSE_SEQ_*` functions.
 
 ## Installing
 
