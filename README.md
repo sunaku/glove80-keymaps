@@ -81,7 +81,7 @@ First, let's configure this keymap to better suit your operating system by
 adding one of the following lines (just copy+paste whichever is appropriate)
 atop the "Custom Defined Behaviors" text box in your clone of this keymap:
 
-```dts
+```cpp
 #define OPERATING_SYSTEM 'L' // Linux
 #define OPERATING_SYSTEM 'M' // macOS
 #define OPERATING_SYSTEM 'W' // Windows
@@ -110,7 +110,7 @@ macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
 In order to help ease your transition to using [home row mods], this keymap
 provides a difficulty level setting (like in a video game) that you can set:
 
-```dts
+```cpp
 //
 // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
 // It's meant to help newcomers gradually work their way up to mastery.
@@ -252,7 +252,7 @@ also available in the `*.dtsi` files provided in this Git repository.
 You can override the various `#define` settings that govern this keymap by
 adding them above the snippet in the "Custom Defined Behaviors" text box:
 
-```dts
+```cpp
 // add your overrides here, up at the very top:
 #define OPERATING_SYSTEM 'W' // windows
 #define EMOJI_HAIR_STYLE_PRESET 'C' // curly_hair
@@ -272,7 +272,7 @@ The `*_FINGER_MOD` settings specify which modifiers are used by home row mod
 keys. Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order is the default -- unless
 you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
 
-```dts
+```cpp
 #define PINKY_FINGER_MOD LGUI
 #define RING1_FINGER_MOD LALT
 #define RING2_FINGER_MOD RALT
@@ -283,14 +283,14 @@ you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
 The above settings mirror finger-mod assignments across both hands, but you can
 also make them different through the following additional settings if you want:
 
-```dts
+```cpp
 #define  LEFT_PINKY_MOD RALT
 #define RIGHT_PINKY_MOD LCTL
 ```
 
 For completeness, here are all finger-mod settings available for customization:
 
-```dts
+```cpp
 #define  LEFT_PINKY_MOD ...
 #define RIGHT_PINKY_MOD ...
 #define  LEFT_RING1_MOD ...
