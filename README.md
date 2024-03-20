@@ -316,7 +316,10 @@ adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
 2. Install dependencies OR skip this step if you have Docker on your system:
 
-       apt install rake graphviz
+   ```sh
+   add-apt-repository universe && apt update # may be needed if using Ubuntu 
+   apt install rake graphviz
+   ```
 
 3. In your copy of this repository, run `rake` OR `./rake` if using Docker.
 
