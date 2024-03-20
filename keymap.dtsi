@@ -1043,7 +1043,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 240 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
 
     //
@@ -1052,7 +1052,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 250
+    #define HOMEY_STREAK_DECAY 160
     #endif
 
     //
@@ -1120,7 +1120,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
     #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME 170
+    #define INDEX_HOLDING_TIME 180
     #endif
 
     //
@@ -1129,7 +1129,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY 150
+    #define INDEX_STREAK_DECAY 100
     #endif
 
     //
