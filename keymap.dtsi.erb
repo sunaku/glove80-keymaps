@@ -666,21 +666,13 @@ behaviors {
         HOME_ROW_MOD_SETTINGS.each do |suffix|
           finger_setting = format_constant(finger, suffix)
           finger_chord_setting = format_constant(finger, :chord, suffix)
-    %>
-    #ifndef <%= finger_setting %>
-    #define <%= finger_setting %> HOMEY_<%= suffix %>
-    #endif
-    #ifndef <%= finger_chord_setting %>
-    #define <%= finger_chord_setting %> CHORD_<%= suffix %>
-    #endif
-    <%
+
+          emit_setting_ifndef.(finger_setting, "HOMEY_#{suffix}")
+          emit_setting_ifndef.(finger_chord_setting, "CHORD_#{suffix}")
+
           HANDS.each do |hand|
             hand_finger_chord_setting = format_constant(hand, finger, :chord, suffix)
-    %>
-    #ifndef <%= hand_finger_chord_setting %>
-    #define <%= hand_finger_chord_setting %> <%= finger_chord_setting %>
-    #endif
-    <%
+            emit_setting_ifndef.(hand_finger_chord_setting, finger_chord_setting)
           end
         end
       end
@@ -703,11 +695,7 @@ behaviors {
             end
 
           inherit = format_constant(*inherit_components)
-    %>
-    #ifndef <%= setting %>
-    #define <%= setting %> <%= inherit %>
-    #endif
-    <%
+          emit_setting_ifndef.(setting, inherit)
         end
 
         for target_variant in [nil, :_bilateral] do
