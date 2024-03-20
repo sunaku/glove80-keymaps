@@ -38,6 +38,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Home row mods](#home-row-mods)
         * [Difficulty level](#difficulty-level)
         * [One-shot shifts](#one-shot-shifts)
+        * [Bilateral combinations](#bilateral-combinations)
     * [Layer access keys](#layer-access-keys)
     * [Key auto-repeat](#key-auto-repeat)
     * [Alpha layouts](#alpha-layouts)
@@ -139,6 +140,39 @@ The Lower keys on the base layer provide one-shot sticky shift functionality,
 whereby tapping them temporarily activates a sticky Shift that applies itself
 to the next key you tap.  This can be useful for single letter capitalization,
 such as for the frequent "I" in English or when typing camel/PascalCase names.
+
+#### Bilateral combinations
+
+In order to encourage proper touch-typing technique for shortcuts (where one
+hand holds modifiers while the other taps keys to be modified) and for a more
+natural typing experience that forgives [same-hand chords] and lingering holds,
+this keymap provides bilateral combinations enforcement as an optional feature:
+
+```cpp
+//
+// ENFORCE_BILATERAL cancels out single-handed home row mods activation by
+// releasing any currently pressed mods and replacing them with plain taps.
+//
+// NOTE: You may still encounter "flashing mods" where an operating system
+// action is triggered by the release of mods, such as LGUI which launches
+// the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
+//
+#define ENFORCE_BILATERAL
+```
+
+Why not just use one-handed shortcuts?  I visualize it this way: I'm trying to
+reach a cookie jar that is high up on a kitchen shelf, so I place one hand on
+the kitchen counter (the modifier-holding hand) to stabilize myself while I
+reach up for the jar with my other hand (the modified-key tapping hand). 🙋✨
+In contrast, one-handed shortcuts can be more strenuous as you have to contort
+your hand to hold a modifier _and_ tap modified keys; plus the act of holding a
+modifier limits the hand's range of motion when reaching for keys to be tapped.
+
+Nevertheless, if you still prefer using one-handed shortcuts, you can disable
+bilateral combinations enforcement by removing the `#define ENFORCE_BILATERAL`
+line and, optionally, deleting the bilateral combinations layers in the keymap.
+
+[same-hand chords]: https://sunaku.github.io/home-row-mods.html#same-hand-chords
 
 ### Layer access keys
 
