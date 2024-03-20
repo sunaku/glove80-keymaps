@@ -362,6 +362,8 @@ adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
 ### Compiling from source
 
+>**NOTE:** If you're on Windows, try using [Ubuntu in WSL] for the following.
+
 1. Clone or download a copy of this Git repository (if you haven't already).
 
 2. Install dependencies OR skip this step if you have Docker on your system:
@@ -372,6 +374,8 @@ adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
    ```
 
 3. In your copy of this repository, run `rake` OR `./rake` if using Docker.
+
+[Ubuntu in WSL]: https://ubuntu.com/desktop/wsl
 
 #### Unicode/Emoji characters
 
