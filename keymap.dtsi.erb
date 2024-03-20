@@ -25,15 +25,21 @@
 // #define DIFFICULTY_LEVEL 5 // expert (100ms)
 //
 #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-#define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
+#define DIFFICULTY_LEVEL_HOLDING_TIME ((6 - DIFFICULTY_LEVEL) * 100)
+#define DIFFICULTY_LEVEL_STREAK_DECAY ((6 - DIFFICULTY_LEVEL) * 50) + 100
 <%
-  %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
-    setting = "#{category}_HOLDING_TIME"
+  emit_setting_ifndef = lambda do |name, value|
 %>
-#ifndef <%= setting %>
-#define <%= setting %> DIFFICULTY_THRESHOLD
+#ifndef <%= name %>
+#define <%= name %> <%= value %>
 #endif
 <%
+  end
+
+  %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
+    %w[ HOLDING_TIME STREAK_DECAY ].each do |setting|
+      emit_setting_ifndef.("#{category}_#{setting}", "DIFFICULTY_LEVEL_#{setting}")
+    end
   end
 %>
 #endif
