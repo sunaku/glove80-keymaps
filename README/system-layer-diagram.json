@@ -83,22 +83,27 @@
     },
     "\"\n'",
     {
-      "x": 5
-    },
-    ":\n;",
-    {
+      "x": 5,
+      "c": "#dcedc8",
+      "g": false,
       "a": 7
     },
-    "L",
-    "D",
-    "AltGr\n\n\n\nAltGr",
-    "V",
-    "Z"
+    "Sat ➕",
+    {
+      "c": "#cccccc"
+    },
+    "Shift\n\n\n\nShift",
+    "Ctrl\n\n\n\nCtrl",
+    "Alt\n\n\n\nAlt",
+    "Win\n\n\n\nWin",
+    {
+      "c": "#dcedc8"
+    },
+    "Sat ➖"
   ],
   [
     {
-      "c": "#ffecb3",
-      "g": false
+      "c": "#ffecb3"
     },
     "RGB toggle",
     "Effect ➖",
@@ -113,30 +118,32 @@
     },
     "Effect ➕",
     {
-      "c": "#cccccc",
-      "g": true,
-      "a": 5
+      "c": "#e1bee7"
     },
-    "<\n,",
+    "<small>Context</small> menu",
     {
-      "x": 5
+      "x": 5,
+      "c": "#ffccbc"
     },
-    ">\n.",
+    "Hue ➕",
     {
-      "g": false,
-      "a": 7,
+      "c": "#e1bee7",
       "n": true
     },
-    "Shift\n\n\n\nShift",
-    "Ctrl\n\n\n\nCtrl",
-    "Alt\n\n\n\nAlt",
-    "Win\n\n\n\nWin",
+    "<small>Context</small> menu",
+    "Lock screen",
+    "Sleep",
+    "Power",
     {
-      "g": true
+      "c": "#ffccbc"
     },
-    "Q"
+    "Hue ➖"
   ],
   [
+    {
+      "c": "#cccccc",
+      "g": true
+    },
     "Shift",
     {
       "c": "#FFCDD2",
@@ -159,21 +166,32 @@
     },
     "_\n-",
     {
-      "x": 5
-    },
-    "?\n/",
-    {
+      "x": 5,
+      "c": "#FFCDD2",
+      "g": false,
       "a": 7
     },
-    "R",
-    "M",
-    "F",
-    "P",
-    "Shift"
+    "Speed ➕",
+    {
+      "c": "#ffecb3"
+    },
+    "RGB toggle",
+    {
+      "c": "#c5cae9"
+    },
+    "Print screen",
+    "Scroll lock",
+    "Pause break",
+    {
+      "c": "#FFCDD2"
+    },
+    "Speed ➖"
   ],
   [
     {
-      "t": "#EEEEEE"
+      "c": "#cccccc",
+      "t": "#EEEEEE",
+      "g": true
     },
     "Magic",
     {
@@ -208,37 +226,39 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
     {
-      "c": "#d1c4e9",
+      "c": "#ffecb3",
+      "p": "CHICKLET",
+      "f": 3
+    },
+    "Effect ➕",
+    {
+      "c": "#bbdefb",
+      "f": 3
+    },
+    "Bright ➕",
+    {
+      "f": 3
+    },
+    "Bright ➖",
+    {
+      "c": "#ffecb3",
+      "f": 3
+    },
+    "Effect ➖",
+    {
+      "c": "#cccccc",
       "g": true,
       "a": 5,
       "f": 3
     },
-    "<\n(",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "{\n[",
-    {
-      "f": 3
-    },
-    "}\n]",
-    {
-      "f": 3
-    },
-    ">\n)",
-    {
-      "a": 7,
-      "f": 3
-    },
-    "F6"
+    "?\n/"
   ],
   [
     {
       "x": 5,
-      "c": "#ffccbc",
+      "c": "#c5cae9",
       "g": false,
+      "a": 7,
       "f": 3,
       "n": true
     },
@@ -259,17 +279,16 @@
     },
     "Unlock layer",
     {
-      "c": "#D1C4E9",
+      "c": "#cccccc",
       "t": "#000000",
       "g": true,
-      "p": "SPACE",
       "f": 3
     },
     "Tab\n\n\n\nMouse",
     {
-      "f": 3,
-      "n": true
+      "g": false,
+      "f": 3
     },
-    "Space\n\n\n\nSymbol"
+    "Linux Magic SysRq\n\n\n\nSymbol"
   ]
 ]

@@ -4,14 +4,13 @@
   },
   [
     {
-      "t": "#EEEEEE",
       "g": true,
       "p": "CHICKLET",
-      "a": 7
+      "a": 5
     },
-    "Boot loader",
+    "|\n\\",
     {
-      "t": "#000000"
+      "a": 7
     },
     "F2",
     "F3",
@@ -32,16 +31,17 @@
   ],
   [
     {
-      "a": 5
+      "c": "#ffccbc",
+      "g": false
     },
-    "|\n\\",
-    "!\n1",
-    "@\n2",
-    "#\n3",
-    "$\n4",
-    "%\n5",
+    "Escape",
+    "Enter",
+    "Space",
+    "Tab",
+    "Delete",
+    "Insert",
     {
-      "g": false,
+      "c": "#cccccc",
       "a": 4,
       "f": 4,
       "w": 5,
@@ -69,13 +69,22 @@
     },
     "~\n`",
     {
+      "g": false,
       "a": 7
     },
-    "B",
-    "AltGr\n\n\n\nAltGr",
-    "O",
-    "U",
+    "Shift <small>(sticky)</small>",
     {
+      "c": "#e1bee7"
+    },
+    "Redo",
+    "Undo",
+    {
+      "c": "#ffccbc"
+    },
+    "Back space",
+    {
+      "c": "#cccccc",
+      "g": true,
       "a": 5
     },
     "\"\n'",
@@ -171,18 +180,24 @@
     },
     "Shift",
     {
+      "c": "#bbdefb",
+      "t": "#00000",
+      "g": false,
       "f": 3
     },
-    "G",
+    "Select all",
+    {
+      "t": "#000000",
+      "f": 3
+    },
+    "Select line\n\n\n\nMouse",
     {
       "f": 3
     },
-    "X",
+    "Select word\n\n\n\nSymbol",
     {
-      "f": 3
-    },
-    "J",
-    {
+      "c": "#cccccc",
+      "g": true,
       "f": 3
     },
     "K",
@@ -230,22 +245,25 @@
     },
     "Home",
     {
+      "c": "#bbdefb",
+      "g": false,
       "f": 3
     },
-    "Page up",
+    "Extend line",
     {
       "f": 3
     },
-    "Page down",
+    "Extend word",
     {
-      "c": "#d1c4e9",
-      "p": "SPACE",
+      "c": "#cccccc",
+      "g": true,
       "f": 3
     },
     "End",
     {
       "c": "#D1C4E9",
       "g": false,
+      "p": "SPACE",
       "fa": [
         9
       ],
@@ -299,9 +317,8 @@
   [
     {
       "x": 5,
-      "c": "#D1C4E9",
+      "c": "#cccccc",
       "g": true,
-      "p": "SPACE",
       "f": 3,
       "n": true
     },
@@ -314,7 +331,6 @@
       "c": "#757575",
       "t": "#EEEEEE",
       "g": false,
-      "p": "CHICKLET",
       "f": 3
     },
     "Unlock layer",

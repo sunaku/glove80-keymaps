@@ -197,7 +197,7 @@
       "f": 3
     },
     "Delete",
-    "Shift +Tab",
+    "Shift-Tab",
     {
       "c": "#cccccc",
       "g": true
@@ -252,15 +252,12 @@
     "&lArr;",
     "&rArr;",
     {
-      "c": "#D1C4E9",
-      "p": "SPACE",
       "f": 3
     },
     "Enter\n\n\n\nSystem",
     {
       "c": "#BDBDBD",
       "g": false,
-      "p": "CHICKLET",
       "f": 7
     },
     "(",
@@ -305,14 +302,15 @@
     },
     "Unlock layer",
     {
-      "c": "#D1C4E9",
+      "c": "#cccccc",
       "t": "#000000",
-      "g": true,
-      "p": "SPACE"
+      "g": true
     },
     "Tab\n\n\n\nMouse",
     {
+      "c": "#D1C4E9",
       "g": false,
+      "p": "SPACE",
       "fa": [
         9
       ],

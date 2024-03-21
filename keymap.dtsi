@@ -7,7 +7,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v35 -- "Glorious Engrammer"
+// Sunaku's Keymap v36 -- "Glorious Engrammer"
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
@@ -246,9 +246,9 @@
 #define KEY_LH_C2R5 K
 #define KEY_LH_C1R5 MINUS
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 FSLH
@@ -328,9 +328,9 @@
 #define KEY_LH_C2R5 K
 #define KEY_LH_C1R5 MINUS
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 QMARK
@@ -410,9 +410,9 @@
 #define KEY_LH_C2R5 K
 #define KEY_LH_C1R5 X
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 B
@@ -492,9 +492,9 @@
 #define KEY_LH_C2R5 D
 #define KEY_LH_C1R5 V
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 K
@@ -574,9 +574,9 @@
 #define KEY_LH_C2R5 V
 #define KEY_LH_C1R5 B
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 K
@@ -656,9 +656,9 @@
 #define KEY_LH_C2R5 V
 #define KEY_LH_C1R5 B
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 N
@@ -738,9 +738,9 @@
 #define KEY_LH_C2R5 V
 #define KEY_LH_C1R5 B
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 P
@@ -820,9 +820,9 @@
 #define KEY_LH_C2R5 C
 #define KEY_LH_C1R5 V
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 K
@@ -902,9 +902,9 @@
 #define KEY_LH_C2R5 C
 #define KEY_LH_C1R5 FSLH
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 LEFT
+#define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
-#define KEY_RH_T3 UP
+#define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 G

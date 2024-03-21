@@ -4,36 +4,52 @@
   },
   [
     {
-      "g": true,
       "p": "CHICKLET",
       "a": 7
     },
-    "F1",
-    "F2",
-    "F3",
-    "F4",
-    "F5",
+    "Bright ➖",
+    "Bright ➕",
+    "Prev track",
+    "Next track",
+    "Play / pause",
     {
       "x": 7
     },
-    "F6",
-    "F7",
-    "F8",
+    "Mute\n\n\n\nSymbol",
+    "Vol ➖\n\n\n\nLight",
+    {
+      "n": true
+    },
+    "Vol ➕\n\n\n\nMouse",
+    {
+      "g": true
+    },
     "F9",
-    "F10"
+    {
+      "g": false
+    },
+    "Pause break"
   ],
   [
     {
-      "a": 5
+      "a": 5,
+      "f": 5
     },
     "+\n=",
+    {
+      "g": true,
+      "f": 3
+    },
     "!\n1",
     "@\n2",
     "#\n3",
     "$\n4",
-    "%\n5",
     {
       "g": false,
+      "a": 7
+    },
+    "Home",
+    {
       "a": 4,
       "f": 4,
       "w": 5,
@@ -42,250 +58,207 @@
     },
     "<center><h2>Lower Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
-      "g": true,
-      "a": 5,
-      "f": 3
-    },
-    "^\n6",
-    "&\n7",
-    "*\n8",
-    "(\n9",
-    ")\n0",
-    "|\n\\"
-  ],
-  [
-    "~\n`",
-    {
       "a": 7
     },
-    "B",
-    "Y\n\n\n\nAltGr",
-    "O",
-    "U",
+    "(",
+    {
+      "f": 3
+    },
+    "Num lock",
     {
       "a": 5
     },
-    "\"\n'",
-    {
-      "x": 5
-    },
-    ":\n;",
+    "Num pad\n=",
+    "Num pad\n/",
+    "Num pad\n*",
     {
       "a": 7
     },
-    "L",
-    "D",
-    "W\n\n\n\nAltGr",
-    "V",
-    "Z"
+    "Print screen"
   ],
   [
+    "Tab",
+    {
+      "g": true
+    },
+    "B",
+    "Y\n\n\n\nAltGr",
+    {
+      "g": false,
+      "f": 9
+    },
+    "&uarr;",
+    {
+      "g": true,
+      "f": 3
+    },
+    "U",
+    {
+      "g": false
+    },
+    "End",
+    {
+      "x": 5,
+      "f": 4
+    },
+    ")",
     {
       "a": 5,
-      "fa": [
-        1
-      ]
-    },
-    "Caps lock\nCaps word",
-    {
-      "a": 7,
       "f": 3
+    },
+    "Num pad\n7",
+    "Num pad\n8\n\n\nAltGr",
+    "Num pad\n9",
+    "Num pad\n-",
+    {
+      "a": 7
+    },
+    "Scroll lock"
+  ],
+  [
+    "Escape",
+    {
+      "g": true
     },
     "C\n\n\n\nWin",
     {
-      "f": 3
+      "g": false,
+      "f": 9
     },
-    "I\n\n\n\nAlt",
+    "&larr;",
+    "&darr;",
     {
-      "f": 3
-    },
-    "E\n\n\n\nCtrl",
-    {
-      "f": 3,
       "n": true
     },
-    "A\n\n\n\nShift",
-    {
-      "a": 5,
-      "f": 3
-    },
-    "<\n,",
-    {
-      "x": 5,
-      "f": 3
-    },
-    ">\n.",
-    {
-      "a": 7,
-      "f": 3,
-      "n": true
-    },
-    "H\n\n\n\nShift",
-    {
-      "f": 3
-    },
-    "T\n\n\n\nCtrl",
-    {
-      "f": 3
-    },
-    "S\n\n\n\nAlt",
-    {
-      "f": 3
-    },
-    "N\n\n\n\nWin",
-    {
-      "f": 3
-    },
-    "Q"
-  ],
-  [
-    {
-      "f": 3
-    },
-    "Shift",
-    {
-      "f": 3
-    },
-    "G",
-    {
-      "f": 3
-    },
-    "X",
-    {
-      "f": 3
-    },
-    "J",
-    {
-      "f": 3
-    },
-    "K",
-    {
-      "a": 5,
-      "f": 3
-    },
-    "_\n-",
-    {
-      "x": 5,
-      "f": 3
-    },
-    "?\n/",
-    {
-      "a": 7,
-      "f": 3
-    },
-    "R",
-    {
-      "f": 3
-    },
-    "M",
-    {
-      "f": 3
-    },
-    "F",
-    {
-      "f": 3
-    },
-    "P",
-    {
-      "f": 3
-    },
-    "Shift"
-  ],
-  [
-    {
-      "t": "#EEEEEE",
-      "f": 3
-    },
-    "Magic",
-    {
-      "t": "#000000",
-      "f": 3
-    },
-    "Home",
+    "&rarr;",
     {
       "f": 3
     },
     "Page up",
     {
+      "x": 5,
+      "f": 4
+    },
+    "%",
+    {
+      "a": 5,
+      "f": 3,
+      "n": true
+    },
+    "Num pad\n4\n\n\nShift",
+    "Num pad\n5\n\n\nCtrl",
+    "Num pad\n6\n\n\nAlt",
+    "Num pad\n+\n\n\nWin",
+    {
+      "c": "#FFCDD2",
+      "a": 7
+    },
+    "Num lock"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "a": 5,
+      "f": 5
+    },
+    "~\n`",
+    {
+      "a": 7,
       "f": 3
     },
-    "Page down",
+    "<small>Context</small> menu",
     {
-      "c": "#e1bee7",
-      "g": false,
+      "g": true
+    },
+    "X",
+    {
+      "g": false
+    },
+    "F11",
+    "F12",
+    "Page down\n\n\n\nAltGr",
+    {
+      "x": 5,
+      "a": 5,
+      "f": 4
+    },
+    "<\n,",
+    {
       "f": 3
+    },
+    "Num pad\n1",
+    "Num pad\n2",
+    "Num pad\n3",
+    "Num pad\nEnter",
+    {
+      "c": "#FFCCBC",
+      "a": 7
+    },
+    "Alt"
+  ],
+  [
+    {
+      "c": "#757575",
+      "t": "#EEEEEE"
+    },
+    "Magic",
+    {
+      "c": "#cccccc",
+      "t": "#000000"
+    },
+    "Caps lock",
+    "Insert",
+    "F11",
+    {
+      "c": "#D1C4E9"
     },
     "Emoji layer lock",
-    {
-      "f": 3
-    },
     "<small>Function</small> layer lock",
     {
-      "c": "#ffecb3",
-      "f": 3
-    },
-    "<small>Gaming</small> layer lock",
-    {
-      "c": "#dcedc8",
-      "f": 3
+      "c": "#dcedc8"
     },
     "Typing layer lock",
     {
-      "x": 1,
-      "f": 3
-    },
-    "Typing layer lock",
-    {
-      "c": "#ffecb3",
-      "f": 3
+      "c": "#ffecb3"
     },
     "<small>Gaming</small> layer lock",
     {
-      "c": "#e1bee7",
-      "f": 3
+      "x": 1
+    },
+    "<small>Gaming</small> layer lock",
+    {
+      "c": "#dcedc8"
+    },
+    "Typing layer lock",
+    {
+      "c": "#D1C4E9"
     },
     "System layer lock",
-    {
-      "f": 3
-    },
     "World layer lock",
     {
       "c": "#cccccc",
-      "g": true,
-      "a": 5,
-      "f": 3
+      "a": 5
     },
-    "{\n[",
+    "Num pad\n0",
+    "Num pad\n.",
+    "Num pad\nEnter",
     {
-      "f": 3
-    },
-    "}\n]",
-    {
-      "f": 3
-    },
-    ">\n)",
-    {
+      "c": "#757575",
       "t": "#EEEEEE",
-      "a": 7,
-      "f": 3
+      "a": 7
     },
     "Magic"
   ],
   [
     {
       "x": 5,
-      "c": "#e1bee7",
-      "t": "#000000",
-      "g": false,
-      "f": 3
+      "c": "#D1C4E9",
+      "t": "#000000"
     },
     "Cursor layer lock",
-    {
-      "f": 3
-    },
     "<small>Number</small> layer lock",
     {
-      "c": "#d7ccc8",
+      "c": "#BBDEFB",
       "t": "#EEEEEE",
       "p": "SPACE",
       "fa": [
@@ -300,7 +273,7 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
     {
-      "c": "#e1bee7",
+      "c": "#D1C4E9",
       "t": "#000000",
       "p": "CHICKLET",
       "f": 3

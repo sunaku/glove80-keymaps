@@ -211,13 +211,13 @@
         9
       ]
     },
-    "&lArr;",
-    "&dArr;",
+    "&uarr;",
+    "&darr;",
     {
       "x": 1
     },
-    "&uArr;",
-    "&rArr;",
+    "&larr;",
+    "&rarr;",
     {
       "c": "#D1C4E9",
       "p": "SPACE",

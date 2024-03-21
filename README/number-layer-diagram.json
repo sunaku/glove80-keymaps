@@ -1,17 +1,16 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n.keylabel4 div i {\n    font-family: serif;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
   },
   [
     {
-      "t": "#EEEEEE",
       "g": true,
       "p": "CHICKLET",
-      "a": 7
+      "a": 5
     },
-    "Boot loader",
+    "|\n\\",
     {
-      "t": "#000000"
+      "a": 7
     },
     "F2",
     "F3",
@@ -32,31 +31,17 @@
   ],
   [
     {
-      "a": 5
+      "c": "#ffccbc",
+      "g": false
     },
-    "|\n\\",
-    {
-      "c": "#e1bee7",
-      "g": false,
-      "a": 7,
-      "f": 6
-    },
-    "_",
-    {
-      "c": "#dcedc8"
-    },
-    "d",
-    "e",
-    "f",
+    "Escape",
+    "Enter",
+    "Space",
+    "Tab",
+    "Delete",
+    "Insert",
     {
       "c": "#cccccc",
-      "g": true,
-      "a": 5,
-      "f": 3
-    },
-    "<\n,",
-    {
-      "g": false,
       "a": 4,
       "f": 4,
       "w": 5,
@@ -85,25 +70,30 @@
   [
     {
       "c": "#cccccc",
+      "g": true,
+      "a": 5,
       "f": 3
     },
-    "Caps word",
+    "<\n,",
     {
-      "c": "#ffccbc",
-      "f": 6
+      "g": false,
+      "a": 7
     },
-    "<i>x</i>",
+    "Shift <small>(sticky)</small>",
     {
-      "c": "#dcedc8"
+      "c": "#e1bee7"
+    },
+    "Redo",
+    "Undo",
+    {
+      "c": "#ffccbc"
+    },
+    "Back space",
+    {
+      "c": "#dcedc8",
+      "f": 5
     },
     "a\n\n\n\nAltGr",
-    "b",
-    "c",
-    {
-      "c": "#a5d6a7",
-      "f": 3
-    },
-    "Enter",
     {
       "x": 5,
       "c": "#e1bee7",
@@ -145,9 +135,10 @@
     },
     "Shift\n\n\n\nShift",
     {
-      "c": "#a5d6a7"
+      "c": "#dcedc8",
+      "f": 5
     },
-    "Tab",
+    "b",
     {
       "x": 5,
       "c": "#e1bee7",
@@ -174,13 +165,15 @@
   ],
   [
     {
-      "c": "#C0CA33",
+      "c": "#cccccc",
+      "g": true,
       "f": 3
     },
-    "Undo",
+    "Caps word",
     {
       "c": "#bbdefb",
-      "t": "#00000"
+      "t": "#00000",
+      "g": false
     },
     "Select all",
     {
@@ -189,10 +182,15 @@
     "Select line\n\n\n\nMouse",
     "Select word\n\n\n\nSymbol",
     {
-      "c": "#a5d6a7"
+      "c": "#ffcdd2",
+      "f": 6
     },
-    "Back space",
-    "Space",
+    "_",
+    {
+      "c": "#dcedc8",
+      "f": 5
+    },
+    "c",
     {
       "x": 5,
       "c": "#e1bee7",
@@ -218,32 +216,9 @@
   ],
   [
     {
-      "c": "#C0CA33",
-      "f": 3
-    },
-    "Redo",
-    {
-      "c": "#cccccc"
-    },
-    "Shift <small>(sticky)</small>",
-    {
-      "c": "#bbdefb"
-    },
-    "Extend line",
-    "Extend word",
-    {
-      "c": "#a5d6a7"
-    },
-    "Delete",
-    {
-      "c": "#D1C4E9",
-      "g": true,
-      "p": "SPACE"
-    },
-    "Escape\n\n\n\nFunction",
-    {
       "c": "#cccccc",
-      "p": "CHICKLET",
+      "g": true,
+      "f": 3,
       "fa": [
         9
       ]
@@ -251,9 +226,30 @@
     "&uArr;",
     "&dArr;",
     {
+      "c": "#bbdefb",
+      "g": false,
+      "f": 3
+    },
+    "Extend line",
+    {
+      "f": 3
+    },
+    "Extend word",
+    {
+      "c": "#ffcdd2",
+      "f": 7
+    },
+    "𝒙",
+    {
+      "c": "#dcedc8",
+      "f": 5
+    },
+    "d",
+    "e",
+    "f",
+    {
       "x": 1,
       "c": "#ffecb3",
-      "g": false,
       "f": 6
     },
     "<",
@@ -287,13 +283,15 @@
   [
     {
       "x": 5,
-      "c": "#a5d6a7",
-      "p": "SPACE",
+      "c": "#cccccc",
+      "g": true,
       "f": 3
     },
     "Alt-Tab\n\n\n\nCursor",
     {
       "c": "#D1C4E9",
+      "g": false,
+      "p": "SPACE",
       "fa": [
         9
       ],

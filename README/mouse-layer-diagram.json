@@ -89,16 +89,27 @@
     },
     "\"\n'",
     {
-      "x": 5
+      "x": 5,
+      "c": "#e1bee7",
+      "g": false,
+      "a": 7,
+      "f": 5,
+      "fa": [
+        3
+      ]
     },
-    ":\n;",
+    "Middle click",
     {
-      "a": 7
+      "c": "#cccccc",
+      "f": 3
     },
-    "L",
-    "D",
-    "AltGr\n\n\n\nAltGr",
-    "V",
+    "Shift\n\n\n\nShift",
+    "Ctrl\n\n\n\nCtrl",
+    "Alt\n\n\n\nAlt",
+    "Win\n\n\n\nWin",
+    {
+      "g": true
+    },
     "Z"
   ],
   [
@@ -133,20 +144,29 @@
     },
     "<\n,",
     {
-      "x": 5
-    },
-    ">\n.",
-    {
+      "x": 5,
+      "c": "#ffecb3",
       "g": false,
       "a": 7,
+      "f": 5,
+      "fa": [
+        3
+      ]
+    },
+    "Left click",
+    {
+      "c": "#BBDEFB",
+      "f": 9,
       "n": true
     },
-    "Shift\n\n\n\nShift",
-    "Ctrl\n\n\n\nCtrl",
-    "Alt\n\n\n\nAlt",
-    "Win\n\n\n\nWin",
+    "&larr;",
+    "&uarr;",
+    "&darr;",
+    "&rarr;",
     {
-      "g": true
+      "c": "#cccccc",
+      "g": true,
+      "f": 3
     },
     "Q"
   ],
@@ -167,16 +187,28 @@
     },
     "_\n-",
     {
-      "x": 5
+      "x": 5,
+      "c": "#ffccbc",
+      "g": false,
+      "a": 7,
+      "f": 5,
+      "fa": [
+        3
+      ]
     },
-    "?\n/",
+    "Right click",
     {
-      "a": 7
+      "c": "#dcedc8",
+      "f": 3
     },
-    "R",
-    "M",
-    "F",
-    "P",
+    "Wheel left",
+    "Wheel up",
+    "Wheel down",
+    "Wheel right",
+    {
+      "c": "#cccccc",
+      "g": true
+    },
     "Shift"
   ],
   [
@@ -216,20 +248,15 @@
     "&lArr;",
     "&rArr;",
     {
-      "c": "#D1C4E9",
-      "p": "SPACE",
       "f": 3
     },
     "Enter\n\n\n\nSystem",
     {
-      "c": "#d1c4e9",
       "a": 5,
       "f": 3
     },
     "<\n(",
     {
-      "c": "#cccccc",
-      "p": "CHICKLET",
       "f": 3
     },
     "{\n[",
@@ -287,7 +314,9 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
     {
+      "c": "#cccccc",
       "g": true,
+      "p": "CHICKLET",
       "f": 3,
       "n": true
     },

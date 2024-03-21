@@ -4,14 +4,13 @@
   },
   [
     {
-      "t": "#EEEEEE",
       "g": true,
       "p": "CHICKLET",
-      "a": 7
+      "a": 5
     },
-    "Boot loader",
+    "|\n\\",
     {
-      "t": "#000000"
+      "a": 7
     },
     "F2",
     "F3",
@@ -28,23 +27,21 @@
     "F7",
     "F8",
     "F9",
-    "F10"
-  ],
-  [
     {
       "a": 5
     },
-    "|\n\\",
-    "|\n\\",
-    "|\n\\",
-    {
-      "a": 7
-    },
-    "",
+    "+\n="
+  ],
+  [
     {
       "c": "#ffccbc",
-      "g": false
+      "g": false,
+      "a": 7
     },
+    "Escape",
+    "Enter",
+    "Space",
+    "Tab",
     "Delete",
     "Insert",
     {
@@ -63,23 +60,14 @@
     },
     "Insert",
     "Delete",
-    {
-      "c": "#cccccc",
-      "g": true
-    },
-    "",
-    "",
-    {
-      "a": 5
-    },
-    ")\n0",
-    "+\n="
+    "Tab",
+    "Space",
+    "Enter",
+    "Escape"
   ],
   [
     {
-      "c": "#ffcdd2",
-      "g": false,
-      "a": 7
+      "c": "#ffcdd2"
     },
     "Search bar\n\n\n\nSymbol",
     {
@@ -146,10 +134,10 @@
       "f": 9,
       "n": true
     },
-    "&lArr;\n\n\n\nShift",
-    "&uArr;\n\n\n\nCtrl",
-    "&dArr;\n\n\n\nAlt",
-    "&rArr;\n\n\n\nWin",
+    "&larr;\n\n\n\nShift",
+    "&uarr;\n\n\n\nCtrl",
+    "&darr;\n\n\n\nAlt",
+    "&rarr;\n\n\n\nWin",
     {
       "c": "#ffcdd2",
       "f": 3
@@ -208,14 +196,14 @@
     },
     "Find next",
     {
+      "c": "#a5d6a7"
+    },
+    "Alt-Tab\n\n\n\nNumber",
+    "Win-Tab",
+    {
       "c": "#ffccbc"
     },
     "Tab\n\n\n\nFunction",
-    {
-      "c": "#a5d6a7"
-    },
-    "Ctrl-Tab",
-    "Win-Tab",
     {
       "x": 1,
       "c": "#bbdefb"
@@ -246,7 +234,7 @@
       "p": "CHICKLET",
       "f": 3
     },
-    "Alt-Tab\n\n\n\nNumber",
+    "Ctrl-Tab",
     {
       "c": "#757575",
       "t": "#EEEEEE"

@@ -1,0 +1,279 @@
+[
+  {
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+  },
+  [
+    {
+      "p": "CHICKLET",
+      "a": 7
+    },
+    "Clear this BT profile",
+    {
+      "g": true
+    },
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    {
+      "x": 7
+    },
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    {
+      "g": false
+    },
+    "Clear all BT profiles"
+  ],
+  [
+    {
+      "c": "#D1C4E9",
+      "a": 5
+    },
+    "Go to\n0\n\n\n\n\nlayer",
+    "Go to\n1\n\n\n\n\nlayer",
+    "Go to\n2\n\n\n\n\nlayer",
+    "Go to\n3\n\n\n\n\nlayer",
+    "Go to\n4\n\n\n\n\nlayer",
+    "Go to\n5\n\n\n\n\nlayer",
+    {
+      "c": "#cccccc",
+      "a": 4,
+      "f": 4,
+      "w": 5,
+      "h": 4,
+      "d": true
+    },
+    "<center><h2>Magic Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    {
+      "c": "#D1C4E9",
+      "a": 5,
+      "f": 3
+    },
+    "Go to\n6\n\n\n\n\nlayer",
+    "Go to\n7\n\n\n\n\nlayer",
+    "Go to\n8\n\n\n\n\nlayer",
+    {
+      "c": "#cccccc",
+      "g": true
+    },
+    "(\n9",
+    ")\n0",
+    "|\n\\"
+  ],
+  [
+    "~\n`",
+    {
+      "g": false,
+      "a": 7
+    },
+    "Speed ➕",
+    "Sat ➕",
+    "Hue ➕",
+    "Bright ➕",
+    "RGB toggle",
+    {
+      "x": 5,
+      "g": true,
+      "a": 5
+    },
+    ":\n;",
+    {
+      "a": 7
+    },
+    "L",
+    "D",
+    "W\n\n\n\nAltGr",
+    "V",
+    "Z"
+  ],
+  [
+    {
+      "g": false
+    },
+    "Boot loader",
+    "Speed ➖",
+    "Sat ➖",
+    "Hue ➖",
+    "Bright ➖",
+    {
+      "n": true
+    },
+    "Effect ➕",
+    {
+      "x": 5,
+      "g": true,
+      "a": 5
+    },
+    ">\n.",
+    {
+      "a": 7,
+      "n": true
+    },
+    "H\n\n\n\nShift",
+    "T\n\n\n\nCtrl",
+    "S\n\n\n\nAlt",
+    "N\n\n\n\nWin",
+    {
+      "g": false
+    },
+    "Boot loader"
+  ],
+  [
+    "Reset",
+    {
+      "g": true
+    },
+    "G",
+    "X",
+    "J",
+    "K",
+    {
+      "a": 5
+    },
+    "_\n-",
+    {
+      "x": 5
+    },
+    "?\n/",
+    {
+      "a": 7
+    },
+    "R",
+    "M",
+    "F",
+    "P",
+    {
+      "g": false
+    },
+    "Reset"
+  ],
+  [
+    {
+      "c": "#BBDEFB",
+      "t": "#EEEEEE",
+      "p": "SPACE",
+      "fa": [
+        9
+      ],
+      "n": true
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "g": true,
+      "p": "CHICKLET",
+      "f": 3
+    },
+    "Home",
+    {
+      "f": 3
+    },
+    "Page up",
+    {
+      "f": 3
+    },
+    "Page down",
+    {
+      "a": 5,
+      "f": 3
+    },
+    "Output\n4\n\n\n\n\nto BT",
+    {
+      "g": false,
+      "f": 3
+    },
+    "Use BT\n#2\n\n\n\n\nprofile",
+    {
+      "f": 3
+    },
+    "Use BT\n#3\n\n\n\n\nprofile",
+    {
+      "c": "#FFECB3",
+      "a": 7,
+      "f": 3
+    },
+    "Factory layer toggle",
+    {
+      "x": 1,
+      "c": "#cccccc",
+      "g": true,
+      "f": 3
+    },
+    "Typing layer lock",
+    {
+      "f": 3
+    },
+    "<small>Gaming</small> layer lock",
+    {
+      "f": 3
+    },
+    "System layer lock",
+    {
+      "f": 3
+    },
+    "World layer lock",
+    {
+      "a": 5,
+      "f": 3
+    },
+    "{\n[",
+    {
+      "f": 3
+    },
+    "}\n]",
+    {
+      "f": 3
+    },
+    ">\n)",
+    {
+      "c": "#BBDEFB",
+      "t": "#EEEEEE",
+      "g": false,
+      "p": "SPACE",
+      "a": 7,
+      "f": 3,
+      "n": true
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />"
+  ],
+  [
+    {
+      "x": 5,
+      "c": "#cccccc",
+      "t": "#000000",
+      "p": "CHICKLET",
+      "a": 5,
+      "f": 3
+    },
+    "Use BT\n#0\n\n\n\n\nprofile",
+    {
+      "f": 3
+    },
+    "Use BT\n#1\n\n\n\n\nprofile",
+    {
+      "f": 3
+    },
+    "Output\n(wired)\n\n\n\n\nto USB",
+    {
+      "x": 1,
+      "t": "#EEEEEE",
+      "g": true,
+      "a": 7,
+      "f": 3
+    },
+    "Magic",
+    {
+      "t": "#000000",
+      "f": 3
+    },
+    "Mouse layer lock",
+    {
+      "f": 3
+    },
+    "Symbol layer lock"
+  ]
+]
