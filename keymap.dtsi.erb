@@ -13,38 +13,6 @@
 //////////////////////////////////////////////////////////////////////////////
 
 //
-// DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
-// It's meant to help newcomers gradually work their way up to mastery.
-// You can disable this setting by omitting it or assigning a `0` zero.
-//
-// #define DIFFICULTY_LEVEL 0 // custom (see defaults below)
-// #define DIFFICULTY_LEVEL 1 // novice (500ms)
-// #define DIFFICULTY_LEVEL 2 // slower (400ms)
-// #define DIFFICULTY_LEVEL 3 // normal (300ms)
-// #define DIFFICULTY_LEVEL 4 // faster (200ms)
-// #define DIFFICULTY_LEVEL 5 // expert (100ms)
-//
-#if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-#define DIFFICULTY_LEVEL_HOLDING_TIME  ((6 - DIFFICULTY_LEVEL) * 100)
-#define DIFFICULTY_LEVEL_STREAK_DECAY (((6 - DIFFICULTY_LEVEL) *  50) + 100)
-<%
-  emit_setting_ifndef = lambda do |name, value|
-%>
-#ifndef <%= name %>
-#define <%= name %> <%= value %>
-#endif
-<%
-  end
-
-  %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
-    %w[ HOLDING_TIME STREAK_DECAY ].each do |setting|
-      emit_setting_ifndef.("#{category}_#{setting}", "DIFFICULTY_LEVEL_#{setting}")
-    end
-  end
-%>
-#endif
-
-//
 // OPERATING_SYSTEM defines which operating system you intend to use
 // with this keymap, because shortcuts vary across operating systems.
 //
@@ -286,6 +254,38 @@ behaviors {
     // - https://github.com/urob/zmk-config#timeless-homerow-mods
     //
     //////////////////////////////////////////////////////////////////////////
+
+    //
+    // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
+    // It's meant to help newcomers gradually work their way up to mastery.
+    // You can disable this setting by omitting it or assigning a `0` zero.
+    //
+    // #define DIFFICULTY_LEVEL 0 // custom (see defaults below)
+    // #define DIFFICULTY_LEVEL 1 // novice (500ms)
+    // #define DIFFICULTY_LEVEL 2 // slower (400ms)
+    // #define DIFFICULTY_LEVEL 3 // normal (300ms)
+    // #define DIFFICULTY_LEVEL 4 // faster (200ms)
+    // #define DIFFICULTY_LEVEL 5 // expert (100ms)
+    //
+    #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
+    #define DIFFICULTY_LEVEL_HOLDING_TIME  ((6 - DIFFICULTY_LEVEL) * 100)
+    #define DIFFICULTY_LEVEL_STREAK_DECAY (((6 - DIFFICULTY_LEVEL) *  50) + 100)
+    <%
+      emit_setting_ifndef = lambda do |name, value|
+    %>
+    #ifndef <%= name %>
+    #define <%= name %> <%= value %>
+    #endif
+    <%
+      end
+
+      %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
+        %w[ HOLDING_TIME STREAK_DECAY ].each do |setting|
+          emit_setting_ifndef.("#{category}_#{setting}", "DIFFICULTY_LEVEL_#{setting}")
+        end
+      end
+    %>
+    #endif
 
     //
     // ENFORCE_BILATERAL cancels out single-handed home row mods activation by
