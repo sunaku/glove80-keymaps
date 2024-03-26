@@ -19,6 +19,17 @@
 // - https://zmk.dev/docs/codes
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
+// This setting also affects the UNICODE() function defined below, as
+// each OS has different shortcuts for typing Unicode hex characters.
+//
+// NOTE: You may need to enable Unicode hexadecimal input in your OS:
+// - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+// - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+// - (Windows) https://github.com/samhocevar/wincompose
+//
+// Specifically, Windows users should be running the WinCompose tool,
+// which lets you type Unicode characters via hexadecimal codepoints.
+//
 #ifndef OPERATING_SYSTEM
 <%
   OPERATING_SYSTEMS = {
@@ -1154,23 +1165,6 @@ macros {
     //#define WORLD_USE_COMPOSE
 
     //
-    // UNICODE_TARGET_OS defines which operating system you're targeting
-    // for the UNICODE() preprocessor macro to be used on, since each OS
-    // has different shortcuts for typing Unicode characters as hexcodes.
-    //
-    // NOTE: You may need to enable Unicode hexadecimal input in your OS:
-    // - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
-    // - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
-    // - (Windows) https://github.com/samhocevar/wincompose
-    //
-    // Specifically, Windows users should be running the WinCompose tool,
-    // which lets you type Unicode characters via hexadecimal codepoints.
-    //
-    #ifndef UNICODE_TARGET_OS
-    #define UNICODE_TARGET_OS OPERATING_SYSTEM
-    #endif
-
-    //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
@@ -1284,15 +1278,15 @@ macros {
         <&macro_release &kp LALT>
     #endif
 
-    #if UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:linux] %>
+    #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
         #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
-    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
+    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
         #define UNICODE_MORPH_MODS MOD_LALT
-    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:windows] %>
+    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
         #define UNICODE_MORPH_MODS MOD_RALT
     #endif
 
-    #if UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:linux] %>
+    #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
         // $ grep "compose:" /usr/share/X11/xkb/rules/base.lst
         // compose:ralt         Right Alt
         #if COMPOSE_KEY_LINUX == RALT
@@ -1339,9 +1333,9 @@ macros {
         #else
             #define COMPOSE_MORPH_MODS 0
         #endif
-    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:macos] %>
+    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
         #define COMPOSE_MORPH_MODS 0
-    #elif UNICODE_TARGET_OS == <%= OPERATING_SYSTEMS[:windows] %>
+    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
         #define COMPOSE_MORPH_MODS MOD_LALT
     #endif
 
@@ -1461,7 +1455,7 @@ macros {
             sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
           end
     %>
-      #<%= "el" if os_index > 0 %>if UNICODE_TARGET_OS == <%= os_char %>
+      #<%= "el" if os_index > 0 %>if OPERATING_SYSTEM == <%= os_char %>
     <%
           localization_for_os = localizations[os.to_s] if localizations
 

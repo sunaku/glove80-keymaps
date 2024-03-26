@@ -19,6 +19,17 @@
 // - https://zmk.dev/docs/codes
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
+// This setting also affects the UNICODE() function defined below, as
+// each OS has different shortcuts for typing Unicode hex characters.
+//
+// NOTE: You may need to enable Unicode hexadecimal input in your OS:
+// - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+// - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
+// - (Windows) https://github.com/samhocevar/wincompose
+//
+// Specifically, Windows users should be running the WinCompose tool,
+// which lets you type Unicode characters via hexadecimal codepoints.
+//
 #ifndef OPERATING_SYSTEM
 #define OPERATING_SYSTEM 'L' // linux
 //#define OPERATING_SYSTEM 'M' // macos
@@ -4237,23 +4248,6 @@ macros {
     //#define WORLD_USE_COMPOSE
 
     //
-    // UNICODE_TARGET_OS defines which operating system you're targeting
-    // for the UNICODE() preprocessor macro to be used on, since each OS
-    // has different shortcuts for typing Unicode characters as hexcodes.
-    //
-    // NOTE: You may need to enable Unicode hexadecimal input in your OS:
-    // - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
-    // - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
-    // - (Windows) https://github.com/samhocevar/wincompose
-    //
-    // Specifically, Windows users should be running the WinCompose tool,
-    // which lets you type Unicode characters via hexadecimal codepoints.
-    //
-    #ifndef UNICODE_TARGET_OS
-    #define UNICODE_TARGET_OS OPERATING_SYSTEM
-    #endif
-
-    //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
@@ -4366,14 +4360,14 @@ macros {
         <&macro_tap keystrokes>, \
         <&macro_release &kp LALT>
     #endif
-    #if UNICODE_TARGET_OS == 'L'
+    #if OPERATING_SYSTEM == 'L'
         #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
-    #elif UNICODE_TARGET_OS == 'M'
+    #elif OPERATING_SYSTEM == 'M'
         #define UNICODE_MORPH_MODS MOD_LALT
-    #elif UNICODE_TARGET_OS == 'W'
+    #elif OPERATING_SYSTEM == 'W'
         #define UNICODE_MORPH_MODS MOD_RALT
     #endif
-    #if UNICODE_TARGET_OS == 'L'
+    #if OPERATING_SYSTEM == 'L'
         // $ grep "compose:" /usr/share/X11/xkb/rules/base.lst
         // compose:ralt         Right Alt
         #if COMPOSE_KEY_LINUX == RALT
@@ -4420,9 +4414,9 @@ macros {
         #else
             #define COMPOSE_MORPH_MODS 0
         #endif
-    #elif UNICODE_TARGET_OS == 'M'
+    #elif OPERATING_SYSTEM == 'M'
         #define COMPOSE_MORPH_MODS 0
-    #elif UNICODE_TARGET_OS == 'W'
+    #elif OPERATING_SYSTEM == 'W'
         #define COMPOSE_MORPH_MODS MOD_LALT
     #endif
 
@@ -4435,21 +4429,21 @@ macros {
     // codepoints
     //
     UNICODE(world_degree_sign_macro, /* ° */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_degree_sign
         COMPOSE_SEQ_LINUX(&kp O &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp B &kp N0)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_degree_sign
         COMPOSE_SEQ_MACOS(&kp LA(LS(N8)))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N0)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_degree_sign
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6)
@@ -4471,21 +4465,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_section_sign_macro, /* § */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_section_sign
         COMPOSE_SEQ_LINUX(&kp S &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp A &kp N7)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_section_sign
         COMPOSE_SEQ_MACOS(&kp LA(N6))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N7)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_section_sign
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N7)
@@ -4507,21 +4501,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_paragraph_sign_macro, /* ¶ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_paragraph_sign
         COMPOSE_SEQ_LINUX(&kp P &kp EXCL)
         #else
         UNICODE_SEQ_LINUX(&kp B &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_paragraph_sign
         COMPOSE_SEQ_MACOS(&kp LA(N7))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_paragraph_sign
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N2)
@@ -4543,21 +4537,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_ordinal_macro, /* º */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_ordinal
         COMPOSE_SEQ_LINUX(&kp CARET &kp UNDER &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp B &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_ordinal
         COMPOSE_SEQ_MACOS(&kp LA(N0))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_ordinal
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N6)
@@ -4579,21 +4573,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_ordinal_macro, /* ª */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ordinal
         COMPOSE_SEQ_LINUX(&kp CARET &kp UNDER &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp A &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ordinal
         COMPOSE_SEQ_MACOS(&kp LA(N9))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ordinal
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N0)
@@ -4615,16 +4609,16 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_exclaim_left_macro, /* ¡ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_exclaim_left
         COMPOSE_SEQ_MACOS(&kp LA(N1))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_exclaim_left
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N1)
@@ -4646,21 +4640,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_question_left_macro, /* ¿ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_question_left
         COMPOSE_SEQ_LINUX(&kp EXCL &kp EXCL)
         #else
         UNICODE_SEQ_LINUX(&kp B &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_question_left
         COMPOSE_SEQ_MACOS(&kp LA(LS(FSLH)))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_question_left
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N1)
@@ -4682,11 +4676,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_crypto_macro, /* ₿ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp B &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp B &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp B &kp F)
       #endif
     )
@@ -4703,11 +4697,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_cent_macro, /* ¢ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N2)
       #endif
     )
@@ -4724,11 +4718,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_sign_macro, /* ¤ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N4)
       #endif
     )
@@ -4745,21 +4739,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_micro_sign_macro, /* µ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_micro_sign
         COMPOSE_SEQ_LINUX(&kp M &kp U)
         #else
         UNICODE_SEQ_LINUX(&kp B &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_micro_sign
         COMPOSE_SEQ_MACOS(&kp LA(M))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_micro_sign
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N1)
@@ -4785,21 +4779,21 @@ UNICODE_MORPH_MODS
     // characters
     //
     UNICODE(world_i_acute_lower_macro, /* í */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp I)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp I)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N7)
@@ -4821,21 +4815,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_i_acute_upper_macro, /* Í */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(I))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(I))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N5)
@@ -4863,21 +4857,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_diaeresis_lower_macro, /* ï */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp I)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp I)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N9)
@@ -4899,21 +4893,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_i_diaeresis_upper_macro, /* Ï */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(I))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(I))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N7)
@@ -4941,21 +4935,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_circumflex_lower_macro, /* î */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
         COMPOSE_SEQ_LINUX(&kp CARET &kp I)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp E)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp I)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp E)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N8)
@@ -4977,21 +4971,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_i_circumflex_upper_macro, /* Î */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
         COMPOSE_SEQ_LINUX(&kp CARET &kp LS(I))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp E)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(I))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp E)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_circumflex_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N6)
@@ -5019,21 +5013,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_i_grave_lower_macro, /* ì */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_grave_lower
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp I)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_grave_lower
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp I)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_grave_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N6)
@@ -5055,21 +5049,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_i_grave_upper_macro, /* Ì */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_grave_upper
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(I))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_grave_upper
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(I))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_i_grave_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N6)
@@ -5097,21 +5091,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_acute_lower_macro, /* é */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp E)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp E)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N3)
@@ -5133,21 +5127,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_e_acute_upper_macro, /* É */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(E))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(E))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N1)
@@ -5175,21 +5169,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_diaeresis_lower_macro, /* ë */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp E)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp E)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N5)
@@ -5211,21 +5205,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_e_diaeresis_upper_macro, /* Ë */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(E))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(E))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N3)
@@ -5253,21 +5247,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_circumflex_lower_macro, /* ê */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
         COMPOSE_SEQ_LINUX(&kp CARET &kp E)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp E)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N4)
@@ -5289,21 +5283,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_e_circumflex_upper_macro, /* Ê */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
         COMPOSE_SEQ_LINUX(&kp CARET &kp LS(E))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(E))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_circumflex_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N2)
@@ -5331,21 +5325,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_grave_lower_macro, /* è */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_grave_lower
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp E)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_grave_lower
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp E)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_grave_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N2)
@@ -5367,21 +5361,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_e_grave_upper_macro, /* È */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_grave_upper
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(E))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_grave_upper
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(E))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_grave_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N0)
@@ -5409,21 +5403,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_e_ae_lower_macro, /* æ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_ae_lower
         COMPOSE_SEQ_LINUX(&kp A &kp E)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_ae_lower
         COMPOSE_SEQ_MACOS(&kp LA(SQT))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_ae_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N0)
@@ -5445,21 +5439,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_e_ae_upper_macro, /* Æ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_ae_upper
         COMPOSE_SEQ_LINUX(&kp LS(A) &kp LS(E))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_ae_upper
         COMPOSE_SEQ_MACOS(&kp LA(LS(SQT)))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_e_ae_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N8)
@@ -5487,21 +5481,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_acute_lower_macro, /* á */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp A)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5)
@@ -5523,21 +5517,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_acute_upper_macro, /* Á */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N3)
@@ -5565,21 +5559,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_diaeresis_lower_macro, /* ä */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp A)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8)
@@ -5601,21 +5595,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_diaeresis_upper_macro, /* Ä */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6)
@@ -5643,21 +5637,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_circumflex_lower_macro, /* â */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
         COMPOSE_SEQ_LINUX(&kp CARET &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp A)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N6)
@@ -5679,21 +5673,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_circumflex_upper_macro, /* Â */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
         COMPOSE_SEQ_LINUX(&kp CARET &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_circumflex_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N4)
@@ -5721,21 +5715,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_grave_lower_macro, /* à */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_grave_lower
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N0)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_grave_lower
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp A)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N0)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_grave_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N4)
@@ -5757,21 +5751,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_grave_upper_macro, /* À */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_grave_upper
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N0)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_grave_upper
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N0)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_grave_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N2)
@@ -5799,21 +5793,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_tilde_lower_macro, /* ã */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
         COMPOSE_SEQ_LINUX(&kp TILDE &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
         COMPOSE_SEQ_MACOS(&kp LA(N) &kp A)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_tilde_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N7)
@@ -5835,21 +5829,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_tilde_upper_macro, /* Ã */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
         COMPOSE_SEQ_LINUX(&kp TILDE &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
         COMPOSE_SEQ_MACOS(&kp LA(N) &kp LS(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_tilde_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N5)
@@ -5877,21 +5871,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_a_ring_lower_macro, /* å */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ring_lower
         COMPOSE_SEQ_LINUX(&kp O &kp A)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ring_lower
         COMPOSE_SEQ_MACOS(&kp LA(A))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ring_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N9)
@@ -5913,21 +5907,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_a_ring_upper_macro, /* Å */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ring_upper
         COMPOSE_SEQ_LINUX(&kp O &kp LS(A))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ring_upper
         COMPOSE_SEQ_MACOS(&kp LA(LS(A)))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_a_ring_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N7)
@@ -5955,21 +5949,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_y_acute_lower_macro, /* ý */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp Y)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp Y)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N3)
@@ -5991,21 +5985,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_y_acute_upper_macro, /* Ý */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(Y))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(Y))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp D)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N1)
@@ -6033,21 +6027,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_y_diaeresis_lower_macro, /* ÿ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp Y)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp Y)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N5)
@@ -6069,21 +6063,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_y_diaeresis_upper_macro, /* Ÿ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(Y))
         #else
         UNICODE_SEQ_LINUX(&kp N1 &kp N7 &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(Y))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N1 &kp N7 &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_y_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N9)
@@ -6111,21 +6105,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_acute_lower_macro, /* ó */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp O)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N3)
@@ -6147,21 +6141,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_acute_upper_macro, /* Ó */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N3)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N1)
@@ -6189,21 +6183,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_diaeresis_lower_macro, /* ö */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp O)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6)
@@ -6225,21 +6219,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_diaeresis_upper_macro, /* Ö */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N6)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4)
@@ -6267,21 +6261,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_circumflex_lower_macro, /* ô */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
         COMPOSE_SEQ_LINUX(&kp CARET &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp O)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N4)
@@ -6303,21 +6297,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_circumflex_upper_macro, /* Ô */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
         COMPOSE_SEQ_LINUX(&kp CARET &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N4)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_circumflex_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N2)
@@ -6345,21 +6339,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_grave_lower_macro, /* ò */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_grave_lower
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_grave_lower
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp O)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_grave_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N2)
@@ -6381,21 +6375,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_grave_upper_macro, /* Ò */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_grave_upper
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_grave_upper
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N2)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_grave_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N0)
@@ -6423,21 +6417,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_tilde_lower_macro, /* õ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
         COMPOSE_SEQ_LINUX(&kp TILDE &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
         COMPOSE_SEQ_MACOS(&kp LA(N) &kp O)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_tilde_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N5)
@@ -6459,21 +6453,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_tilde_upper_macro, /* Õ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
         COMPOSE_SEQ_LINUX(&kp TILDE &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
         COMPOSE_SEQ_MACOS(&kp LA(N) &kp LS(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N5)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_tilde_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N3)
@@ -6501,21 +6495,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_o_slash_lower_macro, /* ø */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_slash_lower
         COMPOSE_SEQ_LINUX(&kp FSLH &kp O)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_slash_lower
         COMPOSE_SEQ_MACOS(&kp LA(O))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_slash_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N8)
@@ -6537,21 +6531,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_o_slash_upper_macro, /* Ø */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_slash_upper
         COMPOSE_SEQ_LINUX(&kp FSLH &kp LS(O))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_slash_upper
         COMPOSE_SEQ_MACOS(&kp LA(LS(O)))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N8)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_o_slash_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N6)
@@ -6579,21 +6573,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_acute_lower_macro, /* ú */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_acute_lower
         COMPOSE_SEQ_LINUX(&kp SQT &kp U)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_acute_lower
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp U)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_acute_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N0)
@@ -6615,21 +6609,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_u_acute_upper_macro, /* Ú */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_acute_upper
         COMPOSE_SEQ_LINUX(&kp SQT &kp LS(U))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_acute_upper
         COMPOSE_SEQ_MACOS(&kp LA(E) &kp LS(U))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp A)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_acute_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N8)
@@ -6657,21 +6651,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_diaeresis_lower_macro, /* ü */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
         COMPOSE_SEQ_LINUX(&kp DQT &kp U)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp U)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2)
@@ -6693,21 +6687,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_u_diaeresis_upper_macro, /* Ü */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
         COMPOSE_SEQ_LINUX(&kp DQT &kp LS(U))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
         COMPOSE_SEQ_MACOS(&kp LA(U) &kp LS(U))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_diaeresis_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0)
@@ -6735,21 +6729,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_circumflex_lower_macro, /* û */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
         COMPOSE_SEQ_LINUX(&kp CARET &kp U)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp U)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N1)
@@ -6771,21 +6765,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_u_circumflex_upper_macro, /* Û */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
         COMPOSE_SEQ_LINUX(&kp CARET &kp LS(U))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
         COMPOSE_SEQ_MACOS(&kp LA(I) &kp LS(U))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp B)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_circumflex_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N9)
@@ -6813,21 +6807,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_u_grave_lower_macro, /* ù */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_grave_lower
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp U)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_grave_lower
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp U)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_grave_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N9)
@@ -6849,21 +6843,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_u_grave_upper_macro, /* Ù */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_grave_upper
         COMPOSE_SEQ_LINUX(&kp GRAVE &kp LS(U))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_grave_upper
         COMPOSE_SEQ_MACOS(&kp LA(GRAVE) &kp LS(U))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N9)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_u_grave_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N7)
@@ -6891,21 +6885,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_consonants_cedilla_lower_macro, /* ç */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
         COMPOSE_SEQ_LINUX(&kp COMMA &kp C)
         #else
         UNICODE_SEQ_LINUX(&kp E &kp N7)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
         COMPOSE_SEQ_MACOS(&kp LA(C))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp E &kp N7)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1)
@@ -6927,21 +6921,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_consonants_cedilla_upper_macro, /* Ç */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
         COMPOSE_SEQ_LINUX(&kp COMMA &kp LS(C))
         #else
         UNICODE_SEQ_LINUX(&kp C &kp N7)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
         COMPOSE_SEQ_MACOS(&kp LA(LS(C)))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp C &kp N7)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_cedilla_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9)
@@ -6969,21 +6963,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_consonants_eszett_lower_macro, /* ß */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
         COMPOSE_SEQ_LINUX(&kp S &kp S)
         #else
         UNICODE_SEQ_LINUX(&kp D &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
         COMPOSE_SEQ_MACOS(&kp LA(S))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp F)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3)
@@ -7005,21 +6999,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_consonants_eszett_upper_macro, /* ẞ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_upper
         COMPOSE_SEQ_LINUX(&kp LS(S) &kp LS(S))
         #else
         UNICODE_SEQ_LINUX(&kp N1 &kp E &kp N9 &kp E)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_eszett_upper
         COMPOSE_SEQ_MACOS(&kp LA(LS(S)))
         #else
         UNICODE_SEQ_MACOS(&kp N1 &kp E &kp N9 &kp E)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp E &kp N9 &kp E)
       #endif
     )
@@ -7042,21 +7036,21 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_consonants_ntilde_lower_macro, /* ñ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
         COMPOSE_SEQ_LINUX(&kp TILDE &kp N)
         #else
         UNICODE_SEQ_LINUX(&kp F &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
         COMPOSE_SEQ_MACOS(&kp LA(N) &kp N)
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp F &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_lower
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N1)
@@ -7078,21 +7072,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_consonants_ntilde_upper_macro, /* Ñ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
         COMPOSE_SEQ_LINUX(&kp TILDE &kp LS(N))
         #else
         UNICODE_SEQ_LINUX(&kp D &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
         COMPOSE_SEQ_MACOS(&kp LA(N) &kp LS(N))
         #else
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp D &kp N1)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_consonants_ntilde_upper
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N9)
@@ -7120,11 +7114,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_angle_lower_macro, /* ‹ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N3 &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N3 &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N3 &kp N9)
       #endif
     )
@@ -7141,11 +7135,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_left_angle_upper_macro, /* « */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp B)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp B)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp B)
       #endif
     )
@@ -7168,11 +7162,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_curly_lower_macro, /* ‘ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N1 &kp N8)
       #endif
     )
@@ -7189,11 +7183,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_left_curly_upper_macro, /* “ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N1 &kp C)
       #endif
     )
@@ -7216,11 +7210,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_low_lower_macro, /* ‚ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp A)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp A)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N1 &kp A)
       #endif
     )
@@ -7237,11 +7231,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_left_low_upper_macro, /* „ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N1 &kp E)
       #endif
     )
@@ -7264,11 +7258,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_corner1_lower_macro, /* 「 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N3 &kp N0 &kp N0 &kp C)
       #endif
     )
@@ -7285,11 +7279,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_left_corner1_upper_macro, /* ﹁ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N1)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N4 &kp N1)
       #endif
     )
@@ -7312,11 +7306,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_corner2_lower_macro, /* 『 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N3 &kp N0 &kp N0 &kp E)
       #endif
     )
@@ -7333,11 +7327,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_left_corner2_upper_macro, /* ﹃ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N4 &kp N3)
       #endif
     )
@@ -7360,11 +7354,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_left_grave_macro, /* ` */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N6 &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp N6 &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N6 &kp N0)
       #endif
     )
@@ -7381,11 +7375,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_right_angle_lower_macro, /* › */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N3 &kp A)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N3 &kp A)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N3 &kp A)
       #endif
     )
@@ -7402,11 +7396,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_right_angle_upper_macro, /* » */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp B)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp B)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp B)
       #endif
     )
@@ -7429,11 +7423,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_curly_lower_macro, /* ’ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N1 &kp N9)
       #endif
     )
@@ -7450,11 +7444,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_right_curly_upper_macro, /* ” */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N1 &kp D)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N1 &kp D)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N1 &kp D)
       #endif
     )
@@ -7483,11 +7477,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_corner1_lower_macro, /* 」 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N3 &kp N0 &kp N0 &kp D)
       #endif
     )
@@ -7504,11 +7498,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_right_corner1_upper_macro, /* ﹂ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N4 &kp N2)
       #endif
     )
@@ -7531,11 +7525,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_corner2_lower_macro, /* 』 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N3 &kp N0 &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N3 &kp N0 &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N3 &kp N0 &kp N0 &kp F)
       #endif
     )
@@ -7552,11 +7546,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_quotes_right_corner2_upper_macro, /* ﹄ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N4 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N4 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N4 &kp N4)
       #endif
     )
@@ -7579,11 +7573,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_quotes_right_grave_macro, /* ´ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp B &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp B &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp B &kp N4)
       #endif
     )
@@ -7600,11 +7594,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_dollar_lower_macro, /* $ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp N2 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N4)
       #endif
     )
@@ -7627,11 +7621,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(world_currency_yen_macro, /* ¥ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N5)
       #endif
     )
@@ -7648,21 +7642,21 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_euro_macro, /* € */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_currency_euro
         COMPOSE_SEQ_LINUX(&kp E &kp EQUAL)
         #else
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp A &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_currency_euro
         COMPOSE_SEQ_MACOS(&kp LA(LS(N2)))
         #else
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp A &kp C)
         #endif
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         #ifdef WORLD_USE_COMPOSE
         #define WORLD_USE_COMPOSE_FOR_world_currency_euro
         COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8)
@@ -7684,11 +7678,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_won_macro, /* ₩ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp A &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp A &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp A &kp N9)
       #endif
     )
@@ -7705,11 +7699,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(world_currency_pound_macro, /* £ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp A &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N3)
       #endif
     )
@@ -8013,11 +8007,11 @@ UNICODE_MORPH_MODS
     // codepoints
     //
     UNICODE(emoji_zwj_macro, /* ‍ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N0 &kp D)
       #endif
     )
@@ -8034,11 +8028,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_male_sign_macro, /* ♂️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N4 &kp N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N4 &kp N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp N4 &kp N2), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8055,11 +8049,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_female_sign_macro, /* ♀️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N4 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N4 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp N4 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8076,11 +8070,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_right_arrow_macro, /* ➡️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp A &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp A &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N7 &kp A &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8097,11 +8091,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_left_arrow_macro, /* ⬅️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp B &kp N0 &kp N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp B &kp N0 &kp N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp B &kp N0 &kp N5), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8118,11 +8112,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_rainbow_macro, /* 🌈 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N8)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N8)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N8)
       #endif
     )
@@ -8139,11 +8133,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_cloudy_macro, /* ️☁️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N0 &kp N1), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N0 &kp N1), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp N0 &kp N1), UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8160,11 +8154,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_mostly_cloudy_macro, /* 🌥 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N2 &kp N5)
       #endif
     )
@@ -8181,11 +8175,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_partly_cloudy_macro, /* ⛅ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp C &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp C &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp C &kp N5)
       #endif
     )
@@ -8202,11 +8196,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_mostly_sunny_macro, /* ️🌤️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N2 &kp N4), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N2 &kp N4), UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8223,11 +8217,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_sunny_macro, /* ☀️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N0 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N0 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp N0 &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8244,11 +8238,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_sunrise_macro, /* 🌅 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N5)
       #endif
     )
@@ -8265,11 +8259,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_sunrise_mountains_macro, /* 🌄 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N4)
       #endif
     )
@@ -8286,11 +8280,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_cityscape_macro, /* ️🏙️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp D &kp N9), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp D &kp N9), UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8307,11 +8301,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_cityscape_dusk_macro, /* ️🌇 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N7)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N7)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N7)
       #endif
     )
@@ -8328,11 +8322,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_cityscape_night_macro, /* 🌃 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N0 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N0 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N0 &kp N3)
       #endif
     )
@@ -8349,11 +8343,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_light_skin_tone_macro, /* 🏻 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp B)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp B)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp B)
       #endif
     )
@@ -8370,11 +8364,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_medium_light_skin_tone_macro, /* 🏼 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp C)
       #endif
     )
@@ -8391,11 +8385,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_medium_skin_tone_macro, /* 🏽 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp D)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp D)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp D)
       #endif
     )
@@ -8412,11 +8406,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_medium_dark_skin_tone_macro, /* 🏾 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp E)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp E)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp E)
       #endif
     )
@@ -8433,11 +8427,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_dark_skin_tone_macro, /* 🏿 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp F &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp F &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp F &kp F)
       #endif
     )
@@ -8454,11 +8448,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_baby_bottle_macro, /* 🍼 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N7 &kp C)
       #endif
     )
@@ -8475,11 +8469,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_baby_macro, /* 👶 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N6)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N7 &kp N6)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N7 &kp N6)
       #endif
     )
@@ -8496,11 +8490,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_boy_macro, /* 👦 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N6)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N6)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N6)
       #endif
     )
@@ -8517,11 +8511,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_girl_macro, /* 👧 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N7)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N7)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N7)
       #endif
     )
@@ -8538,11 +8532,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_man_macro, /* 👨 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N8)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N8)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N8)
       #endif
     )
@@ -8559,11 +8553,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_woman_macro, /* 👩 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N6 &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N6 &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N6 &kp N9)
       #endif
     )
@@ -8580,11 +8574,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_old_man_macro, /* 👴 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N7 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N7 &kp N4)
       #endif
     )
@@ -8601,11 +8595,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_old_woman_macro, /* 👵 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N7 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N7 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N7 &kp N5)
       #endif
     )
@@ -8622,11 +8616,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_white_hair_macro, /* 🦳 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N3)
       #endif
     )
@@ -8643,11 +8637,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_curly_hair_macro, /* 🦱 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N1)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N1)
       #endif
     )
@@ -8664,11 +8658,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_red_hair_macro, /* 🦰 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N0)
       #endif
     )
@@ -8685,11 +8679,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_bald_macro, /* 🦲 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp B &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp B &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp B &kp N2)
       #endif
     )
@@ -8706,11 +8700,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_new_moon_macro, /* 🌑 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N1)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N1)
       #endif
     )
@@ -8727,11 +8721,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_waxing_crescent_moon_macro, /* 🌒 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N2)
       #endif
     )
@@ -8748,11 +8742,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_first_quarter_moon_macro, /* 🌓 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N3)
       #endif
     )
@@ -8769,11 +8763,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_waxing_gibbous_moon_macro, /* 🌔 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N4)
       #endif
     )
@@ -8790,11 +8784,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_full_moon_macro, /* 🌕 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N5)
       #endif
     )
@@ -8811,11 +8805,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_waning_gibbous_moon_macro, /* 🌖 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N6)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N6)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N6)
       #endif
     )
@@ -8832,11 +8826,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_last_quarter_moon_macro, /* 🌗 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N7)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N7)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N7)
       #endif
     )
@@ -8853,11 +8847,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_waning_crescent_moon_macro, /* 🌘 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N1 &kp N8)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N1 &kp N8)
       #endif
     )
@@ -8874,11 +8868,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_tada_macro, /* 🎉 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N3 &kp N8 &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp C &kp D &kp F &kp N8 &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N3 &kp N8 &kp N9)
       #endif
     )
@@ -8895,11 +8889,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_heart_macro, /* ️❤️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N6 &kp N4), UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N6 &kp N4), UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N7 &kp N6 &kp N4), UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -8916,11 +8910,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_fire_macro, /* 🔥 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N5 &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp D &kp N2 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N5 &kp N2 &kp N5)
       #endif
     )
@@ -8937,11 +8931,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_muscle_macro, /* 💪 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp A &kp A)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp A &kp A)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp A &kp A)
       #endif
     )
@@ -8958,11 +8952,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_climbing_macro, /* 🧗 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N7)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp D &kp N7)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp D &kp N7)
       #endif
     )
@@ -8979,11 +8973,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_lab_coat_macro, /* 🥼 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N7 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N7 &kp C)
       #endif
     )
@@ -9000,11 +8994,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_rocket_macro, /* 🚀 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #endif
     )
@@ -9021,11 +9015,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_joy_macro, /* 😂 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp N2)
       #endif
     )
@@ -9042,11 +9036,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_rofl_macro, /* 🤣 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N2 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N2 &kp N3)
       #endif
     )
@@ -9063,11 +9057,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_star_struck_macro, /* 🤩 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N2 &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N2 &kp N9)
       #endif
     )
@@ -9084,11 +9078,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_love_struck_macro, /* 😍 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp D)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp D)
       #endif
     )
@@ -9105,11 +9099,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_saluting_face_macro, /* 🫡 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp E &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp E &kp N1)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp E &kp N1)
       #endif
     )
@@ -9126,11 +9120,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_shocked_face_macro, /* 🤯 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N2 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N2 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N2 &kp F)
       #endif
     )
@@ -9147,11 +9141,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_cold_sweat_macro, /* 😰 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N3 &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N3 &kp N0)
       #endif
     )
@@ -9168,11 +9162,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_monocle_face_macro, /* 🧐 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp D &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp D &kp N0)
       #endif
     )
@@ -9189,11 +9183,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_snap_fingers_macro, /* 🫰 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp F &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp F &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp F &kp N0)
       #endif
     )
@@ -9210,11 +9204,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_ok_hand_macro, /* 👌 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp C)
       #endif
     )
@@ -9231,11 +9225,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_pray_macro, /* 🙏 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp F)
       #endif
     )
@@ -9252,11 +9246,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_sweat_smile_macro, /* 😅 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp N5)
       #endif
     )
@@ -9273,11 +9267,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_disappointed_macro, /* 😞 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N1 &kp E)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N1 &kp E)
       #endif
     )
@@ -9294,11 +9288,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_thinking_macro, /* 🤔 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N1 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N1 &kp N4)
       #endif
     )
@@ -9315,11 +9309,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_tipping_hand_macro, /* 💁 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N8 &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N8 &kp N1)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N8 &kp N1)
       #endif
     )
@@ -9336,11 +9330,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_gesturing_ok_macro, /* 🙆 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N6)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N6)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N6)
       #endif
     )
@@ -9357,11 +9351,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_bowing_macro, /* 🙇 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N7)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N7)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N7)
       #endif
     )
@@ -9378,11 +9372,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_raising_hand_macro, /* 🙋 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp B)
       #endif
     )
@@ -9399,11 +9393,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_gesturing_no_macro, /* 🙅 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N5)
       #endif
     )
@@ -9420,11 +9414,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_person_shrugging_macro, /* 🤷 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N3 &kp N7)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N3 &kp N7)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N3 &kp N7)
       #endif
     )
@@ -9441,11 +9435,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_checkoff_macro, /* ✅ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N0 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N7 &kp N0 &kp N5)
       #endif
     )
@@ -9462,11 +9456,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_100_macro, /* 💯 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp A &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp A &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp A &kp F)
       #endif
     )
@@ -9483,11 +9477,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_warning_macro, /* ⚠️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp A &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp A &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp A &kp N0), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -9504,11 +9498,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_x_macro, /* ❌ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N7 &kp N4 &kp C)
       #endif
     )
@@ -9525,11 +9519,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_question_macro, /* ❓ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N5 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N5 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N7 &kp N5 &kp N3)
       #endif
     )
@@ -9546,11 +9540,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_astronaut_macro, /* 🧑‍🚀 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N8 &kp N0)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp D &kp N1), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N0 &kp N0 &kp D), UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N8 &kp N0)
       #endif
     )
@@ -9567,11 +9561,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_nerd_macro, /* 🤓 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N9 &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp D &kp N1 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N9 &kp N1 &kp N3)
       #endif
     )
@@ -9588,11 +9582,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_sparkles_macro, /* ✨ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N7 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N7 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N7 &kp N2 &kp N8)
       #endif
     )
@@ -9609,11 +9603,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_raised_hands_macro, /* 🙌 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp C)
       #endif
     )
@@ -9630,11 +9624,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_point_up_macro, /* ☝️ */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N2 &kp N6 &kp N1 &kp D), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp N2 &kp N6 &kp N1 &kp D), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N6 &kp N1 &kp D), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F)
       #endif
     )
@@ -9651,11 +9645,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_thumbs_up_macro, /* 👍 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp D)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp D)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp D)
       #endif
     )
@@ -9700,11 +9694,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_moon_stars_magic_macro, /* 🪄 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp N8 &kp N4)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp N8 &kp N4)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp N8 &kp N4)
       #endif
     )
@@ -9727,11 +9721,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_smile_up_macro, /* 🙂 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N2)
       #endif
     )
@@ -9748,11 +9742,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_face_smile_down_macro, /* 🙃 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N3)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N3)
       #endif
     )
@@ -9787,11 +9781,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_joke_wink_macro, /* 😉 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp N9)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp N9)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp N9)
       #endif
     )
@@ -9808,11 +9802,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_face_joke_tounge_macro, /* 😜 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N1 &kp C)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N1 &kp C)
       #endif
     )
@@ -9835,11 +9829,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_fear_scared_macro, /* 😨 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N2 &kp N8)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N2 &kp N8)
       #endif
     )
@@ -9856,11 +9850,11 @@ UNICODE_MORPH_MODS
 ))>;
     };
     UNICODE(emoji_face_fear_scream_macro, /* 😱 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N1)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N3 &kp N1)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N3 &kp N1)
       #endif
     )
@@ -9883,11 +9877,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_face_surprise_dizzy_macro, /* 😵 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N3 &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N3 &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N3 &kp N5)
       #endif
     )
@@ -9910,11 +9904,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_attention_wave_macro, /* 👋 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp B)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp B)
       #endif
     )
@@ -9937,11 +9931,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_approval_cool_macro, /* 😎 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N0 &kp E)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N0 &kp E)
       #endif
     )
@@ -9976,11 +9970,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_despair_cry_macro, /* 😢 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N2 &kp N2)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N2 &kp N2)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N2 &kp N2)
       #endif
     )
@@ -10009,11 +10003,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_point_you_macro, /* 🫵 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp A &kp F &kp N5)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp E &kp D &kp E &kp F &kp N5)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp A &kp F &kp N5)
       #endif
     )
@@ -10036,11 +10030,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_thumbs_down_macro, /* 👎 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp E)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp E)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp E)
       #endif
     )
@@ -10063,11 +10057,11 @@ UNICODE_MORPH_MODS
         mods = <MOD_LSFT>;
     };
     UNICODE(emoji_gesture_hands_clap_macro, /* 👏 */
-      #if UNICODE_TARGET_OS == 'L'
+      #if OPERATING_SYSTEM == 'L'
         UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N4 &kp N4 &kp F)
-      #elif UNICODE_TARGET_OS == 'M'
+      #elif OPERATING_SYSTEM == 'M'
         UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp C &kp N4 &kp F)
-      #elif UNICODE_TARGET_OS == 'W'
+      #elif OPERATING_SYSTEM == 'W'
         UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N4 &kp N4 &kp F)
       #endif
     )
