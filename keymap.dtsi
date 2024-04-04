@@ -3870,7 +3870,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_base>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_cursor: thumb_layer_access_cursor {
@@ -3881,7 +3885,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_cursor>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_emoji: thumb_layer_access_emoji {
@@ -3892,7 +3900,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_emoji>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_factory: thumb_layer_access_factory {
@@ -3903,7 +3915,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_factory>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_function: thumb_layer_access_function {
@@ -3914,7 +3930,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_function>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_gaming: thumb_layer_access_gaming {
@@ -3925,7 +3945,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_gaming>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_lower: thumb_layer_access_lower {
@@ -3936,7 +3960,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_lower>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_magic: thumb_layer_access_magic {
@@ -3947,7 +3975,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_magic>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_mouse: thumb_layer_access_mouse {
@@ -3958,7 +3990,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_mouse>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_number: thumb_layer_access_number {
@@ -3969,7 +4005,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_number>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_symbol: thumb_layer_access_symbol {
@@ -3980,7 +4020,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_symbol>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_system: thumb_layer_access_system {
@@ -3991,7 +4035,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_system>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_typing: thumb_layer_access_typing {
@@ -4002,7 +4050,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_typing>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
     thumb_world: thumb_layer_access_world {
@@ -4013,7 +4065,11 @@ behaviors {
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #endif
       #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_world>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
     };
 
 
@@ -4023,7 +4079,11 @@ behaviors {
       tapping-term-ms = <THUMB_HOLDING_TIME>;
       quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
       #binding-cells = <2>;
+    #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_world>, <&parang_left>;
+    #else
+      bindings = <&mo>, <&parang_left>;
+    #endif
     };
 
     space_symbol: thumb_layer_access_spacebar_symbol {
@@ -4032,7 +4092,11 @@ behaviors {
       tapping-term-ms = <SPACE_HOLDING_TIME>;
       quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
       #binding-cells = <2>;
+    #ifdef USE_LAYER_INDICATORS
       bindings = <&la_switch_symbol>, <&kp>;
+    #else
+      bindings = <&mo>, <&kp>;
+    #endif
     };
 
     thumb: thumb_layer_access {
@@ -4422,17 +4486,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RALT &kp RCTL &kp RGUI &kp RSFT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4445,17 +4505,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RALT &kp RCTL &kp RSFT &kp RGUI>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4468,17 +4524,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RALT &kp RGUI &kp RCTL &kp RSFT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4491,17 +4543,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RALT &kp RGUI &kp RSFT &kp RCTL>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4514,17 +4562,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RALT &kp RSFT &kp RCTL &kp RGUI>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4537,17 +4581,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RALT &kp RSFT &kp RGUI &kp RCTL>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4560,17 +4600,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RCTL &kp RALT &kp RGUI &kp RSFT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4583,17 +4619,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RCTL &kp RALT &kp RSFT &kp RGUI>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4606,17 +4638,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RCTL &kp RGUI &kp RALT &kp RSFT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4629,17 +4657,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RCTL &kp RGUI &kp RSFT &kp RALT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4652,17 +4676,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RCTL &kp RSFT &kp RALT &kp RGUI>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4675,17 +4695,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RCTL &kp RSFT &kp RGUI &kp RALT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4698,17 +4714,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RGUI &kp RALT &kp RCTL &kp RSFT>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
@@ -4721,17 +4733,13 @@ macros {
       bindings
         = <&macro_param_1to1>
         , <&macro_press &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
         , <&macro_tap &kp RGUI &kp RALT &kp RSFT &kp RCTL>
-        #endif
         , <&macro_pause_for_release>
         , <&macro_param_1to1>
         , <&macro_release &mo MACRO_PLACEHOLDER>
-        #ifdef USE_LAYER_INDICATORS
         //revert to home layer
         , <&macro_tap &kp F18>
-        #endif
         ;
     };
 
