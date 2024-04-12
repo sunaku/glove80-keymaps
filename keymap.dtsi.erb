@@ -254,6 +254,13 @@ combos {
         layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
     };
     #endif
+
+    combo_ctrl_tab_switcher {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T4 POS_LH_T5>;
+        bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
+        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    };
 };
 
 behaviors {
