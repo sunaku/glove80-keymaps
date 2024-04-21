@@ -530,7 +530,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -575,7 +575,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -669,7 +669,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -678,7 +678,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -687,16 +687,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -714,7 +705,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -723,7 +714,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -732,7 +723,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -1237,7 +1237,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -1282,7 +1282,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -1376,7 +1376,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -1385,7 +1385,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -1394,16 +1394,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -1421,7 +1412,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -1430,7 +1421,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -1439,7 +1430,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -1944,7 +1944,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -1989,7 +1989,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -2083,7 +2083,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -2092,7 +2092,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -2101,16 +2101,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -2128,7 +2119,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -2137,7 +2128,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -2146,7 +2137,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -2651,7 +2651,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -2696,7 +2696,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -2790,7 +2790,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -2799,7 +2799,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -2808,16 +2808,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -2835,7 +2826,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -2844,7 +2835,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -2853,7 +2844,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -3358,7 +3358,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -3403,7 +3403,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -3497,7 +3497,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -3506,7 +3506,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -3515,16 +3515,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -3542,7 +3533,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -3551,7 +3542,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -3560,7 +3551,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -4065,7 +4065,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -4110,7 +4110,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -4204,7 +4204,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -4213,7 +4213,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -4222,16 +4222,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -4249,7 +4240,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -4258,7 +4249,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -4267,7 +4258,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -4772,7 +4772,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -4817,7 +4817,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -4911,7 +4911,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -4920,7 +4920,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -4929,16 +4929,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -4956,7 +4947,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -4965,7 +4956,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -4974,7 +4965,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -5479,7 +5479,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -5524,7 +5524,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -5618,7 +5618,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -5627,7 +5627,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -5636,16 +5636,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -5663,7 +5654,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -5672,7 +5663,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -5681,7 +5672,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]
@@ -6186,7 +6186,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Function ESC",
+            "value": "&thumb_function LAYER_Function ESC",
             "params": []
           }
         ]
@@ -6231,7 +6231,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_System ENTER",
+            "value": "&thumb_system LAYER_System ENTER",
             "params": []
           }
         ]
@@ -6325,7 +6325,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji END",
+            "value": "&thumb_emoji LAYER_Emoji END",
             "params": []
           }
         ]
@@ -6334,7 +6334,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
+            "value": "&thumb_cursor LAYER_Cursor BACKSPACE",
             "params": []
           }
         ]
@@ -6343,16 +6343,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb_lower_shift LAYER_Lower LSFT",
+            "value": "&thumb_number LAYER_Number DELETE",
             "params": []
           }
         ]
@@ -6370,7 +6361,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Mouse TAB",
+            "value": "&thumb_lower_shift LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -6379,7 +6370,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&space LAYER_Symbol SPACE",
+            "value": "&thumb_mouse LAYER_Mouse TAB",
             "params": []
           }
         ]
@@ -6388,7 +6379,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb_parang_left LAYER_World 0",
+            "value": "&space_symbol LAYER_Symbol SPACE",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&thumb_parang_left_world LAYER_World 0",
             "params": []
           }
         ]

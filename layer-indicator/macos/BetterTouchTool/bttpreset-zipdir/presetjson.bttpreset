@@ -1,0 +1,3049 @@
+
+{
+  "BTTPresetCreatorNotes" : "v36",
+  "BTTPresetInfoURL" : "https://github.com/sunaku/glove80-keymaps?tab=readme-ov-file",
+  "BTTPresetName" : "Glove80 Engrammer Keyboard Overlay",
+  "BTTPresetColor" : "208.445309, 152.715401, 0.000000, 255.000000",
+  "BTTPresetUUID" : "7CB65006-2E9A-42CB-A012-798551F6C827",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTAppSpecificSettings" : {
+        "BTTDisableGlobalTriggers" : false
+      },
+      "BTTTriggers" : [
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 643,
+          "BTTTriggerTypeDescriptionReadOnly" : "Named Trigger: (KB Overlay) Show base kb layer for n seconds",
+          "BTTTriggerTypeDescription" : "(KB Overlay) Show base kb layer for n seconds",
+          "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+          "BTTUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTTriggerName" : "(KB Overlay) Show base kb layer for n seconds",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 13,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+              "BTTUUID" : "A19F5C80-8A73-46AA-BDA6-6AFB5C91EFA1",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "base-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "base-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+              "BTTUUID" : "81146CB9-9AB3-4CA6-8A56-8943C3EA10FD",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "DFCDFECB-53F4-41EF-8561-63FDD850BC37",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "52DFDB12-4B71-4633-ADBB-C6DFF920EF4B",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+              "BTTUUID" : "CEA086E2-F485-474A-BD64-6975C1CAF51F",
+              "BTTPredefinedActionType" : 351,
+              "BTTPredefinedActionName" : "Execute Action Sequence after Timeout \/ Delay",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "10",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 4,
+              "BTTAdditionalActions" : [
+                {
+                  "BTTLastUpdatedAt" : 1712189257.0,
+                  "BTTTriggerType" : 740,
+                  "BTTTriggerTypeDescriptionReadOnly" : "Assign actions to trigger after timeout \/ delay",
+                  "BTTTriggerParentUUID" : "CEA086E2-F485-474A-BD64-6975C1CAF51F",
+                  "BTTTriggerClass" : "BTTTriggerTypeCustomActionConfig",
+                  "BTTUUID" : "F211D3F1-E39C-4914-86BF-3EFD542626EC",
+                  "BTTPredefinedActionType" : 366,
+                  "BTTPredefinedActionName" : "Empty Placeholder",
+                  "BTTEnabled" : 1,
+                  "BTTEnabled2" : 1,
+                  "BTTOrder" : 0,
+                  "BTTAdditionalActions" : [
+                    {
+                      "BTTLastUpdatedAt" : 1712189257.0,
+                      "BTTTriggerType" : -1,
+                      "BTTTriggerParentUUID" : "F211D3F1-E39C-4914-86BF-3EFD542626EC",
+                      "BTTIsPureAction" : true,
+                      "BTTTriggerClass" : "BTTTriggerTypeCustomActionConfig",
+                      "BTTUUID" : "F521C2BB-5FF1-4C44-9468-4C7A2653D0E7",
+                      "BTTPredefinedActionType" : 387,
+                      "BTTPredefinedActionName" : "Hide Floating Menu",
+                      "BTTAdditionalActionData" : {
+                        "BTTMenuActionMenuID" : "kb_overlay_menu"
+                      },
+                      "BTTEnabled" : 1,
+                      "BTTEnabled2" : 1,
+                      "BTTOrder" : 8
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "BTTGestureNotes" : "(KB Overlay) Show base kb layer for n seconds"
+        },
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTUUID" : "56617366-960E-4F96-8C17-A0B33930FBF1",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTKeyboardShortcutScope" : 0,
+          "BTTKeyboardShortcutKeyboardType" : 5825,
+          "BTTTriggerOnDown" : 1,
+          "BTTLayoutIndependentChar" : "b",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTShortcutKeyCode" : 11,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 4,
+          "BTTAutoAdaptToKeyboardLayout" : 0,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "56617366-960E-4F96-8C17-A0B33930FBF1",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTUUID" : "1561809D-9217-4AFD-B9CC-0FE519273286",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "(KB Overlay) Show base kb layer for n seconds",
+              "BTTKeyboardShortcutKeyboardType" : 0,
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 13,
+              "BTTAutoAdaptToKeyboardLayout" : 0
+            }
+          ],
+          "BTTTriggerConfig" : {
+            "BTTHUDText" : "sdf"
+          }
+        },
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTUUID" : "450FEB02-AFDB-4D4B-8067-F448815572B4",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTAdditionalConfiguration" : "8388608",
+          "BTTKeyboardShortcutKeyboardType" : 5825,
+          "BTTTriggerOnDown" : 1,
+          "BTTLayoutIndependentChar" : "F18",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTShortcutKeyCode" : 79,
+          "BTTShortcutModifierKeys" : 8388608,
+          "BTTOrder" : 5,
+          "BTTAutoAdaptToKeyboardLayout" : 0,
+          "BTTGestureNotes" : "Consume KB overlay Function key (prevents OS interaction)"
+        },
+        
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Base layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "7f25932b-3427-4be7-be0c-be770442b010",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7f25932b-3427-4be7-be0c-be770442b010",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "764a8978-a8c0-480e-90c1-68658a9b9978",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7f25932b-3427-4be7-be0c-be770442b010",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "603d255b-4759-43b9-b454-a338ef672c84",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "base-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "base-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7f25932b-3427-4be7-be0c-be770442b010",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "4284b425-d3bb-44be-9abb-1162b7f162e5",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7f25932b-3427-4be7-be0c-be770442b010",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "e8d23968-abac-44b1-a3ce-8099a0116091",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Base layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Cursor layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "aab90943-75fd-406f-8c83-8cfc2b11a4db",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "aab90943-75fd-406f-8c83-8cfc2b11a4db",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "3c8a115e-b9cc-4087-87d7-9ffaf29f59ff",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "aab90943-75fd-406f-8c83-8cfc2b11a4db",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "6d90cd08-19de-46da-bc6d-f7e3e4dba7e4",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "cursor-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "cursor-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "aab90943-75fd-406f-8c83-8cfc2b11a4db",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "653b1ddd-a6eb-429d-a7d8-5d3a6bcd0bcb",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "aab90943-75fd-406f-8c83-8cfc2b11a4db",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "e097822a-95b1-459f-b35e-7e1e3da4b76a",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Cursor layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Emoji layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "2dd41f96-4246-4626-aec4-6ee963db2e90",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2dd41f96-4246-4626-aec4-6ee963db2e90",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "cf04af19-c795-485c-ba11-c96a5903146f",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2dd41f96-4246-4626-aec4-6ee963db2e90",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "b29793c4-c05a-4ad3-8691-b476644202b0",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "emoji-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "emoji-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2dd41f96-4246-4626-aec4-6ee963db2e90",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "700d1612-1e34-4d1d-947c-6ad599ce40cf",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2dd41f96-4246-4626-aec4-6ee963db2e90",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "7da1d353-d15b-425e-b13b-f3bc7835b26b",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Emoji layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Factory layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "8f91642b-f3c8-45bb-bf2b-cca7083fd874",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "8f91642b-f3c8-45bb-bf2b-cca7083fd874",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "8534d3ee-49e0-4ead-b8ab-a46d72459085",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "8f91642b-f3c8-45bb-bf2b-cca7083fd874",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "3b873479-3ea2-4a45-88bb-f506598288a9",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "factory-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "factory-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "8f91642b-f3c8-45bb-bf2b-cca7083fd874",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "e9f97be6-4045-4f98-9ede-1bd7ae3910b9",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "8f91642b-f3c8-45bb-bf2b-cca7083fd874",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "432c047e-4467-43b9-9cea-8a8a70f94305",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Factory layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Function layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "08f4f1e7-ee57-409f-89c6-ab36be578b03",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "08f4f1e7-ee57-409f-89c6-ab36be578b03",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "4cfaa935-b963-4178-83a5-4b2239dc2206",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "08f4f1e7-ee57-409f-89c6-ab36be578b03",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "27e00e6a-8361-498b-85c4-3e857d072669",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "function-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "function-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "08f4f1e7-ee57-409f-89c6-ab36be578b03",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "861e0558-9717-416f-90e3-3a6792b2b938",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "08f4f1e7-ee57-409f-89c6-ab36be578b03",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "1fabf2f3-03f6-4a0b-b69d-28a8c809e010",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Function layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Gaming layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "de3f7020-592c-44d1-b551-6aff63c9ba57",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "de3f7020-592c-44d1-b551-6aff63c9ba57",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "4f23f485-10b4-4252-9369-6351558981cb",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "de3f7020-592c-44d1-b551-6aff63c9ba57",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "fb2fcb39-02a1-43e8-8d3d-bb0d442362ae",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "gaming-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "gaming-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "de3f7020-592c-44d1-b551-6aff63c9ba57",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "a09062af-69fa-4b12-860a-f6e615fc1d3c",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "de3f7020-592c-44d1-b551-6aff63c9ba57",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "e6b2d9b7-186e-4319-a4c3-e4ef505d316b",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Gaming layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Lower layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "477f6d31-d726-4e20-996c-dfc14c9eddf9",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "477f6d31-d726-4e20-996c-dfc14c9eddf9",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "1c2e55ef-7b73-4dcc-8667-52aecbdd65b6",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "477f6d31-d726-4e20-996c-dfc14c9eddf9",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "349c004f-9f28-4f5b-b61e-4636d1c82996",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "lower-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "lower-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "477f6d31-d726-4e20-996c-dfc14c9eddf9",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "4adc538e-905d-481d-a7b2-41b1c2aee4f1",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "477f6d31-d726-4e20-996c-dfc14c9eddf9",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "9c125e94-2bba-4e96-aa50-f98a7ef9ffb9",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Lower layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Magic layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "84d54a60-90d5-4332-900c-c159e32749f7",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "84d54a60-90d5-4332-900c-c159e32749f7",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "88333e54-2849-4e2e-b307-f01f7f4d43e2",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "84d54a60-90d5-4332-900c-c159e32749f7",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "5907fa03-8ee1-4157-9d71-17e28dba30d9",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "magic-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "magic-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "84d54a60-90d5-4332-900c-c159e32749f7",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "822ab64b-1540-418f-9be5-420feaadd70b",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "84d54a60-90d5-4332-900c-c159e32749f7",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "db26676b-54bb-4aa0-9153-a34b3bbef222",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Magic layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Mouse layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "2e8cac4b-51a9-4e9f-937f-b9514b4f8f86",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2e8cac4b-51a9-4e9f-937f-b9514b4f8f86",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "c7d19f57-9f6b-4752-8117-56e943e2d39c",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2e8cac4b-51a9-4e9f-937f-b9514b4f8f86",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "bcd19bf8-b68a-44f7-a360-0db0c20b70a8",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "mouse-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "mouse-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2e8cac4b-51a9-4e9f-937f-b9514b4f8f86",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "df9bf3cc-370f-4b80-aafb-90a0da322396",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2e8cac4b-51a9-4e9f-937f-b9514b4f8f86",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "4f30da43-95a3-4ae9-b528-9abf4eb8186a",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Mouse layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Number layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "2c6d0c65-8080-457f-9e20-70302c1d07bd",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2c6d0c65-8080-457f-9e20-70302c1d07bd",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "bb325041-494d-42ad-976e-2e457c76a451",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2c6d0c65-8080-457f-9e20-70302c1d07bd",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "7525c16f-13dd-4f28-b4e8-ff676207bdfe",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "number-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "number-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2c6d0c65-8080-457f-9e20-70302c1d07bd",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "3f4399cf-027d-4ee7-acad-cc8ee88b7e9a",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "2c6d0c65-8080-457f-9e20-70302c1d07bd",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "72cfbcd1-f243-456e-8012-aebba231affe",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Number layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Symbol layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "7cdd6dcf-ce69-4a7a-a484-aa118145b4f5",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7cdd6dcf-ce69-4a7a-a484-aa118145b4f5",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "34728abf-de6a-4f15-b518-67004de39e6b",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7cdd6dcf-ce69-4a7a-a484-aa118145b4f5",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "fc798957-b4e4-45a1-9eb6-6101fb165796",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "symbol-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "symbol-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7cdd6dcf-ce69-4a7a-a484-aa118145b4f5",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "95945a71-e116-4a0f-bdbe-2f2ec014f124",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7cdd6dcf-ce69-4a7a-a484-aa118145b4f5",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "c3a41b6f-e591-41fd-bc88-becd65192874",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Symbol layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show System layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "5909459b-6f44-45c3-985a-761bead5b04f",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5909459b-6f44-45c3-985a-761bead5b04f",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "2ba5f5a5-9e78-4bb2-b55f-80e9064c9d9f",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5909459b-6f44-45c3-985a-761bead5b04f",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "d9d04357-9dc5-41bf-a70f-0e2e45b7142d",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "system-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "system-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5909459b-6f44-45c3-985a-761bead5b04f",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "ddfde1e0-4b90-420c-bc68-55ed39f7e0c6",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5909459b-6f44-45c3-985a-761bead5b04f",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "2405ef9e-56b9-4165-b43f-c1dc31923e69",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show System layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show Typing layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "0b0c23fe-f8c5-4a6c-924f-3f2a157bc85a",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "0b0c23fe-f8c5-4a6c-924f-3f2a157bc85a",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "58074be0-b752-41da-88df-d82093f2a818",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "0b0c23fe-f8c5-4a6c-924f-3f2a157bc85a",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "d58c9015-316c-4c21-b97f-fa74fd44fb14",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "typing-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "typing-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "0b0c23fe-f8c5-4a6c-924f-3f2a157bc85a",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "36b6d3c7-b5fa-4dc7-bdd4-ce5611a7c400",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "0b0c23fe-f8c5-4a6c-924f-3f2a157bc85a",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "d4d5f79a-8e47-4d22-b6e3-ca4327e905d0",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show Typing layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1712189257.0,
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show World layer",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "5d0cd059-2515-4664-916c-e35ee8b1345c",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 19,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5d0cd059-2515-4664-916c-e35ee8b1345c",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "8b671202-416c-4150-9f3e-c9223bac875c",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5d0cd059-2515-4664-916c-e35ee8b1345c",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "09d75816-f3d5-4101-82d5-b378bbb11ccc",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "world-layer-diagram.png",
+              "BTTVariableName" : "kb_overlay_image_filename",
+              "BTTVariableValue" : "world-layer-diagram.png",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5d0cd059-2515-4664-916c-e35ee8b1345c",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "67fbd6fe-2843-45b7-899d-978f4ea19a74",
+              "BTTPredefinedActionType" : 386,
+              "BTTPredefinedActionName" : "Show Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1712189257.0,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "5d0cd059-2515-4664-916c-e35ee8b1345c",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+              "BTTUUID" : "6b4557b1-f443-4f7f-a407-5382ea470cfe",
+              "BTTPredefinedActionType" : 248,
+              "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+              "BTTNamedTriggerToTrigger" : "kb_overlay_set_defaults",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            }
+          ],
+          "BTTGestureNotes" : "Show World layer",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 8,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 54,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 61,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 60,
+                "BTTKEYTime" : 732641216
+              },
+              {
+                "BTTKEYCode" : 62,
+                "BTTKEYTime" : 732641216
+              }
+            ]
+          }
+        },
+        
+        {
+          "BTTLastUpdatedAt" : 1711659021.8074579,
+          "BTTTriggerConditionsFormatReadOnly" : "kb_overlay_show_base_layer == 0",
+          "BTTTriggerConditionsData" : "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLTQ4PT5BRUlOT1JaXmJkVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxABgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8QLIAH0i4vMDFaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TU2VsZkV4cHJlc3Npb26jMDIzXE5TRXhwcmVzc2lvblhOU09iamVjdNIUDzU3oTaACYAM0w8jOTo7PFlOU0tleVBhdGiACxAKgApfEBprYl9vdmVybGF5X3Nob3dfYmFzZV9sYXllctIuLz9AXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqM_MjPSLi9CQ15OU011dGFibGVBcnJheaNCRDNXTlNBcnJhedIuL0ZHXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRGSDIzXxAUTlNGdW5jdGlvbkV4cHJlc3Npb27TSiMPS0xNXxAPTlNDb25zdGFudFZhbHVlgA8QAIAQIwAAAAAAAAAA0i4vUFFfEBlOU0NvbnN0YW50VmFsdWVFeHByZXNzaW9uo1AyM9UPU1RVVldMWExZWk5TTW9kaWZpZXJYTlNOZWdhdGVZTlNPcHRpb25zXk5TT3BlcmF0b3JUeXBlgBIIEATSLi9bXF8QG05TRXF1YWxpdHlQcmVkaWNhdGVPcGVyYXRvcqNbXTNfEBNOU1ByZWRpY2F0ZU9wZXJhdG9y0i4vX2BfEBVOU0NvbXBhcmlzb25QcmVkaWNhdGWjX2EzW05TUHJlZGljYXRl0i4vRGOiRDPSLi9lZl8QE05TQ29tcG91bmRQcmVkaWNhdGWjZWEzAAgAEQAaACQAKQAyADcASQBMAFEAUwBsAHIAeQCTAKUArACuALAAsgC3AMIAxADGAMgA0QDlAPgBDgEQARIBFAEWASEBKwE6AU0BWQFbAV0BXwFhAWMBcAF1AXcBfAGHAZABowGnAbQBvQHCAcQBxgHIAc8B2QHbAd0B3wH8AgECIAIkAikCOAI8AkQCSQJfAmQCewKCApQClgKYApoCowKoAsQCyALTAt4C5wLxAwADAgMDAwUDCgMoAywDQgNHA18DYwNvA3QDdwN8A5IAAAAAAAACAQAAAAAAAABnAAAAAAAAAAAAAAAAAAADlg==",
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Hide floating menu if kb_overlay_show_base_layer is 0",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "1F8B57B8-C427-4453-A983-7D04EDF11490",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 22,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1711659021.807816,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "1F8B57B8-C427-4453-A983-7D04EDF11490",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "D7B2209B-C2CD-463B-8D62-EBD9DC623471",
+              "BTTPredefinedActionType" : 352,
+              "BTTPredefinedActionName" : "Cancel Timed Action Sequence",
+              "BTTGenericActionConfig2" : "kb_overlay_timer",
+              "BTTGenericActionConfig" : "kb_overlay_hide_menu_delay_in_progress",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1711659021.808121,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "1F8B57B8-C427-4453-A983-7D04EDF11490",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+              "BTTUUID" : "80ADF514-3257-42B4-85EA-EE8C090A241B",
+              "BTTPredefinedActionType" : 387,
+              "BTTPredefinedActionName" : "Hide Floating Menu",
+              "BTTAdditionalActionData" : {
+                "BTTMenuActionMenuID" : "kb_overlay_menu"
+              },
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 1
+            }
+          ],
+          "BTTGestureNotes" : "Hide floating menu if kb_overlay_show_base_layer is 0",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 2,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 733351744
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 733351744
+              },
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79,
+                "BTTKEYTime" : 733351744
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79,
+                "BTTKEYTime" : 733351744
+              }
+            ]
+          }
+        },
+        {
+          "BTTLastUpdatedAt" : 1711752279.6600208,
+          "BTTTriggerType" : 643,
+          "BTTTriggerTypeDescriptionReadOnly" : "Named Trigger: kb_overlay_set_defaults",
+          "BTTTriggerTypeDescription" : "Glove80 Engrammer Keyboard Overlay: Set Defaults",
+          "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+          "BTTUUID" : "7C7FBF0F-61CB-4637-BBD9-D234BE31763C",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTTriggerName" : "kb_overlay_set_defaults",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 14,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1711752047.691529,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7C7FBF0F-61CB-4637-BBD9-D234BE31763C",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+              "BTTUUID" : "04C747A9-75D4-4415-A3FE-9C89B11A0FF6",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "1",
+              "BTTVariablePersist" : "1",
+              "BTTVariableType" : 1,
+              "BTTVariableName" : "kb_overlay_show_base_layer",
+              "BTTVariableValue" : "1",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTLastUpdatedAt" : 1711752210.10355,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7C7FBF0F-61CB-4637-BBD9-D234BE31763C",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+              "BTTUUID" : "4B6B2609-2297-44DF-A644-ECE2689D47BB",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "10",
+              "BTTVariablePersist" : "1",
+              "BTTVariableType" : 1,
+              "BTTVariableName" : "kb_overlay_base_layer_timeout_seconds-not-yet-working-instead-modify-key-sequence-action",
+              "BTTVariableValue" : "10",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 2
+            },
+            {
+              "BTTLastUpdatedAt" : 1711752210.1035109,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7C7FBF0F-61CB-4637-BBD9-D234BE31763C",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+              "BTTUUID" : "6F741E6D-1D06-4503-8336-01CAABB92EA7",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "0.2",
+              "BTTVariablePersist" : "1",
+              "BTTVariableType" : 1,
+              "BTTVariableName" : "kb_overlay_opacity",
+              "BTTVariableValue" : "0.2",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 3
+            },
+            {
+              "BTTLastUpdatedAt" : 1711752210.1035571,
+              "BTTTriggerType" : -1,
+              "BTTTriggerParentUUID" : "7C7FBF0F-61CB-4637-BBD9-D234BE31763C",
+              "BTTIsPureAction" : true,
+              "BTTUUID" : "7B922C18-9110-444E-8EA8-F4BD11E5D687",
+              "BTTPredefinedActionType" : 292,
+              "BTTPredefinedActionName" : "Assign\/Set Value for Variable",
+              "BTTGenericActionConfig2" : "https:\/\/raw.githubusercontent.com\/sunaku\/glove80-keymaps\/main\/README\/",
+              "BTTVariablePersist" : "1",
+              "BTTVariableType" : 0,
+              "BTTVariableName" : "kb_overlay_image_base_path",
+              "BTTVariableValue" : "https:\/\/raw.githubusercontent.com\/sunaku\/glove80-keymaps\/main\/README\/",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTOrder" : 4
+            }
+          ],
+          "BTTGestureNotes" : "Glove80 Engrammer Keyboard Overlay: Set Defaults"
+        },
+        {
+          "BTTLastUpdatedAt" : 1711751200.3615839,
+          "BTTTriggerType" : 767,
+          "BTTTriggerTypeDescriptionReadOnly" : "Floating Menu",
+          "BTTTriggerClass" : "BTTTriggerTypeFloatingMenu",
+          "BTTUUID" : "53E04A53-DB06-45D9-A15E-795F81561768",
+          "BTTAdditionalConfiguration" : "Floating Menu: kb_overlay_menu",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 24,
+          "BTTTriggerName" : "Floating Menu: kb_overlay_menu",
+          "BTTMenuItems" : [
+            {
+              "BTTLastUpdatedAt" : 1711751200.3616009,
+              "BTTTriggerType" : 778,
+              "BTTTriggerTypeDescriptionReadOnly" : "Web View \/ HTML Item",
+              "BTTTriggerTypeDescription" : "Standard Item",
+              "BTTTriggerParentUUID" : "53E04A53-DB06-45D9-A15E-795F81561768",
+              "BTTTriggerClass" : "BTTTriggerTypeFloatingMenu",
+              "BTTUUID" : "483F52F4-AF2D-4671-9CA5-AE8B1B5064C9",
+              "BTTAdditionalConfiguration" : "Webview Menu Item: kb_overlay_image_html_menu_item",
+              "BTTEnabled" : 1,
+              "BTTOrder" : 0,
+              "BTTTriggerName" : "Webview Menu Item: kb_overlay_image_html_menu_item",
+              "BTTMenuConfig" : {
+                "BTTMenuItemBorderColorDark" : "255.000000, 255.000000, 255.000000, 255.000000",
+                "BTTMenuItemIconColor1" : "255.000000, 255.000000, 255.000000, 255.000000",
+                "BTTMenuItemBackgroundColor" : "108.442, 96.000, 190.435, 166.991",
+                "BTTMenuItemBackgroundType" : 0,
+                "BTTMenuItemBlurredBackground" : 0,
+                "BTTMenuSelectedTab" : 3,
+                "BTTMenuItemMaxHeight" : 1000,
+                "BTTMenuHoverEndAnimationDuration" : 0.14999999999999999,
+                "BTTMenuItemMaxWidth" : 1408,
+                "BTTMenuCategoryItemIcon" : 1,
+                "BTTMenuCategoryShadow" : 1,
+                "BTTLastChangeUUID" : "7795E2C2-2C9F-48B1-AAB8-B47BEF5AFBA3",
+                "BTTMenuItemBorderColorHover" : "255.000000, 255.000000, 255.000000, 255.000000",
+                "BTTMenuItemBorderColor" : "255.000000, 255.000000, 255.000000, 255.000000",
+                "BTTMenuItemMinHeight" : 0,
+                "BTTMenuItemBackgroundColorDark" : "108.442, 96.000, 190.435, 166.991",
+                "BTTMenuItemVisibleWhileActive" : 1,
+                "BTTMenuElementIdentifier" : "kb_overlay_image_html_menu_item",
+                "BTTMenuItemVisibleWhileInactive" : 1,
+                "BTTMenuItemMinWidth" : 0,
+                "BTTMenuItemBackgroundTypeDark" : 4,
+                "BTTMenuItemKeepActiveInBackground" : 1,
+                "BTTMenuAttributedText" : "{\\rtf1\\ansi\\ansicpg1252\\cocoartf2761\n\\cocoatextscaling0\\cocoaplatform0{\\fonttbl\\f0\\fnil\\fcharset0 HelveticaNeue;}\n{\\colortbl;\\red255\\green255\\blue255;\\red255\\green255\\blue255;}\n{\\*\\expandedcolortbl;;\\csgray\\c100000;}\n\\pard\\tx560\\tx1120\\tx1680\\tx2240\\tx2800\\tx3360\\tx3920\\tx4480\\tx5040\\tx5600\\tx6160\\tx6720\\pardirnatural\\qc\\partightenfactor0\n\n\\f0\\fs50 \\cf2 Test}",
+                "BTTMenuItemShadowEnabled" : 0,
+                "BTTMenuItemBorderColorHoverDark" : "255.000000, 255.000000, 255.000000, 255.000000",
+                "BTTMenuItemText" : "presetfile:\/\/\/glove80\/index.html",
+                "BTTMenuAppearanceStyle" : 0,
+                "BTTMenuItemBackgroundColorHover" : "90, 90.000, 180, 166.991",
+                "BTTMenuAlwaysUseLightMode" : 1,
+                "BTTMenuCategoryBackground" : 1,
+                "BTTMenuItemUserScriptOnVisible" : "",
+                "BTTMenuCategoryItemSizing" : 1,
+                "BTTMenuCategoryBorder" : 1,
+                "BTTMenuHoverStartAnimationDuration" : 0.14999999999999999,
+                "BTTMenuItemBackgroundColorHoverDark" : "90, 90.000, 180, 166.991"
+              },
+              "BTTMenuAvailability" : 0,
+              "BTTMenuName" : "kb_overlay_image_html_menu_item",
+              "BTTGestureNotes" : "Standard Item"
+            }
+          ],
+          "BTTMenuConfig" : {
+            "BTTMenuVerticalSpacing" : 5,
+            "BTTMenuItemToggleVisibilityNow" : null,
+            "BTTMenuHorizontalSpacing" : 5,
+            "BTTMenuItemBackgroundColor" : "168.213, 183.731, 225.311, 29.612",
+            "BTTMenuFrameHeight" : 501,
+            "BTTMenuWindowLevel" : 3,
+            "BTTMenuItemBackgroundType" : 4,
+            "BTTMenuFrameWidth" : 1180,
+            "BTTMenuAnchorRelation" : 3,
+            "BTTMenuItemBlurredBackground" : 0,
+            "BTTMenuItemPaddingLeft" : 10,
+            "BTTMenuTitleBarStyle" : 0,
+            "BTTMenuAnchorMenu" : 3,
+            "BTTMenuCategoryMenuVisibility" : 1,
+            "BTTMenuItemPaddingTop" : 5,
+            "BTTMenuItemBorderWidth" : 2,
+            "BTTMenuCategoryShadow" : 0,
+            "BTTMenuClickThroughEverywhere" : 1,
+            "BTTMenuCategoryOnlyShowIf" : 0,
+            "BTTMenuItemCornerRadius" : 10,
+            "BTTLastChangeUUID" : "801CB43A-E513-4D09-8AA6-DC577B63A7C7",
+            "BTTMenuItemBorderColorHover" : "0.000, 0.000, 0.000, 0.000",
+            "BTTMenuCategoryModifiers" : 0,
+            "BTTMenuShowIfWindowLevelEqualsEnabled" : 0,
+            "BTTMenuItemBorderColor" : "0.000, 0.000, 0.000, 0.000",
+            "BTTMenuPositionRelativeTo" : 1,
+            "BTTMenuCategorySize" : 1,
+            "BTTMenuPositioningType" : 1,
+            "BTTMenuItemsUseModifierModes" : false,
+            "BTTMenuElementIdentifier" : "kb_overlay_menu",
+            "BTTMenuItemPaddingRight" : 10,
+            "BTTMenuClickThroughEmptyParts" : 1,
+            "BTTMenuCloseOnOutsideClick" : 0,
+            "BTTMenuCategorySpacing" : 0,
+            "BTTMenuItemShadowEnabled" : 0,
+            "BTTMenuLayoutDirection" : 2,
+            "BTTMenuAppearanceStyle" : 0,
+            "BTTMenuItemPaddingBottom" : 5,
+            "BTTMenuAlwaysUseLightMode" : 1,
+            "BTTMenuCategoryBackground" : 1,
+            "BTTMenuVisibility" : 1,
+            "BTTMenuWindowResizable" : 0,
+            "BTTMenuCategoryBorder" : 0,
+            "BTTMenuCategoryPosition" : 1,
+            "BTTMenuCategoryZIndex" : 1,
+            "BTTMenuCloseAfterAction" : 0,
+            "BTTMenuItemSaveCurrentSize" : null
+          },
+          "BTTMenuAvailability" : 0,
+          "BTTMenuName" : "kb_overlay_menu"
+        },
+        {
+          "BTTLastUpdatedAt" : 1711752047.6915932,
+          "BTTTriggerConditionsFormatReadOnly" : "kb_overlay_show_base_layer != 0",
+          "BTTTriggerConditionsData" : "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLTQ4PT5BRUlOT1JaXmJkVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxABgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8QLIAH0i4vMDFaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TU2VsZkV4cHJlc3Npb26jMDIzXE5TRXhwcmVzc2lvblhOU09iamVjdNIUDzU3oTaACYAM0w8jOTo7PFlOU0tleVBhdGiACxAKgApfEBprYl9vdmVybGF5X3Nob3dfYmFzZV9sYXllctIuLz9AXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqM_MjPSLi9CQ15OU011dGFibGVBcnJheaNCRDNXTlNBcnJhedIuL0ZHXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRGSDIzXxAUTlNGdW5jdGlvbkV4cHJlc3Npb27TSiMPS0xNXxAPTlNDb25zdGFudFZhbHVlgA8QAIAQIwAAAAAAAAAA0i4vUFFfEBlOU0NvbnN0YW50VmFsdWVFeHByZXNzaW9uo1AyM9UPU1RVVldMWExZWk5TTW9kaWZpZXJYTlNOZWdhdGVZTlNPcHRpb25zXk5TT3BlcmF0b3JUeXBlgBIJEAXSLi9bXF8QG05TRXF1YWxpdHlQcmVkaWNhdGVPcGVyYXRvcqNbXTNfEBNOU1ByZWRpY2F0ZU9wZXJhdG9y0i4vX2BfEBVOU0NvbXBhcmlzb25QcmVkaWNhdGWjX2EzW05TUHJlZGljYXRl0i4vRGOiRDPSLi9lZl8QE05TQ29tcG91bmRQcmVkaWNhdGWjZWEzAAgAEQAaACQAKQAyADcASQBMAFEAUwBsAHIAeQCTAKUArACuALAAsgC3AMIAxADGAMgA0QDlAPgBDgEQARIBFAEWASEBKwE6AU0BWQFbAV0BXwFhAWMBcAF1AXcBfAGHAZABowGnAbQBvQHCAcQBxgHIAc8B2QHbAd0B3wH8AgECIAIkAikCOAI8AkQCSQJfAmQCewKCApQClgKYApoCowKoAsQCyALTAt4C5wLxAwADAgMDAwUDCgMoAywDQgNHA18DYwNvA3QDdwN8A5IAAAAAAAACAQAAAAAAAABnAAAAAAAAAAAAAAAAAAADlg==",
+          "BTTTriggerType" : 624,
+          "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
+          "BTTTriggerTypeDescription" : "Show base kb layer for n seconds",
+          "BTTTriggerClass" : "BTTTriggerTypeKeySequence",
+          "BTTUUID" : "9BC62EDD-A5E3-4EFE-9754-11EF3D37A452",
+          "BTTPredefinedActionType" : 248,
+          "BTTPredefinedActionName" : "Trigger Named Trigger (Configured in Other Tab)",
+          "BTTNamedTriggerToTrigger" : "(KB Overlay) Show base kb layer for n seconds",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 21,
+          "BTTGestureNotes" : "Show base kb layer for n seconds",
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTKeyCount" : 2,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1
+              },
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCharacter" : " F18",
+                "BTTKEYCode" : 79
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "BT.L",
+      "BTTAppName" : "Recently Used",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}

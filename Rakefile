@@ -1,7 +1,7 @@
 require 'rake/clean'
 require 'erb'
 
-task :default => [:dtsi, :dot]
+task :default => [:dtsi, :btt, :dot]
 
 #-----------------------------------------------------------------------------
 # ZMK configuration snippet (DTSI)
@@ -42,6 +42,24 @@ rule '.dtsi.min' => '.dtsi' do |t|
     .squeeze(' ') # remove extra spaces
   File.write(t.name, minified)
 end
+
+#-----------------------------------------------------------------------------
+# Overlay indicator helpers
+#-----------------------------------------------------------------------------
+
+#MacOS BetterTouchTool
+btt_zip_dir_files = FileList['layer-indicator/macos/BetterTouchTool/bttpreset-zipdir/**/*']
+task :btt => %w[layer-indicator/macos/BetterTouchTool/bttpreset-zipdir/presetjson.bttpreset layer-indicator/macos/BetterTouchTool/Glove80-Engrammer-Keyboard-Overlay-Preset.bttpresetzip]
+
+# Create preset file if erb has changed
+file 'layer-indicator/macos/BetterTouchTool/bttpreset-zipdir/presetjson.bttpreset' => 'layer-indicator/macos/BetterTouchTool/presetjson.bttpreset.erb' do |t|
+  sh "erb #{t.prerequisites[0]} > #{t.name}"
+end
+#Create preset zip file if anything under the bttpreset-zipdir dir changes, which includes the preset file.
+file 'layer-indicator/macos/BetterTouchTool/Glove80-Engrammer-Keyboard-Overlay-Preset.bttpresetzip' => btt_zip_dir_files do |t|
+  sh "cd layer-indicator/macos/BetterTouchTool/bttpreset-zipdir; zip -FSr '../#{File.basename(t.name)}' *"
+end
+
 
 #-----------------------------------------------------------------------------
 # Graphviz DOT for diagrams
