@@ -44,6 +44,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Alpha layouts](#alpha-layouts)
     * [Unicode and Emoji](#unicode-and-emoji)
         * [OS-native compose](#os-native-compose)
+    * [Enabling mouse emulation](#enabling-mouse-emulation) 
 * [Installing](#installing)
     * [Flashing](#flashing)
 * [Upgrading](#upgrading)
@@ -258,6 +259,15 @@ Unicode) to type international characters in the World layer, activate this:
 ```
 
 See also: the `COMPOSE_KEY_LINUX` setting and the `COMPOSE_SEQ_*` functions.
+
+### Enabling mouse emulation
+
+To enable mouse emulation through with the mouse layer, you need to select the PR23 beta firmware in the layout editor, and rebuild the layout. 
+
+![image](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+![image](https://github.com/sunaku/glove80-keymaps/assets/26071571/2e4bd618-7c04-41a9-a8dc-15bdc0c4cf7f)
+![image](https://github.com/sunaku/glove80-keymaps/assets/26071571/e8d1c849-ec87-4628-832f-c71d95060375)
+
 
 ## Installing
 
