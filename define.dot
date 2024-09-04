@@ -67,7 +67,7 @@ digraph settings {
 
     INDEX_HOLDING_TYPE -> "\"tap-preferred\""
 
-    INDEX_HOLDING_TIME -> NUMBER_180
+    INDEX_HOLDING_TIME -> NUMBER_170
 
     INDEX_STREAK_DECAY -> NUMBER_100
 
@@ -713,7 +713,7 @@ digraph settings {
     
       NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=diamond]
     
-      NUMBER_180 [label="180", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_170 [label="170", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
     

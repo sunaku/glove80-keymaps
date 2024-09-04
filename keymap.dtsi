@@ -1180,7 +1180,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
     #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME 180
+    #define INDEX_HOLDING_TIME 170
     #endif
 
     //
