@@ -59,7 +59,7 @@ digraph settings {
 
     CHORD_HOLDING_TYPE -> HOMEY_HOLDING_TYPE
 
-    CHORD_HOLDING_TIME -> NUMBER_150
+    CHORD_HOLDING_TIME -> NUMBER_100
 
     CHORD_STREAK_DECAY -> HOMEY_STREAK_DECAY
 
@@ -711,13 +711,13 @@ digraph settings {
     
       NUMBER_300 [label="300", style=filled, fillcolor=yellow, shape=diamond]
     
-      NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_170 [label="170", style=filled, fillcolor=yellow, shape=diamond]
     
-      NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
-    
       NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=diamond]
+    
+      NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=diamond]
     
       NUMBER_500 [label="500", style=filled, fillcolor=yellow, shape=diamond]
     
