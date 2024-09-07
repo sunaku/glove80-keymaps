@@ -1,8 +1,9 @@
 // NOTE: Use the `#define` settings below to customize this keymap!
 // For example, here are the main optional features you can enable:
-#define DIFFICULTY_LEVEL  5 // 1:easy --> 5:hard (see levels below)
-#define ENFORCE_BILATERAL   // cancels single-handed home row mod+tap
-//#define ENABLE_KEY_REPEAT // permits "tap then hold" key repetition
+#define DIFFICULTY_LEVEL 3  // 1:easy --> 5:hard (see levels below)
+#define OPERATING_SYSTEM 3  // windows
+#define ENFORCE_BILATERAL  // cancels single-handed home row mod+tap
+#define ENABLE_KEY_REPEAT  // permits "tap then hold" key repetition
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -59,9 +60,9 @@
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
 #ifndef OPERATING_SYSTEM
-#define OPERATING_SYSTEM 1 // linux
+//#define OPERATING_SYSTEM 1 // linux
 //#define OPERATING_SYSTEM 2 // macos
-//#define OPERATING_SYSTEM 3 // windows
+#define OPERATING_SYSTEM 3 // windows
 #endif
 #if OPERATING_SYSTEM == 2
     #define _C      LG
@@ -97,52 +98,84 @@
 //
 // Glove80 specific symbol overrides to support non "en-US" locales
 //
-#undef  AMPS
-#define AMPS  LS(N7)
-#undef  AT
-#define AT    LS(N2)
-#undef  CARET
-#define CARET LS(N6)
-#undef  COLON
-#define COLON LS(SEMI)
-#undef  DLLR
-#define DLLR  LS(N4)
-#undef  DQT
-#define DQT   LS(SQT)
-#undef  EXCL
-#define EXCL  LS(N1)
-#undef  GT
-#define GT    LS(DOT)
-#undef  HASH
-#define HASH  LS(N3)
-#undef  LBRC
-#define LBRC  LS(LBKT)
-#undef  LPAR
-#define LPAR  LS(N9)
-#undef  LT
-#define LT    LS(COMMA)
-#undef  PIPE
-#define PIPE  LS(BSLH)
-#undef  PLUS
-#define PLUS  LS(EQUAL)
-#undef  PRCNT
-#define PRCNT LS(N5)
-#undef  QMARK
-#define QMARK LS(FSLH)
-#undef  RBRC
-#define RBRC  LS(RBKT)
-#undef  RPAR
-#define RPAR  LS(N0)
-#undef  STAR
-#define STAR  LS(N8)
-#undef  TILDE
-#define TILDE LS(GRAVE)
-#undef  UNDER
-#define UNDER LS(MINUS)
+#ifndef LOCALE
+//#define LOCALE 1 // en-US
+#define LOCALE 2 // sv-SE
+#endif
+#if LOCALE == 2
+    #define _AMPS  LS(N6)
+    #define _AT    RA(N2)
+    #define _CARET RBRC
+    #define _COLON LS(DOT)
+    #define _DLLR  RA(N4)
+    #define _DQT   LS(N2)
+    #define _EXCL  LS(N1)
+    #define _GT    LS(NON_US_BSLH)
+    #define _HASH  LS(N3)
+    #define _LBRC  RA(N7)
+    #define _LPAR  LS(N8)
+    #define _LT    NON_US_BSLH
+    #define _PIPE  RA(NON_US_BSLH)
+    #define _PLUS  MINUS
+    #define _MINUS FSLH
+    #define _PRCNT LS(N5)
+    #define _QMARK LS(MINUS)
+    #define _RBRC  RA(N0)
+    #define _RPAR  LS(N9)
+    #define _STAR  PIPE
+    #define _TILDE RA(RBKT)
+    #define _UNDER LS(FSLH)
+    #define _SQT   BSLH
+    #define _FSLH  LS(N7)
+    #define _BSLH  RA(MINUS)
+    #define _EQUAL LS(N0)
+    #define _LBKT  RA(N8)
+    #define _RBKT  RA(N9)
+    #define _COMMA COMMA
+    #define _DOT   DOT
+    #define _SEMI  LS(COMMA)
+    #define _COLON LS(DOT)
+    #define _GRAVE PLUS
+#else
+    #define _AMPS  LS(N7)
+    #define _AT    LS(N2)
+    #define _CARET LS(N6)
+    #define _COLON LS(SEMI)
+    #define _DLLR  LS(N4)
+    #define _DQT   LS(SQT)
+    #define _EXCL  LS(N1)
+    #define _GT    LS(DOT)
+    #define _HASH  LS(N3)
+    #define _LBRC  LS(LBKT)
+    #define _LPAR  LS(N9)
+    #define _LT    LS(COMMA)
+    #define _PIPE  LS(BSLH)
+    #define _PLUS  LS(EQUAL)
+    #define _MINUS MINUS
+    #define _PRCNT LS(N5)
+    #define _QMARK LS(FSLH)
+    #define _RBRC  LS(RBKT)
+    #define _RPAR  LS(N0)
+    #define _STAR  LS(N8)
+    #define _TILDE LS(GRAVE)
+    #define _UNDER LS(MINUS)
+    #define _SQT   SQT
+    #define _FSLH  FSLH
+    #define _BSLH  BSLH
+    #define _EQUAL EQUAL
+    #define _LBKT  LBKT
+    #define _RBKT  RBKT
+    #define _COMMA COMMA
+    #define _DOT   DOT
+    #define _SEMI  SEMI
+    #define _COLON COLON
+    #define _GRAVE GRAVE
+#endif
 
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
+#ifdef LAYER_Engrammer
 #if LAYER_Engrammer == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
@@ -154,7 +187,7 @@
 #define KEY_RH_C4R1 F8
 #define KEY_RH_C5R1 F9
 #define KEY_RH_C6R1 F10
-#define KEY_LH_C6R2 EQUAL
+#define KEY_LH_C6R2 F11
 #define KEY_LH_C5R2 N1
 #define KEY_LH_C4R2 N2
 #define KEY_LH_C3R2 N3
@@ -165,14 +198,14 @@
 #define KEY_RH_C3R2 N8
 #define KEY_RH_C4R2 N9
 #define KEY_RH_C5R2 N0
-#define KEY_RH_C6R2 BSLH
-#define KEY_LH_C6R3 GRAVE
+#define KEY_RH_C6R2 F12
+#define KEY_LH_C6R3 EQUAL
 #define KEY_LH_C5R3 B
 #define KEY_LH_C4R3 Y
 #define KEY_LH_C3R3 O
 #define KEY_LH_C2R3 U
-#define KEY_LH_C1R3 SQT
-#define KEY_RH_C1R3 SEMI
+#define KEY_LH_C1R3 BSLH
+#define KEY_RH_C1R3 DQT
 #define KEY_RH_C2R3 L
 #define KEY_RH_C3R3 D
 #define KEY_RH_C4R3 W
@@ -189,30 +222,30 @@
 #define KEY_RH_C3R4 T
 #define KEY_RH_C4R4 S
 #define KEY_RH_C5R4 N
-#define KEY_RH_C6R4 Q
-#define KEY_LH_C6R5 LSHFT
+#define KEY_RH_C6R4 EQUAL
+#define KEY_LH_C6R5 Z
 #define KEY_LH_C5R5 G
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 J
 #define KEY_LH_C2R5 K
-#define KEY_LH_C1R5 MINUS
+#define KEY_LH_C1R5 FSLH
 #define KEY_LH_T1 ESC
 #define KEY_LH_T2 UP
 #define KEY_LH_T3 DOWN
 #define KEY_RH_T3 LEFT
 #define KEY_RH_T2 RIGHT
 #define KEY_RH_T1 ENTER
-#define KEY_RH_C1R5 FSLH
+#define KEY_RH_C1R5 MINUS
 #define KEY_RH_C2R5 R
 #define KEY_RH_C3R5 M
 #define KEY_RH_C4R5 F
 #define KEY_RH_C5R5 P
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 Q
 #define KEY_LH_C6R6 0
-#define KEY_LH_C5R6 HOME
-#define KEY_LH_C4R6 PG_UP
-#define KEY_LH_C3R6 PG_DN
-#define KEY_LH_C2R6 END
+#define KEY_LH_C5R6 0
+#define KEY_LH_C4R6 LBKT
+#define KEY_LH_C3R6 SQT
+#define KEY_LH_C2R6 SEMI
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
 #define KEY_LH_T6 0
@@ -225,6 +258,8 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
+#endif
+#ifdef LAYER_Engram
 #if LAYER_Engram == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
@@ -307,7 +342,9 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
-#if LAYER_Dvorak == 0
+#endif
+#ifdef LAYER_Svorak
+#if LAYER_Svorak == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
 #define KEY_LH_C4R1 F3
@@ -318,7 +355,7 @@
 #define KEY_RH_C4R1 F8
 #define KEY_RH_C5R1 F9
 #define KEY_RH_C6R1 F10
-#define KEY_LH_C6R2 EQUAL
+#define KEY_LH_C6R2 F11
 #define KEY_LH_C5R2 N1
 #define KEY_LH_C4R2 N2
 #define KEY_LH_C3R2 N3
@@ -329,11 +366,11 @@
 #define KEY_RH_C3R2 N8
 #define KEY_RH_C4R2 N9
 #define KEY_RH_C5R2 N0
-#define KEY_RH_C6R2 BSLH
+#define KEY_RH_C6R2 F12
 #define KEY_LH_C6R3 GRAVE
-#define KEY_LH_C5R3 SQT
-#define KEY_LH_C4R3 COMMA
-#define KEY_LH_C3R3 DOT
+#define KEY_LH_C5R3 LBKT
+#define KEY_LH_C4R3 SQT
+#define KEY_LH_C3R3 SEMI
 #define KEY_LH_C2R3 P
 #define KEY_LH_C1R3 Y
 #define KEY_RH_C1R3 F
@@ -341,7 +378,7 @@
 #define KEY_RH_C3R3 C
 #define KEY_RH_C4R3 R
 #define KEY_RH_C5R3 L
-#define KEY_RH_C6R3 SLASH
+#define KEY_RH_C6R3 BSLH
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 A
 #define KEY_LH_C4R4 O
@@ -353,9 +390,9 @@
 #define KEY_RH_C3R4 T
 #define KEY_RH_C4R4 N
 #define KEY_RH_C5R4 S
-#define KEY_RH_C6R4 MINUS
-#define KEY_LH_C6R5 LSHFT
-#define KEY_LH_C5R5 SEMI
+#define KEY_RH_C6R4 FSLH
+#define KEY_LH_C6R5 COMMA
+#define KEY_LH_C5R5 DOT
 #define KEY_LH_C4R5 Q
 #define KEY_LH_C3R5 J
 #define KEY_LH_C2R5 K
@@ -371,24 +408,26 @@
 #define KEY_RH_C3R5 W
 #define KEY_RH_C4R5 V
 #define KEY_RH_C5R5 Z
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 0
 #define KEY_LH_C6R6 0
-#define KEY_LH_C5R6 HOME
-#define KEY_LH_C4R6 PG_UP
-#define KEY_LH_C3R6 PG_DN
-#define KEY_LH_C2R6 END
+#define KEY_LH_C5R6 0
+#define KEY_LH_C4R6 0
+#define KEY_LH_C3R6 0
+#define KEY_LH_C2R6 0
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
 #define KEY_LH_T6 0
 #define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
-#define KEY_RH_C2R6 LPAR
-#define KEY_RH_C3R6 LBKT
-#define KEY_RH_C4R6 RBKT
-#define KEY_RH_C5R6 RPAR
+#define KEY_RH_C2R6 0
+#define KEY_RH_C3R6 0
+#define KEY_RH_C4R6 0
+#define KEY_RH_C5R6 0
 #define KEY_RH_C6R6 0
 #endif
+#endif
+#ifdef LAYER_Workman
 #if LAYER_Workman == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
@@ -471,6 +510,8 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
+#endif
+#ifdef LAYER_Colemak
 #if LAYER_Colemak == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
@@ -553,6 +594,8 @@
 #define KEY_RH_C5R6 RPAR
 #define KEY_RH_C6R6 0
 #endif
+#endif
+#ifdef LAYER_QWERTY
 #if LAYER_QWERTY == 0
 #define KEY_LH_C6R1 F1
 #define KEY_LH_C5R1 F2
@@ -564,7 +607,7 @@
 #define KEY_RH_C4R1 F8
 #define KEY_RH_C5R1 F9
 #define KEY_RH_C6R1 F10
-#define KEY_LH_C6R2 EQUAL
+#define KEY_LH_C6R2 F11
 #define KEY_LH_C5R2 N1
 #define KEY_LH_C4R2 N2
 #define KEY_LH_C3R2 N3
@@ -575,7 +618,7 @@
 #define KEY_RH_C3R2 N8
 #define KEY_RH_C4R2 N9
 #define KEY_RH_C5R2 N0
-#define KEY_RH_C6R2 BSLH
+#define KEY_RH_C6R2 F12
 #define KEY_LH_C6R3 GRAVE
 #define KEY_LH_C5R3 Q
 #define KEY_LH_C4R3 W
@@ -587,7 +630,7 @@
 #define KEY_RH_C3R3 I
 #define KEY_RH_C4R3 O
 #define KEY_RH_C5R3 P
-#define KEY_RH_C6R3 MINUS
+#define KEY_RH_C6R3 LBKT
 #define KEY_LH_C6R4 CAPSLOCK
 #define KEY_LH_C5R4 A
 #define KEY_LH_C4R4 S
@@ -600,7 +643,7 @@
 #define KEY_RH_C4R4 L
 #define KEY_RH_C5R4 SEMI
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 NON_US_BSLH
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
@@ -617,23 +660,24 @@
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 0
 #define KEY_LH_C6R6 0
-#define KEY_LH_C5R6 HOME
-#define KEY_LH_C4R6 PG_UP
-#define KEY_LH_C3R6 PG_DN
-#define KEY_LH_C2R6 END
+#define KEY_LH_C5R6 0
+#define KEY_LH_C4R6 EQUAL
+#define KEY_LH_C3R6 RBKT
+#define KEY_LH_C2R6 0
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
 #define KEY_LH_T6 0
 #define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
-#define KEY_RH_C2R6 LPAR
-#define KEY_RH_C3R6 LBKT
-#define KEY_RH_C4R6 RBKT
-#define KEY_RH_C5R6 RPAR
+#define KEY_RH_C2R6 0
+#define KEY_RH_C3R6 BSLH
+#define KEY_RH_C4R6 MINUS
+#define KEY_RH_C5R6 0
 #define KEY_RH_C6R6 0
+#endif
 #endif
 
 behaviors {
@@ -3133,7 +3177,7 @@ behaviors {
     parang_left: left_parenthesis_and_less_than {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp LPAR>, <&kp LT>;
+        bindings = <&kp _LPAR>, <&kp _LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -3143,7 +3187,20 @@ behaviors {
     parang_right: right_parenthesis_and_greater_than {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp RPAR>, <&kp GT>;
+        bindings = <&kp _RPAR>, <&kp _GT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    brac_left: left_bracket_and_left_brace {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _LBKT>, <&kp _LBRC>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    brac_right: right_bracket_and_right_brace {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _RBKT>, <&kp _RBRC>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -3155,109 +3212,208 @@ behaviors {
     engram_N1: engram_shift_N1_PIPE {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N1>, <&kp PIPE>;
+        bindings = <&kp N1>, <&kp _PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N2: engram_shift_N2_EQUAL {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N2>, <&kp EQUAL>;
+        bindings = <&kp N2>, <&kp _EQUAL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N3: engram_shift_N3_TILDE {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N3>, <&kp TILDE>;
+        bindings = <&kp N3>, <&kp _TILDE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N4: engram_shift_N4_PLUS {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N4>, <&kp PLUS>;
+        bindings = <&kp N4>, <&kp _PLUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N5: engram_shift_N5_LT {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N5>, <&kp LT>;
+        bindings = <&kp N5>, <&kp _LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N6: engram_shift_N6_GT {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N6>, <&kp GT>;
+        bindings = <&kp N6>, <&kp _GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N7: engram_shift_N7_CARET {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N7>, <&kp CARET>;
+        bindings = <&kp N7>, <&kp _CARET>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N8: engram_shift_N8_AMPS {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N8>, <&kp AMPS>;
+        bindings = <&kp N8>, <&kp _AMPS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N9: engram_shift_N9_PRCNT {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N9>, <&kp PRCNT>;
+        bindings = <&kp N9>, <&kp _PRCNT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_N0: engram_shift_N0_STAR {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N0>, <&kp STAR>;
+        bindings = <&kp N0>, <&kp _STAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_SQT: engram_shift_SQT_LPAR {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp SQT>, <&kp LPAR>;
+        bindings = <&kp _SQT>, <&kp _LPAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_DQT: engram_shift_DQT_RPAR {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp DQT>, <&kp RPAR>;
+        bindings = <&kp _DQT>, <&kp _RPAR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_COMMA: engram_shift_COMMA_SEMI {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp COMMA>, <&kp SEMI>;
+        bindings = <&kp _COMMA>, <&kp _SEMI>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_DOT: engram_shift_DOT_COLON {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp DOT>, <&kp COLON>;
+        bindings = <&kp _DOT>, <&kp _COLON>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_QMARK: engram_shift_QMARK_EXCL {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp QMARK>, <&kp EXCL>;
+        bindings = <&kp _QMARK>, <&kp _EXCL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_HASH: engram_shift_HASH_DLLR {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp HASH>, <&kp DLLR>;
+        bindings = <&kp _HASH>, <&kp _DLLR>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_AT: engram_shift_AT_GRAVE {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp AT>, <&kp GRAVE>;
+        bindings = <&kp _AT>, <&kp _GRAVE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     engram_FSLH: engram_shift_FSLH_BSLH {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp FSLH>, <&kp BSLH>;
+        bindings = <&kp _FSLH>, <&kp _BSLH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //
+    // Custom shifted pairs for the Engrammer layout
+    // - https://sunaku.github.io/engram-keyboard-layout.html
+    //
+    en_us_N1: engrammer_shift_N1_EXCL {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N1>, <&kp _EXCL>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N2: engrammer_shift_N2_AT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N2>, <&kp _AT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N3: engrammer_shift_N3_HASH {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N3>, <&kp _HASH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N4: engrammer_shift_N4_DLLR {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N4>, <&kp _DLLR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N5: engrammer_shift_N5_PRCNT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N5>, <&kp _PRCNT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N6: engrammer_shift_N6_CARET {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N6>, <&kp _CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N7: engrammer_shift_N7_AMPS {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N7>, <&kp _AMPS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    en_us_N8: engrammer_shift_N8_STAR {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N8>, <&kp _STAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engrammer_N9: engrammer_shift_N9_PIPE {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N9>, <&kp _PIPE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engrammer_N0: engrammer_shift_N0 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N0>, <&kp N0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engrammer_SQT: engrammer_shift_SQT_SQT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _SQT>, <&kp _SQT>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engrammer_DQT: engrammer_shift_DQT_EXCL {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _DQT>, <&kp _EXCL>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engrammer_FSLH: engrammer_shift_FSLH_BSLH {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _FSLH>, <&kp _BSLH>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    engrammer_EQUAL: engrammer_shift_EQUAL_TILDE {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _EQUAL>, <&kp _TILDE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    //
+    // Custom shifted pairs for the Svorak layout
+    //
+    svorak_SQT: svorak_shift_SQT_DQT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp _SQT>, <&kp _DQT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
