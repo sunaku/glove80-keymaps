@@ -11,6 +11,15 @@
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
+<%
+  emit_setting_ifndef = lambda do |name, value|
+%>
+    #ifndef <%= name %>
+    #define <%= name %> <%= value %>
+    #endif
+<%
+  end
+%>
 
 //
 // OPERATING_SYSTEM defines which operating system you intend to use
@@ -233,9 +242,9 @@ combos {
     // COMBO_FIRING_DECAY defines how much time you have left (milliseconds)
     // after pressing the first key in a ZMK combo to finish the whole chord.
     //
-    #ifndef COMBO_FIRING_DECAY
-    #define COMBO_FIRING_DECAY 50
-    #endif
+    <%
+      emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
+    %>
 
     #ifdef LAYER_Gaming
     combo_gaming_layer_toggle {
@@ -318,14 +327,6 @@ behaviors {
     #define DIFFICULTY_LEVEL_HOLDING_TIME  ((6 - DIFFICULTY_LEVEL) * 100)
     #define DIFFICULTY_LEVEL_STREAK_DECAY (((6 - DIFFICULTY_LEVEL) *  50) + 100)
     <%
-      emit_setting_ifndef = lambda do |name, value|
-    %>
-    #ifndef <%= name %>
-    #define <%= name %> <%= value %>
-    #endif
-    <%
-      end
-
       %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
         %w[ HOLDING_TIME STREAK_DECAY ].each do |setting|
           emit_setting_ifndef.("#{category}_#{setting}", "DIFFICULTY_LEVEL_#{setting}")
@@ -356,12 +357,10 @@ behaviors {
         #define PINKY_FINGER_MOD LGUI
       #endif
     #endif
-    #ifndef RING1_FINGER_MOD
-    #define RING1_FINGER_MOD LALT
-    #endif
-    #ifndef RING2_FINGER_MOD
-    #define RING2_FINGER_MOD RALT
-    #endif
+    <%
+      emit_setting_ifndef.(:RING1_FINGER_MOD, :LALT)
+      emit_setting_ifndef.(:RING2_FINGER_MOD, :RALT)
+    %>
     #ifndef MIDDY_FINGER_MOD
       #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
         #define MIDDY_FINGER_MOD LGUI
@@ -369,85 +368,67 @@ behaviors {
         #define MIDDY_FINGER_MOD LCTL
       #endif
     #endif
-    #ifndef INDEX_FINGER_MOD
-    #define INDEX_FINGER_MOD LSFT
-    #endif
+    <%
+      emit_setting_ifndef.(:INDEX_FINGER_MOD, :LSFT)
+    %>
     //
     // The following settings let you configure mods individually, per finger:
     //
-    #ifndef LEFT_PINKY_MOD
-    #define LEFT_PINKY_MOD  PINKY_FINGER_MOD
-    #endif
-    #ifndef RIGHT_PINKY_MOD
-    #define RIGHT_PINKY_MOD PINKY_FINGER_MOD
-    #endif
-    #ifndef LEFT_RING1_MOD
-    #define LEFT_RING1_MOD  RING1_FINGER_MOD
-    #endif
-    #ifndef RIGHT_RING1_MOD
-    #define RIGHT_RING1_MOD RING1_FINGER_MOD
-    #endif
-    #ifndef LEFT_RING2_MOD
-    #define LEFT_RING2_MOD  RING2_FINGER_MOD
-    #endif
-    #ifndef RIGHT_RING2_MOD
-    #define RIGHT_RING2_MOD RING2_FINGER_MOD
-    #endif
-    #ifndef LEFT_MIDDY_MOD
-    #define LEFT_MIDDY_MOD  MIDDY_FINGER_MOD
-    #endif
-    #ifndef RIGHT_MIDDY_MOD
-    #define RIGHT_MIDDY_MOD MIDDY_FINGER_MOD
-    #endif
-    #ifndef LEFT_INDEX_MOD
-    #define LEFT_INDEX_MOD  INDEX_FINGER_MOD
-    #endif
-    #ifndef RIGHT_INDEX_MOD
-    #define RIGHT_INDEX_MOD INDEX_FINGER_MOD
-    #endif
+    <%
+      emit_setting_ifndef.(:LEFT_PINKY_MOD,  :PINKY_FINGER_MOD)
+      emit_setting_ifndef.(:RIGHT_PINKY_MOD, :PINKY_FINGER_MOD)
+      emit_setting_ifndef.(:LEFT_RING1_MOD,  :RING1_FINGER_MOD)
+      emit_setting_ifndef.(:RIGHT_RING1_MOD, :RING1_FINGER_MOD)
+      emit_setting_ifndef.(:LEFT_RING2_MOD,  :RING2_FINGER_MOD)
+      emit_setting_ifndef.(:RIGHT_RING2_MOD, :RING2_FINGER_MOD)
+      emit_setting_ifndef.(:LEFT_MIDDY_MOD,  :MIDDY_FINGER_MOD)
+      emit_setting_ifndef.(:RIGHT_MIDDY_MOD, :MIDDY_FINGER_MOD)
+      emit_setting_ifndef.(:LEFT_INDEX_MOD,  :INDEX_FINGER_MOD)
+      emit_setting_ifndef.(:RIGHT_INDEX_MOD, :INDEX_FINGER_MOD)
+    %>
 
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the pinky, ring, and middle fingers (which are assigned to Super,
     // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
     //
-    #ifndef HOMEY_HOLDING_TYPE
-    #define HOMEY_HOLDING_TYPE "tap-preferred"
-    #endif
+    <%
+      emit_setting_ifndef.(:HOMEY_HOLDING_TYPE, '"tap-preferred"')
+    %>
 
     //
     // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
     // home row mod keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
-    #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 240 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
-    #endif
+    <%
+      emit_setting_ifndef.(:HOMEY_HOLDING_TIME, 240)
+    %> // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
 
     //
     // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
-    #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 150
-    #endif
+    <%
+      emit_setting_ifndef.(:HOMEY_STREAK_DECAY, 150)
+    %>
 
     //
     // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
+    <%
+      emit_setting_ifndef.(:HOMEY_REPEAT_DECAY, 300)
+    %> // "tap then hold" for key auto-repeat
 
     //
     // CHORD_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for chorded home row mods (secondary keypresses in multi-mod chords).
     //
-    #ifndef CHORD_HOLDING_TYPE
-    #define CHORD_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+    <%
+      emit_setting_ifndef.(:CHORD_HOLDING_TYPE, :HOMEY_HOLDING_TYPE)
+    %>
 
     //
     // CHORD_HOLDING_TIME defines how long you need to hold (milliseconds)
@@ -455,9 +436,9 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     // This is specifically for secondary keypresses in multi-mod chords.
     //
-    #ifndef CHORD_HOLDING_TIME
-    #define CHORD_HOLDING_TIME 100
-    #endif
+    <%
+      emit_setting_ifndef.(:CHORD_HOLDING_TIME, 100)
+    %>
 
     //
     // CHORD_STREAK_DECAY defines how long you need to wait (milliseconds)
@@ -465,18 +446,18 @@ behaviors {
     // unintended activation of home row mods when you're actively typing
     // This is specifically for secondary keypresses in multi-mod chords.
     //
-    #ifndef CHORD_STREAK_DECAY
-    #define CHORD_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+    <%
+      emit_setting_ifndef.(:CHORD_STREAK_DECAY, :HOMEY_STREAK_DECAY)
+    %>
 
     //
     // CHORD_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     // This is specifically for secondary keypresses in multi-mod chords.
     //
-    #ifndef CHORD_REPEAT_DECAY
-    #define CHORD_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
+    <%
+      emit_setting_ifndef.(:CHORD_REPEAT_DECAY, :HOMEY_REPEAT_DECAY)
+    %>
 
     //
     // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -488,35 +469,35 @@ behaviors {
     // Typing streaks and the `hold-trigger-on-release` setting are disabled
     // for the index fingers so as not to hinder their speed and dexterity.
     //
-    #ifndef INDEX_HOLDING_TYPE
-    #define INDEX_HOLDING_TYPE "tap-preferred"
-    #endif
+    <%
+      emit_setting_ifndef.(:INDEX_HOLDING_TYPE, '"tap-preferred"')
+    %>
 
     //
     // INDEX_HOLDING_TIME defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
-    #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME 170
-    #endif
+    <%
+      emit_setting_ifndef.(:INDEX_HOLDING_TIME, 170)
+    %>
 
     //
     // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
-    #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY 100
-    #endif
+    <%
+      emit_setting_ifndef.(:INDEX_STREAK_DECAY, 100)
+    %>
 
     //
     // INDEX_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #ifndef INDEX_REPEAT_DECAY
-    #define INDEX_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
+    <%
+      emit_setting_ifndef.(:INDEX_REPEAT_DECAY, 300)
+      %> // "tap then hold" for key auto-repeat
 
     //
     // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -528,35 +509,35 @@ behaviors {
     // Typing streaks and the `hold-trigger-on-release` setting are disabled
     // for the index fingers so as not to hinder their speed and dexterity.
     //
-    #ifndef PLAIN_HOLDING_TYPE
-    #define PLAIN_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+    <%
+      emit_setting_ifndef.(:PLAIN_HOLDING_TYPE, :HOMEY_HOLDING_TYPE)
+    %>
 
     //
     // PLAIN_HOLDING_TIME defines how long you need to hold (milliseconds)
     // index finger keys in order to send their modifiers to the computer
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
-    #ifndef PLAIN_HOLDING_TIME
-    #define PLAIN_HOLDING_TIME 200
-    #endif
+    <%
+      emit_setting_ifndef.(:PLAIN_HOLDING_TIME, 200)
+    %>
 
     //
     // PLAIN_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
-    #ifndef PLAIN_STREAK_DECAY
-    #define PLAIN_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+    <%
+      emit_setting_ifndef.(:PLAIN_STREAK_DECAY, :HOMEY_STREAK_DECAY)
+    %>
 
     //
     // PLAIN_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #ifndef PLAIN_REPEAT_DECAY
-    #define PLAIN_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
+    <%
+      emit_setting_ifndef.(:PLAIN_REPEAT_DECAY, 300)
+    %> // "tap then hold" for key auto-repeat
 
     //
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -566,25 +547,25 @@ behaviors {
     // activation for the symbol layer (if the tapped symbol key is released
     // while the thumb layer key is still held down) for quicker programming.
     //
-    #ifndef THUMB_HOLDING_TYPE
-    #define THUMB_HOLDING_TYPE "balanced"
-    #endif
+    <%
+      emit_setting_ifndef.(:THUMB_HOLDING_TYPE, '"balanced"')
+    %>
 
     //
     // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
-    #ifndef THUMB_HOLDING_TIME
-    #define THUMB_HOLDING_TIME 200
-    #endif
+    <%
+      emit_setting_ifndef.(:THUMB_HOLDING_TIME, 200)
+    %>
 
     //
     // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #ifndef THUMB_REPEAT_DECAY
-    #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
+    <%
+      emit_setting_ifndef.(:THUMB_REPEAT_DECAY, 300)
+    %> // "tap then hold" for key auto-repeat
 
     //
     // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -594,25 +575,25 @@ behaviors {
     // activation for the symbol layer (if the tapped symbol key is released
     // while the thumb layer key is still held down) for quicker programming.
     //
-    #ifndef SPACE_HOLDING_TYPE
-    #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
-    #endif
+    <%
+      emit_setting_ifndef.(:SPACE_HOLDING_TYPE, :THUMB_HOLDING_TYPE)
+    %>
 
     //
     // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
-    #ifndef SPACE_HOLDING_TIME
-    #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
-    #endif
+    <%
+      emit_setting_ifndef.(:SPACE_HOLDING_TIME, :THUMB_HOLDING_TIME)
+    %>
 
     //
     // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
-    #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY 150
-    #endif
+    <%
+      emit_setting_ifndef.(:SPACE_REPEAT_DECAY, 150)
+    %>
 
     //
     // Glove80 key positions index for positional hold-tap
@@ -989,17 +970,17 @@ behaviors {
     // STICKY_1SHOT_DECAY defines how much time you have left (milliseconds)
     // after tapping a sticky key before it expires (won't apply to next tap).
     //
-    #ifndef STICKY_1SHOT_DECAY
-    #define STICKY_1SHOT_DECAY 500
-    #endif
+    <%
+      emit_setting_ifndef.(:STICKY_1SHOT_DECAY, 500)
+    %>
 
     //
     // STICKY_HOLDING_TIME defines how long you need to hold (milliseconds)
     // sticky one-shot keys in order to trigger their hold (not tap) action.
     //
-    #ifndef STICKY_HOLDING_TIME
-    #define STICKY_HOLDING_TIME CHORD_HOLDING_TIME
-    #endif
+    <%
+      emit_setting_ifndef.(:STICKY_HOLDING_TIME, :CHORD_HOLDING_TIME)
+    %>
 
     sticky_key_modtap: sticky_key_modtap {
         compatible = "zmk,behavior-hold-tap";
@@ -1113,9 +1094,9 @@ macros {
     // after moving the cursor before it selects a word.  A larger delay
     // may allow the macro to move to the next word upon each invocation.
     //
-    #ifndef SELECT_WORD_DELAY
-    #define SELECT_WORD_DELAY 1
-    #endif
+    <%
+      emit_setting_ifndef.(:SELECT_WORD_DELAY, 1)
+    %>
 
     ZMK_MACRO(select_none,
         wait-ms = <SELECT_WORD_DELAY>;
@@ -1219,17 +1200,17 @@ macros {
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
-    #ifndef UNICODE_TAP_DELAY
-    #define UNICODE_TAP_DELAY 1
-    #endif
+    <%
+      emit_setting_ifndef.(:UNICODE_TAP_DELAY, 1)
+    %>
 
     //
     // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
     // between emitting Unicode codepoints in multi-codepoint characters.
     //
-    #ifndef UNICODE_SEQ_DELAY
-    #define UNICODE_SEQ_DELAY 10
-    #endif
+    <%
+      emit_setting_ifndef.(:UNICODE_SEQ_DELAY, 10)
+    %>
 
     #define UNICODE(name, ...) \
         ZMK_MACRO(name, \
@@ -1299,9 +1280,9 @@ macros {
     // #define COMPOSE_KEY_LINUX PSCRN           // compose:prsc
     // #define COMPOSE_KEY_LINUX SLCK            // compose:sclk
     //
-    #ifndef COMPOSE_KEY_LINUX
-    #define COMPOSE_KEY_LINUX RALT
-    #endif
+    <%
+      emit_setting_ifndef.(:COMPOSE_KEY_LINUX, :RALT)
+    %>
 
     //
     // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
@@ -1762,9 +1743,9 @@ macros {
 // MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
 // to move the mouse pointer.
 //
-#ifndef MOUSE_MOTION_DELAY
-#define MOUSE_MOTION_DELAY 0
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_MOTION_DELAY, 0)
+%>
 
 //
 // MOUSE_MOTION_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
@@ -1773,32 +1754,32 @@ macros {
 // acceleration exponent 1: uniform acceleration
 // acceleration exponent 2: uniform jerk
 //
-#ifndef MOUSE_MOTION_ACCELERATION_EXPONENT
-#define MOUSE_MOTION_ACCELERATION_EXPONENT 1
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_MOTION_ACCELERATION_EXPONENT, 1)
+%>
 
 //
 // MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
 // before the mouse pointer speed is suddenly boosted to the maximum value.
 //
-#ifndef MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED
-#define MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED 300
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED, 300)
+%>
 
 //
 // MOUSE_MOTION_MAXIMUM_SPEED defines how quickly the mouse pointer can move.
 //
-#ifndef MOUSE_MOTION_MAXIMUM_SPEED
-#define MOUSE_MOTION_MAXIMUM_SPEED 600
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_MOTION_MAXIMUM_SPEED, 600)
+%>
 
 //
 // MOUSE_SCROLL_DELAY defines how long to wait (milliseconds) before starting
 // to move the mouse pointer.
 //
-#ifndef MOUSE_SCROLL_DELAY
-#define MOUSE_SCROLL_DELAY 0
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_SCROLL_DELAY, 0)
+%>
 
 //
 // MOUSE_SCROLL_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
@@ -1807,24 +1788,24 @@ macros {
 // acceleration exponent 1: uniform acceleration
 // acceleration exponent 2: uniform jerk
 //
-#ifndef MOUSE_SCROLL_ACCELERATION_EXPONENT
-#define MOUSE_SCROLL_ACCELERATION_EXPONENT 0
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_SCROLL_ACCELERATION_EXPONENT, 0)
+%>
 
 //
 // MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
 // before the mouse pointer speed is suddenly boosted to the maximum value.
 //
-#ifndef MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED
-#define MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED 300
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED, 300)
+%>
 
 //
 // MOUSE_SCROLL_MAXIMUM_SPEED defines how quickly the mouse wheel can scroll.
 //
-#ifndef MOUSE_SCROLL_MAXIMUM_SPEED
-#define MOUSE_SCROLL_MAXIMUM_SPEED 10
-#endif
+<%
+  emit_setting_ifndef.(:MOUSE_SCROLL_MAXIMUM_SPEED, 10)
+%>
 
 <%
   emit_at_root_level.() do
