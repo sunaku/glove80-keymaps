@@ -1104,7 +1104,19 @@ behaviors {
     //
     #ifndef HOMEY_HOLDING_TIME
     #define HOMEY_HOLDING_TIME 240
-    #endif // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #endif
+    #ifndef INDEX_HOLDING_TIME
+    #define INDEX_HOLDING_TIME 170
+    #endif
+    #ifndef MIDDY_HOLDING_TIME
+    #define MIDDY_HOLDING_TIME 200
+    #endif
+    #ifndef RING1_HOLDING_TIME
+    #define RING1_HOLDING_TIME 230
+    #endif
+    #ifndef PINKY_HOLDING_TIME
+    #define PINKY_HOLDING_TIME 260
+    #endif
 
     //
     // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)

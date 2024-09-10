@@ -402,8 +402,12 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     <%
-      emit_setting_ifndef.(:HOMEY_HOLDING_TIME, 240)
-    %> // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+      emit_setting_ifndef.(:HOMEY_HOLDING_TIME, 240) # TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+      emit_setting_ifndef.(:INDEX_HOLDING_TIME, 170) # base
+      emit_setting_ifndef.(:MIDDY_HOLDING_TIME, 200) # + 30
+      emit_setting_ifndef.(:RING1_HOLDING_TIME, 230) # + 30
+      emit_setting_ifndef.(:PINKY_HOLDING_TIME, 260) # + 30
+    %>
 
     //
     // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
