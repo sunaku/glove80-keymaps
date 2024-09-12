@@ -321,26 +321,48 @@ behaviors {
     //
     // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
     // It's meant to help newcomers gradually work their way up to mastery.
-    // You can disable this setting by omitting it or assigning a `0` zero.
     //
-    // #define DIFFICULTY_LEVEL 0 // custom (see defaults below)
     // #define DIFFICULTY_LEVEL 1 // novice (500ms)
     // #define DIFFICULTY_LEVEL 2 // slower (400ms)
     // #define DIFFICULTY_LEVEL 3 // normal (300ms)
     // #define DIFFICULTY_LEVEL 4 // faster (200ms)
     // #define DIFFICULTY_LEVEL 5 // expert (100ms)
     //
-    #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-    #define DIFFICULTY_LEVEL_HOLDING_TIME  ((6 - DIFFICULTY_LEVEL) * 100)
-    #define DIFFICULTY_LEVEL_STREAK_DECAY (((6 - DIFFICULTY_LEVEL) *  50) + 100)
+    // You can disable this setting by omitting it or assigning a `0` zero,
+    // in which case it will default to my personal set of time thresholds.
+    //
+    // #define DIFFICULTY_LEVEL 0 // sunaku (150ms)
+    //
+    // No matter what difficulty level you choose, you can always override
+    // any settings in this keymap at the beginning of this configuration.
+    //
+    #ifdef DIFFICULTY_LEVEL
+        #if DIFFICULTY_LEVEL > 0 && DIFFICULTY_LEVEL < 6
+            #ifndef TAPPING_RESOLUTION
+                #define TAPPING_RESOLUTION ((6 - DIFFICULTY_LEVEL) * 100)
+            #endif
+        #endif
+    #endif
+
+    //
+    // TAPPING_RESOLUTION specifies the maximum speed at which the keyboard
+    // confuses your taps as being holds when you type on home row mod keys.
+    // When you lower this value, the same confusion should still occur; but
+    // when you raise this value, you should be able to type normally again.
+    //
     <%
-      %w[ HOMEY INDEX PLAIN SPACE ].each do |category|
-        %w[ HOLDING_TIME STREAK_DECAY ].each do |setting|
-          emit_setting_ifndef.("#{category}_#{setting}", "DIFFICULTY_LEVEL_#{setting}")
+      TAPPING_RESOLUTION = 150 # my personal threshold on Kailh Choc v1 Reds
+      emit_setting_ifndef.(:TAPPING_RESOLUTION, TAPPING_RESOLUTION)
+
+      resolve_tap_timing = lambda do |milliseconds|
+        delta = milliseconds - TAPPING_RESOLUTION
+        if delta == 0
+          "TAPPING_RESOLUTION"
+        else
+          "(TAPPING_RESOLUTION #{delta > 0 ? "+ #{delta}" : "- #{-delta}"})"
         end
       end
     %>
-    #endif
 
     //
     // ENFORCE_BILATERAL cancels out single-handed home row mods activation by
@@ -409,11 +431,18 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     <%
-      emit_setting_ifndef.(:HOMEY_HOLDING_TIME, 240) # TAPPING_TERM + ALLOW_CROSSOVER_AFTER
-      emit_setting_ifndef.(:INDEX_HOLDING_TIME, 170) # base
-      emit_setting_ifndef.(:MIDDY_HOLDING_TIME, 200) # + 30
-      emit_setting_ifndef.(:RING1_HOLDING_TIME, 230) # + 30
-      emit_setting_ifndef.(:PINKY_HOLDING_TIME, 260) # + 30
+      emit_setting_ifndef.(:HOMEY_HOLDING_TIME, resolve_tap_timing.(240))
+
+      INDEX_HOLDING_TIME = TAPPING_RESOLUTION + 20 # 170ms
+      MIDDY_HOLDING_TIME = INDEX_HOLDING_TIME + 30 # 200ms
+      RING1_HOLDING_TIME = MIDDY_HOLDING_TIME + 30 # 230ms
+      PINKY_HOLDING_TIME = RING1_HOLDING_TIME + 30 # 260ms
+
+      emit_setting_ifndef.(:INDEX_HOLDING_TIME, resolve_tap_timing.(INDEX_HOLDING_TIME))
+      emit_setting_ifndef.(:MIDDY_HOLDING_TIME, resolve_tap_timing.(MIDDY_HOLDING_TIME))
+      emit_setting_ifndef.(:RING1_HOLDING_TIME, resolve_tap_timing.(RING1_HOLDING_TIME))
+      emit_setting_ifndef.(:RING2_HOLDING_TIME, :RING1_HOLDING_TIME)
+      emit_setting_ifndef.(:PINKY_HOLDING_TIME, resolve_tap_timing.(PINKY_HOLDING_TIME))
     %>
 
     //
@@ -422,7 +451,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     <%
-      emit_setting_ifndef.(:HOMEY_STREAK_DECAY, 150)
+      emit_setting_ifndef.(:HOMEY_STREAK_DECAY, resolve_tap_timing.(150))
     %>
 
     //
@@ -430,7 +459,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     <%
-      emit_setting_ifndef.(:HOMEY_REPEAT_DECAY, 300)
+      emit_setting_ifndef.(:HOMEY_REPEAT_DECAY, resolve_tap_timing.(300))
     %> // "tap then hold" for key auto-repeat
 
     //
@@ -448,7 +477,7 @@ behaviors {
     // This is specifically for secondary keypresses in multi-mod chords.
     //
     <%
-      emit_setting_ifndef.(:CHORD_HOLDING_TIME, 100)
+      emit_setting_ifndef.(:CHORD_HOLDING_TIME, resolve_tap_timing.(100))
     %>
 
     //
@@ -485,21 +514,12 @@ behaviors {
     %>
 
     //
-    // INDEX_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // index finger keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
-    //
-    <%
-      emit_setting_ifndef.(:INDEX_HOLDING_TIME, 170)
-    %>
-
-    //
     // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
     <%
-      emit_setting_ifndef.(:INDEX_STREAK_DECAY, 100)
+      emit_setting_ifndef.(:INDEX_STREAK_DECAY, resolve_tap_timing.(100))
     %>
 
     //
@@ -507,8 +527,8 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     <%
-      emit_setting_ifndef.(:INDEX_REPEAT_DECAY, 300)
-      %> // "tap then hold" for key auto-repeat
+      emit_setting_ifndef.(:INDEX_REPEAT_DECAY, resolve_tap_timing.(300))
+    %> // "tap then hold" for key auto-repeat
 
     //
     // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
@@ -530,7 +550,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
     <%
-      emit_setting_ifndef.(:PLAIN_HOLDING_TIME, 200)
+      emit_setting_ifndef.(:PLAIN_HOLDING_TIME, resolve_tap_timing.(200))
     %>
 
     //
@@ -547,7 +567,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     <%
-      emit_setting_ifndef.(:PLAIN_REPEAT_DECAY, 300)
+      emit_setting_ifndef.(:PLAIN_REPEAT_DECAY, resolve_tap_timing.(300))
     %> // "tap then hold" for key auto-repeat
 
     //
@@ -567,7 +587,7 @@ behaviors {
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
     <%
-      emit_setting_ifndef.(:THUMB_HOLDING_TIME, 200)
+      emit_setting_ifndef.(:THUMB_HOLDING_TIME, resolve_tap_timing.(200))
     %>
 
     //
@@ -575,7 +595,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     <%
-      emit_setting_ifndef.(:THUMB_REPEAT_DECAY, 300)
+      emit_setting_ifndef.(:THUMB_REPEAT_DECAY, resolve_tap_timing.(300))
     %> // "tap then hold" for key auto-repeat
 
     //
@@ -603,7 +623,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     <%
-      emit_setting_ifndef.(:SPACE_REPEAT_DECAY, 150)
+      emit_setting_ifndef.(:SPACE_REPEAT_DECAY, resolve_tap_timing.(150))
     %>
 
     //

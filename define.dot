@@ -7,21 +7,7 @@ digraph settings {
 
     COMBO_FIRING_DECAY -> NUMBER_50
 
-    HOMEY_HOLDING_TIME -> DIFFICULTY_LEVEL_HOLDING_TIME
-
-    HOMEY_STREAK_DECAY -> DIFFICULTY_LEVEL_STREAK_DECAY
-
-    INDEX_HOLDING_TIME -> DIFFICULTY_LEVEL_HOLDING_TIME
-
-    INDEX_STREAK_DECAY -> DIFFICULTY_LEVEL_STREAK_DECAY
-
-    PLAIN_HOLDING_TIME -> DIFFICULTY_LEVEL_HOLDING_TIME
-
-    PLAIN_STREAK_DECAY -> DIFFICULTY_LEVEL_STREAK_DECAY
-
-    SPACE_HOLDING_TIME -> DIFFICULTY_LEVEL_HOLDING_TIME
-
-    SPACE_STREAK_DECAY -> DIFFICULTY_LEVEL_STREAK_DECAY
+    TAPPING_RESOLUTION -> NUMBER_150
 
     RING1_FINGER_MOD -> LALT
 
@@ -51,23 +37,25 @@ digraph settings {
 
     HOMEY_HOLDING_TYPE -> "\"tap-preferred\""
 
-    HOMEY_HOLDING_TIME -> NUMBER_240
+    HOMEY_HOLDING_TIME -> "+90"
 
-    INDEX_HOLDING_TIME -> NUMBER_170
+    INDEX_HOLDING_TIME -> "+20"
 
-    MIDDY_HOLDING_TIME -> NUMBER_200
+    MIDDY_HOLDING_TIME -> "+50"
 
-    RING1_HOLDING_TIME -> NUMBER_230
+    RING1_HOLDING_TIME -> "+80"
 
-    PINKY_HOLDING_TIME -> NUMBER_260
+    RING2_HOLDING_TIME -> RING1_HOLDING_TIME
 
-    HOMEY_STREAK_DECAY -> NUMBER_150
+    PINKY_HOLDING_TIME -> "+110"
 
-    HOMEY_REPEAT_DECAY -> NUMBER_300
+    HOMEY_STREAK_DECAY -> TAPPING_RESOLUTION
+
+    HOMEY_REPEAT_DECAY -> "+150"
 
     CHORD_HOLDING_TYPE -> HOMEY_HOLDING_TYPE
 
-    CHORD_HOLDING_TIME -> NUMBER_100
+    CHORD_HOLDING_TIME -> "-50"
 
     CHORD_STREAK_DECAY -> HOMEY_STREAK_DECAY
 
@@ -75,31 +63,29 @@ digraph settings {
 
     INDEX_HOLDING_TYPE -> "\"tap-preferred\""
 
-    INDEX_HOLDING_TIME -> NUMBER_170
+    INDEX_STREAK_DECAY -> "-50"
 
-    INDEX_STREAK_DECAY -> NUMBER_100
-
-    INDEX_REPEAT_DECAY -> NUMBER_300
+    INDEX_REPEAT_DECAY -> "+150"
 
     PLAIN_HOLDING_TYPE -> HOMEY_HOLDING_TYPE
 
-    PLAIN_HOLDING_TIME -> NUMBER_200
+    PLAIN_HOLDING_TIME -> "+50"
 
     PLAIN_STREAK_DECAY -> HOMEY_STREAK_DECAY
 
-    PLAIN_REPEAT_DECAY -> NUMBER_300
+    PLAIN_REPEAT_DECAY -> "+150"
 
     THUMB_HOLDING_TYPE -> "\"balanced\""
 
-    THUMB_HOLDING_TIME -> NUMBER_200
+    THUMB_HOLDING_TIME -> "+50"
 
-    THUMB_REPEAT_DECAY -> NUMBER_300
+    THUMB_REPEAT_DECAY -> "+150"
 
     SPACE_HOLDING_TYPE -> THUMB_HOLDING_TYPE
 
     SPACE_HOLDING_TIME -> THUMB_HOLDING_TIME
 
-    SPACE_REPEAT_DECAY -> NUMBER_150
+    SPACE_REPEAT_DECAY -> TAPPING_RESOLUTION
 
     PINKY_HOLDING_TYPE -> HOMEY_HOLDING_TYPE
 
@@ -695,49 +681,76 @@ digraph settings {
 
     MOUSE_SCROLL_MAXIMUM_SPEED -> NUMBER_10
 
+
+  "+90" -> TAPPING_RESOLUTION [color=red]
+
+  "+20" -> TAPPING_RESOLUTION [color=red]
+
+  "+50" -> TAPPING_RESOLUTION [color=red]
+
+  "+80" -> TAPPING_RESOLUTION [color=red]
+
+  "+110" -> TAPPING_RESOLUTION [color=red]
+
+  "+150" -> TAPPING_RESOLUTION [color=red]
+
+  "-50" -> TAPPING_RESOLUTION [color=red]
+
   }
 
   subgraph values {
     graph [rank=same]
 
     
-      "'L'" [label="'L'", style=filled, fillcolor=cyan, shape=diamond]
+      "'L'" [label="'L'", style=filled, fillcolor=cyan, shape=signature]
     
-      "\"tap-preferred\"" [label="\"tap-preferred\"", style=filled, fillcolor=cyan, shape=diamond]
+      "\"tap-preferred\"" [label="\"tap-preferred\"", style=filled, fillcolor=cyan, shape=signature]
     
-      "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=diamond]
+      "+90" [label="+90", style=filled, fillcolor=cyan, shape=signature]
     
-      "'N'" [label="'N'", style=filled, fillcolor=cyan, shape=diamond]
+      "+150" [label="+150", style=filled, fillcolor=cyan, shape=signature]
+    
+      "-50" [label="-50", style=filled, fillcolor=cyan, shape=signature]
+    
+      "+50" [label="+50", style=filled, fillcolor=cyan, shape=signature]
+    
+      "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=signature]
+    
+      "'N'" [label="'N'", style=filled, fillcolor=cyan, shape=signature]
     
 
     
-      NUMBER_50 [label="50", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_50 [label="50", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_240 [label="240", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_170 [label="170", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_500 [label="500", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_1 [label="1", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_230 [label="230", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_10 [label="10", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_260 [label="260", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_0 [label="0", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_300 [label="300", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_300 [label="300", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_600 [label="600", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=diamond]
+
     
-      NUMBER_500 [label="500", style=filled, fillcolor=yellow, shape=diamond]
+      "+90" [label="+90", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      NUMBER_1 [label="1", style=filled, fillcolor=yellow, shape=diamond]
+      "+20" [label="+20", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      NUMBER_10 [label="10", style=filled, fillcolor=yellow, shape=diamond]
+      "+50" [label="+50", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      NUMBER_0 [label="0", style=filled, fillcolor=yellow, shape=diamond]
+      "+80" [label="+80", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      NUMBER_600 [label="600", style=filled, fillcolor=yellow, shape=diamond]
+      "+110" [label="+110", style=filled, fillcolor=salmon, shape=lpromoter]
+    
+      "+150" [label="+150", style=filled, fillcolor=salmon, shape=lpromoter]
+    
+      "-50" [label="-50", style=filled, fillcolor=salmon, shape=lpromoter]
     
   }
 }
