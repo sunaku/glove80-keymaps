@@ -978,42 +978,37 @@ behaviors {
     //
     // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
     // It's meant to help newcomers gradually work their way up to mastery.
-    // You can disable this setting by omitting it or assigning a `0` zero.
     //
-    // #define DIFFICULTY_LEVEL 0 // custom (see defaults below)
     // #define DIFFICULTY_LEVEL 1 // novice (500ms)
     // #define DIFFICULTY_LEVEL 2 // slower (400ms)
     // #define DIFFICULTY_LEVEL 3 // normal (300ms)
     // #define DIFFICULTY_LEVEL 4 // faster (200ms)
     // #define DIFFICULTY_LEVEL 5 // expert (100ms)
     //
-    #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-    #define DIFFICULTY_LEVEL_HOLDING_TIME  ((6 - DIFFICULTY_LEVEL) * 100)
-    #define DIFFICULTY_LEVEL_STREAK_DECAY (((6 - DIFFICULTY_LEVEL) *  50) + 100)
-    #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME DIFFICULTY_LEVEL_HOLDING_TIME
+    // You can disable this setting by omitting it or assigning a `0` zero,
+    // in which case it will default to my personal set of time thresholds.
+    //
+    // #define DIFFICULTY_LEVEL 0 // sunaku (150ms)
+    //
+    // No matter what difficulty level you choose, you can always override
+    // any settings in this keymap at the beginning of this configuration.
+    //
+    #ifdef DIFFICULTY_LEVEL
+        #if DIFFICULTY_LEVEL > 0 && DIFFICULTY_LEVEL < 6
+            #ifndef TAPPING_RESOLUTION
+                #define TAPPING_RESOLUTION ((6 - DIFFICULTY_LEVEL) * 100)
+            #endif
+        #endif
     #endif
-    #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY DIFFICULTY_LEVEL_STREAK_DECAY
-    #endif
-    #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME DIFFICULTY_LEVEL_HOLDING_TIME
-    #endif
-    #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY DIFFICULTY_LEVEL_STREAK_DECAY
-    #endif
-    #ifndef PLAIN_HOLDING_TIME
-    #define PLAIN_HOLDING_TIME DIFFICULTY_LEVEL_HOLDING_TIME
-    #endif
-    #ifndef PLAIN_STREAK_DECAY
-    #define PLAIN_STREAK_DECAY DIFFICULTY_LEVEL_STREAK_DECAY
-    #endif
-    #ifndef SPACE_HOLDING_TIME
-    #define SPACE_HOLDING_TIME DIFFICULTY_LEVEL_HOLDING_TIME
-    #endif
-    #ifndef SPACE_STREAK_DECAY
-    #define SPACE_STREAK_DECAY DIFFICULTY_LEVEL_STREAK_DECAY
-    #endif
+
+    //
+    // TAPPING_RESOLUTION specifies the maximum speed at which the keyboard
+    // confuses your taps as being holds when you type on home row mod keys.
+    // When you lower this value, the same confusion should still occur; but
+    // when you raise this value, you should be able to type normally again.
+    //
+    #ifndef TAPPING_RESOLUTION
+    #define TAPPING_RESOLUTION 150
     #endif
 
     //
@@ -1103,19 +1098,22 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 240
+    #define HOMEY_HOLDING_TIME (TAPPING_RESOLUTION + 90)
     #endif
     #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME 170
+    #define INDEX_HOLDING_TIME (TAPPING_RESOLUTION + 20)
     #endif
     #ifndef MIDDY_HOLDING_TIME
-    #define MIDDY_HOLDING_TIME 200
+    #define MIDDY_HOLDING_TIME (TAPPING_RESOLUTION + 50)
     #endif
     #ifndef RING1_HOLDING_TIME
-    #define RING1_HOLDING_TIME 230
+    #define RING1_HOLDING_TIME (TAPPING_RESOLUTION + 80)
+    #endif
+    #ifndef RING2_HOLDING_TIME
+    #define RING2_HOLDING_TIME RING1_HOLDING_TIME
     #endif
     #ifndef PINKY_HOLDING_TIME
-    #define PINKY_HOLDING_TIME 260
+    #define PINKY_HOLDING_TIME (TAPPING_RESOLUTION + 110)
     #endif
 
     //
@@ -1124,7 +1122,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 150
+    #define HOMEY_STREAK_DECAY TAPPING_RESOLUTION
     #endif
 
     //
@@ -1132,7 +1130,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 300
+    #define HOMEY_REPEAT_DECAY (TAPPING_RESOLUTION + 150)
     #endif // "tap then hold" for key auto-repeat
 
     //
@@ -1150,7 +1148,7 @@ behaviors {
     // This is specifically for secondary keypresses in multi-mod chords.
     //
     #ifndef CHORD_HOLDING_TIME
-    #define CHORD_HOLDING_TIME 100
+    #define CHORD_HOLDING_TIME (TAPPING_RESOLUTION - 50)
     #endif
 
     //
@@ -1187,21 +1185,12 @@ behaviors {
     #endif
 
     //
-    // INDEX_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // index finger keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
-    //
-    #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME 170
-    #endif
-
-    //
     // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
     // after typing before you can use home row mods again.  It prevents
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY 100
+    #define INDEX_STREAK_DECAY (TAPPING_RESOLUTION - 50)
     #endif
 
     //
@@ -1209,7 +1198,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef INDEX_REPEAT_DECAY
-    #define INDEX_REPEAT_DECAY 300
+    #define INDEX_REPEAT_DECAY (TAPPING_RESOLUTION + 150)
     #endif // "tap then hold" for key auto-repeat
 
     //
@@ -1232,7 +1221,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
     //
     #ifndef PLAIN_HOLDING_TIME
-    #define PLAIN_HOLDING_TIME 200
+    #define PLAIN_HOLDING_TIME (TAPPING_RESOLUTION + 50)
     #endif
 
     //
@@ -1249,7 +1238,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef PLAIN_REPEAT_DECAY
-    #define PLAIN_REPEAT_DECAY 300
+    #define PLAIN_REPEAT_DECAY (TAPPING_RESOLUTION + 150)
     #endif // "tap then hold" for key auto-repeat
 
     //
@@ -1269,7 +1258,7 @@ behaviors {
     // a thumb key to activate a layer.  Shorter holds are treated as taps.
     //
     #ifndef THUMB_HOLDING_TIME
-    #define THUMB_HOLDING_TIME 200
+    #define THUMB_HOLDING_TIME (TAPPING_RESOLUTION + 50)
     #endif
 
     //
@@ -1277,7 +1266,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef THUMB_REPEAT_DECAY
-    #define THUMB_REPEAT_DECAY 300
+    #define THUMB_REPEAT_DECAY (TAPPING_RESOLUTION + 150)
     #endif // "tap then hold" for key auto-repeat
 
     //
@@ -1305,7 +1294,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY 150
+    #define SPACE_REPEAT_DECAY TAPPING_RESOLUTION
     #endif
 
     //

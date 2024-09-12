@@ -5,17 +5,24 @@ digraph settings {
 <%
   require 'set'
   numbers = Set.new
+  tapping_resolution_formulas = Set.new
   settings = {}
   `grep -A1 '^#ifndef' keymap.dtsi.min | grep '^#define'`.lines.each do |define|
-    (_define, key, value) = define.split
+    (_define, key, value) = define.chomp.split(/\s+/, 3)
     case value
+    when /TAPPING_RESOLUTION ([+\-]) (\d+)/
+      warn({ formula: {key => $~} })
+      value = "#{$1}#{$2}".inspect
+      tapping_resolution_formulas << value
     when /^["']/
-      value = value.inspect
+      warn({ string: {key => value} })
+      value = value.rstrip.inspect
     when /^\d+$/
+      warn({ number: {key => value} })
       numbers << value
       value = "NUMBER_#{value}"
-    when "\\"
-      warn({ skip: define })
+    when "\\", /\(/
+      warn({ definition: {key => value} })
       next # skip this setting -- it's a complex multi-line definition
     end
     settings[key] = value
@@ -24,17 +31,24 @@ digraph settings {
 <%
   end
 %>
+<% tapping_resolution_formulas.each do |label| %>
+  <%= label %> -> TAPPING_RESOLUTION [color=red]
+<% end %>
   }
 
   subgraph values {
     graph [rank=same]
 
     <% settings.values.grep(/^".*"$/).uniq.each do |string| %>
-      <%= string %> [label=<%= string %>, style=filled, fillcolor=cyan, shape=diamond]
+      <%= string %> [label=<%= string %>, style=filled, fillcolor=cyan, shape=signature]
     <% end %>
 
     <% numbers.each do |number| %>
-      NUMBER_<%= number %> [label="<%= number %>", style=filled, fillcolor=yellow, shape=diamond]
+      NUMBER_<%= number %> [label="<%= number %>", style=filled, fillcolor=yellow, shape=signature]
+    <% end %>
+
+    <% tapping_resolution_formulas.each do |label| %>
+      <%= label %> [label=<%= label %>, style=filled, fillcolor=salmon, shape=lpromoter]
     <% end %>
   }
 }
