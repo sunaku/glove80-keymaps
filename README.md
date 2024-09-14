@@ -44,8 +44,8 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Alpha layouts](#alpha-layouts)
     * [Unicode and Emoji](#unicode-and-emoji)
         * [OS-native compose](#os-native-compose)
-    * [Enabling mouse emulation](#enabling-mouse-emulation) 
 * [Installing](#installing)
+    * [Enabling mouse emulation](#enabling-mouse-emulation)
     * [Flashing](#flashing)
 * [Upgrading](#upgrading)
 * [Customizing](#customizing)
@@ -260,15 +260,6 @@ Unicode) to type international characters in the World layer, activate this:
 
 See also: the `COMPOSE_KEY_LINUX` setting and the `COMPOSE_SEQ_*` functions.
 
-### Enabling mouse emulation
-
-To enable mouse emulation through with the mouse layer, you need to select the PR23 beta firmware in the layout editor, and rebuild the layout. 
-
-![image](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
-![image](https://github.com/sunaku/glove80-keymaps/assets/26071571/2e4bd618-7c04-41a9-a8dc-15bdc0c4cf7f)
-![image](https://github.com/sunaku/glove80-keymaps/assets/26071571/e8d1c849-ec87-4628-832f-c71d95060375)
-
-
 ## Installing
 
 Open the [keymap link above](#keymap) and follow these instructions:
@@ -279,6 +270,15 @@ Open the [keymap link above](#keymap) and follow these instructions:
 5. Build the firmware and download the `*.uf2` file.
 
 ![instructions](https://github.com/sunaku/glove80-keymaps/assets/9863/4eeafe4c-0ab3-4900-b241-f62b0467a394)
+
+### Enabling mouse emulation
+
+Before building the firmware (step 5 above), change the version to PR23:
+open the "Settings" tab, choose PR23, and then go back to the "Edit" tab.
+
+![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+
+Without this change, the mouse control keys on the Mouse layer won't work.
 
 ### Flashing
 
