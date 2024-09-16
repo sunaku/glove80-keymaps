@@ -13,9 +13,9 @@ also provided as "training wheels" to aid your transition to the full glory.
 
 ## Keymap
 
-Version 36 (2024-03-21)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v36
-- Release: https://my.glove80.com/#/layout/user/f4372744-fce9-4678-ac4b-3d8ef8768160
+Version 37 (2024-09-15)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v37
+- Release: https://my.glove80.com/#/layout/user/13c16910-9689-4408-a392-39a6e0e15162
 
 ### Legend
 
@@ -84,7 +84,7 @@ First, let's configure this keymap to better suit your operating system by
 adding one of the following lines (just copy+paste whichever is appropriate)
 atop the "Custom Defined Behaviors" text box in your clone of this keymap:
 
-```cpp
+```h
 #define OPERATING_SYSTEM 'L' // Linux
 #define OPERATING_SYSTEM 'M' // macOS
 #define OPERATING_SYSTEM 'W' // Windows
@@ -113,18 +113,25 @@ macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
 In order to help ease your transition to using [home row mods], this keymap
 provides a difficulty level setting (like in a video game) that you can set:
 
-```cpp
+```h
 //
 // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
 // It's meant to help newcomers gradually work their way up to mastery.
-// You can disable this setting by omitting it or assigning a `0` zero.
 //
-#define DIFFICULTY_LEVEL 0 // custom (see defaults below)
 #define DIFFICULTY_LEVEL 1 // novice (500ms)
 #define DIFFICULTY_LEVEL 2 // slower (400ms)
 #define DIFFICULTY_LEVEL 3 // normal (300ms)
 #define DIFFICULTY_LEVEL 4 // faster (200ms)
 #define DIFFICULTY_LEVEL 5 // expert (100ms)
+//
+// You can disable this setting by omitting it or assigning a `0` zero,
+// in which case it will default to my personal set of time thresholds.
+//
+#define DIFFICULTY_LEVEL 0 // sunaku (150ms)
+//
+// No matter what difficulty level you choose, you can always override
+// any settings in this keymap at the beginning of this configuration.
+//
 ```
 
 Unless you're already proficient in using home row mods, you might consider
@@ -138,10 +145,13 @@ personal fine-tuned configuration) or directly override them per your taste.
 
 #### One-shot shifts
 
-The Lower keys on the base layer provide one-shot sticky shift functionality,
+The traditional pinky shift keys on the base layer are one-shot sticky shifts,
 whereby tapping them temporarily activates a sticky Shift that applies itself
 to the next key you tap.  This can be useful for single letter capitalization,
 such as for the frequent "I" in English or when typing camel/PascalCase names.
+
+Similarly, the combination of thumb T4 and the home row index finger key also
+provides the same one-shot sticky shifting for single letter capitalization.
 
 #### Bilateral combinations
 
@@ -150,7 +160,7 @@ hand holds modifiers while the other taps keys to be modified) and for a more
 natural typing experience that forgives [same-hand chords] and lingering holds,
 this keymap provides bilateral combinations enforcement as an optional feature:
 
-```cpp
+```h
 //
 // ENFORCE_BILATERAL cancels out single-handed home row mods activation by
 // releasing any currently pressed mods and replacing them with plain taps.
@@ -250,7 +260,7 @@ See also: the `UNICODE_*_DELAY` settings and the `UNICODE_SEQ_*` functions.
 If you prefer using your operating system's built-in shortcuts (rather than
 Unicode) to type international characters in the World layer, activate this:
 
-```cpp
+```h
 //
 // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
 // for characters in the "localizing" section of the `world.yaml` file.
@@ -312,7 +322,7 @@ also available in the `*.dtsi` files provided in this Git repository.
 You can override the various `#define` settings that govern this keymap by
 adding them above the snippet in the "Custom Defined Behaviors" text box:
 
-```cpp
+```h
 // add your overrides here, up at the very top:
 #define OPERATING_SYSTEM 'W' // windows
 #define EMOJI_HAIR_STYLE_PRESET 'C' // curly_hair
@@ -332,7 +342,7 @@ The `*_FINGER_MOD` settings specify which modifiers are used by home row mod
 keys. Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order is the default -- unless
 you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
 
-```cpp
+```h
 #define PINKY_FINGER_MOD LGUI
 #define RING1_FINGER_MOD LALT
 #define RING2_FINGER_MOD RALT
@@ -343,14 +353,14 @@ you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
 The above settings mirror finger-mod assignments across both hands, but you can
 also make them different through the following additional settings if you want:
 
-```cpp
+```h
 #define  LEFT_PINKY_MOD RALT
 #define RIGHT_PINKY_MOD LCTL
 ```
 
 For completeness, here are all finger-mod settings available for customization:
 
-```cpp
+```h
 #define  LEFT_PINKY_MOD ...
 #define RIGHT_PINKY_MOD ...
 #define  LEFT_RING1_MOD ...
