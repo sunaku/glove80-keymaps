@@ -7,7 +7,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v36 -- "Glorious Engrammer"
+// Sunaku's Keymap v37 -- "Glorious Engrammer"
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
@@ -209,7 +209,7 @@
 #define KEY_RH_C4R4 S
 #define KEY_RH_C5R4 N
 #define KEY_RH_C6R4 Q
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 G
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 J
@@ -226,7 +226,7 @@
 #define KEY_RH_C3R5 M
 #define KEY_RH_C4R5 F
 #define KEY_RH_C5R5 P
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -234,8 +234,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -291,7 +291,7 @@
 #define KEY_RH_C4R4 S
 #define KEY_RH_C5R4 N
 #define KEY_RH_C6R4 Q
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 G
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 J
@@ -308,7 +308,7 @@
 #define KEY_RH_C3R5 M
 #define KEY_RH_C4R5 F
 #define KEY_RH_C5R5 P
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -316,8 +316,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -373,7 +373,7 @@
 #define KEY_RH_C4R4 N
 #define KEY_RH_C5R4 S
 #define KEY_RH_C6R4 MINUS
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 SEMI
 #define KEY_LH_C4R5 Q
 #define KEY_LH_C3R5 J
@@ -390,7 +390,7 @@
 #define KEY_RH_C3R5 W
 #define KEY_RH_C4R5 V
 #define KEY_RH_C5R5 Z
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -398,8 +398,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -455,7 +455,7 @@
 #define KEY_RH_C4R4 I
 #define KEY_RH_C5R4 O
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
@@ -472,7 +472,7 @@
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -480,8 +480,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -537,7 +537,7 @@
 #define KEY_RH_C4R4 I
 #define KEY_RH_C5R4 O
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
@@ -554,7 +554,7 @@
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -562,8 +562,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -619,7 +619,7 @@
 #define KEY_RH_C4R4 L
 #define KEY_RH_C5R4 SEMI
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
@@ -636,7 +636,7 @@
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -644,8 +644,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -701,7 +701,7 @@
 #define KEY_RH_C4R4 O
 #define KEY_RH_C5R4 H
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
@@ -718,7 +718,7 @@
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -726,8 +726,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -783,7 +783,7 @@
 #define KEY_RH_C4R4 O
 #define KEY_RH_C5R4 I
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 M
@@ -800,7 +800,7 @@
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -808,8 +808,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
@@ -865,7 +865,7 @@
 #define KEY_RH_C4R4 O
 #define KEY_RH_C5R4 I
 #define KEY_RH_C6R4 SQT
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 LSFT
 #define KEY_LH_C5R5 F
 #define KEY_LH_C4R5 M
 #define KEY_LH_C3R5 V
@@ -882,7 +882,7 @@
 #define KEY_RH_C3R5 X
 #define KEY_RH_C4R5 K
 #define KEY_RH_C5R5 Y
-#define KEY_RH_C6R5 RSHFT
+#define KEY_RH_C6R5 RSFT
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 HOME
 #define KEY_LH_C4R6 PG_UP
@@ -890,8 +890,8 @@
 #define KEY_LH_C2R6 END
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
-#define KEY_LH_T6 LSFT
-#define KEY_RH_T6 LSFT
+#define KEY_LH_T6 0
+#define KEY_RH_T6 0
 #define KEY_RH_T5 TAB
 #define KEY_RH_T4 SPACE
 #define KEY_RH_C2R6 LPAR
