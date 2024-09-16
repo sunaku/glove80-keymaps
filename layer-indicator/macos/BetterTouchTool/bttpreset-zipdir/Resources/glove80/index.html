@@ -1,0 +1,63 @@
+<html>
+<head>
+  <script>
+  let retryCount = 0;
+
+  function waitFor(variable, callback) {
+    let interval = setInterval(function () {
+      console.log(`waiting for variable: ${variable}`);
+      retryCount++;
+
+      if (window[variable]) {
+        clearInterval(interval);
+        callback();
+      } else if (retryCount > 100) {
+        console.log(`Timed out waiting for variable: ${variable}`);
+        clearInterval(interval);
+      }
+    }, 100);
+  }
+
+  function setDebugData(debugData) {
+    if (document.getElementById('image')) {
+      document.getElementById('image').alt = `DEBUG DATA: ${debugData}`
+    }
+  }
+
+  function BTTInitialize() {
+    setDebugData("Waiting for get_string_variable() to exist");
+    // get_string_variable doesn't exist yet, wait for it to appear
+    waitFor('get_string_variable', async function () {
+      await updateUi('Initial call');
+    });
+  }
+
+  async function updateUi(note) {
+    const filename = await get_string_variable({ variable_name: 'kb_overlay_image_filename' });
+    const basePath = await get_string_variable({ variable_name: 'kb_overlay_image_base_path' });
+    setDebugData(`filename: ${filename} basePath: ${basePath} callbackData: ${note}`);
+    document.getElementById('image').src = basePath + filename;
+    let opacity = await get_string_variable({ variable_name: 'kb_overlay_opacity' });
+    if (opacity == null) {
+      //set default if variable isn't set for any reason (and allow 0 as a value)
+      opacity = 0.2;
+    }
+    document.getElementById('image').style.opacity = opacity;
+  }
+
+  async function BTTNotification(note) {
+    const data = JSON.parse(note);
+    if (data.note == 'BTTVariableChanged' && data.name && data.name.includes("kb_overlay_")) {
+      await updateUi(note);
+    }
+  }
+  </script>
+  <title></title>
+</head>
+<body>
+<img id="image"
+     style="opacity: 0.2;height: -webkit-fill-available; width: -webkit-fill-available;"
+     alt="keyboard image here">
+
+</body>
+</html>

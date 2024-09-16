@@ -3,6 +3,7 @@
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
+//#define USE_LAYER_INDICATORS // uncomment to active sending custom modifier key sequences when pressing layer keys (to allow for host OS to know which layer is pressed)
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -233,6 +234,36 @@
 #endif
 <%
   end
+%>
+<%
+  # List of indicator layers that have diagrams. This name matches the diagram file convention - <layer>-layer-diagram.png
+  # PR QUESTION: Is this list already in a variable somewhere?
+  # PR QUESTION: this is duplicated in layer-indicator/macos/BetterTouchTool/presetjson.bttpreset.erb. Any idea for reuse rather than duplication?
+  OVERLAY_INDICATOR_LAYERS = %w[
+        base
+        cursor
+        emoji
+        factory
+        function
+        gaming
+        lower
+        magic
+        mouse
+        number
+        symbol
+        system
+        typing
+        world
+      ]
+  OVERLAY_INDICATOR_MODS = %w[
+        RALT
+        RCTL
+        RGUI
+        RSFT
+      ]
+  OVERLAY_INDICATOR_MODS_PERMUTATIONS = OVERLAY_INDICATOR_MODS.permutation
+  # produces [RALT RCTL RGUI RSFT], [RALT RCTL RSFT RGUI], ... (24 unique sequences)
+
 %>
 
 combos {
@@ -894,6 +925,55 @@ behaviors {
     //
     // Thumb cluster hold-tap keys for Miryoku layers
     //
+
+  <%
+    OVERLAY_INDICATOR_LAYERS.each do |indicator_layer_name|
+  %>
+    thumb_<%= indicator_layer_name %>: thumb_layer_access_<%= indicator_layer_name %> {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      #ifdef ENABLE_KEY_REPEAT
+      quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+      #endif
+      #binding-cells = <2>;
+  #ifdef USE_LAYER_INDICATORS
+      bindings = <&la_switch_<%= indicator_layer_name %>>, <&kp>;
+  #else
+      bindings = <&mo>, <&kp>;
+  #endif
+    };
+
+  <%
+    end
+  %>
+
+    thumb_parang_left_world: thumb_layer_access_parang_left_world {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+      #binding-cells = <2>;
+    #ifdef USE_LAYER_INDICATORS
+      bindings = <&la_switch_world>, <&parang_left>;
+    #else
+      bindings = <&mo>, <&parang_left>;
+    #endif
+    };
+
+    space_symbol: thumb_layer_access_spacebar_symbol {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = SPACE_HOLDING_TYPE;
+      tapping-term-ms = <SPACE_HOLDING_TIME>;
+      quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+      #binding-cells = <2>;
+    #ifdef USE_LAYER_INDICATORS
+      bindings = <&la_switch_symbol>, <&kp>;
+    #else
+      bindings = <&mo>, <&kp>;
+    #endif
+    };
+
     thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
         flavor = THUMB_HOLDING_TYPE;
@@ -1207,6 +1287,40 @@ macros {
         tap-ms = <SELECT_WORD_DELAY>;
         bindings = <&kp LS(UP) &kp LS(_HOME)>;
     )
+
+    //
+    // layer indicator macros
+    //
+  <%
+    OVERLAY_INDICATOR_MODS_PERMUTATIONS.each_with_index do |mod_sequence, mod_sequence_index|
+      # Note: at most this supports 24 different layers. It will just not make macros for any 25th, 26th layer in OVERLAY_INDICATOR_LAYERS
+      if mod_sequence_index < OVERLAY_INDICATOR_LAYERS.size
+        indicator_layer_name = OVERLAY_INDICATOR_LAYERS[mod_sequence_index]
+  %>
+    la_switch_<%= indicator_layer_name %>: switch_layer_<%= indicator_layer_name %> {
+      label = "switch_layer_<%= indicator_layer_name %>";
+      compatible = "zmk,behavior-macro-one-param";
+      #binding-cells = <1>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings
+        = <&macro_param_1to1>
+        , <&macro_press &mo MACRO_PLACEHOLDER>
+        // Doing a press and release for each rather than the modifier functions, e.g. RG(RC(RA(...))), since the functions don't respect the order when it hits the host OS (tested on Macos)
+        , <&macro_tap &kp <%= mod_sequence[0] %> &kp <%= mod_sequence[1] %> &kp <%= mod_sequence[2] %> &kp <%= mod_sequence[3] %>>
+        , <&macro_pause_for_release>
+        , <&macro_param_1to1>
+        , <&macro_release &mo MACRO_PLACEHOLDER>
+        //revert to home layer
+        , <&macro_tap &kp F18>
+        ;
+    };
+
+  <%
+      end
+    end
+  %>
+
 
     //////////////////////////////////////////////////////////////////////////
     //
