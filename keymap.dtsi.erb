@@ -1010,7 +1010,7 @@ behaviors {
     // sticky one-shot keys in order to trigger their hold (not tap) action.
     //
     <%
-      emit_setting_ifndef.(:STICKY_HOLDING_TIME, :CHORD_HOLDING_TIME)
+      emit_setting_ifndef.(:STICKY_HOLDING_TIME, resolve_tap_timing.(200))
     %>
 
     sticky_key_modtap: sticky_key_modtap {
