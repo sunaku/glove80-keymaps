@@ -4089,7 +4089,7 @@ behaviors {
     // sticky one-shot keys in order to trigger their hold (not tap) action.
     //
     #ifndef STICKY_HOLDING_TIME
-    #define STICKY_HOLDING_TIME CHORD_HOLDING_TIME
+    #define STICKY_HOLDING_TIME (TAPPING_RESOLUTION + 50)
     #endif
 
     sticky_key_modtap: sticky_key_modtap {
