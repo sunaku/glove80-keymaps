@@ -39,15 +39,15 @@ digraph settings {
 
     HOMEY_HOLDING_TIME -> "+90"
 
-    INDEX_HOLDING_TIME -> "+20"
+    INDEX_HOLDING_TIME -> "+30"
 
-    MIDDY_HOLDING_TIME -> "+50"
+    MIDDY_HOLDING_TIME -> "+60"
 
-    RING1_HOLDING_TIME -> "+80"
+    RING1_HOLDING_TIME -> "+90"
 
     RING2_HOLDING_TIME -> RING1_HOLDING_TIME
 
-    PINKY_HOLDING_TIME -> "+110"
+    PINKY_HOLDING_TIME -> "+120"
 
     HOMEY_STREAK_DECAY -> TAPPING_RESOLUTION
 
@@ -684,17 +684,17 @@ digraph settings {
 
   "+90" -> TAPPING_RESOLUTION [color=red]
 
-  "+20" -> TAPPING_RESOLUTION [color=red]
+  "+30" -> TAPPING_RESOLUTION [color=red]
 
-  "+50" -> TAPPING_RESOLUTION [color=red]
+  "+60" -> TAPPING_RESOLUTION [color=red]
 
-  "+80" -> TAPPING_RESOLUTION [color=red]
-
-  "+110" -> TAPPING_RESOLUTION [color=red]
+  "+120" -> TAPPING_RESOLUTION [color=red]
 
   "+150" -> TAPPING_RESOLUTION [color=red]
 
   "-50" -> TAPPING_RESOLUTION [color=red]
+
+  "+50" -> TAPPING_RESOLUTION [color=red]
 
   }
 
@@ -740,17 +740,17 @@ digraph settings {
     
       "+90" [label="+90", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      "+20" [label="+20", style=filled, fillcolor=salmon, shape=lpromoter]
+      "+30" [label="+30", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      "+50" [label="+50", style=filled, fillcolor=salmon, shape=lpromoter]
+      "+60" [label="+60", style=filled, fillcolor=salmon, shape=lpromoter]
     
-      "+80" [label="+80", style=filled, fillcolor=salmon, shape=lpromoter]
-    
-      "+110" [label="+110", style=filled, fillcolor=salmon, shape=lpromoter]
+      "+120" [label="+120", style=filled, fillcolor=salmon, shape=lpromoter]
     
       "+150" [label="+150", style=filled, fillcolor=salmon, shape=lpromoter]
     
       "-50" [label="-50", style=filled, fillcolor=salmon, shape=lpromoter]
+    
+      "+50" [label="+50", style=filled, fillcolor=salmon, shape=lpromoter]
     
   }
 }
