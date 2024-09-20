@@ -315,21 +315,21 @@
 <path fill="none" stroke="black" d="M1202.46,-6390.08C1122.32,-6358.71 950.96,-6291.65 864.12,-6257.66"/>
 <polygon fill="black" stroke="black" points="865.31,-6254.36 854.72,-6253.98 862.75,-6260.88 865.31,-6254.36"/>
 </g>
-<!-- +30 -->
+<!-- +20 -->
 <g id="node30" class="node">
-<title>+30</title>
+<title>+20</title>
 <polygon fill="salmon" stroke="black" points="437.37,-5101 401.37,-5101 401.37,-5107 383.37,-5089 401.37,-5071 401.37,-5077 419.37,-5077 419.37,-5071 437.37,-5071 437.37,-5101"/>
-<text text-anchor="middle" x="410.37" y="-5085.3" font-family="Times,serif" font-size="14.00">+30</text>
+<text text-anchor="middle" x="410.37" y="-5085.3" font-family="Times,serif" font-size="14.00">+20</text>
 </g>
-<!-- INDEX_HOLDING_TIME&#45;&gt;+30 -->
+<!-- INDEX_HOLDING_TIME&#45;&gt;+20 -->
 <g id="edge19" class="edge">
-<title>INDEX_HOLDING_TIME&#45;&gt;+30</title>
+<title>INDEX_HOLDING_TIME&#45;&gt;+20</title>
 <path fill="none" stroke="black" d="M1177.77,-6421.98C1040.19,-6447.84 728.68,-6482.88 575.06,-6311 486.53,-6211.96 624.25,-5217.92 539.06,-5116 517.31,-5089.99 477.37,-5085.16 447.92,-5085.64"/>
 <polygon fill="black" stroke="black" points="447.47,-5082.15 437.6,-5086.02 447.73,-5089.15 447.47,-5082.15"/>
 </g>
-<!-- +30&#45;&gt;TAPPING_RESOLUTION -->
+<!-- +20&#45;&gt;TAPPING_RESOLUTION -->
 <g id="edge341" class="edge">
-<title>+30&#45;&gt;TAPPING_RESOLUTION</title>
+<title>+20&#45;&gt;TAPPING_RESOLUTION</title>
 <path fill="none" stroke="red" d="M383.34,-5089.58C355.59,-5088.91 311.61,-5084.03 281.68,-5062 192.77,-4996.57 147.29,-4865.14 131,-4807.81"/>
 <polygon fill="red" stroke="red" points="134.33,-4806.71 128.3,-4798 127.58,-4808.57 134.33,-4806.71"/>
 </g>
@@ -411,21 +411,21 @@
 <path fill="none" stroke="black" d="M1199.63,-6095.76C1119.23,-6125 953.66,-6185.23 866.99,-6216.75"/>
 <polygon fill="black" stroke="black" points="865.79,-6213.47 857.59,-6220.17 868.18,-6220.05 865.79,-6213.47"/>
 </g>
-<!-- +120 -->
+<!-- +110 -->
 <g id="node36" class="node">
-<title>+120</title>
+<title>+110</title>
 <polygon fill="salmon" stroke="black" points="438.37,-4843 400.37,-4843 400.37,-4849 382.37,-4831 400.37,-4813 400.37,-4819 420.37,-4819 420.37,-4813 438.37,-4813 438.37,-4843"/>
-<text text-anchor="middle" x="410.37" y="-4827.3" font-family="Times,serif" font-size="14.00">+120</text>
+<text text-anchor="middle" x="410.37" y="-4827.3" font-family="Times,serif" font-size="14.00">+110</text>
 </g>
-<!-- PINKY_HOLDING_TIME&#45;&gt;+120 -->
+<!-- PINKY_HOLDING_TIME&#45;&gt;+110 -->
 <g id="edge23" class="edge">
-<title>PINKY_HOLDING_TIME&#45;&gt;+120</title>
+<title>PINKY_HOLDING_TIME&#45;&gt;+110</title>
 <path fill="none" stroke="black" d="M1206.27,-6061.87C1167.33,-6042.67 1109.67,-6007.6 1081.61,-5958 997.67,-5809.56 1114.11,-5732.17 1045.61,-5576 920.03,-5289.65 736.01,-5321.07 575.06,-5053 550.96,-5012.86 564.57,-4993.25 539.06,-4954 513.33,-4914.42 472.6,-4878.12 444.08,-4855.38"/>
 <polygon fill="black" stroke="black" points="446.04,-4852.47 436.01,-4849.05 441.72,-4857.97 446.04,-4852.47"/>
 </g>
-<!-- +120&#45;&gt;TAPPING_RESOLUTION -->
+<!-- +110&#45;&gt;TAPPING_RESOLUTION -->
 <g id="edge343" class="edge">
-<title>+120&#45;&gt;TAPPING_RESOLUTION</title>
+<title>+110&#45;&gt;TAPPING_RESOLUTION</title>
 <path fill="none" stroke="red" d="M382.25,-4826.16C343.43,-4819.22 270.24,-4806.15 211.63,-4795.68"/>
 <polygon fill="red" stroke="red" points="212.08,-4792.21 201.62,-4793.89 210.85,-4799.1 212.08,-4792.21"/>
 </g>
