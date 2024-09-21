@@ -534,12 +534,6 @@ behaviors {
     // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
     //
-    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
-    // allows faster activation of the Shift modifier (without having to wait
-    // for the modified key to be released as the "balanced" flavor requires).
-    // Typing streaks and the `hold-trigger-on-release` setting are disabled
-    // for the index fingers so as not to hinder their speed and dexterity.
-    //
     <%
       emit_setting_ifndef.(:PLAIN_HOLDING_TYPE, :HOMEY_HOLDING_TYPE)
     %>
@@ -574,12 +568,8 @@ behaviors {
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
     //
-    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-    // activation for the symbol layer (if the tapped symbol key is released
-    // while the thumb layer key is still held down) for quicker programming.
-    //
     <%
-      emit_setting_ifndef.(:THUMB_HOLDING_TYPE, '"balanced"')
+      emit_setting_ifndef.(:THUMB_HOLDING_TYPE, '"tap-preferred"')
     %>
 
     //
@@ -601,10 +591,6 @@ behaviors {
     //
     // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for spacebar (assigned to the right thumb's home position by default).
-    //
-    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-    // activation for the symbol layer (if the tapped symbol key is released
-    // while the thumb layer key is still held down) for quicker programming.
     //
     <%
       emit_setting_ifndef.(:SPACE_HOLDING_TYPE, :THUMB_HOLDING_TYPE)
