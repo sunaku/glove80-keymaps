@@ -2,6 +2,7 @@
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
+#define SHIFT_FORGIVENESS    // requires 24.08-beta1 or newer firmware
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
 // TIP: Add more setting overrides here instead of editing them below.
 
@@ -1029,6 +1030,35 @@ behaviors {
     //#define ENFORCE_BILATERAL
 
     //
+    // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
+    // without any other key having been tapped while the shift was held down.
+    // For example, suppose you hold a home row shift key and, before pressing
+    // another key, suddenly decide that you don't want to use shift after all:
+    //
+    // <1> If this setting is enabled, the underlying tap behavior is triggered
+    //     to type a single character when you release that home row shift key.
+    //
+    // <2> Otherwise, nothing happens when you release that home row shift key.
+    //
+    // This requires the "hold-while-undecided" ZMK feature in a beta firmware:
+    // please select "v24.08-beta1" or newer from the drop-down menu located at
+    // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
+    //
+    // CAUTION: This can interfere with mod-click mouse usage where you hold a
+    // home row shift key and perform mouse actions (move, click, drag & drop):
+    // when you release that home row shift key, its underlying character would
+    // be typed, potentially triggering an unexpected action on your selection!
+    // To prevent the underlying character from being typed, press another key
+    // (such as a dedicated shift key, a neighboring home row mod key, or even
+    // a layer access key) before you release the original home row shift key.
+    //
+    // NOTE: You may potentially encounter "flashing mods" where an application
+    // or operating system action is triggered by a standalone tap of a shift,
+    // but this is unlikely as people regularly tap shift without consequence.
+    //
+    //#define SHIFT_FORGIVENESS
+
+    //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
     // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
     // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped.
@@ -1614,6 +1644,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_pinky_bilateral: homey_left_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -1625,6 +1661,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_pinky_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_pinky_hold: homey_left_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -1700,6 +1742,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_pinky_bilateral: homey_right_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -1711,6 +1759,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_pinky_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_pinky_hold: homey_right_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -1786,6 +1840,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING1_MOD == LSFT || LEFT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring1_bilateral: homey_left_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -1797,6 +1857,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_ring1_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING1_MOD == LSFT || LEFT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring1_hold: homey_left_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -1872,6 +1938,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING1_MOD == LSFT || RIGHT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring1_bilateral: homey_right_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -1883,6 +1955,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_ring1_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING1_MOD == LSFT || RIGHT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring1_hold: homey_right_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -1958,6 +2036,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING2_MOD == LSFT || LEFT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring2_bilateral: homey_left_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -1969,6 +2053,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_ring2_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING2_MOD == LSFT || LEFT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring2_hold: homey_left_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2044,6 +2134,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING2_MOD == LSFT || RIGHT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring2_bilateral: homey_right_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2055,6 +2151,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_ring2_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING2_MOD == LSFT || RIGHT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring2_hold: homey_right_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2130,6 +2232,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_middy_bilateral: homey_left_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2141,6 +2249,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_middy_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_middy_hold: homey_left_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2216,6 +2330,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_middy_bilateral: homey_right_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2227,6 +2347,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_middy_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_middy_hold: homey_right_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2302,6 +2428,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_index_bilateral: homey_left_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2313,6 +2445,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_index_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_index_hold: homey_left_index_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2388,6 +2526,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_index_bilateral: homey_right_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2399,6 +2543,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_index_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_index_hold: homey_right_index_hold {
         compatible = "zmk,behavior-macro-one-param";
