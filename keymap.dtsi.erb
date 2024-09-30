@@ -2,6 +2,7 @@
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
+#define SHIFT_FORGIVENESS    // requires 24.08-beta1 or newer firmware
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
 // TIP: Add more setting overrides here instead of editing them below.
 
@@ -373,6 +374,35 @@ behaviors {
     // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
     //
     //#define ENFORCE_BILATERAL
+
+    //
+    // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
+    // without any other key having been tapped while the shift was held down.
+    // For example, suppose you hold a home row shift key and, before pressing
+    // another key, suddenly decide that you don't want to use shift after all:
+    //
+    // <1> If this setting is enabled, the underlying tap behavior is triggered
+    //     to type a single character when you release that home row shift key.
+    //
+    // <2> Otherwise, nothing happens when you release that home row shift key.
+    //
+    // This requires the "hold-while-undecided" ZMK feature in a beta firmware:
+    // please select "v24.08-beta1" or newer from the drop-down menu located at
+    // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
+    //
+    // CAUTION: This can interfere with mod-click mouse usage where you hold a
+    // home row shift key and perform mouse actions (move, click, drag & drop):
+    // when you release that home row shift key, its underlying character would
+    // be typed, potentially triggering an unexpected action on your selection!
+    // To prevent the underlying character from being typed, press another key
+    // (such as a dedicated shift key, a neighboring home row mod key, or even
+    // a layer access key) before you release the original home row shift key.
+    //
+    // NOTE: You may potentially encounter "flashing mods" where an application
+    // or operating system action is triggered by a standalone tap of a shift,
+    // but this is unlikely as people regularly tap shift without consequence.
+    //
+    //#define SHIFT_FORGIVENESS
 
     //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
@@ -770,6 +800,17 @@ behaviors {
         bindings = <&kp>, <&kp>;
         <%
           end
+
+          unless chord 
+        %>
+        #ifdef SHIFT_FORGIVENESS
+        #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap; 
+        #endif
+        #endif
+        <% 
+          end 
         %>
     };
     <%
