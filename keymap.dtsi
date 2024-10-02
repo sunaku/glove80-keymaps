@@ -25,6 +25,7 @@
 //
 // NOTE: You may need to enable Unicode hexadecimal input in your OS:
 // - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+//     and   https://github.com/ldanet/unicode-hex-input-fix
 // - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 // - (Windows) https://github.com/samhocevar/wincompose
 //
