@@ -1194,7 +1194,7 @@ behaviors {
     // This is specifically for secondary keypresses in multi-mod chords.
     //
     #ifndef CHORD_HOLDING_TIME
-    #define CHORD_HOLDING_TIME (TAPPING_RESOLUTION - 50)
+    #define CHORD_HOLDING_TIME TAPPING_RESOLUTION
     #endif
 
     //
