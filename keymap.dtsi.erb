@@ -279,6 +279,13 @@ combos {
         layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
     };
 
+    combo_sticky_meh_right {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_RH_T4 POS_RH_T5>;
+        bindings = <&sk LA(LC(LSHFT))>;
+        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    };
+
     combo_sticky_1shot_shift_left {
         timeout-ms = <COMBO_FIRING_DECAY>;
         key-positions = <POS_LH_T4 POS_LH_C2R4>;
