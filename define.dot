@@ -55,7 +55,7 @@ digraph settings {
 
     CHORD_HOLDING_TYPE -> HOMEY_HOLDING_TYPE
 
-    CHORD_HOLDING_TIME -> "-50"
+    CHORD_HOLDING_TIME -> TAPPING_RESOLUTION
 
     CHORD_STREAK_DECAY -> HOMEY_STREAK_DECAY
 
@@ -709,8 +709,6 @@ digraph settings {
       "+90" [label="+90", style=filled, fillcolor=cyan, shape=signature]
     
       "+150" [label="+150", style=filled, fillcolor=cyan, shape=signature]
-    
-      "-50" [label="-50", style=filled, fillcolor=cyan, shape=signature]
     
       "+50" [label="+50", style=filled, fillcolor=cyan, shape=signature]
     
