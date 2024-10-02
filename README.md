@@ -254,6 +254,7 @@ by the `rake` command.  However, in order for these macros to take effect, you
 may need to enable support for Unicode hexadecimal character input in your OS:
 
 - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+    and   https://github.com/ldanet/unicode-hex-input-fix
 - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 - (Windows) https://github.com/samhocevar/wincompose
 
