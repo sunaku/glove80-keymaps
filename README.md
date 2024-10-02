@@ -107,6 +107,10 @@ The diagram above shows the default "GACS" order of home row mods in this keymap
 **NOTE:** If you set your operating system to macOS in the preceding section,
 the home row mods order will be automatically rearranged into "CAGS" because
 macOS shortcuts tend to use the Cmd key like Windows/Linux use the Ctrl key.
+However, you can inhibit the automatic rearrangement by adding this setting:
+```h
+#define MACOS_USE_GACS
+```
 
 #### Difficulty level
 
