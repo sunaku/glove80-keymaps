@@ -253,7 +253,7 @@ of multiple keystrokes) generated from the `world.yaml` and `emoji.yaml` files
 by the `rake` command.  However, in order for these macros to take effect, you
 may need to enable support for Unicode hexadecimal character input in your OS:
 
-- (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+- (macOS) https://uknowit.uwgb.edu/page.php?id=22623
     and   https://github.com/ldanet/unicode-hex-input-fix
 - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 - (Windows) https://github.com/samhocevar/wincompose
