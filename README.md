@@ -54,6 +54,7 @@ See [release notes][rel] for a visual overview of recent updates.
         * [Fine-tuning the timing](#fine-tuning-the-timing)
     * [Compiling from source](#compiling-from-source)
         * [Unicode/Emoji characters](#unicodeemoji-characters)
+            * [Adding a new World character](#adding-a-new-world-character)
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
             * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
         * [Rearranging the base layer](#rearranging-the-base-layer)
@@ -411,6 +412,51 @@ You can customize the preset characters in the Emoji and World layers by
 editing their respective YAML source files in this repository.  Afterwards,
 run the `rake` command and then copy the new `keymap.dtsi` contents back into
 the "Custom Defined Behaviors" text box in the Layout Editor for your keymap.
+
+##### Adding a new World character
+
+Suppose you wanted to add a key for the copyright sign © character in your keymap.
+
+First, open the `world.yaml` file and add a new entry under the `codepoints` section:
+
+```yaml
+#
+# codepoints:
+#   <name>: "<string_of_unicode_characters>"
+#
+codepoints:
+  copyright_sign: "️©"
+```
+
+Note that you can directly paste Unicode characters into the file, as illustrated above!
+
+Next, [compile from source](#compiling-from-source) to generate the `&world_copyright_sign` behavior for ZMK:
+
+```h
+UNICODE(world_copyright_sign_macro, /* ️© */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp A &kp N9)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N9)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N9)
+  #endif
+)
+world_copyright_sign: world_copyright_sign {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_copyright_sign_macro>, <&world_copyright_sign_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_world_copyright_sign
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+```
+
+Finally, assign `&world_copyright_sign` to a "Custom" key in the Glove80 Layout Editor.
 
 ##### Adding a new Emoji character
 
