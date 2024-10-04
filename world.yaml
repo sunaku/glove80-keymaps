@@ -76,6 +76,10 @@ characters:
     pound:               "£"
     generic:    { lower: "¤",  upper: "₿"  }
 
+#
+# codepoints:
+#   <name>: "<string_of_unicode_characters>"
+#
 codepoints:
   degree_sign:     "°"
   section_sign:    "§"
