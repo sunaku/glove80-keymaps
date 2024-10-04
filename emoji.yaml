@@ -1,3 +1,8 @@
+#
+# characters:
+#   <group>:
+#     <name>: { <without_shift>, <with_shift> }
+#
 characters:
   moon:
     complete:  { new:     "🌑", full:    "🌕" }
