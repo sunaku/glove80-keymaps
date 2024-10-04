@@ -23,6 +23,10 @@ characters:
     thumbs:    { up:      "👍", down:    "👎" }
     hands:     { up:      "🙌", clap:    "👏" }
 
+#
+# codepoints:
+#   <name>: "<string_of_unicode_characters>"
+#
 codepoints:
 
   # modifiers

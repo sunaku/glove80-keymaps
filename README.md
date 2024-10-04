@@ -54,6 +54,7 @@ See [release notes][rel] for a visual overview of recent updates.
         * [Fine-tuning the timing](#fine-tuning-the-timing)
     * [Compiling from source](#compiling-from-source)
         * [Unicode/Emoji characters](#unicodeemoji-characters)
+            * [Adding a new Emoji character](#adding-a-new-emoji-character)
         * [Rearranging the base layer](#rearranging-the-base-layer)
 * [Discussion](#discussion)
 * [License](#license)
@@ -408,6 +409,51 @@ You can customize the preset characters in the Emoji and World layers by
 editing their respective YAML source files in this repository.  Afterwards,
 run the `rake` command and then copy the new `keymap.dtsi` contents back into
 the "Custom Defined Behaviors" text box in the Layout Editor for your keymap.
+
+##### Adding a new Emoji character
+
+Suppose you wanted to add a key for the "unamused face" 😒 emoji in your keymap.
+
+First, open the `emoji.yaml` file and add a new entry under the `codepoints` section:
+
+```yaml
+#
+# codepoints:
+#   <name>: "<string_of_unicode_characters>"
+#
+codepoints:
+  unamused_face: "️😒"
+```
+
+Note that you can directly paste an Emoji character into the file, as illustrated above!
+
+Next, [compile from source](#compiling-from-source) to generate the `&emoji_unamused_face` behavior for ZMK:
+
+```h
+UNICODE(emoji_unamused_face_macro, /* ️😒 */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp N2)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N1 &kp N2)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp F &kp E &kp N0 &kp F), <&macro_wait_time UNICODE_SEQ_DELAY>, UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N1 &kp N2)
+  #endif
+)
+emoji_unamused_face: emoji_unamused_face {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&emoji_unamused_face_macro>, <&emoji_unamused_face_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_emoji_unamused_face
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+```
+
+Finally, assign `&emoji_unamused_face` to a "Custom" key in the Glove80 Layout Editor.
 
 #### Rearranging the base layer
 
