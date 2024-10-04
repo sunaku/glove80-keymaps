@@ -1,5 +1,13 @@
 precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT overrides all
 
+#
+# transforms:
+#   <group>:
+#     base: <name>
+#     <modifier>: <name>
+#
+# Where <modifier> is either LALT, RALT, LCTL, RCTL, or RSFT.
+#
 transforms:
   I: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                 }
   E: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   RALT: ae                     }

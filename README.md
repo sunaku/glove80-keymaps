@@ -56,6 +56,7 @@ See [release notes][rel] for a visual overview of recent updates.
         * [Unicode/Emoji characters](#unicodeemoji-characters)
             * [Adding a new World character](#adding-a-new-world-character)
             * [Shift key for World characters](#shift-key-for-world-characters)
+            * [Modifiers for World characters](#modifiers-for-world-characters)
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
             * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
         * [Rearranging the base layer](#rearranging-the-base-layer)
@@ -535,6 +536,115 @@ world_sign_copyright: world_sign_copyright {
 ```
 
 Finally, assign `&world_sign_copyright` to a "Custom" key in the Glove80 Layout Editor.
+
+##### Modifiers for World characters
+
+Suppose you wanted to enhance the copyright/registered World character from the previous section so that it changes when you press the control key.  For example, let's change it into a trademark sign ™ character when typed with the control key, and into a service mark sign ℠ character when typed with the control and shift keys together.
+
+First, open the `world.yaml` file and add a new entry under the `characters` section:
+
+```yaml
+#
+# characters:
+#   <group>:
+#     <name>: { <without_shift>, <with_shift> }
+#
+characters:
+  sign:
+    copyright: { regular: "©", shifted: "®" }
+    trademark: { regular: "™", shifted: "℠" }
+```
+
+Note that you can directly paste Unicode characters into the file, as illustrated above!
+
+Next, add a new entry under the `transforms` section to specify what goes with control:
+
+```yaml
+#
+# transforms:
+#   <group>:
+#     base: <name>
+#     <modifier>: <name>
+#
+# Where <modifier> is either LALT, RALT, LCTL, RCTL, or RSFT.
+#
+transforms:
+  sign:
+    base: copyright
+    LCTL: trademark
+```
+
+Next, [compile from source](#compiling-from-source) to generate the `&world_sign_trademark` behavior for ZMK:
+* The `&world_sign_trademark_regular` behavior will type the regular character: ™
+* The `&world_sign_trademark_shifted` behavior will type the shifted character: ℠
+* The `&world_sign_trademark` behavior will choose one of the above based on shift
+
+```h
+UNICODE(world_sign_trademark_regular_macro, /* ™ */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp N2 &kp N1 &kp N2 &kp N2)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp N2 &kp N1 &kp N2 &kp N2)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N1 &kp N2 &kp N2)
+  #endif
+)
+world_sign_trademark_regular: world_sign_trademark_regular {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_sign_trademark_regular_macro>, <&world_sign_trademark_regular_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_world_sign_trademark_regular
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+UNICODE(world_sign_trademark_shifted_macro, /* ℠ */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp N2 &kp N1 &kp N2 &kp N0)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp N2 &kp N1 &kp N2 &kp N0)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N1 &kp N2 &kp N0)
+  #endif
+)
+world_sign_trademark_shifted: world_sign_trademark_shifted {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_sign_trademark_shifted_macro>, <&world_sign_trademark_shifted_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_world_sign_trademark_shifted
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+world_sign_trademark: world_sign_trademark {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_sign_trademark_regular>, <&world_sign_trademark_shifted>;
+  mods = <MOD_LSFT>;
+};
+```
+
+Also, notice the new `&world_sign_base` behavior that chooses between the other two:
+* The `&world_sign_copyright` behavior will type the copyright/registered sign
+* The `&world_sign_trademark` behavior will type the trade/service mark sign
+* The `&world_sign_base` behavior will choose one of the above based on control
+
+```h
+world_sign_base: world_sign_base {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_sign_copyright>, <&world_sign_trademark>;
+  mods = <(MOD_LCTL)>;
+};
+```
+
+Finally, assign `&world_sign_base` to a "Custom" key in the Glove80 Layout Editor.
 
 ##### Adding a new Emoji character
 
