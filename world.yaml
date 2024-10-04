@@ -16,6 +16,11 @@ transforms:
   currency:
      { base: dollar,  LCTL: euro,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won     }
 
+#
+# characters:
+#   <group>:
+#     <name>: { <without_shift>, <with_shift> }
+#
 characters:
   I:
     acute:      { lower: "í",  upper: "Í"  }

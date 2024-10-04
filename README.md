@@ -55,6 +55,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Compiling from source](#compiling-from-source)
         * [Unicode/Emoji characters](#unicodeemoji-characters)
             * [Adding a new World character](#adding-a-new-world-character)
+            * [Shift key for World characters](#shift-key-for-world-characters)
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
             * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
         * [Rearranging the base layer](#rearranging-the-base-layer)
@@ -457,6 +458,83 @@ world_copyright_sign: world_copyright_sign {
 ```
 
 Finally, assign `&world_copyright_sign` to a "Custom" key in the Glove80 Layout Editor.
+
+##### Shift key for World characters
+
+Suppose you wanted a World character that changed when you press the shift key, like lowercase and uppercase letters in English.  For example, consider the copyright sign © character from the previous section: let's change it into a registered sign ® character when typed with the shift key.
+
+First, open the `world.yaml` file and add a new entry under the `characters` section:
+
+```yaml
+#
+# characters:
+#   <group>:
+#     <name>: { <without_shift>, <with_shift> }
+#
+characters:
+  sign:
+    copyright: { regular: "©", shifted: "®" }
+```
+
+Note that you can directly paste Unicode characters into the file, as illustrated above!
+
+Next, [compile from source](#compiling-from-source) to generate the `&world_sign_copyright` behavior for ZMK:
+* The `&world_sign_copyright_regular` behavior will type the regular character: ©
+* The `&world_sign_copyright_shifted` behavior will type the shifted character: ®
+* The `&world_sign_copyright` behavior will choose one of the above based on shift
+
+```h
+UNICODE(world_sign_copyright_regular_macro, /* © */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp A &kp N9)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N9)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N9)
+  #endif
+)
+world_sign_copyright_regular: world_sign_copyright_regular {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_sign_copyright_regular_macro>, <&world_sign_copyright_regular_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+UNICODE(world_sign_copyright_shifted_macro, /* ® */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp A &kp E)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp E)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp E)
+  #endif
+)
+world_sign_copyright_shifted: world_sign_copyright_shifted {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_sign_copyright_shifted_macro>, <&world_sign_copyright_shifted_macro>;
+    mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_world_sign_copyright_shifted
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+world_sign_copyright: world_sign_copyright {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&world_sign_copyright_regular>, <&world_sign_copyright_shifted>;
+  mods = <MOD_LSFT>;
+};
+```
+
+Finally, assign `&world_sign_copyright` to a "Custom" key in the Glove80 Layout Editor.
 
 ##### Adding a new Emoji character
 
