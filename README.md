@@ -55,6 +55,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Compiling from source](#compiling-from-source)
         * [Unicode/Emoji characters](#unicodeemoji-characters)
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
+            * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
         * [Rearranging the base layer](#rearranging-the-base-layer)
 * [Discussion](#discussion)
 * [License](#license)
@@ -454,6 +455,83 @@ emoji_unamused_face: emoji_unamused_face {
 ```
 
 Finally, assign `&emoji_unamused_face` to a "Custom" key in the Glove80 Layout Editor.
+
+##### Shift key for Emoji characters
+
+Suppose you wanted an Emoji character that changed when you press the shift key, like lowercase and uppercase letters in English.  For example, consider the "unamused face" 😒 emoji from the previous section: let's change it into a "face with rolling eyes" 🙄 emoji when typed with the shift key.
+
+First, open the `emoji.yaml` file and add a new entry under the `characters` section:
+
+```yaml
+#
+# characters:
+#   <group>:
+#     <name>: { <without_shift>, <with_shift> }
+#
+characters:
+  face:
+    unamused: { regular: "😒", shifted: "🙄" }
+```
+
+Note that you can directly paste Emoji characters into the file, as illustrated above!
+
+Next, [compile from source](#compiling-from-source) to generate the `&emoji_face_unamused` behavior for ZMK:
+* The `&emoji_face_unamused_regular` behavior will type the regular character: 😒
+* The `&emoji_face_unamused_shifted` behavior will type the shifted character: 🙄
+* The `&emoji_face_unamused` behavior will choose one of the above based on shift
+
+```h
+UNICODE(emoji_face_unamused_regular_macro, /* 😒 */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N1 &kp N2)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N1 &kp N2)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N1 &kp N2)
+  #endif
+)
+emoji_face_unamused_regular: emoji_face_unamused_regular {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&emoji_face_unamused_regular_macro>, <&emoji_face_unamused_regular_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_emoji_face_unamused_regular
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+UNICODE(emoji_face_unamused_shifted_macro, /* 🙄 */
+  #if OPERATING_SYSTEM == 'L'
+    UNICODE_SEQ_LINUX(&kp N1 &kp F &kp N6 &kp N4 &kp N4)
+  #elif OPERATING_SYSTEM == 'M'
+    UNICODE_SEQ_MACOS(&kp D &kp N8 &kp N3 &kp D &kp D &kp E &kp N4 &kp N4)
+  #elif OPERATING_SYSTEM == 'W'
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp N1 &kp F &kp N6 &kp N4 &kp N4)
+  #endif
+)
+emoji_face_unamused_shifted: emoji_face_unamused_shifted {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&emoji_face_unamused_shifted_macro>, <&emoji_face_unamused_shifted_macro>;
+  mods = <(~(
+    #ifdef WORLD_USE_COMPOSE_FOR_emoji_face_unamused_shifted
+      COMPOSE_MORPH_MODS
+    #else
+      UNICODE_MORPH_MODS
+    #endif
+  ))>;
+};
+emoji_face_unamused: emoji_face_unamused {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&emoji_face_unamused_regular>, <&emoji_face_unamused_shifted>;
+  mods = <MOD_LSFT>;
+};
+```
+
+Finally, assign `&emoji_face_unamused` to a "Custom" key in the Glove80 Layout Editor.
 
 #### Rearranging the base layer
 
