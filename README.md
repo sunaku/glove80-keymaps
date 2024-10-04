@@ -57,6 +57,7 @@ See [release notes][rel] for a visual overview of recent updates.
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
             * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
         * [Rearranging the base layer](#rearranging-the-base-layer)
+            * [Mirroring horizontally](#mirroring-horizontally)
 * [Discussion](#discussion)
 * [License](#license)
 
@@ -550,6 +551,66 @@ If you rearrange the base layer (say, for a custom or alternative layout) then:
    text box in the Layout Editor for your keymap.
 
 You don't need to change the per-finger layers (such as "LeftPinky") manually.
+
+##### Mirroring horizontally
+
+To horizontally mirror a keymap's physical layout in the Glove80 Layout Editor:
+
+1. Activate the "Enable local config" option in the Glove80 Layout Editor's settings panel under the "Experimental Settings" section.
+1. Return to the editor and export your keymap to a JSON file by clicking on the "Download" button.
+2. Paste the contents of the exported JSON file into your Web browser's JavaScript console (found in the "Developer Tools" panel, typically activated by pressing Ctrl+F12) at the location indicated by the comment in the first line of the following code snippet.
+6. Right-click the result, copy to clipboard, save to file, and upload into the Glove80 Layout Editor.
+7. Presto! 🫰 Everything should be mirrored now.
+
+```javascript
+layout = /* paste contents of exported JSON file here */;
+mirroring_transformation = {
+//
+// |------------------------|------------------------|
+// | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
+// |                        |                        |
+// |  0  1  2  3  4         |          5  6  7  8  9 |
+// | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
+// | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
+// | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
+// | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
+// | 64 65 66 67 68         |         75 76 77 78 79 |
+// |                69 52   |   57 74                |
+// |                 70 53  |  56 73                 |
+// |                  71 54 | 55 72                  |
+// |------------------------|------------------------|
+// | LEFT_HAND_MIRRORED     |    RIGHT_HAND_MIRRORED |
+// |                        |                        |
+// |  9  8  7  6  5         |          4  3  2  1  0 |
+// | 21 20 19 18 17 16      |      15 14 13 12 11 10 |
+// | 33 32 31 30 29 28      |      27 26 25 24 23 22 |
+// | 45 44 43 42 41 40      |      39 38 37 36 35 34 |
+// | 63 62 61 60 59 58      |      51 50 49 48 47 46 |
+// | 79 78 77 76 75         |         68 67 66 65 64 |
+// |                74 57   |   52 69                |
+// |                 73 56  |  53 70                 |
+// |                  71 54 | 55 72                  |
+// |------------------------|------------------------|
+//
+   0: 9,  1: 8,  2: 7,  3: 6,  4: 5,                              5: 4,  6: 3,  7: 2,  8: 1,  9: 0,
+  10:21, 11:20, 12:19, 13:18, 14:17, 15:16,               16:15, 17:14, 18:13, 19:12, 20:11, 21:10,
+  22:33, 23:32, 24:31, 25:30, 26:29, 27:28,               28:27, 29:26, 30:25, 31:24, 32:23, 33:22,
+  34:45, 35:44, 36:43, 37:42, 38:41, 39:40,               40:39, 41:38, 42:37, 43:36, 44:35, 45:34,
+  46:63, 47:62, 48:61, 49:60, 50:59, 51:58,               58:51, 59:50, 60:49, 61:48, 62:47, 63:46,
+  64:79, 65:78, 66:77, 67:76, 68:75,                             75:68, 76:67, 77:66, 78:65, 79:64,
+                                     69:74, 52:57, 57:52, 74:69,
+                                     70:73, 53:56, 56:53, 73:70,
+                                     71:72, 54:55, 55:54, 72:71,
+};
+mirrored_layers = layout["layers"].map((layer) => {
+  return layer.map((key,pos) => {
+    return layer[mirroring_transformation[pos]];
+  });
+});
+mirrored_layout = Object.assign({}, layout);
+mirrored_layout["layers"] = mirrored_layers;
+mirrored_layout; /* dumps to the console for copying */
+```
 
 ## Discussion
 
