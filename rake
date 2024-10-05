@@ -6,7 +6,7 @@
 #
 # Written in 2022 by Suraj N. Kurapati
 
-IMAGE=${PWD##*/}
+IMAGE=${PWD##*/}:$(git hash-object Dockerfile)
 
 # build the image if necessary
 docker images -q "$IMAGE" | grep -q . ||
