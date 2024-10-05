@@ -8,6 +8,6 @@ RUN apt-get install -y locales \
  && locale-gen
 
 # NOTE: rake provides ruby(1)
-RUN apt-get install -y rake graphviz
+RUN apt-get install -y rake graphviz graphicsmagick poppler-utils
 
 WORKDIR /opt
