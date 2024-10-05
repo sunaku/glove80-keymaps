@@ -38,6 +38,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [Home row mods](#home-row-mods)
         * [Difficulty level](#difficulty-level)
         * [One-shot shifts](#one-shot-shifts)
+        * [Shift forgiveness](#shift-forgiveness)
         * [Bilateral combinations](#bilateral-combinations)
     * [Layer access keys](#layer-access-keys)
     * [Key auto-repeat](#key-auto-repeat)
@@ -163,6 +164,47 @@ such as for the frequent "I" in English or when typing camel/PascalCase names.
 
 Similarly, the combination of thumb T4 and the home row index finger key also
 provides the same one-shot sticky shifting for single letter capitalization.
+
+#### Shift forgiveness
+
+What should happen when a home row shift is held and released without any other
+key having been pressed in the meantime?  I've often found myself in that exact
+scenario for having lingered too long (slow tap) while tapping a home row shift
+key: instead of typing the underlying letter (per my intention), the tap would
+not produce any output (to my surprise) since it would hold and release shift.
+
+Thanks to the `hold-while-undecided` feature in a newer ZMK release that MoErgo
+has made available in the `v24.08-beta1` firmware, I finally tamed this nuance:
+
+```h
+#define SHIFT_FORGIVENESS
+```
+
+This setting will tap when home row shift is merely held and released,
+without any other key having been tapped while the shift was held down.
+For example, suppose you hold a home row shift key and, before pressing
+another key, suddenly decide that you don't want to use shift after all:
+
+1.  If this setting is enabled, the underlying tap behavior is triggered
+    to type a single character when you release that home row shift key.
+
+2.  Otherwise, nothing happens when you release that home row shift key.
+
+This requires the "hold-while-undecided" ZMK feature in a beta firmware:
+please select "v24.08-beta1" or newer from the drop-down menu located at
+Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
+
+>CAUTION: This can interfere with mod-click mouse usage where you hold a
+home row shift key and perform mouse actions (move, click, drag & drop):
+when you release that home row shift key, its underlying character would
+be typed, potentially triggering an unexpected action on your selection!
+To prevent the underlying character from being typed, press another key
+(such as a dedicated shift key, a neighboring home row mod key, or even
+a layer access key) before you release the original home row shift key.
+
+>NOTE: You may potentially encounter "flashing mods" where an application
+or operating system action is triggered by a standalone tap of a shift,
+but this is unlikely as people regularly tap shift without consequence.
 
 #### Bilateral combinations
 
