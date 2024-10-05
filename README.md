@@ -59,6 +59,7 @@ See [release notes][rel] for a visual overview of recent updates.
             * [Modifiers for World characters](#modifiers-for-world-characters)
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
             * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
+        * [Editing layer map diagrams](#editing-layer-map-diagrams)
         * [Rearranging the base layer](#rearranging-the-base-layer)
             * [Mirroring horizontally](#mirroring-horizontally)
 * [Discussion](#discussion)
@@ -767,6 +768,25 @@ emoji_face_unamused: emoji_face_unamused {
 ```
 
 Finally, assign `&emoji_face_unamused` to a "Custom" key in the Glove80 Layout Editor.
+
+#### Editing layer map diagrams
+
+The `README/` directory in this repository contains sources and renderings of
+layer map diagrams for all layers in this keymap, as well as a blank template
+for your own customization: for example, if you use a different alpha layout.
+
+To edit a diagram, upload its corresponding JSON file into [the KLE app][KLE]
+by drag/drop onto the canvas or clicking "Upload JSON" in the "Raw data" tab.
+
+[KLE]: https://www.keyboard-layout-editor.com
+
+To render a layer diagram, use [the "Screenshot node" feature in Firefox][FFS]
+on the `#keyboard-bg` element; or use your favorite screenshot capturing tool.
+
+[FFS]: https://youtu.be/p2pjF_BrE1o
+
+To assemble a PDF document with all rendered layer diagrams, run `rake pdf` to
+convert each of them into PDF documents and then stitch them together into one.
 
 #### Rearranging the base layer
 
