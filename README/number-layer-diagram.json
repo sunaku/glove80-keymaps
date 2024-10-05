@@ -50,14 +50,18 @@
     },
     "<center><h2>Number Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
-      "c": "#ffccbc",
+      "c": "#ffecb3",
       "a": 7,
+      "f": 9
+    },
+    "~",
+    {
+      "c": "#ffccbc",
       "f": 6
     },
     "^",
-    "$",
     "#",
-    "@",
+    "$",
     {
       "c": "#ffecb3"
     },
@@ -216,8 +220,23 @@
   ],
   [
     {
+      "y": -0.04999999999999982,
+      "x": 6.95,
+      "c": "#FFFF8D",
+      "p": "FLAT",
+      "f": 2,
+      "w": 1.1,
+      "h": 2.7,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9500000000000002,
       "c": "#cccccc",
       "g": true,
+      "p": "CHICKLET",
       "f": 3,
       "fa": [
         9
@@ -274,11 +293,10 @@
     },
     ">\n)",
     {
-      "c": "#ffecb3",
       "a": 7,
-      "f": 9
+      "f": 6
     },
-    "~"
+    "@"
   ],
   [
     {

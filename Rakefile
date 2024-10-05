@@ -79,6 +79,7 @@ layers_pdf_sequence = %w[
   typing
   gaming
   factory
+  template
 ]
 
 layer_pngs = Dir["README/{#{layers_pdf_sequence.join(",")}}-layer-diagram.png"]

@@ -296,12 +296,13 @@
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
+//#define SHIFT_FORGIVENESS  // requires 24.08-beta1 or newer firmware
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v37 -- "Glorious Engrammer"
+// Sunaku's Keymap v38 -- "Glorious Engrammer"
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
@@ -317,7 +318,8 @@
 // each OS has different shortcuts for typing Unicode hex characters.
 //
 // NOTE: You may need to enable Unicode hexadecimal input in your OS:
-// - (macOS) https://sevenseacat.net/posts/2018/unicode-in-qmk-on-osx/
+// - (macOS) https://uknowit.uwgb.edu/page.php?id=22623
+//     and   https://github.com/ldanet/unicode-hex-input-fix
 // - (Linux) https://help.ubuntu.com/stable/ubuntu-help/tips-specialchars.html.en#ctrlshiftu
 // - (Windows) https://github.com/samhocevar/wincompose
 //
@@ -1236,6 +1238,13 @@ combos {
         layers = <0 1 2 3 4 5 6 7 8>;
     };
 
+    combo_sticky_meh_right {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_RH_T4 POS_RH_T5>;
+        bindings = <&sk LA(LC(LSHFT))>;
+        layers = <0 1 2 3 4 5 6 7 8>;
+    };
+
     combo_sticky_1shot_shift_left {
         timeout-ms = <COMBO_FIRING_DECAY>;
         key-positions = <POS_LH_T4 POS_LH_C2R4>;
@@ -1323,12 +1332,42 @@ behaviors {
     //#define ENFORCE_BILATERAL
 
     //
+    // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
+    // without any other key having been tapped while the shift was held down.
+    // For example, suppose you hold a home row shift key and, before pressing
+    // another key, suddenly decide that you don't want to use shift after all:
+    //
+    // <1> If this setting is enabled, the underlying tap behavior is triggered
+    //     to type a single character when you release that home row shift key.
+    //
+    // <2> Otherwise, nothing happens when you release that home row shift key.
+    //
+    // This requires the "hold-while-undecided" ZMK feature in a beta firmware:
+    // please select "v24.08-beta1" or newer from the drop-down menu located at
+    // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
+    //
+    // CAUTION: This can interfere with mod-click mouse usage where you hold a
+    // home row shift key and perform mouse actions (move, click, drag & drop):
+    // when you release that home row shift key, its underlying character would
+    // be typed, potentially triggering an unexpected action on your selection!
+    // To prevent the underlying character from being typed, press another key
+    // (such as a dedicated shift key, a neighboring home row mod key, or even
+    // a layer access key) before you release the original home row shift key.
+    //
+    // NOTE: You may potentially encounter "flashing mods" where an application
+    // or operating system action is triggered by a standalone tap of a shift,
+    // but this is unlikely as people regularly tap shift without consequence.
+    //
+    //#define SHIFT_FORGIVENESS
+
+    //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
     // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
-    // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped.
+    // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped,
+    // unless MACOS_USE_GACS is also defined to suppress that Win & Ctrl swap.
     //
     #ifndef PINKY_FINGER_MOD
-      #if OPERATING_SYSTEM == 'M'
+      #if OPERATING_SYSTEM == 'M' && !defined(MACOS_USE_GACS)
         #define PINKY_FINGER_MOD LCTL
       #else
         #define PINKY_FINGER_MOD LGUI
@@ -1341,7 +1380,7 @@ behaviors {
     #define RING2_FINGER_MOD RALT
     #endif
     #ifndef MIDDY_FINGER_MOD
-      #if OPERATING_SYSTEM == 'M'
+      #if OPERATING_SYSTEM == 'M' && !defined(MACOS_USE_GACS)
         #define MIDDY_FINGER_MOD LGUI
       #else
         #define MIDDY_FINGER_MOD LCTL
@@ -1405,10 +1444,10 @@ behaviors {
     #define INDEX_HOLDING_TIME (TAPPING_RESOLUTION + 20)
     #endif
     #ifndef MIDDY_HOLDING_TIME
-    #define MIDDY_HOLDING_TIME (TAPPING_RESOLUTION + 50)
+    #define MIDDY_HOLDING_TIME (TAPPING_RESOLUTION + 60)
     #endif
     #ifndef RING1_HOLDING_TIME
-    #define RING1_HOLDING_TIME (TAPPING_RESOLUTION + 80)
+    #define RING1_HOLDING_TIME (TAPPING_RESOLUTION + 90)
     #endif
     #ifndef RING2_HOLDING_TIME
     #define RING2_HOLDING_TIME RING1_HOLDING_TIME
@@ -1449,7 +1488,7 @@ behaviors {
     // This is specifically for secondary keypresses in multi-mod chords.
     //
     #ifndef CHORD_HOLDING_TIME
-    #define CHORD_HOLDING_TIME (TAPPING_RESOLUTION - 50)
+    #define CHORD_HOLDING_TIME TAPPING_RESOLUTION
     #endif
 
     //
@@ -1506,12 +1545,6 @@ behaviors {
     // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for index fingers (which Miryoku assigns to Shift) on home row keys.
     //
-    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
-    // allows faster activation of the Shift modifier (without having to wait
-    // for the modified key to be released as the "balanced" flavor requires).
-    // Typing streaks and the `hold-trigger-on-release` setting are disabled
-    // for the index fingers so as not to hinder their speed and dexterity.
-    //
     #ifndef PLAIN_HOLDING_TYPE
     #define PLAIN_HOLDING_TYPE HOMEY_HOLDING_TYPE
     #endif
@@ -1546,12 +1579,8 @@ behaviors {
     // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for the thumbs (which are assigned to 6 layers in the Miryoku system).
     //
-    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-    // activation for the symbol layer (if the tapped symbol key is released
-    // while the thumb layer key is still held down) for quicker programming.
-    //
     #ifndef THUMB_HOLDING_TYPE
-    #define THUMB_HOLDING_TYPE "balanced"
+    #define THUMB_HOLDING_TYPE "tap-preferred"
     #endif
 
     //
@@ -1573,10 +1602,6 @@ behaviors {
     //
     // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
     // for spacebar (assigned to the right thumb's home position by default).
-    //
-    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-    // activation for the symbol layer (if the tapped symbol key is released
-    // while the thumb layer key is still held down) for quicker programming.
     //
     #ifndef SPACE_HOLDING_TYPE
     #define SPACE_HOLDING_TYPE THUMB_HOLDING_TYPE
@@ -1922,6 +1947,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_pinky_bilateral: homey_left_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -1933,6 +1964,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_pinky_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_pinky_hold: homey_left_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2008,6 +2045,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_pinky_bilateral: homey_right_pinky_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2019,6 +2062,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_pinky_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_pinky_hold: homey_right_pinky_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2094,6 +2143,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING1_MOD == LSFT || LEFT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring1_bilateral: homey_left_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2105,6 +2160,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_ring1_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING1_MOD == LSFT || LEFT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring1_hold: homey_left_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2180,6 +2241,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING1_MOD == LSFT || RIGHT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring1_bilateral: homey_right_ring1_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2191,6 +2258,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_ring1_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING1_MOD == LSFT || RIGHT_RING1_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring1_hold: homey_right_ring1_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2266,6 +2339,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING2_MOD == LSFT || LEFT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring2_bilateral: homey_left_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2277,6 +2356,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_ring2_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_RING2_MOD == LSFT || LEFT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_ring2_hold: homey_left_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2352,6 +2437,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING2_MOD == LSFT || RIGHT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring2_bilateral: homey_right_ring2_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2363,6 +2454,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_ring2_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_RING2_MOD == LSFT || RIGHT_RING2_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_ring2_hold: homey_right_ring2_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2438,6 +2535,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_middy_bilateral: homey_left_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2449,6 +2552,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_middy_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_middy_hold: homey_left_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2524,6 +2633,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_middy_bilateral: homey_right_middy_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2535,6 +2650,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_middy_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_middy_hold: homey_right_middy_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2610,6 +2731,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_index_bilateral: homey_left_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2621,6 +2748,12 @@ behaviors {
         require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&left_index_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     left_index_hold: homey_left_index_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -2696,6 +2829,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_index_bilateral: homey_right_index_bilateral {
         compatible = "zmk,behavior-hold-tap";
@@ -2707,6 +2846,12 @@ behaviors {
         require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&right_index_hold>, <&kp>;
+        #ifdef SHIFT_FORGIVENESS
+        #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap;
+        #endif
+        #endif
     };
     right_index_hold: homey_right_index_hold {
         compatible = "zmk,behavior-macro-one-param";
@@ -4214,13 +4359,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
-    thumb_lower_shift: lower_layer_or_sticky_shift {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        #binding-cells = <2>;
-        bindings = <&mo>, <&sticky_key_oneshot>;
-    };
     space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
         flavor = SPACE_HOLDING_TYPE;
@@ -4383,7 +4521,7 @@ behaviors {
     // sticky one-shot keys in order to trigger their hold (not tap) action.
     //
     #ifndef STICKY_HOLDING_TIME
-    #define STICKY_HOLDING_TIME CHORD_HOLDING_TIME
+    #define STICKY_HOLDING_TIME (TAPPING_RESOLUTION + 50)
     #endif
 
     sticky_key_modtap: sticky_key_modtap {
@@ -10600,6 +10738,13 @@ UNICODE_MORPH_MODS
 /* Automatically generated macro definitions */
 / {
     macros {
+
+    };
+};
+
+/* Automatically generated behavior definitions */
+/ {
+    behaviors {
     
     };
 };
@@ -10607,7 +10752,7 @@ UNICODE_MORPH_MODS
 /* Automatically generated combos definitions */
 / {
     combos {
-            compatible = "zmk,combos";
+    compatible = "zmk,combos";
     };
 };
 
@@ -10733,7 +10878,7 @@ UNICODE_MORPH_MODS
  &left_pinky_tap KEY_LH_C6R2  &left_pinky_tap KEY_LH_C5R2  &left_pinky_tap KEY_LH_C4R2  &left_pinky_tap KEY_LH_C3R2  &left_pinky_tap KEY_LH_C2R2  &left_pinky_tap KEY_LH_C1R2                                                          &trans               &trans               &trans               &trans               &trans  &trans
  &left_pinky_tap KEY_LH_C6R3  &left_pinky_tap KEY_LH_C5R3              &LeftPinkyRing2  &left_pinky_tap KEY_LH_C3R3  &left_pinky_tap KEY_LH_C2R3  &left_pinky_tap KEY_LH_C1R3                                                          &trans               &trans               &trans  &kp RIGHT_RING2_KEY               &trans  &trans
  &left_pinky_tap KEY_LH_C6R4                        &none              &LeftPinkyRing1              &LeftPinkyMiddy              &LeftPinkyIndex  &left_pinky_tap KEY_LH_C1R4                                                  &RightPlainKey  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RING1_KEY  &kp RIGHT_PINKY_KEY  &trans
- &left_pinky_tap KEY_LH_C6R5  &left_pinky_tap KEY_LH_C5R5  &left_pinky_tap KEY_LH_C4R5  &left_pinky_tap KEY_LH_C3R5  &left_pinky_tap KEY_LH_C2R5  &left_pinky_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_pinky_tap KEY_LH_C5R5  &left_pinky_tap KEY_LH_C4R5  &left_pinky_tap KEY_LH_C3R5  &left_pinky_tap KEY_LH_C2R5  &left_pinky_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
                       &trans  &left_pinky_tap KEY_LH_C5R6  &left_pinky_tap KEY_LH_C4R6  &left_pinky_tap KEY_LH_C3R6  &left_pinky_tap KEY_LH_C2R6                               &trans  &trans  &trans  &trans  &trans  &trans                               &trans               &trans               &trans               &trans  &trans
             >;
         };
@@ -10744,7 +10889,7 @@ UNICODE_MORPH_MODS
  &left_ring1_tap KEY_LH_C6R2  &left_ring1_tap KEY_LH_C5R2  &left_ring1_tap KEY_LH_C4R2  &left_ring1_tap KEY_LH_C3R2  &left_ring1_tap KEY_LH_C2R2  &left_ring1_tap KEY_LH_C1R2                                                          &trans               &trans               &trans               &trans               &trans  &trans
  &left_ring1_tap KEY_LH_C6R3  &left_ring1_tap KEY_LH_C5R3              &LeftRing1Ring2  &left_ring1_tap KEY_LH_C3R3  &left_ring1_tap KEY_LH_C2R3  &left_ring1_tap KEY_LH_C1R3                                                          &trans               &trans               &trans  &kp RIGHT_RING2_KEY               &trans  &trans
  &left_ring1_tap KEY_LH_C6R4              &LeftRing1Pinky                        &none              &LeftRing1Middy              &LeftRing1Index  &left_ring1_tap KEY_LH_C1R4                                                  &RightPlainKey  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RING1_KEY  &kp RIGHT_PINKY_KEY  &trans
- &left_ring1_tap KEY_LH_C6R5  &left_ring1_tap KEY_LH_C5R5  &left_ring1_tap KEY_LH_C4R5  &left_ring1_tap KEY_LH_C3R5  &left_ring1_tap KEY_LH_C2R5  &left_ring1_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_ring1_tap KEY_LH_C5R5  &left_ring1_tap KEY_LH_C4R5  &left_ring1_tap KEY_LH_C3R5  &left_ring1_tap KEY_LH_C2R5  &left_ring1_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
                       &trans  &left_ring1_tap KEY_LH_C5R6  &left_ring1_tap KEY_LH_C4R6  &left_ring1_tap KEY_LH_C3R6  &left_ring1_tap KEY_LH_C2R6                               &trans  &trans  &trans  &trans  &trans  &trans                               &trans               &trans               &trans               &trans  &trans
             >;
         };
@@ -10755,7 +10900,7 @@ UNICODE_MORPH_MODS
  &left_ring2_tap KEY_LH_C6R2  &left_ring2_tap KEY_LH_C5R2  &left_ring2_tap KEY_LH_C4R2  &left_ring2_tap KEY_LH_C3R2  &left_ring2_tap KEY_LH_C2R2  &left_ring2_tap KEY_LH_C1R2                                                          &trans               &trans               &trans               &trans               &trans  &trans
  &left_ring2_tap KEY_LH_C6R3  &left_ring2_tap KEY_LH_C5R3                        &none  &left_ring2_tap KEY_LH_C3R3  &left_ring2_tap KEY_LH_C2R3  &left_ring2_tap KEY_LH_C1R3                                                          &trans               &trans               &trans  &kp RIGHT_RING2_KEY               &trans  &trans
  &left_ring2_tap KEY_LH_C6R4              &LeftRing2Pinky              &LeftRing2Ring1              &LeftRing2Middy              &LeftRing2Index  &left_ring2_tap KEY_LH_C1R4                                                  &RightPlainKey  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RING1_KEY  &kp RIGHT_PINKY_KEY  &trans
- &left_ring2_tap KEY_LH_C6R5  &left_ring2_tap KEY_LH_C5R5  &left_ring2_tap KEY_LH_C4R5  &left_ring2_tap KEY_LH_C3R5  &left_ring2_tap KEY_LH_C2R5  &left_ring2_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_ring2_tap KEY_LH_C5R5  &left_ring2_tap KEY_LH_C4R5  &left_ring2_tap KEY_LH_C3R5  &left_ring2_tap KEY_LH_C2R5  &left_ring2_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
                       &trans  &left_ring2_tap KEY_LH_C5R6  &left_ring2_tap KEY_LH_C4R6  &left_ring2_tap KEY_LH_C3R6  &left_ring2_tap KEY_LH_C2R6                               &trans  &trans  &trans  &trans  &trans  &trans                               &trans               &trans               &trans               &trans  &trans
             >;
         };
@@ -10766,7 +10911,7 @@ UNICODE_MORPH_MODS
  &left_middy_tap KEY_LH_C6R2  &left_middy_tap KEY_LH_C5R2  &left_middy_tap KEY_LH_C4R2  &left_middy_tap KEY_LH_C3R2  &left_middy_tap KEY_LH_C2R2  &left_middy_tap KEY_LH_C1R2                                                          &trans               &trans               &trans               &trans               &trans  &trans
  &left_middy_tap KEY_LH_C6R3  &left_middy_tap KEY_LH_C5R3              &LeftMiddyRing2  &left_middy_tap KEY_LH_C3R3  &left_middy_tap KEY_LH_C2R3  &left_middy_tap KEY_LH_C1R3                                                          &trans               &trans               &trans  &kp RIGHT_RING2_KEY               &trans  &trans
  &left_middy_tap KEY_LH_C6R4              &LeftMiddyPinky              &LeftMiddyRing1                        &none              &LeftMiddyIndex  &left_middy_tap KEY_LH_C1R4                                                  &RightPlainKey  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RING1_KEY  &kp RIGHT_PINKY_KEY  &trans
- &left_middy_tap KEY_LH_C6R5  &left_middy_tap KEY_LH_C5R5  &left_middy_tap KEY_LH_C4R5  &left_middy_tap KEY_LH_C3R5  &left_middy_tap KEY_LH_C2R5  &left_middy_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_middy_tap KEY_LH_C5R5  &left_middy_tap KEY_LH_C4R5  &left_middy_tap KEY_LH_C3R5  &left_middy_tap KEY_LH_C2R5  &left_middy_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
                       &trans  &left_middy_tap KEY_LH_C5R6  &left_middy_tap KEY_LH_C4R6  &left_middy_tap KEY_LH_C3R6  &left_middy_tap KEY_LH_C2R6                               &trans  &trans  &trans  &trans  &trans  &trans                               &trans               &trans               &trans               &trans  &trans
             >;
         };
@@ -10777,7 +10922,7 @@ UNICODE_MORPH_MODS
  &left_index_tap KEY_LH_C6R2  &left_index_tap KEY_LH_C5R2  &left_index_tap KEY_LH_C4R2  &left_index_tap KEY_LH_C3R2  &left_index_tap KEY_LH_C2R2  &left_index_tap KEY_LH_C1R2                                                          &trans               &trans               &trans               &trans               &trans  &trans
  &left_index_tap KEY_LH_C6R3  &left_index_tap KEY_LH_C5R3              &LeftIndexRing2  &left_index_tap KEY_LH_C3R3  &left_index_tap KEY_LH_C2R3  &left_index_tap KEY_LH_C1R3                                                          &trans               &trans               &trans  &kp RIGHT_RING2_KEY               &trans  &trans
  &left_index_tap KEY_LH_C6R4              &LeftIndexPinky              &LeftIndexRing1              &LeftIndexMiddy                        &none  &left_index_tap KEY_LH_C1R4                                                  &RightPlainKey  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RING1_KEY  &kp RIGHT_PINKY_KEY  &trans
- &left_index_tap KEY_LH_C6R5  &left_index_tap KEY_LH_C5R5  &left_index_tap KEY_LH_C4R5  &left_index_tap KEY_LH_C3R5  &left_index_tap KEY_LH_C2R5  &left_index_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_index_tap KEY_LH_C5R5  &left_index_tap KEY_LH_C4R5  &left_index_tap KEY_LH_C3R5  &left_index_tap KEY_LH_C2R5  &left_index_tap KEY_LH_C1R5  &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans               &trans               &trans               &trans  &trans
                       &trans  &left_index_tap KEY_LH_C5R6  &left_index_tap KEY_LH_C4R6  &left_index_tap KEY_LH_C3R6  &left_index_tap KEY_LH_C2R6                               &trans  &trans  &trans  &trans  &trans  &trans                               &trans               &trans               &trans               &trans  &trans
             >;
         };
@@ -10788,7 +10933,7 @@ UNICODE_MORPH_MODS
  &trans              &trans              &trans              &trans              &trans         &trans                                                  &right_pinky_tap KEY_RH_C1R2  &right_pinky_tap KEY_RH_C2R2  &right_pinky_tap KEY_RH_C3R2  &right_pinky_tap KEY_RH_C4R2  &right_pinky_tap KEY_RH_C5R2  &right_pinky_tap KEY_RH_C6R2
  &trans              &trans  &kp LEFT_RING2_KEY              &trans              &trans         &trans                                                  &right_pinky_tap KEY_RH_C1R3  &right_pinky_tap KEY_RH_C2R3  &right_pinky_tap KEY_RH_C3R3              &RightPinkyRing2  &right_pinky_tap KEY_RH_C5R3  &right_pinky_tap KEY_RH_C6R3
  &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RING1_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &LeftPlainKey                                                  &right_pinky_tap KEY_RH_C1R4              &RightPinkyIndex              &RightPinkyMiddy              &RightPinkyRing1                         &none  &right_pinky_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_pinky_tap KEY_RH_C1R5  &right_pinky_tap KEY_RH_C2R5  &right_pinky_tap KEY_RH_C3R5  &right_pinky_tap KEY_RH_C4R5  &right_pinky_tap KEY_RH_C5R5  &right_pinky_tap KEY_RH_C6R5
+ &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_pinky_tap KEY_RH_C1R5  &right_pinky_tap KEY_RH_C2R5  &right_pinky_tap KEY_RH_C3R5  &right_pinky_tap KEY_RH_C4R5  &right_pinky_tap KEY_RH_C5R5                        &trans
  &trans              &trans              &trans              &trans              &trans                 &trans  &trans  &trans  &trans  &trans  &trans                                &right_pinky_tap KEY_RH_C2R6  &right_pinky_tap KEY_RH_C3R6  &right_pinky_tap KEY_RH_C4R6  &right_pinky_tap KEY_RH_C5R6                        &trans
             >;
         };
@@ -10799,7 +10944,7 @@ UNICODE_MORPH_MODS
  &trans              &trans              &trans              &trans              &trans         &trans                                                  &right_ring1_tap KEY_RH_C1R2  &right_ring1_tap KEY_RH_C2R2  &right_ring1_tap KEY_RH_C3R2  &right_ring1_tap KEY_RH_C4R2  &right_ring1_tap KEY_RH_C5R2  &right_ring1_tap KEY_RH_C6R2
  &trans              &trans  &kp LEFT_RING2_KEY              &trans              &trans         &trans                                                  &right_ring1_tap KEY_RH_C1R3  &right_ring1_tap KEY_RH_C2R3  &right_ring1_tap KEY_RH_C3R3              &RightRing1Ring2  &right_ring1_tap KEY_RH_C5R3  &right_ring1_tap KEY_RH_C6R3
  &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RING1_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &LeftPlainKey                                                  &right_ring1_tap KEY_RH_C1R4              &RightRing1Index              &RightRing1Middy                         &none              &RightRing1Pinky  &right_ring1_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_ring1_tap KEY_RH_C1R5  &right_ring1_tap KEY_RH_C2R5  &right_ring1_tap KEY_RH_C3R5  &right_ring1_tap KEY_RH_C4R5  &right_ring1_tap KEY_RH_C5R5  &right_ring1_tap KEY_RH_C6R5
+ &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_ring1_tap KEY_RH_C1R5  &right_ring1_tap KEY_RH_C2R5  &right_ring1_tap KEY_RH_C3R5  &right_ring1_tap KEY_RH_C4R5  &right_ring1_tap KEY_RH_C5R5                        &trans
  &trans              &trans              &trans              &trans              &trans                 &trans  &trans  &trans  &trans  &trans  &trans                                &right_ring1_tap KEY_RH_C2R6  &right_ring1_tap KEY_RH_C3R6  &right_ring1_tap KEY_RH_C4R6  &right_ring1_tap KEY_RH_C5R6                        &trans
             >;
         };
@@ -10810,7 +10955,7 @@ UNICODE_MORPH_MODS
  &trans              &trans              &trans              &trans              &trans         &trans                                                  &right_ring2_tap KEY_RH_C1R2  &right_ring2_tap KEY_RH_C2R2  &right_ring2_tap KEY_RH_C3R2  &right_ring2_tap KEY_RH_C4R2  &right_ring2_tap KEY_RH_C5R2  &right_ring2_tap KEY_RH_C6R2
  &trans              &trans  &kp LEFT_RING2_KEY              &trans              &trans         &trans                                                  &right_ring2_tap KEY_RH_C1R3  &right_ring2_tap KEY_RH_C2R3  &right_ring2_tap KEY_RH_C3R3                         &none  &right_ring2_tap KEY_RH_C5R3  &right_ring2_tap KEY_RH_C6R3
  &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RING1_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &LeftPlainKey                                                  &right_ring2_tap KEY_RH_C1R4              &RightRing2Index              &RightRing2Middy              &RightRing2Ring1              &RightRing2Pinky  &right_ring2_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_ring2_tap KEY_RH_C1R5  &right_ring2_tap KEY_RH_C2R5  &right_ring2_tap KEY_RH_C3R5  &right_ring2_tap KEY_RH_C4R5  &right_ring2_tap KEY_RH_C5R5  &right_ring2_tap KEY_RH_C6R5
+ &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_ring2_tap KEY_RH_C1R5  &right_ring2_tap KEY_RH_C2R5  &right_ring2_tap KEY_RH_C3R5  &right_ring2_tap KEY_RH_C4R5  &right_ring2_tap KEY_RH_C5R5                        &trans
  &trans              &trans              &trans              &trans              &trans                 &trans  &trans  &trans  &trans  &trans  &trans                                &right_ring2_tap KEY_RH_C2R6  &right_ring2_tap KEY_RH_C3R6  &right_ring2_tap KEY_RH_C4R6  &right_ring2_tap KEY_RH_C5R6                        &trans
             >;
         };
@@ -10821,7 +10966,7 @@ UNICODE_MORPH_MODS
  &trans              &trans              &trans              &trans              &trans         &trans                                                  &right_middy_tap KEY_RH_C1R2  &right_middy_tap KEY_RH_C2R2  &right_middy_tap KEY_RH_C3R2  &right_middy_tap KEY_RH_C4R2  &right_middy_tap KEY_RH_C5R2  &right_middy_tap KEY_RH_C6R2
  &trans              &trans  &kp LEFT_RING2_KEY              &trans              &trans         &trans                                                  &right_middy_tap KEY_RH_C1R3  &right_middy_tap KEY_RH_C2R3  &right_middy_tap KEY_RH_C3R3              &RightMiddyRing2  &right_middy_tap KEY_RH_C5R3  &right_middy_tap KEY_RH_C6R3
  &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RING1_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &LeftPlainKey                                                  &right_middy_tap KEY_RH_C1R4              &RightMiddyIndex                         &none              &RightMiddyRing1              &RightMiddyPinky  &right_middy_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_middy_tap KEY_RH_C1R5  &right_middy_tap KEY_RH_C2R5  &right_middy_tap KEY_RH_C3R5  &right_middy_tap KEY_RH_C4R5  &right_middy_tap KEY_RH_C5R5  &right_middy_tap KEY_RH_C6R5
+ &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_middy_tap KEY_RH_C1R5  &right_middy_tap KEY_RH_C2R5  &right_middy_tap KEY_RH_C3R5  &right_middy_tap KEY_RH_C4R5  &right_middy_tap KEY_RH_C5R5                        &trans
  &trans              &trans              &trans              &trans              &trans                 &trans  &trans  &trans  &trans  &trans  &trans                                &right_middy_tap KEY_RH_C2R6  &right_middy_tap KEY_RH_C3R6  &right_middy_tap KEY_RH_C4R6  &right_middy_tap KEY_RH_C5R6                        &trans
             >;
         };
@@ -10832,7 +10977,7 @@ UNICODE_MORPH_MODS
  &trans              &trans              &trans              &trans              &trans         &trans                                                  &right_index_tap KEY_RH_C1R2  &right_index_tap KEY_RH_C2R2  &right_index_tap KEY_RH_C3R2  &right_index_tap KEY_RH_C4R2  &right_index_tap KEY_RH_C5R2  &right_index_tap KEY_RH_C6R2
  &trans              &trans  &kp LEFT_RING2_KEY              &trans              &trans         &trans                                                  &right_index_tap KEY_RH_C1R3  &right_index_tap KEY_RH_C2R3  &right_index_tap KEY_RH_C3R3              &RightIndexRing2  &right_index_tap KEY_RH_C5R3  &right_index_tap KEY_RH_C6R3
  &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RING1_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &LeftPlainKey                                                  &right_index_tap KEY_RH_C1R4                         &none              &RightIndexMiddy              &RightIndexRing1              &RightIndexPinky  &right_index_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_index_tap KEY_RH_C1R5  &right_index_tap KEY_RH_C2R5  &right_index_tap KEY_RH_C3R5  &right_index_tap KEY_RH_C4R5  &right_index_tap KEY_RH_C5R5  &right_index_tap KEY_RH_C6R5
+ &trans              &trans              &trans              &trans              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_index_tap KEY_RH_C1R5  &right_index_tap KEY_RH_C2R5  &right_index_tap KEY_RH_C3R5  &right_index_tap KEY_RH_C4R5  &right_index_tap KEY_RH_C5R5                        &trans
  &trans              &trans              &trans              &trans              &trans                 &trans  &trans  &trans  &trans  &trans  &trans                                &right_index_tap KEY_RH_C2R6  &right_index_tap KEY_RH_C3R6  &right_index_tap KEY_RH_C4R6  &right_index_tap KEY_RH_C5R6                        &trans
             >;
         };
@@ -10851,11 +10996,11 @@ UNICODE_MORPH_MODS
         layer_Number {
             bindings = <
       &none               &none               &none               &none               &none                                                                                                                &none       &none       &none          &none      &none
-    &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL  &kp INS                                                                                       &kp CARET    &kp DLLR    &kp HASH      &kp AT       &kp EXCL   &kp PIPE
+    &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL  &kp INS                                                                                       &kp TILDE   &kp CARET    &kp HASH    &kp DLLR       &kp EXCL   &kp PIPE
       &none           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp A                                                                                       &kp PRCNT  &kp _KP_N7  &kp _KP_N8  &kp _KP_N9      &kp COLON      &kp K
  &kp KP_NUM  &kp LEFT_PINKY_MOD  &kp LEFT_RING1_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp B                                                                                    &kp _KP_PLUS  &kp _KP_N4  &kp _KP_N5  &kp _KP_N6  &kp _KP_MINUS      &kp J
       &none           &kp _C(A)        &select_line        &select_word           &kp UNDER    &kp C   &kp D   &kp E              &kp F         &kp LT       &kp GT  &kp _KP_EQUAL  &kp _KP_ASTERISK  &kp _KP_N1  &kp _KP_N2  &kp _KP_N3  &kp _KP_SLASH  &kp LS(G)
-      &none               &none        &extend_line        &extend_word               &kp X            &none   &none  &tog LAYER_Number  &kp _KP_COMMA  &kp _KP_DOT     &kp _KP_N0                        &trans      &trans      &trans         &trans  &kp TILDE
+      &none               &none        &extend_line        &extend_word               &kp X            &none   &none  &tog LAYER_Number  &kp _KP_COMMA  &kp _KP_DOT     &kp _KP_N0                        &trans      &trans      &trans         &trans     &kp AT
             >;
         };
 
@@ -10887,8 +11032,8 @@ UNICODE_MORPH_MODS
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                        &none                &none                &none                &none                &none   &none
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &kp SEMI  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RING1_MOD  &kp RIGHT_PINKY_MOD   &none
   &kp HASH  &kp CARET  &kp EQUAL  &kp UNDER  &kp DLLR   &kp STAR                                                                      &kp DOT             &kp BSPC              &kp TAB            &kp SPACE              &kp RET   &none
-    &kp AT     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &kp FSLH              &kp DEL          &kp LS(TAB)                &none                &none   &none
- &kp TILDE   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none                         &trans               &trans               &trans               &trans   &none
+ &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &kp FSLH              &kp DEL          &kp LS(TAB)                &none                &none   &none
+    &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none                         &trans               &trans               &trans               &trans   &none
             >;
         };
 
