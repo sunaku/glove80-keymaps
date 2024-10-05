@@ -174,19 +174,19 @@
   ],
   [
     {
-      "y": -0.5,
+      "y": -0.04999999999999982,
       "x": 6.95,
       "c": "#FFFF8D",
       "p": "FLAT",
       "f": 2,
       "w": 1.1,
-      "h": 2.5
+      "h": 2.7
     },
-    "Toggle <small>base layer</small>"
+    "\nToggle <small>base layer</small>"
   ],
   [
     {
-      "y": -0.5,
+      "y": -0.9500000000000002,
       "c": "#cccccc",
       "p": "CHICKLET",
       "a": 7,

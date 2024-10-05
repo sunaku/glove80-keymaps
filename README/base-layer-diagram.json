@@ -1,6 +1,6 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}\nspan.left {\n    display: block;\n    text-align: center;\n    transform: rotate(-90deg);\n    padding-left: 8em;\n    padding-bottom: 11em;\n}\nspan.right {\n    display: block;\n    text-align: center;\n    transform: rotate(90deg);\n    margin-left: -1.25em;\n    padding-right: 9.5em;\n    padding-bottom: 12em;\n}"
   },
   [
     {
@@ -122,18 +122,16 @@
     "A\n\n\n\nShift",
     {
       "c": "#cccccc",
-      "p": "CHICKLET",
       "a": 5,
       "f": 4
     },
-    "<\n,",
+    "<\n,\n\n\nRaw",
     {
       "x": 5
     },
-    ">\n.",
+    ">\n.\n\n\nRaw",
     {
       "c": "#DCEDC8",
-      "p": "SPACE",
       "a": 7,
       "f": 3,
       "n": true
@@ -158,7 +156,7 @@
     "Q"
   ],
   [
-    "Shift",
+    "Shift <small>(sticky)</small>",
     "G",
     "X",
     "J",
@@ -180,17 +178,49 @@
     "M",
     "F",
     "P",
-    "Shift"
+    "Shift <small>(sticky)</small>"
   ],
   [
     {
+      "y": -0.04999999999999982,
+      "x": 4.95,
+      "c": "#FFD180",
+      "p": "FLAT",
+      "a": 5,
+      "f": 2,
+      "w": 1.1,
+      "h": 2.7
+    },
+    "\nAlt+Tab <small>cursor layer</small>",
+    {
+      "x": 0.9000000000000004,
+      "c": "#FFFF8D",
+      "w": 1.1,
+      "h": 2.7
+    },
+    "\nToggle <small>game layer</small>",
+    {
+      "x": 2.9000000000000004,
+      "c": "#FFD180",
+      "w": 1.1,
+      "h": 2.7
+    },
+    "\nHyper <small>(sticky)</small>"
+  ],
+  [
+    {
+      "y": -0.9500000000000002,
       "c": "#757575",
-      "t": "#EEEEEE"
+      "t": "#EEEEEE",
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
     "Magic",
     {
       "c": "#cccccc",
-      "t": "#000000"
+      "t": "#000000",
+      "p": "CHICKLET"
     },
     "Home",
     "Page up",
@@ -244,6 +274,7 @@
     {
       "c": "#757575",
       "t": "#EEEEEE",
+      "p": "SPACE",
       "a": 7,
       "f": 3
     },
@@ -251,10 +282,30 @@
   ],
   [
     {
+      "y": -0.040000000000000036,
+      "x": 4.45,
+      "c": "#B9F6CA",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 2,
+      "w": 2.625,
+      "h": 1.11
+    },
+    "<span class=\"left\">Ctrl+Tab<small><br>cursor layer</small></span>",
+    {
+      "x": 2.874999999999999,
+      "w": 2.625,
+      "h": 1.11
+    },
+    "<span class=\"right\">Meh<small><br>(sticky)</small></span>"
+  ],
+  [
+    {
+      "y": -0.96,
       "x": 5,
       "c": "#D1C4E9",
-      "t": "#000000",
       "p": "SPACE",
+      "f": 3,
       "n": true
     },
     "Back space\n\n\n\nCursor",

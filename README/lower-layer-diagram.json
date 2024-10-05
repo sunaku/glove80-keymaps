@@ -198,13 +198,32 @@
   ],
   [
     {
+      "y": -0.04999999999999982,
+      "x": 6.95,
+      "c": "#FFFF8D",
+      "g": true,
+      "p": "FLAT",
+      "f": 2,
+      "w": 1.1,
+      "h": 2.7,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9500000000000002,
       "c": "#757575",
-      "t": "#EEEEEE"
+      "t": "#EEEEEE",
+      "g": false,
+      "p": "SPACE",
+      "f": 3
     },
     "Magic",
     {
       "c": "#cccccc",
-      "t": "#000000"
+      "t": "#000000",
+      "p": "CHICKLET"
     },
     "Caps lock",
     "Insert",
@@ -245,6 +264,7 @@
     {
       "c": "#757575",
       "t": "#EEEEEE",
+      "p": "SPACE",
       "a": 7
     },
     "Magic"
@@ -253,7 +273,8 @@
     {
       "x": 5,
       "c": "#D1C4E9",
-      "t": "#000000"
+      "t": "#000000",
+      "p": "CHICKLET"
     },
     "Cursor layer lock",
     "<small>Number</small> layer lock",

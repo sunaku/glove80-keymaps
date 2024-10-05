@@ -13,9 +13,9 @@ also provided as "training wheels" to aid your transition to the full glory.
 
 ## Keymap
 
-Version 37 (2024-09-15)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v37
-- Release: https://my.glove80.com/#/layout/user/13c16910-9689-4408-a392-39a6e0e15162
+Version 38 (2024-10-05)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v38
+- Release: https://my.glove80.com/#/layout/user/56b3ddfa-0299-4983-b66d-5101c8958452
 
 ### Legend
 
@@ -54,7 +54,7 @@ See [release notes][rel] for a visual overview of recent updates.
         * [Reordering home row mods](#reordering-home-row-mods)
         * [Fine-tuning the timing](#fine-tuning-the-timing)
     * [Compiling from source](#compiling-from-source)
-        * [Unicode/Emoji characters](#unicodeemoji-characters)
+        * [World and Emoji characters](#world-and-emoji-characters)
             * [Adding a new World character](#adding-a-new-world-character)
             * [Shift key for World characters](#shift-key-for-world-characters)
             * [Modifiers for World characters](#modifiers-for-world-characters)
@@ -451,9 +451,9 @@ adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
 [Ubuntu in WSL]: https://ubuntu.com/desktop/wsl
 
-#### Unicode/Emoji characters
+#### World and Emoji characters
 
-You can customize the preset characters in the Emoji and World layers by
+You can customize the predefined characters in the Emoji and World layers by
 editing their respective YAML source files in this repository.  Afterwards,
 run the `rake` command and then copy the new `keymap.dtsi` contents back into
 the "Custom Defined Behaviors" text box in the Layout Editor for your keymap.

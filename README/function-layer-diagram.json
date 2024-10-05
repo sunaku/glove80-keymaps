@@ -235,29 +235,36 @@
   ],
   [
     {
+      "y": -0.04999999999999982,
+      "x": 6.95,
+      "c": "#FFFF8D",
+      "p": "FLAT",
+      "f": 2,
+      "w": 1.1,
+      "h": 2.7,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9500000000000002,
       "c": "#cccccc",
       "g": true,
+      "p": "CHICKLET",
       "f": 3
     },
     "F5",
-    {
-      "f": 3
-    },
     "Home",
     {
       "c": "#bbdefb",
-      "g": false,
-      "f": 3
+      "g": false
     },
     "Extend line",
-    {
-      "f": 3
-    },
     "Extend word",
     {
       "c": "#cccccc",
-      "g": true,
-      "f": 3
+      "g": true
     },
     "End",
     {
