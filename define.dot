@@ -83,7 +83,7 @@ digraph settings {
 
     SPACE_HOLDING_TYPE -> THUMB_HOLDING_TYPE
 
-    SPACE_HOLDING_TIME -> THUMB_HOLDING_TIME
+    SPACE_HOLDING_TIME -> "+20"
 
     SPACE_REPEAT_DECAY -> TAPPING_RESOLUTION
 
@@ -711,6 +711,8 @@ digraph settings {
       "+150" [label="+150", style=filled, fillcolor=cyan, shape=signature]
     
       "+50" [label="+50", style=filled, fillcolor=cyan, shape=signature]
+    
+      "+20" [label="+20", style=filled, fillcolor=cyan, shape=signature]
     
       "'N'" [label="'N'", style=filled, fillcolor=cyan, shape=signature]
     
