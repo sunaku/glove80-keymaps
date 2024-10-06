@@ -1316,7 +1316,7 @@ behaviors {
     // the space thumb key to activate.  Shorter holds are treated as taps.
     //
     #ifndef SPACE_HOLDING_TIME
-    #define SPACE_HOLDING_TIME THUMB_HOLDING_TIME
+    #define SPACE_HOLDING_TIME (TAPPING_RESOLUTION + 20)
     #endif
 
     //
@@ -4070,6 +4070,7 @@ behaviors {
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
+        retro-tap; // tap on standalone hold
     };
 
     //
