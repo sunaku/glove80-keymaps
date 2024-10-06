@@ -1223,8 +1223,6 @@ behaviors {
     // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
     // allows faster activation of the Shift modifier (without having to wait
     // for the modified key to be released as the "balanced" flavor requires).
-    // Typing streaks and the `hold-trigger-on-release` setting are disabled
-    // for the index fingers so as not to hinder their speed and dexterity.
     //
     #ifndef INDEX_HOLDING_TYPE
     #define INDEX_HOLDING_TYPE "tap-preferred"
@@ -1656,7 +1654,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1673,7 +1671,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1754,7 +1752,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1771,7 +1769,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1852,7 +1850,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_RING1_MOD == LSFT || LEFT_RING1_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1869,7 +1867,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_RING1_MOD == LSFT || LEFT_RING1_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1950,7 +1948,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_RING1_MOD == LSFT || RIGHT_RING1_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -1967,7 +1965,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_RING1_MOD == LSFT || RIGHT_RING1_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2048,7 +2046,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_RING2_MOD == LSFT || LEFT_RING2_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2065,7 +2063,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_RING2_MOD == LSFT || LEFT_RING2_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2146,7 +2144,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_RING2_MOD == LSFT || RIGHT_RING2_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2163,7 +2161,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_RING2_MOD == LSFT || RIGHT_RING2_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2244,7 +2242,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2261,7 +2259,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2342,7 +2340,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2359,7 +2357,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2440,7 +2438,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2457,7 +2455,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2538,7 +2536,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };
@@ -2555,7 +2553,7 @@ behaviors {
         #ifdef SHIFT_FORGIVENESS
         #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap;
+        retro-tap; // tap on standalone hold
         #endif
         #endif
     };

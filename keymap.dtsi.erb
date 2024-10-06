@@ -545,8 +545,6 @@ behaviors {
     // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
     // allows faster activation of the Shift modifier (without having to wait
     // for the modified key to be released as the "balanced" flavor requires).
-    // Typing streaks and the `hold-trigger-on-release` setting are disabled
-    // for the index fingers so as not to hinder their speed and dexterity.
     //
     <%
       emit_setting_ifndef.(:INDEX_HOLDING_TYPE, '"tap-preferred"')
@@ -810,16 +808,16 @@ behaviors {
         <%
           end
 
-          unless chord 
+          unless chord
         %>
         #ifdef SHIFT_FORGIVENESS
         #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
         hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap; 
+        retro-tap; // tap on standalone hold
         #endif
         #endif
-        <% 
-          end 
+        <%
+          end
         %>
     };
     <%
