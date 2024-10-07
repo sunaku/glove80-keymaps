@@ -7921,6 +7921,152 @@ UNICODE_MORPH_MODS
         bindings = <&world_currency_sign>, <&world_currency_crypto>;
         mods = <MOD_LSFT>;
     };
+    UNICODE(world_sign_copyright_regular_macro, /* © */
+      #if OPERATING_SYSTEM == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+        COMPOSE_SEQ_LINUX(&kp O &kp C)
+        #else
+        UNICODE_SEQ_LINUX(&kp A &kp N9)
+        #endif
+      #elif OPERATING_SYSTEM == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+        COMPOSE_SEQ_MACOS(&kp LA(G))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N9)
+        #endif
+      #elif OPERATING_SYSTEM == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N9)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N9)
+        #endif
+      #endif
+    )
+    world_sign_copyright_regular: world_sign_copyright_regular {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_copyright_regular_macro>, <&world_sign_copyright_regular_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    UNICODE(world_sign_copyright_shifted_macro, /* ® */
+      #if OPERATING_SYSTEM == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_shifted
+        COMPOSE_SEQ_LINUX(&kp O &kp R)
+        #else
+        UNICODE_SEQ_LINUX(&kp A &kp E)
+        #endif
+      #elif OPERATING_SYSTEM == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_shifted
+        COMPOSE_SEQ_MACOS(&kp LA(R))
+        #else
+        UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp E)
+        #endif
+      #elif OPERATING_SYSTEM == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_shifted
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N4)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp E)
+        #endif
+      #endif
+    )
+    world_sign_copyright_shifted: world_sign_copyright_shifted {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_copyright_shifted_macro>, <&world_sign_copyright_shifted_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_sign_copyright_shifted
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    world_sign_copyright: world_sign_copyright {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_copyright_regular>, <&world_sign_copyright_shifted>;
+        mods = <MOD_LSFT>;
+    };
+    UNICODE(world_sign_trademark_regular_macro, /* ™ */
+      #if OPERATING_SYSTEM == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_trademark_regular
+        COMPOSE_SEQ_LINUX(&kp T &kp M)
+        #else
+        UNICODE_SEQ_LINUX(&kp N2 &kp N1 &kp N2 &kp N2)
+        #endif
+      #elif OPERATING_SYSTEM == 'M'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_trademark_regular
+        COMPOSE_SEQ_MACOS(&kp LA(N2))
+        #else
+        UNICODE_SEQ_MACOS(&kp N2 &kp N1 &kp N2 &kp N2)
+        #endif
+      #elif OPERATING_SYSTEM == 'W'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_trademark_regular
+        COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N3)
+        #else
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N1 &kp N2 &kp N2)
+        #endif
+      #endif
+    )
+    world_sign_trademark_regular: world_sign_trademark_regular {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_trademark_regular_macro>, <&world_sign_trademark_regular_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_sign_trademark_regular
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    UNICODE(world_sign_trademark_shifted_macro, /* ℠ */
+      #if OPERATING_SYSTEM == 'L'
+        #ifdef WORLD_USE_COMPOSE
+        #define WORLD_USE_COMPOSE_FOR_world_sign_trademark_shifted
+        COMPOSE_SEQ_LINUX(&kp S &kp M)
+        #else
+        UNICODE_SEQ_LINUX(&kp N2 &kp N1 &kp N2 &kp N0)
+        #endif
+      #elif OPERATING_SYSTEM == 'M'
+        UNICODE_SEQ_MACOS(&kp N2 &kp N1 &kp N2 &kp N0)
+      #elif OPERATING_SYSTEM == 'W'
+        UNICODE_SEQ_WINDOWS(&kp N0 &kp N2 &kp N1 &kp N2 &kp N0)
+      #endif
+    )
+    world_sign_trademark_shifted: world_sign_trademark_shifted {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_trademark_shifted_macro>, <&world_sign_trademark_shifted_macro>;
+        mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_sign_trademark_shifted
+COMPOSE_MORPH_MODS
+#else
+UNICODE_MORPH_MODS
+#endif
+))>;
+    };
+    world_sign_trademark: world_sign_trademark {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_trademark_regular>, <&world_sign_trademark_shifted>;
+        mods = <MOD_LSFT>;
+    };
 
     //
     // transforms
@@ -8152,6 +8298,12 @@ UNICODE_MORPH_MODS
         #binding-cells = <0>;
         bindings = <&world_currency_pound>, <&world_currency_generic>;
         mods = <(MOD_RSFT)>;
+    };
+    world_sign_base: world_sign_base {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&world_sign_copyright>, <&world_sign_trademark>;
+        mods = <(MOD_LCTL)>;
     };
 
     //////////////////////////////////////////////////////////////////////////
