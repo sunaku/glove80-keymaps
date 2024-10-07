@@ -23,6 +23,9 @@ transforms:
      { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
   currency:
      { base: dollar,  LCTL: euro,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won     }
+  sign:
+    base: copyright
+    LCTL: trademark
 
 #
 # characters:
@@ -88,6 +91,9 @@ characters:
     won:                 "₩"
     pound:               "£"
     generic:    { lower: "¤",  upper: "₿"  }
+  sign:
+    copyright: { regular: "©", shifted: "®" }
+    trademark: { regular: "™", shifted: "℠" }
 
 #
 # codepoints:
@@ -124,11 +130,6 @@ codepoints:
 # - windows: https://sites.psu.edu/symbolcodes/windows/codealt/
 #
 compositions:
-
-  "€":
-    linux:   COMPOSE E EQUAL
-    macos:   LA(LS(N2))
-    windows: ALT+0128
 
   ###
   ## C
@@ -470,6 +471,11 @@ compositions:
   ## signs
   #
 
+  "€":
+    linux:   COMPOSE E EQUAL
+    macos:   LA(LS(N2))
+    windows: ALT+0128
+
   "°":
     linux:   COMPOSE O O
     macos:   LA(LS(N8))
@@ -508,3 +514,21 @@ compositions:
     linux:   COMPOSE CARET UNDER A
     macos:   LA(N9)
     windows: ALT+0170
+
+  "©":
+    linux:   COMPOSE O C
+    macos:   LA(G)
+    windows: ALT+0169
+
+  "®":
+    linux:   COMPOSE O R
+    macos:   LA(R)
+    windows: ALT+0174
+
+  "™":
+    linux:   COMPOSE T M
+    macos:   LA(N2)
+    windows: ALT+0153
+
+  "℠":
+    linux:   COMPOSE S M
