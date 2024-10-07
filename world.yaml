@@ -107,14 +107,23 @@ codepoints:
   currency_crypto: "₿"
   micro_sign:      "µ"
 
+#
+# localizing:
+#   <character>:
+#     linux:   <keystrokes>
+#     macos:   <keystrokes>
+#     windows: <keystrokes>
+#
+# Where <keystrokes> is composed of ZMK keycodes with some specialities:
+# - "COMPOSE" is a special keyword that is replaced by COMPOSE_KEY_LINUX
+# - "ALT+" is a special prefix that is replaced by COMPOSE_SEQ_WINDOWS()
+#
+# For reference on Compose key shortcuts and the characters they produce:
+# - linux:   https://wiki.linuxquestions.org/wiki/Accented_Characters
+# - macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
+# - windows: https://sites.psu.edu/symbolcodes/windows/codealt/
+#
 localizing:
-  #
-  # - "COMPOSE" is a special keyword that is replaced by COMPOSE_KEY_LINUX
-  # - "ALT+" is a special prefix that is replaced by COMPOSE_SEQ_WINDOWS()
-  #
-  # linux:   https://wiki.linuxquestions.org/wiki/Accented_Characters
-  # macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
-  # windows: https://sites.psu.edu/symbolcodes/windows/codealt/
 
   "€":
     linux:   COMPOSE E EQUAL
