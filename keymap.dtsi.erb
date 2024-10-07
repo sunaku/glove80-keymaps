@@ -1251,7 +1251,7 @@ macros {
 
     //
     // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
-    // for characters in the "localizing" section of the `world.yaml` file.
+    // for characters in the "compositions" section of the `world.yaml` file.
     //
     //#define WORLD_USE_COMPOSE
 
@@ -1510,15 +1510,15 @@ macros {
     <%
       end
 
-      def resolve_localized_keystrokes(localized, os)
+      def resolve_compose_keystrokes(composition, os)
         keycodes =
           case os
           when :linux
-            localized.sub(/^COMPOSE\b/, '')
+            composition.sub(/^COMPOSE\b/, '')
           when :macos
-            localized
+            composition
           when :windows
-            localized.sub(/^ALT\+/, '').gsub(/\d/, 'KP_N\& ')
+            composition.sub(/^ALT\+/, '').gsub(/\d/, 'KP_N\& ')
           end
           .split
 
@@ -1534,7 +1534,7 @@ macros {
     UNICODE(<%= macro_id %>, /* <%= character %> */
     <%
         # FIXME: global variable; pass it somehow instead
-        localizations = $localizing[character]
+        compositions = $compositions[character]
 
         OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
           sequence = character.chars.map do |character|
@@ -1548,15 +1548,14 @@ macros {
     %>
       #<%= "el" if os_index > 0 %>if OPERATING_SYSTEM == <%= os_char %>
     <%
-          localization_for_os = localizations[os.to_s] if localizations
+          composition_for_os = compositions[os.to_s] if compositions
 
-          if localization_for_os
+          if composition_for_os
     %>
         #ifdef WORLD_USE_COMPOSE
         #define <%= has_compose %>
         <%=
-          localized_keystrokes = resolve_localized_keystrokes(localization_for_os, os)
-          localized_keystrokes.join(", ")
+          resolve_compose_keystrokes(composition_for_os, os).join(", ")
         %>
         #else
     <%
@@ -1564,7 +1563,7 @@ macros {
     %>
         <%= sequence.join(", ") %>
     <%
-          if localization_for_os
+          if composition_for_os
     %>
         #endif
     <%
@@ -1611,7 +1610,7 @@ macros {
     <%
       require 'yaml'
       world = YAML.load_file("world.yaml")
-      $localizing = world["localizing"] # FIXME: global variable
+      $compositions = world["compositions"] # FIXME: global variable
 
       def letter_id_prefix(id_prefix, letter)
         "#{id_prefix}_#{letter.downcase}_"

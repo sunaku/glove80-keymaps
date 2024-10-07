@@ -4439,7 +4439,7 @@ macros {
 
     //
     // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
-    // for characters in the "localizing" section of the `world.yaml` file.
+    // for characters in the "compositions" section of the `world.yaml` file.
     //
     //#define WORLD_USE_COMPOSE
 
