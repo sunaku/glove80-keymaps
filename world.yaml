@@ -108,7 +108,7 @@ codepoints:
   micro_sign:      "µ"
 
 #
-# localizing:
+# compositions:
 #   <character>:
 #     linux:   <keystrokes>
 #     macos:   <keystrokes>
@@ -123,7 +123,7 @@ codepoints:
 # - macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
 # - windows: https://sites.psu.edu/symbolcodes/windows/codealt/
 #
-localizing:
+compositions:
 
   "€":
     linux:   COMPOSE E EQUAL

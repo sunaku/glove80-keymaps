@@ -699,7 +699,7 @@ First, open the `world.yaml` file and add a new entry under the `localizing` sec
 
 ```yaml
 #
-# localizing:
+# compositions:
 #   <character>:
 #     linux:   <keystrokes>
 #     macos:   <keystrokes>
@@ -714,7 +714,7 @@ First, open the `world.yaml` file and add a new entry under the `localizing` sec
 # - macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
 # - windows: https://sites.psu.edu/symbolcodes/windows/codealt/
 #
-localizing:
+compositions:
   "©":
     linux:   COMPOSE O C
     macos:   LA(G)
