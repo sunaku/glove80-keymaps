@@ -58,6 +58,7 @@ See [release notes][rel] for a visual overview of recent updates.
             * [Adding a new World character](#adding-a-new-world-character)
             * [Shift key for World characters](#shift-key-for-world-characters)
             * [Modifiers for World characters](#modifiers-for-world-characters)
+            * [Compose for World characters](#compose-for-world-characters)
             * [Adding a new Emoji character](#adding-a-new-emoji-character)
             * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
         * [Editing layer map diagrams](#editing-layer-map-diagrams)
@@ -688,6 +689,70 @@ world_sign_base: world_sign_base {
 ```
 
 Finally, assign `&world_sign_base` to a "Custom" key in the Glove80 Layout Editor.
+
+##### Compose for World characters
+
+Suppose you wanted the copyright sign © character from the previous section to
+be typed using your operating system's native Compose key rather than Unicode.
+
+First, open the `world.yaml` file and add a new entry under the `localizing` section:
+
+```yaml
+#
+# localizing:
+#   <character>:
+#     linux:   <keystrokes>
+#     macos:   <keystrokes>
+#     windows: <keystrokes>
+#
+# Where <keystrokes> is composed of ZMK keycodes with some specialities:
+# - "COMPOSE" is a special keyword that is replaced by COMPOSE_KEY_LINUX
+# - "ALT+" is a special prefix that is replaced by COMPOSE_SEQ_WINDOWS()
+#
+# For reference on Compose key shortcuts and the characters they produce:
+# - linux:   https://wiki.linuxquestions.org/wiki/Accented_Characters
+# - macos:   https://sites.psu.edu/symbolcodes/mac/codemac/
+# - windows: https://sites.psu.edu/symbolcodes/windows/codealt/
+#
+localizing:
+  "©":
+    linux:   COMPOSE O C
+    macos:   LA(G)
+    windows: ALT+0169
+```
+
+Note that you can directly paste Unicode characters into the file, as illustrated above!
+
+Next, [compile from source](#compiling-from-source) to regenerate the `&world_sign*macro` behaviors for ZMK:
+
+```h
+UNICODE(world_sign_copyright_regular_macro, /* © */
+  #if OPERATING_SYSTEM == 'L'
+    #ifdef WORLD_USE_COMPOSE
+    #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+    COMPOSE_SEQ_LINUX(&kp O &kp C)
+    #else
+    UNICODE_SEQ_LINUX(&kp A &kp N9)
+    #endif
+  #elif OPERATING_SYSTEM == 'M'
+    #ifdef WORLD_USE_COMPOSE
+    #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+    COMPOSE_SEQ_MACOS(&kp LA(G))
+    #else
+    UNICODE_SEQ_MACOS(&kp N0 &kp N0 &kp A &kp N9)
+    #endif
+  #elif OPERATING_SYSTEM == 'W'
+    #ifdef WORLD_USE_COMPOSE
+    #define WORLD_USE_COMPOSE_FOR_world_sign_copyright_regular
+    COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N9)
+    #else
+    UNICODE_SEQ_WINDOWS(&kp N0 &kp A &kp N9)
+    #endif
+  #endif
+)
+```
+
+Notice how Compose key shortcuts will be used when `WORLD_USE_COMPOSE` is enabled.
 
 ##### Adding a new Emoji character
 
