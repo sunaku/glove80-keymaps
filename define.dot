@@ -67,7 +67,7 @@ digraph settings {
 
     INDEX_REPEAT_DECAY -> "+150"
 
-    PLAIN_HOLDING_TYPE -> HOMEY_HOLDING_TYPE
+    PLAIN_HOLDING_TYPE -> INDEX_HOLDING_TYPE
 
     PLAIN_HOLDING_TIME -> "+50"
 
@@ -75,7 +75,7 @@ digraph settings {
 
     PLAIN_REPEAT_DECAY -> "+150"
 
-    THUMB_HOLDING_TYPE -> "\"tap-preferred\""
+    THUMB_HOLDING_TYPE -> "\"balanced\""
 
     THUMB_HOLDING_TIME -> "+50"
 
@@ -711,6 +711,8 @@ digraph settings {
       "+150" [label="+150", style=filled, fillcolor=cyan, shape=signature]
     
       "+50" [label="+50", style=filled, fillcolor=cyan, shape=signature]
+    
+      "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=signature]
     
       "+20" [label="+20", style=filled, fillcolor=cyan, shape=signature]
     
