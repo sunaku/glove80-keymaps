@@ -160,13 +160,32 @@
   ],
   [
     {
+      "y": -0.04999999999999982,
+      "x": 6.95,
+      "c": "#FFFF8D",
+      "g": true,
+      "p": "FLAT",
+      "f": 2,
+      "w": 1.1,
+      "h": 2.7,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9500000000000002,
       "c": "#757575",
-      "t": "#EEEEEE"
+      "t": "#EEEEEE",
+      "g": false,
+      "p": "SPACE",
+      "f": 3
     },
     "Magic",
     {
       "c": "#dcedc8",
-      "t": "#000000"
+      "t": "#000000",
+      "p": "CHICKLET"
     },
     "Home",
     "End",
@@ -189,13 +208,15 @@
     {
       "c": "#757575",
       "t": "#EEEEEE",
+      "p": "SPACE",
       "f": 3
     },
-    "Lower layer",
+    "Lower",
     {
       "x": 1,
       "c": "#bbdefb",
       "t": "#000000",
+      "p": "CHICKLET",
       "f": 3
     },
     "Left GUI",
@@ -208,7 +229,8 @@
     },
     "Right Shift",
     {
-      "c": "#dcedc8"
+      "c": "#dcedc8",
+      "f": 9
     },
     "&uarr;",
     "&darr;",
@@ -218,14 +240,10 @@
       "f": 3
     },
     "{\n[",
-    {
-      "f": 3
-    },
     "}\n]",
     {
       "c": "#dcedc8",
-      "a": 7,
-      "f": 3
+      "a": 7
     },
     "Page down"
   ],
@@ -233,31 +251,23 @@
     {
       "x": 5,
       "c": "#e1bee7",
-      "f": 3,
       "n": true
     },
     "Back space\n\n\n\nCursor",
-    {
-      "f": 3
-    },
     "Delete\n\n\n\nNumber",
     {
-      "c": "#bbdefb",
-      "f": 3
+      "c": "#bbdefb"
     },
     "Left Alt",
     {
-      "x": 1,
-      "f": 3
+      "x": 1
     },
     "Right Alt",
     {
-      "c": "#e1bee7",
-      "f": 3
+      "c": "#e1bee7"
     },
     "Enter\n\n\n\nSystem",
     {
-      "f": 3,
       "n": true
     },
     "Space\n\n\n\nSymbol"

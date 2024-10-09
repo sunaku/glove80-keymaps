@@ -136,7 +136,7 @@
     {
       "c": "#bbdefb"
     },
-    "Shift",
+    "Shift <small>(sticky)</small>",
     {
       "c": "#cccccc"
     },
@@ -166,17 +166,34 @@
     {
       "c": "#bbdefb"
     },
-    "Shift"
+    "Shift <small>(sticky)</small>"
   ],
   [
     {
+      "y": -0.04999999999999982,
+      "x": 6.95,
+      "c": "#FFFF8D",
+      "p": "FLAT",
+      "f": 2,
+      "w": 1.1,
+      "h": 2.7,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9500000000000002,
       "c": "#757575",
-      "t": "#EEEEEE"
+      "t": "#EEEEEE",
+      "p": "SPACE",
+      "f": 3
     },
     "Magic",
     {
       "c": "#dcedc8",
-      "t": "#000000"
+      "t": "#000000",
+      "p": "CHICKLET"
     },
     "Home",
     "Page up",
@@ -222,6 +239,7 @@
     {
       "c": "#757575",
       "t": "#EEEEEE",
+      "p": "SPACE",
       "a": 7,
       "f": 3
     },
@@ -232,6 +250,7 @@
       "x": 5,
       "c": "#e1bee7",
       "t": "#000000",
+      "p": "CHICKLET",
       "n": true
     },
     "Back space\n\n\n\nCursor",

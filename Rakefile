@@ -1,7 +1,7 @@
 require 'rake/clean'
 require 'erb'
 
-task :default => [:dtsi, :btt, :dot]
+task :default => [:dtsi, :dot, :pdf, :btt]
 
 #-----------------------------------------------------------------------------
 # ZMK configuration snippet (DTSI)
@@ -73,4 +73,47 @@ end
 
 file 'define.dot' => ['define.dot.erb', 'keymap.dtsi.min'] do |t|
   sh "erb #{t.prerequisites[0]} > #{t.name}"
+end
+
+#-----------------------------------------------------------------------------
+# printable layer map diagrams
+#-----------------------------------------------------------------------------
+
+layers_pdf = 'README/all-layer-diagrams.pdf'
+task :pdf => layers_pdf
+
+layers_pdf_sequence = %w[
+  base
+  lower
+  magic
+  cursor
+  number
+  function
+  emoji
+  symbol
+  mouse
+  system
+  world
+  typing
+  gaming
+  factory
+  template
+]
+
+layer_pngs = Dir["README/{#{layers_pdf_sequence.join(",")}}-layer-diagram.png"]
+
+layer_pdfs = layer_pngs.map do |png|
+  pdf = png.ext('pdf')
+  file pdf => png
+  pdf
+end
+CLEAN.include layer_pdfs
+
+file layers_pdf => layer_pdfs do |t|
+  sh 'pdfunite', *t.prerequisites, t.name
+end
+CLOBBER.include layers_pdf
+
+rule '.pdf' => '.png' do |t|
+  sh 'gm', 'convert', t.source, t.name
 end

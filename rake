@@ -6,7 +6,7 @@
 #
 # Written in 2022 by Suraj N. Kurapati
 
-IMAGE=${PWD##*/}
+IMAGE=${PWD##*/}:$(git hash-object Dockerfile)
 
 # build the image if necessary
 docker images -q "$IMAGE" | grep -q . ||
@@ -14,11 +14,8 @@ docker images -q "$IMAGE" | grep -q . ||
     docker build -t "$IMAGE" -
 
 # run rake(1) inside the image
-docker run -v "$PWD:/opt" --rm -it "$IMAGE" \
-  env CHOWN=$(id -u):$(id -g) \
-    sh -uc '
-      rake "$@"
-      status=$?
-      find . -user root -exec chown $CHOWN {} \;
-      exit $status
-    ' _ "$@"
+docker run --rm \
+  -u $(id -u):$(id -g) \
+  -v "$PWD:/opt" \
+  -it "$IMAGE" \
+    rake "$@"

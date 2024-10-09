@@ -1,5 +1,13 @@
 precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT overrides all
 
+#
+# transforms:
+#   <group>:
+#     base: <name>
+#     <modifier>: <name>
+#
+# Where <modifier> is either LALT, RALT, LCTL, RCTL, or RSFT.
+#
 transforms:
   I: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                 }
   E: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   RALT: ae                     }
@@ -16,6 +24,11 @@ transforms:
   currency:
      { base: dollar,  LCTL: euro,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won     }
 
+#
+# characters:
+#   <group>:
+#     <name>: { <without_shift>, <with_shift> }
+#
 characters:
   I:
     acute:      { lower: "í",  upper: "Í"  }
@@ -76,6 +89,10 @@ characters:
     pound:               "£"
     generic:    { lower: "¤",  upper: "₿"  }
 
+#
+# codepoints:
+#   <name>: "<string_of_unicode_characters>"
+#
 codepoints:
   degree_sign:     "°"
   section_sign:    "§"
