@@ -1,4 +1,7 @@
-<% require 'securerandom' %>
+<%
+  require 'securerandom'
+  btt_last_updated_at = Time.now.to_i.to_f
+%>
 {
   "BTTPresetCreatorNotes" : "v36",
   "BTTPresetInfoURL" : "https://github.com/sunaku/glove80-keymaps?tab=readme-ov-file",
@@ -15,7 +18,7 @@
       },
       "BTTTriggers" : [
         {
-          "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+          "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
           "BTTTriggerType" : 643,
           "BTTTriggerTypeDescriptionReadOnly" : "Named Trigger: (KB Overlay) Show base kb layer for n seconds",
           "BTTTriggerTypeDescription" : "(KB Overlay) Show base kb layer for n seconds",
@@ -30,7 +33,7 @@
           "BTTOrder" : 13,
           "BTTAdditionalActions" : [
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
               "BTTIsPureAction" : true,
@@ -46,7 +49,7 @@
               "BTTOrder" : 0
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
               "BTTIsPureAction" : true,
@@ -61,7 +64,7 @@
               "BTTOrder" : 1
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
               "BTTIsPureAction" : true,
@@ -77,7 +80,7 @@
               "BTTOrder" : 2
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
               "BTTIsPureAction" : true,
@@ -91,7 +94,7 @@
               "BTTOrder" : 3
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "252866E3-9327-4C48-9CE1-4A29A0D632C4",
               "BTTIsPureAction" : true,
@@ -106,7 +109,7 @@
               "BTTOrder" : 4,
               "BTTAdditionalActions" : [
                 {
-                  "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+                  "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
                   "BTTTriggerType" : 740,
                   "BTTTriggerTypeDescriptionReadOnly" : "Assign actions to trigger after timeout \/ delay",
                   "BTTTriggerParentUUID" : "CEA086E2-F485-474A-BD64-6975C1CAF51F",
@@ -119,7 +122,7 @@
                   "BTTOrder" : 0,
                   "BTTAdditionalActions" : [
                     {
-                      "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+                      "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
                       "BTTTriggerType" : -1,
                       "BTTTriggerParentUUID" : "F211D3F1-E39C-4914-86BF-3EFD542626EC",
                       "BTTIsPureAction" : true,
@@ -142,7 +145,7 @@
           "BTTGestureNotes" : "(KB Overlay) Show base kb layer for n seconds"
         },
         {
-          "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+          "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
           "BTTTriggerType" : 0,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTUUID" : "56617366-960E-4F96-8C17-A0B33930FBF1",
@@ -161,7 +164,7 @@
           "BTTAutoAdaptToKeyboardLayout" : 0,
           "BTTAdditionalActions" : [
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "56617366-960E-4F96-8C17-A0B33930FBF1",
               "BTTIsPureAction" : true,
@@ -184,7 +187,7 @@
           }
         },
         {
-          "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+          "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
           "BTTTriggerType" : 0,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTUUID" : "450FEB02-AFDB-4D4B-8067-F448815572B4",
@@ -207,46 +210,45 @@
           # PR QUESTION: Is this list already in a variable somewhere?
           # PR QUESTION: this is duplicated in layer-indicator/macos/BetterTouchTool/presetjson.bttpreset.erb. Any idea for reuse rather than duplication?
           OVERLAY_INDICATOR_LAYERS = %w[
-                base
-                cursor
-                emoji
-                factory
-                function
-                gaming
-                lower
-                magic
-                mouse
-                number
-                symbol
-                system
-                typing
-                world
-              ]
-          OVERLAY_INDICATOR_MODS = %w[
-                RALT
-                RCTL
-                RGUI
-                RSFT
-              ]
-          OVERLAY_INDICATOR_MODS_PERMUTATIONS = OVERLAY_INDICATOR_MODS.permutation
-          # produces [RALT RCTL RGUI RSFT], [RALT RCTL RSFT RGUI], ... (24 unique sequences)
+            base
+            cursor
+            emoji
+            factory
+            function
+            gaming
+            lower
+            magic
+            mouse
+            number
+            symbol
+            system
+            typing
+            world
+          ]
 
-        %>
-        <%
+          OVERLAY_INDICATOR_MODS = %w[
+            RALT
+            RCTL
+            RGUI
+            RSFT
+          ]
+
+          # produces [RALT RCTL RGUI RSFT], [RALT RCTL RSFT RGUI], ... (24 unique sequences)
+          OVERLAY_INDICATOR_MODS_PERMUTATIONS = OVERLAY_INDICATOR_MODS.permutation
+
           btt_code_by_mod_hash = {
             "RALT":   61,
             "RCTL":   62,
             "RGUI":   54,
             "RSFT":   60
           }
-          OVERLAY_INDICATOR_MODS_PERMUTATIONS.each_with_index do |mod_sequence, mod_sequence_index|
-            # Note: at most this supports 24 different layers. It will just not make macros for any 25th, 26th layer in OVERLAY_INDICATOR_LAYERS
-            if mod_sequence_index < OVERLAY_INDICATOR_LAYERS.size
-              indicator_layer_name = OVERLAY_INDICATOR_LAYERS[mod_sequence_index]
-              btt_uuid = SecureRandom.uuid
+          # Note: at most this supports 24 different layers. It will just not make macros for any 25th, 26th layer in OVERLAY_INDICATOR_LAYERS
+          OVERLAY_INDICATOR_MODS_PERMUTATIONS.take(OVERLAY_INDICATOR_LAYERS.size).each_with_index do |mod_sequence, mod_sequence_index|
+            indicator_layer_name = OVERLAY_INDICATOR_LAYERS[mod_sequence_index]
+            btt_uuid = SecureRandom.uuid
         %>
         {
-          "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+          "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
           "BTTTriggerType" : 624,
           "BTTTriggerTypeDescriptionReadOnly" : "Please Select a Trigger ",
           "BTTTriggerTypeDescription" : "Show <%= indicator_layer_name.capitalize %> layer",
@@ -260,7 +262,7 @@
           "BTTOrder" : 19,
           "BTTAdditionalActions" : [
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "<%= btt_uuid %>",
               "BTTIsPureAction" : true,
@@ -275,7 +277,7 @@
               "BTTOrder" : 0
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "<%= btt_uuid %>",
               "BTTIsPureAction" : true,
@@ -291,7 +293,7 @@
               "BTTOrder" : 1
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "<%= btt_uuid %>",
               "BTTIsPureAction" : true,
@@ -307,7 +309,7 @@
               "BTTOrder" : 2
             },
             {
-              "BTTLastUpdatedAt" : <%= Time.now.to_i %>.0,
+              "BTTLastUpdatedAt" : <%= btt_last_updated_at %>,
               "BTTTriggerType" : -1,
               "BTTTriggerParentUUID" : "<%= btt_uuid %>",
               "BTTIsPureAction" : true,
@@ -422,7 +424,6 @@
           }
         },
         <%
-            end
           end
         %>
         {

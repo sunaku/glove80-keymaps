@@ -44,22 +44,27 @@ rule '.dtsi.min' => '.dtsi' do |t|
 end
 
 #-----------------------------------------------------------------------------
-# Overlay indicator helpers
+# layer map diagram overlay
 #-----------------------------------------------------------------------------
 
-#MacOS BetterTouchTool
-btt_zip_dir_files = FileList['layer-indicator/macos/BetterTouchTool/bttpreset-zipdir/**/*']
-task :btt => %w[layer-indicator/macos/BetterTouchTool/bttpreset-zipdir/presetjson.bttpreset layer-indicator/macos/BetterTouchTool/Glove80-Engrammer-Keyboard-Overlay-Preset.bttpresetzip]
+# BetterTouchTool for macOS
+btt_zip        = 'overlay/BetterTouchTool/Glove80-Glorious-Engrammer.bttpresetzip'
+btt_zip_dir    = 'overlay/BetterTouchTool/bttpreset-zipdir'
+btt_zip_preset = 'overlay/BetterTouchTool/bttpreset-zipdir/presetjson.bttpreset'
+btt_preset_erb = 'overlay/BetterTouchTool/presetjson.bttpreset.erb'
+task :btt => [btt_zip_preset, btt_zip]
 
-# Create preset file if erb has changed
-file 'layer-indicator/macos/BetterTouchTool/bttpreset-zipdir/presetjson.bttpreset' => 'layer-indicator/macos/BetterTouchTool/presetjson.bttpreset.erb' do |t|
+# create preset file if ERB template changes
+file btt_zip_preset => btt_preset_erb do |t|
   sh "erb #{t.prerequisites[0]} > #{t.name}"
 end
-#Create preset zip file if anything under the bttpreset-zipdir dir changes, which includes the preset file.
-file 'layer-indicator/macos/BetterTouchTool/Glove80-Engrammer-Keyboard-Overlay-Preset.bttpresetzip' => btt_zip_dir_files do |t|
-  sh "cd layer-indicator/macos/BetterTouchTool/bttpreset-zipdir; zip -FSr '../#{File.basename(t.name)}' *"
-end
 
+# create preset zip file if anything under the bttpreset-zipdir dir changes, which includes the preset file
+file btt_zip => FileList["#{btt_zip_dir}/**/*"] do |t|
+  cd btt_zip_dir do
+    sh "zip -FSr '../#{File.basename(t.name)}' *"
+  end
+end
 
 #-----------------------------------------------------------------------------
 # Graphviz DOT for diagrams
