@@ -388,6 +388,8 @@ adding them above the snippet in the "Custom Defined Behaviors" text box:
 For your reference, the following diagram shows the default values for all
 settings and how they inherit from each other, so you can override them
 together as a group (by inheritance) or each individually (fine-grained).
+Also see the `define.json` file for a convenient listing of the _effective_
+default values, taken after all inheritance and C pre-processor expansions.
 
 ![Default values and inheritance for all `#define` settings](define.svg)
 

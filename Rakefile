@@ -1,4 +1,5 @@
 require 'rake/clean'
+require 'json'
 require 'erb'
 
 task :default => [:dtsi, :dot, :pdf]
@@ -9,7 +10,8 @@ task :default => [:dtsi, :dot, :pdf]
 
 dtsi_files = FileList['*.dtsi.erb'].each do |erb|
   dtsi = erb.pathmap('%X')
-  file dtsi => FileList[erb, '*.{yaml,json,zmk}', __FILE__]
+  dtsi_base = dtsi.pathmap('%X')
+  file dtsi => FileList[erb, "#{dtsi_base}.{json,zmk}", '*.yaml', __FILE__]
   CLEAN.include "#{erb}.tmp"
 
   dtsi_min = "#{dtsi}.min"
@@ -47,7 +49,7 @@ end
 # Graphviz DOT for diagrams
 #-----------------------------------------------------------------------------
 
-task :dot => 'define.svg'
+task :dot => ['define.svg', 'define.json']
 
 file 'define.svg' => 'define.dot' do |t|
   sh "dot -Tsvg #{t.prerequisites[0]} > #{t.name}"
@@ -55,6 +57,19 @@ end
 
 file 'define.dot' => ['define.dot.erb', 'keymap.dtsi.min'] do |t|
   sh "erb #{t.prerequisites[0]} > #{t.name}"
+end
+
+file 'define.json' => ['keymap.dtsi.min', 'device.dtsi.min'] do |t|
+  defaults =
+    `grep -h -A1 '#ifndef' #{t.prerequisites.join(' ')} | grep '#define'`
+    .gsub(/#define (\w+)/, '\1 =')
+    .lines.inject({}) do |hash, line|
+      setting = line[/\w+/]
+      value = eval(line) rescue nil
+      hash[setting] = value if value
+      hash
+    end
+  File.write(t.name, JSON.pretty_generate({defaults: defaults}))
 end
 
 #-----------------------------------------------------------------------------
