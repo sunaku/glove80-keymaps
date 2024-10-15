@@ -12487,16 +12487,11 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "LG",
-            "params": [
-              {
-                "value": "DOT",
-                "params": []
-              }
-            ]
+            "value": "&kp _EMOJI",
+            "params": []
           }
         ]
       }
