@@ -7,7 +7,7 @@ digraph settings {
   numbers = Set.new
   tapping_resolution_formulas = Set.new
   settings = {}
-  `grep -A1 '^#ifndef' keymap.dtsi.min | grep '^#define'`.lines.each do |define|
+  `grep -h -A1 '^#ifndef' keymap.dtsi.min device.dtsi.min | grep '^#define'`.lines.each do |define|
     (_define, key, value) = define.chomp.split(/\s+/, 3)
     case value
     when /TAPPING_RESOLUTION ([+\-]) (\d+)/

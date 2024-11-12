@@ -55,7 +55,7 @@ file 'define.svg' => 'define.dot' do |t|
   sh "dot -Tsvg #{t.prerequisites[0]} > #{t.name}"
 end
 
-file 'define.dot' => ['define.dot.erb', 'keymap.dtsi.min'] do |t|
+file 'define.dot' => ['define.dot.erb', 'keymap.dtsi.min', 'device.dtsi.min'] do |t|
   sh "erb #{t.prerequisites[0]} > #{t.name}"
 end
 
