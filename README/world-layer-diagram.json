@@ -1,6 +1,6 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}\nsub, sup {\n    font-size: xx-small;\n    margin-left: -0.25ex;\n}\naside {\n    color: red;\n    margin-left: 1em !important;\n}"
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}\nsub, sup {\n    font-size: xx-small;\n    margin-left: -0.25ex;\n}\naside {\n    color: red;\n    margin-left: 1em !important;\n}"
   },
   [
     {
@@ -80,7 +80,7 @@
       "h": 4,
       "d": true
     },
-    "<center><h2>World Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "<center><h2>World Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
       "g": true,
       "a": 5,
@@ -124,8 +124,8 @@
     {
       "g": false
     },
-    "LALT",
-    "RALT\n\n\n\nAltGr",
+    "LALT <small>(sticky)</small>",
+    "RALT <small>(sticky)</small>\n\n\n\nAltGr",
     {
       "g": true
     },
@@ -134,13 +134,11 @@
   ],
   [
     {
+      "g": false,
+      "a": 4,
       "f": 6
     },
-    "",
-    {
-      "g": false,
-      "a": 4
-    },
+    "\n<sup>™<sub>℠</sub></sup>\n\n\n\n\n\n\n\n\n<sup>©<sub>®</sub></sup>",
     "\nñ\n\nß\nWin\n\n\n\n\n\nç",
     "\nï\n\nî\n\n\n\n\nì\n\ní",
     {
@@ -168,13 +166,13 @@
       "a": 7,
       "n": true
     },
-    "Shift",
+    "Shift <small>(sticky)</small>",
     {
       "c": "#cccccc"
     },
-    "LCTL\n\n\n\nCtrl",
-    "RCTL\n\n\n\nAlt",
-    "RSFT\n\n\n\nWin",
+    "LCTL <small>(sticky)</small>\n\n\n\nCtrl",
+    "RCTL <small>(sticky)</small>\n\n\n\nAlt",
+    "RSFT <small>(sticky)</small>\n\n\n\nWin",
     {
       "g": true
     },

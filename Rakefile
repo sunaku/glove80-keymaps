@@ -81,6 +81,7 @@ task :pdf => layers_pdf
 
 layers_pdf_sequence = %w[
   base
+  engrammer
   lower
   magic
   cursor
