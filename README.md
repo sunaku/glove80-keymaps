@@ -1,11 +1,12 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80] keymap featuring the [Engram] and [Engrammer] layouts with
+This is [my Glove80] keymap featuring the [Enthium] and [Engram]* layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
 Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
 also provided as "training wheels" to aid your transition to the full glory.
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
+[Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
 [Engram]:        https://sunaku.github.io/engram-keyboard-layout.html
 [Engrammer]:     https://sunaku.github.io/engrammer-keyboard-layout.html
 [Miryoku]:       https://github.com/manna-harbour/miryoku
@@ -13,9 +14,9 @@ also provided as "training wheels" to aid your transition to the full glory.
 
 ## Keymap
 
-Version 38 (2024-10-05)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v38
-- Release: https://my.glove80.com/#/layout/user/56b3ddfa-0299-4983-b66d-5101c8958452
+Version 39 (2024-11-12)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v39
+- Release: https://my.glove80.com/#/layout/user/bfe314cb-8b14-43aa-9b1f-700a36570447
 
 ### Legend
 
@@ -33,37 +34,37 @@ See [release notes][rel] for a visual overview of recent updates.
 <!-- vim-markdown-toc GFM -->
 
 * [Guide](#guide)
-    * [Factory layout](#factory-layout)
-    * [Operating system](#operating-system)
-    * [Home row mods](#home-row-mods)
-        * [Difficulty level](#difficulty-level)
-        * [One-shot shifts](#one-shot-shifts)
-        * [Shift forgiveness](#shift-forgiveness)
-        * [Bilateral combinations](#bilateral-combinations)
-    * [Layer access keys](#layer-access-keys)
-    * [Key auto-repeat](#key-auto-repeat)
-    * [Alpha layouts](#alpha-layouts)
-    * [Unicode and Emoji](#unicode-and-emoji)
-        * [OS-native compose](#os-native-compose)
+  * [Factory layout](#factory-layout)
+  * [Operating system](#operating-system)
+  * [Home row mods](#home-row-mods)
+    * [Difficulty level](#difficulty-level)
+    * [One-shot shifts](#one-shot-shifts)
+    * [Shift forgiveness](#shift-forgiveness)
+    * [Bilateral combinations](#bilateral-combinations)
+  * [Layer access keys](#layer-access-keys)
+  * [Key auto-repeat](#key-auto-repeat)
+  * [Alpha layouts](#alpha-layouts)
+  * [Unicode and Emoji](#unicode-and-emoji)
+    * [OS-native compose](#os-native-compose)
 * [Installing](#installing)
-    * [Enabling mouse emulation](#enabling-mouse-emulation)
-    * [Flashing](#flashing)
+  * [Enabling mouse emulation](#enabling-mouse-emulation)
+  * [Flashing](#flashing)
 * [Upgrading](#upgrading)
 * [Customizing](#customizing)
-    * [Overriding the defaults](#overriding-the-defaults)
-        * [Reordering home row mods](#reordering-home-row-mods)
-        * [Fine-tuning the timing](#fine-tuning-the-timing)
-    * [Compiling from source](#compiling-from-source)
-        * [World and Emoji characters](#world-and-emoji-characters)
-            * [Adding a new World character](#adding-a-new-world-character)
-            * [Shift key for World characters](#shift-key-for-world-characters)
-            * [Modifiers for World characters](#modifiers-for-world-characters)
-            * [Compose for World characters](#compose-for-world-characters)
-            * [Adding a new Emoji character](#adding-a-new-emoji-character)
-            * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
-        * [Editing layer map diagrams](#editing-layer-map-diagrams)
-        * [Rearranging the base layer](#rearranging-the-base-layer)
-            * [Mirroring horizontally](#mirroring-horizontally)
+  * [Overriding the defaults](#overriding-the-defaults)
+    * [Reordering home row mods](#reordering-home-row-mods)
+    * [Fine-tuning the timing](#fine-tuning-the-timing)
+  * [Compiling from source](#compiling-from-source)
+    * [World and Emoji characters](#world-and-emoji-characters)
+      * [Adding a new World character](#adding-a-new-world-character)
+      * [Shift key for World characters](#shift-key-for-world-characters)
+      * [Modifiers for World characters](#modifiers-for-world-characters)
+      * [Compose for World characters](#compose-for-world-characters)
+      * [Adding a new Emoji character](#adding-a-new-emoji-character)
+      * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
+    * [Editing layer map diagrams](#editing-layer-map-diagrams)
+    * [Rearranging the base layer](#rearranging-the-base-layer)
+      * [Mirroring horizontally](#mirroring-horizontally)
 * [Discussion](#discussion)
 * [License](#license)
 
