@@ -1,4 +1,5 @@
 // NOTE: Use the many #define settings below to customize this keymap!
+#define GLOVE80_SWITCHES 'C' // choose 'C'herry Blossoms if applicable
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
@@ -989,6 +990,21 @@ behaviors {
                 #define TAPPING_RESOLUTION ((6 - DIFFICULTY_LEVEL) * 100)
             #endif
         #endif
+    #endif
+
+    //
+    // GLOVE80_SWITCHES specifies the variety of switches your keyboard has.
+    //
+    // #define GLOVE80_SWITCHES 'C' // Cherry Blossom (30gf)
+    // #define GLOVE80_SWITCHES 'P' // Pro Red        (35gf)
+    // #define GLOVE80_SWITCHES 'R' // Red            (50gf)
+    // #define GLOVE80_SWITCHES 'B' // Brown          (60gf)
+    // #define GLOVE80_SWITCHES 'W' // White          (60gf)
+    //
+    #if defined(GLOVE80_SWITCHES) && GLOVE80_SWITCHES == 'C'
+    #ifndef TAPPING_RESOLUTION
+    #define TAPPING_RESOLUTION 170
+    #endif
     #endif
 
     //
