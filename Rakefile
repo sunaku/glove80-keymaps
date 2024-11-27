@@ -1,8 +1,9 @@
 require 'rake/clean'
 require 'json'
+require 'yaml'
 require 'erb'
 
-task :default => [:dtsi, :dot, :pdf]
+task :default => [:dtsi, :dot, :pdf, :json]
 
 #-----------------------------------------------------------------------------
 # ZMK configuration snippet (DTSI)
@@ -123,4 +124,49 @@ CLOBBER.include layers_pdf
 
 rule '.pdf' => '.png' do |t|
   sh 'gm', 'convert', t.source, t.name
+end
+
+#-----------------------------------------------------------------------------
+# Glove80 Layout Editor keymap (JSON)
+#-----------------------------------------------------------------------------
+
+task :json => 'keymap.json'
+
+file 'keymap.json' => ['default.json', __FILE__] do |t|
+  default = JSON.load_file(t.prerequisites[0])
+
+  require 'pp'
+  pp default.map {|k,v| [k, v.class] }.to_h
+
+  keymap = JSON.load_file(t.name)
+  layer_by_name = keymap['layer_names'].zip(keymap['layers']).to_h
+
+  if false # extract layers from keymap.json
+    layer_by_name.each do |name, layer|
+      keymap_for_layer = default.clone
+      keymap_for_layer['title'] = "#{name} layer for Glorious Engrammer keymap"
+      keymap_for_layer['layers'][0] = layer
+      keymap_for_layer['layer_names'][0] = name
+
+      # break if name == 'Typing'
+      # File.write "layouts/#{name}.json", JSON.pretty_generate(keymap_for_layer)
+      File.write "layers/#{name}.json", JSON.pretty_generate(keymap_for_layer)
+    end
+  end
+
+  # XXX: cut out the noise for debugging
+  keymap.delete 'notes'
+  keymap.delete 'custom_devicetree'
+  keymap.delete 'custom_defined_behaviors'
+
+  # choose the layers to include into the keymap
+  config = YAML.load_file('config.yaml')
+  config['layers'].reverse.each do |filepath|
+    layout = JSON.load_file(filepath)
+    keymap['tags'].unshift layout['layer_names'].first.downcase
+    keymap['layer_names'].unshift layout['layer_names'].first
+    keymap['layers'].unshift layout['layers'].first
+  end
+  File.write t.name+'.new', JSON.pretty_generate(keymap)
+
 end
