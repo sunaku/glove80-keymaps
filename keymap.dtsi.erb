@@ -911,6 +911,7 @@ behaviors {
         bindings = <&mo>, <&kp>;
         retro-tap; // tap on standalone hold
     };
+    #ifdef LAYER_Engram
     plain_engram_COMMA: plain_typing_layer_engram_COMMA {
         compatible = "zmk,behavior-hold-tap";
         flavor = PLAIN_HOLDING_TYPE;
@@ -931,6 +932,7 @@ behaviors {
         bindings = <&mo>, <&engram_DOT>;
         retro-tap; // tap on standalone hold
     };
+    #endif
 
     //
     // Thumb cluster hold-tap keys for Miryoku layers
@@ -995,6 +997,7 @@ behaviors {
     // - https://engram.dev/
     // - https://sunaku.github.io/engram-keyboard-layout.html
     //
+    #ifdef LAYER_Engram
     <%
       {
         "N1"    => "PIPE",
@@ -1027,6 +1030,7 @@ behaviors {
     <%
       end
     %>
+    #endif
 
     //////////////////////////////////////////////////////////////////////////
     //
