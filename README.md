@@ -1,6 +1,6 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80] keymap featuring the [Enthium] and [Engram]* layouts with
+This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
 Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
 also provided as "training wheels" to aid your transition to the full glory.
@@ -320,7 +320,7 @@ Unicode) to type international characters in the World layer, activate this:
 ```h
 //
 // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
-// for characters in the "localizing" section of the `world.yaml` file.
+// for characters in the "compositions" section of the `world.yaml` file.
 //
 #define WORLD_USE_COMPOSE
 ```
@@ -711,7 +711,7 @@ Finally, assign `&world_sign_base` to a "Custom" key in the Glove80 Layout Edito
 Suppose you wanted the copyright sign © character from the previous section to
 be typed using your operating system's native Compose key rather than Unicode.
 
-First, open the `world.yaml` file and add a new entry under the `localizing` section:
+First, open the `world.yaml` file and add a new entry in the `compositions` section:
 
 ```yaml
 #
@@ -966,7 +966,7 @@ mirroring_transformation = {
 // | 79 78 77 76 75         |         68 67 66 65 64 |
 // |                74 57   |   52 69                |
 // |                 73 56  |  53 70                 |
-// |                  71 54 | 55 72                  |
+// |                  72 55 | 54 71                  |
 // |------------------------|------------------------|
 //
    0: 9,  1: 8,  2: 7,  3: 6,  4: 5,                              5: 4,  6: 3,  7: 2,  8: 1,  9: 0,
