@@ -172,12 +172,6 @@
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
 <%
-  keymap_zmk = File.readlines("keymap.zmk")
-  POSITION_BY_INDEX = keymap_zmk.grep(/^#define POS_[LR]H_\w+ \d+/).map do |line|
-    (_define, name, value) = line.split
-    [name, Integer(value)]
-  end.to_h.invert
-
   require 'json'
   keymap = JSON.load_file("keymap.json")
 
@@ -227,8 +221,7 @@
         end
       end
 
-      position = POSITION_BY_INDEX[index]
-      coords = position[/^POS_(.+)/, 1]
+      coords = KEY_BY_POS[index]
 %>
 #define KEY_<%= coords %> <%= tap %>
 <%
