@@ -8,6 +8,15 @@ task :default => [:dtsi, :dot, :pdf]
 # ZMK configuration snippet (DTSI)
 #-----------------------------------------------------------------------------
 
+keymap_zmk = File.readlines('keymap.zmk')
+POS_BY_KEY = keymap_zmk.grep(/^#define POS_[LR]H_\w+ \d+/).map do |line|
+  (_define, name, value) = line.split
+  key = name[/_(.+)/, 1]
+  pos = Integer(value)
+  [key, pos]
+end.to_h
+KEY_BY_POS = POS_BY_KEY.invert
+
 dtsi_files = FileList['*.dtsi.erb'].each do |erb|
   dtsi = erb.pathmap('%X')
   dtsi_base = dtsi.pathmap('%X')
