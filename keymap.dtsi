@@ -4047,6 +4047,14 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
+    stumb: thumb_layer_access_sticky_key_oneshot {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #binding-cells = <2>;
+        bindings = <&mo>, <&sticky_key_oneshot>;
+    };
     crumb: thumb_layer_access_retro_tap {
         compatible = "zmk,behavior-hold-tap";
         flavor = THUMB_HOLDING_TYPE;
