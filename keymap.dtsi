@@ -967,6 +967,13 @@ combos {
         layers = <0 1 2 3 4 5 6 7 8>;
     };
 
+    combo_caps_lock {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T6 POS_RH_T6>;
+        bindings = <&kp CAPSLOCK>;
+        layers = <0 1 2 3 4 5 6 7 8>;
+    };
+
 };
 
 behaviors {
