@@ -667,21 +667,11 @@ behaviors {
     #define LEFT_RINGY_KEY  KEY_LH_C4R4
     #define LEFT_MIDDY_KEY  KEY_LH_C3R4
     #define LEFT_INDEX_KEY  KEY_LH_C2R4
-    #define LEFT_PLAIN_KEY  KEY_LH_C1R4
 
     #define RIGHT_PINKY_KEY KEY_RH_C5R4
     #define RIGHT_RINGY_KEY KEY_RH_C4R4
     #define RIGHT_MIDDY_KEY KEY_RH_C3R4
     #define RIGHT_INDEX_KEY KEY_RH_C2R4
-    #define RIGHT_PLAIN_KEY KEY_RH_C1R4
-
-    #if defined(LAYER_Engram) && LAYER_Engram == 0
-    #define LeftPlainKey  engram_COMMA
-    #define RightPlainKey engram_DOT
-    #else
-    #define LeftPlainKey  kp LEFT_PLAIN_KEY
-    #define RightPlainKey kp RIGHT_PLAIN_KEY
-    #endif
 
     //
     // Home row mods with bilateral combinations support
