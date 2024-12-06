@@ -282,6 +282,20 @@ combos {
         layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
     };
 
+    combo_sticky_AltGr_left {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T2 POS_LH_T5>;
+        bindings = <&sk RALT>;
+        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    };
+
+    combo_sticky_AltGr_right {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_RH_T2 POS_RH_T5>;
+        bindings = <&sk RALT>;
+        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    };
+
 };
 
 behaviors {
