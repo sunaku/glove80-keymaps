@@ -953,6 +953,20 @@ combos {
         layers = <0 1 2 3 4 5 6 7 8>;
     };
 
+    combo_sticky_AltGr_left {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_LH_T2 POS_LH_T5>;
+        bindings = <&sk RALT>;
+        layers = <0 1 2 3 4 5 6 7 8>;
+    };
+
+    combo_sticky_AltGr_right {
+        timeout-ms = <COMBO_FIRING_DECAY>;
+        key-positions = <POS_RH_T2 POS_RH_T5>;
+        bindings = <&sk RALT>;
+        layers = <0 1 2 3 4 5 6 7 8>;
+    };
+
 };
 
 behaviors {
