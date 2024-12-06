@@ -393,8 +393,7 @@ behaviors {
       #endif
     #endif
     <%
-      emit_setting_ifndef.(:RING1_FINGER_MOD, :LALT)
-      emit_setting_ifndef.(:RING2_FINGER_MOD, :RALT)
+      emit_setting_ifndef.(:RINGY_FINGER_MOD, :LALT)
     %>
     #ifndef MIDDY_FINGER_MOD
       #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %> && !defined(MACOS_USE_GACS)
@@ -412,10 +411,8 @@ behaviors {
     <%
       emit_setting_ifndef.(:LEFT_PINKY_MOD,  :PINKY_FINGER_MOD)
       emit_setting_ifndef.(:RIGHT_PINKY_MOD, :PINKY_FINGER_MOD)
-      emit_setting_ifndef.(:LEFT_RING1_MOD,  :RING1_FINGER_MOD)
-      emit_setting_ifndef.(:RIGHT_RING1_MOD, :RING1_FINGER_MOD)
-      emit_setting_ifndef.(:LEFT_RING2_MOD,  :RING2_FINGER_MOD)
-      emit_setting_ifndef.(:RIGHT_RING2_MOD, :RING2_FINGER_MOD)
+      emit_setting_ifndef.(:LEFT_RINGY_MOD,  :RINGY_FINGER_MOD)
+      emit_setting_ifndef.(:RIGHT_RINGY_MOD, :RINGY_FINGER_MOD)
       emit_setting_ifndef.(:LEFT_MIDDY_MOD,  :MIDDY_FINGER_MOD)
       emit_setting_ifndef.(:RIGHT_MIDDY_MOD, :MIDDY_FINGER_MOD)
       emit_setting_ifndef.(:LEFT_INDEX_MOD,  :INDEX_FINGER_MOD)
@@ -441,13 +438,12 @@ behaviors {
 
       INDEX_HOLDING_TIME = TAPPING_RESOLUTION + 20 # 170ms
       MIDDY_HOLDING_TIME = INDEX_HOLDING_TIME + 40 # 210ms
-      RING1_HOLDING_TIME = MIDDY_HOLDING_TIME + 30 # 240ms
-      PINKY_HOLDING_TIME = RING1_HOLDING_TIME + 20 # 260ms
+      RINGY_HOLDING_TIME = MIDDY_HOLDING_TIME + 30 # 240ms
+      PINKY_HOLDING_TIME = RINGY_HOLDING_TIME + 20 # 260ms
 
       emit_setting_ifndef.(:INDEX_HOLDING_TIME, resolve_tap_timing.(INDEX_HOLDING_TIME))
       emit_setting_ifndef.(:MIDDY_HOLDING_TIME, resolve_tap_timing.(MIDDY_HOLDING_TIME))
-      emit_setting_ifndef.(:RING1_HOLDING_TIME, resolve_tap_timing.(RING1_HOLDING_TIME))
-      emit_setting_ifndef.(:RING2_HOLDING_TIME, :RING1_HOLDING_TIME)
+      emit_setting_ifndef.(:RINGY_HOLDING_TIME, resolve_tap_timing.(RINGY_HOLDING_TIME))
       emit_setting_ifndef.(:PINKY_HOLDING_TIME, resolve_tap_timing.(PINKY_HOLDING_TIME))
     %>
 
@@ -645,7 +641,7 @@ behaviors {
     //
     <%
       HANDS = %w[ left right ]
-      FINGERS = %w[ pinky ring1 ring2 middy index ]
+      FINGERS = %w[ pinky ringy middy index ]
       PAIRED_HANDS = HANDS.cycle.each_cons(2).take(2).to_h
     %>
     #define LEFT_HAND_KEYS      \
@@ -668,15 +664,13 @@ behaviors {
                           71 54   55 72
 
     #define LEFT_PINKY_KEY  KEY_LH_C5R4
-    #define LEFT_RING1_KEY  KEY_LH_C4R4
-    #define LEFT_RING2_KEY  KEY_LH_C4R3
+    #define LEFT_RINGY_KEY  KEY_LH_C4R4
     #define LEFT_MIDDY_KEY  KEY_LH_C3R4
     #define LEFT_INDEX_KEY  KEY_LH_C2R4
     #define LEFT_PLAIN_KEY  KEY_LH_C1R4
 
     #define RIGHT_PINKY_KEY KEY_RH_C5R4
-    #define RIGHT_RING1_KEY KEY_RH_C4R4
-    #define RIGHT_RING2_KEY KEY_RH_C4R3
+    #define RIGHT_RINGY_KEY KEY_RH_C4R4
     #define RIGHT_MIDDY_KEY KEY_RH_C3R4
     #define RIGHT_INDEX_KEY KEY_RH_C2R4
     #define RIGHT_PLAIN_KEY KEY_RH_C1R4
