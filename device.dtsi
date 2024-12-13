@@ -173,6 +173,7 @@
       };
       */
 
+      #ifdef LAYER_LeftPinky
       LeftPinky {
         bindings = <
           ________ MAGENTA  ________ ________ ________                                                                          ________ ________ ________  MAGENTA ________
@@ -184,7 +185,9 @@
         >;
         layer-id = <LAYER_LeftPinky>;
       };
+      #endif
 
+      #ifdef LAYER_LeftRingy
       LeftRingy {
         bindings = <
           ________ ________ CYAN     ________ ________                                                                          ________ ________     CYAN ________ ________
@@ -196,7 +199,9 @@
         >;
         layer-id = <LAYER_LeftRingy>;
       };
+      #endif
 
+      #ifdef LAYER_LeftMiddy
       LeftMiddy {
         bindings = <
           ________ ________ ________ GREEN    ________                                                                          ________    GREEN ________ ________ ________
@@ -208,7 +213,9 @@
         >;
         layer-id = <LAYER_LeftMiddy>;
       };
+      #endif
 
+      #ifdef LAYER_LeftIndex
       LeftIndex {
         bindings = <
           ________ ________ ________ ________ YELLOW                                                                              YELLOW ________ ________ ________ ________
@@ -220,7 +227,9 @@
         >;
         layer-id = <LAYER_LeftIndex>;
       };
+      #endif
 
+      #ifdef LAYER_RightIndex
       RightIndex {
         bindings = <
           ________ ________ ________ ________ YELLOW                                                                              YELLOW ________ ________ ________ ________
@@ -232,7 +241,9 @@
         >;
         layer-id = <LAYER_RightIndex>;
       };
+      #endif
 
+      #ifdef LAYER_RightMiddy
       RightMiddy {
         bindings = <
           ________ ________ ________ GREEN    ________                                                                          ________    GREEN ________ ________ ________
@@ -244,7 +255,9 @@
         >;
         layer-id = <LAYER_RightMiddy>;
       };
+      #endif
 
+      #ifdef LAYER_RightRingy
       RightRingy {
         bindings = <
           ________ ________ CYAN     ________ ________                                                                          ________ ________     CYAN ________ ________
@@ -256,7 +269,9 @@
         >;
         layer-id = <LAYER_RightRingy>;
       };
+      #endif
 
+      #ifdef LAYER_RightPinky
       RightPinky {
         bindings = <
           ________ MAGENTA  ________ ________ ________                                                                          ________ ________ ________  MAGENTA ________
@@ -268,7 +283,9 @@
         >;
         layer-id = <LAYER_RightPinky>;
       };
+      #endif
 
+      #ifdef LAYER_Cursor
       Cursor {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -280,7 +297,9 @@
         >;
         layer-id = <LAYER_Cursor>;
       };
+      #endif
 
+      #ifdef LAYER_Number
       Number {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -292,7 +311,9 @@
         >;
         layer-id = <LAYER_Number>;
       };
+      #endif
 
+      #ifdef LAYER_Function
       Function {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -304,7 +325,9 @@
         >;
         layer-id = <LAYER_Function>;
       };
+      #endif
 
+      #ifdef LAYER_Emoji
       Emoji {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -316,7 +339,9 @@
         >;
         layer-id = <LAYER_Emoji>;
       };
+      #endif
 
+      #ifdef LAYER_Symbol
       Symbol {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -328,7 +353,9 @@
         >;
         layer-id = <LAYER_Symbol>;
       };
+      #endif
 
+      #ifdef LAYER_Mouse
       Mouse {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -340,7 +367,9 @@
         >;
         layer-id = <LAYER_Mouse>;
       };
+      #endif
 
+      #ifdef LAYER_System
       System {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -352,7 +381,9 @@
         >;
         layer-id = <LAYER_System>;
       };
+      #endif
 
+      #ifdef LAYER_World
       World {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -364,7 +395,9 @@
         >;
         layer-id = <LAYER_World>;
       };
+      #endif
 
+      #ifdef LAYER_Typing
       Typing {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -376,7 +409,9 @@
         >;
         layer-id = <LAYER_Typing>;
       };
+      #endif
 
+      #ifdef LAYER_Gaming
       Gaming {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -388,7 +423,9 @@
         >;
         layer-id = <LAYER_Gaming>;
       };
+      #endif
 
+      #ifdef LAYER_Lower
       Lower {
         bindings = <
           ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
@@ -400,6 +437,7 @@
         >;
         layer-id = <LAYER_Lower>;
       };
+      #endif
 
     };
   };
