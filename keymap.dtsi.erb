@@ -252,6 +252,7 @@ combos {
     };
     #endif
 
+    #ifdef LAYER_Cursor
     #ifdef _A_TAB
     combo_alt_tab_switcher {
         timeout-ms = <COMBO_FIRING_DECAY>;
@@ -267,6 +268,7 @@ combos {
         bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
         layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
     };
+    #endif
 
     combo_sticky_hyper_right {
         timeout-ms = <COMBO_FIRING_DECAY>;
