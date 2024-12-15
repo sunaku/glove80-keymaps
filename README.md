@@ -48,6 +48,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [OS-native compose](#os-native-compose)
 * [Installing](#installing)
   * [Enabling mouse emulation](#enabling-mouse-emulation)
+  * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
   * [Flashing](#flashing)
 * [Upgrading](#upgrading)
 * [Customizing](#customizing)
@@ -345,6 +346,18 @@ open the "Settings" tab, choose PR23, and then go back to the "Edit" tab.
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
 
 Without this change, the mouse control keys on the Mouse layer won't work.
+
+### Enabling per-key RGB lighting
+
+Before building the firmware (step 5 above), change the version to PR30:
+open the "Settings" tab, choose PR30, and then go back to the "Edit" tab.
+
+![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+
+Next, in the "Advanced Configuration" tab towards the bottom of the page,
+enable the `EXPERIMENTAL_RGB_LAYER` experimental setting by ticking the
+"Overriden" checkbox and the "y" radio button.  Finally, after flashing
+the firmware, turn on the RGB lighting and cycle past the rainbow effect.
 
 ### Flashing
 
