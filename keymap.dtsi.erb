@@ -2,6 +2,7 @@
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
+//#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires 24.08-beta1 or newer firmware
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
 // TIP: Add more setting overrides here instead of editing them below.
@@ -377,7 +378,7 @@ behaviors {
     // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
     // without any other key having been tapped while the shift was held down.
     // For example, suppose you hold a home row shift key and, before pressing
-    // another key, suddenly decide that you don't want to use shift after all:
+    // another key, you suddenly decide that you don't want the shift anymore:
     //
     // <1> If this setting is enabled, the underlying tap behavior is triggered
     //     to type a single character when you release that home row shift key.
@@ -401,6 +402,22 @@ behaviors {
     // but this is unlikely as people regularly tap shift without consequence.
     //
     //#define SHIFT_FORGIVENESS
+
+    //
+    // THUMB_FORGIVENESS taps when a thumb layer access key is merely held and
+    // released, without any other key having been tapped while thumb was held.
+    // For example, suppose you hold the cursor layer key and, before pressing
+    // another key, you suddenly decide that you don't want the layer anymore:
+    //
+    // <1> If this setting is enabled, the underlying tap behavior is triggered
+    //     to type a single character when you release that layer access key.
+    //
+    // <2> Otherwise, nothing happens when you release that layer access key.
+    //
+    // NOTE: This setting interferes with (and effectively disables) per-key
+    // RGB indicators (PR30) for layers accessed via thumb layer access keys.
+    //
+    //#define THUMB_FORGIVENESS
 
     //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
@@ -950,7 +967,9 @@ behaviors {
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
+        #ifdef THUMB_FORGIVENESS
         retro-tap;
+        #endif
     };
     space: thumb_layer_access_spacebar {
         compatible = "zmk,behavior-hold-tap";
@@ -959,7 +978,9 @@ behaviors {
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
+        #ifdef THUMB_FORGIVENESS
         retro-tap; // tap on standalone hold
+        #endif
     };
 
     //
