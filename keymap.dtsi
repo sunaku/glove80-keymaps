@@ -2,6 +2,7 @@
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
+#define SPACE_FORGIVENESS    // allow lingering taps on the space bar
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires 24.08-beta1 or newer firmware
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
@@ -1079,6 +1080,22 @@ behaviors {
     // RGB indicators (PR30) for layers accessed via thumb layer access keys.
     //
     //#define THUMB_FORGIVENESS
+
+    //
+    // SPACE_FORGIVENESS taps when the symbol layer access key is merely held
+    // and released, without any symbol been tapped while the access was held.
+    // For example, suppose you hold the symbol layer key and, before pressing
+    // another key, you suddenly decide that you don't want the layer anymore:
+    //
+    // <1> If this setting is enabled, the underlying tap behavior is triggered
+    //     to type a single character when you release that layer access key.
+    //
+    // <2> Otherwise, nothing happens when you release that layer access key.
+    //
+    // NOTE: This setting interferes with (and effectively disables) per-key
+    // RGB indicators (PR30) for layers accessed via thumb layer access keys.
+    //
+    //#define SPACE_FORGIVENESS
 
     //
     // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
@@ -3286,7 +3303,7 @@ behaviors {
         quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
-        #ifdef THUMB_FORGIVENESS
+        #ifdef SPACE_FORGIVENESS
         retro-tap; // tap on standalone hold
         #endif
     };
