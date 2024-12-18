@@ -1,5 +1,4 @@
 // NOTE: Use the many #define settings below to customize this keymap!
-#define GLOVE80_SWITCHES 'C' // choose 'C'herry Blossoms if applicable
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
@@ -301,9 +300,6 @@ behaviors {
     // - https://github.com/urob/zmk-config#timeless-homerow-mods
     //
     //////////////////////////////////////////////////////////////////////////
-    <%
-      TAPPING_RESOLUTION = 150 # my personal threshold on Kailh Choc v1 Reds
-    %>
 
     //
     // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
@@ -332,27 +328,13 @@ behaviors {
     #endif
 
     //
-    // GLOVE80_SWITCHES specifies the variety of switches your keyboard has.
-    //
-    // #define GLOVE80_SWITCHES 'C' // Cherry Blossom (30gf)
-    // #define GLOVE80_SWITCHES 'P' // Pro Red        (35gf)
-    // #define GLOVE80_SWITCHES 'R' // Red            (50gf)
-    // #define GLOVE80_SWITCHES 'B' // Brown          (60gf)
-    // #define GLOVE80_SWITCHES 'W' // White          (60gf)
-    //
-    #if defined(GLOVE80_SWITCHES) && GLOVE80_SWITCHES == 'C'
-    <%
-      emit_setting_ifndef.(:TAPPING_RESOLUTION, TAPPING_RESOLUTION + 20)
-    %>
-    #endif
-
-    //
     // TAPPING_RESOLUTION specifies the maximum speed at which the keyboard
     // confuses your taps as being holds when you type on home row mod keys.
     // When you lower this value, the same confusion should still occur; but
     // when you raise this value, you should be able to type normally again.
     //
     <%
+      TAPPING_RESOLUTION = 150 # my personal threshold on Kailh Choc v1 Reds
       emit_setting_ifndef.(:TAPPING_RESOLUTION, TAPPING_RESOLUTION)
 
       resolve_tap_timing = lambda do |milliseconds|

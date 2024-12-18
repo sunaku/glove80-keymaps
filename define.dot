@@ -7,8 +7,6 @@ digraph settings {
 
     COMBO_FIRING_DECAY -> NUMBER_50
 
-    TAPPING_RESOLUTION -> NUMBER_170
-
     TAPPING_RESOLUTION -> NUMBER_150
 
     RING1_FINGER_MOD -> LALT
@@ -723,8 +721,6 @@ digraph settings {
 
     
       NUMBER_50 [label="50", style=filled, fillcolor=yellow, shape=signature]
-    
-      NUMBER_170 [label="170", style=filled, fillcolor=yellow, shape=signature]
     
       NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=signature]
     
