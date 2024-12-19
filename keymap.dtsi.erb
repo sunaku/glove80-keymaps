@@ -1198,6 +1198,8 @@ macros {
       emit_setting_ifndef.(:SELECT_WORD_DELAY, 1)
     %>
 
+    #define select_all kp _C(A)
+
     ZMK_MACRO(select_none,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
