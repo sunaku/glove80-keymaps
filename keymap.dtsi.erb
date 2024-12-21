@@ -6,6 +6,7 @@
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 #define SPACE_FORGIVENESS    // allow lingering taps on the space bar
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
+//#define USE_SHIFT_NUM_ROW  // apply Shift to type number row digits
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1299,6 +1300,12 @@ macros {
     //#define WORLD_USE_COMPOSE
 
     //
+    // USE_SHIFT_NUM_ROW indicates that Shift must be applied when typing out
+    // digits from the number row, which is needed for locales such as AZERTY.
+    //
+    //#define USE_SHIFT_NUM_ROW
+
+    //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
@@ -1320,6 +1327,18 @@ macros {
             tap-ms = <UNICODE_TAP_DELAY>; \
             bindings = __VA_ARGS__; \
         )
+
+    //
+    // UNICODE_SEQ_NUMROW() optionally transforms number row keystrokes
+    // for some locales that, for example, require Shift to type digits.
+    //
+    #ifndef UNICODE_SEQ_NUMROW
+        #ifdef USE_SHIFT_NUM_ROW
+            #define UNICODE_SEQ_NUMROW(digit) LS(digit)
+        #else
+            #define UNICODE_SEQ_NUMROW(digit) digit
+        #endif
+    #endif
 
     //
     // UNICODE_SEQ_LINUX() specifies how Unicode hexadecimal codepoint
@@ -1582,7 +1601,8 @@ macros {
         OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
           sequence = character.chars.map do |character|
             keystrokes = keystrokes_from_character(character, os)
-            format_keystrokes_for_unicode(keystrokes, os)
+            formatted = format_keystrokes_for_unicode(keystrokes, os)
+            shifted = formatted.gsub(/(?<=&kp )N\d\b/, 'UNICODE_SEQ_NUMROW(\&)')
           end
 
           if sequence.length > 1
