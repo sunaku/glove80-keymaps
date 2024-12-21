@@ -475,6 +475,38 @@ digraph settings {
 
     COMPOSE_KEY_LINUX -> RALT
 
+    _N0 -> N0
+
+    _N1 -> N1
+
+    _N2 -> N2
+
+    _N3 -> N3
+
+    _N4 -> N4
+
+    _N5 -> N5
+
+    _N6 -> N6
+
+    _N7 -> N7
+
+    _N8 -> N8
+
+    _N9 -> N9
+
+    _NA -> A
+
+    _NB -> B
+
+    _NC -> C
+
+    _ND -> D
+
+    _NE -> E
+
+    _NF -> F
+
     EMOJI_GENDER_SIGN_PRESET -> "'N'"
 
     EMOJI_SKIN_TONE_PRESET -> "'N'"
