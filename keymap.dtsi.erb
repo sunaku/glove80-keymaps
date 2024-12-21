@@ -6,6 +6,8 @@
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires 24.08-beta1 or newer firmware
 #define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
+//#define WORLD_HOST_AZERTY  // host computer is set to AZERTY locale
+//#define WORLD_SHIFT_NUMBER // apply Shift to type number row digits
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1299,6 +1301,32 @@ macros {
     //#define WORLD_USE_COMPOSE
 
     //
+    // WORLD_HOST_AZERTY indicates that your computer is set to AZERTY locale.
+    //
+    //#define WORLD_HOST_AZERTY
+
+    #ifdef WORLD_HOST_AZERTY
+        #define WORLD_SHIFT_NUMBER
+        #define _NA Q
+    #endif
+
+    //
+    // WORLD_SHIFT_NUMBER indicates that Shift must be applied when typing out
+    // digits from the number row, which is needed for locales such as AZERTY.
+    //
+    //#define WORLD_SHIFT_NUMBER
+
+    #ifdef WORLD_SHIFT_NUMBER
+    <%
+      for digit in 0..9 do
+    %>
+        #define _N<%= digit %> LS(N<%= digit %>)
+    <%
+      end
+    %>
+    #endif
+
+    //
     // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
     // between keystrokes while inputting the Unicode codepoint shortcut.
     //
@@ -1474,8 +1502,18 @@ macros {
     #endif
 
     <%
+      for digit in 0..9 do
+        emit_setting_ifndef.("_N#{digit}", "N#{digit}")
+      end
+
+      for digit in 'A'..'F' do
+        emit_setting_ifndef.("_N#{digit}", "#{digit}")
+      end
+
       def format_keystrokes_for_unicode(keystrokes, os)
         send("format_keystrokes_for_#{os}_unicode", keystrokes)
+        # allow customization of keycodes for hexadecimal digits
+        .gsub(/(?<=&kp )(?:([A-F])|N(\d))\b/, '_N\1\2')
       rescue NameError
         raise NotImplementedError, "#{os} is not yet supported"
       end
