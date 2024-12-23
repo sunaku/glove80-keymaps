@@ -1,6 +1,11 @@
 //////////////////////////////////////////////////////////////////////////
 //
-// Mouse keys (control mouse via keyboard) -- requires PR23 beta firmware:
+// Mouse keys (keyboard mouse control) requires v24.12 firmware or newer:
+// override the "HID_POINTING" setting to "y" in Advanced Configuration
+// and then select "v24.12" firmware from the drop-down menu located at
+// Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
+//
+// Alternatively, you can still use the older PR23 beta firmware for this:
 // select "community.pr23.mouse-keys" from the drop-down menu located at
 // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
 //
