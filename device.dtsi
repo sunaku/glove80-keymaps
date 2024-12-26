@@ -134,6 +134,7 @@
 //////////////////////////////////////////////////////////////////////////
 //
 // Per-key RGB indicators for layers & mods -- requires PR30 beta firmware:
+// override "EXPERIMENTAL_RGB_LAYER" to "y" in Advanced Configuration and
 // select "community.pr30.per-key-rgb" from the drop-down menu located at
 // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
 //
