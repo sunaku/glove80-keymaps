@@ -277,15 +277,17 @@ by holding the Magic key and tapping the respective number key for that layer.
 
 | Shortcut  | Layer number | Alpha layout                        |
 | --------- | ------------ | ----------------------------------- |
-| Magic+`=` | 0            | Engrammer (base layer; your choice) |
-| Magic+`1` | 1            | Engram                              |
-| Magic+`2` | 2            | Dvorak                              |
-| Magic+`3` | 3            | ColemakDHm                          |
+| Magic+`=` | 0            | Enthium (base layer; your choice)   |
+| Magic+`1` | 1            | Engrammer                           |
+| Magic+`2` | 2            | Engram                              |
+| Magic+`3` | 3            | Dvorak                              |
 | Magic+`4` | 4            | Colemak                             |
 | Magic+`5` | 5            | QWERTY                              |
-| Magic+`6` | 6            | Norman                              |
-| Magic+`7` | 7            | Workman                             |
-| Magic+`8` | 8            | Halmak                              |
+| Magic+`6` | 6            | ColemakDH                           |
+| Magic+`7` | 7            | Canary                              |
+| Magic+`8` | 8            | Sturdy                              |
+| Magic+`9` | 9            | Graphite                            |
+| Magic+`0` | 10           | Gallium                             |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
@@ -340,12 +342,18 @@ Open the [keymap link above](#keymap) and follow these instructions:
 
 ### Enabling mouse emulation
 
-Before building the firmware (step 5 above), change the version to PR23:
-open the "Settings" tab, choose PR23, and then go back to the "Edit" tab.
+Before building the firmware (step 5 above), change the version to 24.12 or
+newer: open the "Settings" tab, choose PR30, and go back to the "Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
 
-Without this change, the mouse control keys on the Mouse layer won't work.
+Next, in the "Advanced Configuration" tab towards the bottom of the page,
+enable the `HID_POINTING` setting by ticking the "Overriden" checkbox and
+then the "y" radio button.  Now proceed to build and flash your keymap.
+
+Alternatively, you can still use the older PR23 beta firmware for this:
+select "community.pr23.mouse-keys" from the drop-down menu located at
+Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
 
 ### Enabling per-key RGB lighting
 
