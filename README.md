@@ -14,9 +14,9 @@ also provided as "training wheels" to aid your transition to the full glory.
 
 ## Keymap
 
-Version 39 (2024-11-12)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v39
-- Release: https://my.glove80.com/#/layout/user/bfe314cb-8b14-43aa-9b1f-700a36570447
+Version 40 (2024-12-31)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v40
+- Release: https://my.glove80.com/#/layout/user/7923eda6-bef6-4586-88a8-7531b8f0407e
 
 ### Legend
 
