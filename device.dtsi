@@ -84,12 +84,12 @@
 #endif
 
 #if __has_include(<zmk/events/mouse_tick.h>) || ( \
-    defined(MOERGO_FIRMWARE_VERSION_MAJOR) &&     \
-    defined(MOERGO_FIRMWARE_VERSION_MINOR) && (   \
-        MOERGO_FIRMWARE_VERSION_MAJOR == 24 &&    \
-        MOERGO_FIRMWARE_VERSION_MINOR == 12 ||    \
-        MOERGO_FIRMWARE_VERSION_MAJOR >  24       \
-    )                                             \
+  defined(MOERGO_FIRMWARE_VERSION_MAJOR) &&       \
+  defined(MOERGO_FIRMWARE_VERSION_MINOR) && (     \
+    MOERGO_FIRMWARE_VERSION_MAJOR == 24 &&        \
+    MOERGO_FIRMWARE_VERSION_MINOR == 12 ||        \
+    MOERGO_FIRMWARE_VERSION_MAJOR > 24            \
+  )                                               \
 )
   // ==== MOUSE-KEY <section begins> ====
   #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
