@@ -71,11 +71,13 @@
     },
     "Search bar\n\n\n\nSymbol",
     {
-      "c": "#cccccc"
+      "c": "#cccccc",
+      "p": "SPACE"
     },
-    "Shift <small>(sticky)</small>",
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
     {
-      "c": "#e1bee7"
+      "c": "#e1bee7",
+      "p": "CHICKLET"
     },
     "Redo",
     "Undo",
@@ -101,18 +103,21 @@
     "Undo",
     "Redo",
     {
-      "c": "#cccccc"
+      "c": "#cccccc",
+      "p": "SPACE"
     },
-    "Shift <small>(sticky)</small>",
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
     {
-      "c": "#ffcdd2"
+      "c": "#ffcdd2",
+      "p": "CHICKLET"
     },
     "Search bar\n\n\n\nSymbol"
   ],
   [
     "URL bar",
     {
-      "c": "#cccccc"
+      "c": "#cccccc",
+      "p": "SPACE"
     },
     "Win\n\n\n\nWin",
     "Alt\n\n\n\nAlt",
@@ -122,7 +127,8 @@
     },
     "Shift\n\n\n\nShift",
     {
-      "c": "#ffecb3"
+      "c": "#ffecb3",
+      "p": "CHICKLET"
     },
     "Copy",
     {
@@ -217,12 +223,14 @@
     "Alt-Tab\n\n\n\nNumber",
     "Win-Tab",
     {
-      "c": "#ffccbc"
+      "c": "#757575",
+      "t": "#EEEEEE"
     },
-    "Tab\n\n\n\nFunction",
+    "Unlock layer",
     {
       "x": 1,
-      "c": "#bbdefb"
+      "c": "#bbdefb",
+      "t": "#000000"
     },
     "Select none",
     "Extend line",
@@ -239,12 +247,12 @@
   [
     {
       "x": 5,
-      "c": "#D1C4E9",
+      "c": "#ffff8d",
       "p": "SPACE",
       "f": 9,
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
       "c": "#a5d6a7",
       "p": "CHICKLET",
@@ -252,10 +260,9 @@
     },
     "Ctrl-Tab",
     {
-      "c": "#757575",
-      "t": "#EEEEEE"
+      "c": "#ffccbc"
     },
-    "Unlock layer",
+    "Tab\n\n\n\nFunction",
     {
       "x": 1,
       "c": "#bbdefb",

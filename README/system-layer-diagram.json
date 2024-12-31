@@ -55,10 +55,20 @@
       "f": 3
     },
     "^\n6",
-    "&\n7",
-    "*\n8",
-    "(\n9",
-    ")\n0",
+    {
+      "g": false,
+      "p": "SPACE",
+      "a": 7
+    },
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
+    "Ctrl <small>(sticky)</small>\n\n\n\nCtrl",
+    "Alt <small>(sticky)</small>\n\n\n\nAlt",
+    "Win <small>(sticky)</small>\n\n\n\nWin",
+    {
+      "g": true,
+      "p": "CHICKLET",
+      "a": 5
+    },
     "+\n="
   ],
   [
@@ -74,27 +84,25 @@
     "Hue ➖",
     "Hue ➕",
     {
-      "c": "#cccccc",
-      "g": true
+      "c": "#ffecb3"
     },
-    "U",
+    "RGB toggle",
     {
-      "c": "#c5cae9",
-      "g": false
+      "c": "#c5cae9"
     },
-    "Scroll lock",
+    "Pause break",
     {
       "x": 5,
       "c": "#dcedc8"
     },
     "Sat ➕",
     {
-      "c": "#cccccc"
+      "c": "#c5cae9"
     },
-    "Shift\n\n\n\nShift",
-    "Ctrl\n\n\n\nCtrl",
-    "Alt\n\n\n\nAlt",
-    "Win\n\n\n\nWin",
+    "Pause break",
+    "Scroll lock",
+    "Num lock",
+    "Caps lock",
     {
       "c": "#dcedc8"
     },
@@ -102,9 +110,14 @@
   ],
   [
     {
-      "c": "#ffecb3"
+      "c": "#cccccc",
+      "g": true
     },
-    "RGB toggle",
+    "U",
+    {
+      "c": "#ffecb3",
+      "g": false
+    },
     "Effect ➖",
     {
       "c": "#bbdefb"
@@ -119,17 +132,20 @@
     {
       "c": "#c5cae9"
     },
-    "Caps lock",
+    "Print screen",
     {
       "x": 5,
       "c": "#ffccbc"
     },
     "Hue ➕",
     {
-      "c": "#e1bee7",
+      "c": "#c5cae9",
       "n": true
     },
-    "<small>Context</small> menu",
+    "Print screen",
+    {
+      "c": "#e1bee7"
+    },
     "Lock screen",
     "Sleep",
     "Power",
@@ -161,22 +177,22 @@
     {
       "c": "#c5cae9"
     },
-    "Num lock",
+    "<small>Context</small> menu",
     {
       "x": 5,
       "c": "#FFCDD2"
     },
     "Speed ➕",
     {
-      "c": "#ffecb3"
-    },
-    "RGB toggle",
-    {
       "c": "#c5cae9"
     },
-    "Print screen",
-    "Scroll lock",
-    "Pause break",
+    "<small>Context</small> menu",
+    {
+      "c": "#ffecb3"
+    },
+    "Effect ➕",
+    "Effect ➖",
+    "RGB toggle",
     {
       "c": "#FFCDD2"
     },
@@ -212,40 +228,54 @@
     "Page up",
     "Page down",
     {
-      "g": false
+      "c": "#8D6E63",
+      "t": "#FAFAFA",
+      "g": false,
+      "p": "SPACE"
     },
-    "Linux Magic SysRq\n\n\n\nSymbol",
+    "Linux Magic SysRq\n\n\n\nBase Lyr.",
     {
-      "c": "#e1bee7"
+      "c": "#e1bee7",
+      "t": "#000000",
+      "p": "CHICKLET"
     },
     "Lock screen",
     "Sleep",
     "Power",
     {
       "x": 1,
+      "c": "#757575",
+      "t": "#EEEEEE"
+    },
+    "Unlock layer",
+    {
       "c": "#cccccc",
+      "t": "#000000",
       "g": true,
       "fa": [
         9
       ]
     },
-    "&lArr;",
     "&rArr;",
     {
-      "c": "#D1C4E9",
+      "c": "#ffff8d",
       "g": false,
       "p": "SPACE",
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#ffecb3",
+      "c": "#cccccc",
+      "g": true,
       "p": "CHICKLET",
+      "a": 5,
       "f": 3
     },
-    "Effect ➕",
+    "&\n7",
     {
       "c": "#bbdefb",
+      "g": false,
+      "a": 7,
       "f": 3
     },
     "Bright ➕",
@@ -254,14 +284,13 @@
     },
     "Bright ➖",
     {
-      "c": "#ffecb3",
-      "f": 3
-    },
-    "Effect ➖",
-    {
       "c": "#cccccc",
       "g": true,
       "a": 5,
+      "f": 3
+    },
+    ")\n0",
+    {
       "f": 3
     },
     "?\n/"
@@ -269,34 +298,27 @@
   [
     {
       "x": 5,
-      "c": "#ffccbc",
+      "c": "#c5cae9",
       "g": false,
       "a": 7,
-      "f": 3,
-      "n": true
-    },
-    "Print screen",
-    {
-      "c": "#dcedc8",
       "f": 3
     },
-    "<small>Context</small> menu",
+    "Scroll lock",
     {
-      "c": "#ffccbc",
       "f": 3
     },
-    "Pause break",
+    "Num lock",
+    {
+      "f": 3
+    },
+    "Caps lock",
     {
       "x": 1,
-      "c": "#757575",
-      "t": "#EEEEEE",
-      "f": 3
-    },
-    "Unlock layer",
-    {
       "c": "#cccccc",
-      "t": "#000000",
-      "g": true,
+      "g": true
+    },
+    "&lArr;",
+    {
       "f": 3
     },
     "Tab\n\n\n\nMouse",

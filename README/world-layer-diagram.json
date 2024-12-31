@@ -122,12 +122,14 @@
     },
     "L",
     {
-      "g": false
+      "g": false,
+      "p": "SPACE"
     },
-    "LALT <small>(sticky)</small>",
-    "RALT <small>(sticky)</small>\n\n\n\nAltGr",
+    "LALT <small>(sticky)</small>\n\n\n\nAlt",
+    "RALT <small>(sticky)</small>\n\n\n\nRAlt",
     {
-      "g": true
+      "g": true,
+      "p": "CHICKLET"
     },
     "V",
     "Z"
@@ -161,20 +163,18 @@
     },
     ">\n.",
     {
-      "c": "#bbdefb",
       "g": false,
+      "p": "SPACE",
       "a": 7,
       "n": true
     },
-    "Shift <small>(sticky)</small>",
-    {
-      "c": "#cccccc"
-    },
+    "LSFT <small>(sticky)</small>\n\n\n\nShift",
     "LCTL <small>(sticky)</small>\n\n\n\nCtrl",
-    "RCTL <small>(sticky)</small>\n\n\n\nAlt",
-    "RSFT <small>(sticky)</small>\n\n\n\nWin",
+    "RCTL <small>(sticky)</small>\n\n\n\nRCtrl",
+    "RSFT <small>(sticky)</small>\n\n\n\nRShift",
     {
-      "g": true
+      "g": true,
+      "p": "CHICKLET"
     },
     "P"
   ],
@@ -261,11 +261,24 @@
       ]
     },
     "&uArr;",
-    "&dArr;",
     {
-      "x": 1
+      "c": "#757575",
+      "t": "#EEEEEE",
+      "g": false,
+      "f": 3
     },
-    "&lArr;",
+    "Unlock layer",
+    {
+      "x": 1,
+      "f": 3
+    },
+    "Unlock layer",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
     "&rArr;",
     {
       "a": 5,
@@ -273,14 +286,14 @@
     },
     "<\n(",
     {
-      "c": "#D1C4E9",
+      "c": "#ffff8d",
       "g": false,
       "p": "SPACE",
       "a": 7,
       "f": 9,
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
       "c": "#cccccc",
       "g": true,
@@ -306,22 +319,21 @@
     "Back space\n\n\n\nCursor",
     "Delete\n\n\n\nNumber",
     {
-      "c": "#757575",
-      "t": "#EEEEEE",
-      "g": false
+      "fa": [
+        9
+      ]
     },
-    "Unlock layer",
+    "&dArr;",
     {
       "x": 1
     },
-    "Unlock layer",
+    "&lArr;",
     {
-      "c": "#cccccc",
-      "t": "#000000",
-      "g": true
+      "f": 3
     },
     "Tab\n\n\n\nMouse",
     {
+      "f": 3,
       "n": true
     },
     "Space\n\n\n\nSymbol"

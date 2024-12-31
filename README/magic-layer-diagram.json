@@ -55,12 +55,12 @@
     "Go to\n6\n\n\n\n\nlayer",
     "Go to\n7\n\n\n\n\nlayer",
     "Go to\n8\n\n\n\n\nlayer",
+    "Go to\n9\n\n\n\n\nlayer",
+    "Go to\n10\n\n\n\n\nlayer",
     {
       "c": "#cccccc",
       "g": true
     },
-    "(\n9",
-    ")\n0",
     "|\n\\"
   ],
   [
@@ -166,8 +166,7 @@
   [
     {
       "y": -0.9500000000000002,
-      "c": "#BBDEFB",
-      "t": "#EEEEEE",
+      "c": "#ffff8d",
       "p": "SPACE",
       "f": 3,
       "fa": [
@@ -175,10 +174,9 @@
       ],
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
       "c": "#cccccc",
-      "t": "#000000",
       "g": true,
       "p": "CHICKLET",
       "f": 3
@@ -245,21 +243,19 @@
     },
     ">\n)",
     {
-      "c": "#BBDEFB",
-      "t": "#EEEEEE",
+      "c": "#ffff8d",
       "g": false,
       "p": "SPACE",
       "a": 7,
       "f": 3,
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />"
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer"
   ],
   [
     {
       "x": 5,
       "c": "#cccccc",
-      "t": "#000000",
       "p": "CHICKLET",
       "a": 5,
       "f": 3

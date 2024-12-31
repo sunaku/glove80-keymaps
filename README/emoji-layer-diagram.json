@@ -174,20 +174,28 @@
     "👶",
     "🍼",
     {
-      "c": "#D1C4E9",
+      "c": "#ffff8d",
       "p": "SPACE",
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
       "c": "#cccccc",
       "p": "CHICKLET"
     },
-    "🏙\n\n\n\nFunction",
     "🌆",
     "🌃",
     {
-      "x": 1
+      "c": "#757575",
+      "t": "#EEEEEE",
+      "f": 3
+    },
+    "Unlock layer",
+    {
+      "x": 1,
+      "c": "#cccccc",
+      "t": "#000000",
+      "f": 9
     },
     "🧑‍🚀",
     "🚀",
@@ -195,7 +203,7 @@
       "a": 5,
       "f": 5
     },
-    "✨\n🪄\n\n\nSystem",
+    "🪄\n✨\n\n\nSystem",
     {
       "a": 7,
       "f": 9
@@ -209,35 +217,30 @@
   [
     {
       "x": 5,
-      "c": "#bbdefb",
+      "p": "SPACE",
       "f": 3
     },
-    "Shift <small>(sticky)</small>",
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
     {
-      "c": "#cccccc",
-      "g": true,
+      "p": "CHICKLET",
       "f": 9
+    },
+    "🏙\n\n\n\nFunction",
+    {
+      "g": true
     },
     "\n\n\n\nNumber",
     {
-      "c": "#757575",
-      "t": "#EEEEEE",
-      "g": false,
-      "f": 3
-    },
-    "Unlock layer",
-    {
       "x": 1,
-      "c": "#cccccc",
-      "t": "#000000",
+      "g": false,
       "a": 5,
       "f": 5
     },
-    "🙌\n👏",
-    "☝️\n🫵\n\n\nMouse",
+    "👏\n🙌",
+    "🫵\n☝️\n\n\nMouse",
     {
       "n": true
     },
-    "👍\n👎\n\n\nSymbol"
+    "👎\n👍\n\n\nSymbol"
   ]
 ]

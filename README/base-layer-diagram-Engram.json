@@ -5,12 +5,14 @@
   [
     {
       "p": "CHICKLET",
-      "a": 7
+      "a": 7,
+      "f": 7
     },
-    "Home",
-    "End",
+    "&uarr;",
+    "&darr;",
     {
       "a": 5,
+      "f": 3,
       "fa": [
         1,
         1,
@@ -39,44 +41,50 @@
   ],
   [
     {
-      "f": 3
-    },
-    "Page up",
-    {
       "a": 5,
       "f": 4
     },
-    "!\n1",
-    "@\n2",
-    "#\n3",
-    "$\n4",
-    "%\n5",
+    "{\n[",
+    "|\n1",
+    "=\n2",
+    "~\n3",
+    "+\n4",
+    "<\n5",
     {
       "a": 4,
       "w": 5,
       "h": 4,
       "d": true
     },
-    "<center><h2>Base Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>with <a href='https://github.com/sunaku/enthium'>Enthium</a> alpha layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "<center><h2>Engram</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>with <a href='https://github.com/binarybottle/engram'>Arno's Engram 2.0</a> alpha layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
       "a": 5
     },
-    "^\n6",
-    "&\n7",
-    "*\n8",
-    "(\n9",
-    ")\n0",
-    {
-      "a": 7,
-      "f": 7
-    },
-    "&uarr;"
+    ">\n6",
+    "^\n7",
+    "&\n8",
+    "%\n9",
+    "*\n0",
+    "}\n]"
   ],
   [
     {
+      "f": 7,
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "\n@\n\n\n\n\n`",
+    {
+      "a": 7,
       "f": 3
     },
-    "Page down",
     "B",
     "Y",
     "O",
@@ -85,26 +93,22 @@
       "a": 5,
       "f": 4
     },
-    ":\n;",
+    "(\n'",
     {
-      "x": 5,
+      "x": 5
+    },
+    ")\n\"",
+    {
       "a": 7,
       "f": 3
     },
-    "X",
     "L",
     "D",
     "W",
     "V",
-    {
-      "f": 7
-    },
-    "&darr;"
+    "Z"
   ],
   [
-    {
-      "f": 3
-    },
     "Z",
     {
       "c": "#FFCDD2",
@@ -130,15 +134,15 @@
       "a": 5,
       "f": 4
     },
-    "<\n,",
+    ";\n,",
     {
-      "x": 5,
-      "a": 7
+      "x": 5
     },
-    "K",
+    ":\n.",
     {
       "c": "#ffecb3",
       "p": "SPACE",
+      "a": 7,
       "f": 3,
       "n": true
     },
@@ -150,11 +154,11 @@
     {
       "c": "#bbdefb"
     },
-    "N\n\n\n\nAlt",
+    "S\n\n\n\nAlt",
     {
       "c": "#FFCDD2"
     },
-    "S\n\n\n\nWin",
+    "N\n\n\n\nWin",
     {
       "c": "#cccccc",
       "p": "CHICKLET"
@@ -173,32 +177,39 @@
     "(1-shot)\n(sticky)\n\n\nShift\n\nShift",
     {
       "p": "CHICKLET",
-      "f": 5
+      "a": 7,
+      "f": 3
     },
-    "\"\n'",
+    "G",
     {
+      "f": 3
+    },
+    "X",
+    {
+      "f": 3
+    },
+    "J",
+    {
+      "f": 3
+    },
+    "K",
+    {
+      "a": 5,
       "f": 4
     },
     "_\n-",
     {
-      "f": 5
+      "x": 5
     },
-    "+\n=",
+    "!\n?",
     {
-      "f": 4
-    },
-    ">\n.",
-    "?\n/",
-    {
-      "x": 5,
       "a": 7,
       "f": 3
     },
-    "J",
+    "R",
     "M",
-    "G",
-    "P",
     "F",
+    "P",
     {
       "p": "SPACE",
       "a": 5,
@@ -212,7 +223,7 @@
   [
     {
       "y": -0.04999999999999982,
-      "x": 4.925,
+      "x": 4.93,
       "c": "#ffccbc",
       "p": "FLAT",
       "f": 2,
@@ -221,7 +232,7 @@
     },
     "\nAlt+Tab <small>cursor layer</small>",
     {
-      "x": -0.025000000000000355,
+      "x": -0.024999999999999467,
       "c": "#ffecb3",
       "w": 1.025,
       "h": 2.7
@@ -235,7 +246,7 @@
     },
     "\nToggle <small>game layer</small>",
     {
-      "x": 1.9300000000000015,
+      "x": 1.9250000000000007,
       "c": "#ffecb3",
       "w": 1.025,
       "h": 2.7
@@ -262,25 +273,18 @@
     {
       "c": "#cccccc",
       "t": "#000000",
-      "p": "CHICKLET",
-      "a": 5,
-      "f": 5
+      "p": "CHICKLET"
     },
-    "~\n`",
-    {
-      "f": 4
-    },
-    "{\n[",
-    "}\n]",
+    "Home",
+    "Page up",
+    "Page down",
     {
       "c": "#d1c4e9",
       "p": "SPACE"
     },
-    "|\n\\\n\n\nEmoji",
+    "End\n\n\n\nEmoji",
     {
-      "c": "#D1C4E9",
-      "a": 7,
-      "f": 3
+      "c": "#D1C4E9"
     },
     "Escape\n\n\n\nFunction",
     {
@@ -325,26 +329,23 @@
     "Enter\n\n\n\nSystem",
     {
       "c": "#d1c4e9",
-      "f": 3
-    },
-    "R\n\n\n\nWorld",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET",
       "a": 5,
       "f": 4
     },
-    "<\n(",
-    ">\n)",
+    "<\n(\n\n\nWorld",
     {
-      "a": 7,
-      "f": 3
+      "c": "#cccccc",
+      "p": "CHICKLET"
     },
-    "Insert",
+    "$\n#",
+    "\\\n/",
+    ">\n)",
     {
       "c": "#757575",
       "t": "#EEEEEE",
-      "p": "SPACE"
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
     "Magic"
   ],

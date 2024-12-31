@@ -90,25 +90,27 @@ layers_pdf = 'README/all-layer-diagrams.pdf'
 task :pdf => layers_pdf
 
 layers_pdf_sequence = %w[
-  base
-  engrammer
-  lower
-  magic
-  cursor
-  number
-  function
-  emoji
-  symbol
-  mouse
-  system
-  world
-  typing
-  gaming
-  factory
-  template
+  base-layer
+  base-layer-Engrammer
+  base-layer-Engram
+  base-layer-QWERTY
+  base-layer-template
+  lower-layer
+  magic-layer
+  cursor-layer
+  number-layer
+  function-layer
+  emoji-layer
+  symbol-layer
+  mouse-layer
+  system-layer
+  world-layer
+  typing-layer
+  gaming-layer
+  factory-layer
 ]
 
-layer_pngs = Dir["README/{#{layers_pdf_sequence.join(",")}}-layer-diagram.png"]
+layer_pngs = Dir["README/{#{layers_pdf_sequence.join(",")}}-diagram.png"]
 
 layer_pdfs = layer_pngs.map do |png|
   pdf = png.ext('pdf')
