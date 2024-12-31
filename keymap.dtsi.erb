@@ -19,9 +19,9 @@
 <%
   emit_setting_ifndef = lambda do |name, value|
 %>
-    #ifndef <%= name %>
-    #define <%= name %> <%= value %>
-    #endif
+  #ifndef <%= name %>
+  #define <%= name %> <%= value %>
+  #endif
 <%
   end
 %>
@@ -59,33 +59,33 @@
 %>
 #endif
 #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
-    #define _C      LG
-    #define _A_TAB  LGUI
-    #define _G_TAB  LALT
-    #define _REDO   _C(LS(Z))
-    #define _POWER  K_POWER
-    #define _W      LA
-    #define _HOME   _C(LEFT)
-    #define _END    _C(RIGHT)
-    #define _EMOJI  LG(LC(SPACE))
+  #define _C      LG
+  #define _A_TAB  LGUI
+  #define _G_TAB  LALT
+  #define _REDO   _C(LS(Z))
+  #define _POWER  K_POWER
+  #define _W      LA
+  #define _HOME   _C(LEFT)
+  #define _END    _C(RIGHT)
+  #define _EMOJI  LG(LC(SPACE))
 #else
-    #define _C      LC
-    #define _A_TAB  LALT
-    #define _G_TAB  LGUI
-    #define _REDO   _C(Y)
-    #define _POWER  C_POWER
-    #define _W      _C
-    #define _HOME   HOME
-    #define _END    END
-    #define _EMOJI  LG(DOT)
+  #define _C      LC
+  #define _A_TAB  LALT
+  #define _G_TAB  LGUI
+  #define _REDO   _C(Y)
+  #define _POWER  C_POWER
+  #define _W      _C
+  #define _HOME   HOME
+  #define _END    END
+  #define _EMOJI  LG(DOT)
 #endif
 #define _SLEEP      C_SLEEP
 #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
-    #define _LOCK   LG(L)
+  #define _LOCK   LG(L)
 #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
-    #define _LOCK   _C(LC(Q))
+  #define _LOCK   _C(LC(Q))
 #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
-    #define _LOCK   K_LOCK
+  #define _LOCK   K_LOCK
 #endif
 #define _UNDO       _C(Z)
 #define _CUT        _C(X)
@@ -191,1630 +191,1630 @@
 %>
 
 combos {
-    compatible = "zmk,combos";
+  compatible = "zmk,combos";
 
-    //
-    // COMBO_FIRING_DECAY defines how much time you have left (milliseconds)
-    // after pressing the first key in a ZMK combo to finish the whole chord.
-    //
-    <%
-      emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
-    %>
+  //
+  // COMBO_FIRING_DECAY defines how much time you have left (milliseconds)
+  // after pressing the first key in a ZMK combo to finish the whole chord.
+  //
+  <%
+    emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
+  %>
 
-    #ifdef LAYER_Gaming
-    combo_gaming_layer_toggle {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T3 POS_LH_T6>;
-        bindings = <&tog LAYER_Gaming>;
-        layers = <0 LAYER_Gaming>;
-    };
-    #endif
+  #ifdef LAYER_Gaming
+  combo_gaming_layer_toggle {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
+    bindings = <&tog LAYER_Gaming>;
+    layers = <0 LAYER_Gaming>;
+  };
+  #endif
 
-    #ifdef LAYER_Cursor
-    #ifdef _A_TAB
-    combo_alt_tab_switcher {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T4 POS_LH_T1>;
-        bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
-    #endif
+  #ifdef LAYER_Cursor
+  #ifdef _A_TAB
+  combo_alt_tab_switcher {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T4 POS_LH_T1>;
+    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
+  #endif
 
-    combo_ctrl_tab_switcher {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T4 POS_LH_T5>;
-        bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
-    #endif
+  combo_ctrl_tab_switcher {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T4 POS_LH_T5>;
+    bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
+  #endif
 
-    combo_sticky_hyper_right {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_RH_T1 POS_RH_T4>;
-        bindings = <&sk LG(LA(LC(LSHFT)))>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
+  combo_sticky_hyper_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T4>;
+    bindings = <&sk LG(LA(LC(LSHFT)))>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
 
-    combo_sticky_meh_right {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_RH_T4 POS_RH_T5>;
-        bindings = <&sk LA(LC(LSHFT))>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
+  combo_sticky_meh_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T4 POS_RH_T5>;
+    bindings = <&sk LA(LC(LSHFT))>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
 
-    combo_sticky_AltGr_left {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T2 POS_LH_T5>;
-        bindings = <&sk RALT>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
+  combo_sticky_AltGr_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T2 POS_LH_T5>;
+    bindings = <&sk RALT>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
 
-    combo_sticky_AltGr_right {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_RH_T2 POS_RH_T5>;
-        bindings = <&sk RALT>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
+  combo_sticky_AltGr_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T2 POS_RH_T5>;
+    bindings = <&sk RALT>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
 
-    combo_caps_lock {
-        timeout-ms = <COMBO_FIRING_DECAY>;
-        key-positions = <POS_LH_T6 POS_RH_T6>;
-        bindings = <&kp CAPSLOCK>;
-        layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
-    };
+  combo_caps_lock {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T6 POS_RH_T6>;
+    bindings = <&kp CAPSLOCK>;
+    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+  };
 
 };
 
 behaviors {
 
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // Miryoku layers and home row mods (ported from my QMK endgame)
-    // - https://sunaku.github.io/home-row-mods.html#porting-to-zmk
-    // - https://github.com/urob/zmk-config#timeless-homerow-mods
-    //
-    //////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // Miryoku layers and home row mods (ported from my QMK endgame)
+  // - https://sunaku.github.io/home-row-mods.html#porting-to-zmk
+  // - https://github.com/urob/zmk-config#timeless-homerow-mods
+  //
+  //////////////////////////////////////////////////////////////////////////
 
-    //
-    // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
-    // It's meant to help newcomers gradually work their way up to mastery.
-    //
-    // #define DIFFICULTY_LEVEL 1 // novice (500ms)
-    // #define DIFFICULTY_LEVEL 2 // slower (400ms)
-    // #define DIFFICULTY_LEVEL 3 // normal (300ms)
-    // #define DIFFICULTY_LEVEL 4 // faster (200ms)
-    // #define DIFFICULTY_LEVEL 5 // expert (100ms)
-    //
-    // You can disable this setting by omitting it or assigning a `0` zero,
-    // in which case it will default to my personal set of time thresholds.
-    //
-    // #define DIFFICULTY_LEVEL 0 // sunaku (150ms)
-    //
-    // No matter what difficulty level you choose, you can always override
-    // any settings in this keymap at the beginning of this configuration.
-    //
-    #ifdef DIFFICULTY_LEVEL
-        #if DIFFICULTY_LEVEL > 0 && DIFFICULTY_LEVEL < 6
-            #ifndef TAPPING_RESOLUTION
-                #define TAPPING_RESOLUTION ((6 - DIFFICULTY_LEVEL) * 100)
-            #endif
-        #endif
+  //
+  // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
+  // It's meant to help newcomers gradually work their way up to mastery.
+  //
+  // #define DIFFICULTY_LEVEL 1 // novice (500ms)
+  // #define DIFFICULTY_LEVEL 2 // slower (400ms)
+  // #define DIFFICULTY_LEVEL 3 // normal (300ms)
+  // #define DIFFICULTY_LEVEL 4 // faster (200ms)
+  // #define DIFFICULTY_LEVEL 5 // expert (100ms)
+  //
+  // You can disable this setting by omitting it or assigning a `0` zero,
+  // in which case it will default to my personal set of time thresholds.
+  //
+  // #define DIFFICULTY_LEVEL 0 // sunaku (150ms)
+  //
+  // No matter what difficulty level you choose, you can always override
+  // any settings in this keymap at the beginning of this configuration.
+  //
+  #ifdef DIFFICULTY_LEVEL
+    #if DIFFICULTY_LEVEL > 0 && DIFFICULTY_LEVEL < 6
+      #ifndef TAPPING_RESOLUTION
+        #define TAPPING_RESOLUTION ((6 - DIFFICULTY_LEVEL) * 100)
+      #endif
     #endif
+  #endif
 
-    //
-    // TAPPING_RESOLUTION specifies the maximum speed at which the keyboard
-    // confuses your taps as being holds when you type on home row mod keys.
-    // When you lower this value, the same confusion should still occur; but
-    // when you raise this value, you should be able to type normally again.
-    //
-    <%
-      TAPPING_RESOLUTION = 150 # my personal threshold on Kailh Choc v1 Reds
-      emit_setting_ifndef.(:TAPPING_RESOLUTION, TAPPING_RESOLUTION)
+  //
+  // TAPPING_RESOLUTION specifies the maximum speed at which the keyboard
+  // confuses your taps as being holds when you type on home row mod keys.
+  // When you lower this value, the same confusion should still occur; but
+  // when you raise this value, you should be able to type normally again.
+  //
+  <%
+    TAPPING_RESOLUTION = 150 # my personal threshold on Kailh Choc v1 Reds
+    emit_setting_ifndef.(:TAPPING_RESOLUTION, TAPPING_RESOLUTION)
 
-      resolve_tap_timing = lambda do |milliseconds|
-        delta = milliseconds - TAPPING_RESOLUTION
-        if delta == 0
-          "TAPPING_RESOLUTION"
-        else
-          "(TAPPING_RESOLUTION #{delta > 0 ? "+ #{delta}" : "- #{-delta}"})"
-        end
+    resolve_tap_timing = lambda do |milliseconds|
+      delta = milliseconds - TAPPING_RESOLUTION
+      if delta == 0
+        "TAPPING_RESOLUTION"
+      else
+        "(TAPPING_RESOLUTION #{delta > 0 ? "+ #{delta}" : "- #{-delta}"})"
       end
-    %>
+    end
+  %>
 
-    //
-    // ENFORCE_BILATERAL cancels out single-handed home row mods activation by
-    // releasing any currently pressed mods and replacing them with plain taps.
-    //
-    // NOTE: You may still encounter "flashing mods" where an operating system
-    // action is triggered by the release of mods, such as LGUI which launches
-    // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
-    //
-    //#define ENFORCE_BILATERAL
+  //
+  // ENFORCE_BILATERAL cancels out single-handed home row mods activation by
+  // releasing any currently pressed mods and replacing them with plain taps.
+  //
+  // NOTE: You may still encounter "flashing mods" where an operating system
+  // action is triggered by the release of mods, such as LGUI which launches
+  // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
+  //
+  //#define ENFORCE_BILATERAL
 
-    //
-    // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
-    // without any other key having been tapped while the shift was held down.
-    // For example, suppose you hold a home row shift key and, before pressing
-    // another key, you suddenly decide that you don't want the shift anymore:
-    //
-    // <1> If this setting is enabled, the underlying tap behavior is triggered
-    //     to type a single character when you release that home row shift key.
-    //
-    // <2> Otherwise, nothing happens when you release that home row shift key.
-    //
-    // This requires the "hold-while-undecided" ZMK feature in a beta firmware:
-    // please select "v24.08-beta1" or newer from the drop-down menu located at
-    // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
-    //
-    // CAUTION: This can interfere with mod-click mouse usage where you hold a
-    // home row shift key and perform mouse actions (move, click, drag & drop):
-    // when you release that home row shift key, its underlying character would
-    // be typed, potentially triggering an unexpected action on your selection!
-    // To prevent the underlying character from being typed, press another key
-    // (such as a dedicated shift key, a neighboring home row mod key, or even
-    // a layer access key) before you release the original home row shift key.
-    //
-    // NOTE: You may potentially encounter "flashing mods" where an application
-    // or operating system action is triggered by a standalone tap of a shift,
-    // but this is unlikely as people regularly tap shift without consequence.
-    //
-    //#define SHIFT_FORGIVENESS
+  //
+  // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
+  // without any other key having been tapped while the shift was held down.
+  // For example, suppose you hold a home row shift key and, before pressing
+  // another key, you suddenly decide that you don't want the shift anymore:
+  //
+  // <1> If this setting is enabled, the underlying tap behavior is triggered
+  //     to type a single character when you release that home row shift key.
+  //
+  // <2> Otherwise, nothing happens when you release that home row shift key.
+  //
+  // This requires the "hold-while-undecided" ZMK feature in a beta firmware:
+  // please select "v24.08-beta1" or newer from the drop-down menu located at
+  // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
+  //
+  // CAUTION: This can interfere with mod-click mouse usage where you hold a
+  // home row shift key and perform mouse actions (move, click, drag & drop):
+  // when you release that home row shift key, its underlying character would
+  // be typed, potentially triggering an unexpected action on your selection!
+  // To prevent the underlying character from being typed, press another key
+  // (such as a dedicated shift key, a neighboring home row mod key, or even
+  // a layer access key) before you release the original home row shift key.
+  //
+  // NOTE: You may potentially encounter "flashing mods" where an application
+  // or operating system action is triggered by a standalone tap of a shift,
+  // but this is unlikely as people regularly tap shift without consequence.
+  //
+  //#define SHIFT_FORGIVENESS
 
-    //
-    // THUMB_FORGIVENESS taps when a thumb layer access key is merely held and
-    // released, without any other key having been tapped while thumb was held.
-    // For example, suppose you hold the cursor layer key and, before pressing
-    // another key, you suddenly decide that you don't want the layer anymore:
-    //
-    // <1> If this setting is enabled, the underlying tap behavior is triggered
-    //     to type a single character when you release that layer access key.
-    //
-    // <2> Otherwise, nothing happens when you release that layer access key.
-    //
-    // NOTE: This setting interferes with (and effectively disables) per-key
-    // RGB indicators (PR30) for layers accessed via thumb layer access keys.
-    //
-    //#define THUMB_FORGIVENESS
+  //
+  // THUMB_FORGIVENESS taps when a thumb layer access key is merely held and
+  // released, without any other key having been tapped while thumb was held.
+  // For example, suppose you hold the cursor layer key and, before pressing
+  // another key, you suddenly decide that you don't want the layer anymore:
+  //
+  // <1> If this setting is enabled, the underlying tap behavior is triggered
+  //     to type a single character when you release that layer access key.
+  //
+  // <2> Otherwise, nothing happens when you release that layer access key.
+  //
+  // NOTE: This setting interferes with (and effectively disables) per-key
+  // RGB indicators (PR30) for layers accessed via thumb layer access keys.
+  //
+  //#define THUMB_FORGIVENESS
 
-    //
-    // SPACE_FORGIVENESS taps when the symbol layer access key is merely held
-    // and released, without any symbol been tapped while the access was held.
-    // For example, suppose you hold the symbol layer key and, before pressing
-    // another key, you suddenly decide that you don't want the layer anymore:
-    //
-    // <1> If this setting is enabled, the underlying tap behavior is triggered
-    //     to type a single character when you release that layer access key.
-    //
-    // <2> Otherwise, nothing happens when you release that layer access key.
-    //
-    // NOTE: This setting interferes with (and effectively disables) per-key
-    // RGB indicators (PR30) for layers accessed via thumb layer access keys.
-    //
-    //#define SPACE_FORGIVENESS
+  //
+  // SPACE_FORGIVENESS taps when the symbol layer access key is merely held
+  // and released, without any symbol been tapped while the access was held.
+  // For example, suppose you hold the symbol layer key and, before pressing
+  // another key, you suddenly decide that you don't want the layer anymore:
+  //
+  // <1> If this setting is enabled, the underlying tap behavior is triggered
+  //     to type a single character when you release that layer access key.
+  //
+  // <2> Otherwise, nothing happens when you release that layer access key.
+  //
+  // NOTE: This setting interferes with (and effectively disables) per-key
+  // RGB indicators (PR30) for layers accessed via thumb layer access keys.
+  //
+  //#define SPACE_FORGIVENESS
 
-    //
-    // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
-    // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
-    // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped,
-    // unless MACOS_USE_GACS is also defined to suppress that Win & Ctrl swap.
-    //
-    #ifndef PINKY_FINGER_MOD
-      #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %> && !defined(MACOS_USE_GACS)
-        #define PINKY_FINGER_MOD LCTL
-      #else
-        #define PINKY_FINGER_MOD LGUI
-      #endif
+  //
+  // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
+  // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
+  // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped,
+  // unless MACOS_USE_GACS is also defined to suppress that Win & Ctrl swap.
+  //
+  #ifndef PINKY_FINGER_MOD
+    #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %> && !defined(MACOS_USE_GACS)
+      #define PINKY_FINGER_MOD LCTL
+    #else
+      #define PINKY_FINGER_MOD LGUI
     #endif
-    <%
-      emit_setting_ifndef.(:RINGY_FINGER_MOD, :LALT)
-    %>
-    #ifndef MIDDY_FINGER_MOD
-      #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %> && !defined(MACOS_USE_GACS)
-        #define MIDDY_FINGER_MOD LGUI
-      #else
-        #define MIDDY_FINGER_MOD LCTL
-      #endif
+  #endif
+  <%
+    emit_setting_ifndef.(:RINGY_FINGER_MOD, :LALT)
+  %>
+  #ifndef MIDDY_FINGER_MOD
+    #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %> && !defined(MACOS_USE_GACS)
+      #define MIDDY_FINGER_MOD LGUI
+    #else
+      #define MIDDY_FINGER_MOD LCTL
     #endif
-    <%
-      emit_setting_ifndef.(:INDEX_FINGER_MOD, :LSFT)
-    %>
-    //
-    // The following settings let you configure mods individually, per finger:
-    //
-    <%
-      emit_setting_ifndef.(:LEFT_PINKY_MOD,  :PINKY_FINGER_MOD)
-      emit_setting_ifndef.(:RIGHT_PINKY_MOD, :PINKY_FINGER_MOD)
-      emit_setting_ifndef.(:LEFT_RINGY_MOD,  :RINGY_FINGER_MOD)
-      emit_setting_ifndef.(:RIGHT_RINGY_MOD, :RINGY_FINGER_MOD)
-      emit_setting_ifndef.(:LEFT_MIDDY_MOD,  :MIDDY_FINGER_MOD)
-      emit_setting_ifndef.(:RIGHT_MIDDY_MOD, :MIDDY_FINGER_MOD)
-      emit_setting_ifndef.(:LEFT_INDEX_MOD,  :INDEX_FINGER_MOD)
-      emit_setting_ifndef.(:RIGHT_INDEX_MOD, :INDEX_FINGER_MOD)
-    %>
+  #endif
+  <%
+    emit_setting_ifndef.(:INDEX_FINGER_MOD, :LSFT)
+  %>
+  //
+  // The following settings let you configure mods individually, per finger:
+  //
+  <%
+    emit_setting_ifndef.(:LEFT_PINKY_MOD,  :PINKY_FINGER_MOD)
+    emit_setting_ifndef.(:RIGHT_PINKY_MOD, :PINKY_FINGER_MOD)
+    emit_setting_ifndef.(:LEFT_RINGY_MOD,  :RINGY_FINGER_MOD)
+    emit_setting_ifndef.(:RIGHT_RINGY_MOD, :RINGY_FINGER_MOD)
+    emit_setting_ifndef.(:LEFT_MIDDY_MOD,  :MIDDY_FINGER_MOD)
+    emit_setting_ifndef.(:RIGHT_MIDDY_MOD, :MIDDY_FINGER_MOD)
+    emit_setting_ifndef.(:LEFT_INDEX_MOD,  :INDEX_FINGER_MOD)
+    emit_setting_ifndef.(:RIGHT_INDEX_MOD, :INDEX_FINGER_MOD)
+  %>
 
-    //
-    // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for the pinky, ring, and middle fingers (which are assigned to Super,
-    // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
-    //
-    <%
-      emit_setting_ifndef.(:HOMEY_HOLDING_TYPE, '"tap-preferred"')
-    %>
+  //
+  // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+  // for the pinky, ring, and middle fingers (which are assigned to Super,
+  // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
+  //
+  <%
+    emit_setting_ifndef.(:HOMEY_HOLDING_TYPE, '"tap-preferred"')
+  %>
 
-    //
-    // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // home row mod keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
-    //
-    <%
-      emit_setting_ifndef.(:HOMEY_HOLDING_TIME, resolve_tap_timing.(240))
+  //
+  // HOMEY_HOLDING_TIME defines how long you need to hold (milliseconds)
+  // home row mod keys in order to send their modifiers to the computer
+  // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
+  //
+  <%
+    emit_setting_ifndef.(:HOMEY_HOLDING_TIME, resolve_tap_timing.(240))
 
-      INDEX_HOLDING_TIME = TAPPING_RESOLUTION + 20 # 170ms
-      MIDDY_HOLDING_TIME = INDEX_HOLDING_TIME + 40 # 210ms
-      RINGY_HOLDING_TIME = MIDDY_HOLDING_TIME + 30 # 240ms
-      PINKY_HOLDING_TIME = RINGY_HOLDING_TIME + 20 # 260ms
+    INDEX_HOLDING_TIME = TAPPING_RESOLUTION + 20 # 170ms
+    MIDDY_HOLDING_TIME = INDEX_HOLDING_TIME + 40 # 210ms
+    RINGY_HOLDING_TIME = MIDDY_HOLDING_TIME + 30 # 240ms
+    PINKY_HOLDING_TIME = RINGY_HOLDING_TIME + 20 # 260ms
 
-      emit_setting_ifndef.(:INDEX_HOLDING_TIME, resolve_tap_timing.(INDEX_HOLDING_TIME))
-      emit_setting_ifndef.(:MIDDY_HOLDING_TIME, resolve_tap_timing.(MIDDY_HOLDING_TIME))
-      emit_setting_ifndef.(:RINGY_HOLDING_TIME, resolve_tap_timing.(RINGY_HOLDING_TIME))
-      emit_setting_ifndef.(:PINKY_HOLDING_TIME, resolve_tap_timing.(PINKY_HOLDING_TIME))
-    %>
+    emit_setting_ifndef.(:INDEX_HOLDING_TIME, resolve_tap_timing.(INDEX_HOLDING_TIME))
+    emit_setting_ifndef.(:MIDDY_HOLDING_TIME, resolve_tap_timing.(MIDDY_HOLDING_TIME))
+    emit_setting_ifndef.(:RINGY_HOLDING_TIME, resolve_tap_timing.(RINGY_HOLDING_TIME))
+    emit_setting_ifndef.(:PINKY_HOLDING_TIME, resolve_tap_timing.(PINKY_HOLDING_TIME))
+  %>
 
-    //
-    // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
-    // after typing before you can use home row mods again.  It prevents
-    // unintended activation of home row mods when you're actively typing.
-    //
-    <%
-      emit_setting_ifndef.(:HOMEY_STREAK_DECAY, resolve_tap_timing.(150))
-    %>
+  //
+  // HOMEY_STREAK_DECAY defines how long you need to wait (milliseconds)
+  // after typing before you can use home row mods again.  It prevents
+  // unintended activation of home row mods when you're actively typing.
+  //
+  <%
+    emit_setting_ifndef.(:HOMEY_STREAK_DECAY, resolve_tap_timing.(150))
+  %>
 
-    //
-    // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    <%
-      emit_setting_ifndef.(:HOMEY_REPEAT_DECAY, resolve_tap_timing.(300))
-    %> // "tap then hold" for key auto-repeat
+  //
+  // HOMEY_REPEAT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a key to hold it again in order to make it auto-repeat.
+  //
+  <%
+    emit_setting_ifndef.(:HOMEY_REPEAT_DECAY, resolve_tap_timing.(300))
+  %> // "tap then hold" for key auto-repeat
 
-    //
-    // CHORD_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for chorded home row mods (secondary keypresses in multi-mod chords).
-    //
-    <%
-      emit_setting_ifndef.(:CHORD_HOLDING_TYPE, :HOMEY_HOLDING_TYPE)
-    %>
+  //
+  // CHORD_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+  // for chorded home row mods (secondary keypresses in multi-mod chords).
+  //
+  <%
+    emit_setting_ifndef.(:CHORD_HOLDING_TYPE, :HOMEY_HOLDING_TYPE)
+  %>
 
-    //
-    // CHORD_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // home row mod keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
-    // This is specifically for secondary keypresses in multi-mod chords.
-    //
-    <%
-      emit_setting_ifndef.(:CHORD_HOLDING_TIME, resolve_tap_timing.(150))
-    %>
+  //
+  // CHORD_HOLDING_TIME defines how long you need to hold (milliseconds)
+  // home row mod keys in order to send their modifiers to the computer
+  // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
+  // This is specifically for secondary keypresses in multi-mod chords.
+  //
+  <%
+    emit_setting_ifndef.(:CHORD_HOLDING_TIME, resolve_tap_timing.(150))
+  %>
 
-    //
-    // CHORD_STREAK_DECAY defines how long you need to wait (milliseconds)
-    // after typing before you can use home row mods again.  It prevents
-    // unintended activation of home row mods when you're actively typing
-    // This is specifically for secondary keypresses in multi-mod chords.
-    //
-    <%
-      emit_setting_ifndef.(:CHORD_STREAK_DECAY, :HOMEY_STREAK_DECAY)
-    %>
+  //
+  // CHORD_STREAK_DECAY defines how long you need to wait (milliseconds)
+  // after typing before you can use home row mods again.  It prevents
+  // unintended activation of home row mods when you're actively typing
+  // This is specifically for secondary keypresses in multi-mod chords.
+  //
+  <%
+    emit_setting_ifndef.(:CHORD_STREAK_DECAY, :HOMEY_STREAK_DECAY)
+  %>
 
-    //
-    // CHORD_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    // This is specifically for secondary keypresses in multi-mod chords.
-    //
-    <%
-      emit_setting_ifndef.(:CHORD_REPEAT_DECAY, :HOMEY_REPEAT_DECAY)
-    %>
+  //
+  // CHORD_REPEAT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a key to hold it again in order to make it auto-repeat.
+  // This is specifically for secondary keypresses in multi-mod chords.
+  //
+  <%
+    emit_setting_ifndef.(:CHORD_REPEAT_DECAY, :HOMEY_REPEAT_DECAY)
+  %>
 
-    //
-    // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for index fingers (which Miryoku assigns to Shift) on home row keys.
-    //
-    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
-    // allows faster activation of the Shift modifier (without having to wait
-    // for the modified key to be released as the "balanced" flavor requires).
-    //
-    <%
-      emit_setting_ifndef.(:INDEX_HOLDING_TYPE, '"tap-preferred"')
-    %>
+  //
+  // INDEX_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+  // for index fingers (which Miryoku assigns to Shift) on home row keys.
+  //
+  // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
+  // allows faster activation of the Shift modifier (without having to wait
+  // for the modified key to be released as the "balanced" flavor requires).
+  //
+  <%
+    emit_setting_ifndef.(:INDEX_HOLDING_TYPE, '"tap-preferred"')
+  %>
 
-    //
-    // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
-    // after typing before you can use home row mods again.  It prevents
-    // unintended activation of home row mods when you're actively typing.
-    //
-    <%
-      emit_setting_ifndef.(:INDEX_STREAK_DECAY, resolve_tap_timing.(100))
-    %>
+  //
+  // INDEX_STREAK_DECAY defines how long you need to wait (milliseconds)
+  // after typing before you can use home row mods again.  It prevents
+  // unintended activation of home row mods when you're actively typing.
+  //
+  <%
+    emit_setting_ifndef.(:INDEX_STREAK_DECAY, resolve_tap_timing.(100))
+  %>
 
-    //
-    // INDEX_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    <%
-      emit_setting_ifndef.(:INDEX_REPEAT_DECAY, resolve_tap_timing.(300))
-    %> // "tap then hold" for key auto-repeat
+  //
+  // INDEX_REPEAT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a key to hold it again in order to make it auto-repeat.
+  //
+  <%
+    emit_setting_ifndef.(:INDEX_REPEAT_DECAY, resolve_tap_timing.(300))
+  %> // "tap then hold" for key auto-repeat
 
-    //
-    // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for index fingers (which Miryoku assigns to Shift) on home row keys.
-    //
-    // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
-    // allows faster activation of the Shift modifier (without having to wait
-    // for the modified key to be released as the "balanced" flavor requires).
-    //
-    <%
-      emit_setting_ifndef.(:PLAIN_HOLDING_TYPE, :INDEX_HOLDING_TYPE)
-    %>
+  //
+  // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+  // for index fingers (which Miryoku assigns to Shift) on home row keys.
+  //
+  // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
+  // allows faster activation of the Shift modifier (without having to wait
+  // for the modified key to be released as the "balanced" flavor requires).
+  //
+  <%
+    emit_setting_ifndef.(:PLAIN_HOLDING_TYPE, :INDEX_HOLDING_TYPE)
+  %>
 
-    //
-    // PLAIN_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // index finger keys in order to send their modifiers to the computer
-    // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
-    //
-    <%
-      emit_setting_ifndef.(:PLAIN_HOLDING_TIME, resolve_tap_timing.(200))
-    %>
+  //
+  // PLAIN_HOLDING_TIME defines how long you need to hold (milliseconds)
+  // index finger keys in order to send their modifiers to the computer
+  // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
+  //
+  <%
+    emit_setting_ifndef.(:PLAIN_HOLDING_TIME, resolve_tap_timing.(200))
+  %>
 
-    //
-    // PLAIN_STREAK_DECAY defines how long you need to wait (milliseconds)
-    // after typing before you can use home row mods again.  It prevents
-    // unintended activation of home row mods when you're actively typing.
-    //
-    <%
-      emit_setting_ifndef.(:PLAIN_STREAK_DECAY, :HOMEY_STREAK_DECAY)
-    %>
+  //
+  // PLAIN_STREAK_DECAY defines how long you need to wait (milliseconds)
+  // after typing before you can use home row mods again.  It prevents
+  // unintended activation of home row mods when you're actively typing.
+  //
+  <%
+    emit_setting_ifndef.(:PLAIN_STREAK_DECAY, :HOMEY_STREAK_DECAY)
+  %>
 
-    //
-    // PLAIN_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    <%
-      emit_setting_ifndef.(:PLAIN_REPEAT_DECAY, resolve_tap_timing.(300))
-    %> // "tap then hold" for key auto-repeat
+  //
+  // PLAIN_REPEAT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a key to hold it again in order to make it auto-repeat.
+  //
+  <%
+    emit_setting_ifndef.(:PLAIN_REPEAT_DECAY, resolve_tap_timing.(300))
+  %> // "tap then hold" for key auto-repeat
 
-    //
-    // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for the thumbs (which are assigned to 6 layers in the Miryoku system).
-    //
-    // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
-    // activation for the symbol layer (if the tapped symbol key is released
-    // while the thumb layer key is still held down) for quicker programming.
-    //
-    <%
-      emit_setting_ifndef.(:THUMB_HOLDING_TYPE, '"balanced"')
-    %>
+  //
+  // THUMB_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+  // for the thumbs (which are assigned to 6 layers in the Miryoku system).
+  //
+  // NOTE: The "balanced" flavor of ZMK hold-tap provides instant modifier
+  // activation for the symbol layer (if the tapped symbol key is released
+  // while the thumb layer key is still held down) for quicker programming.
+  //
+  <%
+    emit_setting_ifndef.(:THUMB_HOLDING_TYPE, '"balanced"')
+  %>
 
-    //
-    // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // a thumb key to activate a layer.  Shorter holds are treated as taps.
-    //
-    <%
-      emit_setting_ifndef.(:THUMB_HOLDING_TIME, resolve_tap_timing.(200))
-    %>
+  //
+  // THUMB_HOLDING_TIME defines how long you need to hold (milliseconds)
+  // a thumb key to activate a layer.  Shorter holds are treated as taps.
+  //
+  <%
+    emit_setting_ifndef.(:THUMB_HOLDING_TIME, resolve_tap_timing.(200))
+  %>
 
-    //
-    // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    <%
-      emit_setting_ifndef.(:THUMB_REPEAT_DECAY, resolve_tap_timing.(300))
-    %> // "tap then hold" for key auto-repeat
+  //
+  // THUMB_REPEAT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a key to hold it again in order to make it auto-repeat.
+  //
+  <%
+    emit_setting_ifndef.(:THUMB_REPEAT_DECAY, resolve_tap_timing.(300))
+  %> // "tap then hold" for key auto-repeat
 
-    //
-    // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-    // for spacebar (assigned to the right thumb's home position by default).
-    //
-    <%
-      emit_setting_ifndef.(:SPACE_HOLDING_TYPE, :THUMB_HOLDING_TYPE)
-    %>
+  //
+  // SPACE_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
+  // for spacebar (assigned to the right thumb's home position by default).
+  //
+  <%
+    emit_setting_ifndef.(:SPACE_HOLDING_TYPE, :THUMB_HOLDING_TYPE)
+  %>
 
-    //
-    // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // the space thumb key to activate.  Shorter holds are treated as taps.
-    //
-    <%
-      emit_setting_ifndef.(:SPACE_HOLDING_TIME, resolve_tap_timing.(170))
-    %>
+  //
+  // SPACE_HOLDING_TIME defines how long you need to hold (milliseconds)
+  // the space thumb key to activate.  Shorter holds are treated as taps.
+  //
+  <%
+    emit_setting_ifndef.(:SPACE_HOLDING_TIME, resolve_tap_timing.(170))
+  %>
 
-    //
-    // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a key to hold it again in order to make it auto-repeat.
-    //
-    <%
-      emit_setting_ifndef.(:SPACE_REPEAT_DECAY, resolve_tap_timing.(150))
-    %>
+  //
+  // SPACE_REPEAT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a key to hold it again in order to make it auto-repeat.
+  //
+  <%
+    emit_setting_ifndef.(:SPACE_REPEAT_DECAY, resolve_tap_timing.(150))
+  %>
 
-    //
-    // Glove80 key positions index for positional hold-tap
-    // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
-    // - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
-    //
-    // |------------------------|------------------------|
-    // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
-    // |                        |                        |
-    // |  0  1  2  3  4         |          5  6  7  8  9 |
-    // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
-    // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
-    // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
-    // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
-    // | 64 65 66 67 68         |         75 76 77 78 79 |
-    // |                69 52   |   57 74                |
-    // |                 70 53  |  56 73                 |
-    // |                  71 54 | 55 72                  |
-    // |------------------------|------------------------|
-    //
-    <%
-      HANDS = %w[ left right ]
-      FINGERS = %w[ pinky ringy middy index ]
-      PAIRED_HANDS = HANDS.cycle.each_cons(2).take(2).to_h
-    %>
-    #define LEFT_HAND_KEYS      \
-          0  1  2  3  4         \
-         10 11 12 13 14 15      \
-         22 23 24 25 26 27      \
-         34 35 36 37 38 39      \
-         46 47 48 49 50 51      \
+  //
+  // Glove80 key positions index for positional hold-tap
+  // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
+  // - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
+  //
+  // |------------------------|------------------------|
+  // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
+  // |                        |                        |
+  // |  0  1  2  3  4         |          5  6  7  8  9 |
+  // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
+  // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
+  // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
+  // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
+  // | 64 65 66 67 68         |         75 76 77 78 79 |
+  // |                69 52   |   57 74                |
+  // |                 70 53  |  56 73                 |
+  // |                  71 54 | 55 72                  |
+  // |------------------------|------------------------|
+  //
+  <%
+    HANDS = %w[ left right ]
+    FINGERS = %w[ pinky ringy middy index ]
+    PAIRED_HANDS = HANDS.cycle.each_cons(2).take(2).to_h
+  %>
+  #define LEFT_HAND_KEYS      \
+          0  1  2  3  4       \
+         10 11 12 13 14 15    \
+         22 23 24 25 26 27    \
+         34 35 36 37 38 39    \
+         46 47 48 49 50 51    \
          64 65 66 67 68
-    #define RIGHT_HAND_KEYS     \
+  #define RIGHT_HAND_KEYS     \
                                            5  6  7  8  9 \
                                        16 17 18 19 20 21 \
                                        28 29 30 31 32 33 \
                                        40 41 42 43 44 45 \
                                        58 59 60 61 62 63 \
                                           75 76 77 78 79
-    #define THUMB_KEYS          \
+  #define THUMB_KEYS          \
                         69 52       57 74                \
                          70 53     56 73                 \
                           71 54   55 72
 
-    #define LEFT_PINKY_KEY  KEY_LH_C5R4
-    #define LEFT_RINGY_KEY  KEY_LH_C4R4
-    #define LEFT_MIDDY_KEY  KEY_LH_C3R4
-    #define LEFT_INDEX_KEY  KEY_LH_C2R4
+  #define LEFT_PINKY_KEY  KEY_LH_C5R4
+  #define LEFT_RINGY_KEY  KEY_LH_C4R4
+  #define LEFT_MIDDY_KEY  KEY_LH_C3R4
+  #define LEFT_INDEX_KEY  KEY_LH_C2R4
 
-    #define RIGHT_PINKY_KEY KEY_RH_C5R4
-    #define RIGHT_RINGY_KEY KEY_RH_C4R4
-    #define RIGHT_MIDDY_KEY KEY_RH_C3R4
-    #define RIGHT_INDEX_KEY KEY_RH_C2R4
+  #define RIGHT_PINKY_KEY KEY_RH_C5R4
+  #define RIGHT_RINGY_KEY KEY_RH_C4R4
+  #define RIGHT_MIDDY_KEY KEY_RH_C3R4
+  #define RIGHT_INDEX_KEY KEY_RH_C2R4
 
-    //
-    // Home row mods with bilateral combinations support
-    //
-    <%
-      HOME_ROW_MOD_SETTINGS = %w[
-        HOLDING_TYPE
-        HOLDING_TIME
-        STREAK_DECAY
-        REPEAT_DECAY
-      ]
+  //
+  // Home row mods with bilateral combinations support
+  //
+  <%
+    HOME_ROW_MOD_SETTINGS = %w[
+      HOLDING_TYPE
+      HOLDING_TIME
+      STREAK_DECAY
+      REPEAT_DECAY
+    ]
 
-      def snake_case(*components)
-        components.join("_")
-      end
+    def snake_case(*components)
+      components.join("_")
+    end
 
-      def camel_case(*components)
-        components.map(&:capitalize).join
-      end
+    def camel_case(*components)
+      components.map(&:capitalize).join
+    end
 
-      def format_constant(*components)
-        snake_case(*components).upcase
-      end
+    def format_constant(*components)
+      snake_case(*components).upcase
+    end
 
-      HOME_ROW_MOD_INSTANCES =
-        FINGERS.flat_map do |finger|
-          HANDS.map do |hand|
-            [hand, finger]
-          end
-        end
-
-      FINGERS.each do |finger|
-        HOME_ROW_MOD_SETTINGS.each do |suffix|
-          finger_setting = format_constant(finger, suffix)
-          finger_chord_setting = format_constant(finger, :chord, suffix)
-
-          emit_setting_ifndef.(finger_setting, "HOMEY_#{suffix}")
-          emit_setting_ifndef.(finger_chord_setting, "CHORD_#{suffix}")
-
-          HANDS.each do |hand|
-            hand_finger_chord_setting = format_constant(hand, finger, :chord, suffix)
-            emit_setting_ifndef.(hand_finger_chord_setting, finger_chord_setting)
-          end
+    HOME_ROW_MOD_INSTANCES =
+      FINGERS.flat_map do |finger|
+        HANDS.map do |hand|
+          [hand, finger]
         end
       end
 
-      emit_home_row_mod = lambda do |hand, finger, chord|
-        source = snake_case(hand, finger) # without chord
+    FINGERS.each do |finger|
+      HOME_ROW_MOD_SETTINGS.each do |suffix|
+        finger_setting = format_constant(finger, suffix)
+        finger_chord_setting = format_constant(finger, :chord, suffix)
 
-        target_components = [hand, finger, chord].compact
-        target_CamelCase = camel_case(*target_components)
-        target = snake_case(*target_components)
+        emit_setting_ifndef.(finger_setting, "HOMEY_#{suffix}")
+        emit_setting_ifndef.(finger_chord_setting, "CHORD_#{suffix}")
 
-        HOME_ROW_MOD_SETTINGS.each do |suffix|
-          setting = format_constant(target, suffix)
-
-          inherit_components =
-            if chord
-              [source, :chord, suffix]
-            else
-              [finger, suffix]
-            end
-
-          inherit = format_constant(*inherit_components)
-          emit_setting_ifndef.(setting, inherit)
+        HANDS.each do |hand|
+          hand_finger_chord_setting = format_constant(hand, finger, :chord, suffix)
+          emit_setting_ifndef.(hand_finger_chord_setting, finger_chord_setting)
         end
+      end
+    end
 
-        for target_variant in [nil, :_bilateral] do
-    %>
-    <%= target %><%= target_variant %>: homey_<%= target %><%= target_variant %> {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = <%= source.upcase %>_HOLDING_TYPE;
-        hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <<%= source.upcase %>_HOLDING_TIME>;
-        quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
-        require-prior-idle-ms = <<%= source.upcase %>_STREAK_DECAY>;
-        #binding-cells = <2>;
-        <%
-          if target_variant
-            if chord
-        %>
-        bindings = <&kp>, <&<%= source %>_tap>;
-        <%
-            else
-        %>
-        bindings = <&<%= target %>_hold>, <&kp>;
-        <%
-            end
+    emit_home_row_mod = lambda do |hand, finger, chord|
+      source = snake_case(hand, finger) # without chord
+
+      target_components = [hand, finger, chord].compact
+      target_CamelCase = camel_case(*target_components)
+      target = snake_case(*target_components)
+
+      HOME_ROW_MOD_SETTINGS.each do |suffix|
+        setting = format_constant(target, suffix)
+
+        inherit_components =
+          if chord
+            [source, :chord, suffix]
           else
-        %>
-        bindings = <&kp>, <&kp>;
-        <%
+            [finger, suffix]
           end
 
-          unless chord
-        %>
-        #ifdef SHIFT_FORGIVENESS
-        #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
-        hold-while-undecided; // requires 24.08-beta1 or newer firmware
-        retro-tap; // tap on standalone hold
-        #endif
-        #endif
-        <%
-          end
-        %>
-    };
+        inherit = format_constant(*inherit_components)
+        emit_setting_ifndef.(setting, inherit)
+      end
+
+      for target_variant in [nil, :_bilateral] do
+  %>
+  <%= target %><%= target_variant %>: homey_<%= target %><%= target_variant %> {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = <%= source.upcase %>_HOLDING_TYPE;
+    hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
+    hold-trigger-on-release; // wait for other home row mods
+    tapping-term-ms = <<%= source.upcase %>_HOLDING_TIME>;
+    quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
+    require-prior-idle-ms = <<%= source.upcase %>_STREAK_DECAY>;
+    #binding-cells = <2>;
     <%
-        end
-
+      if target_variant
         if chord
-          constant = format_constant(hand, chord)
     %>
-    #define <%= target_CamelCase %> <%= target %>_bilateral <%= constant %>_MOD <%= constant %>_KEY
+    bindings = <&kp>, <&<%= source %>_tap>;
     <%
         else
-          constant = format_constant(hand, finger)
     %>
-    <%= target %>_hold: homey_<%= target %>_hold {
-        compatible = "zmk,behavior-macro-one-param";
-        wait-ms = <0>;
-        tap-ms = <0>;
-        #binding-cells = <1>;
-        bindings
-            = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER>
-            #ifdef LAYER_<%= target_CamelCase %>
-            , <&macro_press &mo LAYER_<%= target_CamelCase %>>
-            #endif
-            , <&macro_pause_for_release>
-            , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER>
-            #ifdef LAYER_<%= target_CamelCase %>
-            , <&macro_release &mo LAYER_<%= target_CamelCase %>>
-            #endif
-            ;
-    };
-    <%= target %>_tap: homey_<%= target %>_tap {
-        compatible = "zmk,behavior-macro-one-param";
-        wait-ms = <0>;
-        tap-ms = <0>;
-        #binding-cells = <1>;
-        bindings
-            = <&macro_release
-                &kp LSFT &kp RSFT
-                &kp LALT &kp RALT
-                &kp LCTL &kp RCTL
-                &kp LGUI &kp RGUI>
-            , <&macro_tap &kp <%= target.upcase %>_KEY>
-            , <&macro_param_1to1>
-            , <&macro_tap &kp MACRO_PLACEHOLDER>
-            ;
-    };
-    #define <%= target_CamelCase %>(key, layer_index) <%= target_CamelCase %>_unroll(layer_index) (key)
-    #define <%= target_CamelCase %>_unroll(layer_index) <%= target_CamelCase %>_concat(<%= target_CamelCase %>_layer, layer_index)
-    #define <%= target_CamelCase %>_concat(prefix, layer_index) prefix ## layer_index
-    #ifdef ENFORCE_BILATERAL
-    #define <%= target %>_layer0_variant <%= target %>_bilateral
-    #else
-    #define <%= target %>_layer0_variant <%= target %>
+    bindings = <&<%= target %>_hold>, <&kp>;
+    <%
+        end
+      else
+    %>
+    bindings = <&kp>, <&kp>;
+    <%
+      end
+
+      unless chord
+    %>
+    #ifdef SHIFT_FORGIVENESS
+    #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
+    hold-while-undecided; // requires 24.08-beta1 or newer firmware
+    retro-tap; // tap on standalone hold
+    #endif
     #endif
     <%
-          ALPHA_LAYERS.each_with_index do |(layer_name, _layer_keys), layer_index|
+      end
     %>
-    #define <%= target_CamelCase %>_layer<%= layer_index %>(key) <%= target %><%= "_layer0_variant" if layer_index.zero? %> <%= constant %>_MOD key
-    <%
-          end
+  };
+  <%
+      end
+
+      if chord
+        constant = format_constant(hand, chord)
+  %>
+  #define <%= target_CamelCase %> <%= target %>_bilateral <%= constant %>_MOD <%= constant %>_KEY
+  <%
+      else
+        constant = format_constant(hand, finger)
+  %>
+  <%= target %>_hold: homey_<%= target %>_hold {
+    compatible = "zmk,behavior-macro-one-param";
+    wait-ms = <0>;
+    tap-ms = <0>;
+    #binding-cells = <1>;
+    bindings
+      = <&macro_param_1to1>
+      , <&macro_press &kp MACRO_PLACEHOLDER>
+      #ifdef LAYER_<%= target_CamelCase %>
+      , <&macro_press &mo LAYER_<%= target_CamelCase %>>
+      #endif
+      , <&macro_pause_for_release>
+      , <&macro_param_1to1>
+      , <&macro_release &kp MACRO_PLACEHOLDER>
+      #ifdef LAYER_<%= target_CamelCase %>
+      , <&macro_release &mo LAYER_<%= target_CamelCase %>>
+      #endif
+      ;
+  };
+  <%= target %>_tap: homey_<%= target %>_tap {
+    compatible = "zmk,behavior-macro-one-param";
+    wait-ms = <0>;
+    tap-ms = <0>;
+    #binding-cells = <1>;
+    bindings
+      = <&macro_release
+          &kp LSFT &kp RSFT
+          &kp LALT &kp RALT
+          &kp LCTL &kp RCTL
+          &kp LGUI &kp RGUI>
+      , <&macro_tap &kp <%= target.upcase %>_KEY>
+      , <&macro_param_1to1>
+      , <&macro_tap &kp MACRO_PLACEHOLDER>
+      ;
+  };
+  #define <%= target_CamelCase %>(key, layer_index) <%= target_CamelCase %>_unroll(layer_index) (key)
+  #define <%= target_CamelCase %>_unroll(layer_index) <%= target_CamelCase %>_concat(<%= target_CamelCase %>_layer, layer_index)
+  #define <%= target_CamelCase %>_concat(prefix, layer_index) prefix ## layer_index
+  #ifdef ENFORCE_BILATERAL
+  #define <%= target %>_layer0_variant <%= target %>_bilateral
+  #else
+  #define <%= target %>_layer0_variant <%= target %>
+  #endif
+  <%
+        ALPHA_LAYERS.each_with_index do |(layer_name, _layer_keys), layer_index|
+  %>
+  #define <%= target_CamelCase %>_layer<%= layer_index %>(key) <%= target %><%= "_layer0_variant" if layer_index.zero? %> <%= constant %>_MOD key
+  <%
         end
       end
+    end
 
-      # level 1 for mod-tap keys on base layer
-      HOME_ROW_MOD_INSTANCES.each do |(hand,finger)|
-        emit_home_row_mod.(hand, finger, nil)
+    # level 1 for mod-tap keys on base layer
+    HOME_ROW_MOD_INSTANCES.each do |(hand,finger)|
+      emit_home_row_mod.(hand, finger, nil)
+    end
+
+    # level 2 for unilateral multi-mod chords
+    HOME_ROW_MOD_INSTANCES.permutation(2).each do
+      |((hand1,finger1), (hand2,finger2))|
+
+      if hand1 == hand2
+        emit_home_row_mod.(hand2, finger2, finger1)
       end
+    end
+  %>
 
-      # level 2 for unilateral multi-mod chords
-      HOME_ROW_MOD_INSTANCES.permutation(2).each do
-        |((hand1,finger1), (hand2,finger2))|
+  //
+  // Key repetition access keys on the index fingers
+  //
+  plain: plain_typing_layer {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = PLAIN_HOLDING_TYPE;
+    tapping-term-ms = <PLAIN_HOLDING_TIME>;
+    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
+    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
+    #binding-cells = <2>;
+    bindings = <&mo>, <&kp>;
+    retro-tap; // tap on standalone hold
+  };
+  #ifdef LAYER_Engram
+  plain_engram_COMMA: plain_typing_layer_engram_COMMA {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = PLAIN_HOLDING_TYPE;
+    tapping-term-ms = <PLAIN_HOLDING_TIME>;
+    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
+    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
+    #binding-cells = <2>;
+    bindings = <&mo>, <&engram_COMMA>;
+    retro-tap; // tap on standalone hold
+  };
+  plain_engram_DOT: plain_typing_layer_engram_DOT {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = PLAIN_HOLDING_TYPE;
+    tapping-term-ms = <PLAIN_HOLDING_TIME>;
+    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
+    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
+    #binding-cells = <2>;
+    bindings = <&mo>, <&engram_DOT>;
+    retro-tap; // tap on standalone hold
+  };
+  #endif
 
-        if hand1 == hand2
-          emit_home_row_mod.(hand2, finger2, finger1)
-        end
-      end
-    %>
-
-    //
-    // Key repetition access keys on the index fingers
-    //
-    plain: plain_typing_layer {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = PLAIN_HOLDING_TYPE;
-        tapping-term-ms = <PLAIN_HOLDING_TIME>;
-        quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-        require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&mo>, <&kp>;
-        retro-tap; // tap on standalone hold
-    };
-    #ifdef LAYER_Engram
-    plain_engram_COMMA: plain_typing_layer_engram_COMMA {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = PLAIN_HOLDING_TYPE;
-        tapping-term-ms = <PLAIN_HOLDING_TIME>;
-        quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-        require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&mo>, <&engram_COMMA>;
-        retro-tap; // tap on standalone hold
-    };
-    plain_engram_DOT: plain_typing_layer_engram_DOT {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = PLAIN_HOLDING_TYPE;
-        tapping-term-ms = <PLAIN_HOLDING_TIME>;
-        quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-        require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&mo>, <&engram_DOT>;
-        retro-tap; // tap on standalone hold
-    };
+  //
+  // Thumb cluster hold-tap keys for Miryoku layers
+  //
+  thumb: thumb_layer_access {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&kp>;
+  };
+  thumb_parang_left: thumb_layer_access_parang_left {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&parang_left>;
+  };
+  stumb: thumb_layer_access_sticky_key_oneshot {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&sticky_key_oneshot>;
+  };
+  crumb: thumb_layer_access_retro_tap {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&kp>;
+    #ifdef THUMB_FORGIVENESS
+    retro-tap;
     #endif
-
-    //
-    // Thumb cluster hold-tap keys for Miryoku layers
-    //
-    thumb: thumb_layer_access {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = THUMB_HOLDING_TYPE;
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        bindings = <&mo>, <&kp>;
-    };
-    thumb_parang_left: thumb_layer_access_parang_left {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = THUMB_HOLDING_TYPE;
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        bindings = <&mo>, <&parang_left>;
-    };
-    stumb: thumb_layer_access_sticky_key_oneshot {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = THUMB_HOLDING_TYPE;
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        bindings = <&mo>, <&sticky_key_oneshot>;
-    };
-    crumb: thumb_layer_access_retro_tap {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = THUMB_HOLDING_TYPE;
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        bindings = <&mo>, <&kp>;
-        #ifdef THUMB_FORGIVENESS
-        retro-tap;
-        #endif
-    };
-    space: thumb_layer_access_spacebar {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = SPACE_HOLDING_TYPE;
-        tapping-term-ms = <SPACE_HOLDING_TIME>;
-        quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        bindings = <&mo>, <&kp>;
-        #ifdef SPACE_FORGIVENESS
-        retro-tap; // tap on standalone hold
-        #endif
-    };
-
-    //
-    // Shift + LEFT_PARENTHESIS = LESS_THAN
-    //
-    parang_left: left_parenthesis_and_less_than {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp LPAR>, <&kp LT>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //
-    // Shift + RIGHT_PARENTHESIS = GREATER_THAN
-    //
-    parang_right: right_parenthesis_and_greater_than {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp RPAR>, <&kp GT>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    //
-    // Custom shifted pairs for the Engram layout
-    // - https://engram.dev/
-    // - https://sunaku.github.io/engram-keyboard-layout.html
-    //
-    #ifdef LAYER_Engram
-    <%
-      {
-        "N1"    => "PIPE",
-        "N2"    => "EQUAL",
-        "N3"    => "TILDE",
-        "N4"    => "PLUS",
-        "N5"    => "LT",
-        "N6"    => "GT",
-        "N7"    => "CARET",
-        "N8"    => "AMPS",
-        "N9"    => "PRCNT",
-        "N0"    => "STAR",
-        "SQT"   => "LPAR",
-        "DQT"   => "RPAR",
-        "COMMA" => "SEMI",
-        "DOT"   => "COLON",
-        "QMARK" => "EXCL",
-        "HASH"  => "DLLR",
-        "AT"    => "GRAVE",
-        "FSLH"  => "BSLH",
-      }
-      .each do |normal, shifted|
-    %>
-    engram_<%= normal %>: engram_shift_<%= normal %>_<%= shifted %> {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp <%= normal %>>, <&kp <%= shifted %>>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    <%
-      end
-    %>
+  };
+  space: thumb_layer_access_spacebar {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = SPACE_HOLDING_TYPE;
+    tapping-term-ms = <SPACE_HOLDING_TIME>;
+    quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&kp>;
+    #ifdef SPACE_FORGIVENESS
+    retro-tap; // tap on standalone hold
     #endif
+  };
 
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // &sk (sticky key) variant that is truly one-shot
-    //
-    //////////////////////////////////////////////////////////////////////////
+  //
+  // Shift + LEFT_PARENTHESIS = LESS_THAN
+  //
+  parang_left: left_parenthesis_and_less_than {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp LPAR>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 
-    //
-    // STICKY_1SHOT_DECAY defines how much time you have left (milliseconds)
-    // after tapping a sticky key before it expires (won't apply to next tap).
-    //
-    <%
-      emit_setting_ifndef.(:STICKY_1SHOT_DECAY, 500)
-    %>
+  //
+  // Shift + RIGHT_PARENTHESIS = GREATER_THAN
+  //
+  parang_right: right_parenthesis_and_greater_than {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp RPAR>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 
-    //
-    // STICKY_HOLDING_TIME defines how long you need to hold (milliseconds)
-    // sticky one-shot keys in order to trigger their hold (not tap) action.
-    //
-    <%
-      emit_setting_ifndef.(:STICKY_HOLDING_TIME, resolve_tap_timing.(200))
-    %>
+  //
+  // Custom shifted pairs for the Engram layout
+  // - https://engram.dev/
+  // - https://sunaku.github.io/engram-keyboard-layout.html
+  //
+  #ifdef LAYER_Engram
+  <%
+    {
+      "N1"    => "PIPE",
+      "N2"    => "EQUAL",
+      "N3"    => "TILDE",
+      "N4"    => "PLUS",
+      "N5"    => "LT",
+      "N6"    => "GT",
+      "N7"    => "CARET",
+      "N8"    => "AMPS",
+      "N9"    => "PRCNT",
+      "N0"    => "STAR",
+      "SQT"   => "LPAR",
+      "DQT"   => "RPAR",
+      "COMMA" => "SEMI",
+      "DOT"   => "COLON",
+      "QMARK" => "EXCL",
+      "HASH"  => "DLLR",
+      "AT"    => "GRAVE",
+      "FSLH"  => "BSLH",
+    }
+    .each do |normal, shifted|
+  %>
+  engram_<%= normal %>: engram_shift_<%= normal %>_<%= shifted %> {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp <%= normal %>>, <&kp <%= shifted %>>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  <%
+    end
+  %>
+  #endif
 
-    sticky_key_modtap: sticky_key_modtap {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = "tap-preferred";
-        tapping-term-ms = <STICKY_HOLDING_TIME>;
-        #binding-cells = <2>;
-        bindings = <&kp>, <&sticky_key_oneshot>;
-    };
-    sticky_key_oneshot: sticky_key_oneshot_macro {
-        compatible = "zmk,behavior-macro-one-param";
-        wait-ms = <0>;
-        tap-ms = <0>;
-        #binding-cells = <1>;
-        bindings
-            = <&macro_param_1to1>
-            , <&macro_tap &sticky_key_quickrel MACRO_PLACEHOLDER>
-            ;
-    };
-    sticky_key_quickrel: sticky_key_quick_release {
-        compatible = "zmk,behavior-sticky-key";
-        #binding-cells = <1>;
-        bindings = <&kp>;
-        release-after-ms = <STICKY_1SHOT_DECAY>;
-        quick-release;
-        ignore-modifiers;
-    };
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // &sk (sticky key) variant that is truly one-shot
+  //
+  //////////////////////////////////////////////////////////////////////////
 
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // ZMK global overrides
-    //
-    //////////////////////////////////////////////////////////////////////////
+  //
+  // STICKY_1SHOT_DECAY defines how much time you have left (milliseconds)
+  // after tapping a sticky key before it expires (won't apply to next tap).
+  //
+  <%
+    emit_setting_ifndef.(:STICKY_1SHOT_DECAY, 500)
+  %>
 
-    //
-    // CapsWord - ported from Pascal Getreuer's extension for QMK
-    // - https://zmk.dev/docs/behaviors/caps-word
-    // - https://getreuer.info/posts/keyboards/caps-word/index.html
-    //
-    behavior_caps_word {
-        continue-list = <
-            UNDERSCORE MINUS
-            BACKSPACE DELETE
-            N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
-        >;
-    };
+  //
+  // STICKY_HOLDING_TIME defines how long you need to hold (milliseconds)
+  // sticky one-shot keys in order to trigger their hold (not tap) action.
+  //
+  <%
+    emit_setting_ifndef.(:STICKY_HOLDING_TIME, resolve_tap_timing.(200))
+  %>
+
+  sticky_key_modtap: sticky_key_modtap {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = "tap-preferred";
+    tapping-term-ms = <STICKY_HOLDING_TIME>;
+    #binding-cells = <2>;
+    bindings = <&kp>, <&sticky_key_oneshot>;
+  };
+  sticky_key_oneshot: sticky_key_oneshot_macro {
+    compatible = "zmk,behavior-macro-one-param";
+    wait-ms = <0>;
+    tap-ms = <0>;
+    #binding-cells = <1>;
+    bindings
+      = <&macro_param_1to1>
+      , <&macro_tap &sticky_key_quickrel MACRO_PLACEHOLDER>
+      ;
+  };
+  sticky_key_quickrel: sticky_key_quick_release {
+    compatible = "zmk,behavior-sticky-key";
+    #binding-cells = <1>;
+    bindings = <&kp>;
+    release-after-ms = <STICKY_1SHOT_DECAY>;
+    quick-release;
+    ignore-modifiers;
+  };
+
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // ZMK global overrides
+  //
+  //////////////////////////////////////////////////////////////////////////
+
+  //
+  // CapsWord - ported from Pascal Getreuer's extension for QMK
+  // - https://zmk.dev/docs/behaviors/caps-word
+  // - https://getreuer.info/posts/keyboards/caps-word/index.html
+  //
+  behavior_caps_word {
+    continue-list = <
+      UNDERSCORE MINUS
+      BACKSPACE DELETE
+      N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+    >;
+  };
 
 };
 
 macros {
 
-    //
-    // Linux Magic System Request Key - hold this down and type REISUB
-    // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
-    // - https://github.com/manna-harbour/miryoku/discussions/259
-    //
-    ZMK_MACRO(linux_magic_sysrq,
-        wait-ms = <0>;
-        tap-ms = <0>;
-        bindings
-            = <&macro_press &mo 0 &kp RALT>
-            , <&macro_tap &kp PRINTSCREEN>
-            , <&macro_pause_for_release>
-            , <&macro_release &mo 0 &kp RALT>
-            ;
+  //
+  // Linux Magic System Request Key - hold this down and type REISUB
+  // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
+  // - https://github.com/manna-harbour/miryoku/discussions/259
+  //
+  ZMK_MACRO(linux_magic_sysrq,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings
+      = <&macro_press &mo 0 &kp RALT>
+      , <&macro_tap &kp PRINTSCREEN>
+      , <&macro_pause_for_release>
+      , <&macro_release &mo 0 &kp RALT>
+      ;
+  )
+
+  //
+  // Mod+Tab application switcher - hold this down to keep menu open
+  //
+  mod_tab: mod_tab_switcher {
+    compatible = "zmk,behavior-macro-one-param";
+    wait-ms = <0>;
+    tap-ms = <0>;
+    #binding-cells = <1>;
+    bindings
+      = <&macro_param_1to1>
+      , <&macro_press &kp MACRO_PLACEHOLDER>
+      , <&macro_tap &kp TAB>
+      , <&macro_pause_for_release>
+      , <&macro_param_1to1>
+      , <&macro_release &kp MACRO_PLACEHOLDER>
+      ;
+  };
+  mod_tab_chord: mod_tab_switcher_chord {
+    compatible = "zmk,behavior-macro-two-param";
+    wait-ms = <0>;
+    tap-ms = <0>;
+    #binding-cells = <2>;
+    bindings
+      = <&macro_param_2to1>
+      , <&macro_press &mo MACRO_PLACEHOLDER>
+      , <&macro_param_1to1>
+      , <&macro_press &mod_tab MACRO_PLACEHOLDER>
+      , <&macro_pause_for_release>
+      , <&macro_param_1to1>
+      , <&macro_release &mod_tab MACRO_PLACEHOLDER>
+      , <&macro_param_2to1>
+      , <&macro_release &mo MACRO_PLACEHOLDER>
+      ;
+  };
+
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // Approximation of Pascal Getreuer's Select Word macro from QMK
+  // - https://getreuer.info/posts/keyboards/select-word/index.html
+  //
+  //////////////////////////////////////////////////////////////////////////
+
+  //
+  // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+  // after moving the cursor before it selects a word.  A larger delay
+  // may allow the macro to move to the next word upon each invocation.
+  //
+  <%
+    emit_setting_ifndef.(:SELECT_WORD_DELAY, 1)
+  %>
+
+  #define select_all kp _C(A)
+
+  ZMK_MACRO(select_none,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+  )
+
+  //
+  // select a word (jumps to next word upon each successive invocation)
+  //
+  select_word: select_word {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&select_word_right>, <&select_word_left>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ZMK_MACRO(select_word_right,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp _W(RIGHT) &kp _W(LEFT) &kp _W(LS(RIGHT))>;
+  )
+  ZMK_MACRO(select_word_left,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp _W(LEFT) &kp _W(RIGHT) &kp _W(LS(LEFT))>;
+  )
+
+  //
+  // extend current selection by one word
+  //
+  extend_word: extend_word {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&extend_word_right>, <&extend_word_left>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ZMK_MACRO(extend_word_right,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp _W(LS(RIGHT))>;
+  )
+  ZMK_MACRO(extend_word_left,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp _W(LS(LEFT))>;
+  )
+
+  //
+  // select current line
+  //
+  select_line: select_line {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&select_line_right>, <&select_line_left>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ZMK_MACRO(select_line_right,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp _HOME &kp LS(_END)>;
+  )
+  ZMK_MACRO(select_line_left,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp _END &kp LS(_HOME)>;
+  )
+
+  //
+  // extend current selection by one line
+  //
+  extend_line: extend_line {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&extend_line_right>, <&extend_line_left>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ZMK_MACRO(extend_line_right,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp LS(DOWN) &kp LS(_END)>;
+  )
+  ZMK_MACRO(extend_line_left,
+    wait-ms = <SELECT_WORD_DELAY>;
+    tap-ms = <SELECT_WORD_DELAY>;
+    bindings = <&kp LS(UP) &kp LS(_HOME)>;
+  )
+
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // World layer - international characters
+  //
+  //////////////////////////////////////////////////////////////////////////
+
+  //
+  // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
+  // for characters in the "compositions" section of the `world.yaml` file.
+  //
+  //#define WORLD_USE_COMPOSE
+
+  //
+  // WORLD_HOST_AZERTY indicates that your computer is set to AZERTY locale.
+  //
+  //#define WORLD_HOST_AZERTY
+
+  #ifdef WORLD_HOST_AZERTY
+    #define WORLD_SHIFT_NUMBER
+    #define _NA Q
+  #endif
+
+  //
+  // WORLD_SHIFT_NUMBER indicates that Shift must be applied when typing out
+  // digits from the number row, which is needed for locales such as AZERTY.
+  //
+  //#define WORLD_SHIFT_NUMBER
+
+  #ifdef WORLD_SHIFT_NUMBER
+  <%
+    for digit in 0..9 do
+  %>
+    #define _N<%= digit %> LS(N<%= digit %>)
+  <%
+    end
+  %>
+  #endif
+
+  //
+  // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
+  // between keystrokes while inputting the Unicode codepoint shortcut.
+  //
+  <%
+    emit_setting_ifndef.(:UNICODE_TAP_DELAY, 1)
+  %>
+
+  //
+  // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
+  // between emitting Unicode codepoints in multi-codepoint characters.
+  //
+  <%
+    emit_setting_ifndef.(:UNICODE_SEQ_DELAY, 10)
+  %>
+
+  #define UNICODE(name, ...) \
+    ZMK_MACRO(name, \
+      wait-ms = <UNICODE_TAP_DELAY>; \
+      tap-ms = <UNICODE_TAP_DELAY>; \
+      bindings = __VA_ARGS__; \
     )
 
-    //
-    // Mod+Tab application switcher - hold this down to keep menu open
-    //
-    mod_tab: mod_tab_switcher {
-        compatible = "zmk,behavior-macro-one-param";
-        wait-ms = <0>;
-        tap-ms = <0>;
-        #binding-cells = <1>;
-        bindings
-            = <&macro_param_1to1>
-            , <&macro_press &kp MACRO_PLACEHOLDER>
-            , <&macro_tap &kp TAB>
-            , <&macro_pause_for_release>
-            , <&macro_param_1to1>
-            , <&macro_release &kp MACRO_PLACEHOLDER>
-            ;
-    };
-    mod_tab_chord: mod_tab_switcher_chord {
-        compatible = "zmk,behavior-macro-two-param";
-        wait-ms = <0>;
-        tap-ms = <0>;
-        #binding-cells = <2>;
-        bindings
-            = <&macro_param_2to1>
-            , <&macro_press &mo MACRO_PLACEHOLDER>
-            , <&macro_param_1to1>
-            , <&macro_press &mod_tab MACRO_PLACEHOLDER>
-            , <&macro_pause_for_release>
-            , <&macro_param_1to1>
-            , <&macro_release &mod_tab MACRO_PLACEHOLDER>
-            , <&macro_param_2to1>
-            , <&macro_release &mo MACRO_PLACEHOLDER>
-            ;
-    };
+  //
+  // UNICODE_SEQ_LINUX() specifies how Unicode hexadecimal codepoint
+  // keystrokes are transformed into Unicode characters under Linux.
+  //
+  #ifndef UNICODE_SEQ_LINUX
+  #define UNICODE_SEQ_LINUX(keystrokes) \
+    <&macro_tap &kp LC(LS(U)) keystrokes &kp ENTER>
+  #endif
 
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // Approximation of Pascal Getreuer's Select Word macro from QMK
-    // - https://getreuer.info/posts/keyboards/select-word/index.html
-    //
-    //////////////////////////////////////////////////////////////////////////
+  //
+  // UNICODE_SEQ_MACOS() specifies how Unicode hexadecimal codepoint
+  // keystrokes are transformed into Unicode characters under macOS.
+  //
+  #ifndef UNICODE_SEQ_MACOS
+  #define UNICODE_SEQ_MACOS(keystrokes) \
+    <&macro_press &kp LALT> ,\
+    <&macro_tap keystrokes> ,\
+    <&macro_release &kp LALT>
+  #endif
 
-    //
-    // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
-    // after moving the cursor before it selects a word.  A larger delay
-    // may allow the macro to move to the next word upon each invocation.
-    //
-    <%
-      emit_setting_ifndef.(:SELECT_WORD_DELAY, 1)
-    %>
+  //
+  // UNICODE_SEQ_WINDOWS() specifies how Unicode hexadecimal codepoint
+  // keystrokes are transformed into Unicode characters under Windows.
+  //
+  // If you've configured WinCompose to use a different trigger hotkey,
+  // such as F13 instead of the default RA(U) shortcut, simply override
+  // this definition to adapt all UNICODE() function calls accordingly.
+  //
+  #ifndef UNICODE_SEQ_WINDOWS
+  #define UNICODE_SEQ_WINDOWS(keystrokes) \
+    <&macro_tap &kp RALT &kp U keystrokes &kp ENTER>
+  #endif
 
-    #define select_all kp _C(A)
+  //
+  // COMPOSE_KEY_LINUX specifies the keycode for Compose key in Linux,
+  // which may be RALT by default but can be reconfigured as follows:
+  //
+  // $ setxkbmap -option compose:sclk # use ScrollLock as Compose key
+  //
+  // See xkeyboard-config(7) for possible choices for the Compose key:
+  // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
+  //
+  // #define COMPOSE_KEY_LINUX RALT            // compose:ralt
+  // #define COMPOSE_KEY_LINUX LGUI            // compose:lwin
+  // #define COMPOSE_KEY_LINUX RA(LGUI)        // compose:lwin-altgr
+  // #define COMPOSE_KEY_LINUX RGUI            // compose:rwin
+  // #define COMPOSE_KEY_LINUX RA(RGUI)        // compose:rwin-altgr
+  // #define COMPOSE_KEY_LINUX K_MENU          // compose:menu
+  // #define COMPOSE_KEY_LINUX RA(K_MENU)      // compose:menu-altgr
+  // #define COMPOSE_KEY_LINUX LCTL            // compose:lctrl
+  // #define COMPOSE_KEY_LINUX RA(LCTL)        // compose:lctrl-altgr
+  // #define COMPOSE_KEY_LINUX RCTL            // compose:rctrl
+  // #define COMPOSE_KEY_LINUX RA(RCTL)        // compose:rctrl-altgr
+  // #define COMPOSE_KEY_LINUX CAPS            // compose:caps
+  // #define COMPOSE_KEY_LINUX RA(CAPS)        // compose:caps-altgr
+  // #define COMPOSE_KEY_LINUX NON_US_BSLH     // compose:102
+  // #define COMPOSE_KEY_LINUX RA(NON_US_BSLH) // compose:102-altgr
+  // #define COMPOSE_KEY_LINUX PAUSE_BREAK     // compose:paus
+  // #define COMPOSE_KEY_LINUX PSCRN           // compose:prsc
+  // #define COMPOSE_KEY_LINUX SLCK            // compose:sclk
+  //
+  <%
+    emit_setting_ifndef.(:COMPOSE_KEY_LINUX, :RALT)
+  %>
 
-    ZMK_MACRO(select_none,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
-    )
+  //
+  // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
+  //
+  #ifndef COMPOSE_SEQ_LINUX
+  #define COMPOSE_SEQ_LINUX(keystrokes) \
+    <&macro_tap &kp COMPOSE_KEY_LINUX keystrokes>
+  #endif
 
-    //
-    // select a word (jumps to next word upon each successive invocation)
-    //
-    select_word: select_word {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&select_word_right>, <&select_word_left>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    ZMK_MACRO(select_word_right,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _W(RIGHT) &kp _W(LEFT) &kp _W(LS(RIGHT))>;
-    )
-    ZMK_MACRO(select_word_left,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _W(LEFT) &kp _W(RIGHT) &kp _W(LS(LEFT))>;
-    )
+  //
+  // COMPOSE_SEQ_MACOS() formats keystrokes for macOS character entry.
+  //
+  #ifndef COMPOSE_SEQ_MACOS
+  #define COMPOSE_SEQ_MACOS(keystrokes) \
+    <&macro_tap keystrokes>
+  #endif
 
-    //
-    // extend current selection by one word
-    //
-    extend_word: extend_word {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&extend_word_right>, <&extend_word_left>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    ZMK_MACRO(extend_word_right,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _W(LS(RIGHT))>;
-    )
-    ZMK_MACRO(extend_word_left,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _W(LS(LEFT))>;
-    )
+  //
+  // COMPOSE_SEQ_WINDOWS() wraps keystrokes in Windows AltCode sequence.
+  //
+  #ifndef COMPOSE_SEQ_WINDOWS
+  #define COMPOSE_SEQ_WINDOWS(keystrokes) \
+    <&macro_press &kp LALT>, \
+    <&macro_tap keystrokes>, \
+    <&macro_release &kp LALT>
+  #endif
 
-    //
-    // select current line
-    //
-    select_line: select_line {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&select_line_right>, <&select_line_left>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    ZMK_MACRO(select_line_right,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _HOME &kp LS(_END)>;
-    )
-    ZMK_MACRO(select_line_left,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _END &kp LS(_HOME)>;
-    )
+  #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
+    #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
+  #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
+    #define UNICODE_MORPH_MODS MOD_LALT
+  #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
+    #define UNICODE_MORPH_MODS MOD_RALT
+  #endif
 
-    //
-    // extend current selection by one line
-    //
-    extend_line: extend_line {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&extend_line_right>, <&extend_line_left>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    ZMK_MACRO(extend_line_right,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LS(DOWN) &kp LS(_END)>;
-    )
-    ZMK_MACRO(extend_line_left,
-        wait-ms = <SELECT_WORD_DELAY>;
-        tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LS(UP) &kp LS(_HOME)>;
-    )
-
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // World layer - international characters
-    //
-    //////////////////////////////////////////////////////////////////////////
-
-    //
-    // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
-    // for characters in the "compositions" section of the `world.yaml` file.
-    //
-    //#define WORLD_USE_COMPOSE
-
-    //
-    // WORLD_HOST_AZERTY indicates that your computer is set to AZERTY locale.
-    //
-    //#define WORLD_HOST_AZERTY
-
-    #ifdef WORLD_HOST_AZERTY
-        #define WORLD_SHIFT_NUMBER
-        #define _NA Q
+  #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
+    // $ grep "compose:" /usr/share/X11/xkb/rules/base.lst
+    // compose:ralt         Right Alt
+    #if COMPOSE_KEY_LINUX == RALT
+      #define COMPOSE_MORPH_MODS MOD_RALT
+    // compose:lwin         Left Win
+    #elif COMPOSE_KEY_LINUX == LGUI
+      #define COMPOSE_MORPH_MODS MOD_LGUI
+    // compose:lwin-altgr   3rd level of Left Win
+    #elif COMPOSE_KEY_LINUX == RA(LGUI)
+      #define COMPOSE_MORPH_MODS (MOD_LGUI|MOD_RALT)
+    // compose:rwin         Right Win
+    #elif COMPOSE_KEY_LINUX == RGUI
+      #define COMPOSE_MORPH_MODS MOD_RGUI
+    // compose:rwin-altgr   3rd level of Right Win
+    #elif COMPOSE_KEY_LINUX == RA(RGUI)
+      #define COMPOSE_MORPH_MODS (MOD_RGUI|MOD_RALT)
+    // compose:menu         Menu
+    // compose:menu-altgr   3rd level of Menu
+    #elif COMPOSE_KEY_LINUX == RA(K_MENU)
+      #define COMPOSE_MORPH_MODS MOD_RALT
+    // compose:lctrl        Left Ctrl
+    #elif COMPOSE_KEY_LINUX == LCTL
+      #define COMPOSE_MORPH_MODS MOD_LCTL
+    // compose:lctrl-altgr  3rd level of Left Ctrl
+    #elif COMPOSE_KEY_LINUX == RA(LCTL)
+      #define COMPOSE_MORPH_MODS (MOD_LCTL|MOD_RALT)
+    // compose:rctrl        Right Ctrl
+    #elif COMPOSE_KEY_LINUX == RCTL
+      #define COMPOSE_MORPH_MODS MOD_RCTL
+    // compose:rctrl-altgr  3rd level of Right Ctrl
+    #elif COMPOSE_KEY_LINUX == RA(RCTL)
+      #define COMPOSE_MORPH_MODS (MOD_RCTL|MOD_RALT)
+    // compose:caps         Caps Lock
+    // compose:caps-altgr   3rd level of Caps Lock
+    #elif COMPOSE_KEY_LINUX == RA(CAPS)
+      #define COMPOSE_MORPH_MODS MOD_RALT
+    // compose:102          The "&lt; &gt;" key
+    // compose:102-altgr    3rd level of the "&lt; &gt;" key
+    #elif COMPOSE_KEY_LINUX == RA(NON_US_BSLH)
+      #define COMPOSE_MORPH_MODS MOD_RALT
+    // compose:paus         Pause
+    // compose:prsc         PrtSc
+    // compose:sclk         Scroll Lock
+    #else
+      #define COMPOSE_MORPH_MODS 0
     #endif
+  #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
+    #define COMPOSE_MORPH_MODS 0
+  #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
+    #define COMPOSE_MORPH_MODS MOD_LALT
+  #endif
 
-    //
-    // WORLD_SHIFT_NUMBER indicates that Shift must be applied when typing out
-    // digits from the number row, which is needed for locales such as AZERTY.
-    //
-    //#define WORLD_SHIFT_NUMBER
+  <%
+    for digit in 0..9 do
+      emit_setting_ifndef.("_N#{digit}", "N#{digit}")
+    end
 
-    #ifdef WORLD_SHIFT_NUMBER
-    <%
-      for digit in 0..9 do
-    %>
-        #define _N<%= digit %> LS(N<%= digit %>)
-    <%
-      end
-    %>
-    #endif
+    for digit in 'A'..'F' do
+      emit_setting_ifndef.("_N#{digit}", "#{digit}")
+    end
 
-    //
-    // UNICODE_TAP_DELAY defines how long the macro waits (milliseconds)
-    // between keystrokes while inputting the Unicode codepoint shortcut.
-    //
-    <%
-      emit_setting_ifndef.(:UNICODE_TAP_DELAY, 1)
-    %>
+    def format_keystrokes_for_unicode(keystrokes, os)
+      send("format_keystrokes_for_#{os}_unicode", keystrokes)
+      # allow customization of keycodes for hexadecimal digits
+      .gsub(/(?<=&kp )(?:([A-F])|N(\d))\b/, '_N\1\2')
+    rescue NameError
+      raise NotImplementedError, "#{os} is not yet supported"
+    end
 
-    //
-    // UNICODE_SEQ_DELAY defines how long the macro waits (milliseconds)
-    // between emitting Unicode codepoints in multi-codepoint characters.
-    //
-    <%
-      emit_setting_ifndef.(:UNICODE_SEQ_DELAY, 10)
-    %>
+    def format_keystrokes_for_linux_unicode(keystrokes)
+      "UNICODE_SEQ_LINUX(#{
+        strip_leading_zeroes_from_keystrokes(keystrokes)
+      })"
+    end
 
-    #define UNICODE(name, ...) \
-        ZMK_MACRO(name, \
-            wait-ms = <UNICODE_TAP_DELAY>; \
-            tap-ms = <UNICODE_TAP_DELAY>; \
-            bindings = __VA_ARGS__; \
-        )
+    def format_keystrokes_for_macos_unicode(keystrokes)
+      "UNICODE_SEQ_MACOS(#{keystrokes})"
+    end
 
-    //
-    // UNICODE_SEQ_LINUX() specifies how Unicode hexadecimal codepoint
-    // keystrokes are transformed into Unicode characters under Linux.
-    //
-    #ifndef UNICODE_SEQ_LINUX
-    #define UNICODE_SEQ_LINUX(keystrokes) \
-        <&macro_tap &kp LC(LS(U)) keystrokes &kp ENTER>
-    #endif
+    def format_keystrokes_for_windows_unicode(keystrokes)
+      # prepend a single zero to prevent shorthand sequence
+      # expansion, such as "RA(U) A" being converted into ă
+      # https://github.com/samhocevar/wincompose/issues/323
+      "UNICODE_SEQ_WINDOWS(&kp N0 #{
+        strip_leading_zeroes_from_keystrokes(keystrokes)
+      })"
+    end
 
-    //
-    // UNICODE_SEQ_MACOS() specifies how Unicode hexadecimal codepoint
-    // keystrokes are transformed into Unicode characters under macOS.
-    //
-    #ifndef UNICODE_SEQ_MACOS
-    #define UNICODE_SEQ_MACOS(keystrokes) \
-        <&macro_press &kp LALT> ,\
-        <&macro_tap keystrokes> ,\
-        <&macro_release &kp LALT>
-    #endif
+    def strip_leading_zeroes_from_keystrokes(keystrokes)
+      keystrokes.sub(/^(&kp N0 ?)+/, '')
+    end
 
-    //
-    // UNICODE_SEQ_WINDOWS() specifies how Unicode hexadecimal codepoint
-    // keystrokes are transformed into Unicode characters under Windows.
-    //
-    // If you've configured WinCompose to use a different trigger hotkey,
-    // such as F13 instead of the default RA(U) shortcut, simply override
-    // this definition to adapt all UNICODE() function calls accordingly.
-    //
-    #ifndef UNICODE_SEQ_WINDOWS
-    #define UNICODE_SEQ_WINDOWS(keystrokes) \
-        <&macro_tap &kp RALT &kp U keystrokes &kp ENTER>
-    #endif
+    def keystrokes_from_character(character, os)
+      hexcodepoint = hexcodepoint_from_character(character, os)
+      keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
+    end
 
-    //
-    // COMPOSE_KEY_LINUX specifies the keycode for Compose key in Linux,
-    // which may be RALT by default but can be reconfigured as follows:
-    //
-    // $ setxkbmap -option compose:sclk # use ScrollLock as Compose key
-    //
-    // See xkeyboard-config(7) for possible choices for the Compose key:
-    // https://manpages.debian.org/stable/xkb-data/xkeyboard-config.7.en.html#Position_of_Compose_key
-    //
-    // #define COMPOSE_KEY_LINUX RALT            // compose:ralt
-    // #define COMPOSE_KEY_LINUX LGUI            // compose:lwin
-    // #define COMPOSE_KEY_LINUX RA(LGUI)        // compose:lwin-altgr
-    // #define COMPOSE_KEY_LINUX RGUI            // compose:rwin
-    // #define COMPOSE_KEY_LINUX RA(RGUI)        // compose:rwin-altgr
-    // #define COMPOSE_KEY_LINUX K_MENU          // compose:menu
-    // #define COMPOSE_KEY_LINUX RA(K_MENU)      // compose:menu-altgr
-    // #define COMPOSE_KEY_LINUX LCTL            // compose:lctrl
-    // #define COMPOSE_KEY_LINUX RA(LCTL)        // compose:lctrl-altgr
-    // #define COMPOSE_KEY_LINUX RCTL            // compose:rctrl
-    // #define COMPOSE_KEY_LINUX RA(RCTL)        // compose:rctrl-altgr
-    // #define COMPOSE_KEY_LINUX CAPS            // compose:caps
-    // #define COMPOSE_KEY_LINUX RA(CAPS)        // compose:caps-altgr
-    // #define COMPOSE_KEY_LINUX NON_US_BSLH     // compose:102
-    // #define COMPOSE_KEY_LINUX RA(NON_US_BSLH) // compose:102-altgr
-    // #define COMPOSE_KEY_LINUX PAUSE_BREAK     // compose:paus
-    // #define COMPOSE_KEY_LINUX PSCRN           // compose:prsc
-    // #define COMPOSE_KEY_LINUX SLCK            // compose:sclk
-    //
-    <%
-      emit_setting_ifndef.(:COMPOSE_KEY_LINUX, :RALT)
-    %>
-
-    //
-    // COMPOSE_SEQ_LINUX() prefixes keystrokes with the Linux Compose key.
-    //
-    #ifndef COMPOSE_SEQ_LINUX
-    #define COMPOSE_SEQ_LINUX(keystrokes) \
-        <&macro_tap &kp COMPOSE_KEY_LINUX keystrokes>
-    #endif
-
-    //
-    // COMPOSE_SEQ_MACOS() formats keystrokes for macOS character entry.
-    //
-    #ifndef COMPOSE_SEQ_MACOS
-    #define COMPOSE_SEQ_MACOS(keystrokes) \
-        <&macro_tap keystrokes>
-    #endif
-
-    //
-    // COMPOSE_SEQ_WINDOWS() wraps keystrokes in Windows AltCode sequence.
-    //
-    #ifndef COMPOSE_SEQ_WINDOWS
-    #define COMPOSE_SEQ_WINDOWS(keystrokes) \
-        <&macro_press &kp LALT>, \
-        <&macro_tap keystrokes>, \
-        <&macro_release &kp LALT>
-    #endif
-
-    #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
-        #define UNICODE_MORPH_MODS (MOD_LCTL|MOD_LSFT)
-    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
-        #define UNICODE_MORPH_MODS MOD_LALT
-    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
-        #define UNICODE_MORPH_MODS MOD_RALT
-    #endif
-
-    #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:linux] %>
-        // $ grep "compose:" /usr/share/X11/xkb/rules/base.lst
-        // compose:ralt         Right Alt
-        #if COMPOSE_KEY_LINUX == RALT
-            #define COMPOSE_MORPH_MODS MOD_RALT
-        // compose:lwin         Left Win
-        #elif COMPOSE_KEY_LINUX == LGUI
-            #define COMPOSE_MORPH_MODS MOD_LGUI
-        // compose:lwin-altgr   3rd level of Left Win
-        #elif COMPOSE_KEY_LINUX == RA(LGUI)
-            #define COMPOSE_MORPH_MODS (MOD_LGUI|MOD_RALT)
-        // compose:rwin         Right Win
-        #elif COMPOSE_KEY_LINUX == RGUI
-            #define COMPOSE_MORPH_MODS MOD_RGUI
-        // compose:rwin-altgr   3rd level of Right Win
-        #elif COMPOSE_KEY_LINUX == RA(RGUI)
-            #define COMPOSE_MORPH_MODS (MOD_RGUI|MOD_RALT)
-        // compose:menu         Menu
-        // compose:menu-altgr   3rd level of Menu
-        #elif COMPOSE_KEY_LINUX == RA(K_MENU)
-            #define COMPOSE_MORPH_MODS MOD_RALT
-        // compose:lctrl        Left Ctrl
-        #elif COMPOSE_KEY_LINUX == LCTL
-            #define COMPOSE_MORPH_MODS MOD_LCTL
-        // compose:lctrl-altgr  3rd level of Left Ctrl
-        #elif COMPOSE_KEY_LINUX == RA(LCTL)
-            #define COMPOSE_MORPH_MODS (MOD_LCTL|MOD_RALT)
-        // compose:rctrl        Right Ctrl
-        #elif COMPOSE_KEY_LINUX == RCTL
-            #define COMPOSE_MORPH_MODS MOD_RCTL
-        // compose:rctrl-altgr  3rd level of Right Ctrl
-        #elif COMPOSE_KEY_LINUX == RA(RCTL)
-            #define COMPOSE_MORPH_MODS (MOD_RCTL|MOD_RALT)
-        // compose:caps         Caps Lock
-        // compose:caps-altgr   3rd level of Caps Lock
-        #elif COMPOSE_KEY_LINUX == RA(CAPS)
-            #define COMPOSE_MORPH_MODS MOD_RALT
-        // compose:102          The "&lt; &gt;" key
-        // compose:102-altgr    3rd level of the "&lt; &gt;" key
-        #elif COMPOSE_KEY_LINUX == RA(NON_US_BSLH)
-            #define COMPOSE_MORPH_MODS MOD_RALT
-        // compose:paus         Pause
-        // compose:prsc         PrtSc
-        // compose:sclk         Scroll Lock
-        #else
-            #define COMPOSE_MORPH_MODS 0
-        #endif
-    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:macos] %>
-        #define COMPOSE_MORPH_MODS 0
-    #elif OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
-        #define COMPOSE_MORPH_MODS MOD_LALT
-    #endif
-
-    <%
-      for digit in 0..9 do
-        emit_setting_ifndef.("_N#{digit}", "N#{digit}")
-      end
-
-      for digit in 'A'..'F' do
-        emit_setting_ifndef.("_N#{digit}", "#{digit}")
-      end
-
-      def format_keystrokes_for_unicode(keystrokes, os)
-        send("format_keystrokes_for_#{os}_unicode", keystrokes)
-        # allow customization of keycodes for hexadecimal digits
-        .gsub(/(?<=&kp )(?:([A-F])|N(\d))\b/, '_N\1\2')
-      rescue NameError
-        raise NotImplementedError, "#{os} is not yet supported"
-      end
-
-      def format_keystrokes_for_linux_unicode(keystrokes)
-        "UNICODE_SEQ_LINUX(#{
-          strip_leading_zeroes_from_keystrokes(keystrokes)
-        })"
-      end
-
-      def format_keystrokes_for_macos_unicode(keystrokes)
-        "UNICODE_SEQ_MACOS(#{keystrokes})"
-      end
-
-      def format_keystrokes_for_windows_unicode(keystrokes)
-        # prepend a single zero to prevent shorthand sequence
-        # expansion, such as "RA(U) A" being converted into ă
-        # https://github.com/samhocevar/wincompose/issues/323
-        "UNICODE_SEQ_WINDOWS(&kp N0 #{
-          strip_leading_zeroes_from_keystrokes(keystrokes)
-        })"
-      end
-
-      def strip_leading_zeroes_from_keystrokes(keystrokes)
-        keystrokes.sub(/^(&kp N0 ?)+/, '')
-      end
-
-      def keystrokes_from_character(character, os)
-        hexcodepoint = hexcodepoint_from_character(character, os)
-        keystrokes = keystrokes_from_hexcodepoint(hexcodepoint)
-      end
-
-      def hexcodepoint_from_character(character, os)
-        case character.codepoints
-        in [codepoint]
-          # macOS expects two UTF-16 instead UTF-32
-          # https://apple.stackexchange.com/a/183056
-          if os == :macos && codepoint >= 0x10000
-            codepoint -= 0x10000
-            high_surrogate = 0xD800 + (codepoint >> 10)
-            low_surrogate = 0xDC00 + (codepoint & 0x3FF)
-            sprintf("%04X%04X", high_surrogate, low_surrogate)
-          else
-            sprintf("%04X", codepoint)
-          end
-        end
-      end
-
-      def keystrokes_from_hexcodepoint(hexcodepoint)
-        hexcodepoint.chars.map do |hexbyte|
-          keycode = keycode_from_hexbyte(hexbyte)
-          keystroke = keystroke_from_keycode(keycode)
-        end.join(" ")
-      end
-
-      def keycode_from_hexbyte(hexbyte)
-        case hexbyte
-        when "0".."9" then "N" + hexbyte
-        else hexbyte
-        end
-      end
-
-      def keystroke_from_keycode(keycode)
-        "&kp #{keycode}"
-      end
-
-      emit_zmk_mod_morph = lambda do |id, plain, morphed, modifiers|
-    %>
-    <%= id %>: <%= id %> {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&<%= plain %>>, <&<%= morphed %>>;
-        mods = <<%= modifiers %>>;
-    };
-    <%
-      end
-
-      def resolve_compose_keystrokes(composition, os)
-        keycodes =
-          case os
-          when :linux
-            composition.sub(/^COMPOSE\b/, '')
-          when :macos
-            composition
-          when :windows
-            composition.sub(/^ALT\+/, '').gsub(/\d/, 'KP_N\& ')
-          end
-          .split
-
-        keystrokes = keycodes.map{ |key| "&kp #{key}" }.join(' ')
-
-        ["COMPOSE_SEQ_#{os.to_s.upcase}(#{keystrokes})"]
-      end
-
-      emit_unicode_macro = lambda do |id, character|
-        macro_id = "#{id}_macro"
-        has_compose = "WORLD_USE_COMPOSE_FOR_#{id}"
-    %>
-    UNICODE(<%= macro_id %>, /* <%= character %> */
-    <%
-        # FIXME: global variable; pass it somehow instead
-        compositions = $compositions[character]
-
-        OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
-          sequence = character.chars.map do |character|
-            keystrokes = keystrokes_from_character(character, os)
-            format_keystrokes_for_unicode(keystrokes, os)
-          end
-
-          if sequence.length > 1
-            sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
-          end
-    %>
-      #<%= "el" if os_index > 0 %>if OPERATING_SYSTEM == <%= os_char %>
-    <%
-          composition_for_os = compositions[os.to_s] if compositions
-
-          if composition_for_os
-    %>
-        #ifdef WORLD_USE_COMPOSE
-        #define <%= has_compose %>
-        <%=
-          resolve_compose_keystrokes(composition_for_os, os).join(", ")
-        %>
-        #else
-    <%
-          end
-    %>
-        <%= sequence.join(", ") %>
-    <%
-          if composition_for_os
-    %>
-        #endif
-    <%
-          end
-    %>
-      <%= "#endif" if os_index + 1 == OPERATING_SYSTEMS.length %>
-    <%
-        end
-    %>
-    )
-    <%
-        mask = [
-          "(~(", # the negation suppresses any unrelated mods
-            "#ifdef #{has_compose}",
-              "COMPOSE_MORPH_MODS",
-            "#else",
-              "UNICODE_MORPH_MODS",
-            "#endif",
-          "))"
-        ].join("\n")
-        emit_zmk_mod_morph.(id, macro_id, macro_id, mask)
-      end
-
-      EMITTED_UNICODE_MACROS = {}
-      emit_unicode_macro_once = lambda do |id, character|
-        if emitted_id = EMITTED_UNICODE_MACROS[character]
-          emitted_id
+    def hexcodepoint_from_character(character, os)
+      case character.codepoints
+      in [codepoint]
+        # macOS expects two UTF-16 instead UTF-32
+        # https://apple.stackexchange.com/a/183056
+        if os == :macos && codepoint >= 0x10000
+          codepoint -= 0x10000
+          high_surrogate = 0xD800 + (codepoint >> 10)
+          low_surrogate = 0xDC00 + (codepoint & 0x3FF)
+          sprintf("%04X%04X", high_surrogate, low_surrogate)
         else
-          emit_unicode_macro.(id, character)
-          EMITTED_UNICODE_MACROS[character] = id
+          sprintf("%04X", codepoint)
         end
       end
+    end
 
-      emit_at_root_level = lambda do |&block|
-        # HACK: this is an SQL injection style attempt to temporarily escape
-        # to the root level of the DTSI to alias things under new shortnames
-        %>/*HACK*/};<% block.() %><%= "\n" %>/*HACK*//{<%
+    def keystrokes_from_hexcodepoint(hexcodepoint)
+      hexcodepoint.chars.map do |hexbyte|
+        keycode = keycode_from_hexbyte(hexbyte)
+        keystroke = keystroke_from_keycode(keycode)
+      end.join(" ")
+    end
+
+    def keycode_from_hexbyte(hexbyte)
+      case hexbyte
+      when "0".."9" then "N" + hexbyte
+      else hexbyte
       end
-    %>
+    end
 
-    //
-    // NOTE: edit the world.yaml file and run `rake` to generate this:
-    //
-    <%
-      require 'yaml'
-      world = YAML.load_file("world.yaml")
-      $compositions = world["compositions"] # FIXME: global variable
+    def keystroke_from_keycode(keycode)
+      "&kp #{keycode}"
+    end
 
-      def letter_id_prefix(id_prefix, letter)
-        "#{id_prefix}_#{letter.downcase}_"
-      end
+    emit_zmk_mod_morph = lambda do |id, plain, morphed, modifiers|
+  %>
+  <%= id %>: <%= id %> {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&<%= plain %>>, <&<%= morphed %>>;
+    mods = <<%= modifiers %>>;
+  };
+  <%
+    end
 
-      emit_unicode_codepoints = lambda do |codepoints, id_prefix|
-        codepoints.each do |name, codepoint|
-          id = "#{id_prefix}_#{name}"
-          emit_unicode_macro_once.(id, codepoint)
+    def resolve_compose_keystrokes(composition, os)
+      keycodes =
+        case os
+        when :linux
+          composition.sub(/^COMPOSE\b/, '')
+        when :macos
+          composition
+        when :windows
+          composition.sub(/^ALT\+/, '').gsub(/\d/, 'KP_N\& ')
         end
-      end
+        .split
 
-      emit_unicode_characters = lambda do |characters, id_prefix|
-        characters.each do |letter, transforms|
-          transforms.each do |modifier, shiftings_or_character|
-            accent_id = letter_id_prefix(id_prefix, letter) + modifier
-            if shiftings_or_character.respond_to? :map
-              shift_ids = shiftings_or_character.map do |shift, character|
-                emit_unicode_macro_once.("#{accent_id}_#{shift}", character)
-              end
-              emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
-            else
-              emit_unicode_macro_once.(accent_id, shiftings_or_character)
+      keystrokes = keycodes.map{ |key| "&kp #{key}" }.join(' ')
+
+      ["COMPOSE_SEQ_#{os.to_s.upcase}(#{keystrokes})"]
+    end
+
+    emit_unicode_macro = lambda do |id, character|
+      macro_id = "#{id}_macro"
+      has_compose = "WORLD_USE_COMPOSE_FOR_#{id}"
+  %>
+  UNICODE(<%= macro_id %>, /* <%= character %> */
+  <%
+      # FIXME: global variable; pass it somehow instead
+      compositions = $compositions[character]
+
+      OPERATING_SYSTEMS.each_with_index do |(os, os_char), os_index|
+        sequence = character.chars.map do |character|
+          keystrokes = keystrokes_from_character(character, os)
+          format_keystrokes_for_unicode(keystrokes, os)
+        end
+
+        if sequence.length > 1
+          sequence.insert(1, "<&macro_wait_time UNICODE_SEQ_DELAY>")
+        end
+  %>
+    #<%= "el" if os_index > 0 %>if OPERATING_SYSTEM == <%= os_char %>
+  <%
+        composition_for_os = compositions[os.to_s] if compositions
+
+        if composition_for_os
+  %>
+      #ifdef WORLD_USE_COMPOSE
+      #define <%= has_compose %>
+      <%=
+        resolve_compose_keystrokes(composition_for_os, os).join(", ")
+      %>
+      #else
+  <%
+        end
+  %>
+      <%= sequence.join(", ") %>
+  <%
+        if composition_for_os
+  %>
+      #endif
+  <%
+        end
+  %>
+    <%= "#endif" if os_index + 1 == OPERATING_SYSTEMS.length %>
+  <%
+      end
+  %>
+  )
+  <%
+      mask = [
+        "(~(", # the negation suppresses any unrelated mods
+          "#ifdef #{has_compose}",
+            "COMPOSE_MORPH_MODS",
+          "#else",
+            "UNICODE_MORPH_MODS",
+          "#endif",
+        "))"
+      ].join("\n")
+      emit_zmk_mod_morph.(id, macro_id, macro_id, mask)
+    end
+
+    EMITTED_UNICODE_MACROS = {}
+    emit_unicode_macro_once = lambda do |id, character|
+      if emitted_id = EMITTED_UNICODE_MACROS[character]
+        emitted_id
+      else
+        emit_unicode_macro.(id, character)
+        EMITTED_UNICODE_MACROS[character] = id
+      end
+    end
+
+    emit_at_root_level = lambda do |&block|
+      # HACK: this is an SQL injection style attempt to temporarily escape
+      # to the root level of the DTSI to alias things under new shortnames
+      %>/*HACK*/};<% block.() %><%= "\n" %>/*HACK*//{<%
+    end
+  %>
+
+  //
+  // NOTE: edit the world.yaml file and run `rake` to generate this:
+  //
+  <%
+    require 'yaml'
+    world = YAML.load_file("world.yaml")
+    $compositions = world["compositions"] # FIXME: global variable
+
+    def letter_id_prefix(id_prefix, letter)
+      "#{id_prefix}_#{letter.downcase}_"
+    end
+
+    emit_unicode_codepoints = lambda do |codepoints, id_prefix|
+      codepoints.each do |name, codepoint|
+        id = "#{id_prefix}_#{name}"
+        emit_unicode_macro_once.(id, codepoint)
+      end
+    end
+
+    emit_unicode_characters = lambda do |characters, id_prefix|
+      characters.each do |letter, transforms|
+        transforms.each do |modifier, shiftings_or_character|
+          accent_id = letter_id_prefix(id_prefix, letter) + modifier
+          if shiftings_or_character.respond_to? :map
+            shift_ids = shiftings_or_character.map do |shift, character|
+              emit_unicode_macro_once.("#{accent_id}_#{shift}", character)
             end
+            emit_zmk_mod_morph.(accent_id, *shift_ids, "MOD_LSFT")
+          else
+            emit_unicode_macro_once.(accent_id, shiftings_or_character)
           end
         end
       end
-    %>
+    end
+  %>
 
-    //
-    // codepoints
-    //
-    <%
-      emit_unicode_codepoints.(world["codepoints"], :world)
-    %>
+  //
+  // codepoints
+  //
+  <%
+    emit_unicode_codepoints.(world["codepoints"], :world)
+  %>
 
-    //
-    // characters
-    //
-    <%
-      emit_unicode_characters.(world["characters"], :world)
-    %>
+  //
+  // characters
+  //
+  <%
+    emit_unicode_characters.(world["characters"], :world)
+  %>
 
-    //
-    // transforms
-    //
-    <%
-      world["transforms"].each do |letter, transforms|
-        id_prefix = letter_id_prefix(:world, letter)
-        remaining_precedence = world["precedence"] & transforms.keys
-        available_precedence = ["base"] + remaining_precedence
+  //
+  // transforms
+  //
+  <%
+    world["transforms"].each do |letter, transforms|
+      id_prefix = letter_id_prefix(:world, letter)
+      remaining_precedence = world["precedence"] & transforms.keys
+      available_precedence = ["base"] + remaining_precedence
 
-        available_precedence.each_cons(2) do |modifier, next_modifier|
-          id        = id_prefix + modifier
-          accent_id = id_prefix + transforms[modifier]
-          next_id   = id_prefix + if remaining_precedence.length > 1
-                                    next_modifier
-                                  else
-                                    transforms[next_modifier]
-                                  end
+      available_precedence.each_cons(2) do |modifier, next_modifier|
+        id        = id_prefix + modifier
+        accent_id = id_prefix + transforms[modifier]
+        next_id   = id_prefix + if remaining_precedence.length > 1
+                                  next_modifier
+                                else
+                                  transforms[next_modifier]
+                                end
 
-          next_modifiers = "(#{
-            remaining_precedence.map{ |m| "MOD_#{m}" }.join("|")
-          })"
-          emit_zmk_mod_morph.(id, accent_id, next_id, next_modifiers)
-          remaining_precedence.shift
-        end
+        next_modifiers = "(#{
+          remaining_precedence.map{ |m| "MOD_#{m}" }.join("|")
+        })"
+        emit_zmk_mod_morph.(id, accent_id, next_id, next_modifiers)
+        remaining_precedence.shift
       end
-    %>
+    end
+  %>
 
-    //////////////////////////////////////////////////////////////////////////
-    //
-    // Emoji layer - modern age pictograms
-    //
-    //////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // Emoji layer - modern age pictograms
+  //
+  //////////////////////////////////////////////////////////////////////////
 
-    //
-    // EMOJI_GENDER_SIGN_PRESET defines an Emoji gender sign for use as a
-    // convenient inward-rolling shortcut on the home row of the layer.
-    //
-    #ifndef EMOJI_GENDER_SIGN_PRESET
-    #define EMOJI_GENDER_SIGN_PRESET 'N' // neutral
-    //#define EMOJI_GENDER_SIGN_PRESET 'M' // male
-    //#define EMOJI_GENDER_SIGN_PRESET 'F' // female
-    #endif
+  //
+  // EMOJI_GENDER_SIGN_PRESET defines an Emoji gender sign for use as a
+  // convenient inward-rolling shortcut on the home row of the layer.
+  //
+  #ifndef EMOJI_GENDER_SIGN_PRESET
+  #define EMOJI_GENDER_SIGN_PRESET 'N' // neutral
+  //#define EMOJI_GENDER_SIGN_PRESET 'M' // male
+  //#define EMOJI_GENDER_SIGN_PRESET 'F' // female
+  #endif
 
-    //
-    // EMOJI_SKIN_TONE_PRESET defines an Emoji skin tone for use as a
-    // convenient inward-rolling shortcut on the home row of the layer.
-    //
-    #ifndef EMOJI_SKIN_TONE_PRESET
-    #define EMOJI_SKIN_TONE_PRESET 'N' // neutral
-    //#define EMOJI_SKIN_TONE_PRESET 'L' // light_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 'l' // medium_light_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 'M' // medium_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 'd' // medium_dark_skin_tone
-    //#define EMOJI_SKIN_TONE_PRESET 'D' // dark_skin_tone
-    #endif
+  //
+  // EMOJI_SKIN_TONE_PRESET defines an Emoji skin tone for use as a
+  // convenient inward-rolling shortcut on the home row of the layer.
+  //
+  #ifndef EMOJI_SKIN_TONE_PRESET
+  #define EMOJI_SKIN_TONE_PRESET 'N' // neutral
+  //#define EMOJI_SKIN_TONE_PRESET 'L' // light_skin_tone
+  //#define EMOJI_SKIN_TONE_PRESET 'l' // medium_light_skin_tone
+  //#define EMOJI_SKIN_TONE_PRESET 'M' // medium_skin_tone
+  //#define EMOJI_SKIN_TONE_PRESET 'd' // medium_dark_skin_tone
+  //#define EMOJI_SKIN_TONE_PRESET 'D' // dark_skin_tone
+  #endif
 
-    //
-    // EMOJI_HAIR_STYLE_PRESET defines an Emoji hair style for use as a
-    // convenient inward-rolling shortcut on the home row of the layer.
-    //
-    #ifndef EMOJI_HAIR_STYLE_PRESET
-    #define EMOJI_HAIR_STYLE_PRESET 'N' // neutral
-    //#define EMOJI_HAIR_STYLE_PRESET 'B' // bald
-    //#define EMOJI_HAIR_STYLE_PRESET 'R' // red_hair
-    //#define EMOJI_HAIR_STYLE_PRESET 'C' // curly_hair
-    //#define EMOJI_HAIR_STYLE_PRESET 'W' // white_hair
-    #endif
+  //
+  // EMOJI_HAIR_STYLE_PRESET defines an Emoji hair style for use as a
+  // convenient inward-rolling shortcut on the home row of the layer.
+  //
+  #ifndef EMOJI_HAIR_STYLE_PRESET
+  #define EMOJI_HAIR_STYLE_PRESET 'N' // neutral
+  //#define EMOJI_HAIR_STYLE_PRESET 'B' // bald
+  //#define EMOJI_HAIR_STYLE_PRESET 'R' // red_hair
+  //#define EMOJI_HAIR_STYLE_PRESET 'C' // curly_hair
+  //#define EMOJI_HAIR_STYLE_PRESET 'W' // white_hair
+  #endif
 
-    //
-    // NOTE: edit the emoji.yaml file and run `rake` to generate this:
-    //
-    <%
-      require 'yaml'
-      emoji = YAML.load_file("emoji.yaml")
-    %>
+  //
+  // NOTE: edit the emoji.yaml file and run `rake` to generate this:
+  //
+  <%
+    require 'yaml'
+    emoji = YAML.load_file("emoji.yaml")
+  %>
 
-    //
-    // codepoints
-    //
-    <%
-      emit_unicode_codepoints.(emoji["codepoints"], :emoji)
-    %>
+  //
+  // codepoints
+  //
+  <%
+    emit_unicode_codepoints.(emoji["codepoints"], :emoji)
+  %>
 
-    //
-    // characters
-    //
-    <%
-      emit_unicode_characters.(emoji["characters"], :emoji)
-    %>
+  //
+  // characters
+  //
+  <%
+    emit_unicode_characters.(emoji["characters"], :emoji)
+  %>
 };
 
 <%
   emit_at_root_level.() do
 %>
 #if EMOJI_GENDER_SIGN_PRESET == 'N'
-    emoji_gender_sign_preset: &none {};
+  emoji_gender_sign_preset: &none {};
 #elif EMOJI_GENDER_SIGN_PRESET == 'M'
-    emoji_gender_sign_preset: &emoji_male_sign {};
+  emoji_gender_sign_preset: &emoji_male_sign {};
 #elif EMOJI_GENDER_SIGN_PRESET == 'F'
-    emoji_gender_sign_preset: &emoji_female_sign {};
+  emoji_gender_sign_preset: &emoji_female_sign {};
 #endif
 
 #if EMOJI_SKIN_TONE_PRESET == 'N'
-    emoji_skin_tone_preset: &none {};
+  emoji_skin_tone_preset: &none {};
 #elif EMOJI_SKIN_TONE_PRESET == 'L'
-    emoji_skin_tone_preset: &emoji_light_skin_tone {};
+  emoji_skin_tone_preset: &emoji_light_skin_tone {};
 #elif EMOJI_SKIN_TONE_PRESET == 'l'
-    emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
+  emoji_skin_tone_preset: &emoji_medium_light_skin_tone {};
 #elif EMOJI_SKIN_TONE_PRESET == 'M'
-    emoji_skin_tone_preset: &emoji_medium_skin_tone {};
+  emoji_skin_tone_preset: &emoji_medium_skin_tone {};
 #elif EMOJI_SKIN_TONE_PRESET == 'd'
-    emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
+  emoji_skin_tone_preset: &emoji_medium_dark_skin_tone {};
 #elif EMOJI_SKIN_TONE_PRESET == 'D'
-    emoji_skin_tone_preset: &emoji_dark_skin_tone {};
+  emoji_skin_tone_preset: &emoji_dark_skin_tone {};
 #endif
 
 #if EMOJI_HAIR_STYLE_PRESET == 'N'
-    emoji_hair_style_preset: &none {};
+  emoji_hair_style_preset: &none {};
 #elif EMOJI_HAIR_STYLE_PRESET == 'B'
-    emoji_hair_style_preset: &emoji_bald {};
+  emoji_hair_style_preset: &emoji_bald {};
 #elif EMOJI_HAIR_STYLE_PRESET == 'R'
-    emoji_hair_style_preset: &emoji_red_hair {};
+  emoji_hair_style_preset: &emoji_red_hair {};
 #elif EMOJI_HAIR_STYLE_PRESET == 'C'
-    emoji_hair_style_preset: &emoji_curly_hair {};
+  emoji_hair_style_preset: &emoji_curly_hair {};
 #elif EMOJI_HAIR_STYLE_PRESET == 'W'
-    emoji_hair_style_preset: &emoji_white_hair {};
+  emoji_hair_style_preset: &emoji_white_hair {};
 #endif
 <%
   end
