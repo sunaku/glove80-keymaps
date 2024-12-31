@@ -1,36 +1,51 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}\nspan.left {\n    display: block;\n    text-align: center;\n    transform: rotate(-90deg);\n    padding-left: 8em;\n    padding-bottom: 11em;\n}\nspan.right {\n    display: block;\n    text-align: center;\n    transform: rotate(90deg);\n    margin-left: -1.25em;\n    padding-right: 9.5em;\n    padding-bottom: 12em;\n}"
   },
   [
     {
-      "c": "#ffcdd2",
       "p": "CHICKLET",
-      "a": 7
+      "a": 7,
+      "f": 7
     },
-    "F1",
-    "F2",
-    "F3",
-    "F4",
-    "F5",
+    "",
+    "",
+    {
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    },
+    "hex\n10\n\n\n\n\nⓐ",
+    "hex\n11\n\n\n\n\nⓑ",
+    "hex\n12\n\n\n\n\nⓒ",
     {
       "x": 7
     },
-    "F6",
-    "F7",
-    "F8",
-    "F9",
-    "F10"
+    "hex\n13\n\n\n\n\nⓓ",
+    "hex\n14\n\n\n\n\nⓔ",
+    "hex\n15\n\n\n\n\nⓕ",
+    {
+      "a": 7,
+      "f": 7
+    },
+    "&larr;",
+    "&rarr;"
   ],
   [
     {
-      "c": "#ffecb3",
-      "a": 5,
       "f": 5
     },
-    "+\n=",
+    "",
     {
-      "c": "#ffccbc",
+      "a": 5,
       "f": 4
     },
     "!\n1",
@@ -39,15 +54,13 @@
     "$\n4",
     "%\n5",
     {
-      "c": "#cccccc",
       "a": 4,
       "w": 5,
       "h": 4,
       "d": true
     },
-    "<center><h2>Typing Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://engram.dev'>Engram</a><a href='https://github.com/sunaku/engrammer'><em>&middot;mer</em></a> keyboard layout</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "<center><h2>Typing Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
-      "c": "#ffccbc",
       "a": 5
     },
     "^\n6",
@@ -56,117 +69,138 @@
     "(\n9",
     ")\n0",
     {
-      "c": "#ffecb3"
+      "a": 7
     },
-    "|\n\\"
+    ""
   ],
   [
     {
       "f": 5
     },
-    "~\n`",
+    "",
     {
-      "c": "#cccccc",
-      "a": 7,
       "f": 3
     },
-    "B",
-    "Y\n\n\n\nAltGr",
-    "O",
-    "U",
+    "",
+    "",
+    "",
+    "",
     {
-      "c": "#ffecb3",
-      "a": 5,
       "f": 5
     },
-    "\"\n'",
+    "",
     {
       "x": 5
     },
-    ":\n;",
+    "",
     {
-      "c": "#cccccc",
-      "a": 7,
       "f": 3
     },
-    "L",
-    "D",
-    "W\n\n\n\nAltGr",
-    "V",
-    "Z"
+    "",
+    "",
+    "",
+    "",
+    {
+      "f": 4
+    },
+    ""
   ],
   [
+    {
+      "f": 3
+    },
+    "",
+    {
+      "c": "#FFCDD2"
+    },
+    "\n\n\n\nWin",
     {
       "c": "#bbdefb"
     },
-    "Caps word",
+    "\n\n\n\nAlt",
     {
-      "c": "#cccccc"
+      "c": "#dcedc8"
     },
-    "C\n\n\n\nWin",
-    "I\n\n\n\nAlt",
-    "E\n\n\n\nCtrl",
-    {
-      "n": true
-    },
-    "A\n\n\n\nShift",
+    "\n\n\n\nCtrl",
     {
       "c": "#ffecb3",
-      "a": 5,
-      "f": 4
+      "n": true
     },
-    "<\n,",
+    "\n\n\n\nShift",
+    {
+      "c": "#cccccc",
+      "f": 5
+    },
+    "",
     {
       "x": 5
     },
-    ">\n.",
+    "",
     {
-      "c": "#cccccc",
-      "a": 7,
+      "c": "#ffecb3",
       "f": 3,
       "n": true
     },
-    "H\n\n\n\nShift",
-    "T\n\n\n\nCtrl",
-    "S\n\n\n\nAlt",
-    "N\n\n\n\nWin",
-    "Q"
-  ],
-  [
+    "\n\n\n\nShift",
+    {
+      "c": "#dcedc8"
+    },
+    "\n\n\n\nCtrl",
     {
       "c": "#bbdefb"
     },
-    "Shift <small>(sticky)</small>",
+    "\n\n\n\nAlt",
+    {
+      "c": "#FFCDD2"
+    },
+    "\n\n\n\nWin",
     {
       "c": "#cccccc"
     },
-    "G",
-    "X",
-    "J",
-    "K",
+    ""
+  ],
+  [
     {
-      "c": "#ffecb3",
+      "p": "SPACE",
       "a": 5,
+      "fa": [
+        1,
+        1
+      ]
+    },
+    "(1-shot)\n(sticky)\n\n\nShift\n\nShift",
+    {
+      "p": "CHICKLET",
+      "a": 7
+    },
+    "",
+    "",
+    "",
+    "",
+    {
       "f": 4
     },
-    "_\n-",
+    "",
     {
       "x": 5
     },
-    "?\n/",
+    "",
     {
-      "c": "#cccccc",
-      "a": 7,
       "f": 3
     },
-    "R",
-    "M",
-    "F",
-    "P",
+    "",
+    "",
+    "",
+    "",
     {
-      "c": "#bbdefb"
+      "p": "SPACE",
+      "a": 5,
+      "fa": [
+        1,
+        1
+      ]
     },
-    "Shift <small>(sticky)</small>"
+    "(1-shot)\n(sticky)\n\n\nRShift\n\nRShift"
   ],
   [
     {
@@ -174,6 +208,7 @@
       "x": 6.95,
       "c": "#FFFF8D",
       "p": "FLAT",
+      "a": 7,
       "f": 2,
       "w": 1.1,
       "h": 2.7,
@@ -191,56 +226,76 @@
     },
     "Magic",
     {
-      "c": "#dcedc8",
+      "c": "#cccccc",
       "t": "#000000",
       "p": "CHICKLET"
     },
-    "Home",
-    "Page up",
-    "Page down",
-    "End",
+    "",
+    "",
+    "",
     {
-      "c": "#e1bee7"
+      "c": "#d1c4e9",
+      "p": "SPACE"
+    },
+    "\n\n\n\nEmoji",
+    {
+      "c": "#cccccc",
+      "p": "CHICKLET"
     },
     "Escape\n\n\n\nFunction",
     {
-      "c": "#dcedc8",
-      "fa": [
-        9
-      ]
+      "c": "#ffff8d",
+      "p": "SPACE",
+      "f": 9,
+      "n": true
     },
-    "&uarr;",
-    "&darr;",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
+    {
+      "c": "#757575",
+      "t": "#EEEEEE",
+      "p": "CHICKLET",
+      "f": 3
+    },
+    "Unlock layer",
     {
       "x": 1
     },
-    "&larr;",
-    "&rarr;",
+    "Unlock layer",
     {
-      "c": "#e1bee7",
+      "c": "#ffff8d",
+      "t": "#000000",
+      "p": "SPACE",
+      "f": 9,
+      "n": true
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
+    {
+      "c": "#cccccc",
+      "p": "CHICKLET",
       "f": 3
     },
     "Enter\n\n\n\nSystem",
     {
-      "c": "#ffecb3",
-      "a": 5,
+      "c": "#d1c4e9",
+      "p": "SPACE",
       "f": 4
     },
-    "<\n(",
+    "\n\n\n\nWorld",
     {
+      "c": "#cccccc",
+      "p": "CHICKLET",
       "f": 3
     },
-    "{\n[",
-    "}\n]",
+    "",
+    "",
     {
       "f": 4
     },
-    ">\n)",
+    "",
     {
       "c": "#757575",
       "t": "#EEEEEE",
       "p": "SPACE",
-      "a": 7,
       "f": 3
     },
     "Magic"
@@ -248,26 +303,18 @@
   [
     {
       "x": 5,
-      "c": "#e1bee7",
+      "c": "#cccccc",
       "t": "#000000",
       "p": "CHICKLET",
       "n": true
     },
     "Back space\n\n\n\nCursor",
     "Delete\n\n\n\nNumber",
-    {
-      "c": "#757575",
-      "t": "#EEEEEE"
-    },
-    "Unlock layer",
+    "Caps word",
     {
       "x": 1
     },
-    "Unlock layer",
-    {
-      "c": "#e1bee7",
-      "t": "#000000"
-    },
+    "Caps word",
     "Tab\n\n\n\nMouse",
     {
       "n": true

@@ -1,9 +1,12 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80] keymap featuring the [Enthium] and [Engram]* layouts with
+This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
 Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
 also provided as "training wheels" to aid your transition to the full glory.
+
+![Photograph of my MoErgo Glove80 keyboard with Enthium layout and per-key RGB
+illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
@@ -14,9 +17,9 @@ also provided as "training wheels" to aid your transition to the full glory.
 
 ## Keymap
 
-Version 39 (2024-11-12)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v39
-- Release: https://my.glove80.com/#/layout/user/bfe314cb-8b14-43aa-9b1f-700a36570447
+Version 40 (2024-12-31)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v40
+- Release: https://my.glove80.com/#/layout/user/ede90be3-70e7-4178-9d34-133fc6383421
 
 ### Legend
 
@@ -277,15 +280,17 @@ by holding the Magic key and tapping the respective number key for that layer.
 
 | Shortcut  | Layer number | Alpha layout                        |
 | --------- | ------------ | ----------------------------------- |
-| Magic+`=` | 0            | Engrammer (base layer; your choice) |
-| Magic+`1` | 1            | Engram                              |
-| Magic+`2` | 2            | Dvorak                              |
-| Magic+`3` | 3            | ColemakDHm                          |
+| Magic+`=` | 0            | Enthium (base layer; your choice)   |
+| Magic+`1` | 1            | Engrammer                           |
+| Magic+`2` | 2            | Engram                              |
+| Magic+`3` | 3            | Dvorak                              |
 | Magic+`4` | 4            | Colemak                             |
 | Magic+`5` | 5            | QWERTY                              |
-| Magic+`6` | 6            | Norman                              |
-| Magic+`7` | 7            | Workman                             |
-| Magic+`8` | 8            | Halmak                              |
+| Magic+`6` | 6            | ColemakDH                           |
+| Magic+`7` | 7            | Canary                              |
+| Magic+`8` | 8            | Sturdy                              |
+| Magic+`9` | 9            | Graphite                            |
+| Magic+`0` | 10           | Gallium                             |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
@@ -320,7 +325,7 @@ Unicode) to type international characters in the World layer, activate this:
 ```h
 //
 // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
-// for characters in the "localizing" section of the `world.yaml` file.
+// for characters in the "compositions" section of the `world.yaml` file.
 //
 #define WORLD_USE_COMPOSE
 ```
@@ -340,12 +345,18 @@ Open the [keymap link above](#keymap) and follow these instructions:
 
 ### Enabling mouse emulation
 
-Before building the firmware (step 5 above), change the version to PR23:
-open the "Settings" tab, choose PR23, and then go back to the "Edit" tab.
+Before building the firmware (step 5 above), change the version to 24.12 or
+newer: open the "Settings" tab, choose PR30, and go back to the "Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
 
-Without this change, the mouse control keys on the Mouse layer won't work.
+Next, in the "Advanced Configuration" tab towards the bottom of the page,
+enable the `HID_POINTING` setting by ticking the "Overriden" checkbox and
+then the "y" radio button.  Now proceed to build and flash your keymap.
+
+Alternatively, you can still use the older PR23 beta firmware for this:
+select "community.pr23.mouse-keys" from the drop-down menu located at
+Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
 
 ### Enabling per-key RGB lighting
 
@@ -711,7 +722,7 @@ Finally, assign `&world_sign_base` to a "Custom" key in the Glove80 Layout Edito
 Suppose you wanted the copyright sign © character from the previous section to
 be typed using your operating system's native Compose key rather than Unicode.
 
-First, open the `world.yaml` file and add a new entry under the `localizing` section:
+First, open the `world.yaml` file and add a new entry in the `compositions` section:
 
 ```yaml
 #
@@ -966,7 +977,7 @@ mirroring_transformation = {
 // | 79 78 77 76 75         |         68 67 66 65 64 |
 // |                74 57   |   52 69                |
 // |                 73 56  |  53 70                 |
-// |                  71 54 | 55 72                  |
+// |                  72 55 | 54 71                  |
 // |------------------------|------------------------|
 //
    0: 9,  1: 8,  2: 7,  3: 6,  4: 5,                              5: 4,  6: 3,  7: 2,  8: 1,  9: 0,

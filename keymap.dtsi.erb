@@ -12,7 +12,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v39 -- "Glorious Engrammer"
+// Sunaku's Keymap v40 -- "Glorious Engrammer"
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
@@ -192,6 +192,9 @@
 
 combos {
   compatible = "zmk,combos";
+  <%
+    alpha_layer_ids = (0...ALPHA_LAYERS_COUNT).to_a.join(" ")
+  %>
 
   //
   // COMBO_FIRING_DECAY defines how much time you have left (milliseconds)
@@ -216,7 +219,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T4 POS_LH_T1>;
     bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
   #endif
 
@@ -224,7 +227,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
   #endif
 
@@ -232,35 +235,35 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T4>;
     bindings = <&sk LG(LA(LC(LSHFT)))>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_sticky_meh_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&sk LA(LC(LSHFT))>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_sticky_AltGr_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T5>;
     bindings = <&sk RALT>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_sticky_AltGr_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T5>;
     bindings = <&sk RALT>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_lock {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T6 POS_RH_T6>;
     bindings = <&kp CAPSLOCK>;
-    layers = <<%= (0...ALPHA_LAYERS_COUNT).to_a.join(" ") %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
 };

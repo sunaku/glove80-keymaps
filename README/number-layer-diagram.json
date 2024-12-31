@@ -67,38 +67,58 @@
     },
     "!",
     {
-      "c": "#C5CAE9"
+      "c": "#ffccbc"
     },
-    "|"
+    "@"
   ],
   [
     {
       "c": "#dcedc8",
-      "f": 5
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
     },
-    "a\n\n\n\nAltGr",
+    "hex\n10\n\n\n\n\nⓐ",
     {
       "c": "#cccccc",
+      "p": "SPACE",
+      "a": 7,
       "f": 3
     },
-    "Shift <small>(sticky)</small>",
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
     {
-      "c": "#e1bee7"
+      "c": "#e1bee7",
+      "p": "CHICKLET",
+      "f": 3
     },
     "Redo",
+    {
+      "f": 3
+    },
     "Undo",
     {
-      "c": "#ffccbc"
+      "c": "#ffccbc",
+      "f": 3
     },
     "Back space",
     {
       "c": "#dcedc8",
-      "f": 5
+      "a": 5
     },
-    "d",
+    "hex\n13\n\n\n\n\nⓓ",
     {
       "x": 5,
-      "c": "#C5CAE9"
+      "c": "#C5CAE9",
+      "a": 7,
+      "f": 5
     },
     "G",
     {
@@ -121,28 +141,50 @@
   [
     {
       "c": "#dcedc8",
-      "f": 5
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
     },
-    "b",
+    "hex\n11\n\n\n\n\nⓑ",
     {
       "c": "#cccccc",
+      "p": "SPACE",
+      "a": 7,
       "f": 3
     },
     "Win\n\n\n\nWin",
+    {
+      "f": 3
+    },
     "Alt\n\n\n\nAlt",
+    {
+      "f": 3
+    },
     "Ctrl\n\n\n\nCtrl",
     {
+      "f": 3,
       "n": true
     },
     "Shift\n\n\n\nShift",
     {
       "c": "#dcedc8",
-      "f": 5
+      "p": "CHICKLET",
+      "a": 5
     },
-    "e",
+    "hex\n14\n\n\n\n\nⓔ",
     {
       "x": 5,
-      "c": "#C5CAE9"
+      "c": "#C5CAE9",
+      "a": 7,
+      "f": 5
     },
     "k",
     {
@@ -166,33 +208,60 @@
   [
     {
       "c": "#dcedc8",
-      "f": 5
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
     },
-    "c",
+    "hex\n12\n\n\n\n\nⓒ",
     {
       "c": "#bbdefb",
       "t": "#00000",
+      "a": 7,
       "f": 3
     },
     "Select all",
     {
-      "t": "#000000"
+      "t": "#000000",
+      "f": 3
     },
     "Select line\n\n\n\nMouse",
+    {
+      "f": 3
+    },
     "Select word\n\n\n\nSymbol",
     {
       "c": "#ffcdd2",
-      "f": 6
+      "f": 9
     },
-    "𝒙",
+    "<big>𝓍</big>",
     {
       "c": "#dcedc8",
-      "f": 5
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
     },
-    "f",
+    "hex\n15\n\n\n\n\nⓕ",
     {
       "x": 5,
-      "c": "#C5CAE9"
+      "c": "#C5CAE9",
+      "a": 7,
+      "f": 5
     },
     "j",
     {
@@ -263,43 +332,39 @@
     },
     "<\n,",
     {
+      "c": "#757575",
+      "t": "#EEEEEE",
+      "g": false,
       "a": 7
     },
-    "Caps word",
+    "Unlock layer",
     {
       "x": 1,
-      "c": "#ffccbc",
-      "g": false,
-      "a": 5,
-      "f": 4
-    },
-    "{\n[",
-    "}\n]",
-    {
       "c": "#ffecb3",
-      "a": 7,
+      "t": "#000000",
+      "f": 6
+    },
+    "<",
+    ">",
+    {
       "f": 8
     },
     "=",
     {
-      "f": 6
-    },
-    "<",
-    {
       "c": "#ffccbc",
-      "f": 5
+      "a": 5,
+      "f": 4
     },
-    "(",
-    ")",
+    "{\n[",
+    "<\n(",
+    ">\n)",
+    "}\n]",
     {
-      "c": "#ffecb3",
+      "c": "#C5CAE9",
+      "a": 7,
       "f": 6
     },
-    ">",
-    {
-      "c": "#ffccbc"
-    },
-    "@"
+    "|"
   ],
   [
     {
@@ -309,25 +374,25 @@
     },
     "Num lock",
     {
-      "c": "#D1C4E9",
+      "c": "#ffff8d",
       "p": "SPACE",
       "fa": [
         9
       ],
       "n": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#757575",
-      "t": "#EEEEEE",
+      "c": "#cccccc",
+      "g": true,
       "p": "CHICKLET",
       "f": 3
     },
-    "Unlock layer",
+    "Caps word",
     {
       "x": 1,
       "c": "#ffccbc",
-      "t": "#000000",
+      "g": false,
       "f": 8
     },
     ",\n\n\n\nMouse",
