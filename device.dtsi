@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////////////////
 //
-// Per-key RGB indicators for layers & mods -- requires PR30 beta firmware:
+// Per-key RGB indicators for layers & mods -- requires PR36 beta firmware:
 // override "EXPERIMENTAL_RGB_LAYER" to "y" in Advanced Configuration and
-// select "community.pr30.per-key-rgb" from the drop-down menu located at
+// select "community.pr36.per-key-rgb" from the drop-down menu located at
 // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
 //
 //////////////////////////////////////////////////////////////////////////
@@ -18,33 +18,33 @@
       // color definitions from QMK
       // https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
       //
-      #define AZURE     0x99F5FF // #99F5FF
-      #define BLACK     0x000000 // #000000
-      #define BLUE      0x0000FF // #0000FF
-      #define CHARTRSE  0x80FF00 // #80FF00
-      #define CORAL     0xFF7C4D // #FF7C4D
-      #define CYAN      0x00FFFF // #00FFFF
-      #define GOLD      0xFFD900 // #FFD900
-      #define GOLDNROD  0xD9A521 // #D9A521
-      #define GREEN     0x00FF00 // #00FF00
-      #define MAGENTA   0xFF00FF // #FF00FF
-      #define ORANGE    0xFF8000 // #FF8000
-      #define PINK      0xFF80BF // #FF80BF
-      #define PURPLE    0x7A00FF // #7A00FF
-      #define RED       0xFF0000 // #FF0000
-      #define SPRINGRN  0x00FF80 // #00FF80
-      #define TEAL      0x008080 // #008080
-      #define TURQUOIS  0x476E6A // #476E6A
-      #define WHITE     0xFFFFFF // #FFFFFF
-      #define YELLOW    0xFFFF00 // #FFFF00
+      #define AZURE     &ug 0x99F5FF // #99F5FF
+      #define BLACK     &ug 0x000000 // #000000
+      #define BLUE      &ug 0x0000FF // #0000FF
+      #define CHARTRSE  &ug 0x80FF00 // #80FF00
+      #define CORAL     &ug 0xFF7C4D // #FF7C4D
+      #define CYAN      &ug 0x00FFFF // #00FFFF
+      #define GOLD      &ug 0xFFD900 // #FFD900
+      #define GOLDNROD  &ug 0xD9A521 // #D9A521
+      #define GREEN     &ug 0x00FF00 // #00FF00
+      #define MAGENTA   &ug 0xFF00FF // #FF00FF
+      #define ORANGE    &ug 0xFF8000 // #FF8000
+      #define PINK      &ug 0xFF80BF // #FF80BF
+      #define PURPLE    &ug 0x7A00FF // #7A00FF
+      #define RED       &ug 0xFF0000 // #FF0000
+      #define SPRINGRN  &ug 0x00FF80 // #00FF80
+      #define TEAL      &ug 0x008080 // #008080
+      #define TURQUOIS  &ug 0x476E6A // #476E6A
+      #define WHITE     &ug 0xFFFFFF // #FFFFFF
+      #define YELLOW    &ug 0xFFFF00 // #FFFF00
       #define ________  BLACK    // #000000
 
       //
       // color definitions from MoErgo
       // https://github.com/moergo-sc/zmk/blob/aca523dfce9b6447ffd19d833b791d44f1f286de/app/src/rgb_underglow.c#L259-L265
       //
-      #define DULL_GRN  0x00ff68 // #00ff68
-      #define LILAC     0x6b1fce // #6b1fce
+      #define DULL_GRN  &ug 0x00ff68 // #00ff68
+      #define LILAC     &ug 0x6b1fce // #6b1fce
 
       /*
       Template {
