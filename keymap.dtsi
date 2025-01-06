@@ -9932,6 +9932,7 @@ UNICODE_MORPH_MODS
 // - https://github.com/moergo-sc/zmk/pull/23
 // - https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae
 // - https://github.com/zmkfirmware/zmk/compare/main...urob:zmk:mouse-3.2
+// - https://github.com/caksoylar/zmk-config/commit/0020c23c544cd7111013f0114609d1fb90e0e475
 //
 //////////////////////////////////////////////////////////////////////////
 
@@ -10002,6 +10003,30 @@ UNICODE_MORPH_MODS
 #ifndef MOUSE_SCROLL_MAXIMUM_SPEED
 #define MOUSE_SCROLL_MAXIMUM_SPEED 10
 #endif
+
+//
+// MOUSE_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+//
+#ifndef MOUSE_SCALER_SLOW
+#define MOUSE_SCALER_SLOW 1 4
+#endif
+
+//
+// MOUSE_SCALER_FAST sets parameters for the &zip_xy_scaler input processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+//
+#ifndef MOUSE_SCALER_FAST
+#define MOUSE_SCALER_FAST 4 1
+#endif
+
+//
+// MOUSE_SCALER_WARP sets parameters for the &zip_xy_scaler input processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+//
+#ifndef MOUSE_SCALER_WARP
+#define MOUSE_SCALER_WARP 12 1
+#endif
 /*HACK*/};
 #ifdef ENABLE_MOUSE_KEYS
   // ==== MOUSE-KEY <section begins> ====
@@ -10017,6 +10042,31 @@ UNICODE_MORPH_MODS
     delay-ms = <MOUSE_SCROLL_DELAY>;
     acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
     time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
+  };
+  //
+  // Scaling for mouse movement, based on @caksoylar's example:
+  // https://github.com/caksoylar/zmk-config/commit/0020c23c544cd7111013f0114609d1fb90e0e475
+  //
+  #include <input/processors.dtsi>
+  &mmv_input_listener {
+    #ifdef LAYER_MouseSlow
+    slow {
+      layers = <LAYER_MouseSlow>;
+      input-processors = <&zip_xy_scaler MOUSE_SCALER_SLOW>;
+    };
+    #endif
+    #ifdef LAYER_MouseFast
+    fast {
+      layers = <LAYER_MouseFast>;
+      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
+    };
+    #endif
+    #ifdef LAYER_MouseWarp
+    warp {
+      layers = <LAYER_MouseWarp>;
+      input-processors = <&zip_xy_scaler MOUSE_SCALER_WARP>;
+    };
+    #endif
   };
   // ==== MOUSE-KEY <section ends> =====
 #else

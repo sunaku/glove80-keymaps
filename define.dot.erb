@@ -21,7 +21,7 @@ digraph settings {
       warn({ number: {key => value} })
       numbers << value
       value = "NUMBER_#{value}"
-    when "\\", /\(/
+    when "\\", /\(/, /\s/
       warn({ definition: {key => value} })
       next # skip this setting -- it's a complex multi-line definition
     end

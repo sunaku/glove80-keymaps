@@ -74,7 +74,12 @@ file 'define.json' => ['keymap.dtsi.min', 'device.dtsi.min'] do |t|
     .gsub(/#define (\w+)/, '\1 =')
     .lines.inject({}) do |hash, line|
       setting = line[/\w+/]
-      value = eval(line) rescue nil
+      value =
+        begin
+          eval(line)
+        rescue Exception
+          warn "#{t.name}: skipped #{line.inspect}"
+        end
       hash[setting] = value if value
       hash
     end
