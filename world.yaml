@@ -61,6 +61,7 @@ characters:
     grave:      { lower: "ò",  upper: "Ò"  }
     tilde:      { lower: "õ",  upper: "Õ"  }
     slash:      { lower: "ø",  upper: "Ø"  }
+    oe:         { lower: "œ",  upper: "Œ"  }
   U:
     acute:      { lower: "ú",  upper: "Ú"  }
     diaeresis:  { lower: "ü",  upper: "Ü"  }
@@ -482,11 +483,12 @@ compositions:
     windows: ALT+0176
 
   "¡":
+    linux:   COMPOSE EXCL EXCL
     macos:   LA(N1)
     windows: ALT+0161
 
   "¿":
-    linux:   COMPOSE EXCL EXCL
+    linux:   COMPOSE QMARK QMARK
     macos:   LA(LS(FSLH))
     windows: ALT+0191
 
