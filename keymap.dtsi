@@ -10190,9 +10190,6 @@ UNICODE_MORPH_MODS
   #define MB3
   #define MB4
   #define MB5
-  #define MB6
-  #define MB7
-  #define MB8
   #define MOVE_UP
   #define MOVE_DOWN
   #define MOVE_LEFT
