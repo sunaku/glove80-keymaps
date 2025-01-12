@@ -10115,9 +10115,9 @@ UNICODE_MORPH_MODS
 /*HACK*/};
 #ifdef ENABLE_MOUSE_KEYS
   // ==== MOUSE-KEY <section begins> ====
-  #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
-  #define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
-  #include <dt-bindings/zmk/mouse.h>
+  #define ZMK_POINTING_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
+  #define ZMK_POINTING_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
+  #include <dt-bindings/zmk/pointing.h>
   &mmv {
     delay-ms = <MOUSE_MOTION_DELAY>;
     acceleration-exponent = <MOUSE_MOTION_ACCELERATION_EXPONENT>;
