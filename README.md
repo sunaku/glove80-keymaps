@@ -346,22 +346,22 @@ Open the [keymap link above](#keymap) and follow these instructions:
 ### Enabling mouse emulation
 
 Before building the firmware (step 5 above), change the version to 24.12 or
-newer: open the "Settings" tab, choose PR30, and go back to the "Edit" tab.
+newer: open the "Settings" tab, choose 24.12, and go back to the "Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+
+Alternatively, you might use the newer PR36 beta firmware for this too:
+select "community.pr36.mouse-keys" from the drop-down menu located at
+Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
 
 Next, in the "Advanced Configuration" tab towards the bottom of the page,
 enable the `HID_POINTING` setting by ticking the "Overriden" checkbox and
 then the "y" radio button.  Now proceed to build and flash your keymap.
 
-Alternatively, you can still use the older PR23 beta firmware for this:
-select "community.pr23.mouse-keys" from the drop-down menu located at
-Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
-
 ### Enabling per-key RGB lighting
 
-Before building the firmware (step 5 above), change the version to PR30:
-open the "Settings" tab, choose PR30, and then go back to the "Edit" tab.
+Before building the firmware (step 5 above), change the version to PR36:
+open the "Settings" tab, choose PR36, and then go back to the "Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
 

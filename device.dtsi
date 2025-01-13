@@ -5,6 +5,8 @@
 // select "community.pr36.per-key-rgb" from the drop-down menu located at
 // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
 //
+// - https://github.com/moergo-sc/zmk/pull/36
+// - https://github.com/moergo-sc/zmk/pull/30
 // - https://github.com/zmkfirmware/zmk/pull/2752
 // - https://dev.glove80.com/#/layout/user/c42ac32d-dc0d-4160-9ee3-fd0fc15f1725
 //
