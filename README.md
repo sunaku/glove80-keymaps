@@ -17,9 +17,9 @@ illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
 
 ## Keymap
 
-Version 40 (2024-12-31)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v40
-- Release: https://my.glove80.com/#/layout/user/ede90be3-70e7-4178-9d34-133fc6383421
+Version 41 (2025-01-13)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v41
+- Release: https://my.glove80.com/#/layout/user/593d6c43-64f6-4124-b2c9-474347d8256f
 
 ### Legend
 
@@ -168,9 +168,6 @@ whereby tapping them temporarily activates a sticky Shift that applies itself
 to the next key you tap.  This can be useful for single letter capitalization,
 such as for the frequent "I" in English or when typing camel/PascalCase names.
 
-Similarly, the combination of thumb T4 and the home row index finger key also
-provides the same one-shot sticky shifting for single letter capitalization.
-
 #### Shift forgiveness
 
 What should happen when a home row shift is held and released without any other
@@ -267,10 +264,10 @@ Instead, you have two options for engaging auto-repeat on dual-function keys:
 1. Use the "Tap then hold" method: first tap (press and release) and then hold
    (press and don't release until the desired amount of repetition is reached).
 
-2. Using repetition access keys: first hold a `&plain` layer access key and
+2. Using repetition access keys: first hold down a Typing layer access key and
    then hold the key you want to repeat for the desired amount of repetition.
 
-![Using repetition access keys](https://github.com/sunaku/glove80-keymaps/assets/9863/de0078c5-eeda-40fc-8c5b-39b7c0338cdc)
+![Using repetition access keys](README/key-auto-repeat.png)
 
 ### Alpha layouts
 
@@ -288,9 +285,6 @@ by holding the Magic key and tapping the respective number key for that layer.
 | Magic+`5` | 5            | QWERTY                              |
 | Magic+`6` | 6            | ColemakDH                           |
 | Magic+`7` | 7            | Canary                              |
-| Magic+`8` | 8            | Sturdy                              |
-| Magic+`9` | 9            | Graphite                            |
-| Magic+`0` | 10           | Gallium                             |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
@@ -346,22 +340,22 @@ Open the [keymap link above](#keymap) and follow these instructions:
 ### Enabling mouse emulation
 
 Before building the firmware (step 5 above), change the version to 24.12 or
-newer: open the "Settings" tab, choose PR30, and go back to the "Edit" tab.
+newer: open the "Settings" tab, choose 24.12, and go back to the "Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+
+Alternatively, you might use the newer PR36 beta firmware for this too:
+select "community.pr36.mouse-keys" from the drop-down menu located at
+Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
 
 Next, in the "Advanced Configuration" tab towards the bottom of the page,
 enable the `HID_POINTING` setting by ticking the "Overriden" checkbox and
 then the "y" radio button.  Now proceed to build and flash your keymap.
 
-Alternatively, you can still use the older PR23 beta firmware for this:
-select "community.pr23.mouse-keys" from the drop-down menu located at
-Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
-
 ### Enabling per-key RGB lighting
 
-Before building the firmware (step 5 above), change the version to PR30:
-open the "Settings" tab, choose PR30, and then go back to the "Edit" tab.
+Before building the firmware (step 5 above), change the version to PR36:
+open the "Settings" tab, choose PR36, and then go back to the "Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
 

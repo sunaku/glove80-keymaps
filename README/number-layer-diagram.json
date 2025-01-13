@@ -369,12 +369,14 @@
   [
     {
       "x": 5,
-      "c": "#e1bee7",
+      "c": "#cccccc",
+      "g": true,
       "f": 3
     },
-    "Num lock",
+    "Caps word",
     {
       "c": "#ffff8d",
+      "g": false,
       "p": "SPACE",
       "fa": [
         9

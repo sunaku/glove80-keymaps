@@ -1,14 +1,16 @@
-//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 //
 // Per-key RGB indicators for layers & mods -- requires PR36 beta firmware:
 // override "EXPERIMENTAL_RGB_LAYER" to "y" in Advanced Configuration and
 // select "community.pr36.per-key-rgb" from the drop-down menu located at
 // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
 //
+// - https://github.com/moergo-sc/zmk/pull/36
+// - https://github.com/moergo-sc/zmk/pull/30
 // - https://github.com/zmkfirmware/zmk/pull/2752
 // - https://dev.glove80.com/#/layout/user/c42ac32d-dc0d-4160-9ee3-fd0fc15f1725
 //
-//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 #if __has_include(<dt-bindings/zmk/rgb_colors.h>)
   // ==== PER-KEY-RGB <section begins> ====
@@ -394,7 +396,7 @@
           ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
           ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
           ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          YELLOW   ________ ________ ________ ________ ________ ________ LILAC    RED            RED    LILAC ________ ________ ________ ________ ________ ________   YELLOW
+          YELLOW   ________ ________ ________ ________ ________ ________ ________ RED            RED ________ ________ ________ ________ ________ ________ ________   YELLOW
           ________ ________ ________ ________ DULL_GRN          ________ ________ ________  ________ ________ ________          DULL_GRN ________ ________ ________ ________
         >;
         layer-id = <LAYER_Typing>;

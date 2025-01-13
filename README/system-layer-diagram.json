@@ -92,20 +92,19 @@
     },
     "Pause break",
     {
-      "x": 5,
+      "x": 5
+    },
+    "Pause break",
+    {
+      "c": "#e1bee7"
+    },
+    "Lock screen",
+    "Sleep",
+    "Power",
+    {
       "c": "#dcedc8"
     },
     "Sat ➕",
-    {
-      "c": "#c5cae9"
-    },
-    "Pause break",
-    "Scroll lock",
-    "Num lock",
-    "Caps lock",
-    {
-      "c": "#dcedc8"
-    },
     "Sat ➖"
   ],
   [
@@ -134,24 +133,20 @@
     },
     "Print screen",
     {
-      "x": 5,
-      "c": "#ffccbc"
-    },
-    "Hue ➕",
-    {
-      "c": "#c5cae9",
-      "n": true
+      "x": 5
     },
     "Print screen",
     {
-      "c": "#e1bee7"
+      "c": "#ffecb3",
+      "n": true
     },
-    "Lock screen",
-    "Sleep",
-    "Power",
+    "RGB toggle",
+    "Effect ➖",
+    "Effect ➕",
     {
       "c": "#ffccbc"
     },
+    "Hue ➕",
     "Hue ➖"
   ],
   [
@@ -179,23 +174,16 @@
     },
     "<small>Context</small> menu",
     {
-      "x": 5,
+      "x": 5
+    },
+    "<small>Context</small> menu",
+    "Scroll lock",
+    "Num lock",
+    "Caps lock",
+    {
       "c": "#FFCDD2"
     },
     "Speed ➕",
-    {
-      "c": "#c5cae9"
-    },
-    "<small>Context</small> menu",
-    {
-      "c": "#ffecb3"
-    },
-    "Effect ➕",
-    "Effect ➖",
-    "RGB toggle",
-    {
-      "c": "#FFCDD2"
-    },
     "Speed ➖"
   ],
   [
@@ -233,7 +221,7 @@
       "g": false,
       "p": "SPACE"
     },
-    "Linux Magic SysRq\n\n\n\nBase Lyr.",
+    "Linux Magic SysRq\n\n\n\n<sup>Base Layer</sup>",
     {
       "c": "#e1bee7",
       "t": "#000000",
@@ -315,7 +303,8 @@
     {
       "x": 1,
       "c": "#cccccc",
-      "g": true
+      "g": true,
+      "f": 3
     },
     "&lArr;",
     {

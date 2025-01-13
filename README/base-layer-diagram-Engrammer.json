@@ -267,23 +267,20 @@
     {
       "c": "#cccccc",
       "t": "#000000",
-      "p": "CHICKLET"
-    },
-    "Home",
-    "Page up",
-    "Page down",
-    {
-      "c": "#d1c4e9",
-      "p": "SPACE"
-    },
-    "End\n\n\n\nEmoji",
-    {
-      "c": "#D1C4E9"
-    },
-    "Escape\n\n\n\nFunction",
-    {
-      "c": "#d1c4e9",
+      "p": "CHICKLET",
       "a": 5,
+      "f": 5
+    },
+    "~\n`",
+    {
+      "f": 4
+    },
+    "{\n[",
+    "}\n]",
+    {
+      "c": "#d1c4e9",
+      "p": "SPACE",
+      "f": 3,
       "fa": [
         1,
         1,
@@ -294,9 +291,19 @@
     },
     "(1-shot)\n(sticky)\n\n\nTyping\n\nShift",
     {
+      "c": "#D1C4E9",
+      "a": 7,
+      "f": 3
+    },
+    "Escape\n\n\n\nFunction",
+    {
+      "c": "#d1c4e9",
+      "f": 3
+    },
+    "<small>Context</small> menu\n\n\n\nEmoji",
+    {
       "c": "#757575",
       "t": "#EEEEEE",
-      "a": 7,
       "f": 3
     },
     "Lower",
@@ -308,6 +315,16 @@
     {
       "c": "#d1c4e9",
       "t": "#000000",
+      "f": 3
+    },
+    "Insert\n\n\n\nWorld",
+    {
+      "c": "#D1C4E9",
+      "f": 3
+    },
+    "Enter\n\n\n\nSystem",
+    {
+      "c": "#d1c4e9",
       "a": 5,
       "fa": [
         1,
@@ -316,28 +333,13 @@
     },
     "(1-shot)\n(sticky)\n\n\nTyping\n\nRShift",
     {
-      "c": "#D1C4E9",
-      "a": 7,
-      "f": 3
-    },
-    "Enter\n\n\n\nSystem",
-    {
-      "c": "#d1c4e9",
-      "a": 5,
-      "f": 4
-    },
-    "<\n(\n\n\nWorld",
-    {
       "c": "#cccccc",
       "p": "CHICKLET",
-      "f": 3
-    },
-    "{\n[",
-    "}\n]",
-    {
       "f": 4
     },
+    "<\n(",
     ">\n)",
+    "|\n\\",
     {
       "c": "#757575",
       "t": "#EEEEEE",

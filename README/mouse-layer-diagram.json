@@ -93,34 +93,23 @@
     },
     "Wheel right",
     {
-      "c": "#cccccc",
-      "g": true,
-      "a": 5
+      "c": "#c5cae9"
     },
-    "\"\n'",
+    "Cut",
     {
-      "x": 5,
-      "c": "#e1bee7",
-      "g": false,
-      "a": 7,
-      "f": 5,
-      "fa": [
-        3
-      ]
+      "x": 5
     },
-    "Middle click",
+    "Cut",
+    {
+      "c": "#dcedc8"
+    },
+    "Wheel left",
+    "Wheel up",
+    "Wheel down",
+    "Wheel right",
     {
       "c": "#cccccc",
-      "p": "SPACE",
-      "f": 3
-    },
-    "Shift\n\n\n\nShift",
-    "Ctrl\n\n\n\nCtrl",
-    "Alt\n\n\n\nAlt",
-    "Win\n\n\n\nWin",
-    {
-      "g": true,
-      "p": "CHICKLET"
+      "g": true
     },
     "Z"
   ],
@@ -150,34 +139,28 @@
     },
     "&rarr;",
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#c5cae9",
       "f": 3
     },
-    "Mouse accel 1",
+    "Copy",
     {
-      "x": 5,
-      "c": "#ffecb3",
-      "g": false,
-      "f": 5,
-      "fa": [
-        3
-      ]
+      "x": 5
     },
-    "Left click",
+    "Copy",
     {
-      "c": "#BBDEFB",
-      "f": 9,
+      "c": "#ffcdd2",
       "n": true
     },
-    "&larr;",
-    "&uarr;",
-    "&darr;",
-    "&rarr;",
+    "Fast speed",
+    "Warp speed",
+    "Slow speed",
+    {
+      "c": "#c5cae9"
+    },
+    "<small>Context</small> menu",
     {
       "c": "#cccccc",
-      "g": true,
-      "f": 3
+      "g": true
     },
     "Q"
   ],
@@ -189,44 +172,31 @@
     },
     "Wheel down",
     {
+      "c": "#ffcdd2"
+    },
+    "Slow speed",
+    "Warp speed",
+    "Fast speed",
+    {
+      "c": "#c5cae9"
+    },
+    "Paste",
+    {
+      "x": 5
+    },
+    "Paste",
+    {
+      "c": "#BBDEFB",
+      "f": 9
+    },
+    "&larr;",
+    "&uarr;",
+    "&darr;",
+    "&rarr;",
+    {
       "c": "#cccccc",
-      "g": true
-    },
-    "Mouse accel 2",
-    {
-      "a": 5
-    },
-    "<\n,",
-    {
-      "a": 7
-    },
-    "Mouse accel 0",
-    {
-      "a": 5
-    },
-    "_\n-",
-    {
-      "x": 5,
-      "c": "#ffccbc",
-      "g": false,
-      "a": 7,
-      "f": 5,
-      "fa": [
-        3
-      ]
-    },
-    "Right click",
-    {
-      "c": "#dcedc8",
+      "g": true,
       "f": 3
-    },
-    "Wheel left",
-    "Wheel up",
-    "Wheel down",
-    "Wheel right",
-    {
-      "c": "#cccccc",
-      "g": true
     },
     "Shift"
   ],
@@ -269,16 +239,22 @@
     },
     "Middle click",
     {
-      "c": "#cccccc",
-      "g": true
+      "c": "#c5cae9",
+      "f": 3
     },
-    "Mouse button 4",
+    "<small>Context</small> menu",
+    {
+      "c": "#d1c4e9",
+      "f": 5,
+      "fa": [
+        3
+      ]
+    },
     "Mouse button 5",
     {
       "x": 1,
       "c": "#757575",
       "t": "#EEEEEE",
-      "g": false,
       "f": 3
     },
     "Unlock layer",
@@ -296,33 +272,33 @@
     },
     "Enter\n\n\n\nSystem",
     {
-      "a": 5,
-      "f": 3
+      "c": "#ffecb3",
+      "g": false,
+      "f": 5,
+      "fa": [
+        3
+      ]
     },
-    "<\n(",
+    "Left click",
     {
-      "f": 3
+      "c": "#ffccbc"
     },
-    "{\n[",
+    "Right click",
     {
-      "f": 3
+      "c": "#e1bee7"
     },
-    "}\n]",
+    "Middle click",
     {
+      "c": "#d1c4e9",
       "f": 3
     },
-    ">\n)",
-    {
-      "a": 7,
-      "f": 3
-    },
-    "F6"
+    "Mouse button 4",
+    "Mouse button 5"
   ],
   [
     {
       "x": 5,
       "c": "#ffecb3",
-      "g": false,
       "f": 5,
       "fa": [
         3
@@ -335,15 +311,16 @@
     },
     "Right click",
     {
-      "c": "#cccccc",
-      "t": "#EEEEEE",
-      "g": true,
+      "c": "#d1c4e9",
+      "t": "#0000000000",
       "f": 3
     },
-    "Lower",
+    "Mouse button 4",
     {
       "x": 1,
+      "c": "#cccccc",
       "t": "#000000",
+      "g": true,
       "fa": [
         9
       ]

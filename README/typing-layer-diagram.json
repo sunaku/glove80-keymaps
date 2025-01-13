@@ -234,16 +234,6 @@
     "",
     "",
     {
-      "c": "#d1c4e9",
-      "p": "SPACE"
-    },
-    "\n\n\n\nEmoji",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET"
-    },
-    "Escape\n\n\n\nFunction",
-    {
       "c": "#ffff8d",
       "p": "SPACE",
       "f": 9,
@@ -251,10 +241,15 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#757575",
-      "t": "#EEEEEE",
+      "c": "#cccccc",
       "p": "CHICKLET",
       "f": 3
+    },
+    "Escape\n\n\n\nFunction",
+    "\n\n\n\nNumber",
+    {
+      "c": "#757575",
+      "t": "#EEEEEE"
     },
     "Unlock layer",
     {
@@ -262,25 +257,18 @@
     },
     "Unlock layer",
     {
+      "c": "#cccccc",
+      "t": "#000000"
+    },
+    "\n\n\n\nMouse",
+    "Enter\n\n\n\nSystem",
+    {
       "c": "#ffff8d",
-      "t": "#000000",
       "p": "SPACE",
       "f": 9,
       "n": true
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Enter\n\n\n\nSystem",
-    {
-      "c": "#d1c4e9",
-      "p": "SPACE",
-      "f": 4
-    },
-    "\n\n\n\nWorld",
     {
       "c": "#cccccc",
       "p": "CHICKLET",
@@ -308,17 +296,17 @@
       "p": "CHICKLET",
       "n": true
     },
-    "Back space\n\n\n\nCursor",
-    "Delete\n\n\n\nNumber",
+    "\n\n\n\nCursor",
+    "\n\n\n\nNumber",
     "Caps word",
     {
       "x": 1
     },
     "Caps word",
-    "Tab\n\n\n\nMouse",
+    "\n\n\n\nMouse",
     {
       "n": true
     },
-    "Space\n\n\n\nSymbol"
+    "\n\n\n\nSymbol"
   ]
 ]

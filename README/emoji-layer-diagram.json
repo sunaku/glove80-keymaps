@@ -11,7 +11,7 @@
     "☁️",
     "🌥️",
     "⛅\n\n\n\nWin",
-    "🌤",
+    "️🌤️",
     "☀️",
     {
       "x": 7,
@@ -174,20 +174,26 @@
     "👶",
     "🍼",
     {
+      "g": true,
+      "p": "",
+      "f": 3
+    },
+    "",
+    {
+      "g": false,
+      "p": "SPACE"
+    },
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
+    {
       "c": "#ffff8d",
-      "p": "SPACE",
+      "f": 9,
       "n": true
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#cccccc",
-      "p": "CHICKLET"
-    },
-    "🌆",
-    "🌃",
-    {
       "c": "#757575",
       "t": "#EEEEEE",
+      "p": "CHICKLET",
       "f": 3
     },
     "Unlock layer",
@@ -216,23 +222,13 @@
   ],
   [
     {
-      "x": 5,
-      "p": "SPACE",
-      "f": 3
+      "x": 5
     },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    {
-      "p": "CHICKLET",
-      "f": 9
-    },
-    "🏙\n\n\n\nFunction",
-    {
-      "g": true
-    },
-    "\n\n\n\nNumber",
+    "️🌇",
+    "🌃",
+    "️🏙️\n\n\n\nFunction",
     {
       "x": 1,
-      "g": false,
       "a": 5,
       "f": 5
     },

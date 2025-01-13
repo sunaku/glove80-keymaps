@@ -230,14 +230,14 @@
     "Insert",
     "F11",
     {
-      "c": "#D1C4E9"
-    },
-    "Emoji layer lock",
-    "<small>Function</small> layer lock",
-    {
       "c": "#dcedc8"
     },
     "Typing layer lock",
+    {
+      "c": "#D1C4E9"
+    },
+    "<small>Function</small> layer lock",
+    "Emoji layer lock",
     {
       "c": "#ffff8d",
       "p": "SPACE",
@@ -253,20 +253,20 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#dcedc8",
+      "c": "#D1C4E9",
       "p": "CHICKLET",
       "f": 3
     },
-    "Typing layer lock",
+    "World layer lock",
     {
-      "c": "#D1C4E9",
       "f": 3
     },
     "System layer lock",
     {
+      "c": "#dcedc8",
       "f": 3
     },
-    "World layer lock",
+    "Typing layer lock",
     {
       "c": "#cccccc",
       "a": 5,

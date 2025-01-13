@@ -235,7 +235,7 @@
     },
     "\nToggle <small>game layer</small>",
     {
-      "x": 1.9300000000000015,
+      "x": 1.9299999999999997,
       "c": "#ffecb3",
       "w": 1.025,
       "h": 2.7
@@ -274,18 +274,8 @@
     "}\n]",
     {
       "c": "#d1c4e9",
-      "p": "SPACE"
-    },
-    "|\n\\\n\n\nEmoji",
-    {
-      "c": "#D1C4E9",
-      "a": 7,
-      "f": 3
-    },
-    "Escape\n\n\n\nFunction",
-    {
-      "c": "#d1c4e9",
-      "a": 5,
+      "p": "SPACE",
+      "f": 3,
       "fa": [
         1,
         1,
@@ -296,9 +286,19 @@
     },
     "(1-shot)\n(sticky)\n\n\nTyping\n\nShift",
     {
+      "c": "#D1C4E9",
+      "a": 7,
+      "f": 3
+    },
+    "Escape\n\n\n\nFunction",
+    {
+      "c": "#d1c4e9",
+      "f": 3
+    },
+    "Insert\n\n\n\nEmoji",
+    {
       "c": "#757575",
       "t": "#EEEEEE",
-      "a": 7,
       "f": 3
     },
     "Lower",
@@ -310,6 +310,16 @@
     {
       "c": "#d1c4e9",
       "t": "#000000",
+      "f": 3
+    },
+    "Delete\n\n\n\nWorld",
+    {
+      "c": "#D1C4E9",
+      "f": 3
+    },
+    "Enter\n\n\n\nSystem",
+    {
+      "c": "#d1c4e9",
       "a": 5,
       "fa": [
         1,
@@ -318,33 +328,19 @@
     },
     "(1-shot)\n(sticky)\n\n\nTyping\n\nRShift",
     {
-      "c": "#D1C4E9",
-      "a": 7,
-      "f": 3
-    },
-    "Enter\n\n\n\nSystem",
-    {
-      "c": "#d1c4e9",
-      "f": 3
-    },
-    "R\n\n\n\nWorld",
-    {
       "c": "#cccccc",
       "p": "CHICKLET",
-      "a": 5,
       "f": 4
     },
     "<\n(",
     ">\n)",
-    {
-      "a": 7,
-      "f": 3
-    },
-    "Insert",
+    "|\n\\",
     {
       "c": "#757575",
       "t": "#EEEEEE",
-      "p": "SPACE"
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
     "Magic"
   ],
@@ -376,8 +372,8 @@
       "f": 3,
       "n": true
     },
-    "Back space\n\n\n\nCursor",
-    "Delete\n\n\n\nNumber",
+    "Space\n\n\n\nCursor",
+    "Tab\n\n\n\nNumber",
     {
       "c": "#ffff8d",
       "p": "FLAT",
@@ -400,10 +396,10 @@
       "c": "#D1C4E9",
       "p": "SPACE"
     },
-    "Tab\n\n\n\nMouse",
+    "Back space\n\n\n\nMouse",
     {
       "n": true
     },
-    "Space\n\n\n\nSymbol"
+    "R\n\n\n\nSymbol"
   ]
 ]
