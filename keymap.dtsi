@@ -4786,11 +4786,26 @@ UNICODE_MORPH_MODS
   };
   UNICODE(world_e_oe_lower_macro, /* œ */
     #if OPERATING_SYSTEM == 'L'
+      #ifdef WORLD_USE_COMPOSE
+      #define WORLD_USE_COMPOSE_FOR_world_e_oe_lower
+      COMPOSE_SEQ_LINUX(&kp O &kp E)
+      #else
       UNICODE_SEQ_LINUX(&kp _N1 &kp _N5 &kp _N3)
+      #endif
     #elif OPERATING_SYSTEM == 'M'
+      #ifdef WORLD_USE_COMPOSE
+      #define WORLD_USE_COMPOSE_FOR_world_e_oe_lower
+      COMPOSE_SEQ_MACOS(&kp LA(Q))
+      #else
       UNICODE_SEQ_MACOS(&kp _N0 &kp _N1 &kp _N5 &kp _N3)
+      #endif
     #elif OPERATING_SYSTEM == 'W'
+      #ifdef WORLD_USE_COMPOSE
+      #define WORLD_USE_COMPOSE_FOR_world_e_oe_lower
+      COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N6)
+      #else
       UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _N5 &kp _N3)
+      #endif
     #endif
   )
   world_e_oe_lower: world_e_oe_lower {
@@ -4807,11 +4822,26 @@ UNICODE_MORPH_MODS
   };
   UNICODE(world_e_oe_upper_macro, /* Œ */
     #if OPERATING_SYSTEM == 'L'
+      #ifdef WORLD_USE_COMPOSE
+      #define WORLD_USE_COMPOSE_FOR_world_e_oe_upper
+      COMPOSE_SEQ_LINUX(&kp LS(O) &kp LS(E))
+      #else
       UNICODE_SEQ_LINUX(&kp _N1 &kp _N5 &kp _N2)
+      #endif
     #elif OPERATING_SYSTEM == 'M'
+      #ifdef WORLD_USE_COMPOSE
+      #define WORLD_USE_COMPOSE_FOR_world_e_oe_upper
+      COMPOSE_SEQ_MACOS(&kp LA(LS(Q)))
+      #else
       UNICODE_SEQ_MACOS(&kp _N0 &kp _N1 &kp _N5 &kp _N2)
+      #endif
     #elif OPERATING_SYSTEM == 'W'
+      #ifdef WORLD_USE_COMPOSE
+      #define WORLD_USE_COMPOSE_FOR_world_e_oe_upper
+      COMPOSE_SEQ_WINDOWS(&kp KP_N0 &kp KP_N1 &kp KP_N4 &kp KP_N0)
+      #else
       UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N1 &kp _N5 &kp _N2)
+      #endif
     #endif
   )
   world_e_oe_upper: world_e_oe_upper {

@@ -235,6 +235,16 @@ compositions:
     macos:   LA(GRAVE) LS(E)
     windows: ALT+0200
 
+  "œ":
+    linux:   COMPOSE O E
+    macos:   LA(Q)
+    windows: ALT+0156
+
+  "Œ":
+    linux:   COMPOSE LS(O) LS(E)
+    macos:   LA(LS(Q))
+    windows: ALT+0140
+
   "æ":
     linux:   COMPOSE A E
     macos:   LA(SQT)
