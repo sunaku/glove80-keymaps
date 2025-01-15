@@ -6032,12 +6032,6 @@ UNICODE_MORPH_MODS
     bindings = <&world_o_slash_lower>, <&world_o_slash_upper>;
     mods = <MOD_LSFT>;
   };
-  world_o_oe: world_o_oe {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&world_e_oe_lower>, <&world_e_oe_upper>;
-    mods = <MOD_LSFT>;
-  };
   UNICODE(world_u_acute_lower_macro, /* ú */
     #if OPERATING_SYSTEM == 'L'
       #ifdef WORLD_USE_COMPOSE
