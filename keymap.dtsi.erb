@@ -876,42 +876,6 @@ behaviors {
   %>
 
   //
-  // Key repetition access keys on the index fingers
-  //
-  plain: plain_typing_layer {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = PLAIN_HOLDING_TYPE;
-    tapping-term-ms = <PLAIN_HOLDING_TIME>;
-    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-    #binding-cells = <2>;
-    bindings = <&mo>, <&kp>;
-    retro-tap; // tap on standalone hold
-  };
-  #ifdef LAYER_Engram
-  plain_engram_COMMA: plain_typing_layer_engram_COMMA {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = PLAIN_HOLDING_TYPE;
-    tapping-term-ms = <PLAIN_HOLDING_TIME>;
-    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-    #binding-cells = <2>;
-    bindings = <&mo>, <&engram_COMMA>;
-    retro-tap; // tap on standalone hold
-  };
-  plain_engram_DOT: plain_typing_layer_engram_DOT {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = PLAIN_HOLDING_TYPE;
-    tapping-term-ms = <PLAIN_HOLDING_TIME>;
-    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-    #binding-cells = <2>;
-    bindings = <&mo>, <&engram_DOT>;
-    retro-tap; // tap on standalone hold
-  };
-  #endif
-
-  //
   // Thumb cluster hold-tap keys for Miryoku layers
   //
   thumb: thumb_layer_access {
