@@ -909,9 +909,7 @@ behaviors {
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
-    #ifdef THUMB_FORGIVENESS
     retro-tap;
-    #endif
   };
   space: thumb_layer_access_spacebar {
     compatible = "zmk,behavior-hold-tap";
