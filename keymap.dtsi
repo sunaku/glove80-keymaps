@@ -53,6 +53,7 @@
   #define _HOME   _C(LEFT)
   #define _END    _C(RIGHT)
   #define _EMOJI  LG(LC(SPACE))
+  #define _FILES  LS(LA(M))
 #else
   #define _C      LC
   #define _A_TAB  LALT
@@ -63,6 +64,7 @@
   #define _HOME   HOME
   #define _END    END
   #define _EMOJI  LG(DOT)
+  #define _FILES  LG(E)
 #endif
 #define _SLEEP      C_SLEEP
 #if OPERATING_SYSTEM == 'W'
