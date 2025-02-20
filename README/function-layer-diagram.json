@@ -10,18 +10,24 @@
     },
     "|\n\\",
     {
+      "t": "#EEEEEE",
       "a": 7
     },
-    "F2",
-    "F3",
-    "F4",
+    "",
     {
-      "t": "#EEEEEE"
+      "t": "#000000"
     },
-    "Reset",
+    "",
+    {
+      "c": "#ffccbc",
+      "g": false
+    },
+    "Shift-Tab",
+    "Tab",
     {
       "x": 7,
-      "t": "#000000"
+      "c": "#cccccc",
+      "g": true
     },
     "F6",
     "F7",
@@ -30,14 +36,14 @@
     "F10"
   ],
   [
+    "",
     {
       "c": "#ffccbc",
       "g": false
     },
-    "Escape",
     "Enter",
-    "Space",
     "Tab",
+    "Space",
     "Delete",
     "Insert",
     {
@@ -64,19 +70,16 @@
   [
     {
       "c": "#cccccc",
-      "g": true,
-      "a": 5
+      "g": true
     },
-    "~\n`",
+    "",
     {
-      "g": false,
-      "p": "SPACE",
-      "a": 7
+      "c": "#ffccbc",
+      "g": false
     },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
+    "Escape",
     {
-      "c": "#e1bee7",
-      "p": "CHICKLET"
+      "c": "#e1bee7"
     },
     "Redo",
     "Undo",
@@ -85,16 +88,11 @@
     },
     "Back space",
     {
-      "c": "#cccccc",
-      "g": true,
-      "a": 5
+      "c": "#FFECB3"
     },
-    "\"\n'",
+    "Calc<small>-ulator</small>",
     {
-      "x": 5,
-      "c": "#FFECB3",
-      "g": false,
-      "a": 7
+      "x": 5
     },
     "Calc<small>-ulator</small>",
     {
@@ -119,13 +117,11 @@
   [
     {
       "c": "#cccccc",
-      "g": true,
+      "p": "SPACE",
       "f": 3
     },
-    "Caps lock",
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
     {
-      "g": false,
-      "p": "SPACE",
       "f": 3
     },
     "Win\n\n\n\nWin",
@@ -143,17 +139,13 @@
     },
     "Shift\n\n\n\nShift",
     {
-      "g": true,
+      "c": "#FFECB3",
       "p": "CHICKLET",
-      "a": 5,
       "f": 3
     },
-    "<\n,",
+    "Web <small>browser</small>",
     {
       "x": 5,
-      "c": "#FFECB3",
-      "g": false,
-      "a": 7,
       "f": 3
     },
     "Web <small>browser</small>",
@@ -180,10 +172,9 @@
   [
     {
       "c": "#cccccc",
-      "g": true,
-      "f": 3
+      "g": true
     },
-    "Shift",
+    "",
     {
       "c": "#bbdefb",
       "t": "#00000",
@@ -195,30 +186,26 @@
       "t": "#000000",
       "f": 3
     },
-    "Select line\n\n\n\nMouse",
+    "Select line",
     {
       "f": 3
     },
-    "Select word\n\n\n\nSymbol",
+    "Select word",
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#e1bee7",
       "f": 3
     },
-    "K",
+    "Find",
     {
-      "a": 5,
+      "c": "#FFECB3",
       "f": 3
     },
-    "_\n-",
+    "File <small>manager</small>",
     {
       "x": 5,
-      "c": "#FFECB3",
-      "g": false,
-      "a": 7,
       "f": 3
     },
-    "My PC",
+    "File <small>manager</small>",
     {
       "c": "#dcedc8",
       "f": 4
@@ -259,22 +246,23 @@
       "p": "CHICKLET",
       "f": 3
     },
-    "F5",
-    "Home",
+    "",
     {
-      "c": "#bbdefb",
+      "c": "#e1bee7",
       "g": false
+    },
+    "Find prev",
+    {
+      "c": "#bbdefb"
     },
     "Extend line",
     "Extend word",
     {
-      "c": "#cccccc",
-      "g": true
+      "c": "#e1bee7"
     },
-    "End",
+    "Find next",
     {
       "c": "#ffff8d",
-      "g": false,
       "p": "SPACE",
       "fa": [
         9

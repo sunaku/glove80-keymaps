@@ -11,33 +11,19 @@
     "",
     "",
     {
-      "a": 5,
-      "f": 3,
-      "fa": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        7
-      ]
+      "f": 3
     },
-    "hex\n10\n\n\n\n\nⓐ",
-    "hex\n11\n\n\n\n\nⓑ",
-    "hex\n12\n\n\n\n\nⓒ",
+    "",
+    "",
+    "",
     {
       "x": 7
     },
-    "hex\n13\n\n\n\n\nⓓ",
-    "hex\n14\n\n\n\n\nⓔ",
-    "hex\n15\n\n\n\n\nⓕ",
-    {
-      "a": 7,
-      "f": 7
-    },
-    "&larr;",
-    "&rarr;"
+    "",
+    "",
+    "",
+    "",
+    ""
   ],
   [
     {
@@ -45,31 +31,32 @@
     },
     "",
     {
-      "a": 5,
-      "f": 4
+      "f": 3
     },
-    "!\n1",
-    "@\n2",
-    "#\n3",
-    "$\n4",
-    "%\n5",
+    "",
+    "",
+    "",
+    "",
+    "",
     {
       "a": 4,
+      "f": 4,
       "w": 5,
       "h": 4,
       "d": true
     },
     "<center><h2>Typing Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
-      "a": 5
+      "a": 7,
+      "f": 3
     },
-    "^\n6",
-    "&\n7",
-    "*\n8",
-    "(\n9",
-    ")\n0",
+    "",
+    "",
+    "",
+    "",
+    "",
     {
-      "a": 7
+      "f": 4
     },
     ""
   ],
@@ -160,19 +147,7 @@
     ""
   ],
   [
-    {
-      "p": "SPACE",
-      "a": 5,
-      "fa": [
-        1,
-        1
-      ]
-    },
-    "(1-shot)\n(sticky)\n\n\nShift\n\nShift",
-    {
-      "p": "CHICKLET",
-      "a": 7
-    },
+    "\n\n\n\nNumber",
     "",
     "",
     "",
@@ -192,29 +167,20 @@
     "",
     "",
     "",
-    {
-      "p": "SPACE",
-      "a": 5,
-      "fa": [
-        1,
-        1
-      ]
-    },
-    "(1-shot)\n(sticky)\n\n\nRShift\n\nRShift"
+    "\n\n\n\nMouse"
   ],
   [
     {
       "y": -0.04999999999999982,
-      "x": 6.95,
-      "c": "#FFFF8D",
+      "x": 8.98,
+      "c": "#ffecb3",
       "p": "FLAT",
-      "a": 7,
+      "a": 5,
       "f": 2,
-      "w": 1.1,
-      "h": 2.7,
-      "d": true
+      "w": 1.075,
+      "h": 2.7
     },
-    ""
+    "\nToggle <small>typing layer</small>"
   ],
   [
     {
@@ -222,6 +188,7 @@
       "c": "#757575",
       "t": "#EEEEEE",
       "p": "SPACE",
+      "a": 7,
       "f": 3
     },
     "Magic",
@@ -233,23 +200,16 @@
     "",
     "",
     "",
+    "",
+    "\n\n\n\nFunction",
     {
-      "c": "#ffff8d",
-      "p": "SPACE",
-      "f": 9,
-      "n": true
+      "p": "SPACE"
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Escape\n\n\n\nFunction",
-    "\n\n\n\nNumber",
+    "\n\n\n\nShift",
     {
       "c": "#757575",
-      "t": "#EEEEEE"
+      "t": "#EEEEEE",
+      "p": "CHICKLET"
     },
     "Unlock layer",
     {
@@ -258,22 +218,15 @@
     "Unlock layer",
     {
       "c": "#cccccc",
-      "t": "#000000"
+      "t": "#000000",
+      "p": "SPACE"
     },
-    "\n\n\n\nMouse",
-    "Enter\n\n\n\nSystem",
+    "\n\n\n\nRShift",
     {
-      "c": "#ffff8d",
-      "p": "SPACE",
-      "f": 9,
-      "n": true
+      "p": "CHICKLET"
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 3
-    },
+    "\n\n\n\nSystem",
+    "",
     "",
     "",
     {
@@ -298,11 +251,23 @@
     },
     "\n\n\n\nCursor",
     "\n\n\n\nNumber",
-    "Caps word",
     {
-      "x": 1
+      "c": "#ffff8d",
+      "p": "SPACE",
+      "f": 9,
+      "n": true
     },
-    "Caps word",
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
+    {
+      "x": 1,
+      "n": true
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
+    {
+      "c": "#cccccc",
+      "p": "CHICKLET",
+      "f": 3
+    },
     "\n\n\n\nMouse",
     {
       "n": true

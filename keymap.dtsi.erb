@@ -208,6 +208,108 @@ combos {
     emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
   %>
 
+  // T1+T4
+
+  combo_sticky_shift_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T4>;
+    bindings = <&sticky_key_oneshot LSFT>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_sticky_shift_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T4>;
+    bindings = <&sticky_key_oneshot LSFT>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T1+T5
+
+  #if defined(_G_TAB) && defined(LAYER_Cursor)
+  combo_win_tab_switcher_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T5>;
+    bindings = <&mod_tab_chord _G_TAB LAYER_Cursor>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+  #endif
+
+  combo_sticky_ctrl_shift_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T5>;
+    bindings = <&sk LC(LSHFT)>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T1+T2
+
+  combo_ctrl_tab_switcher_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T2>;
+    bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_sticky_meh_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T2>;
+    bindings = <&sk LA(LC(LSHFT))>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T2+T5
+
+  #if defined(_A_TAB) && defined(LAYER_Cursor)
+  combo_alt_tab_switcher_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T2 POS_LH_T5>;
+    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+  #endif
+
+  combo_sticky_hyper_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T2 POS_RH_T5>;
+    bindings = <&sk LG(LA(LC(LSHFT)))>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T4+T5
+
+  combo_caps_word_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T4 POS_LH_T5>;
+    bindings = <&caps_word>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_caps_word_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T4 POS_RH_T5>;
+    bindings = <&caps_word>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T5+T6
+
+  combo_caps_lock_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T5 POS_LH_T6>;
+    bindings = <&kp CAPSLOCK>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_caps_lock_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T5 POS_RH_T6>;
+    bindings = <&kp CAPSLOCK>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T3+T6
+
   #ifdef LAYER_Gaming
   combo_gaming_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
@@ -217,58 +319,14 @@ combos {
   };
   #endif
 
-  #ifdef LAYER_Cursor
-  #ifdef _A_TAB
-  combo_alt_tab_switcher {
+  #ifdef LAYER_Typing
+  combo_typing_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T1>;
-    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <<%= alpha_layer_ids %>>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
+    bindings = <&tog LAYER_Typing>;
+    layers = <0 LAYER_Typing>;
   };
   #endif
-
-  combo_ctrl_tab_switcher {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T5>;
-    bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-  #endif
-
-  combo_sticky_hyper_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T4>;
-    bindings = <&sk LG(LA(LC(LSHFT)))>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_sticky_meh_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T5>;
-    bindings = <&sk LA(LC(LSHFT))>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_sticky_AltGr_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T5>;
-    bindings = <&sk RALT>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_sticky_AltGr_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T5>;
-    bindings = <&sk RALT>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_caps_lock {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T6 POS_RH_T6>;
-    bindings = <&kp CAPSLOCK>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
 
 };
 
@@ -888,14 +946,6 @@ behaviors {
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
   };
-  thumb_parang_left: thumb_layer_access_parang_left {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = THUMB_HOLDING_TYPE;
-    tapping-term-ms = <THUMB_HOLDING_TIME>;
-    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-    #binding-cells = <2>;
-    bindings = <&mo>, <&parang_left>;
-  };
   stumb: thumb_layer_access_sticky_key_oneshot {
     compatible = "zmk,behavior-hold-tap";
     flavor = THUMB_HOLDING_TYPE;
@@ -912,6 +962,24 @@ behaviors {
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
     retro-tap;
+  };
+  crumb_parang_left: crumb_layer_access_parang_left {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&parang_left>;
+    retro-tap; // tap on standalone hold
+  };
+  crumb_parang_right: crumb_layer_access_parang_right {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&parang_right>;
+    retro-tap; // tap on standalone hold
   };
   space: thumb_layer_access_spacebar {
     compatible = "zmk,behavior-hold-tap";
@@ -1900,7 +1968,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 4
+#define MOUSE_SCALER_SLOW 1 9
 #endif
 
 //
@@ -1908,7 +1976,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_FAST
-#define MOUSE_SCALER_FAST 4 1
+#define MOUSE_SCALER_FAST 3 1
 #endif
 
 //

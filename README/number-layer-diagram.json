@@ -10,72 +10,24 @@
     },
     "|\n\\",
     {
+      "t": "#EEEEEE",
       "a": 7
     },
-    "F2",
-    "F3",
-    "F4",
+    "",
     {
-      "t": "#EEEEEE"
-    },
-    "Reset",
-    {
-      "x": 7,
       "t": "#000000"
     },
-    "F6",
-    "F7",
-    "F8",
-    "F9",
-    "F10"
-  ],
-  [
+    "",
     {
       "c": "#ffccbc",
       "g": false
     },
-    "Escape",
-    "Enter",
-    "Space",
+    "Shift-Tab",
     "Tab",
-    "Delete",
-    "Insert",
     {
-      "c": "#cccccc",
-      "a": 4,
-      "f": 4,
-      "w": 5,
-      "h": 4,
-      "d": true
-    },
-    "<center><h2>Number Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
-    {
-      "c": "#ffecb3",
-      "a": 7,
-      "f": 9
-    },
-    "~",
-    {
-      "c": "#ffccbc",
-      "f": 6
-    },
-    "^",
-    "#",
-    "$",
-    {
-      "c": "#ffecb3"
-    },
-    "!",
-    {
-      "c": "#ffccbc"
-    },
-    "@"
-  ],
-  [
-    {
+      "x": 7,
       "c": "#dcedc8",
       "a": 5,
-      "f": 3,
       "fa": [
         1,
         1,
@@ -87,37 +39,100 @@
       ]
     },
     "hex\n10\n\n\n\n\nⓐ",
+    "hex\n11\n\n\n\n\nⓑ",
+    "hex\n12\n\n\n\n\nⓒ",
+    "hex\n13\n\n\n\n\nⓓ",
+    "hex\n14\n\n\n\n\nⓔ"
+  ],
+  [
     {
       "c": "#cccccc",
-      "p": "SPACE",
-      "a": 7,
-      "f": 3
+      "g": true,
+      "a": 7
     },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    {
-      "c": "#e1bee7",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Redo",
-    {
-      "f": 3
-    },
-    "Undo",
+    "",
     {
       "c": "#ffccbc",
+      "g": false,
       "f": 3
+    },
+    "Enter",
+    {
+      "f": 3
+    },
+    "Tab",
+    {
+      "f": 3
+    },
+    "Space",
+    {
+      "f": 3
+    },
+    "Delete",
+    {
+      "f": 3
+    },
+    "Insert",
+    {
+      "c": "#cccccc",
+      "a": 4,
+      "f": 4,
+      "w": 5,
+      "h": 4,
+      "d": true
+    },
+    "<center><h2>Number Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    {
+      "c": "#C5CAE9",
+      "a": 7,
+      "f": 6
+    },
+    "|",
+    {
+      "c": "#ffccbc"
+    },
+    "^",
+    "#",
+    "$",
+    {
+      "c": "#ffecb3",
+      "f": 9
+    },
+    "~",
+    {
+      "f": 6
+    },
+    "!"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "g": true,
+      "f": 3
+    },
+    "",
+    {
+      "c": "#ffccbc",
+      "g": false
+    },
+    "Escape",
+    {
+      "c": "#e1bee7"
+    },
+    "Redo",
+    "Undo",
+    {
+      "c": "#ffccbc"
     },
     "Back space",
     {
-      "c": "#dcedc8",
-      "a": 5
+      "c": "#DCEDC8",
+      "f": 6
     },
-    "hex\n13\n\n\n\n\nⓓ",
+    "0\n\n\n\nSymbol",
     {
       "x": 5,
       "c": "#C5CAE9",
-      "a": 7,
       "f": 5
     },
     "G",
@@ -140,50 +155,27 @@
   ],
   [
     {
-      "c": "#dcedc8",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        7
-      ]
-    },
-    "hex\n11\n\n\n\n\nⓑ",
-    {
       "c": "#cccccc",
       "p": "SPACE",
-      "a": 7,
       "f": 3
     },
+    "Shift <small>(sticky)</small>\n\n\n\nShift",
     "Win\n\n\n\nWin",
-    {
-      "f": 3
-    },
     "Alt\n\n\n\nAlt",
-    {
-      "f": 3
-    },
     "Ctrl\n\n\n\nCtrl",
     {
-      "f": 3,
       "n": true
     },
     "Shift\n\n\n\nShift",
     {
-      "c": "#dcedc8",
+      "c": "#c5cae9",
       "p": "CHICKLET",
-      "a": 5
+      "f": 8
     },
-    "hex\n14\n\n\n\n\nⓔ",
+    "<big>𝓍</big>",
     {
       "x": 5,
       "c": "#C5CAE9",
-      "a": 7,
       "f": 5
     },
     "k",
@@ -207,45 +199,28 @@
   ],
   [
     {
-      "c": "#dcedc8",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        7
-      ]
+      "c": "#ffcdd2",
+      "f": 7
     },
-    "hex\n12\n\n\n\n\nⓒ",
+    "_",
     {
       "c": "#bbdefb",
       "t": "#00000",
-      "a": 7,
       "f": 3
     },
     "Select all",
     {
-      "t": "#000000",
-      "f": 3
+      "t": "#000000"
     },
-    "Select line\n\n\n\nMouse",
+    "Select line",
+    "Select word",
     {
-      "f": 3
+      "c": "#e1bee7"
     },
-    "Select word\n\n\n\nSymbol",
-    {
-      "c": "#ffcdd2",
-      "f": 9
-    },
-    "<big>𝓍</big>",
+    "Find",
     {
       "c": "#dcedc8",
       "a": 5,
-      "f": 3,
       "fa": [
         1,
         1,
@@ -299,32 +274,26 @@
       "c": "#cccccc",
       "g": true,
       "p": "CHICKLET",
-      "f": 3,
-      "fa": [
-        9
-      ]
-    },
-    "&uArr;",
-    "&dArr;",
-    {
-      "c": "#bbdefb",
-      "g": false,
       "f": 3
+    },
+    "",
+    {
+      "c": "#e1bee7",
+      "g": false
+    },
+    "Find prev",
+    {
+      "c": "#bbdefb"
     },
     "Extend line",
-    {
-      "f": 3
-    },
     "Extend word",
     {
-      "c": "#ffcdd2",
-      "f": 7
+      "c": "#e1bee7"
     },
-    "_",
+    "Find next",
     {
       "c": "#cccccc",
-      "g": true,
-      "f": 3
+      "g": true
     },
     "Alt-Tab\n\n\n\nCursor",
     {
@@ -360,11 +329,10 @@
     ">\n)",
     "}\n]",
     {
-      "c": "#C5CAE9",
       "a": 7,
       "f": 6
     },
-    "|"
+    "@"
   ],
   [
     {

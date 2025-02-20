@@ -78,14 +78,11 @@
     },
     "B",
     {
-      "c": "#ffccbc",
+      "c": "#ffecb3",
       "g": false
     },
-    "Hue ➖",
-    "Hue ➕",
-    {
-      "c": "#ffecb3"
-    },
+    "Effect ➖",
+    "Effect ➕",
     "RGB toggle",
     {
       "c": "#c5cae9"
@@ -96,7 +93,52 @@
     },
     "Pause break",
     {
-      "c": "#e1bee7"
+      "c": "#ffecb3"
+    },
+    "RGB toggle",
+    "Effect ➕",
+    "Effect ➖",
+    {
+      "c": "#cccccc",
+      "g": true,
+      "a": 5
+    },
+    ")\n0",
+    "&\n7"
+  ],
+  [
+    {
+      "a": 7
+    },
+    "U",
+    {
+      "c": "#FFCDD2",
+      "g": false
+    },
+    "Speed ➕",
+    {
+      "c": "#ffccbc"
+    },
+    "Hue ➕",
+    {
+      "c": "#dcedc8"
+    },
+    "Sat ➕",
+    {
+      "c": "#bbdefb"
+    },
+    "Bright ➕",
+    {
+      "c": "#c5cae9"
+    },
+    "Print screen",
+    {
+      "x": 5
+    },
+    "Print screen",
+    {
+      "c": "#e1bee7",
+      "n": true
     },
     "Lock screen",
     "Sleep",
@@ -105,49 +147,10 @@
       "c": "#dcedc8"
     },
     "Sat ➕",
-    "Sat ➖"
-  ],
-  [
-    {
-      "c": "#cccccc",
-      "g": true
-    },
-    "U",
-    {
-      "c": "#ffecb3",
-      "g": false
-    },
-    "Effect ➖",
-    {
-      "c": "#bbdefb"
-    },
-    "Bright ➖",
-    "Bright ➕",
-    {
-      "c": "#ffecb3",
-      "n": true
-    },
-    "Effect ➕",
-    {
-      "c": "#c5cae9"
-    },
-    "Print screen",
-    {
-      "x": 5
-    },
-    "Print screen",
-    {
-      "c": "#ffecb3",
-      "n": true
-    },
-    "RGB toggle",
-    "Effect ➖",
-    "Effect ➕",
     {
       "c": "#ffccbc"
     },
-    "Hue ➕",
-    "Hue ➖"
+    "Hue ➕"
   ],
   [
     {
@@ -161,14 +164,17 @@
     },
     "Speed ➖",
     {
+      "c": "#ffccbc"
+    },
+    "Hue ➖",
+    {
       "c": "#dcedc8"
     },
     "Sat ➖",
-    "Sat ➕",
     {
-      "c": "#FFCDD2"
+      "c": "#bbdefb"
     },
-    "Speed ➕",
+    "Bright ➖",
     {
       "c": "#c5cae9"
     },
@@ -181,10 +187,13 @@
     "Num lock",
     "Caps lock",
     {
-      "c": "#FFCDD2"
+      "c": "#dcedc8"
     },
-    "Speed ➕",
-    "Speed ➖"
+    "Sat ➖",
+    {
+      "c": "#ffccbc"
+    },
+    "Hue ➖"
   ],
   [
     {
@@ -216,7 +225,7 @@
     "Page up",
     "Page down",
     {
-      "c": "#8D6E63",
+      "c": "#0277bd",
       "t": "#FAFAFA",
       "g": false,
       "p": "SPACE"
@@ -253,17 +262,13 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#FFCDD2",
       "p": "CHICKLET",
-      "a": 5,
       "f": 3
     },
-    "&\n7",
+    "Speed ➕",
     {
       "c": "#bbdefb",
-      "g": false,
-      "a": 7,
       "f": 3
     },
     "Bright ➕",
@@ -272,13 +277,14 @@
     },
     "Bright ➖",
     {
+      "c": "#FFCDD2",
+      "f": 3
+    },
+    "Speed ➖",
+    {
       "c": "#cccccc",
       "g": true,
       "a": 5,
-      "f": 3
-    },
-    ")\n0",
-    {
       "f": 3
     },
     "?\n/"

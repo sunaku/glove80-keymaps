@@ -4,6 +4,7 @@
   },
   [
     {
+      "g": true,
       "p": "CHICKLET",
       "a": 7,
       "f": 7
@@ -46,6 +47,7 @@
     },
     "+\n=",
     {
+      "g": false,
       "f": 4
     },
     "!\n1",
@@ -68,16 +70,19 @@
     "*\n8",
     "(\n9",
     ")\n0",
+    {
+      "g": true
+    },
     "|\n\\"
   ],
   [
     {
-      "f": 5
-    },
-    "~\n`",
-    {
       "a": 7,
       "f": 3
+    },
+    "",
+    {
+      "g": false
     },
     "B",
     "Y",
@@ -103,10 +108,16 @@
     "Z"
   ],
   [
-    "Z",
+    {
+      "a": 5,
+      "f": 5
+    },
+    "+\n=",
     {
       "c": "#FFCDD2",
-      "p": "SPACE"
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
     "C\n\n\n\nWin",
     {
@@ -161,31 +172,17 @@
   ],
   [
     {
-      "p": "SPACE",
       "a": 5,
-      "fa": [
-        1,
-        1
-      ]
+      "f": 5
     },
-    "(1-shot)\n(sticky)\n\n\nShift\n\nShift",
+    "~\n`",
     {
-      "p": "CHICKLET",
       "a": 7,
       "f": 3
     },
     "G",
-    {
-      "f": 3
-    },
     "X",
-    {
-      "f": 3
-    },
     "J",
-    {
-      "f": 3
-    },
     "K",
     {
       "a": 5,
@@ -205,58 +202,95 @@
     "F",
     "P",
     {
-      "p": "SPACE",
       "a": 5,
-      "fa": [
-        1,
-        1
-      ]
+      "f": 4
     },
-    "(1-shot)\n(sticky)\n\n\nRShift\n\nRShift"
+    "|\n\\"
   ],
   [
     {
-      "y": -0.04999999999999982,
-      "x": 4.93,
-      "c": "#ffccbc",
+      "y": -0.7999999999999998,
+      "x": 5.75,
+      "c": "#ffecb3",
       "p": "FLAT",
-      "f": 2,
-      "w": 1.075,
-      "h": 2.7
+      "f": 1,
+      "w": 0.5
     },
-    "\nAlt+Tab <small>cursor layer</small>",
+    "<small>Ctrl+ Tab <sup><sub>(Cursor)</sub></sup></small>",
     {
-      "x": -0.024999999999999467,
-      "c": "#ffecb3",
-      "w": 1.025,
-      "h": 2.7
+      "x": 4.5,
+      "w": 0.5
     },
-    "\nAltGr <small>(sticky)</small>",
-    {
-      "x": -0.025000000000000355,
-      "c": "#bbdefb",
-      "w": 1.075,
-      "h": 2.7
-    },
-    "\nToggle <small>game layer</small>",
-    {
-      "x": 1.9250000000000007,
-      "c": "#ffecb3",
-      "w": 1.025,
-      "h": 2.7
-    },
-    "\nAltGr <small>(sticky)</small>\n\n\nTyping",
-    {
-      "x": -0.025000000000000355,
-      "c": "#ffccbc",
-      "w": 1.075,
-      "h": 2.7
-    },
-    "\nHyper <small>(sticky)</small>"
+    "<small>Ctrl+ Shift <sup><sub>(sticky)</sub></sup></small>"
   ],
   [
     {
-      "y": -0.9500000000000002,
+      "y": -0.3700000000000001,
+      "x": 5.98,
+      "c": "#efebe9",
+      "a": 7,
+      "f": 2,
+      "w": 2.525,
+      "h": 1.17,
+      "d": true
+    },
+    "",
+    {
+      "x": -0.025000000000000355,
+      "w": 2.55,
+      "h": 1.17,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9299999999999997,
+      "x": 4.98,
+      "c": "#fff9c4",
+      "a": 5,
+      "w": 1.025,
+      "h": 2.75
+    },
+    "\nShift (sticky)",
+    {
+      "x": -0.025000000000000355,
+      "c": "#e1f5fe",
+      "w": 1.025,
+      "h": 2.75
+    },
+    "\nAlt+Tab <small>cursor lyr.</small>",
+    {
+      "x": -0.025000000000000355,
+      "c": "#FFEBEE",
+      "w": 1.075,
+      "h": 2.75
+    },
+    "\nGaming <small>layer on/off</small>",
+    {
+      "x": 0.8650000000000002,
+      "w": 1.075,
+      "h": 2.75
+    },
+    "\nTyping <small>layer on/off</small>",
+    {
+      "x": -0.014999999999998792,
+      "c": "#e1f5fe",
+      "w": 1.025,
+      "h": 2.75
+    },
+    "\nHyper <small>(sticky)</small>\n\n\nTyping",
+    {
+      "x": -0.03500000000000014,
+      "c": "#fff9c4",
+      "w": 1.025,
+      "h": 2.75
+    },
+    "\nShift <small>(sticky)</small>"
+  ],
+  [
+    {
+      "y": -0.9000000000000004,
       "c": "#757575",
       "t": "#EEEEEE",
       "p": "SPACE",
@@ -269,27 +303,16 @@
       "t": "#000000",
       "p": "CHICKLET",
       "a": 5,
-      "f": 5
-    },
-    "~\n`",
-    {
       "f": 4
     },
     "{\n[",
-    "}\n]",
+    "<\n(",
+    ">\n)",
     {
       "c": "#d1c4e9",
-      "p": "SPACE",
-      "f": 3,
-      "fa": [
-        1,
-        1,
-        0,
-        0,
-        1
-      ]
+      "p": "SPACE"
     },
-    "(1-shot)\n(sticky)\n\n\nTyping\n\nShift",
+    "}\n]\n\n\nEmoji",
     {
       "c": "#D1C4E9",
       "a": 7,
@@ -297,76 +320,81 @@
     },
     "Escape\n\n\n\nFunction",
     {
-      "c": "#d1c4e9",
-      "f": 3
+      "c": "#d1c4e9"
     },
-    "<small>Context</small> menu\n\n\n\nEmoji",
+    "<small>Context</small> menu\n\n\n\nShift",
     {
       "c": "#757575",
-      "t": "#EEEEEE",
-      "f": 3
+      "t": "#EEEEEE"
     },
     "Lower",
     {
-      "x": 1,
-      "f": 3
+      "x": 1
     },
     "Lower",
     {
       "c": "#d1c4e9",
-      "t": "#000000",
-      "f": 3
+      "t": "#000000"
     },
-    "Insert\n\n\n\nWorld",
+    "Insert\n\n\n\nRShift",
     {
-      "c": "#D1C4E9",
-      "f": 3
+      "c": "#D1C4E9"
     },
     "Enter\n\n\n\nSystem",
     {
-      "c": "#d1c4e9",
-      "a": 5,
-      "fa": [
-        1,
-        1
-      ]
+      "c": "#d1c4e9"
     },
-    "(1-shot)\n(sticky)\n\n\nTyping\n\nRShift",
+    "Home\n\n\n\nWorld",
     {
       "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 4
+      "p": "CHICKLET"
     },
-    "<\n(",
-    ">\n)",
-    "|\n\\",
+    "Page up",
+    "Page down",
+    "End",
     {
       "c": "#757575",
       "t": "#EEEEEE",
-      "p": "SPACE",
-      "a": 7,
-      "f": 3
+      "p": "SPACE"
     },
     "Magic"
   ],
   [
     {
-      "y": -0.03000000000000025,
-      "x": 4.45,
-      "c": "#dcedc8",
+      "y": -0.040000000000000036,
+      "x": 8.48,
+      "c": "#fff3e0",
       "t": "#000000",
       "p": "FLAT",
       "f": 2,
-      "w": 2.625,
-      "h": 1.11
+      "w": 2.6,
+      "h": 1.19
     },
-    "<span class=\"left\">Ctrl+Tab<small><br>cursor layer</small></span>",
+    "<span class=\"left\">Capslock&nbsp;&nbsp;&nbsp;</span>"
+  ],
+  [
     {
-      "x": 2.874999999999999,
+      "y": -0.9900000000000002,
+      "x": 4.45,
+      "c": "#e8f5e9",
+      "w": 2.625,
+      "h": 1.17
+    },
+    "<span class=\"left\">Capsword<small><br>(sticky)</small></span>",
+    {
+      "x": -1.0750000000000002,
+      "c": "#fff3e0",
+      "w": 2.5,
+      "h": 1.11
+    },
+    "<span class=\"right\">&nbsp;&nbsp;Capslock</span>",
+    {
+      "x": 1.4499999999999993,
+      "c": "#e8f5e9",
       "w": 2.625,
       "h": 1.11
     },
-    "<span class=\"right\">Meh<small><br>(sticky)</small></span>"
+    "<span class=\"right\">Capsword<small><br>(sticky)</small></span>"
   ],
   [
     {
@@ -380,26 +408,17 @@
     "Back space\n\n\n\nCursor",
     "Delete\n\n\n\nNumber",
     {
-      "c": "#ffff8d",
-      "p": "FLAT",
-      "f": 2,
-      "w": 3
+      "c": "#d1c4e9",
+      "f": 1
     },
-    "Caps lock",
-    {
-      "x": -3,
-      "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Caps word",
+    "Raw hold for key auto-repeat\n\n\n\nTyping",
     {
       "x": 1
     },
-    "Caps word",
+    "Raw hold for key auto-repeat\n\n\n\nTyping",
     {
       "c": "#D1C4E9",
-      "p": "SPACE"
+      "f": 3
     },
     "Tab\n\n\n\nMouse",
     {

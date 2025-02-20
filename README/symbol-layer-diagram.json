@@ -4,33 +4,31 @@
   },
   [
     {
-      "t": "#EEEEEE",
       "g": true,
       "p": "CHICKLET",
-      "a": 7
+      "a": 7,
+      "f": 7
     },
-    "",
-    "",
+    "\"",
+    "'",
     {
-      "t": "#000000"
+      "f": 9
     },
-    "",
-    "",
-    "",
+    "`",
+    {
+      "f": 7
+    },
+    "'",
+    "\"",
     {
       "x": 7,
-      "t": "#EEEEEE"
-    },
-    "",
-    {
-      "t": "#000000"
+      "t": "#EEEEEE",
+      "f": 3
     },
     "",
     "",
     "",
-    {
-      "t": "#EEEEEE"
-    },
+    "",
     ""
   ],
   [
@@ -42,15 +40,20 @@
     },
     "`",
     {
-      "c": "#bbdefb",
+      "c": "#ffecb3",
       "f": 7
     },
-    "[",
+    ",",
+    {
+      "c": "#bbdefb"
+    },
     "(",
     ")",
-    "]",
     {
-      "c": "#ffecb3",
+      "c": "#ffecb3"
+    },
+    ";",
+    {
       "f": 9
     },
     ".",
@@ -91,18 +94,15 @@
     },
     "!",
     {
-      "c": "#ffecb3"
-    },
-    ",",
-    {
       "c": "#bbdefb"
     },
+    "[",
     "{",
     "}",
+    "]",
     {
       "c": "#ffecb3"
     },
-    ";",
     "?",
     {
       "x": 5,
@@ -111,23 +111,25 @@
     },
     "`",
     {
-      "c": "#00796B",
+      "c": "#0277bd",
       "t": "#EEEEEE",
-      "f": 7
-    },
-    "&larr;",
-    "&uarr;",
-    "&darr;",
-    "&rarr;",
-    {
       "f": 3
     },
-    "Home"
+    "Delete",
+    "Insert",
+    "Shift-Tab",
+    "Escape",
+    {
+      "c": "#cccccc",
+      "g": true
+    },
+    ""
   ],
   [
     {
       "c": "#ffecb3",
       "t": "#000000",
+      "g": false,
       "f": 7
     },
     "#",
@@ -158,24 +160,26 @@
     },
     "\"",
     {
-      "c": "#8D6E63",
+      "c": "#0277bd",
       "t": "#EEEEEE",
       "f": 3,
       "n": true
     },
     "Back space",
-    "Tab",
     "Space\n\n\n\nAltGr",
+    "Tab",
     "Enter",
     {
-      "c": "#00796B"
+      "c": "#cccccc",
+      "t": "#000000",
+      "g": true
     },
-    "End"
+    ""
   ],
   [
     {
       "c": "#e1bee7",
-      "t": "#000000",
+      "g": false,
       "f": 8
     },
     "~",
@@ -203,25 +207,27 @@
     },
     "'",
     {
-      "c": "#8D6E63",
-      "t": "#EEEEEE",
+      "c": "#2e7d32",
+      "t": "#EEEEEE"
+    },
+    "&larr;",
+    "&uarr;",
+    "&darr;",
+    "&rarr;",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "g": true,
       "f": 3
     },
-    "Delete",
-    "Shift-Tab",
-    {
-      "c": "#0277BD"
-    },
-    "Select word\n\n\n\nSymbol",
-    "Select line\n\n\n\nMouse",
-    "Select all"
+    ""
   ],
   [
     {
       "y": -0.04999999999999982,
       "x": 6.95,
       "c": "#FFFF8D",
-      "t": "#000000",
+      "g": false,
       "p": "FLAT",
       "f": 2,
       "w": 1.1,
@@ -236,9 +242,9 @@
       "c": "#cccccc",
       "g": true,
       "p": "CHICKLET",
-      "f": 3
+      "f": 9
     },
-    "",
+    "`",
     {
       "c": "#ffccbc",
       "g": false,
@@ -281,20 +287,16 @@
     "",
     "\n\n\n\nSystem",
     {
-      "c": "#AB47BC",
+      "c": "#2e7d32",
       "t": "#EEEEEE",
       "g": false
     },
-    "Undo",
-    "Redo",
-    {
-      "c": "#0277BD"
-    },
-    "Extend word",
-    "Extend line",
+    "Home",
+    "Page up",
+    "Page down",
+    "End",
     {
       "c": "#cccccc",
-      "t": "#000000",
       "g": true
     },
     ""
@@ -303,6 +305,7 @@
     {
       "x": 5,
       "c": "#ffecb3",
+      "t": "#000000",
       "g": false,
       "f": 7,
       "n": true
