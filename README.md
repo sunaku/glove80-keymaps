@@ -2,8 +2,7 @@
 
 This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
-Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
-also provided as "training wheels" to aid your transition to the full glory.
+Colemak/DH, etc.) are also provided to ease your transition to the full glory.
 
 ![Photograph of my MoErgo Glove80 keyboard with Enthium layout and per-key RGB
 illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
@@ -17,9 +16,9 @@ illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
 
 ## Keymap
 
-Version 41 (2025-01-13)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v41
-- Release: https://my.glove80.com/#/layout/user/593d6c43-64f6-4124-b2c9-474347d8256f
+Version 42 (PREVIEW)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42
+- Release: https://dev.glove80.com/#/layout/user/95f1e056-850f-487a-907d-4655b26276e0
 
 ### Legend
 

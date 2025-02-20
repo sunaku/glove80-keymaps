@@ -6,42 +6,45 @@
     {
       "g": true,
       "p": "CHICKLET",
-      "a": 5
-    },
-    "|\n\\",
-    {
       "a": 7
     },
-    "F2",
-    "F3",
-    "F4",
+    "",
     {
       "t": "#EEEEEE"
     },
-    "Reset",
+    "",
     {
-      "x": 7,
       "t": "#000000"
     },
-    "F6",
-    "F7",
-    "F8",
-    "F9",
-    {
-      "a": 5
-    },
-    "+\n="
-  ],
-  [
+    "",
     {
       "c": "#ffccbc",
-      "g": false,
-      "a": 7
+      "g": false
     },
-    "Escape",
-    "Enter",
-    "Space",
+    "Shift-Tab",
     "Tab",
+    {
+      "x": 7
+    },
+    "Tab",
+    "Shift-Tab",
+    {
+      "c": "#cccccc",
+      "g": true
+    },
+    "",
+    "",
+    ""
+  ],
+  [
+    "",
+    {
+      "c": "#ffccbc",
+      "g": false
+    },
+    "Enter",
+    "Tab",
+    "Space",
     "Delete",
     "Insert",
     {
@@ -60,24 +63,24 @@
     },
     "Insert",
     "Delete",
-    "Tab",
     "Space",
+    "Tab",
     "Enter",
-    "Escape"
-  ],
-  [
-    {
-      "c": "#ffcdd2"
-    },
-    "Search bar\n\n\n\nSymbol",
     {
       "c": "#cccccc",
-      "p": "SPACE"
+      "g": true
     },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
+    ""
+  ],
+  [
+    "",
     {
-      "c": "#e1bee7",
-      "p": "CHICKLET"
+      "c": "#ffccbc",
+      "g": false
+    },
+    "Escape",
+    {
+      "c": "#e1bee7"
     },
     "Redo",
     "Undo",
@@ -103,22 +106,21 @@
     "Undo",
     "Redo",
     {
+      "c": "#ffccbc"
+    },
+    "Escape",
+    {
       "c": "#cccccc",
+      "g": true
+    },
+    ""
+  ],
+  [
+    {
+      "g": false,
       "p": "SPACE"
     },
     "Shift <small>(sticky)</small>\n\n\n\nShift",
-    {
-      "c": "#ffcdd2",
-      "p": "CHICKLET"
-    },
-    "Search bar\n\n\n\nSymbol"
-  ],
-  [
-    "URL bar",
-    {
-      "c": "#cccccc",
-      "p": "SPACE"
-    },
     "Win\n\n\n\nWin",
     "Alt\n\n\n\nAlt",
     "Ctrl\n\n\n\nCtrl",
@@ -145,13 +147,18 @@
     "&darr;\n\n\n\nAlt",
     "&rarr;\n\n\n\nWin",
     {
-      "c": "#ffcdd2",
+      "c": "#cccccc",
+      "p": "SPACE",
       "f": 3
     },
-    "URL bar"
+    "Shift <small>(sticky)</small>\n\n\n\nShift"
   ],
   [
-    "Down loads",
+    {
+      "c": "#ffcdd2",
+      "p": "CHICKLET"
+    },
+    "URL bar",
     {
       "c": "#bbdefb",
       "t": "#00000"
@@ -160,8 +167,8 @@
     {
       "t": "#000000"
     },
-    "Select line\n\n\n\nMouse",
-    "Select word\n\n\n\nSymbol",
+    "Select line",
+    "Select word",
     {
       "c": "#e1bee7"
     },
@@ -184,7 +191,7 @@
     {
       "c": "#ffcdd2"
     },
-    "Down loads"
+    "URL bar"
   ],
   [
     {
@@ -202,11 +209,14 @@
   [
     {
       "y": -0.9500000000000002,
-      "c": "#e1bee7",
+      "c": "#ffcdd2",
       "p": "CHICKLET",
       "f": 3
     },
-    "Find & replace\n\n\n\nMouse",
+    "Search bar\n\n\n\nSymbol",
+    {
+      "c": "#e1bee7"
+    },
     "Find prev",
     {
       "c": "#bbdefb"
@@ -218,13 +228,15 @@
     },
     "Find next",
     {
-      "c": "#a5d6a7"
+      "c": "#cccccc",
+      "g": true
     },
     "Alt-Tab\n\n\n\nNumber",
     "Win-Tab",
     {
       "c": "#757575",
-      "t": "#EEEEEE"
+      "t": "#EEEEEE",
+      "g": false
     },
     "Unlock layer",
     {
@@ -242,7 +254,10 @@
     "Find prev",
     "Find next",
     "Find & replace\n\n\n\nMouse",
-    "Emoji picker"
+    {
+      "c": "#ffcdd2"
+    },
+    "Search bar\n\n\n\nSymbol"
   ],
   [
     {
@@ -254,19 +269,18 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
     {
-      "c": "#a5d6a7",
+      "c": "#cccccc",
+      "g": true,
       "p": "CHICKLET",
       "f": 3
     },
     "Ctrl-Tab",
-    {
-      "c": "#ffccbc"
-    },
     "Tab\n\n\n\nFunction",
     {
       "x": 1,
       "c": "#bbdefb",
-      "t": "#00000"
+      "t": "#00000",
+      "g": false
     },
     "Select all",
     {

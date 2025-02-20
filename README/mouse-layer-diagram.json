@@ -17,16 +17,10 @@
       "x": 7,
       "t": "#EEEEEE"
     },
-    "Reset",
-    {
-      "t": "#000000"
-    },
-    "F7",
-    "F8",
-    "F9",
-    {
-      "t": "#EEEEEE"
-    },
+    "Boot loader",
+    "Boot loader",
+    "Boot loader",
+    "Boot loader",
     "Boot loader"
   ],
   [
@@ -101,12 +95,26 @@
     },
     "Cut",
     {
-      "c": "#dcedc8"
+      "c": "#ffecb3",
+      "f": 5,
+      "fa": [
+        3
+      ]
     },
-    "Wheel left",
-    "Wheel up",
-    "Wheel down",
-    "Wheel right",
+    "Left click",
+    {
+      "c": "#ffccbc"
+    },
+    "Right click",
+    {
+      "c": "#e1bee7"
+    },
+    "Middle click",
+    {
+      "c": "#d1c4e9",
+      "f": 3
+    },
+    "Mouse button 4",
     {
       "c": "#cccccc",
       "g": true
@@ -155,16 +163,19 @@
     "Warp speed",
     "Slow speed",
     {
+      "c": "#d1c4e9"
+    },
+    "Mouse button 5",
+    {
       "c": "#c5cae9"
     },
-    "<small>Context</small> menu",
+    "<small>Context</small> menu"
+  ],
+  [
     {
       "c": "#cccccc",
       "g": true
     },
-    "Q"
-  ],
-  [
     "Shift",
     {
       "c": "#dcedc8",
@@ -195,16 +206,18 @@
     "&rarr;",
     {
       "c": "#cccccc",
+      "t": "#EEEEEE",
       "g": true,
       "f": 3
     },
-    "Shift"
+    "Boot loader"
   ],
   [
     {
       "y": -0.04999999999999982,
       "x": 6.95,
       "c": "#FFFF8D",
+      "t": "#000000",
       "p": "FLAT",
       "f": 2,
       "w": 1.1,
@@ -272,33 +285,37 @@
     },
     "Enter\n\n\n\nSystem",
     {
-      "c": "#ffecb3",
+      "c": "#dcedc8",
       "g": false,
-      "f": 5,
-      "fa": [
-        3
-      ]
-    },
-    "Left click",
-    {
-      "c": "#ffccbc"
-    },
-    "Right click",
-    {
-      "c": "#e1bee7"
-    },
-    "Middle click",
-    {
-      "c": "#d1c4e9",
       "f": 3
     },
-    "Mouse button 4",
-    "Mouse button 5"
+    "Wheel left",
+    {
+      "f": 3
+    },
+    "Wheel up",
+    {
+      "f": 3
+    },
+    "Wheel down",
+    {
+      "f": 3
+    },
+    "Wheel right",
+    {
+      "c": "#cccccc",
+      "t": "#EEEEEE",
+      "g": true,
+      "f": 3
+    },
+    "Boot loader"
   ],
   [
     {
       "x": 5,
       "c": "#ffecb3",
+      "t": "#000000",
+      "g": false,
       "f": 5,
       "fa": [
         3
