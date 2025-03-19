@@ -929,6 +929,9 @@ behaviors {
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
+    #ifdef THUMB_FORGIVENESS
+    retro-tap; // tap on standalone hold
+    #endif
   };
   stumb: thumb_layer_access_sticky_key_oneshot {
     compatible = "zmk,behavior-hold-tap";
@@ -945,7 +948,7 @@ behaviors {
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
-    retro-tap;
+    retro-tap; // tap on standalone hold
   };
   crumb_parang_left: crumb_layer_access_parang_left {
     compatible = "zmk,behavior-hold-tap";
