@@ -7,7 +7,7 @@
 //#define SPACE_FORGIVENESS  // allow lingering taps on the space bar
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
-#define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
+//#define WORLD_USE_COMPOSE  // use native Compose in place of Unicode
 //#define WORLD_HOST_AZERTY  // host computer is set to AZERTY locale
 //#define WORLD_SHIFT_NUMBER // apply Shift to type number row digits
 // TIP: Add more setting overrides here instead of editing them below.
@@ -3580,6 +3580,9 @@ macros {
   //
   // WORLD_USE_COMPOSE uses OS-native Compose keycodes instead of Unicode
   // for characters in the "compositions" section of the `world.yaml` file.
+  //
+  // NOTE: keep this setting disabled when using UnicodeHexInput in macOS
+  // to avoid inconsistent behavior when typing World vs Emoji layer keys.
   //
   //#define WORLD_USE_COMPOSE
 
