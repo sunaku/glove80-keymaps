@@ -1735,7 +1735,11 @@ macros {
                                 end
 
         next_modifiers = "(#{
-          remaining_precedence.map{ |m| "MOD_#{m}" }.join("|")
+          remaining_precedence.reject do |modifier|
+            modifier =~ /_/ and next_modifier !~ /_/
+          end
+          .map{ |m| "MOD_#{ m.split("_").first }" }
+          .join("|")
         })"
         emit_zmk_mod_morph.(id, accent_id, next_id, next_modifiers)
         remaining_precedence.shift
