@@ -262,16 +262,32 @@ combos {
 
   // T1+T4
 
-  combo_caps_word_left {
+  combo_sticky_shift_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T4>;
+    bindings = <&sticky_key_oneshot LSFT>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_sticky_shift_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T4>;
+    bindings = <&sticky_key_oneshot LSFT>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T4+T5
+
+  combo_caps_word_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&caps_word>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T4>;
+    key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&caps_word>;
     layers = <<%= alpha_layer_ids %>>;
   };
