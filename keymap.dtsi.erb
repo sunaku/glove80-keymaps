@@ -208,12 +208,12 @@ combos {
     emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
   %>
 
-  // T2+T5
+  // T4+T5
 
   #if defined(_A_TAB) && defined(LAYER_Cursor)
   combo_alt_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T5>;
+    key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
     layers = <<%= alpha_layer_ids %>>;
   };
@@ -221,7 +221,7 @@ combos {
 
   combo_hyper_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T5>;
+    key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&kp LG(LA(LC(LSHFT)))>;
     layers = <<%= alpha_layer_ids %>>;
   };
@@ -276,44 +276,44 @@ combos {
     layers = <<%= alpha_layer_ids %>>;
   };
 
-  // T4+T5
+  // T2+T5
 
   combo_caps_word_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T5>;
+    key-positions = <POS_LH_T2 POS_LH_T5>;
     bindings = <&caps_word>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T5>;
+    key-positions = <POS_RH_T2 POS_RH_T5>;
     bindings = <&caps_word>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
-  // T1+T5
+  // T3+T6
 
   combo_caps_lock_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T5>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&kp CAPSLOCK>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T5>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&kp CAPSLOCK>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
-  // T3+T6
+  // C1R5+C2R6
 
   #ifdef LAYER_Gaming
   combo_gaming_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T3 POS_LH_T6>;
+    key-positions = <POS_LH_C1R5 POS_LH_C2R6>;
     bindings = <&tog LAYER_Gaming>;
     layers = <0 LAYER_Gaming>;
   };
@@ -322,7 +322,7 @@ combos {
   #ifdef LAYER_Typing
   combo_typing_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T3 POS_RH_T6>;
+    key-positions = <POS_RH_C1R5 POS_RH_C2R6>;
     bindings = <&tog LAYER_Typing>;
     layers = <0 LAYER_Typing>;
   };
