@@ -2027,16 +2027,16 @@ macros {
       input-processors = <&zip_xy_scaler MOUSE_SCALER_SLOW>;
     };
     #endif
-    #ifdef LAYER_MouseFast
-    fast {
-      layers = <LAYER_MouseFast>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
-    };
-    #endif
     #ifdef LAYER_MouseWarp
     warp {
       layers = <LAYER_MouseWarp>;
       input-processors = <&zip_xy_scaler MOUSE_SCALER_WARP>;
+    };
+    #endif
+    #ifdef LAYER_MouseFast
+    fast {
+      layers = <LAYER_MouseFast>;
+      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
     };
     #endif
   };
