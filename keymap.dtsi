@@ -7380,8 +7380,20 @@ UNICODE_MORPH_MODS
   world_e_RCTL: world_e_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_e_circumflex>, <&world_e_grave>;
+    bindings = <&world_e_circumflex>, <&world_e_RSFT>;
     mods = <(MOD_RSFT)>;
+  };
+  world_e_RSFT: world_e_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_e_grave>, <&world_e_LCTL_RSFT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+  };
+  world_e_LCTL_RSFT: world_e_LCTL_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_e_oe>, <&world_e_ae>;
+    mods = <(MOD_RCTL)>;
   };
   world_a_base: world_a_base {
     compatible = "zmk,behavior-mod-morph";
@@ -7410,8 +7422,20 @@ UNICODE_MORPH_MODS
   world_a_RCTL: world_a_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_a_circumflex>, <&world_a_grave>;
+    bindings = <&world_a_circumflex>, <&world_a_RSFT>;
     mods = <(MOD_RSFT)>;
+  };
+  world_a_RSFT: world_a_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_a_grave>, <&world_a_LCTL_RSFT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+  };
+  world_a_LCTL_RSFT: world_a_LCTL_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_a_tilde>, <&world_a_ring>;
+    mods = <(MOD_RCTL)>;
   };
   world_y_base: world_y_base {
     compatible = "zmk,behavior-mod-morph";
@@ -7446,8 +7470,20 @@ UNICODE_MORPH_MODS
   world_o_RCTL: world_o_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_o_circumflex>, <&world_o_grave>;
+    bindings = <&world_o_circumflex>, <&world_o_RSFT>;
     mods = <(MOD_RSFT)>;
+  };
+  world_o_RSFT: world_o_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_o_grave>, <&world_o_LCTL_RSFT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+  };
+  world_o_LCTL_RSFT: world_o_LCTL_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_o_tilde>, <&world_o_slash>;
+    mods = <(MOD_RCTL)>;
   };
   world_u_base: world_u_base {
     compatible = "zmk,behavior-mod-morph";
@@ -7506,8 +7542,20 @@ UNICODE_MORPH_MODS
   world_quotes_left_RCTL: world_quotes_left_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_quotes_left_low>, <&world_quotes_left_grave>;
+    bindings = <&world_quotes_left_low>, <&world_quotes_left_RSFT>;
     mods = <(MOD_RSFT)>;
+  };
+  world_quotes_left_RSFT: world_quotes_left_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_quotes_left_grave>, <&world_quotes_left_LCTL_RSFT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+  };
+  world_quotes_left_LCTL_RSFT: world_quotes_left_LCTL_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_quotes_left_corner1>, <&world_quotes_left_corner2>;
+    mods = <(MOD_RCTL)>;
   };
   world_quotes_right_base: world_quotes_right_base {
     compatible = "zmk,behavior-mod-morph";
@@ -7536,8 +7584,20 @@ UNICODE_MORPH_MODS
   world_quotes_right_RCTL: world_quotes_right_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_quotes_right_low>, <&world_quotes_right_grave>;
+    bindings = <&world_quotes_right_low>, <&world_quotes_right_RSFT>;
     mods = <(MOD_RSFT)>;
+  };
+  world_quotes_right_RSFT: world_quotes_right_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_quotes_right_grave>, <&world_quotes_right_LCTL_RSFT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+  };
+  world_quotes_right_LCTL_RSFT: world_quotes_right_LCTL_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_quotes_right_corner1>, <&world_quotes_right_corner2>;
+    mods = <(MOD_RCTL)>;
   };
   world_currency_base: world_currency_base {
     compatible = "zmk,behavior-mod-morph";
@@ -7566,8 +7626,20 @@ UNICODE_MORPH_MODS
   world_currency_RCTL: world_currency_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_currency_pound>, <&world_currency_generic>;
+    bindings = <&world_currency_pound>, <&world_currency_RSFT>;
     mods = <(MOD_RSFT)>;
+  };
+  world_currency_RSFT: world_currency_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_currency_generic>, <&world_currency_LCTL_RSFT>;
+    mods = <(MOD_LCTL|MOD_RCTL)>;
+  };
+  world_currency_LCTL_RSFT: world_currency_LCTL_RSFT {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_currency_yen>, <&world_currency_won>;
+    mods = <(MOD_RCTL)>;
   };
   world_sign_base: world_sign_base {
     compatible = "zmk,behavior-mod-morph";
