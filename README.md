@@ -50,6 +50,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [OS-native compose](#os-native-compose)
 * [Installing](#installing)
   * [Enabling mouse emulation](#enabling-mouse-emulation)
+    * [Choose a firmware that supports mouse emulation](#choose-a-firmware-that-supports-mouse-emulation)
   * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
   * [Flashing](#flashing)
 * [Upgrading](#upgrading)
@@ -338,8 +339,21 @@ Open the [keymap link above](#keymap) and follow these instructions:
 
 ### Enabling mouse emulation
 
-Before building the firmware (step 5 above), change the version to 24.12 or
-newer: open the "Settings" tab, choose 24.12, and go back to the "Edit" tab.
+First in the "Custom Defined Behaviors" section of your layout scroll to the
+line that has `#define ENABLE_MOUSE_KEYS` and uncomment the line by removing the
+`//` characters at the beginning of the line.
+
+Next, in the "Advanced Configuration" tab towards the bottom of the page,
+enable the `HID_POINTING` setting by ticking the "Overriden" checkbox and
+then the "y" radio button.
+
+#### Choose a firmware that supports mouse emulation
+
+The default firmware (25.0.1) now supports mouse emulation, but if you still
+want to verify that you're using a firmware that supports mouse emulation then
+before building the firmware (step 5 above), change the firmware version to
+25.0.1 or newer: open the "Settings" tab, choose 24.12, and go back to the
+"Edit" tab.
 
 ![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
 
@@ -347,9 +361,7 @@ Alternatively, you might use the newer PR36 beta firmware for this too:
 select "community.pr36.mouse-keys" from the drop-down menu located at
 Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
 
-Next, in the "Advanced Configuration" tab towards the bottom of the page,
-enable the `HID_POINTING` setting by ticking the "Overriden" checkbox and
-then the "y" radio button.  Now proceed to build and flash your keymap.
+Now proceed to build and flash your keymap.
 
 ### Enabling per-key RGB lighting
 
