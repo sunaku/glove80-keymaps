@@ -71,11 +71,15 @@ digraph settings {
 
     THUMB_HOLDING_TIME -> "+50"
 
+    THUMB_STREAK_DECAY -> "-50"
+
     THUMB_REPEAT_DECAY -> "+150"
 
     SPACE_HOLDING_TYPE -> THUMB_HOLDING_TYPE
 
     SPACE_HOLDING_TIME -> "+20"
+
+    SPACE_STREAK_DECAY -> "-80"
 
     SPACE_REPEAT_DECAY -> TAPPING_RESOLUTION
 
@@ -544,6 +548,8 @@ digraph settings {
 
   "+50" -> TAPPING_RESOLUTION [color=red]
 
+  "-80" -> TAPPING_RESOLUTION [color=red]
+
   }
 
   subgraph values {
@@ -562,7 +568,11 @@ digraph settings {
     
       "\"balanced\"" [label="\"balanced\"", style=filled, fillcolor=cyan, shape=signature]
     
+      "-50" [label="-50", style=filled, fillcolor=cyan, shape=signature]
+    
       "+20" [label="+20", style=filled, fillcolor=cyan, shape=signature]
+    
+      "-80" [label="-80", style=filled, fillcolor=cyan, shape=signature]
     
       "'N'" [label="'N'", style=filled, fillcolor=cyan, shape=signature]
     
@@ -599,6 +609,8 @@ digraph settings {
       "-50" [label="-50", style=filled, fillcolor=salmon, shape=lpromoter]
     
       "+50" [label="+50", style=filled, fillcolor=salmon, shape=lpromoter]
+    
+      "-80" [label="-80", style=filled, fillcolor=salmon, shape=lpromoter]
     
   }
 }
