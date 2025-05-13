@@ -100,37 +100,6 @@
 #define _FIND_PREV  _C(LS(G))
 
 //
-// USE_NUMPAD_KEYCODES puts `KP_*` keycodes into the Number layer.
-//
-<%
-  NUMPAD_KEYCODES = %w[
-    KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
-    KP_PLUS     KP_MINUS
-    KP_ASTERISK KP_SLASH
-    KP_COMMA    KP_DOT
-    KP_EQUAL    KP_ENTER
-  ]
-  emit_numpad_keycodes = lambda do |strip_prefix|
-    NUMPAD_KEYCODES.each do |keycode|
-      normal_keycode = keycode.sub(/^KP_/, '')
-      target_keycode = strip_prefix ? normal_keycode : keycode
-%>
-#define _<%= keycode %> <%= target_keycode %>
-<%
-    end
-  end
-%>
-#ifdef USE_NUMPAD_KEYCODES
-<%
-  emit_numpad_keycodes.(false)
-%>
-#else
-<%
-  emit_numpad_keycodes.(true)
-%>
-#endif
-
-//
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
 <%
