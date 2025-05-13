@@ -175,39 +175,39 @@
 #define KEY_RH_C4R4 N
 #define KEY_RH_C5R4 S
 #define KEY_RH_C6R4 V
-#define KEY_LH_C6R5 LSFT
+#define KEY_LH_C6R5 0
 #define KEY_LH_C5R5 SQT
-#define KEY_LH_C4R5 MINUS
+#define KEY_LH_C4R5 FSLH
 #define KEY_LH_C3R5 EQUAL
-#define KEY_LH_C2R5 DOT
-#define KEY_LH_C1R5 FSLH
+#define KEY_LH_C2R5 MINUS
+#define KEY_LH_C1R5 DOT
 #define KEY_LH_T1 ESC
-#define KEY_LH_T2 0
-#define KEY_LH_T3 0
-#define KEY_RH_T3 0
-#define KEY_RH_T2 0
-#define KEY_RH_T1 BACKSPACE
+#define KEY_LH_T2 LBKT
+#define KEY_LH_T3 RBKT
+#define KEY_RH_T3 HOME
+#define KEY_RH_T2 END
+#define KEY_RH_T1 ENTER
 #define KEY_RH_C1R5 J
 #define KEY_RH_C2R5 M
 #define KEY_RH_C3R5 G
 #define KEY_RH_C4R5 P
 #define KEY_RH_C5R5 F
-#define KEY_RH_C6R5 RSFT
+#define KEY_RH_C6R5 0
 #define KEY_LH_C6R6 0
-#define KEY_LH_C5R6 GRAVE
-#define KEY_LH_C4R6 LBKT
-#define KEY_LH_C3R6 RBKT
-#define KEY_LH_C2R6 LSFT
+#define KEY_LH_C5R6 BSLH
+#define KEY_LH_C4R6 LPAR
+#define KEY_LH_C3R6 RPAR
+#define KEY_LH_C2R6 GRAVE
 #define KEY_LH_T4 SPACE
 #define KEY_LH_T5 TAB
-#define KEY_LH_T6 0
-#define KEY_RH_T6 0
-#define KEY_RH_T5 ENTER
+#define KEY_LH_T6 INSERT
+#define KEY_RH_T6 DELETE
+#define KEY_RH_T5 BACKSPACE
 #define KEY_RH_T4 R
-#define KEY_RH_C2R6 RSFT
-#define KEY_RH_C3R6 LPAR
-#define KEY_RH_C4R6 RPAR
-#define KEY_RH_C5R6 BSLH
+#define KEY_RH_C2R6 PAGE_UP
+#define KEY_RH_C3R6 0
+#define KEY_RH_C4R6 0
+#define KEY_RH_C5R6 PG_DN
 #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_Engrammer) && LAYER_Engrammer == 0
@@ -796,54 +796,70 @@ combos {
   #define COMBO_FIRING_DECAY 50
   #endif
 
-  // T1+T4
+  // T2+T5
   #if defined(_A_TAB) && defined(LAYER_Cursor)
   combo_alt_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T4>;
+    key-positions = <POS_LH_T2 POS_LH_T5>;
     bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
   #endif
 
   combo_hyper_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T4>;
+    key-positions = <POS_RH_T2 POS_RH_T5>;
     bindings = <&kp LG(LA(LC(LSHFT)))>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
-  // T1+T2
+  // T3+T6
   #if defined(_G_TAB) && defined(LAYER_Cursor)
   combo_win_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T2>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&mod_tab_chord _G_TAB LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
   #endif
 
   combo_ctrl_shift_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T2>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&kp LC(LSHFT)>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
-  // T2+T5
+  // T5+T6
 
   combo_ctrl_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T5>;
+    key-positions = <POS_LH_T5 POS_LH_T6>;
     bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
   combo_meh_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T5>;
+    key-positions = <POS_RH_T5 POS_RH_T6>;
     bindings = <&kp LA(LC(LSHFT))>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
+  };
+
+  // T1+T4
+
+  combo_sticky_shift_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T4>;
+    bindings = <&sticky_key_modtap LSFT LSFT>;
+    layers = <0 1 2 3 4 5 6 7 8>;
+  };
+
+  combo_sticky_shift_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T4>;
+    bindings = <&sticky_key_modtap RSFT RSFT>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
   // T4+T5
@@ -852,37 +868,37 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&caps_word>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&caps_word>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
-  // T5+T6
+  // T1+T5
 
   combo_caps_lock_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T5 POS_LH_T6>;
+    key-positions = <POS_LH_T1 POS_LH_T5>;
     bindings = <&kp CAPSLOCK>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T5 POS_RH_T6>;
+    key-positions = <POS_RH_T1 POS_RH_T5>;
     bindings = <&kp CAPSLOCK>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6 7 8>;
   };
 
-  // T3+T6
+  // C1R5+C2R6
   #ifdef LAYER_Gaming
   combo_gaming_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T3 POS_LH_T6>;
+    key-positions = <POS_LH_C1R5 POS_LH_C2R6>;
     bindings = <&tog LAYER_Gaming>;
     layers = <0 LAYER_Gaming>;
   };
@@ -890,7 +906,7 @@ combos {
   #ifdef LAYER_Typing
   combo_typing_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T3 POS_RH_T6>;
+    key-positions = <POS_RH_C1R5 POS_RH_C2R6>;
     bindings = <&tog LAYER_Typing>;
     layers = <0 LAYER_Typing>;
   };
@@ -9901,19 +9917,20 @@ UNICODE_MORPH_MODS
       input-processors = <&zip_xy_scaler MOUSE_SCALER_SLOW>;
     };
     #endif
-    #ifdef LAYER_MouseFast
-    fast {
-      layers = <LAYER_MouseFast>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
-    };
-    #endif
     #ifdef LAYER_MouseWarp
     warp {
       layers = <LAYER_MouseWarp>;
       input-processors = <&zip_xy_scaler MOUSE_SCALER_WARP>;
     };
     #endif
+    #ifdef LAYER_MouseFast
+    fast {
+      layers = <LAYER_MouseFast>;
+      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
+    };
+    #endif
   };
+/*// FIXME: remove this (conflicts with definition in updated pr36)
   //
   // Scaling for mouse scrolling, based on @caksoylar's example:
   // https://github.com/caksoylar/zmk-config/commit/e35ee2f08788927683df7bbdd7fc73434473886e
@@ -9930,6 +9947,7 @@ UNICODE_MORPH_MODS
       };
     };
   };
+*/// FIXME
   &msc_input_listener {
     #ifdef LAYER_MouseSlow
     slow {
