@@ -1007,6 +1007,18 @@ behaviors {
     bindings = <&mo>, <&parang_right>;
     retro-tap; // tap on standalone hold
   };
+  #ifdef LAYER_Engram
+  crumb_engram_AT: crumb_layer_access_engram_AT {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #binding-cells = <2>;
+    bindings = <&mo>, <&engram_AT>;
+    retro-tap; // tap on standalone hold
+  };
+  #endif
   space: thumb_layer_access_spacebar {
     compatible = "zmk,behavior-hold-tap";
     flavor = SPACE_HOLDING_TYPE;
