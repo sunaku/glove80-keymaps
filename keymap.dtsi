@@ -9915,7 +9915,7 @@ UNICODE_MORPH_MODS
   #include <zephyr/dt-bindings/input/input-event-codes.h>
   / {
     input_processors {
-      zip_scroll_scaler: zip_scroll_scaler {
+      zip_scroll_scaling_processor: zip_scroll_scaling_processor {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
@@ -9928,19 +9928,19 @@ UNICODE_MORPH_MODS
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_SLOW>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_SLOW>;
     };
     #endif
     #ifdef LAYER_MouseFast
     fast {
       layers = <LAYER_MouseFast>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_FAST>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FAST>;
     };
     #endif
     #ifdef LAYER_MouseWarp
     warp {
       layers = <LAYER_MouseWarp>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_WARP>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_WARP>;
     };
     #endif
   };
