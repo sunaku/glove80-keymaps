@@ -36,8 +36,8 @@ characters:
     nature:    { fire:    "🔥", water:   "🌊" }
     love:      { heart:   "❤️", face:    "🥰" }
     party:     { tada:    "🎉", face:    "🥳" }
-    walking:   { left:    "🚶", right:   "🚶‍➡️" }
-    running:   { left:    "🏃", right:   "🏃‍➡️" }
+    game:      { dart:    "🎯", dice:    "🎲" }
+    trend:     { up:      "📈", down:    "📉" }
 
 #
 # codepoints:
