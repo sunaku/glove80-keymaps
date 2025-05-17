@@ -2003,7 +2003,6 @@ macros {
     };
     #endif
   };
-/*// FIXME: remove this (conflicts with definition in updated pr36)
   //
   // Scaling for mouse scrolling, based on @caksoylar's example:
   // https://github.com/caksoylar/zmk-config/commit/e35ee2f08788927683df7bbdd7fc73434473886e
@@ -2011,7 +2010,7 @@ macros {
   #include <zephyr/dt-bindings/input/input-event-codes.h>
   / {
     input_processors {
-      zip_scroll_scaler: zip_scroll_scaler {
+      zip_scroll_scaling_processor: zip_scroll_scaling_processor {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
@@ -2020,24 +2019,23 @@ macros {
       };
     };
   };
-*/// FIXME
   &msc_input_listener {
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_SLOW>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_SLOW>;
     };
     #endif
     #ifdef LAYER_MouseFast
     fast {
       layers = <LAYER_MouseFast>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_FAST>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FAST>;
     };
     #endif
     #ifdef LAYER_MouseWarp
     warp {
       layers = <LAYER_MouseWarp>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_WARP>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_WARP>;
     };
     #endif
   };
