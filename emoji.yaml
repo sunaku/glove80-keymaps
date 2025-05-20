@@ -136,10 +136,10 @@ codepoints:
   person_shrugging:    "🤷"
 
   # bottom row
-  check: "✔️"
+  check:    "✅"
   100:      "💯"
   warning:  "⚠️"
-  cross: "❌"
+  cross:    "❌"
   question: "❓"
 
   # thumb cluster upper arc
