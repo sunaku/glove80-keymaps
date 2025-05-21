@@ -1,0 +1,12 @@
+#!/bin/sh -eu
+#
+# Flashes the newest _build/*.uf2 file to your Glove80.
+#
+target=$(
+  until ls -d /run/media/*/GLV80?HBOOT 2>/dev/null; do
+    echo Waiting for Glove80 device... >&2
+    inotifywait -e create /run/media/* >&2 || sleep 1
+  done
+)
+newest=$(ls -t _build/*.uf2 | head -1)
+cp -v "$newest" "$target"/flash.uf2
