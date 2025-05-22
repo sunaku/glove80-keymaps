@@ -1,299 +1,466 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
   },
   [
     {
-      "g": true,
+      "x": 1,
+      "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
+      "a": 7,
+      "f": 5,
+      "d": true
     },
-    "F1",
-    "F2",
-    "F3",
-    "F4",
-    "F5",
+    "C6",
     {
-      "x": 7,
-      "t": "#EEEEEE"
+      "d": true
     },
-    "Reset",
+    "C5",
     {
-      "t": "#000000"
+      "d": true
     },
-    "F7",
-    "F8",
-    "F9",
+    "C4",
     {
-      "t": "#EEEEEE"
+      "d": true
     },
-    "Boot loader"
+    "C3",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C1",
+    {
+      "x": 7.25,
+      "d": true
+    },
+    "C1",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C6"
   ],
   [
     {
+      "x": 3,
       "t": "#000000",
-      "a": 5
+      "g": true,
+      "f": 3
     },
-    "|\n\\",
-    "!\n1",
-    "@\n2",
-    "#\n3",
-    "$\n4",
-    "%\n5",
+    "",
+    "",
+    "",
     {
+      "x": 9.25
+    },
+    "",
+    {
+      "f": 5
+    },
+    "",
+    {
+      "f": 3
+    },
+    "\n\n\n\nLower"
+  ],
+  [
+    {
+      "y": -0.5,
+      "t": "#9E9E9E",
       "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R1",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 6
+    },
+    "",
+    "",
+    {
+      "x": 15.25,
+      "f": 3
+    },
+    "",
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R1"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "x": 7,
+      "c": "#FFF3E0",
+      "t": "#000000",
       "a": 4,
-      "f": 4,
-      "w": 5,
+      "w": 7.25,
       "h": 4,
       "d": true
     },
-    "<center><h2>System Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
-    {
-      "g": true,
-      "a": 5,
-      "f": 3
-    },
-    "^\n6",
-    {
-      "g": false,
-      "p": "SPACE",
-      "a": 7
-    },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    "Ctrl <small>(sticky)</small>\n\n\n\nCtrl",
-    "Alt <small>(sticky)</small>\n\n\n\nAlt",
-    "Win <small>(sticky)</small>\n\n\n\nWin",
-    {
-      "g": true,
-      "p": "CHICKLET",
-      "a": 5
-    },
-    "+\n="
+    "<center><h1>System Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
   ],
   [
-    "~\n`",
     {
-      "a": 7
-    },
-    "B",
-    {
-      "c": "#ffecb3",
-      "g": false
-    },
-    "Effect ➖",
-    "Effect ➕",
-    "RGB toggle",
-    {
-      "c": "#c5cae9"
-    },
-    "Pause break",
-    {
-      "x": 5
-    },
-    "Pause break",
-    {
-      "c": "#ffecb3"
-    },
-    "RGB toggle",
-    "Effect ➕",
-    "Effect ➖",
-    {
+      "y": -0.6499999999999999,
+      "x": 3,
       "c": "#cccccc",
       "g": true,
-      "a": 5
-    },
-    ")\n0",
-    "&\n7"
-  ],
-  [
-    {
       "a": 7
     },
-    "U",
+    "",
+    "",
+    "",
+    "",
     {
-      "c": "#FFCDD2",
-      "g": false
-    },
-    "Speed ➕",
-    {
-      "c": "#ffccbc"
-    },
-    "Hue ➕",
-    {
-      "c": "#dcedc8"
-    },
-    "Sat ➕",
-    {
-      "c": "#bbdefb"
-    },
-    "Bright ➕",
-    {
-      "c": "#c5cae9"
-    },
-    "Print screen",
-    {
-      "x": 5
-    },
-    "Print screen",
-    {
-      "c": "#e1bee7",
-      "n": true
-    },
-    "Lock screen",
-    "Sleep",
-    "Power",
-    {
-      "c": "#dcedc8"
-    },
-    "Sat ➕",
-    {
-      "c": "#ffccbc"
-    },
-    "Hue ➕"
-  ],
-  [
-    {
-      "c": "#cccccc",
-      "g": true
-    },
-    "Shift",
-    {
-      "c": "#FFCDD2",
-      "g": false
-    },
-    "Speed ➖",
-    {
-      "c": "#ffccbc"
-    },
-    "Hue ➖",
-    {
-      "c": "#dcedc8"
-    },
-    "Sat ➖",
-    {
-      "c": "#bbdefb"
-    },
-    "Bright ➖",
-    {
-      "c": "#c5cae9"
-    },
-    "<small>Context</small> menu",
-    {
-      "x": 5
-    },
-    "<small>Context</small> menu",
-    "Scroll lock",
-    "Num lock",
-    "Caps lock",
-    {
-      "c": "#dcedc8"
-    },
-    "Sat ➖",
-    {
-      "c": "#ffccbc"
-    },
-    "Hue ➖"
-  ],
-  [
-    {
-      "y": -0.04999999999999982,
-      "x": 6.95,
-      "c": "#ffecb3",
-      "g": true,
-      "p": "FLAT",
-      "f": 2,
-      "w": 1.1,
-      "h": 2.7,
-      "d": true
+      "x": 7.25
     },
     ""
   ],
   [
     {
-      "y": -0.9500000000000002,
-      "c": "#cccccc",
-      "t": "#EEEEEE",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Magic",
-    {
-      "t": "#000000"
-    },
-    "Home",
-    "Page up",
-    "Page down",
-    {
-      "c": "#0277bd",
-      "t": "#FAFAFA",
+      "y": -0.5,
+      "t": "#9E9E9E",
       "g": false,
-      "p": "SPACE"
+      "d": true
     },
-    "Linux Magic SysRq\n\n\n\n<sup>Base Layer</sup>",
+    "R2",
     {
-      "c": "#e1bee7",
-      "t": "#000000",
-      "p": "CHICKLET"
-    },
-    "Lock screen",
-    "Sleep",
-    "Power",
-    {
-      "x": 1,
-      "c": "#757575",
-      "t": "#EEEEEE"
-    },
-    "Unlock layer",
-    {
-      "c": "#cccccc",
       "t": "#000000",
       "g": true,
-      "fa": [
-        9
-      ]
+      "f": 6
     },
-    "&rArr;",
+    "",
     {
-      "c": "#ffff8d",
+      "f": 5
+    },
+    "",
+    {
+      "x": 16.25,
+      "f": 3
+    },
+    "",
+    {
+      "t": "#9E9E9E",
       "g": false,
-      "p": "SPACE",
-      "n": true
+      "f": 5,
+      "d": true
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
-    {
-      "c": "#FFCDD2",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Speed ➕",
-    {
-      "c": "#bbdefb",
-      "f": 3
-    },
-    "Bright ➕",
-    {
-      "f": 3
-    },
-    "Bright ➖",
-    {
-      "c": "#FFCDD2",
-      "f": 3
-    },
-    "Speed ➖",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "a": 5,
-      "f": 3
-    },
-    "?\n/"
+    "R2"
   ],
   [
     {
-      "x": 5,
+      "y": -0.5,
+      "x": 3,
       "c": "#c5cae9",
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
+    {
+      "f": 3
+    },
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
+    {
+      "f": 3
+    },
+    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
+    {
+      "c": "#ffccbc",
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
+    {
+      "x": 7.25
+    },
+    "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
+    {
+      "c": "#D7CCC8",
+      "p": "SPACE",
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nShift\n\nShift",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nAlt\n\nAlt"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R3",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 6
+    },
+    "",
+    {
+      "f": 5
+    },
+    "",
+    {
+      "x": 15.25,
+      "c": "#D7CCC8",
       "g": false,
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nWin\n\nWin",
+    {
+      "c": "#cccccc",
+      "g": true,
+      "p": "CHICKLET",
+      "a": 7
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R3"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#bbdefb",
+      "t": "#000000",
+      "f": 3
+    },
+    "Sat<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#dcedc8"
+    },
+    "Hue<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#ffecb3",
+      "n": true
+    },
+    "Bright<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#ffccbc"
+    },
+    "Effect<br><i class='fa fa-plus'></i>",
+    {
+      "x": 7.25
+    },
+    "Effect<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#ffecb3",
+      "n": true
+    },
+    "Bright<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#dcedc8"
+    },
+    "Hue<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#bbdefb"
+    },
+    "Sat<br><i class='fa fa-plus'></i>"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R4",
+    {
+      "t": "#000000",
+      "g": true
+    },
+    "",
+    {
+      "c": "#FFCDD2",
+      "g": false,
+      "f": 3
+    },
+    "Speed<br><i class='fa fa-plus'></i>",
+    {
+      "x": 15.25
+    },
+    "Speed<br><i class='fa fa-plus'></i>",
+    {
+      "c": "#cccccc",
+      "g": true
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R4"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#bbdefb",
+      "t": "#000000",
+      "f": 3
+    },
+    "Sat<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#dcedc8"
+    },
+    "Hue<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#ffecb3"
+    },
+    "Bright<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#ffccbc"
+    },
+    "Effect<br><i class='fa fa-minus'></i>",
+    {
+      "x": 7.25
+    },
+    "Effect<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#ffecb3"
+    },
+    "Bright<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#dcedc8"
+    },
+    "Hue<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#bbdefb"
+    },
+    "Sat<br><i class='fa fa-minus'></i>"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R5",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
+    "\n\n\n\nLower",
+    {
+      "c": "#FFCDD2",
+      "g": false
+    },
+    "Speed<br><i class='fa fa-minus'></i>",
+    {
+      "x": 15.25
+    },
+    "Speed<br><i class='fa fa-minus'></i>",
+    {
+      "c": "#cccccc",
+      "g": true
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R5"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "t": "#000000",
+      "g": true,
+      "f": 4
+    },
+    "",
+    "",
+    {
+      "c": "#E1BEE7",
+      "g": false,
+      "p": "SA SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        6,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "<i class='fa fa-linux'></i>\nMagic SysRq\n\n\nBase",
+    {
+      "x": 9.25,
+      "c": "#e8f5e9",
+      "p": "CHICKLET",
       "a": 7,
       "f": 3
     },
@@ -305,21 +472,384 @@
     {
       "f": 3
     },
-    "Caps lock",
+    "Caps lock"
+  ],
+  [
     {
-      "x": 1,
+      "y": -0.5,
       "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R6",
+    {
+      "t": "#000000",
       "g": true,
       "f": 3
     },
-    "&lArr;",
+    "\n\n\n\nLower",
+    {
+      "f": 5
+    },
+    "",
+    {
+      "x": 15.25,
+      "c": "#c5cae9",
+      "g": false,
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
+    {
+      "c": "#cccccc",
+      "g": true,
+      "a": 7
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R6"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1,
+      "t": "#000000",
+      "f": 3,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "<ul class=\"combos\"><li>Hold C2R6 to activate the <i class='fa fa-linux'></i> Magic SysRq overlay, which takes you to the base layer where you can type command keys such as <tt>REISUB</tt> to safely reboot your Linux system.</li></ul>",
+    {
+      "x": 9.75,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "<ul class=\"combos\"><li>Hold T1 to activate this layer.</li><li>Release T1 to deactivate this layer.</li><li>Tap T1 to unlock this layer, if locked.</li></ul>"
+  ],
+  [
+    {
+      "rx": 0.25,
+      "y": 2,
+      "x": 15,
+      "g": true
+    },
+    "",
+    {
+      "f": 5
+    },
+    "",
     {
       "f": 3
     },
-    "Tab\n\n\n\nMouse",
+    "\n\n\n\nLower"
+  ],
+  [
     {
+      "y": -0.5,
+      "x": 18
+    },
+    ""
+  ],
+  [
+    {
+      "r": 25,
+      "rx": 6.25,
+      "ry": 9,
+      "y": -3.9749999999999996,
+      "x": -0.40000000000000036,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.40000000000000036,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "a": 5,
       "f": 3
     },
-    "End"
+    "<i class='fa fa-lock'></i>\nscreen\n\n\nFunction\n\nLock"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "x": -1,
+      "c": "#e8f5e9",
+      "a": 7,
+      "n": true
+    },
+    "Scroll lock\n\n\n\nCursor"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T4"
+  ],
+  [
+    {
+      "r": 35,
+      "y": -3.675,
+      "x": 0.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.25,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bolt'></i>\nsuspend\n\n\n\n\nSleep"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.15000000000000036,
+      "c": "#e8f5e9",
+      "a": 7
+    },
+    "Num lock\n\n\n\nNumber"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.15000000000000036,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": 45,
+      "y": -3.825,
+      "x": 0.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.9000000000000004,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-power-off'></i>\non/off\n\n\nLower\n\nPower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": 0.7000000000000002,
+      "c": "#e8f5e9",
+      "a": 7,
+      "f": 3
+    },
+    "Caps lock\n\n\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": 0.7000000000000002,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -45,
+      "rx": 15,
+      "y": -4.175,
+      "x": -1.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.9000000000000004,
+      "c": "#c5cae9",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\nLower\n\nPause"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -1.6999999999999993,
+      "c": "#d1c4e9",
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-power-off'></i>\non/off\n\n\nTyping\n\nPower"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1.6999999999999993,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -35,
+      "y": -3.5250000000000004,
+      "x": -1.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.25,
+      "c": "#c5cae9",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.8499999999999996,
+      "c": "#d1c4e9",
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bolt'></i>\nsuspend\n\n\nMouse\n\nSleep"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.8499999999999996,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": -25,
+      "y": -3.625,
+      "x": -0.5999999999999996,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.5999999999999996,
+      "c": "#ffff8d",
+      "t": "#000000",
+      "p": "SA SPACE",
+      "f": 3
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nSystem"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "c": "#d1c4e9",
+      "p": "CHICKLET",
+      "a": 5
+    },
+    "<i class='fa fa-lock'></i>\nscreen\n\n\nSymbol\n\nLock"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "c": "#D1C4E9",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T4"
   ]
 ]

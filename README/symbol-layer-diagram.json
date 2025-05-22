@@ -1,17 +1,71 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
   },
   [
     {
-      "g": true,
+      "x": 1,
+      "t": "#9E9E9E",
       "p": "CHICKLET",
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
       "a": 7,
-      "f": 7
+      "f": 5,
+      "d": true
     },
-    "\"",
-    "'",
+    "C6",
     {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C1",
+    {
+      "x": 7.25,
+      "d": true
+    },
+    "C1",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C6"
+  ],
+  [
+    {
+      "x": 3,
+      "t": "#000000",
+      "g": true,
       "f": 9
     },
     "`",
@@ -21,36 +75,70 @@
     "'",
     "\"",
     {
-      "x": 7,
+      "x": 9.25,
       "t": "#EEEEEE",
       "f": 3
     },
-    "",
-    "",
     "",
     "",
     ""
   ],
   [
     {
-      "c": "#ffcdd2",
-      "t": "#000000",
+      "y": -0.5,
+      "t": "#9E9E9E",
       "g": false,
-      "f": 9
+      "f": 5,
+      "d": true
     },
-    "`",
+    "R1",
     {
-      "c": "#ffecb3",
+      "t": "#000000",
+      "g": true,
       "f": 7
     },
-    ",",
+    "\"",
+    "'",
     {
-      "c": "#bbdefb"
+      "x": 15.25,
+      "t": "#EEEEEE",
+      "f": 3
+    },
+    "",
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R1"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "x": 7,
+      "c": "#FFF3E0",
+      "t": "#000000",
+      "a": 4,
+      "w": 7.25,
+      "h": 4,
+      "d": true
+    },
+    "<center><h1>Symbol Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
+  ],
+  [
+    {
+      "y": -0.6499999999999999,
+      "x": 3,
+      "c": "#bbdefb",
+      "a": 7,
+      "f": 7
     },
     "(",
     ")",
     {
-      "c": "#ffecb3"
+      "c": "#c8e6c9"
     },
     ";",
     {
@@ -58,88 +146,130 @@
     },
     ".",
     {
+      "x": 7.25,
       "c": "#cccccc",
-      "a": 4,
-      "f": 4,
-      "w": 5,
-      "h": 4,
-      "d": true
-    },
-    "<center><h2>Symbol Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
-    {
       "g": true,
-      "a": 7,
       "f": 3
     },
     "",
     {
-      "g": false,
-      "p": "SPACE"
+      "t": "#EEEEEE"
     },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    "Ctrl <small>(sticky)</small>\n\n\n\nCtrl",
-    "Alt <small>(sticky)</small>\n\n\n\nAlt",
-    "Win <small>(sticky)</small>\n\n\n\nWin",
-    {
-      "g": true,
-      "p": "CHICKLET"
-    },
+    "",
+    "",
     ""
   ],
   [
     {
-      "c": "#e1bee7",
+      "y": -0.5,
+      "t": "#9E9E9E",
       "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R2",
+    {
+      "c": "#ffcdd2",
+      "t": "#000000",
+      "f": 9
+    },
+    "`",
+    {
+      "c": "#bbdefb",
       "f": 7
     },
-    "!",
+    "]",
     {
-      "c": "#bbdefb"
+      "x": 15.25,
+      "c": "#cccccc",
+      "t": "#EEEEEE",
+      "g": true,
+      "f": 3
     },
-    "[",
+    "",
+    {
+      "t": "#000000"
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R2"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#bbdefb",
+      "t": "#000000",
+      "f": 7
+    },
     "{",
     "}",
-    "]",
+    {
+      "c": "#c8e6c9"
+    },
+    ",",
     {
       "c": "#ffecb3"
     },
     "?",
     {
-      "x": 5,
+      "x": 7.25,
       "c": "#ffcdd2",
       "f": 9
     },
-    "`",
-    {
-      "c": "#0277bd",
-      "t": "#EEEEEE",
-      "f": 3
-    },
-    "Delete",
-    "Insert",
-    "Shift-Tab",
-    "Escape",
-    {
-      "c": "#cccccc",
-      "g": true
-    },
-    ""
+    "`"
   ],
   [
     {
-      "c": "#ffecb3",
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R3",
+    {
+      "c": "#bbdefb",
       "t": "#000000",
-      "g": false,
       "f": 7
     },
-    "#",
-    "^",
+    "[",
     {
-      "c": "#dcedc8"
+      "c": "#d1c4e9"
+    },
+    "!",
+    {
+      "x": 16.25,
+      "c": "#cccccc",
+      "t": "#EEEEEE",
+      "g": true,
+      "f": 3
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R3"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#dcedc8",
+      "t": "#000000",
+      "f": 7
     },
     "=",
     {
-      "c": "#ffccbc",
+      "c": "#c5cae9",
       "f": 9
     },
     "_",
@@ -154,40 +284,59 @@
     },
     "*",
     {
-      "x": 5,
+      "x": 7.25,
       "c": "#ffcdd2",
       "f": 7
     },
     "\"",
     {
-      "c": "#0277bd",
-      "t": "#EEEEEE",
+      "c": "#ffccbc",
       "f": 3,
       "n": true
     },
     "Back space",
-    "Space\n\n\n\nAltGr",
     "Tab",
-    "Enter",
-    {
-      "c": "#cccccc",
-      "t": "#000000",
-      "g": true
-    },
-    ""
+    "Space\n\n\n\nAltGr"
   ],
   [
     {
-      "c": "#e1bee7",
-      "g": false,
-      "f": 8
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
     },
-    "~",
+    "R4",
     {
-      "c": "#dcedc8",
+      "c": "#ffecb3",
+      "t": "#000000",
       "f": 7
     },
-    "<",
+    "#",
+    "^",
+    {
+      "x": 16.25,
+      "c": "#cccccc",
+      "g": true,
+      "f": 3
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R4"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#dcedc8",
+      "t": "#000000",
+      "f": 7
+    },
     "|",
     {
       "f": 9
@@ -202,140 +351,411 @@
     },
     "/",
     {
-      "x": 5,
+      "x": 7.25,
       "c": "#ffcdd2"
     },
     "'",
     {
-      "c": "#2e7d32",
-      "t": "#EEEEEE"
+      "c": "#ffccbc",
+      "f": 3
     },
-    "&larr;",
-    "&uarr;",
-    "&darr;",
-    "&rarr;",
+    "Delete",
+    "Shift-Tab",
+    "Insert"
+  ],
+  [
     {
+      "y": -0.5,
       "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R5",
+    {
+      "c": "#d1c4e9",
       "t": "#000000",
+      "f": 8
+    },
+    "~",
+    {
+      "c": "#dcedc8",
+      "f": 7
+    },
+    "<",
+    {
+      "x": 16.25,
+      "c": "#cccccc",
       "g": true,
       "f": 3
     },
-    ""
-  ],
-  [
+    "",
     {
-      "y": -0.04999999999999982,
-      "x": 6.95,
-      "c": "#FFFF8D",
+      "t": "#9E9E9E",
       "g": false,
-      "p": "FLAT",
-      "f": 2,
-      "w": 1.1,
-      "h": 2.7,
+      "f": 5,
       "d": true
     },
+    "R5"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#ffcdd2",
+      "t": "#000000",
+      "f": 7
+    },
+    "'",
+    "\"",
+    {
+      "c": "#c5cae9",
+      "f": 8
+    },
+    "+",
+    {
+      "x": 9.25,
+      "c": "#cccccc",
+      "t": "#EEEEEE",
+      "g": true,
+      "f": 3
+    },
+    "",
+    "",
     ""
   ],
   [
     {
-      "y": -0.9500000000000002,
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "f": 9
+      "y": -0.5,
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
     },
-    "`",
+    "R6",
     {
-      "c": "#ffccbc",
+      "t": "#EEEEEE",
+      "g": true,
+      "f": 3
+    },
+    "",
+    {
+      "c": "#c5cae9",
+      "t": "#000000",
       "g": false,
       "f": 7
     },
     "&",
     {
-      "c": "#ffcdd2"
-    },
-    "'",
-    "\"",
-    {
-      "c": "#ffccbc",
-      "f": 8
-    },
-    "+",
-    {
-      "c": "#e1bee7",
-      "f": 7
-    },
-    "\\",
-    {
-      "c": "#ffecb3",
-      "f": 9
-    },
-    ".",
-    "*",
-    {
-      "x": 1,
-      "c": "#757575",
+      "x": 15.25,
+      "c": "#cccccc",
       "t": "#EEEEEE",
+      "g": true,
       "f": 3
     },
-    "Unlock layer",
+    "",
+    "",
     {
-      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R6"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1,
       "t": "#000000",
-      "g": true
+      "f": 3,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
     },
     "",
-    "\n\n\n\nSystem",
     {
-      "c": "#2e7d32",
-      "t": "#EEEEEE",
-      "g": false
+      "x": 9.75,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
     },
-    "Home",
-    "Page up",
-    "Page down",
-    "End",
+    "<ul class=\"combos\"><li>Hold T4 to activate this layer.</li><li>Release T4 to deactivate this layer.</li><li>Tap T4 to unlock this layer, if locked.</li></ul>"
+  ],
+  [
     {
+      "ry": 0.25,
+      "y": 2.75,
+      "x": 15.25,
+      "c": "#D7CCC8",
+      "p": "SPACE",
+      "a": 5,
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nShift\n\nShift",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nAlt\n\nAlt"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 18.25
+    },
+    "sticky\n\n\n\nWin\n\nWin"
+  ],
+  [
+    {
+      "x": 18.25,
+      "c": "#ffccbc",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 3
+    },
+    "Enter"
+  ],
+  [
+    {
+      "x": 18.25,
+      "f": 3
+    },
+    "Escape"
+  ],
+  [
+    {
+      "r": 25,
+      "rx": 6.25,
+      "ry": 9,
+      "y": -3.9749999999999996,
+      "x": -0.40000000000000036,
       "c": "#cccccc",
-      "g": true
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.40000000000000036,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "f": 7
+    },
+    "\\"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "x": -1,
+      "c": "#ffecb3",
+      "n": true
+    },
+    "%"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T4"
+  ],
+  [
+    {
+      "r": 35,
+      "y": -3.675,
+      "x": 0.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.25,
+      "c": "#ffecb3",
+      "t": "#000000",
+      "f": 9
+    },
+    "."
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.15000000000000036,
+      "f": 8
+    },
+    ":"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.15000000000000036,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": 45,
+      "y": -3.825,
+      "x": 0.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.9000000000000004,
+      "c": "#ffecb3",
+      "t": "#000000",
+      "f": 9
+    },
+    "*"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": 0.7000000000000002,
+      "f": 7
+    },
+    "@"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": 0.7000000000000002,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -45,
+      "rx": 15,
+      "y": -4.175,
+      "x": -1.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.9000000000000004,
+      "t": "#000000",
+      "g": true,
+      "f": 7
+    },
+    "\n\n\n\nLower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -1.6999999999999993
     },
     ""
   ],
   [
     {
-      "x": 5,
-      "c": "#ffecb3",
-      "t": "#000000",
+      "y": -0.20000000000000018,
+      "x": -1.6999999999999993,
+      "t": "#9E9E9E",
       "g": false,
-      "f": 7,
-      "n": true
+      "f": 5,
+      "d": true
     },
-    "%",
+    "T6"
+  ],
+  [
     {
-      "f": 8
+      "r": -35,
+      "y": -3.5250000000000004,
+      "x": -1.2599999999999998,
+      "d": true
     },
-    ":",
+    "T2"
+  ],
+  [
     {
+      "y": -0.27500000000000036,
+      "x": -1.25,
+      "t": "#000000",
+      "g": true,
       "f": 7
     },
-    "@",
+    ""
+  ],
+  [
     {
-      "x": 1,
-      "c": "#cccccc",
-      "g": true,
-      "f": 3
+      "y": 0.15000000000000036,
+      "x": -0.8499999999999996,
+      "f": 8
     },
-    "",
-    "\n\n\n\nMouse",
+    "\n\n\n\nMouse"
+  ],
+  [
     {
+      "y": -0.20000000000000018,
+      "x": -0.8499999999999996,
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": -25,
+      "y": -3.625,
+      "x": -0.5999999999999996,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.5999999999999996,
+      "t": "#000000",
+      "g": true,
+      "f": 8
+    },
+    "\n\n\n\nSystem"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
       "c": "#ffff8d",
       "g": false,
-      "p": "SPACE",
-      "fa": [
-        9
-      ],
-      "n": true
+      "p": "SA SPACE",
+      "f": 6
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer"
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nSymbol"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "T4"
   ]
 ]

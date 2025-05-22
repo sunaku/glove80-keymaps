@@ -1,286 +1,733 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}\nsub, sup {\n    font-size: xx-small;\n    margin-left: -0.25ex;\n}\naside {\n    color: red;\n    margin-left: 1em !important;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n.motif {\n    opacity: 0.33;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
   },
   [
     {
-      "c": "#e1bee7",
+      "x": 1,
+      "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
+      "a": 7,
+      "f": 5,
+      "d": true
     },
-    "Escape\n\n\n\nFunction",
+    "C6",
     {
-      "c": "#cccccc"
+      "d": true
     },
-    "P",
-    "O\n\n\n\nWin",
-    "N",
+    "C5",
     {
-      "c": "#e1bee7"
+      "d": true
     },
-    "Back space",
+    "C4",
     {
-      "x": 7,
-      "c": "#ffcdd2"
+      "d": true
     },
-    "F1",
-    "F2",
-    "F3",
-    "F4",
-    "F5"
+    "C3",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C1",
+    {
+      "x": 7.25,
+      "d": true
+    },
+    "C1",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C6"
   ],
   [
     {
-      "c": "#cccccc"
+      "x": 3,
+      "t": "#000000"
     },
-    "M",
+    "O\n\n\n\nWin",
+    "N",
     {
       "c": "#ffccbc",
-      "a": 5,
+      "f": 3
+    },
+    "Back space",
+    {
+      "x": 9.25,
+      "c": "#e0f2f1",
       "f": 4
     },
-    "^\n6",
+    "F1",
+    "F2",
+    "F3"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R1",
+    {
+      "c": "#ffccbc",
+      "t": "#000000",
+      "f": 3
+    },
+    "Escape\n\n\n\nFunction",
+    {
+      "c": "#cccccc",
+      "f": 5
+    },
+    "P",
+    {
+      "x": 15.25,
+      "c": "#e0f2f1",
+      "f": 4
+    },
+    "F4",
+    "F5",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R1"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "x": 7,
+      "c": "#FFF3E0",
+      "t": "#000000",
+      "a": 4,
+      "w": 7.25,
+      "h": 4,
+      "d": true
+    },
+    "<center><h1>Gaming Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
+  ],
+  [
+    {
+      "y": -0.6499999999999999,
+      "x": 3,
+      "c": "#fff3e0",
+      "a": 5
+    },
     "&\n7",
     "*\n8",
     "(\n9",
     ")\n0",
     {
-      "c": "#cccccc",
-      "a": 4,
-      "w": 5,
-      "h": 4,
-      "d": true
-    },
-    "<center><h2>Gaming Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
-    {
-      "c": "#ffcdd2",
+      "x": 7.25,
+      "c": "#e0f2f1",
       "a": 7,
-      "f": 3
+      "f": 4
     },
     "F6",
     "F7",
     "F8",
-    "F9",
-    "F10",
-    "F11"
+    "F9"
   ],
   [
     {
-      "c": "#cccccc"
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
     },
-    "I\n\n\n\nAlt",
+    "R2",
     {
-      "c": "#ffccbc",
-      "a": 5,
+      "t": "#000000"
+    },
+    "M",
+    {
+      "c": "#fff3e0",
+      "a": 5
+    },
+    "^\n6",
+    {
+      "x": 15.25,
+      "c": "#e0f2f1",
+      "a": 7,
       "f": 4
     },
-    "!\n1",
+    "F10",
+    "F11",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R2"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#fff3e0",
+      "t": "#000000",
+      "a": 5
+    },
     "@\n2",
     "#\n3",
     "$\n4",
     "%\n5",
     {
-      "x": 5,
+      "x": 7.25,
       "c": "#cccccc",
-      "a": 7,
-      "f": 3
+      "a": 7
     },
     "Y\n\n\n\nShift",
     "U\n\n\n\nAltGr",
-    "I\n\n\n\nAlt",
-    "O\n\n\n\nWin",
-    "P",
-    {
-      "c": "#ffcdd2"
-    },
-    "F12"
+    "<tt>I</tt>\n\n\n\nAlt",
+    "O\n\n\n\nWin"
   ],
   [
     {
-      "c": "#cccccc"
+      "y": -0.5,
+      "t": "#9E9E9E",
+      "d": true
     },
-    "T",
+    "R3",
     {
-      "c": "#e1bee7"
+      "t": "#000000"
     },
-    "Tab\n\n\n\nWin",
+    "<tt>I</tt>\n\n\n\nAlt",
     {
-      "c": "#cccccc"
+      "c": "#fff3e0",
+      "a": 5
+    },
+    "!\n1",
+    {
+      "x": 15.25,
+      "c": "#cccccc",
+      "a": 7
+    },
+    "P",
+    {
+      "c": "#e0f2f1",
+      "f": 4
+    },
+    "F12",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R3"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "t": "#000000"
     },
     "Q\n\n\n\nAlt",
     {
-      "c": "#dcedc8"
+      "c": "#d1c4e9",
+      "a": 5,
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        3
+      ]
     },
-    "W\n\n\n\nCtrl",
+    "\n<i class='fa fa-caret-up motif'></i>\n\n\nCtrl\n\nW",
     {
-      "c": "#cccccc"
+      "c": "#cccccc",
+      "a": 7,
+      "f": 5
     },
     "E\n\n\n\nShift",
     "R",
     {
-      "x": 5
+      "x": 7.25
     },
     "H",
     "J",
     "K",
-    "L",
+    "L"
+  ],
+  [
     {
-      "c": "#ffecb3",
+      "y": -0.5,
+      "t": "#9E9E9E",
+      "d": true
+    },
+    "R4",
+    {
+      "t": "#000000"
+    },
+    "T",
+    {
+      "c": "#ffccbc",
+      "f": 3
+    },
+    "Tab\n\n\n\nWin",
+    {
+      "x": 15.25,
+      "c": "#e8f5e9",
       "a": 5,
       "f": 5
     },
     ":\n;",
-    "\"\n'"
+    "\"\n'",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "d": true
+    },
+    "R4"
   ],
   [
     {
-      "c": "#cccccc",
-      "a": 7,
-      "f": 3
+      "y": -0.5,
+      "x": 3,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "a": 5,
+      "fa": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
     },
-    "G",
-    {
-      "c": "#bbdefb",
-      "p": "SPACE"
-    },
-    "Shift\n\n\n\nShift",
-    {
-      "c": "#dcedc8",
-      "p": "CHICKLET"
-    },
-    "A",
-    "S",
+    "\n<i class='fa fa-caret-left motif'></i>\n\n\n\n\nA",
+    "\n<i class='fa fa-caret-down motif'></i>\n\n\n\n\nS",
     {
       "n": true
     },
-    "D",
+    "\n<i class='fa fa-caret-right motif'></i>\n\n\n\n\nD",
     {
-      "c": "#cccccc"
+      "c": "#000000",
+      "g": true,
+      "p": "SPACE",
+      "a": 7
+    },
+    "",
+    {
+      "x": -1,
+      "c": "#cccccc",
+      "g": false,
+      "p": "CHICKLET"
     },
     "F",
     {
-      "x": 5
+      "x": 7.25
     },
     "N",
     "M",
     {
-      "c": "#ffecb3",
+      "c": "#e8f5e9",
       "a": 5,
       "f": 5
     },
     "<\n,",
-    ">\n.",
     {
+      "f": 5
+    },
+    ">\n."
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "d": true
+    },
+    "R5",
+    {
+      "t": "#000000"
+    },
+    "G",
+    {
+      "c": "#ffecb3",
+      "p": "SPACE",
+      "f": 3
+    },
+    "Shift\n\n\n\nShift",
+    {
+      "x": 15.25,
+      "c": "#e8f5e9",
+      "p": "CHICKLET",
+      "a": 5,
       "f": 4
     },
     "?\n/",
-    "|\n\\"
-  ],
-  [
     {
-      "y": -0.04999999999999982,
-      "x": 6.98,
-      "p": "FLAT",
-      "f": 2,
-      "w": 1.075,
-      "h": 2.7
+      "f": 5
     },
-    "\nToggle <small>game layer</small>"
-  ],
-  [
+    "_\n-",
     {
-      "y": -0.9500000000000002,
       "c": "#cccccc",
-      "p": "CHICKLET",
+      "t": "#9E9E9E",
       "a": 7,
-      "f": 3
+      "d": true
     },
-    "B",
+    "R5"
+  ],
+  [
     {
-      "c": "#bbdefb",
-      "p": "SPACE"
-    },
-    "Ctrl\n\n\n\nCtrl",
-    {
-      "c": "#cccccc",
-      "p": "CHICKLET"
+      "y": -0.5,
+      "x": 3,
+      "t": "#000000"
     },
     "Z",
     "X",
-    "C",
     {
-      "c": "#bbdefb",
+      "c": "#000000",
+      "g": true,
       "p": "SPACE"
     },
-    "Shift\n\n\n\nShift",
-    "Alt\n\n\n\nAlt",
+    "",
     {
-      "c": "#e1bee7",
+      "x": -1,
+      "c": "#cccccc",
+      "g": false,
       "p": "CHICKLET"
     },
-    "Enter\n\n\n\nSystem",
+    "C",
     {
-      "x": 1
-    },
-    "Escape\n\n\n\nFunction",
-    {
-      "c": "#dcedc8",
-      "f": 7
-    },
-    "&uarr;",
-    {
-      "c": "#e1bee7",
-      "f": 3
-    },
-    "Enter\n\n\n\nSystem",
-    {
-      "c": "#ffecb3",
+      "x": 9.25,
+      "c": "#e8f5e9",
       "a": 5
     },
-    "{\n[",
+    "~\n`",
     {
       "f": 4
     },
-    "_\n-",
+    "{\n[",
+    "}\n]"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#e0f2f1",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R6",
+    {
+      "c": "#cccccc",
+      "t": "#000000"
+    },
+    "B",
+    {
+      "c": "#dcedc8",
+      "p": "SPACE",
+      "f": 3
+    },
+    "Ctrl\n\n\n\nCtrl",
+    {
+      "x": 15.25,
+      "c": "#e8f5e9",
+      "p": "CHICKLET",
+      "a": 5,
+      "f": 4
+    },
+    "|\n\\",
     {
       "f": 5
     },
     "+\n=",
     {
-      "f": 3
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "d": true
     },
-    "}\n]",
-    {
-      "f": 5
-    },
-    "~\n`"
+    "R6"
   ],
   [
     {
-      "x": 5,
-      "c": "#e1bee7",
-      "a": 7,
+      "y": 0.25,
+      "x": 1,
+      "t": "#000000",
       "f": 3,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "<ul class=\"combos\"><li><b>Combo C1R5+C2R6 = Gaming layer on/off</b></li></ul>",
+    {
+      "x": 9.75,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    ""
+  ],
+  [
+    {
+      "r": 25,
+      "rx": 6.25,
+      "ry": 9,
+      "y": -3.9749999999999996,
+      "x": -0.40000000000000036,
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.40000000000000036,
+      "c": "#ffecb3",
+      "t": "#000000",
+      "p": "SPACE",
+      "f": 3
+    },
+    "Shift\n\n\n\nShift"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "x": -1,
+      "c": "#ffccbc",
+      "p": "CHICKLET",
       "n": true
     },
-    "Space\n\n\n\nCursor",
+    "Space\n\n\n\nCursor"
+  ],
+  [
     {
-      "c": "#bbdefb",
-      "p": "SPACE"
-    },
-    "Ctrl\n\n\n\nCtrl",
-    {
+      "y": -0.20000000000000018,
+      "x": -1,
       "c": "#cccccc",
-      "p": "CHICKLET"
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
     },
-    "V",
+    "T4"
+  ],
+  [
     {
-      "x": 1,
-      "c": "#dcedc8",
-      "f": 7
+      "r": 35,
+      "y": -3.675,
+      "x": 0.2599999999999998,
+      "d": true
     },
-    "&larr;",
-    "&darr;",
-    "&rarr;"
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.25,
+      "c": "#bbdefb",
+      "t": "#000000",
+      "p": "SPACE",
+      "f": 3
+    },
+    "Alt\n\n\n\nAlt"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.15000000000000036,
+      "c": "#dcedc8"
+    },
+    "Ctrl\n\n\n\nCtrl"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.15000000000000036,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": 45,
+      "y": -3.825,
+      "x": 0.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.9000000000000004,
+      "t": "#000000"
+    },
+    "V\n\n\n\nLower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": 0.7000000000000002,
+      "c": "#ffccbc",
+      "f": 3
+    },
+    "Enter\n\n\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": 0.7000000000000002,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -45,
+      "rx": 15,
+      "y": -4.175,
+      "x": -1.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.9000000000000004,
+      "c": "#ffccbc",
+      "t": "#000000",
+      "f": 3
+    },
+    "Escape\n\n\n\nLower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -1.6999999999999993,
+      "c": "#d1c4e9",
+      "f": 6
+    },
+    "<i class='fa fa-caret-left'></i>\n\n\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1.6999999999999993,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -35,
+      "y": -3.5250000000000004,
+      "x": -1.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.25,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "f": 6
+    },
+    "<i class='fa fa-caret-up'></i>"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.8499999999999996
+    },
+    "<i class='fa fa-caret-down'></i>\n\n\n\nMouse"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.8499999999999996,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": -25,
+      "y": -3.625,
+      "x": -0.5999999999999996,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.5999999999999996,
+      "c": "#ffccbc",
+      "t": "#000000",
+      "f": 3
+    },
+    "Enter\n\n\n\nSystem"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "c": "#d1c4e9",
+      "f": 6
+    },
+    "<i class='fa fa-caret-right'></i>\n\n\n\nSymbol"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T4"
   ]
 ]

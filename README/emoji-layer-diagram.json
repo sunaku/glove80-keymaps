@@ -1,20 +1,79 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
   },
   [
     {
+      "x": 1,
+      "t": "#9E9E9E",
       "p": "CHICKLET",
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
       "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "C6",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C1",
+    {
+      "x": 7.25,
+      "d": true
+    },
+    "C1",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C6"
+  ],
+  [
+    {
+      "x": 3,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
       "f": 9
     },
-    "☁️",
-    "🌥️",
     "⛅\n\n\n\nWin",
     "🌤️",
     "☀️",
     {
-      "x": 7,
+      "x": 9.25,
       "f": 3,
       "fa": [
         9
@@ -22,12 +81,37 @@
     },
     "🌑",
     {
-      "a": 5,
-      "f": 5
+      "a": 4,
+      "f": 8
     },
-    "🌒\n🌘",
-    "🌓\n🌗",
-    "🌔\n🌖",
+    "\n🌘\n🌒",
+    "\n🌗\n🌓"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R1",
+    {
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
+    "☁️",
+    "🌥️",
+    {
+      "x": 15.25,
+      "a": 4,
+      "f": 8
+    },
+    "\n🌖\n🌔",
     {
       "a": 7,
       "f": 3,
@@ -35,71 +119,159 @@
         9
       ]
     },
-    "🌕"
+    "🌕",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "R1"
   ],
   [
     {
+      "y": -0.8500000000000001,
+      "x": 7,
+      "c": "#FFF3E0",
+      "t": "#000000",
+      "a": 4,
+      "w": 7.25,
+      "h": 4,
+      "d": true
+    },
+    "<center><h1>Emoji Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
+  ],
+  [
+    {
+      "y": -0.6499999999999999,
+      "x": 3,
+      "c": "#fcfcfc",
+      "p": "FLAT",
+      "a": 7,
       "f": 9
     },
-    "🌈",
-    "🏻",
     "🏼",
     "🏽",
     "🏾",
     "🏿",
     {
+      "x": 7.25,
       "a": 4,
-      "f": 4,
-      "w": 5,
-      "h": 4,
-      "d": true
+      "f": 8
     },
-    "<center><h2>Emoji Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "\n🎉\n🥳",
+    "\n❤️\n🥰",
+    "\n🔥\n🌊",
     {
-      "a": 7,
       "f": 9
     },
-    "🎉",
-    "❤️",
-    "🔥",
-    "💪",
-    "🧗",
-    "🥼"
+    "\n💪\n🏋️"
   ],
   [
-    "⬅️",
-    "🦲",
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R2",
+    {
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
+    "🌈",
+    "🏻",
+    {
+      "x": 15.25,
+      "a": 4,
+      "f": 8
+    },
+    "\n🧗\n🤹",
+    "\n🤓\n🥼",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R2"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
     "🦰",
     "🦱",
     "🦳",
     "️➡️",
     {
-      "x": 5,
-      "a": 5,
-      "f": 5
+      "x": 7.25,
+      "a": 4,
+      "f": 8
     },
-    "🤣\n😂",
-    "🙃\n🙂",
-    "😍\n🤩\n\n\nCtrl",
-    "😜\n😉",
-    "😱\n😨",
-    "😵\n🤯"
+    "\n😂\n🤣",
+    "\n🙂\n🙃",
+    "\n🤩\n😍\n\nCtrl",
+    "\n😉\n😜"
   ],
   [
     {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
       "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R3",
+    {
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
       "f": 9
     },
-    "♀️\n\n\n\nAlt",
+    "⬅️",
+    "🦲",
     {
+      "x": 15.25,
+      "a": 4,
+      "f": 8
+    },
+    "\n😨\n😱",
+    "\n🤯\n😵",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R3"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
       "c": "#FFCCBC",
+      "t": "#000000",
       "f": 3
     },
     "Skin tone <small>preset</small>",
-    {
-      "c": "#ffecb3"
-    },
-    "ZWJ\n\n\n\nWin",
     {
       "c": "#dcedc8"
     },
@@ -109,134 +281,448 @@
     },
     "Hair style <small>preset</small>",
     {
-      "c": "#cccccc",
+      "c": "#fcfcfc",
+      "p": "FLAT",
       "f": 9
     },
     "♂️\n\n\n\nCtrl",
     {
-      "x": 5,
-      "a": 5,
-      "f": 5
+      "x": 7.25,
+      "a": 4,
+      "f": 8
     },
-    "👋\n🫰",
-    {
-      "n": true
-    },
-    "😎\n👌\n\n\nShift",
-    "🫡\n🙏",
-    "😰\n😅\n\n\nAlt",
-    "😢\n😞",
-    "🧐\n🤔"
+    "\n🫰\n👋",
+    "\n👌\n😎",
+    "\n🙏\n🫡",
+    "\n😅\n😰"
   ],
   [
     {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
       "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R4",
+    {
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
       "f": 9
     },
-    "👵",
-    "👩\n\n\n\nAltGr",
+    "♀️\n\n\n\nAlt",
+    {
+      "c": "#ffecb3",
+      "p": "CHICKLET",
+      "f": 3
+    },
+    "ZWJ <small>combine</small>\n\n\n\nWin",
+    {
+      "x": 15.25,
+      "c": "#fcfcfc",
+      "p": "FLAT",
+      "a": 4,
+      "f": 8
+    },
+    "\n😞\n😢",
+    "\n🤔\n🧐",
+    {
+      "c": "#cccccc",
+      "t": "#8E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R4"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
     "👧",
     "👦",
     "👨",
     "👴",
     {
-      "x": 5
+      "x": 7.25
     },
     "💁",
     "🙆",
     "🙇",
-    "🙋",
-    "🙅\n\n\n\nWin",
-    "🤷\n\n\n\nAltGr"
+    "🙋"
   ],
   [
     {
-      "y": -0.04999999999999982,
-      "x": 6.95,
-      "c": "#FFFF8D",
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "R5",
+    {
+      "c": "#fcfcfc",
+      "t": "#000000",
       "p": "FLAT",
-      "f": 2,
-      "w": 1.1,
-      "h": 2.7,
+      "f": 9
+    },
+    "👵",
+    "👩\n\n\n\nAltGr",
+    {
+      "x": 15.25
+    },
+    "🙅\n\n\n\nWin",
+    "🤷\n\n\n\nAltGr",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "R5"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
+    "👶",
+    "🍼",
+    {
+      "c": "#ffff8d",
+      "p": "SA SPACE",
+      "f": 5
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nEmoji",
+    {
+      "x": 9.25,
+      "c": "#fcfcfc",
+      "p": "FLAT",
+      "f": 9
+    },
+    "✅",
+    "️💯",
+    "⚠️"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "R6",
+    {
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "a": 4,
+      "f": 8
+    },
+    "\n🎯\n🎲",
+    "\n📈\n📉",
+    {
+      "x": 15.25,
+      "a": 7,
+      "f": 9
+    },
+    "❌",
+    "❓",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "R6"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1,
+      "t": "#000000",
+      "f": 3,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "<ul class=\"combos\"><li>Hold C2R6 to activate this layer.</li><li>Release C2R6 to deactivate this layer.</li><li>Tap C2R6 to unlock this layer, if locked.</li></ul>",
+    {
+      "x": 9.75,
+      "w": 4.75,
+      "h": 2.75,
       "d": true
     },
     ""
   ],
   [
     {
-      "y": -0.9500000000000002,
-      "c": "#cccccc",
-      "p": "CHICKLET",
-      "f": 9
+      "r": 25,
+      "rx": 6.25,
+      "ry": 9,
+      "y": -3.9749999999999996,
+      "x": -0.40000000000000036,
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
     },
-    "🌄",
-    "🌅",
-    "👶",
-    "🍼",
-    {
-      "c": "#ffff8d",
-      "p": "SPACE",
-      "n": true
-    },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
-    {
-      "c": "#cccccc",
-      "f": 3
-    },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    {
-      "g": true,
-      "p": "CHICKLET",
-      "f": 9
-    },
-    "\n\n\n\nNumber",
-    {
-      "c": "#757575",
-      "t": "#EEEEEE",
-      "g": false,
-      "f": 3
-    },
-    "Unlock layer",
-    {
-      "x": 1,
-      "c": "#cccccc",
-      "t": "#000000",
-      "f": 9
-    },
-    "🧑‍🚀",
-    "🚀",
-    {
-      "a": 5,
-      "f": 5
-    },
-    "🪄\n✨\n\n\nSystem",
-    {
-      "a": 7,
-      "f": 9
-    },
-    "✅",
-    "️💯",
-    "⚠️",
-    "❌",
-    "❓"
+    "T1"
   ],
   [
     {
-      "x": 5
+      "y": -0.27500000000000036,
+      "x": -0.40000000000000036,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
     },
-    "🌆",
-    "🌃",
-    "🏙️\n\n\n\nFunction",
+    "️🏙️\n\n\n\nFunction"
+  ],
+  [
     {
-      "x": 1,
+      "y": 0.09999999999999964,
+      "x": -1,
+      "c": "#D7CCC8",
+      "p": "SPACE",
       "a": 5,
-      "f": 5
+      "f": 3,
+      "fa": [
+        2
+      ]
     },
-    "👏\n🙌",
-    "🫵\n☝️\n\n\nMouse",
+    "sticky\n\n\n\nShift\n\nShift"
+  ],
+  [
     {
-      "n": true
+      "y": -0.20000000000000018,
+      "x": -1,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
     },
-    "👎\n👍\n\n\nSymbol"
+    "T4"
+  ],
+  [
+    {
+      "r": 35,
+      "y": -3.675,
+      "x": 0.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.25,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
+    "️🌇"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.15000000000000036
+    },
+    "🌅\n\n\n\nNumber"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.15000000000000036,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": 45,
+      "y": -3.825,
+      "x": 0.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.9000000000000004,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "f": 9
+    },
+    "🌃"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": 0.7000000000000002
+    },
+    "🌄\n\n\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": 0.7000000000000002,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -45,
+      "rx": 15,
+      "y": -4.175,
+      "x": -1.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.9000000000000004,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "a": 4,
+      "f": 7
+    },
+    "\n🪄\n🧙\n\nLower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -1.6999999999999993,
+      "f": 8
+    },
+    "\n🙌\n👏\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1.6999999999999993,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -35,
+      "y": -3.5250000000000004,
+      "x": -1.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.25,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "a": 4,
+      "f": 7
+    },
+    "\n🚀\n🧑‍🚀"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.8499999999999996
+    },
+    "\n☝️\n🫵\n\nMouse"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.8499999999999996,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": -25,
+      "y": -3.625,
+      "x": -0.5999999999999996,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.5999999999999996,
+      "c": "#fcfcfc",
+      "t": "#000000",
+      "p": "FLAT",
+      "a": 4,
+      "f": 8
+    },
+    "\n✨\n🌟\n\nSystem"
+  ],
+  [
+    {
+      "y": 0.09999999999999964
+    },
+    "\n👍\n👎\n\nSymbol"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T4"
   ]
 ]

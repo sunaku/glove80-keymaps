@@ -1,362 +1,758 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n.motif {\n    opacity: 0.33;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
   },
   [
     {
-      "g": true,
+      "x": 1,
+      "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7
-    },
-    "F1",
-    "F2",
-    "F3",
-    "F4",
-    "F5",
-    {
-      "x": 7,
-      "t": "#EEEEEE"
-    },
-    "Boot loader",
-    "Boot loader",
-    "Boot loader",
-    "Boot loader",
-    "Boot loader"
-  ],
-  [
-    {
-      "t": "#000000",
-      "a": 5
-    },
-    "|\n\\",
-    "!\n1",
-    "@\n2",
-    "#\n3",
-    "$\n4",
-    "%\n5",
-    {
-      "g": false,
-      "a": 4,
-      "f": 4,
-      "w": 5,
-      "h": 4,
-      "d": true
-    },
-    "<center><h2>Mouse Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
-    {
-      "g": true,
-      "a": 5,
-      "f": 3
-    },
-    "^\n6",
-    {
-      "g": false,
-      "p": "SPACE",
-      "a": 7
-    },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    "Ctrl <small>(sticky)</small>\n\n\n\nCtrl",
-    "Alt <small>(sticky)</small>\n\n\n\nAlt",
-    "Win <small>(sticky)</small>\n\n\n\nWin",
-    {
-      "g": true,
-      "p": "CHICKLET",
-      "a": 5
-    },
-    "+\n="
-  ],
-  [
-    "~\n`",
-    {
-      "a": 7
-    },
-    "B",
-    {
-      "c": "#dcedc8",
-      "g": false
-    },
-    "Wheel left",
-    {
-      "c": "#BBDEFB",
-      "f": 9
-    },
-    "&uarr;",
-    {
-      "c": "#dcedc8",
-      "f": 3
-    },
-    "Wheel right",
-    {
-      "c": "#c5cae9"
-    },
-    "Cut",
-    {
-      "x": 5
-    },
-    "Cut",
-    {
-      "c": "#ffecb3",
-      "f": 5,
-      "fa": [
-        3
-      ]
-    },
-    "Left click",
-    {
-      "c": "#ffccbc"
-    },
-    "Right click",
-    {
-      "c": "#e1bee7"
-    },
-    "Middle click",
-    {
-      "c": "#d1c4e9",
-      "f": 3
-    },
-    "Mouse button 4",
-    {
-      "c": "#cccccc",
-      "g": true
-    },
-    "Z"
-  ],
-  [
-    {
-      "a": 5,
-      "fa": [
-        1
-      ]
-    },
-    "Caps lock\nCaps word",
-    {
-      "c": "#dcedc8",
-      "g": false,
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
       "a": 7,
-      "f": 3
+      "f": 5,
+      "d": true
     },
-    "Wheel up",
+    "C6",
     {
-      "c": "#BBDEFB",
-      "f": 9
+      "d": true
     },
-    "&larr;",
-    "&darr;",
+    "C5",
     {
-      "n": true
+      "d": true
     },
-    "&rarr;",
+    "C4",
     {
-      "c": "#c5cae9",
-      "f": 3
+      "d": true
     },
-    "Copy",
+    "C3",
     {
-      "x": 5
+      "d": true
     },
-    "Copy",
+    "C2",
     {
-      "c": "#ffcdd2",
-      "n": true
+      "d": true
     },
-    "Fast speed",
-    "Warp speed",
-    "Slow speed",
+    "C1",
     {
-      "c": "#d1c4e9"
+      "x": 7.25,
+      "d": true
     },
-    "Mouse button 5",
+    "C1",
     {
-      "c": "#c5cae9"
+      "d": true
     },
-    "<small>Context</small> menu"
+    "C2",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C6"
   ],
   [
     {
-      "c": "#cccccc",
-      "g": true
-    },
-    "Shift",
-    {
-      "c": "#dcedc8",
-      "g": false
-    },
-    "Wheel down",
-    {
-      "c": "#ffcdd2"
-    },
-    "Slow speed",
-    "Warp speed",
-    "Fast speed",
-    {
-      "c": "#c5cae9"
-    },
-    "Paste",
-    {
-      "x": 5
-    },
-    "Paste",
-    {
-      "c": "#BBDEFB",
-      "f": 9
-    },
-    "&larr;",
-    "&uarr;",
-    "&darr;",
-    "&rarr;",
-    {
-      "c": "#cccccc",
-      "t": "#EEEEEE",
+      "x": 3,
+      "t": "#000000",
       "g": true,
       "f": 3
     },
-    "Boot loader"
-  ],
-  [
+    "",
+    "",
+    "",
     {
-      "y": -0.04999999999999982,
-      "x": 6.95,
-      "c": "#FFFF8D",
-      "t": "#000000",
-      "p": "FLAT",
-      "f": 2,
-      "w": 1.1,
-      "h": 2.7,
-      "d": true
+      "x": 9.25
     },
+    "",
+    "",
     ""
   ],
   [
     {
-      "y": -0.9500000000000002,
-      "c": "#cccccc",
-      "t": "#EEEEEE",
-      "p": "CHICKLET",
-      "f": 3
-    },
-    "Magic",
-    {
-      "t": "#000000"
-    },
-    "Home",
-    "Page up",
-    "Page down",
-    "End",
-    {
-      "c": "#e1bee7",
+      "y": -0.5,
+      "t": "#9E9E9E",
       "g": false,
       "f": 5,
-      "fa": [
-        3
-      ]
+      "d": true
     },
-    "Middle click",
+    "R1",
     {
-      "c": "#c5cae9",
-      "f": 3
-    },
-    "<small>Context</small> menu",
-    {
-      "c": "#d1c4e9",
-      "f": 5,
-      "fa": [
-        3
-      ]
-    },
-    "Mouse button 5",
-    {
-      "x": 1,
-      "c": "#757575",
-      "t": "#EEEEEE",
-      "f": 3
-    },
-    "Unlock layer",
-    {
-      "c": "#cccccc",
       "t": "#000000",
       "g": true,
-      "fa": [
-        9
-      ]
+      "f": 6
     },
-    "&rArr;",
+    "",
+    "",
     {
+      "x": 15.25,
       "f": 3
     },
-    "Enter\n\n\n\nSystem",
+    "",
+    "",
     {
-      "c": "#dcedc8",
+      "t": "#9E9E9E",
       "g": false,
-      "f": 3
+      "f": 5,
+      "d": true
     },
-    "Wheel left",
-    {
-      "f": 3
-    },
-    "Wheel up",
-    {
-      "f": 3
-    },
-    "Wheel down",
-    {
-      "f": 3
-    },
-    "Wheel right",
-    {
-      "c": "#cccccc",
-      "t": "#EEEEEE",
-      "g": true,
-      "f": 3
-    },
-    "Boot loader"
+    "R1"
   ],
   [
     {
-      "x": 5,
-      "c": "#ffecb3",
+      "y": -0.8500000000000001,
+      "x": 7,
+      "c": "#FFF3E0",
       "t": "#000000",
-      "g": false,
-      "f": 5,
-      "fa": [
-        3
-      ],
-      "n": true
+      "a": 4,
+      "w": 7.25,
+      "h": 4,
+      "d": true
     },
-    "Left click",
+    "<center><h1>Mouse Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
+  ],
+  [
     {
-      "c": "#ffccbc"
-    },
-    "Right click",
-    {
-      "c": "#d1c4e9",
-      "t": "#0000000000",
-      "f": 3
-    },
-    "Mouse button 4",
-    {
-      "x": 1,
+      "y": -0.6499999999999999,
+      "x": 3,
       "c": "#cccccc",
+      "g": true,
+      "a": 7
+    },
+    "",
+    "",
+    "",
+    "",
+    {
+      "x": 7.25
+    },
+    "",
+    "",
+    "",
+    ""
+  ],
+  [
+    {
+      "y": -0.5,
+      "t": "#9E9E9E",
+      "g": false,
+      "d": true
+    },
+    "R2",
+    {
       "t": "#000000",
       "g": true,
-      "fa": [
-        9
-      ]
+      "f": 6
     },
-    "&lArr;",
+    "",
     {
-      "c": "#ffff8d",
+      "f": 5
+    },
+    "",
+    {
+      "x": 15.25
+    },
+    "",
+    {
+      "f": 3
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R2"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#dcedc8",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-left'></i>\n\n\n\n\nScroll",
+    {
+      "c": "#BBDEFB"
+    },
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-up'></i>\n\n\n\n\nPoint",
+    {
+      "c": "#dcedc8"
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll",
+    {
+      "c": "#cccccc",
+      "g": true,
+      "a": 7
+    },
+    "",
+    {
+      "x": 7.25
+    },
+    "",
+    {
+      "c": "#D7CCC8",
       "g": false,
       "p": "SPACE",
-      "n": true
+      "a": 5,
+      "fa": [
+        2
+      ]
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
+    "sticky\n\n\n\nShift\n\nShift",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nAlt\n\nAlt"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R3",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 6
+    },
+    "",
+    {
+      "f": 5
+    },
+    "",
+    {
+      "x": 15.25,
+      "c": "#D7CCC8",
+      "g": false,
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nWin\n\nWin",
     {
       "c": "#cccccc",
       "g": true,
       "p": "CHICKLET",
+      "a": 7
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R3"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#BBDEFB",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-left'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-down'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-right'></i>\n\n\n\n\nPoint",
+    {
+      "c": "#dcedc8"
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-up'></i>\n\n\n\n\nScroll",
+    {
+      "x": 7.25
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-up'></i>\n\n\n\n\nScroll",
+    {
+      "c": "#ffcdd2"
+    },
+    "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R4",
+    {
+      "t": "#000000",
+      "g": true
+    },
+    "",
+    {
+      "c": "#dcedc8",
+      "g": false,
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-up'></i>\n\n\n\n\nScroll",
+    {
+      "x": 15.25,
+      "c": "#ffecb3"
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
+    {
+      "x": 1,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R4"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#ffcdd2",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed",
+    {
+      "c": "#dcedc8"
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
+    {
+      "x": 7.25
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-left'></i>\n\n\n\n\nScroll",
+    {
+      "c": "#BBDEFB"
+    },
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-up'></i>\n\n\n\n\nPoint",
+    {
+      "c": "#dcedc8"
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R5",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
+    "\n\n\n\nLower",
+    {
+      "c": "#dcedc8",
+      "g": false,
+      "a": 5
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
+    {
+      "x": 15.25,
+      "c": "#ffecb3"
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick",
+    {
+      "x": 1,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R5"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "t": "#000000",
+      "g": true,
+      "f": 4
+    },
+    "",
+    "",
+    "",
+    {
+      "x": 9.25,
+      "c": "#BBDEFB",
+      "g": false,
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-left'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-down'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-right'></i>\n\n\n\n\nPoint"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R6",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
+    "\n\n\n\nLower",
+    {
+      "f": 5
+    },
+    "",
+    {
+      "x": 15.25,
+      "c": "#ffecb3",
+      "g": false,
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\n\n\nClick",
+    {
+      "c": "#d1c4e9",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R6"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1,
+      "t": "#000000",
       "f": 3,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "",
+    {
+      "x": 9.75,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "<ul class=\"combos\"><li>Hold T5 to activate this layer.</li><li>Release T5 to deactivate this layer.</li><li>Tap T5 to unlock this layer, if locked.</li></ul>"
+  ],
+  [
+    {
+      "rx": 0.25,
+      "y": 4.5,
+      "x": 19,
+      "c": "#ffecb3",
+      "a": 5
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\n#4\n\n\n\n\nClick"
+  ],
+  [
+    {
+      "x": 19
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\n#5\n\n\n\n\nClick"
+  ],
+  [
+    {
+      "r": 25,
+      "rx": 6.25,
+      "ry": 9,
+      "y": -3.9749999999999996,
+      "x": -0.40000000000000036,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.40000000000000036,
+      "c": "#ffecb3",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\nFunction\n\nClick"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "x": -1
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\nCursor\n\nClick"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T4"
+  ],
+  [
+    {
+      "r": 35,
+      "y": -3.675,
+      "x": 0.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.25,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.15000000000000036,
+      "c": "#ffecb3",
+      "f": 3
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\nNumber\n\nClick"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.15000000000000036,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": 45,
+      "y": -3.825,
+      "x": 0.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.9000000000000004,
+      "c": "#ffecb3",
+      "t": "#000000",
+      "a": 5,
+      "f": 3
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\n#5\n\n\nLower\n\nClick"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": 0.7000000000000002
+    },
+    "<i class='fa fa-hand-pointer-o'></i>\n#4\n\n\nTyping\n\nClick"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": 0.7000000000000002,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -45,
+      "rx": 15,
+      "y": -4.175,
+      "x": -1.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.9000000000000004,
+      "c": "#c5cae9",
+      "t": "#000000",
+      "f": 3
+    },
+    "Cut<br><i class='fa fa-cut'></i>\n\n\n\nLower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -1.6999999999999993,
+      "c": "#cccccc",
+      "g": true,
+      "f": 4
+    },
+    "\n\n\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1.6999999999999993,
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -35,
+      "y": -3.5250000000000004,
+      "x": -1.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.25,
+      "c": "#c5cae9",
+      "t": "#000000",
+      "f": 3
+    },
+    "Copy <i class='fa fa-copy'></i>"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.8499999999999996,
+      "c": "#ffff8d",
+      "p": "SA SPACE"
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMouse"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.8499999999999996,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": -25,
+      "y": -3.625,
+      "x": -0.5999999999999996,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.5999999999999996,
+      "c": "#c5cae9",
+      "t": "#000000",
+      "f": 3
+    },
+    "Paste <i class='fa fa-paste'></i>\n\n\n\nSystem"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "c": "#cccccc",
+      "g": true,
+      "f": 5,
       "n": true
     },
-    "Space\n\n\n\nSymbol"
+    "\n\n\n\nSymbol"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "t": "#9E9E9E",
+      "g": false,
+      "d": true
+    },
+    "T4"
   ]
 ]
