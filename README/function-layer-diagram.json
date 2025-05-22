@@ -1,109 +1,248 @@
 [
   {
-    "css": "/* front legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    text-shadow: 1px 1px 2px #FFD600;\n}\n/* description */\ncenter h2 {\n    margin-top: 1em;\n    font-weight: bold;\n}\ncenter ul {\n    padding-left: 0;\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\ncenter .permalink {\n    font-size: x-small;\n}\ncenter em {\n    font-weight: normal;\n    font-style: normal;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
   },
   [
     {
-      "g": true,
+      "x": 1,
+      "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 5
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
+      "a": 7,
+      "f": 5,
+      "d": true
     },
-    "|\n\\",
+    "C6",
     {
-      "t": "#EEEEEE",
-      "a": 7
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C1",
+    {
+      "x": 7.25,
+      "d": true
+    },
+    "C1",
+    {
+      "d": true
+    },
+    "C2",
+    {
+      "d": true
+    },
+    "C3",
+    {
+      "d": true
+    },
+    "C4",
+    {
+      "d": true
+    },
+    "C5",
+    {
+      "d": true
+    },
+    "C6"
+  ],
+  [
+    {
+      "x": 3,
+      "t": "#000000",
+      "g": true,
+      "f": 3
     },
     "",
-    {
-      "t": "#000000"
-    },
+    "",
     "",
     {
-      "c": "#ffccbc",
-      "g": false
-    },
-    "Shift-Tab",
-    "Tab",
-    {
-      "x": 7,
-      "c": "#cccccc",
-      "g": true
+      "x": 9.25
     },
     "F6",
     "F7",
-    "F8",
-    "F9",
-    "F10"
+    "F8"
   ],
   [
+    {
+      "y": -0.5,
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R1",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 6
+    },
+    "",
     "",
     {
-      "c": "#ffccbc",
-      "g": false
+      "x": 15.25,
+      "f": 3
     },
-    "Enter",
-    "Tab",
-    "Space",
-    "Delete",
-    "Insert",
+    "F9",
+    "F10",
     {
-      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "R1"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "x": 7,
+      "c": "#FFF3E0",
+      "t": "#000000",
       "a": 4,
-      "f": 4,
-      "w": 5,
+      "w": 7.25,
       "h": 4,
       "d": true
     },
-    "<center><h2>Function Layer</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
-    {
-      "c": "#bbdefb",
-      "a": 7,
-      "f": 3
-    },
-    "Media player",
-    "Play",
-    "Prev track",
-    "Next track",
-    "Stop",
-    "Eject"
+    "<center><h1>Function Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
   ],
   [
     {
+      "y": -0.6499999999999999,
+      "x": 3,
+      "c": "#ffccbc",
+      "a": 7,
+      "f": 3
+    },
+    "Insert",
+    "Shift-Tab",
+    "Delete",
+    {
       "c": "#cccccc",
-      "g": true
+      "g": true,
+      "f": 6
     },
     "",
+    {
+      "x": 7.25,
+      "c": "#e0f2f1",
+      "g": false,
+      "f": 3
+    },
+    "Media player <i class='fa fa-music'></i>",
+    {
+      "f": 4
+    },
+    "<i class='fa fa-play'></i>",
+    {
+      "f": 5
+    },
+    "<i class='fa fa-step-backward'></i>",
+    "<i class='fa fa-step-forward'></i>"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "d": true
+    },
+    "R2",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
+    "\n\n\n\nSymbol",
     {
       "c": "#ffccbc",
       "g": false
     },
     "Escape",
     {
-      "c": "#e1bee7"
+      "x": 15.25,
+      "c": "#e0f2f1"
     },
-    "Redo",
-    "Undo",
+    "<i class='fa fa-stop'></i>",
     {
-      "c": "#ffccbc"
+      "f": 5
     },
+    "<i class='fa fa-eject'></i>",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "d": true
+    },
+    "R2"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "c": "#ffccbc",
+      "t": "#000000",
+      "f": 3
+    },
+    "Space",
+    "Tab",
     "Back space",
     {
-      "c": "#FFECB3"
+      "c": "#ffecb3",
+      "f": 6
     },
-    "Calc<small>-ulator</small>",
+    "<i class='fa fa-calculator'></i>",
     {
-      "x": 5
+      "x": 7.25
     },
-    "Calc<small>-ulator</small>",
+    "<i class='fa fa-calculator'></i>",
     {
-      "c": "#dcedc8",
+      "c": "#fff3e0",
       "f": 4
     },
     "F7",
     "F8",
-    "F9",
+    "F9"
+  ],
+  [
     {
-      "c": "#ffccbc"
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R3",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 6
+    },
+    "",
+    {
+      "c": "#ffccbc",
+      "g": false,
+      "f": 3
+    },
+    "Enter",
+    {
+      "x": 15.25,
+      "c": "#fff3e0",
+      "f": 4
     },
     "F10",
     {
@@ -112,53 +251,79 @@
         4
       ]
     },
-    "F13"
+    "F13",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R3"
   ],
   [
     {
-      "c": "#cccccc",
+      "y": -0.5,
+      "x": 3,
+      "c": "#D7CCC8",
+      "t": "#000000",
       "p": "SPACE",
       "f": 3
     },
-    "Shift <small>(sticky)</small>\n\n\n\nShift",
-    {
-      "f": 3
-    },
-    "Win\n\n\n\nWin",
-    {
-      "f": 3
-    },
     "Alt\n\n\n\nAlt",
-    {
-      "f": 3
-    },
     "Ctrl\n\n\n\nCtrl",
     {
-      "f": 3,
       "n": true
     },
     "Shift\n\n\n\nShift",
     {
-      "c": "#FFECB3",
+      "c": "#ffecb3",
       "p": "CHICKLET",
-      "f": 3
+      "f": 6
     },
-    "Web <small>browser</small>",
+    "<i class='fa fa-internet-explorer'></i>",
     {
-      "x": 5,
-      "f": 3
+      "x": 7.25
     },
-    "Web <small>browser</small>",
+    "<i class='fa fa-internet-explorer'></i>",
     {
-      "c": "#dcedc8",
+      "c": "#fff3e0",
       "f": 4,
       "n": true
     },
     "F4\n\n\n\nShift",
     "F5\n\n\n\nCtrl",
-    "F6\n\n\n\nAlt",
+    "F6\n\n\n\nAlt"
+  ],
+  [
     {
-      "c": "#ffccbc"
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R4",
+    {
+      "c": "#D7CCC8",
+      "t": "#000000",
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nShift\n\nShift",
+    {
+      "a": 7,
+      "f": 3
+    },
+    "Win\n\n\n\nWin",
+    {
+      "x": 15.25,
+      "c": "#fff3e0",
+      "p": "CHICKLET",
+      "f": 4
     },
     "F11\n\n\n\nWin",
     {
@@ -167,54 +332,71 @@
         4
       ]
     },
-    "F14"
+    "F14",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R4"
   ],
   [
     {
+      "y": -0.5,
+      "x": 3,
+      "c": "#dcedc8",
+      "t": "#000000",
+      "f": 3
+    },
+    "Select line",
+    "Select word",
+    {
+      "c": "#d1c4e9"
+    },
+    "Find<br> <i class='fa fa-search'></i>",
+    {
+      "c": "#ffecb3",
+      "f": 6
+    },
+    "<i class='fa fa-folder-open'></i>",
+    {
+      "x": 7.25
+    },
+    "<i class='fa fa-folder-open'></i>",
+    {
+      "c": "#fff3e0",
+      "f": 4
+    },
+    "F1",
+    "F2",
+    "F3\n\n\n\nAltGr"
+  ],
+  [
+    {
+      "y": -0.5,
       "c": "#cccccc",
-      "g": true
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R5",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 6
     },
     "",
     {
-      "c": "#bbdefb",
-      "t": "#00000",
+      "c": "#dcedc8",
       "g": false,
       "f": 3
     },
     "Select all",
     {
-      "t": "#000000",
-      "f": 3
-    },
-    "Select line",
-    {
-      "f": 3
-    },
-    "Select word",
-    {
-      "c": "#e1bee7",
-      "f": 3
-    },
-    "Find",
-    {
-      "c": "#FFECB3",
-      "f": 3
-    },
-    "File <small>manager</small>",
-    {
-      "x": 5,
-      "f": 3
-    },
-    "File <small>manager</small>",
-    {
-      "c": "#dcedc8",
+      "x": 15.25,
+      "c": "#fff3e0",
       "f": 4
-    },
-    "F1",
-    "F2",
-    "F3\n\n\n\nAltGr",
-    {
-      "c": "#ffccbc"
     },
     "F12",
     {
@@ -223,135 +405,319 @@
         4
       ]
     },
-    "F15"
+    "F15",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R5"
   ],
   [
     {
-      "y": -0.04999999999999982,
-      "x": 6.95,
-      "c": "#FFFF8D",
-      "p": "FLAT",
-      "f": 2,
-      "w": 1.1,
-      "h": 2.7,
+      "y": -0.5,
+      "x": 3,
+      "c": "#d1c4e9",
+      "t": "#000000",
+      "f": 3
+    },
+    "Redo <i class='fa fa-repeat'></i>",
+    "Find prev",
+    "Find next",
+    {
+      "x": 9.25,
+      "c": "#e8f5e9"
+    },
+    "Bright max <i class='fa fa-sun-o'></i>",
+    "Bright <i class='fa fa-plus'></i>",
+    "Bright <i class='fa fa-minus'></i>"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R6",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
+    "",
+    {
+      "c": "#d1c4e9",
+      "g": false
+    },
+    "Undo <i class='fa fa-undo'></i>",
+    {
+      "x": 15.25,
+      "c": "#e8f5e9"
+    },
+    "Bright min <i class='fa fa-moon-o'></i>",
+    "Bright auto <i class='fa fa-eye'></i>",
+    {
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R6"
+  ],
+  [
+    {
+      "y": 0.25,
+      "x": 1,
+      "t": "#000000",
+      "f": 3,
+      "w": 4.75,
+      "h": 2.75,
+      "d": true
+    },
+    "<ul class=\"combos\"><li>Hold T1 to activate this layer.</li><li>Release T1 to deactivate this layer.</li><li>Tap T1 to unlock this layer, if locked.</li></ul>",
+    {
+      "x": 9.75,
+      "w": 4.75,
+      "h": 2.75,
       "d": true
     },
     ""
   ],
   [
     {
-      "y": -0.9500000000000002,
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "f": 3
+      "r": 25,
+      "rx": 6.25,
+      "ry": 9,
+      "y": -3.9749999999999996,
+      "x": -0.40000000000000036,
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
     },
-    "",
-    {
-      "c": "#e1bee7",
-      "g": false
-    },
-    "Find prev",
-    {
-      "c": "#bbdefb"
-    },
-    "Extend line",
-    "Extend word",
-    {
-      "c": "#e1bee7"
-    },
-    "Find next",
-    {
-      "c": "#ffff8d",
-      "p": "SPACE",
-      "fa": [
-        9
-      ],
-      "n": true
-    },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLayer",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET"
-    },
-    "&uArr;",
-    {
-      "c": "#757575",
-      "t": "#EEEEEE",
-      "g": false,
-      "f": 3
-    },
-    "Unlock layer",
-    {
-      "x": 1,
-      "c": "#bbdefb",
-      "t": "#000000",
-      "f": 3
-    },
-    "Play / pause",
-    {
-      "f": 3
-    },
-    "Prev track",
-    {
-      "f": 3
-    },
-    "Next track",
-    {
-      "c": "#ffcdd2",
-      "f": 3
-    },
-    "Bright max",
-    {
-      "f": 3
-    },
-    "Bright ➕",
-    {
-      "f": 3
-    },
-    "Bright ➖",
-    {
-      "f": 3
-    },
-    "Bright min",
-    {
-      "f": 3
-    },
-    "Bright auto"
+    "T1"
   ],
   [
     {
-      "x": 5,
+      "y": -0.27500000000000036,
+      "x": -0.40000000000000036,
+      "c": "#ffff8d",
+      "t": "#000000",
+      "p": "SA SPACE",
+      "f": 3
+    },
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nFunction"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "x": -1,
       "c": "#cccccc",
       "g": true,
-      "f": 3,
+      "p": "CHICKLET",
       "n": true
     },
-    "Back space\n\n\n\nCursor",
+    "\n\n\n\nLayer"
+  ],
+  [
     {
-      "f": 3
-    },
-    "Delete\n\n\n\nNumber",
-    {
-      "f": 3
-    },
-    "&dArr;",
-    {
-      "x": 1,
-      "c": "#bbdefb",
+      "y": -0.20000000000000018,
+      "x": -1,
+      "t": "#9E9E9E",
       "g": false,
+      "f": 5,
+      "d": true
+    },
+    "T4"
+  ],
+  [
+    {
+      "r": 35,
+      "y": -3.675,
+      "x": 0.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.25,
+      "t": "#000000",
+      "g": true,
       "f": 3
     },
-    "Mute\n\n\n\nSymbol",
+    ""
+  ],
+  [
     {
+      "y": 0.15000000000000036,
+      "x": -0.15000000000000036
+    },
+    "\n\n\n\nNumber"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.15000000000000036,
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": 45,
+      "y": -3.825,
+      "x": 0.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": 0.9000000000000004,
+      "t": "#000000",
+      "g": true,
       "f": 3
     },
-    "Vol ➖\n\n\n\nLight",
+    "Lower\n\n\n\nLower"
+  ],
+  [
     {
-      "f": 3,
+      "y": 0.15000000000000036,
+      "x": 0.7000000000000002,
+      "f": 4
+    },
+    "Raw\n\n\n\nTyping"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": 0.7000000000000002,
+      "t": "#9E9E9E",
+      "g": false,
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -45,
+      "rx": 15,
+      "y": -4.175,
+      "x": -1.9000000000000004,
+      "d": true
+    },
+    "T3"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.9000000000000004,
+      "c": "#e0f2f1",
+      "t": "#000000",
+      "f": 4
+    },
+    "<i class='fa fa-play'></i> <br> <i class='fa fa-pause'></i>\n\n\n\nLower"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -1.6999999999999993,
+      "f": 6
+    },
+    "<i class='fa fa-volume-off'></i><sub><sup><sub>&nbsp;</sub><sup><i class='fa fa-times'></i></sup></sup></sub>"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -1.6999999999999993,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T6"
+  ],
+  [
+    {
+      "r": -35,
+      "y": -3.5250000000000004,
+      "x": -1.2599999999999998,
+      "d": true
+    },
+    "T2"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -1.25,
+      "c": "#e0f2f1",
+      "t": "#000000"
+    },
+    "<i class='fa fa-step-backward'></i>"
+  ],
+  [
+    {
+      "y": 0.15000000000000036,
+      "x": -0.8499999999999996,
+      "f": 6
+    },
+    "<i class='fa fa-volume-down'></i>\n\n\n\nMouse"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "x": -0.8499999999999996,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T5"
+  ],
+  [
+    {
+      "r": -25,
+      "y": -3.625,
+      "x": -0.5999999999999996,
+      "d": true
+    },
+    "T1"
+  ],
+  [
+    {
+      "y": -0.27500000000000036,
+      "x": -0.5999999999999996,
+      "c": "#e0f2f1",
+      "t": "#000000",
+      "f": 4
+    },
+    "<i class='fa fa-step-forward'></i>\n\n\n\nSystem"
+  ],
+  [
+    {
+      "y": 0.09999999999999964,
+      "f": 6,
       "n": true
     },
-    "Vol ➕\n\n\n\nMouse"
+    "<i class='fa fa-volume-up'></i>\n\n\n\nSymbol"
+  ],
+  [
+    {
+      "y": -0.20000000000000018,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "T4"
   ]
 ]

@@ -72,7 +72,22 @@
     "",
     "",
     {
-      "x": 9.25
+      "x": 1,
+      "c": "#FFF3E0",
+      "g": false,
+      "a": 4,
+      "f": 5,
+      "w": 7.25,
+      "h": 4.75,
+      "d": true
+    },
+    "<center><h1>Base Layer</h1><h2>(Colemak)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    {
+      "x": 1,
+      "c": "#cccccc",
+      "g": true,
+      "a": 7,
+      "f": 3
     },
     "",
     "",
@@ -110,42 +125,28 @@
   ],
   [
     {
-      "y": -0.8500000000000001,
-      "x": 7,
-      "c": "#FFF3E0",
-      "t": "#000000",
-      "a": 4,
-      "w": 7.25,
-      "h": 4,
-      "d": true
-    },
-    "<center><h1>World Layer</h1><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>"
-  ],
-  [
-    {
-      "y": -0.6499999999999999,
+      "y": -0.5,
       "x": 3,
-      "c": "#cccccc",
-      "g": true,
-      "a": 7
+      "t": "#000000",
+      "a": 5
     },
-    "",
-    "",
-    "",
-    "",
+    "@\n2",
+    "#\n3",
+    "$\n4",
+    "%\n5",
     {
       "x": 7.25
     },
-    "",
-    "",
-    "",
-    ""
+    "^\n6",
+    "&\n7",
+    "*\n8",
+    "(\n9"
   ],
   [
     {
       "y": -0.5,
       "t": "#9E9E9E",
-      "g": false,
+      "a": 7,
       "d": true
     },
     "R2",
@@ -156,14 +157,18 @@
     },
     "",
     {
+      "g": false,
+      "a": 5,
       "f": 5
     },
-    "",
+    "!\n1",
     {
       "x": 15.25
     },
-    "",
+    ")\n0",
     {
+      "g": true,
+      "a": 7,
       "f": 3
     },
     "",
@@ -179,49 +184,24 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
-      "t": "#000000",
-      "p": "FLAT",
-      "a": 4,
-      "f": 6
+      "t": "#000000"
     },
-    "\nÿ\n\n\n\n\n\n\n\n\ný",
-    "õ\nö\nø\nô\n\n\n\n\nò\n\nó",
-    "\nü\n\n\n\n\n\n\nù\n\nú",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "a": 7,
-      "f": 5
-    },
-    "",
+    "W",
+    "F",
+    "P",
+    "G",
     {
       "x": 7.25
     },
-    "",
-    "",
-    {
-      "c": "#D7CCC8",
-      "g": false,
-      "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ]
-    },
-    "sticky\n\n\n\nAlt\n\nLALT",
-    "sticky\n\n\n\nRAlt\n\nRALT"
+    "J",
+    "L",
+    "U",
+    "Y"
   ],
   [
     {
       "y": -0.5,
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "p": "CHICKLET",
-      "a": 7,
-      "f": 5,
       "d": true
     },
     "R3",
@@ -232,27 +212,19 @@
     },
     "",
     {
-      "c": "#fcfcfc",
       "g": false,
-      "p": "FLAT"
-    },
-    "°",
-    {
-      "x": 15.25,
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
       "f": 5
     },
-    "",
+    "Q",
     {
-      "f": 3
+      "x": 15.25,
+      "a": 5
     },
-    "",
+    ":\n;",
+    "_\n-",
     {
       "t": "#9E9E9E",
-      "g": false,
-      "f": 5,
+      "a": 7,
       "d": true
     },
     "R3"
@@ -261,47 +233,43 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
+      "c": "#bbdefb",
       "t": "#000000",
-      "p": "FLAT",
-      "a": 4,
-      "f": 6
+      "p": "SPACE"
     },
-    "\nï\n\nî\n\n\n\n\nì\n\ní",
+    "R\n\n\n\nAlt",
     {
-      "a": 0
+      "c": "#dcedc8"
     },
-    "œ\në\næ\nê\n\næ\n\n\nè\n\né\nè",
+    "S\n\n\n\nCtrl",
     {
-      "a": 4
+      "c": "#ffecb3",
+      "n": true
     },
-    "ã\nä\nå\nâ\n\n\n\n\nà\n\ná",
+    "T\n\n\n\nShift",
     {
       "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "a": 7,
-      "f": 5
+      "p": "CHICKLET"
     },
-    "",
+    "D",
     {
       "x": 7.25
     },
-    "",
+    "H",
     {
-      "c": "#D7CCC8",
-      "g": false,
+      "c": "#ffecb3",
       "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ],
       "n": true
     },
-    "sticky\n\n\n\nShift\n\nLSFT",
-    "sticky\n\n\n\nCtrl\n\nLCTL",
-    "sticky\n\n\n\nRCtrl\n\nRCTL"
+    "N\n\n\n\nShift",
+    {
+      "c": "#dcedc8"
+    },
+    "E\n\n\n\nCtrl",
+    {
+      "c": "#bbdefb"
+    },
+    "<tt>I</tt>\n\n\n\nAlt"
   ],
   [
     {
@@ -309,42 +277,33 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7,
-      "f": 5,
       "d": true
     },
     "R4",
     {
-      "c": "#fcfcfc",
       "t": "#000000",
-      "p": "FLAT",
-      "a": 4,
-      "f": 6
+      "a": 5
     },
-    "\n<sup>™<sub>℠</sub></sup>\n\n\n\n\n\n\n\n\n<sup>©<sub>®</sub></sup>",
-    "\nñ\n\nß\nWin\n\n\n\n\n\nç",
+    "+\n=",
     {
-      "x": 15.25,
-      "c": "#D7CCC8",
+      "c": "#FFCDD2",
       "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ]
+      "a": 7
     },
-    "sticky\n\n\n\nRShift\n\nRSFT",
+    "A\n\n\n\nWin",
+    {
+      "x": 15.25
+    },
+    "O\n\n\n\nWin",
     {
       "c": "#cccccc",
-      "g": true,
       "p": "CHICKLET",
-      "a": 7,
-      "f": 5
+      "a": 5
     },
-    "",
+    "\"\n'",
     {
       "t": "#9E9E9E",
-      "g": false,
+      "a": 7,
       "d": true
     },
     "R4"
@@ -353,74 +312,63 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
-      "t": "#000000",
-      "p": "FLAT",
-      "f": 6
+      "t": "#000000"
     },
-    "¡",
-    "¿",
-    {
-      "a": 4
-    },
-    "<sup>」<sub>﹂</sub></sup>\n’<sub>”</sub>\n<sup>』<sub>﹄</sub></sup>\n‚<sup>„</sup>\nAltGr\n\n\n\n´\n\n›<sub>»</sub>",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "a": 7,
-      "f": 5
-    },
-    "",
+    "X",
+    "C",
+    "V",
+    "B",
     {
       "x": 7.25
     },
-    "",
-    "",
-    "",
-    ""
+    "K",
+    "M",
+    {
+      "a": 5
+    },
+    "<\n,",
+    ">\n."
   ],
   [
     {
       "y": -0.5,
       "t": "#9E9E9E",
-      "g": false,
+      "a": 7,
       "d": true
     },
     "R5",
     {
-      "c": "#fcfcfc",
+      "c": "#ffccbc",
       "t": "#000000",
-      "p": "FLAT",
-      "a": 4,
-      "f": 6,
-      "fa": [
-        0,
-        0,
-        3
-      ]
+      "p": "SPACE",
+      "a": 5,
+      "f": 3
     },
-    "¥\n€\n₩\n£\n\n\n\n\n¤<sup><sup>₿</sup></sup>\n\n$<sub>¢</sub>",
+    "<i class='fa fa-lock'></i>\nlayer<sub><sup>&hellip;</sup></sub>\n\n\nLower\n\nLock",
     {
-      "f": 6
-    },
-    "<sup>「<sup>﹁</sup></sup>\n‘<sub>“</sub>\n<sup>『<sup>﹃</sub></sup>\n‚<sup>„</sup>\n\n\n\n\n`\n\n‹<sub>«</sub>",
-    {
-      "x": 15.25,
       "c": "#cccccc",
-      "g": true,
       "p": "CHICKLET",
       "a": 7,
       "f": 5
     },
-    "",
+    "Z",
     {
+      "x": 15.25,
+      "a": 5,
+      "f": 4
+    },
+    "?\n/",
+    {
+      "c": "#ffccbc",
+      "p": "SPACE",
       "f": 3
     },
-    "\n\n\n\nLower",
+    "<i class='fa fa-lock'></i>\nlayer<sub><sup>&hellip;</sup></sub>\n\n\nLower\n\nLock",
     {
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
+      "a": 7,
       "f": 5,
       "d": true
     },
@@ -430,62 +378,66 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
       "t": "#000000",
-      "p": "FLAT",
-      "f": 6
-    },
-    "¶",
-    "º",
-    "ª",
-    {
-      "x": 9.25,
-      "c": "#ffff8d",
-      "p": "SA SPACE",
-      "f": 3
-    },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nWorld",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
+      "a": 5,
       "f": 4
     },
-    "",
-    ""
+    "<\n(",
+    ">\n)",
+    {
+      "c": "#d1c4e9",
+      "p": "SPACE",
+      "f": 5
+    },
+    "~\n`\n\n\nEmoji",
+    {
+      "x": 9.25,
+      "a": 7,
+      "f": 3
+    },
+    "Page up\n\n\n\nWorld",
+    {
+      "c": "#cccccc",
+      "p": "CHICKLET",
+      "a": 5
+    },
+    "<i class='fa fa-mouse-pointer'></i>\nup\n\n\n\n\nScroll",
+    "<i class='fa fa-mouse-pointer'></i>\ndown\n\n\n\n\nScroll"
   ],
   [
     {
       "y": -0.5,
       "t": "#9E9E9E",
-      "g": false,
+      "a": 7,
       "f": 5,
       "d": true
     },
     "R6",
     {
-      "c": "#fcfcfc",
       "t": "#000000",
-      "p": "FLAT",
-      "f": 6
-    },
-    "µ",
-    "§",
-    {
-      "x": 15.25,
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "f": 4
-    },
-    "",
-    {
+      "p": "SA SPACE",
       "f": 3
     },
-    "\n\n\n\nLower",
+    "Magic\n\n\n\nMagic",
+    {
+      "p": "CHICKLET",
+      "a": 5,
+      "f": 4
+    },
+    "|\n\\",
+    {
+      "x": 15.25,
+      "a": 7,
+      "f": 3
+    },
+    "Page down",
+    {
+      "p": "SA SPACE"
+    },
+    "Magic\n\n\n\nMagic",
     {
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -501,38 +453,14 @@
       "h": 2.75,
       "d": true
     },
-    "",
+    "<ul class=\"combos\"><li>Combo T1+T4 = Shift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T2+T5 = Alt-Tab (cursor layer)</li><li>Combo T5+T6 = Ctrl-Tab (cursor layer)</li><li>Combo T3+T6 = Win-Tab (cursor layer)</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
       "h": 2.75,
       "d": true
     },
-    "<ul class=\"combos\"><li>Hold C2R6 to activate this layer.</li><li>Release C2R6 to deactivate this layer.</li><li>Tap C2R6 to unlock this layer, if locked.</li><li>Hold or tap sticky modifiers on right half to choose characters (refer to ℹ️ <b>Legend</b> ℹ️) from the character cluster keys on left half.</li></ul>"
-  ],
-  [
-    {
-      "y": -0.75,
-      "x": 1.25,
-      "p": "DSA SPACE",
-      "a": 4,
-      "f": 6,
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        5
-      ],
-      "w": 4.25,
-      "h": 2.25
-    },
-    "LALT\nLCTL\nRALT\nRCTL\n️‍‍\n\n\n\nRSFT\nℹ️ <small><b>Legend</b></small> ℹ️\nBase/LSFT"
+    "<ul class=\"combos\"><li>Combo T1+T4 = RShift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T2+T5 = Hyper (all modifiers)</li><li>Combo T5+T6 = Meh (alt+ctrl+shift)</li><li>Combo T3+T6 = Turbo (ctrl+shift)</li><li>Combo C1R5+C2R6 = Typing layer on/off</li></ul>"
   ],
   [
     {
@@ -542,8 +470,6 @@
       "y": -3.9749999999999996,
       "x": -0.40000000000000036,
       "t": "#9E9E9E",
-      "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },
@@ -553,11 +479,12 @@
     {
       "y": -0.27500000000000036,
       "x": -0.40000000000000036,
+      "c": "#d1c4e9",
       "t": "#000000",
-      "g": true,
+      "p": "SPACE",
       "f": 3
     },
-    "\n\n\n\nFunction"
+    "Escape\n\n\n\nFunction"
   ],
   [
     {
@@ -565,14 +492,15 @@
       "x": -1,
       "n": true
     },
-    "\n\n\n\nCursor"
+    "Back space\n\n\n\nCursor"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -1,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -592,24 +520,29 @@
       "y": -0.27500000000000036,
       "x": 0.25,
       "t": "#000000",
-      "g": true,
-      "f": 3
+      "a": 5,
+      "f": 4
     },
-    ""
+    "{\n["
   ],
   [
     {
       "y": 0.15000000000000036,
-      "x": -0.15000000000000036
+      "x": -0.15000000000000036,
+      "c": "#d1c4e9",
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
-    "\n\n\n\nNumber"
+    "Delete\n\n\n\nNumber"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -0.15000000000000036,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -629,25 +562,29 @@
       "y": -0.27500000000000036,
       "x": 0.9000000000000004,
       "t": "#000000",
-      "g": true,
-      "f": 3
+      "a": 5,
+      "f": 4
     },
-    "\n\n\n\nLower"
+    "}\n]"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": 0.7000000000000002,
-      "f": 4
+      "c": "#ffccbc",
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
-    "\n\n\n\nTyping"
+    "Insert\n\n\n\nTyping"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": 0.7000000000000002,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -668,25 +605,33 @@
       "y": -0.27500000000000036,
       "x": -1.9000000000000004,
       "t": "#000000",
-      "g": true,
-      "f": 3
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1
+      ]
     },
-    "\n\n\n\nLower"
+    "&nbsp;\n(⌘+Left)\n\n\nLower\n\nHome"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -1.6999999999999993,
-      "f": 4
+      "c": "#ffccbc",
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
-    "\n\n\n\nTyping"
+    "Raw\n\n\n\nTyping"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -1.6999999999999993,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -706,24 +651,33 @@
       "y": -0.27500000000000036,
       "x": -1.25,
       "t": "#000000",
-      "g": true,
-      "f": 3
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1,
+        1
+      ]
     },
-    ""
+    "&nbsp;\n(⌘+Right)\n\n\n\n\nEnd"
   ],
   [
     {
       "y": 0.15000000000000036,
-      "x": -0.8499999999999996
+      "x": -0.8499999999999996,
+      "c": "#d1c4e9",
+      "p": "SPACE",
+      "a": 7,
+      "f": 3
     },
-    "\n\n\n\nMouse"
+    "Tab\n\n\n\nMouse"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -0.8499999999999996,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -742,25 +696,27 @@
     {
       "y": -0.27500000000000036,
       "x": -0.5999999999999996,
+      "c": "#d1c4e9",
       "t": "#000000",
-      "g": true,
+      "p": "SPACE",
       "f": 3
     },
-    "\n\n\n\nSystem"
+    "Enter\n\n\n\nSystem"
   ],
   [
     {
       "y": 0.09999999999999964,
-      "f": 5,
       "n": true
     },
-    "\n\n\n\nSymbol"
+    "Space\n\n\n\nSymbol"
   ],
   [
     {
       "y": -0.20000000000000018,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
+      "f": 5,
       "d": true
     },
     "T4"
