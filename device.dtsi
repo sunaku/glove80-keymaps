@@ -13,99 +13,130 @@
 //////////////////////////////////////////////////////////////////////////////
 
 #if __has_include(<dt-bindings/zmk/rgb_colors.h>)
+  //
+  // Color definitions with conflict guard to prevent
+  // accidental redefinition of common abbreviations.
+  //
+  #if defined(RED) || defined(RED_RGB) || \
+      defined(COR) || defined(COR_RGB) || \
+      defined(ORN) || defined(ORN_RGB) || \
+      defined(GDN) || defined(GDN_RGB) || \
+      defined(GOL) || defined(GOL_RGB) || \
+      defined(YLW) || defined(YLW_RGB) || \
+      defined(CHU) || defined(CHU_RGB) || \
+      defined(GRN) || defined(GRN_RGB) || \
+      defined(SPG) || defined(SPG_RGB) || \
+      defined(CYN) || defined(CYN_RGB) || \
+      defined(AZU) || defined(AZU_RGB) || \
+      defined(TEA) || defined(TEA_RGB) || \
+      defined(TUR) || defined(TUR_RGB) || \
+      defined(BLU) || defined(BLU_RGB) || \
+      defined(PUR) || defined(PUR_RGB) || \
+      defined(MAJ) || defined(MAJ_RGB) || \
+      defined(PNK) || defined(PNK_RGB) || \
+      defined(WHT) || defined(WHT_RGB) || \
+      defined(BLK) || defined(BLK_RGB) || \
+      defined(___) || \
+      defined(DUG) || defined(DUG_RGB) || \
+      defined(LAC) || defined(LAC_RGB) || \
+      defined(BSL) || defined(BNL) || defined(BCL) || \
+      defined(SSL) || defined(SNL) || defined(SCL) || \
+      defined(FST) || defined(WRP) || defined(SLO)
+  #error "Naming conflict: 3-letter color abbreviation already defined!"
+  #endif
+
+  //
+  // color definitions from QMK
+  // https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
+  //
+  #define RED_RGB 0xFF0000 // #FF0000 RED      => RED (red)
+  #define COR_RGB 0xFF7C4D // #FF7C4D CORAL    => COR (coral)
+  #define ORN_RGB 0xFF8000 // #FF8000 ORANGE   => ORN (ornj)
+  #define GDN_RGB 0xD9A521 // #D9A521 GOLDNROD => GDN (gold'nrod)
+  #define GOL_RGB 0xFFD900 // #FFD900 GOLD     => GOL (gold)
+  #define YLW_RGB 0xFFFF00 // #FFFF00 YELLOW   => YLW (yellow)
+  #define CHU_RGB 0x80FF00 // #80FF00 CHARTRSE => CHU (chartreuse)
+  #define GRN_RGB 0x00FF00 // #00FF00 GREEN    => GRN (green)
+  #define SPG_RGB 0x00FF80 // #00FF80 SPRINGRN => SPG (spring green)
+  #define CYN_RGB 0x00FFFF // #00FFFF CYAN     => CYN (sigh-an)
+  #define AZU_RGB 0x99F5FF // #99F5FF AZURE    => AZU (a-zur)
+  #define TEA_RGB 0x008080 // #008080 TEAL     => TEA (teel)
+  #define TUR_RGB 0x476E6A // #476E6A TURQUOIS => TUR (turquoise)
+  #define BLU_RGB 0x0000FF // #0000FF BLUE     => BLU (bloo)
+  #define PUR_RGB 0x7A00FF // #7A00FF PURPLE   => PUR (purp)
+  #define MAJ_RGB 0xFF00FF // #FF00FF MAGENTA  => MAJ (mah-jenta)
+  #define PNK_RGB 0xFF80BF // #FF80BF PINK     => PNK (pink)
+  #define WHT_RGB 0xFFFFFF // #FFFFFF WHITE    => WHT (white)
+  #define BLK_RGB 0x000000 // #000000 BLACK    => BLK (blak)
+
+  //
+  // color definitions from MoErgo
+  // https://github.com/moergo-sc/zmk/blob/aca523dfce9b6447ffd19d833b791d44f1f286de/app/src/rgb_underglow.c#L259-L265
+  //
+  #define DUG_RGB 0x00ff68 // #00ff68 DULL_GRN => DUG (dull green)
+  #define LAC_RGB 0x6b1fce // #6b1fce LILAC    => LAC (lilac)
+
+  //
+  // underglow for the colors above
+  //
+  #define RED &ug RED_RGB
+  #define COR &ug COR_RGB
+  #define ORN &ug ORN_RGB
+  #define GDN &ug GDN_RGB
+  #define GOL &ug GOL_RGB
+  #define YLW &ug YLW_RGB
+  #define CHU &ug CHU_RGB
+  #define GRN &ug GRN_RGB
+  #define SPG &ug SPG_RGB
+  #define CYN &ug CYN_RGB
+  #define AZU &ug AZU_RGB
+  #define TEA &ug TEA_RGB
+  #define TUR &ug TUR_RGB
+  #define BLU &ug BLU_RGB
+  #define PUR &ug PUR_RGB
+  #define MAJ &ug MAJ_RGB
+  #define PNK &ug PNK_RGB
+  #define WHT &ug WHT_RGB
+  #define BLK &ug BLK_RGB
+  #define ___ &ug BLK_RGB
+  #define DUG &ug DUG_RGB
+  #define LAC &ug LAC_RGB
+
+  //
+  // underglow for keyboard locks on the Base layer
+  //
+  #define BSL &ug_sl LAC_RGB ORN_RGB // ScrollLock COLOR_OFF COLOR_ON
+  #define BNL &ug_nl LAC_RGB ORN_RGB // NumLock    COLOR_OFF COLOR_ON
+  #define BCL &ug_cl BLU_RGB ORN_RGB // CapsLock   COLOR_OFF COLOR_ON
+
+  //
+  // underglow for keyboard locks on the System layer
+  //
+  #define SSL &ug_sl BLK_RGB ORN_RGB // ScrollLock COLOR_OFF COLOR_ON
+  #define SNL &ug_nl BLK_RGB ORN_RGB // NumLock    COLOR_OFF COLOR_ON
+  #define SCL &ug_cl BLK_RGB ORN_RGB // CapsLock   COLOR_OFF COLOR_ON
+
+  //
+  // colors for mouse speed scaling in Mouse layers
+  //
+  #define FST GOL
+  #define WRP CHU
+  #define SLO COR
+
   // ==== PER-KEY-RGB <section begins> ====
-  #include <dt-bindings/zmk/rgb_colors.h>
   / {
     underglow-layer {
       compatible  = "zmk,underglow-layer";
 
-      //
-      // color definitions from QMK
-      // https://github.com/qmk/qmk_firmware/blob/master/quantum/color.h
-      //
-      #define RGB_AZURE     0x99F5FF // #99F5FF
-      #define RGB_BLACK     0x000000 // #000000
-      #define RGB_BLUE      0x0000FF // #0000FF
-      #define RGB_CHARTRSE  0x80FF00 // #80FF00
-      #define RGB_CORAL     0xFF7C4D // #FF7C4D
-      #define RGB_CYAN      0x00FFFF // #00FFFF
-      #define RGB_GOLD      0xFFD900 // #FFD900
-      #define RGB_GOLDNROD  0xD9A521 // #D9A521
-      #define RGB_GREEN     0x00FF00 // #00FF00
-      #define RGB_MAGENTA   0xFF00FF // #FF00FF
-      #define RGB_ORANGE    0xFF8000 // #FF8000
-      #define RGB_PINK      0xFF80BF // #FF80BF
-      #define RGB_PURPLE    0x7A00FF // #7A00FF
-      #define RGB_RED       0xFF0000 // #FF0000
-      #define RGB_SPRINGRN  0x00FF80 // #00FF80
-      #define RGB_TEAL      0x008080 // #008080
-      #define RGB_TURQUOIS  0x476E6A // #476E6A
-      #define RGB_WHITE     0xFFFFFF // #FFFFFF
-      #define RGB_YELLOW    0xFFFF00 // #FFFF00
-
-      //
-      // color definitions from MoErgo
-      // https://github.com/moergo-sc/zmk/blob/aca523dfce9b6447ffd19d833b791d44f1f286de/app/src/rgb_underglow.c#L259-L265
-      //
-      #define RGB_DULL_GRN  0x00ff68 // #00ff68
-      #define RGB_LILAC     0x6b1fce // #6b1fce
-
-      //
-      // underglow for the colors above
-      //
-      #define AZURE     &ug RGB_AZURE
-      #define BLACK     &ug RGB_BLACK
-      #define BLUE      &ug RGB_BLUE
-      #define CHARTRSE  &ug RGB_CHARTRSE
-      #define CORAL     &ug RGB_CORAL
-      #define CYAN      &ug RGB_CYAN
-      #define GOLD      &ug RGB_GOLD
-      #define GOLDNROD  &ug RGB_GOLDNROD
-      #define GREEN     &ug RGB_GREEN
-      #define MAGENTA   &ug RGB_MAGENTA
-      #define ORANGE    &ug RGB_ORANGE
-      #define PINK      &ug RGB_PINK
-      #define PURPLE    &ug RGB_PURPLE
-      #define RED       &ug RGB_RED
-      #define SPRINGRN  &ug RGB_SPRINGRN
-      #define TEAL      &ug RGB_TEAL
-      #define TURQUOIS  &ug RGB_TURQUOIS
-      #define WHITE     &ug RGB_WHITE
-      #define YELLOW    &ug RGB_YELLOW
-      #define ________  &ug RGB_BLACK
-      #define DULL_GRN  &ug RGB_DULL_GRN
-      #define LILAC     &ug RGB_LILAC
-
-      //
-      // colors for mouse speed scaling in Mouse layers
-      //
-      #define MSE_FAST GOLD
-      #define MSE_WARP CHARTRSE
-      #define MSE_SLOW CORAL
-
-      //
-      // underglow for keyboard locks on the Base layer
-      //
-      #define UGSL_BAS &ug_sl RGB_LILAC RGB_ORANGE // ScrollLock COLOR_OFF COLOR_ON
-      #define UGNL_BAS &ug_nl RGB_LILAC RGB_ORANGE // NumLock    COLOR_OFF COLOR_ON
-      #define UGCL_BAS &ug_cl RGB_TEAL  RGB_ORANGE // CapsLock   COLOR_OFF COLOR_ON
-
-      //
-      // underglow for keyboard locks on the System layer
-      //
-      #define UGSL_SYS &ug_sl RGB_BLACK RGB_ORANGE // ScrollLock COLOR_OFF COLOR_ON
-      #define UGNL_SYS &ug_nl RGB_BLACK RGB_ORANGE // NumLock    COLOR_OFF COLOR_ON
-      #define UGCL_SYS &ug_cl RGB_BLACK RGB_ORANGE // CapsLock   COLOR_OFF COLOR_ON
-
       /*
       Template {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________ ________ ________ ________  ________ ________ ________ ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________          ________ ________ ________  ________ ________ ________          ________ ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         ___ ___ ___ ___ ___
         >;
         layer-id = <LAYER_Template>;
       };
@@ -113,12 +144,12 @@
 
       BaseLayer {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    GOLDNROD BLUE          BLUE GOLDNROD    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             UGSL_BAS UGNL_BAS UGCL_BAS      TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <0>;
       };
@@ -126,12 +157,12 @@
       #ifdef LAYER_LeftPinky
       LeftPinky {
         bindings = <
-          ________ MAGENTA  ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ MAJ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftPinky>;
       };
@@ -140,12 +171,12 @@
       #ifdef LAYER_LeftRingy
       LeftRingy {
         bindings = <
-          ________ ________ CYAN     ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ CYN ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftRingy>;
       };
@@ -154,12 +185,12 @@
       #ifdef LAYER_LeftMiddy
       LeftMiddy {
         bindings = <
-          ________ ________ ________ GREEN    ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ GRN ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftMiddy>;
       };
@@ -168,12 +199,12 @@
       #ifdef LAYER_LeftIndex
       LeftIndex {
         bindings = <
-          ________ ________ ________ ________ YELLOW                                                                            ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ YLW                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftIndex>;
       };
@@ -182,12 +213,12 @@
       #ifdef LAYER_RightIndex
       RightIndex {
         bindings = <
-          ________ ________ ________ ________ ________                                                                            YELLOW ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             YLW ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightIndex>;
       };
@@ -196,12 +227,12 @@
       #ifdef LAYER_RightMiddy
       RightMiddy {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________    GREEN ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ GRN ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightMiddy>;
       };
@@ -210,12 +241,12 @@
       #ifdef LAYER_RightRingy
       RightRingy {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________     CYAN ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ CYN ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightRingy>;
       };
@@ -224,12 +255,12 @@
       #ifdef LAYER_RightPinky
       RightPinky {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________  MAGENTA ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________ LILAC    AZURE    BLUE          BLUE    AZURE    LILAC ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ LILAC             LILAC    LILAC    TEAL          TEAL    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ MAJ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ RED
+          ___ ___ ___ ___ LAC         BSL BNL BCL     BLU LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightPinky>;
       };
@@ -238,12 +269,12 @@
       #ifdef LAYER_Cursor
       Cursor {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          CORAL    MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________    AZURE    AZURE    AZURE    AZURE    CORAL
-          ________ ________ ________ ________ ________ ________ ________ ________ RED       ________ ________ ________ ________     TEAL     TEAL     TEAL     TEAL ________
-          ________ ________ ________ ________ ________          DULL_GRN ________ ________  ________ ________ ________          ________ ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ COR COR COR COR ___                                     ___ ___ ___ ___ ___ ___
+          ___ COR COR COR COR GDN                                     GDN COR PUR PUR COR ___
+          YLW MAJ CYN GRN YLW GDN                                     GDN AZU AZU AZU AZU YLW
+          PNK SPG SPG SPG PUR GDN     COR COR ___     SPG SPG SPG     GDN AZU AZU AZU AZU PNK
+          PNK PUR PUR PUR PUR         RED ___ ___     SPG SPG SPG         PUR PUR PUR PUR PNK
         >;
         layer-id = <LAYER_Cursor>;
       };
@@ -252,12 +283,12 @@
       #ifdef LAYER_Number
       Number {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ CHARTRSE CHARTRSE CHARTRSE ________ ________
-          CORAL    MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________ CHARTRSE CHARTRSE CHARTRSE ________ ________
-          ________ ________ ________ ________ ________ ________ ________ ________ RED       ________ ________ ________ ________ CHARTRSE CHARTRSE CHARTRSE ________ ________
-          ________ ________ ________ ________ ________          ________ DULL_GRN ________  ________ ________ CHARTRSE          ________ ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             GDN GDN GDN GDN GDN
+          ___ COR COR COR COR ___                                     TEA ___ ___ ___ ___ ___
+          ___ COR COR COR COR CHU                                     TEA CHU CHU CHU ___ ___
+          YLW MAJ CYN GRN YLW TEA                                     TEA CHU CHU CHU ___ ___
+          TEA SPG SPG SPG PUR GDN     ___ ___ ___     ___ ___ ___     TEA CHU CHU CHU ___ ___
+          ___ PUR PUR PUR PUR         ___ RED ___     ___ ___ CHU         ___ ___ ___ ___ ___
         >;
         layer-id = <LAYER_Number>;
       };
@@ -266,12 +297,12 @@
       #ifdef LAYER_Function
       Function {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ PINK     PINK     PINK     ________ ________
-          CORAL    MAGENTA  CYAN     GREEN    YELLOW   ________                                                        ________ PINK     PINK     PINK     ________ ________
-          ________ ________ ________ ________ ________ ________ DULL_GRN ________ RED       ________ ________ ________ ________ PINK     PINK     PINK     ________ ________
-          ________ ________ ________ ________ ________          ________ ________ ________  ________ ________ ________          ________ ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ COR COR COR COR ___                                     AZU AZU AZU AZU AZU AZU
+          ___ COR COR COR COR GDN                                     GDN PNK PNK PNK PNK PNK
+          YLW MAJ CYN GRN YLW GDN                                     GDN PNK PNK PNK PNK PNK
+          ___ SPG SPG SPG PUR GDN     RED ___ ___     BLU AZU AZU     GDN PNK PNK PNK PNK PNK
+          ___ PUR PUR PUR PUR         ___ ___ ___     BLU AZU AZU         CHU CHU CHU CHU CHU
         >;
         layer-id = <LAYER_Function>;
       };
@@ -280,12 +311,12 @@
       #ifdef LAYER_Emoji
       Emoji {
         bindings = <
-          ________ ________ ________ ________ ________                                                                              CYAN ________ ________     CYAN ________
-          ________ ________ ________ ________ ________ ________                                                        ________     CYAN ________ ________     CYAN ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                            CYAN ________ ________ ________ ________     CYAN
-          ________ ________ ________ ________ ________ ________ ________ ________ RED       ________ ________ ________ ________     CYAN ________ ________     CYAN ________
-          ________ ________ ________ ________ DULL_GRN          YELLOW   ________ ________  ________ ________ ________          ________     CYAN     CYAN ________ ________
+          ___ ___ ___ ___ ___                                             CYN ___ ___ CYN ___
+          ___ ___ ___ ___ ___ ___                                     ___ CYN ___ ___ CYN ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ GDN PNK SPG AZU ___                                     CYN ___ ___ ___ ___ CYN
+          ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     ___ CYN ___ ___ CYN ___
+          ___ ___ ___ ___ RED         YLW ___ ___     ___ ___ ___         ___ CYN CYN ___ ___
         >;
         layer-id = <LAYER_Emoji>;
       };
@@ -294,12 +325,12 @@
       #ifdef LAYER_Symbol
       Symbol {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________ ORANGE   ________ ________       RED ________ ________ ________    AZURE    AZURE    AZURE    AZURE ________
-          ________ ________ ________ ________ ________          ________ ________ ________  ________ ________ DULL_GRN              TEAL     TEAL     TEAL     TEAL ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          PNK AZU AZU AZU TUR TUR                                     ___ ___ ___ ___ ___ ___
+          AZU PUR AZU AZU TUR GDN                                     PNK YLW GRN CYN MAJ ___
+          GDN GDN SPG BLU GDN GDN                                     PNK COR COR COR COR ___
+          PUR SPG SPG SPG SPG GDN     PUR GDN GDN     ___ ___ ___     PNK COR COR COR COR ___
+          ___ BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         ___ ___ ___ ___ ___
         >;
         layer-id = <LAYER_Symbol>;
       };
@@ -308,12 +339,12 @@
       #ifdef LAYER_Mouse
       Mouse {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ TEAL     AZURE    TEAL     ________                                                        ________   YELLOW   ORANGE  MAGENTA     PINK ________
-          ________ TEAL     AZURE    AZURE    AZURE    ________                                                        ________ MSE_FAST MSE_WARP MSE_SLOW     PINK ________
-          ________ TEAL     MSE_SLOW MSE_WARP MSE_FAST ________ MAGENTA  ________ PINK           RED ________ ________ ________    AZURE    AZURE    AZURE    AZURE ________
-          ________ ________ ________ ________ ________          YELLOW   ORANGE   PINK      ________ DULL_GRN ________              TEAL     TEAL     TEAL     TEAL ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ SPG AZU SPG ___                                     ___ YLW GRN CYN MAJ ___
+          ___ SPG AZU AZU AZU SPG                                     SPG FST WRP SLO GDN GDN
+          ___ SPG SLO WRP FST SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG AZU SPG GDN GDN
+          ___ ___ ___ ___ ___         GDN GDN GDN     ___ RED ___         AZU AZU AZU GDN PUR
         >;
         layer-id = <LAYER_Mouse>;
       };
@@ -322,12 +353,12 @@
       #ifdef LAYER_MouseFast
       MouseFast {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ MSE_FAST MSE_FAST MSE_FAST ________                                                        ________   YELLOW   ORANGE  MAGENTA     PINK ________
-          ________ MSE_FAST MSE_FAST MSE_FAST MSE_FAST ________                                                        ________ MSE_FAST MSE_WARP MSE_SLOW     PINK ________
-          ________ MSE_FAST MSE_SLOW MSE_WARP MSE_FAST ________ MAGENTA  ________ PINK           RED ________ ________ ________ MSE_FAST MSE_FAST MSE_FAST MSE_FAST ________
-          ________ ________ ________ ________ ________          YELLOW   ORANGE   PINK      ________ DULL_GRN ________          MSE_FAST MSE_FAST MSE_FAST MSE_FAST ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ SPG FST SPG ___                                     ___ YLW GRN CYN MAJ ___
+          ___ SPG FST FST FST SPG                                     SPG FST FST FST GDN GDN
+          ___ SPG FST FST FST SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG FST SPG GDN GDN
+          ___ ___ ___ ___ ___         GDN GDN GDN     ___ RED ___         FST FST FST GDN PUR
         >;
         layer-id = <LAYER_MouseFast>;
       };
@@ -336,12 +367,12 @@
       #ifdef LAYER_MouseWarp
       MouseWarp {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ MSE_WARP MSE_WARP MSE_WARP ________                                                        ________   YELLOW   ORANGE  MAGENTA     PINK ________
-          ________ MSE_WARP MSE_WARP MSE_WARP MSE_WARP ________                                                        ________ MSE_FAST MSE_WARP MSE_SLOW     PINK ________
-          ________ MSE_WARP MSE_SLOW MSE_WARP MSE_FAST ________ MAGENTA  ________ PINK           RED ________ ________ ________ MSE_WARP MSE_WARP MSE_WARP MSE_WARP ________
-          ________ ________ ________ ________ ________          YELLOW   ORANGE   PINK      ________ DULL_GRN ________          MSE_WARP MSE_WARP MSE_WARP MSE_WARP ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ SPG WRP SPG ___                                     ___ YLW GRN CYN MAJ ___
+          ___ SPG WRP WRP WRP SPG                                     SPG WRP WRP WRP GDN GDN
+          ___ SPG WRP WRP WRP SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG WRP SPG GDN GDN
+          ___ ___ ___ ___ ___         GDN GDN GDN     ___ RED ___         WRP WRP WRP GDN PUR
         >;
         layer-id = <LAYER_MouseWarp>;
       };
@@ -350,12 +381,12 @@
       #ifdef LAYER_MouseSlow
       MouseSlow {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ MSE_SLOW MSE_SLOW MSE_SLOW ________                                                        ________   YELLOW   ORANGE  MAGENTA     PINK ________
-          ________ MSE_SLOW MSE_SLOW MSE_SLOW MSE_SLOW ________                                                        ________ MSE_FAST MSE_WARP MSE_SLOW     PINK ________
-          ________ MSE_SLOW MSE_SLOW MSE_WARP MSE_FAST ________ MAGENTA  ________ PINK           RED ________ ________ ________ MSE_SLOW MSE_SLOW MSE_SLOW MSE_SLOW ________
-          ________ ________ ________ ________ ________          YELLOW   ORANGE   PINK      ________ DULL_GRN ________          MSE_SLOW MSE_SLOW MSE_SLOW MSE_SLOW ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ SPG SLO SPG ___                                     ___ YLW GRN CYN MAJ ___
+          ___ SPG SLO SLO SLO SPG                                     SPG SLO SLO SLO GDN GDN
+          ___ SPG SLO SLO SLO SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG SLO SPG GDN GDN
+          ___ ___ ___ ___ ___         GDN GDN GDN     ___ RED ___         SLO SLO SLO GDN PUR
         >;
         layer-id = <LAYER_MouseSlow>;
       };
@@ -364,12 +395,12 @@
       #ifdef LAYER_System
       System {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN     CYAN  MAGENTA ________
-          ________ ________ TEAL     AZURE    ORANGE   ________                                                        ________   ORANGE    AZURE     TEAL ________ ________
-          ________ AZURE    AZURE    AZURE    AZURE    ________                                                        ________ ________ ________ ________    AZURE    AZURE
-          ________ TEAL     TEAL     TEAL     TEAL     ________ ________ ________ ________       RED ________ DULL_GRN ________ UGSL_SYS UGNL_SYS UGCL_SYS     TEAL     TEAL
-          ________ ________ ________ ________ WHITE             UGSL_SYS UGNL_SYS UGCL_SYS  ________ ________ ________             AZURE    AZURE     TEAL     TEAL ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ BLU BLU BLU COR                                     COR YLW GRN CYN MAJ ___
+          ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK ___
+          ___ PNK AZU SPG GDN COR     PUR PUR PUR     BLU BLU RED     COR GDN SPG AZU PNK ___
+          ___ ___ ___ ___ ORN         SSL SNL SCL     PUR PUR PUR         SSL SNL SCL TEA ___
         >;
         layer-id = <LAYER_System>;
       };
@@ -378,12 +409,12 @@
       #ifdef LAYER_World
       World {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________     CYAN     CYAN ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________   YELLOW    GREEN    GREEN   YELLOW ________
-          ________ ________ ________ ________ ________ ________ ________ ________ ________       RED ________ ________ ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________          ________ ________ ________  ________ ________ ________          DULL_GRN ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ GDN PNK PNK PNK ___                                     ___ ___ CYN CYN ___ ___
+          PNK PNK PNK PNK PNK ___                                     ___ YLW GRN GRN YLW ___
+          PNK PNK GDN GDN PNK ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
+          GDN GDN GDN GDN GDN         ___ ___ ___     ___ ___ ___         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_World>;
       };
@@ -392,12 +423,12 @@
       #ifdef LAYER_Typing
       Typing {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          CORAL    ________ ________ ________ ________ ________ ________ ________ ________       RED ________ ________ ________ ________ ________ ________ ________    CORAL
-          ________ ________ ________ ________ ________          ________ ________ ________       RED ________ ________          ________ ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     RED ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_Typing>;
       };
@@ -406,12 +437,12 @@
       #ifdef LAYER_Gaming
       Gaming {
         bindings = <
-          ORANGE   ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ AZURE    ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ YELLOW   AZURE    AZURE    AZURE    ________ YELLOW   CYAN     RED         ORANGE    AZURE ________ ________ ________ ________ ________ ________ ________
-          ________ GREEN    ________ ________ ________          ________ GREEN    RED          AZURE    AZURE    AZURE          ________ ________ ________ ________ ________
+          ORN ___ ___ ___ COR                                             TEA TEA TEA TEA TEA
+          ___ GDN GDN GDN GDN GDN                                     TEA TEA TEA TEA TEA TEA
+          ___ GDN GDN GDN GDN GDN                                     ___ ___ ___ ___ ___ TEA
+          ___ COR ___ AZU ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ YLW AZU AZU AZU RED     YLW CYN ___     ORN AZU COR     ___ ___ ___ ___ ___ ___
+          ___ GRN ___ ___ RED         COR GRN COR     AZU AZU AZU         ___ ___ ___ ___ ___
         >;
         layer-id = <LAYER_Gaming>;
       };
@@ -420,12 +451,12 @@
       #ifdef LAYER_Lower
       Lower {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ UGSL_SYS
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ UGNL_SYS
-          ________ ________ ________ ________ ________ ________ LILAC    ________ RED            RED ________    LILAC ________ ________ ________ ________ ________ ________
-          ________ UGCL_SYS ________ ________ LILAC             LILAC    LILAC    ________  ________    LILAC    LILAC             LILAC ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             PNK SPG SPG SPG ___
+          ___ ___ ___ ___ ___ ___                                     PNK GOL GOL GOL SPG SPG
+          ___ ___ ___ ___ ___ ___                                     ___ GOL GOL GOL SPG SPG
+          ___ ___ ___ ___ ___ ___                                     ___ GOL GOL GOL PNK SPG
+          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     GOL GOL SPG SPG PNK RED
+          CYN ___ ___ ___ LAC         LAC LAC ___     ___ LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_Lower>;
       };
@@ -434,12 +465,12 @@
       #ifdef LAYER_Factory
       Factory {
         bindings = <
-          ________ ________ ________ ________ ________                                                                          ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________                                                        ________ ________ ________ ________ ________ ________
-          ________ ________ ________ ________ ________ ________ ________ ________ RED       ________ ________ ________ ________ ________ ________ ________ ________ ________
-          RED      ________ ________ ________ ________          ________ ________ ________  ________ ________ ________          ________ ________ ________ ________ ________
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___     ___ ___ RED     ___ ___ ___     ___ ___ ___ ___ ___ ___
+          RED ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         ___ ___ ___ ___ ___
         >;
         layer-id = <LAYER_Factory>;
       };
@@ -448,4 +479,60 @@
     };
   };
   // ==== PER-KEY-RGB <section ends> =====
+
+  #undef RED
+  #undef RED_RGB
+  #undef COR
+  #undef COR_RGB
+  #undef ORN
+  #undef ORN_RGB
+  #undef GDN
+  #undef GDN_RGB
+  #undef GOL
+  #undef GOL_RGB
+  #undef YLW
+  #undef YLW_RGB
+  #undef CHU
+  #undef CHU_RGB
+  #undef GRN
+  #undef GRN_RGB
+  #undef SPG
+  #undef SPG_RGB
+  #undef CYN
+  #undef CYN_RGB
+  #undef AZU
+  #undef AZU_RGB
+  #undef TEA
+  #undef TEA_RGB
+  #undef TUR
+  #undef TUR_RGB
+  #undef BLU
+  #undef BLU_RGB
+  #undef PUR
+  #undef PUR_RGB
+  #undef MAJ
+  #undef MAJ_RGB
+  #undef PNK
+  #undef PNK_RGB
+  #undef WHT
+  #undef WHT_RGB
+  #undef BLK
+  #undef BLK_RGB
+  #undef ___
+  #undef DUG
+  #undef DUG_RGB
+  #undef LAC
+  #undef LAC_RGB
+
+  #undef BSL
+  #undef BNL
+  #undef BCL
+
+  #undef SSL
+  #undef SNL
+  #undef SCL
+
+  #undef FST
+  #undef WRP
+  #undef SLO
 #endif
