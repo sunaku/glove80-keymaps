@@ -1000,6 +1000,7 @@ behaviors {
   space: thumb_layer_access_spacebar {
     compatible = "zmk,behavior-hold-tap";
     flavor = SPACE_HOLDING_TYPE;
+    hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
     tapping-term-ms = <SPACE_HOLDING_TIME>;
     require-prior-idle-ms = <SPACE_STREAK_DECAY>;
     quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
