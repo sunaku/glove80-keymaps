@@ -71,6 +71,7 @@
   #define _END    _C(RIGHT)
   #define _EMOJI  LG(LC(SPACE))
   #define _FILES  LS(LA(M))
+  #define _GLOBE  GLOBE
 #else
   #define _C      LC
   #define _A_TAB  LALT
@@ -82,6 +83,7 @@
   #define _END    END
   #define _EMOJI  LG(DOT)
   #define _FILES  LG(E)
+  #define _GLOBE  LGUI
 #endif
 #define _SLEEP      C_SLEEP
 #if OPERATING_SYSTEM == <%= OPERATING_SYSTEMS[:windows] %>
@@ -176,6 +178,22 @@ combos {
   <%
     emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
   %>
+
+  // T1+T2
+
+  combo_sticky_globe_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T2>;
+    bindings = <&sk _GLOBE>;
+    layers = <<%= typing_layer_ids %>>;
+  };
+
+  combo_sticky_globe_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T2>;
+    bindings = <&sk _GLOBE>;
+    layers = <<%= typing_layer_ids %>>;
+  };
 
   // T2+T3
 
