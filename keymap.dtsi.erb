@@ -461,6 +461,15 @@ behaviors {
   //#define SPACE_FORGIVENESS
 
   //
+  // SPACE_CHORD_TYPING allows chording of right-hand thumb letter keys (such
+  // as R in the Enthium alpha layout) with right-hand symbol layer keys by
+  // inhibiting symbol layer activation until the activation key is held for
+  // SPACE_HOLDING_TIME.  For example, this feature accommodates my tendency
+  // to chord R and K while typing words such as "mark", "work", and "shark".
+  //
+  //#define SPACE_CHORD_TYPING
+
+  //
   // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
   // Here, we use Miryoku's "GACS" (Win, Alt, Ctrl, Shift) order by default,
   // unless OPERATING_SYSTEM is macOS, in which case Win & Ctrl are swapped,
@@ -1034,7 +1043,9 @@ behaviors {
   space: thumb_layer_access_spacebar {
     compatible = "zmk,behavior-hold-tap";
     flavor = SPACE_HOLDING_TYPE;
+    #ifdef SPACE_CHORD_TYPING
     hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+    #endif
     tapping-term-ms = <SPACE_HOLDING_TIME>;
     require-prior-idle-ms = <SPACE_STREAK_DECAY>;
     quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
