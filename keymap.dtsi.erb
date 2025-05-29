@@ -856,7 +856,9 @@ behaviors {
     hold-trigger-on-release; // wait for other home row mods
     tapping-term-ms = <<%= source.upcase %>_HOLDING_TIME>;
     quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
+    #if <%= source.upcase %>_STREAK_DECAY > 0
     require-prior-idle-ms = <<%= source.upcase %>_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     <%
       if target_variant
@@ -973,7 +975,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
     #ifdef THUMB_FORGIVENESS
@@ -985,7 +989,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&sticky_key_oneshot>;
   };
@@ -994,7 +1000,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
     retro-tap; // tap on standalone hold
@@ -1004,7 +1012,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&parang_left>;
     retro-tap; // tap on standalone hold
@@ -1014,7 +1024,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&parang_right>;
     retro-tap; // tap on standalone hold
@@ -1025,7 +1037,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&engram_AT>;
     retro-tap; // tap on standalone hold
@@ -1035,7 +1049,9 @@ behaviors {
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #if THUMB_STREAK_DECAY > 0
     require-prior-idle-ms = <THUMB_STREAK_DECAY>;
+    #endif
     #binding-cells = <2>;
     bindings = <&mo>, <&engram_AT>;
   };
@@ -1047,7 +1063,9 @@ behaviors {
     hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
     #endif
     tapping-term-ms = <SPACE_HOLDING_TIME>;
+    #if SPACE_STREAK_DECAY > 0
     require-prior-idle-ms = <SPACE_STREAK_DECAY>;
+    #endif
     quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
     bindings = <&mo>, <&kp>;
