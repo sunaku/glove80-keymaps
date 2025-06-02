@@ -79,6 +79,13 @@ See [release notes][rel] for a visual overview of recent updates.
 Welcome to the *Glorious Engrammer* keymap! 🧑‍🚀🚀✨  This introductory
 guide will orient you to the world of custom layouts, keymaps, and firmware. 💁
 
+> "Hey, I'm glad you came! Are you comfortable?" 🚁  
+> _What?_ 😯  
+> "Are you comfortable?" 😎  
+> _No_ 😰  
+> "Hold on tight..." ✨  
+> -- Walter Mitty https://vimeo.com/106472147#t=72s
+
 ### Factory layout
 
 Before we get started, let's talk about your escape route back to familiarity.
