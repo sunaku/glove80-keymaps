@@ -179,7 +179,7 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
+      "c": "#e0f2f1",
       "t": "#000000",
       "p": "FLAT",
       "a": 4,
@@ -232,7 +232,7 @@
     },
     "",
     {
-      "c": "#fcfcfc",
+      "c": "#e8f5e9",
       "g": false,
       "p": "FLAT"
     },
@@ -261,7 +261,7 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
+      "c": "#e0f2f1",
       "t": "#000000",
       "p": "FLAT",
       "a": 4,
@@ -315,7 +315,7 @@
     },
     "R4",
     {
-      "c": "#fcfcfc",
+      "c": "#e0f2f1",
       "t": "#000000",
       "p": "FLAT",
       "a": 4,
@@ -353,7 +353,7 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
+      "c": "#e8f5e9",
       "t": "#000000",
       "p": "FLAT",
       "f": 6
@@ -361,6 +361,7 @@
     "¡",
     "¿",
     {
+      "c": "#e0f2f1",
       "a": 4
     },
     "<sup>」<sub>﹂</sub></sup>\n’<sub>”</sub>\n<sup>』<sub>﹄</sub></sup>\n‚<sup>„</sup>\nAltGr\n\n\n\n´\n\n›<sub>»</sub>",
@@ -389,7 +390,7 @@
     },
     "R5",
     {
-      "c": "#fcfcfc",
+      "c": "#e0f2f1",
       "t": "#000000",
       "p": "FLAT",
       "a": 4,
@@ -430,7 +431,7 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#fcfcfc",
+      "c": "#e8f5e9",
       "t": "#000000",
       "p": "FLAT",
       "f": 6
@@ -464,7 +465,7 @@
     },
     "R6",
     {
-      "c": "#fcfcfc",
+      "c": "#e8f5e9",
       "t": "#000000",
       "p": "FLAT",
       "f": 6
@@ -498,21 +499,21 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     "",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
-    "<ul class=\"combos\"><li>Hold C2R6 to activate this layer.</li><li>Release C2R6 to deactivate this layer.</li><li>Tap C2R6 to unlock this layer, if locked.</li><li>Hold or tap sticky modifiers on right half to choose characters (refer to ℹ️ <b>Legend</b> ℹ️) from the character cluster keys on left half.</li></ul>"
+    "<ul class=\"combos\"><li>Hold C2R6 to activate this layer.</li><li>Release C2R6 to deactivate this layer.</li><li>Tap C2R6 to unlock this layer, if locked.</li><li>Hold or tap sticky modifiers on right half to choose characters (refer to ℹ️ <b>Legend</b> ℹ️) from the character cluster keys on left half.</li><li>Windows \"flashing mods\" compatibility tip: use LCTL+RSFT instead of LALT, and RCTL+RSFT instead of RALT.</li></ul>"
   ],
   [
     {
-      "y": -0.75,
+      "y": -0.5,
       "x": 1.25,
       "p": "DSA SPACE",
       "a": 4,
@@ -530,9 +531,9 @@
         5
       ],
       "w": 4.25,
-      "h": 2.25
+      "h": 2.5
     },
-    "LALT\nLCTL\nRALT\nRCTL\n️‍‍\n\n\n\nRSFT\nℹ️ <small><b>Legend</b></small> ℹ️\nBase/LSFT"
+    "LALT <br><small><sup><sub>(LCTL+RSFT)</sub></sup></small>\nLCTL\nRALT <br><small><sup><sub>(RCTL+RSFT)</sub></sup></small>\nRCTL\n️‍‍\n\n\n\nRSFT\nℹ️ <small><b>Legend</b></small> ℹ️\nBase/LSFT"
   ],
   [
     {

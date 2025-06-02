@@ -253,15 +253,18 @@
     {
       "c": "#d1c4e9",
       "a": 5,
+      "f": 3,
       "fa": [
         0,
-        3,
         0,
         0,
-        3
+        0,
+        0,
+        0,
+        5
       ]
     },
-    "\n<i class='fa fa-caret-up motif'></i>\n\n\nCtrl\n\nW",
+    "&nbsp;\n<i class='fa fa-caret-up motif'></i>\n\n\nCtrl\n\nW",
     {
       "c": "#cccccc",
       "a": 7,
@@ -316,27 +319,29 @@
       "c": "#d1c4e9",
       "t": "#000000",
       "a": 5,
+      "f": 3,
       "fa": [
         0,
-        3,
         0,
         0,
         0,
         0,
-        3
+        0,
+        5
       ]
     },
-    "\n<i class='fa fa-caret-left motif'></i>\n\n\n\n\nA",
-    "\n<i class='fa fa-caret-down motif'></i>\n\n\n\n\nS",
+    "&nbsp;\n<i class='fa fa-caret-left motif'></i>\n\n\n\n\nA",
+    "&nbsp;\n<i class='fa fa-caret-down motif'></i>\n\n\n\n\nS",
     {
       "n": true
     },
-    "\n<i class='fa fa-caret-right motif'></i>\n\n\n\n\nD",
+    "&nbsp;\n<i class='fa fa-caret-right motif'></i>\n\n\n\n\nD",
     {
       "c": "#000000",
       "g": true,
       "p": "SPACE",
-      "a": 7
+      "a": 7,
+      "f": 5
     },
     "",
     {
@@ -353,13 +358,9 @@
     "M",
     {
       "c": "#e8f5e9",
-      "a": 5,
-      "f": 5
+      "a": 5
     },
     "<\n,",
-    {
-      "f": 5
-    },
     ">\n."
   ],
   [
@@ -389,14 +390,12 @@
       "f": 4
     },
     "?\n/",
-    {
-      "f": 5
-    },
-    "_\n-",
+    "|\n\\",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
       "a": 7,
+      "f": 5,
       "d": true
     },
     "R5"
@@ -427,7 +426,7 @@
       "c": "#e8f5e9",
       "a": 5
     },
-    "~\n`",
+    "_\n-",
     {
       "f": 4
     },
@@ -460,13 +459,10 @@
       "c": "#e8f5e9",
       "p": "CHICKLET",
       "a": 5,
-      "f": 4
-    },
-    "|\n\\",
-    {
       "f": 5
     },
     "+\n=",
+    "~\n`",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -482,14 +478,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     "<ul class=\"combos\"><li><b>Combo C1R5+C2R6 = Gaming layer on/off</b></li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     ""

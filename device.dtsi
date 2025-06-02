@@ -284,11 +284,11 @@
       Number {
         bindings = <
           ___ ___ ___ ___ ___                                             GDN GDN GDN GDN GDN
-          ___ COR COR COR COR ___                                     TEA ___ ___ ___ ___ ___
-          ___ COR COR COR COR CHU                                     TEA CHU CHU CHU ___ ___
-          YLW MAJ CYN GRN YLW TEA                                     TEA CHU CHU CHU ___ ___
-          TEA SPG SPG SPG PUR GDN     ___ ___ ___     ___ ___ ___     TEA CHU CHU CHU ___ ___
-          ___ PUR PUR PUR PUR         ___ RED ___     ___ ___ CHU         ___ ___ ___ ___ ___
+          ___ COR COR COR COR ___                                     TEA SPG SPG SPG SPG SPG
+          ___ COR COR COR COR GOL                                     TEA GOL GOL GOL SPG SPG
+          YLW MAJ CYN GRN YLW TEA                                     TEA GOL GOL GOL SPG SPG
+          TEA SPG SPG SPG PUR GDN     ___ ___ ___     SPG SPG SPG     TEA GOL GOL GOL SPG SPG
+          ___ PUR PUR PUR PUR         ___ RED ___     SPG SPG GOL         SPG SPG SPG SPG SPG
         >;
         layer-id = <LAYER_Number>;
       };
@@ -326,8 +326,8 @@
       Symbol {
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
-          PNK AZU AZU AZU TUR TUR                                     ___ ___ ___ ___ ___ ___
-          AZU PUR AZU AZU TUR GDN                                     PNK YLW GRN CYN MAJ ___
+          PNK AZU AZU AZU CHU CHU                                     ___ ___ ___ ___ ___ ___
+          AZU PUR AZU AZU CHU GDN                                     PNK YLW GRN CYN MAJ ___
           GDN GDN SPG BLU GDN GDN                                     PNK COR COR COR COR ___
           PUR SPG SPG SPG SPG GDN     PUR GDN GDN     ___ ___ ___     PNK COR COR COR COR ___
           ___ BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         ___ ___ ___ ___ ___
@@ -343,8 +343,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG AZU SPG ___                                     ___ YLW GRN CYN MAJ ___
           ___ SPG AZU AZU AZU SPG                                     SPG FST WRP SLO GDN GDN
-          ___ SPG SLO WRP FST SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG AZU SPG GDN GDN
-          ___ ___ ___ ___ ___         GDN GDN GDN     ___ RED ___         AZU AZU AZU GDN PUR
+          ___ SPG SLO WRP FST SPG     GDN PUR GDN     ___ ___ BLU     SPG SPG AZU SPG GDN GDN
+          ___ ___ ___ ___ ___         GDN GDN GDN     BLU RED BLU         AZU AZU AZU GDN PUR
         >;
         layer-id = <LAYER_Mouse>;
       };
@@ -398,9 +398,9 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ BLU BLU BLU COR                                     COR YLW GRN CYN MAJ ___
-          ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK ___
-          ___ PNK AZU SPG GDN COR     PUR PUR PUR     BLU BLU RED     COR GDN SPG AZU PNK ___
-          ___ ___ ___ ___ ORN         SSL SNL SCL     PUR PUR PUR         SSL SNL SCL TEA ___
+          ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK PUR
+          ___ PNK AZU SPG GDN COR     PUR PUR PUR     ___ BLU RED     COR GDN SPG AZU PNK PUR
+          ___ ___ ___ ___ WHT         SSL SNL SCL     ___ BLU ___         WHT SSL SNL SCL PUR
         >;
         layer-id = <LAYER_System>;
       };
@@ -411,10 +411,10 @@
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ GDN PNK PNK PNK ___                                     ___ ___ CYN CYN ___ ___
-          PNK PNK PNK PNK PNK ___                                     ___ YLW GRN GRN YLW ___
-          PNK PNK GDN GDN PNK ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
-          GDN GDN GDN GDN GDN         ___ ___ ___     ___ ___ ___         RED ___ ___ ___ ___
+          ___ SPG AZU AZU AZU ___                                     ___ ___ CYN CYN ___ ___
+          AZU AZU AZU AZU AZU ___                                     ___ YLW GRN GRN YLW ___
+          AZU AZU SPG SPG AZU ___     ___ ___ ___     ___ ___ ___     ___ ___ ___ ___ ___ ___
+          SPG SPG SPG SPG SPG         ___ ___ ___     ___ ___ ___         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_World>;
       };
@@ -453,10 +453,10 @@
         bindings = <
           ___ ___ ___ ___ ___                                             PNK SPG SPG SPG ___
           ___ ___ ___ ___ ___ ___                                     PNK GOL GOL GOL SPG SPG
-          ___ ___ ___ ___ ___ ___                                     ___ GOL GOL GOL SPG SPG
-          ___ ___ ___ ___ ___ ___                                     ___ GOL GOL GOL PNK SPG
-          RED ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     GOL GOL SPG SPG PNK RED
-          CYN ___ ___ ___ LAC         LAC LAC ___     ___ LAC LAC         LAC ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     SPG GOL GOL GOL SPG SPG
+          ___ ___ ___ ___ ___ ___                                     SPG GOL GOL GOL PNK SPG
+          RED ___ ___ ___ ___ ___     RED ___ ___     ___ ___ RED     GOL GOL SPG SPG PNK RED
+          CYN ___ ___ ___ RED         RED RED ___     ___ RED RED         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_Lower>;
       };

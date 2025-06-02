@@ -4,8 +4,8 @@ This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
 Colemak/DH, etc.) are also provided to ease your transition to the full glory.
 
-![Photograph of my MoErgo Glove80 keyboard with Enthium layout and per-key RGB
-illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
+![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](
+README/base-layer-photograph-Enthium.webp )
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
@@ -16,9 +16,9 @@ illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
 
 ## Keymap
 
-Version 42 (PREVIEW)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42
-- Release: https://dev.glove80.com/#/layout/user/95f1e056-850f-487a-907d-4655b26276e0
+Version 42-rc2 (PREVIEW)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc2
+- Release: https://my.glove80.com/#/layout/user/fcb49743-7be1-4e87-b13f-f584fb91c215
 
 ### Legend
 
@@ -28,7 +28,7 @@ See [interactive layer map][map] for overview and documentation.
 See [release notes][rel] for a visual overview of recent updates.
 
 [map]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
-[pdf]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
+[pdf]: README/all-layer-diagrams.pdf
 [rel]: https://github.com/sunaku/glove80-keymaps/releases
 
 ### Contents
@@ -359,8 +359,7 @@ then the "y" radio button.
 The default firmware (25.0.1) now supports mouse emulation, but if you still
 want to verify that you're using a firmware that supports mouse emulation then
 before building the firmware (step 5 above), change the firmware version to
-25.0.1 or newer: open the "Settings" tab, choose 24.12, and go back to the
-"Edit" tab.
+25.0.1 or newer under the "Settings" tab, and then go back to the "Edit" tab.
 
 ![beta firmware](README/settings.png)
 
@@ -438,8 +437,7 @@ you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
 
 ```h
 #define PINKY_FINGER_MOD LGUI
-#define RING1_FINGER_MOD LALT
-#define RING2_FINGER_MOD RALT
+#define RINGY_FINGER_MOD LALT
 #define MIDDY_FINGER_MOD LCTL
 #define INDEX_FINGER_MOD LSFT
 ```
@@ -457,10 +455,8 @@ For completeness, here are all finger-mod settings available for customization:
 ```h
 #define  LEFT_PINKY_MOD ...
 #define RIGHT_PINKY_MOD ...
-#define  LEFT_RING1_MOD ...
-#define RIGHT_RING1_MOD ...
-#define  LEFT_RING2_MOD ...
-#define RIGHT_RING2_MOD ...
+#define  LEFT_RINGY_MOD ...
+#define RIGHT_RINGY_MOD ...
 #define  LEFT_MIDDY_MOD ...
 #define RIGHT_MIDDY_MOD ...
 #define  LEFT_INDEX_MOD ...

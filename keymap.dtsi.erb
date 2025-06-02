@@ -1,12 +1,12 @@
 // NOTE: Use the many #define settings below to customize this keymap!
-//#define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
-//#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 //#define SPACE_FORGIVENESS  // allow lingering taps on the space bar
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
+//#define ENABLE_MOUSE_KEYS  // requires HID_POINTING override to "y"
+//#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
 //#define WORLD_USE_COMPOSE  // use native Compose in place of Unicode
 //#define WORLD_HOST_AZERTY  // host computer is set to AZERTY locale
 //#define WORLD_SHIFT_NUMBER // apply Shift to type number row digits
@@ -14,7 +14,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Sunaku's Keymap v41 -- "Glorious Engrammer"
+// Sunaku's Keymap v42 -- "Glorious Engrammer"
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
@@ -609,44 +609,6 @@ behaviors {
   //
   <%
     emit_setting_ifndef.(:INDEX_REPEAT_DECAY, resolve_tap_timing.(300))
-  %> // "tap then hold" for key auto-repeat
-
-  //
-  // PLAIN_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
-  // for index fingers (which Miryoku assigns to Shift) on home row keys.
-  //
-  // NOTE: The "tap-preferred" flavor of ZMK hold-tap for index finger keys
-  // allows faster activation of the Shift modifier (without having to wait
-  // for the modified key to be released as the "balanced" flavor requires).
-  //
-  <%
-    emit_setting_ifndef.(:PLAIN_HOLDING_TYPE, :INDEX_HOLDING_TYPE)
-  %>
-
-  //
-  // PLAIN_HOLDING_TIME defines how long you need to hold (milliseconds)
-  // index finger keys in order to send their modifiers to the computer
-  // (i.e. "register" them) for mod-click mouse usage (e.g. Shift-Click).
-  //
-  <%
-    emit_setting_ifndef.(:PLAIN_HOLDING_TIME, resolve_tap_timing.(200))
-  %>
-
-  //
-  // PLAIN_STREAK_DECAY defines how long you need to wait (milliseconds)
-  // after typing before you can use home row mods again.  It prevents
-  // unintended activation of home row mods when you're actively typing.
-  //
-  <%
-    emit_setting_ifndef.(:PLAIN_STREAK_DECAY, :HOMEY_STREAK_DECAY)
-  %>
-
-  //
-  // PLAIN_REPEAT_DECAY defines how much time you have left (milliseconds)
-  // after tapping a key to hold it again in order to make it auto-repeat.
-  //
-  <%
-    emit_setting_ifndef.(:PLAIN_REPEAT_DECAY, resolve_tap_timing.(300))
   %> // "tap then hold" for key auto-repeat
 
   //

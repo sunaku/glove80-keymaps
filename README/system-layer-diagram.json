@@ -179,8 +179,8 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#c5cae9",
       "t": "#000000",
+      "g": true,
       "a": 5,
       "f": 3,
       "fa": [
@@ -195,6 +195,8 @@
     },
     "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
     {
+      "c": "#c5cae9",
+      "g": false,
       "f": 3
     },
     "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
@@ -343,13 +345,9 @@
     },
     "Speed<br><i class='fa fa-plus'></i>",
     {
+      "x": 1,
       "c": "#cccccc",
-      "g": true
-    },
-    "",
-    {
       "t": "#9E9E9E",
-      "g": false,
       "f": 5,
       "d": true
     },
@@ -418,13 +416,9 @@
     },
     "Speed<br><i class='fa fa-minus'></i>",
     {
+      "x": 1,
       "c": "#cccccc",
-      "g": true
-    },
-    "",
-    {
       "t": "#9E9E9E",
-      "g": false,
       "f": 5,
       "d": true
     },
@@ -448,17 +442,15 @@
       "f": 3,
       "fa": [
         6,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0
+        2
       ]
     },
     "<i class='fa fa-linux'></i>\nMagic SysRq\n\n\nBase",
     {
-      "x": 9.25,
+      "x": 9.25
+    },
+    "<i class='fa fa-linux'></i>\nMagic SysRq\n\n\nBase",
+    {
       "c": "#e8f5e9",
       "p": "CHICKLET",
       "a": 7,
@@ -468,11 +460,7 @@
     {
       "f": 3
     },
-    "Num lock",
-    {
-      "f": 3
-    },
-    "Caps lock"
+    "Num lock"
   ],
   [
     {
@@ -495,30 +483,15 @@
     "",
     {
       "x": 15.25,
-      "c": "#c5cae9",
+      "c": "#e8f5e9",
       "g": false,
-      "a": 5,
-      "f": 3,
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
+      "f": 3
     },
-    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
+    "Caps lock",
     {
+      "x": 1,
       "c": "#cccccc",
-      "g": true,
-      "a": 7
-    },
-    "",
-    {
       "t": "#9E9E9E",
-      "g": false,
       "f": 5,
       "d": true
     },
@@ -531,14 +504,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold C2R6 to activate the <i class='fa fa-linux'></i> Magic SysRq overlay, which takes you to the base layer where you can type command keys such as <tt>REISUB</tt> to safely reboot your Linux system.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold T1 to activate this layer.</li><li>Release T1 to deactivate this layer.</li><li>Tap T1 to unlock this layer, if locked.</li></ul>"
@@ -569,6 +542,38 @@
   ],
   [
     {
+      "rx": 0.5,
+      "y": 4.5,
+      "x": 18.75,
+      "c": "#d1c4e9",
+      "g": false,
+      "a": 5
+    },
+    "<i class='fa fa-lock'></i>\nscreen\n\n\n\n\nLock"
+  ],
+  [
+    {
+      "x": 18.75,
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bolt'></i>\nsuspend\n\n\n\n\nSleep"
+  ],
+  [
+    {
+      "x": 18.75
+    },
+    "<i class='fa fa-power-off'></i>\non/off\n\n\n\n\nPower"
+  ],
+  [
+    {
       "r": 25,
       "rx": 6.25,
       "ry": 9,
@@ -576,7 +581,7 @@
       "x": -0.40000000000000036,
       "c": "#D1C4E9",
       "t": "#9E9E9E",
-      "g": false,
+      "a": 7,
       "f": 5,
       "d": true
     },
@@ -685,8 +690,6 @@
         2,
         0,
         0,
-        2,
-        0,
         2
       ]
     },
@@ -727,8 +730,9 @@
     {
       "y": -0.27500000000000036,
       "x": -1.9000000000000004,
-      "c": "#c5cae9",
+      "c": "#cccccc",
       "t": "#000000",
+      "g": true,
       "a": 5,
       "f": 3
     },
@@ -737,19 +741,9 @@
   [
     {
       "y": 0.15000000000000036,
-      "x": -1.6999999999999993,
-      "c": "#d1c4e9",
-      "fa": [
-        0,
-        2,
-        0,
-        0,
-        2,
-        0,
-        2
-      ]
+      "x": -1.6999999999999993
     },
-    "<i class='fa fa-power-off'></i>\non/off\n\n\nTyping\n\nPower"
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\nTyping\n\nPause"
   ],
   [
     {
@@ -757,6 +751,7 @@
       "x": -1.6999999999999993,
       "c": "#D1C4E9",
       "t": "#9E9E9E",
+      "g": false,
       "a": 7,
       "f": 5,
       "d": true
@@ -781,24 +776,14 @@
       "a": 5,
       "f": 3
     },
-    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint"
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause"
   ],
   [
     {
       "y": 0.15000000000000036,
-      "x": -0.8499999999999996,
-      "c": "#d1c4e9",
-      "fa": [
-        0,
-        2,
-        0,
-        0,
-        2,
-        0,
-        2
-      ]
+      "x": -0.8499999999999996
     },
-    "<i class='fa fa-bolt'></i>\nsuspend\n\n\nMouse\n\nSleep"
+    "<i class='fa fa-camera'></i>\nscreen\n\n\nMouse\n\nPrint"
   ],
   [
     {
@@ -835,7 +820,8 @@
   [
     {
       "y": 0.09999999999999964,
-      "c": "#d1c4e9",
+      "c": "#cccccc",
+      "g": true,
       "p": "CHICKLET",
       "a": 5
     },
@@ -846,6 +832,7 @@
       "y": -0.20000000000000018,
       "c": "#D1C4E9",
       "t": "#9E9E9E",
+      "g": false,
       "a": 7,
       "f": 5,
       "d": true

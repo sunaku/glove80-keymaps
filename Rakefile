@@ -95,22 +95,31 @@ task :pdf => layers_pdf
 
 layers_pdf_sequence = %w[
   base-layer-diagram
+  base-layer-diagram-Enthium
   base-layer-diagram-Engrammer
   base-layer-diagram-Engram
+  base-layer-diagram-Dvorak
+  base-layer-diagram-Colemak
   base-layer-diagram-QWERTY
-  base-layer-diagram-template
-  lower-layer-diagram
-  magic-layer-diagram
+  base-layer-diagram-ColemakDH
+  base-layer-diagram-Canary
+
   cursor-layer-diagram
   number-layer-diagram
   function-layer-diagram
-  emoji-layer-diagram
+
   symbol-layer-diagram
   mouse-layer-diagram
   system-layer-diagram
+
+  emoji-layer-diagram
   world-layer-diagram
-  typing-layer-diagram
+
   gaming-layer-diagram
+  typing-layer-diagram
+
+  lower-layer-diagram
+  magic-layer-diagram
   factory-layer-diagram
 ]
 

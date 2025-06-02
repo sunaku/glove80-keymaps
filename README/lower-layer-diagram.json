@@ -557,7 +557,15 @@
       "p": "SPACE",
       "a": 5,
       "f": 3,
-      "f2": 2
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        2
+      ]
     },
     "\nAltGr\n\n\nRAlt\n\nRAlt",
     {
@@ -592,14 +600,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold any C6R5 to activate this layer.</li><li>Release C6R5 to deactivate this layer.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 2.75,
+      "h": 3.5,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold any C6R5 to activate this layer.</li><li>Release C6R5 to deactivate this layer.</li></ul>"
