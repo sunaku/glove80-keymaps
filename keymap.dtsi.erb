@@ -28,6 +28,11 @@
   end
 %>
 
+#if defined(LAYER_AZERTY) && LAYER_AZERTY == 0
+  #define WORLD_HOST_AZERTY  // host computer is set to AZERTY locale
+  #define WORLD_SHIFT_NUMBER // apply Shift to type number row digits
+#endif
+
 //
 // OPERATING_SYSTEM defines which operating system you intend to use
 // with this keymap, because shortcuts vary across operating systems.
