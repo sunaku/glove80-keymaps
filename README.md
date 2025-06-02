@@ -355,7 +355,7 @@ before building the firmware (step 5 above), change the firmware version to
 25.0.1 or newer: open the "Settings" tab, choose 24.12, and go back to the
 "Edit" tab.
 
-![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+![beta firmware](README/settings.png)
 
 Alternatively, you might use the newer PR36 beta firmware for this too:
 select "community.pr36.mouse-keys" from the drop-down menu located at
@@ -368,7 +368,7 @@ Now proceed to build and flash your keymap.
 Before building the firmware (step 5 above), change the version to PR36:
 open the "Settings" tab, choose PR36, and then go back to the "Edit" tab.
 
-![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+![beta firmware](README/settings.png)
 
 Next, in the "Advanced Configuration" tab towards the bottom of the page,
 enable the `EXPERIMENTAL_RGB_LAYER` experimental setting by ticking the
