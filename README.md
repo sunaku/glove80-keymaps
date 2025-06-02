@@ -335,7 +335,7 @@ Open the [keymap link above](#keymap) and follow these instructions:
 4. Customize the keymap behavior in this text box.
 5. Build the firmware and download the `*.uf2` file.
 
-![instructions](https://github.com/sunaku/glove80-keymaps/assets/9863/4eeafe4c-0ab3-4900-b241-f62b0467a394)
+![installation instructions](README/installing.png)
 
 ### Enabling mouse emulation
 
