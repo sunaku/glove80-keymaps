@@ -330,7 +330,7 @@
           AZU PUR AZU AZU CHU GDN                                     PNK YLW GRN CYN MAJ ___
           GDN GDN SPG BLU GDN GDN                                     PNK COR COR COR COR ___
           PUR SPG SPG SPG SPG GDN     PUR GDN GDN     ___ ___ ___     PNK COR COR COR COR ___
-          ___ BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         ___ ___ ___ ___ ___
+          COR BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         ___ ___ ___ ___ ___
         >;
         layer-id = <LAYER_Symbol>;
       };

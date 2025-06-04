@@ -13186,8 +13186,13 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&dot_dot",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",

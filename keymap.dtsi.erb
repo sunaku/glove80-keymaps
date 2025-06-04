@@ -1111,6 +1111,12 @@ behaviors {
 
 macros {
 
+  ZMK_MACRO(dot_dot,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&macro_tap &kp DOT &kp DOT>;
+  )
+
   //
   // Linux Magic System Request Key - hold this down and type REISUB
   // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
