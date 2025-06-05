@@ -81,7 +81,7 @@
       "h": 4.75,
       "d": true
     },
-    "<center><h1>Base Layer</h1><h2>(Enthium v6)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "<center><h1>Base Layer</h1><h2>(Enthium v7)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
       "x": 1,
       "c": "#cccccc",
@@ -192,7 +192,7 @@
     {
       "a": 5
     },
-    ":\n;",
+    "_\n-",
     {
       "x": 7.25,
       "a": 7
@@ -327,8 +327,8 @@
       "f": 5
     },
     "+\n=",
-    "_\n-",
     ">\n.",
+    ":\n;",
     {
       "x": 7.25,
       "a": 7

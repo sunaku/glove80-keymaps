@@ -5,7 +5,7 @@ This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 Colemak/DH, etc.) are also provided to ease your transition to the full glory.
 
 ![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](
-README/base-layer-photograph-Enthium.webp )
+README/base-layer-photograph-Enthium.jpg )
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html

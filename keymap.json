@@ -247,7 +247,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI",
+            "value": "MINUS",
             "params": []
           }
         ]
@@ -449,7 +449,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "MINUS",
+            "value": "DOT",
             "params": []
           }
         ]
@@ -458,7 +458,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "DOT",
+            "value": "SEMI",
             "params": []
           }
         ]
