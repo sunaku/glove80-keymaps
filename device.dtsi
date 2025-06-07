@@ -288,7 +288,7 @@
           ___ COR COR COR COR GOL                                     TEA GOL GOL GOL SPG SPG
           YLW MAJ CYN GRN YLW TEA                                     TEA GOL GOL GOL SPG SPG
           TEA SPG SPG SPG PUR GDN     ___ ___ ___     SPG SPG SPG     TEA GOL GOL GOL SPG SPG
-          ___ PUR PUR PUR PUR         ___ RED ___     SPG SPG GOL         SPG SPG SPG SPG SPG
+          TEA PUR PUR PUR PUR         ___ RED ___     SPG SPG GOL         SPG SPG SPG SPG SPG
         >;
         layer-id = <LAYER_Number>;
       };

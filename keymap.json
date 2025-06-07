@@ -10634,7 +10634,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "UNDER",
+            "value": "E",
             "params": []
           }
         ]
@@ -10778,8 +10778,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "UNDER",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
