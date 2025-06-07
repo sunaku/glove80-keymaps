@@ -117,6 +117,7 @@ layers_pdf_sequence = %w[
 
   gaming-layer-diagram
   typing-layer-diagram
+  repeat-layer-diagram
 
   lower-layer-diagram
   magic-layer-diagram

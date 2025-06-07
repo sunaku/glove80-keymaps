@@ -274,7 +274,7 @@ Instead, you have two options for engaging auto-repeat on dual-function keys:
 2. Using repetition access keys: first hold down a Typing layer access key and
    then hold the key you want to repeat for the desired amount of repetition.
 
-![Using repetition access keys](README/key-auto-repeat.png)
+![Using repetition access keys](README/repeat-layer-diagram.png)
 
 ### Alpha layouts
 
