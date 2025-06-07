@@ -352,7 +352,7 @@
           ___ COR COR COR COR GOL                                     TEA GOL GOL GOL SPG SPG
           YLW MAJ CYN GRN YLW TEA                                     TEA GOL GOL GOL SPG SPG
           TEA SPG SPG SPG PUR GDN     ___ ___ ___     SPG SPG SPG     TEA GOL GOL GOL SPG SPG
-          ___ PUR PUR PUR PUR         ___ RED ___     SPG SPG GOL         SPG SPG SPG SPG SPG
+          TEA PUR PUR PUR PUR         ___ RED ___     SPG SPG GOL         SPG SPG SPG SPG SPG
         >;
         layer-id = <LAYER_Number>;
       };
@@ -951,7 +951,7 @@
 #define KEY_LH_C4R3 Y
 #define KEY_LH_C3R3 O
 #define KEY_LH_C2R3 U
-#define KEY_LH_C1R3 SEMI
+#define KEY_LH_C1R3 MINUS
 #define KEY_RH_C1R3 X
 #define KEY_RH_C2R3 L
 #define KEY_RH_C3R3 D
@@ -974,8 +974,8 @@
 #define KEY_LH_C5R5 SQT
 #define KEY_LH_C4R5 FSLH
 #define KEY_LH_C3R5 EQUAL
-#define KEY_LH_C2R5 MINUS
-#define KEY_LH_C1R5 DOT
+#define KEY_LH_C2R5 DOT
+#define KEY_LH_C1R5 SEMI
 #define KEY_LH_T1 ESC
 #define KEY_LH_T2 LBKT
 #define KEY_LH_T3 RBKT
@@ -1591,34 +1591,34 @@ combos {
   #define COMBO_FIRING_DECAY 50
   #endif
 
-  // T1+T2
+  // T2+T3
 
   combo_sticky_globe_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T2>;
+    key-positions = <POS_LH_T2 POS_LH_T3>;
     bindings = <&sk _GLOBE>;
     layers = <0 1 2 3 4 5 6 7 8>;
   };
 
   combo_sticky_globe_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T2>;
+    key-positions = <POS_RH_T2 POS_RH_T3>;
     bindings = <&sk _GLOBE>;
     layers = <0 1 2 3 4 5 6 7 8>;
   };
 
-  // T2+T3
+  // T1+T2
 
   combo_sticky_ralt_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T3>;
+    key-positions = <POS_LH_T1 POS_LH_T2>;
     bindings = <&sk RALT>;
     layers = <0 1 2 3 4 5 6 7 8>;
   };
 
   combo_sticky_ralt_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T3>;
+    key-positions = <POS_RH_T1 POS_RH_T2>;
     bindings = <&sk RALT>;
     layers = <0 1 2 3 4 5 6 7 8>;
   };
@@ -11226,9 +11226,9 @@ UNICODE_MORPH_MODS
             bindings = <
                 &none                          &none                          &none                          &none                          &none                                                                                                                                                                                                                   &none                           &none                           &none                           &none                 &none
                 &none                         &kp N1                         &kp N2                         &kp N3                         &kp N4     &kp N5                                                                                                                                                                       &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                 &none
-                &none                          &kp Q                          &kp Y                          &kp O                          &kp U   &kp SEMI                                                                                                                                                                        &kp X                           &kp L                           &kp D                           &kp W                           &kp Z                 &none
+                &none                          &kp Q                          &kp Y                          &kp O                          &kp U  &kp MINUS                                                                                                                                                                        &kp X                           &kp L                           &kp D                           &kp W                           &kp Z                 &none
                 &kp B  &LeftPinky (C, LAYER_Enthium)  &LeftRingy (I, LAYER_Enthium)  &LeftMiddy (E, LAYER_Enthium)  &LeftIndex (A, LAYER_Enthium)  &kp COMMA                                                                                                                                                                        &kp K  &RightIndex (H, LAYER_Enthium)  &RightMiddy (T, LAYER_Enthium)  &RightRingy (N, LAYER_Enthium)  &RightPinky (S, LAYER_Enthium)                 &kp V
-      &mo LAYER_Lower                        &kp SQT                       &kp FSLH                      &kp EQUAL                      &kp MINUS    &kp DOT  &thumb LAYER_Function ESC                 &kp LBKT                    &kp RBKT                   &kp _HOME                      &kp _END  &thumb LAYER_System ENTER   &kp J                           &kp M                           &kp G                           &kp P                           &kp F       &mo LAYER_Lower
+      &mo LAYER_Lower                        &kp SQT                       &kp FSLH                      &kp EQUAL                        &kp DOT   &kp SEMI  &thumb LAYER_Function ESC                 &kp LBKT                    &kp RBKT                   &kp _HOME                      &kp _END  &thumb LAYER_System ENTER   &kp J                           &kp M                           &kp G                           &kp P                           &kp F       &mo LAYER_Lower
  &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right       &thumb LAYER_Emoji GRAVE             &thumb LAYER_Cursor SPACE  &thumb LAYER_Number TAB  &thumb LAYER_Typing INSERT  &thumb LAYER_Typing DELETE  &thumb LAYER_Mouse BACKSPACE      &space LAYER_Symbol R              &thumb LAYER_World PAGE_UP                    &msc SCRL_UP                  &msc SCRL_DOWN                       &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
@@ -11426,8 +11426,8 @@ UNICODE_MORPH_MODS
      &none             &kp ESC             &kp INS         &kp LS(TAB)             &kp DEL   &none                                                                     &kp PIPE  &kp HASH      &kp DLLR      &kp CARET  &kp TILDE   &kp EXCL
      &none             &kp RET           &kp SPACE             &kp TAB            &kp BSPC  &kp N0                                                                    &kp LS(G)    &kp N7        &kp N8         &kp N9  &kp COLON  &kp PRCNT
  &sk LSHFT  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &kp X                                                                        &kp K    &kp N4        &kp N5         &kp N6  &kp MINUS   &kp PLUS
- &kp UNDER         &select_all        &select_line        &select_word           &kp _FIND   &kp F   &none              &none   &none     &kp LT   &kp GT  &kp COMMA      &kp J    &kp N1        &kp N2         &kp N3   &kp FSLH   &kp STAR
-     &none           &kp _UNDO           &kp _REDO      &kp _FIND_PREV      &kp _FIND_NEXT           &none  &tog LAYER_Number   &none  &kp EQUAL  &kp DOT     &kp N0             &kp LBKT  &parang_left  &parang_right   &kp RBKT     &kp AT
+     &kp E         &select_all        &select_line        &select_word           &kp _FIND   &kp F   &none              &none   &none     &kp LT   &kp GT  &kp COMMA      &kp J    &kp N1        &kp N2         &kp N3   &kp FSLH   &kp STAR
+ &kp UNDER           &kp _UNDO           &kp _REDO      &kp _FIND_PREV      &kp _FIND_NEXT           &none  &tog LAYER_Number   &none  &kp EQUAL  &kp DOT     &kp N0             &kp LBKT  &parang_left  &parang_right   &kp RBKT     &kp AT
             >;
         };
 
