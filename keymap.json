@@ -12794,7 +12794,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI",
+            "value": "COMMA",
             "params": []
           }
         ]
@@ -12872,7 +12872,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "COMMA",
+            "value": "SEMI",
             "params": []
           }
         ]
