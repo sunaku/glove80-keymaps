@@ -247,7 +247,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "MINUS",
+            "value": "FSLH",
             "params": []
           }
         ]
@@ -431,7 +431,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "FSLH",
+            "value": "MINUS",
             "params": []
           }
         ]
