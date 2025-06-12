@@ -1178,7 +1178,7 @@ behaviors {
   // unintended activation of home row mods when you're actively typing.
   //
   #ifndef INDEX_STREAK_DECAY
-  #define INDEX_STREAK_DECAY (TAPPING_RESOLUTION - 50)
+  #define INDEX_STREAK_DECAY TAPPING_RESOLUTION
   #endif
 
   //

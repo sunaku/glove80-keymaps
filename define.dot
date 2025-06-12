@@ -55,7 +55,7 @@ digraph settings {
 
     INDEX_HOLDING_TYPE -> "\"tap-preferred\""
 
-    INDEX_STREAK_DECAY -> "-50"
+    INDEX_STREAK_DECAY -> TAPPING_RESOLUTION
 
     INDEX_REPEAT_DECAY -> "+150"
 
@@ -532,8 +532,6 @@ digraph settings {
 
   "+150" -> TAPPING_RESOLUTION [color=red]
 
-  "-50" -> TAPPING_RESOLUTION [color=red]
-
   "+50" -> TAPPING_RESOLUTION [color=red]
 
   }
@@ -585,8 +583,6 @@ digraph settings {
       "+130" [label="+130", style=filled, fillcolor=salmon, shape=lpromoter]
     
       "+150" [label="+150", style=filled, fillcolor=salmon, shape=lpromoter]
-    
-      "-50" [label="-50", style=filled, fillcolor=salmon, shape=lpromoter]
     
       "+50" [label="+50", style=filled, fillcolor=salmon, shape=lpromoter]
     
