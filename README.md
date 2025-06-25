@@ -16,9 +16,9 @@ README/base-layer-photograph-Enthium.jpg )
 
 ## Keymap
 
-Version 42-rc3 (PREVIEW)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc3
-- Release: https://my.glove80.com/#/layout/user/8a2e8238-672e-4bb4-b7d3-632e38c88c61
+Version 42-rc4 (PREVIEW)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc4
+- Release: https://my.glove80.com/#/layout/user/856cc9f9-35f3-458f-a239-a44fb25071d9
 
 ### Legend
 
