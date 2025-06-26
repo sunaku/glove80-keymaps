@@ -250,15 +250,23 @@
     },
     "sticky\n\n\n\nWin\n\nWin",
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#d1c4e9",
       "p": "CHICKLET",
-      "a": 7
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
     },
-    "",
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
     {
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "a": 7,
       "f": 5,
       "d": true
     },
@@ -288,7 +296,6 @@
       "c": "#ffcdd2"
     },
     "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed",
-    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed"
   ],
   [
@@ -315,9 +322,9 @@
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-up'></i>\n\n\n\n\nScroll",
     {
       "x": 15.25,
-      "c": "#ffecb3"
+      "c": "#ffcdd2"
     },
-    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     {
       "x": 1,
       "c": "#cccccc",
@@ -332,16 +339,16 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#ffcdd2",
+      "c": "#c5cae9",
       "t": "#000000",
-      "a": 5,
       "f": 3
     },
-    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
-    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
-    "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed",
+    "Cut<br><i class='fa fa-cut'></i>",
+    "Copy <i class='fa fa-copy'></i>",
+    "Paste <i class='fa fa-paste'></i>",
     {
-      "c": "#dcedc8"
+      "c": "#dcedc8",
+      "a": 5
     },
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
     {
@@ -384,7 +391,7 @@
       "x": 15.25,
       "c": "#ffecb3"
     },
-    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick",
+    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
     {
       "x": 1,
       "c": "#cccccc",
@@ -398,18 +405,9 @@
   [
     {
       "y": -0.5,
-      "x": 3,
-      "t": "#000000",
-      "g": true,
-      "f": 4
-    },
-    "",
-    "",
-    "",
-    {
-      "x": 9.25,
+      "x": 15.25,
       "c": "#BBDEFB",
-      "g": false,
+      "t": "#000000",
       "a": 5,
       "f": 3
     },
@@ -434,30 +432,13 @@
     },
     "\n\n\n\nLower",
     {
-      "f": 5
-    },
-    "",
-    {
-      "x": 15.25,
+      "x": 16.25,
       "c": "#ffecb3",
       "g": false,
-      "a": 5,
-      "f": 3
+      "a": 5
     },
+    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick",
     "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\n\n\nClick",
-    {
-      "c": "#d1c4e9",
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
-    },
-    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -488,11 +469,37 @@
   ],
   [
     {
+      "ry": 0.25,
+      "y": 3.75,
+      "x": 17.25,
+      "c": "#ffcdd2",
+      "a": 5
+    },
+    "<i class='fa fa-barcode'></i>\nfine\n\n\n\n\nSpeed"
+  ],
+  [
+    {
+      "y": 1,
+      "x": 3
+    },
+    "<i class='fa fa-barcode'></i>\nfine\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 2
+    },
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed"
+  ],
+  [
+    {
       "rx": 0.25,
+      "ry": 0,
       "y": 4.5,
       "x": 19,
-      "c": "#ffecb3",
-      "a": 5
+      "c": "#ffecb3"
     },
     "<i class='fa fa-hand-pointer-o'></i>\n#4\n\n\n\n\nClick"
   ],
