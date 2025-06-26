@@ -14011,8 +14011,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "&kp",
+        "params": [
+          {
+            "value": "K_APP",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&none",
@@ -14085,7 +14090,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp",
+            "value": "&mo LAYER_MouseSlow",
             "params": []
           }
         ]
@@ -14094,16 +14099,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow",
+            "value": "&mo LAYER_MouseFine",
             "params": []
           }
         ]
       },
       {
-        "value": "&mkp",
+        "value": "Custom",
         "params": [
           {
-            "value": "LCLK",
+            "value": "&mo LAYER_MouseWarp",
             "params": []
           }
         ]
@@ -14134,7 +14139,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow",
+            "value": "&kp _CUT",
             "params": []
           }
         ]
@@ -14143,7 +14148,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp",
+            "value": "&kp _COPY",
             "params": []
           }
         ]
@@ -14152,7 +14157,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseFast",
+            "value": "&kp _PASTE",
             "params": []
           }
         ]
@@ -14250,7 +14255,7 @@
         "value": "&mkp",
         "params": [
           {
-            "value": "RCLK",
+            "value": "LCLK",
             "params": []
           }
         ]
@@ -14269,20 +14274,40 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAYER_MouseWarp",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAYER_MouseFine",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAYER_MouseSlow",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAYER_MouseFast",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&mkp",
@@ -14369,16 +14394,16 @@
         "value": "&mkp",
         "params": [
           {
-            "value": "MCLK",
+            "value": "RCLK",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "&mkp",
         "params": [
           {
-            "value": "K_APP",
+            "value": "MCLK",
             "params": []
           }
         ]
