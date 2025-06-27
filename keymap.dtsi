@@ -10248,7 +10248,7 @@ UNICODE_MORPH_MODS
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_FINE
-#define MOUSE_SCALER_FINE 1 24
+#define MOUSE_SCALER_FINE 1 16
 #endif
 
 //
@@ -10256,7 +10256,7 @@ UNICODE_MORPH_MODS
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 3
+#define MOUSE_SCALER_SLOW 1 4
 #endif
 
 //
@@ -10264,7 +10264,7 @@ UNICODE_MORPH_MODS
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_FAST
-#define MOUSE_SCALER_FAST 3 1
+#define MOUSE_SCALER_FAST 4 1
 #endif
 
 //
