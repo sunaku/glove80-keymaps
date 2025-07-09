@@ -1117,6 +1117,24 @@ macros {
     bindings = <&macro_tap &kp DOT &kp DOT>;
   )
 
+  ZMK_MACRO(vim_ge,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&macro_tap &kp G &kp E>;
+  )
+
+  ZMK_MACRO(vim_g_E,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&macro_tap &kp G &kp LS(E)>;
+  )
+
+  ZMK_MACRO(vim_gg,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&macro_tap &kp G &kp G>;
+  )
+
   //
   // Linux Magic System Request Key - hold this down and type REISUB
   // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
