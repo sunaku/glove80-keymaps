@@ -66,7 +66,7 @@
   #define _G_TAB  LALT
   #define _REDO   LG(LS(Z))
   #define _POWER  K_POWER
-  #define _W      LA
+  #define _WORD   LA
   #define _HOME   LG(LEFT)
   #define _END    LG(RIGHT)
   #define _EMOJI  LG(LC(SPACE))
@@ -78,7 +78,7 @@
   #define _G_TAB  LGUI
   #define _REDO   LC(Y)
   #define _POWER  C_POWER
-  #define _W      LC
+  #define _WORD   LC
   #define _HOME   HOME
   #define _END    END
   #define _EMOJI  LG(DOT)
@@ -1241,12 +1241,12 @@ macros {
   ZMK_MACRO(select_word_right,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(RIGHT) &kp _W(LEFT) &kp _W(LS(RIGHT))>;
+    bindings = <&kp _WORD(RIGHT) &kp _WORD(LEFT) &kp _WORD(LS(RIGHT))>;
   )
   ZMK_MACRO(select_word_left,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(LEFT) &kp _W(RIGHT) &kp _W(LS(LEFT))>;
+    bindings = <&kp _WORD(LEFT) &kp _WORD(RIGHT) &kp _WORD(LS(LEFT))>;
   )
 
   //
@@ -1261,12 +1261,12 @@ macros {
   ZMK_MACRO(extend_word_right,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(LS(RIGHT))>;
+    bindings = <&kp _WORD(LS(RIGHT))>;
   )
   ZMK_MACRO(extend_word_left,
     wait-ms = <SELECT_WORD_DELAY>;
     tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(LS(LEFT))>;
+    bindings = <&kp _WORD(LS(LEFT))>;
   )
 
   //
