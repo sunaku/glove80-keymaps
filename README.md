@@ -480,7 +480,7 @@ adjust the `#define` time thresholds in the "Custom Defined Behaviors" snippet.
 
    ```sh
    add-apt-repository universe && apt update # may be needed if using Ubuntu 
-   apt install rake graphviz
+   apt install rake graphviz graphicsmagick poppler-utils
    ```
 
 3. In your copy of this repository, run `rake` OR `./rake` if using Docker.
