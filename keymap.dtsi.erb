@@ -314,26 +314,6 @@ combos {
     layers = <<%= typing_layer_ids %>>;
   };
 
-  // T1+T4+T5
-
-  #ifdef LAYER_Vim
-  combo_vim_layer_access_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T4 POS_LH_T5>;
-    bindings = <&mo LAYER_Vim>;
-    layers = <<%= typing_layer_ids %>>;
-  };
-  #endif
-
-  /*
-  combo_UNALLOCTED_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T4 POS_RH_T5>;
-    bindings = <UNALLOCATED>;
-    layers = <<%= typing_layer_ids %>>;
-  };
-  */
-
   // C1R5+C2R6
 
   #ifdef LAYER_Gaming
@@ -1154,42 +1134,6 @@ macros {
     wait-ms = <0>;
     tap-ms = <0>;
     bindings = <&macro_tap &kp DOT &kp DOT>;
-  )
-
-  ZMK_MACRO(vim_ge,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&macro_tap &kp G &kp E>;
-  )
-
-  ZMK_MACRO(vim_g_E,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&macro_tap &kp G &kp LS(E)>;
-  )
-
-  ZMK_MACRO(vim_gg,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&macro_tap &kp G &kp G>;
-  )
-
-  ZMK_MACRO(vim_zz,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&macro_tap &kp Z &kp Z>;
-  )
-
-  ZMK_MACRO(vim_zt,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&macro_tap &kp Z &kp T>;
-  )
-
-  ZMK_MACRO(vim_zb,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&macro_tap &kp Z &kp B>;
   )
 
   //
