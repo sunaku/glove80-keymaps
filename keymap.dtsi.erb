@@ -314,6 +314,24 @@ combos {
     layers = <<%= typing_layer_ids %>>;
   };
 
+  // T1+T4+T5
+
+  #ifdef LAYER_Typing
+  combo_typing_layer_access_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T4 POS_LH_T5>;
+    bindings = <&mo LAYER_Typing>;
+    layers = <<%= typing_layer_ids %>>;
+  };
+
+  combo_typing_layer_access_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T4 POS_RH_T5>;
+    bindings = <&mo LAYER_Typing>;
+    layers = <<%= typing_layer_ids %>>;
+  };
+  #endif
+
   // C1R5+C2R6
 
   #ifdef LAYER_Gaming
