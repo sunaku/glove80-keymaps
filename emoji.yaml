@@ -39,6 +39,7 @@ characters:
     game:      { dart:    "🎯", dice:    "🎲" }
     trend:     { up:      "📈", down:    "📉" }
     sunrise:   { sea:     "🌅", land:    "🌄" }
+    rank:      { first:   "🥈", second:  "🥇" }
 
 #
 # codepoints:
