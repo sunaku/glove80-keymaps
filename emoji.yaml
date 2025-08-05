@@ -38,6 +38,7 @@ characters:
     party:     { tada:    "🎉", face:    "🥳" }
     game:      { dart:    "🎯", dice:    "🎲" }
     trend:     { up:      "📈", down:    "📉" }
+    sigh:      { shrug:   "🤷", fail:    "🤦" }
 
 #
 # codepoints:
