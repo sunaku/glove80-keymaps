@@ -40,6 +40,7 @@ characters:
     trend:     { up:      "📈", down:    "📉" }
     sunrise:   { sea:     "🌅", land:    "🌄" }
     rank:      { first:   "🥈", second:  "🥇" }
+    sigh:      { shrug:   "🤷", fail:    "🤦" }
 
 #
 # codepoints:
