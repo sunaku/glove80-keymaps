@@ -469,9 +469,9 @@
           ___ ___ ___ ___ ___                                             PNK SPG SPG SPG ___
           ___ ___ ___ ___ ___ ___                                     PNK GOL GOL GOL SPG SPG
           ___ ___ ___ ___ ___ ___                                     SPG GOL GOL GOL SPG SPG
-          ___ ___ ___ ___ ___ ___                                     SPG GOL GOL GOL PNK SPG
+          CYN ___ ___ ___ ___ ___                                     SPG GOL GOL GOL PNK SPG
           RED ___ ___ ___ ___ ___     RED ___ ___     ___ ___ RED     GOL GOL SPG SPG PNK RED
-          CYN ___ ___ ___ RED         RED RED ___     ___ RED RED         RED ___ ___ ___ ___
+          ___ ___ ___ ___ RED         RED RED ___     ___ RED RED         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_Lower>;
       };
