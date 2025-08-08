@@ -474,14 +474,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold T1 to activate this layer.</li><li>Release T1 to deactivate this layer.</li><li>Tap T1 to unlock this layer, if locked.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     ""

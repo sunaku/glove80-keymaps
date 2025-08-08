@@ -372,16 +372,11 @@
       "a": 5,
       "f": 3,
       "fa": [
-        0,
-        2,
-        0,
-        0,
-        2,
-        0,
-        0
+        1,
+        2
       ]
     },
-    "\nAltGr\n\n\nRAlt\n\nRAlt",
+    "&nbsp;\n(AltGr)\n\n\nRAlt\n\nRAlt",
     {
       "c": "#cccccc",
       "g": true,
@@ -600,14 +595,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold any C6R5 to activate this layer.</li><li>Release C6R5 to deactivate this layer.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold any C6R5 to activate this layer.</li><li>Release C6R5 to deactivate this layer.</li></ul>"

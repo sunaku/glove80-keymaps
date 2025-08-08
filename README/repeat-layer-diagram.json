@@ -441,14 +441,14 @@
       "t": "#000000",
       "f": 8,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li><u>Step 1. Layer Activation</u></li><li>Hold one of the #1 keys to activate this layer.</li><li>Release the held #1 key to deactivate this layer.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li><u>Step 2. Key Repetition</u></li><li>Hold the desired #2 key to start auto-repeat.</li><li>Release the held #2 key to stop auto-repeat.</li></ul>"

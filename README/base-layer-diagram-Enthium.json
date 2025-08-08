@@ -81,7 +81,7 @@
       "h": 4.75,
       "d": true
     },
-    "<center><h1>Base Layer</h1><h2>(Enthium v9)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "<center><h1>Base Layer</h1><h2>(Enthium v10)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
       "x": 1,
       "c": "#cccccc",
@@ -190,19 +190,17 @@
     "U",
     "O",
     {
-      "a": 5,
-      "f": 4
+      "a": 5
     },
-    "?\n/",
+    ":\n;",
     {
       "x": 7.25,
-      "a": 7,
-      "f": 5
+      "a": 7
     },
-    "X",
+    "Q",
     "L",
     "D",
-    "W"
+    "P"
   ],
   [
     {
@@ -221,11 +219,11 @@
       "g": false,
       "f": 5
     },
-    "Q",
+    "Z",
     {
       "x": 15.25
     },
-    "Z",
+    "X",
     {
       "g": true,
       "f": 3
@@ -295,7 +293,7 @@
     {
       "t": "#000000"
     },
-    "B",
+    "W",
     {
       "c": "#FFCDD2",
       "p": "SPACE"
@@ -309,7 +307,7 @@
       "c": "#cccccc",
       "p": "CHICKLET"
     },
-    "V",
+    "F",
     {
       "t": "#9E9E9E",
       "d": true
@@ -326,15 +324,19 @@
     "_\n-",
     "+\n=",
     ">\n.",
-    ":\n;",
+    {
+      "f": 4
+    },
+    "?\n/",
     {
       "x": 7.25,
-      "a": 7
+      "a": 7,
+      "f": 5
     },
     "J",
     "M",
     "G",
-    "P"
+    "B"
   ],
   [
     {
@@ -361,7 +363,7 @@
       "x": 15.25,
       "a": 7
     },
-    "F",
+    "V",
     {
       "c": "#ffccbc",
       "p": "SPACE",
@@ -387,8 +389,8 @@
       "a": 5,
       "f": 4
     },
-    "<\n(",
-    ">\n)",
+    "{\n[",
+    "}\n]",
     {
       "c": "#d1c4e9",
       "p": "SPACE",
@@ -455,17 +457,17 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
-    "<ul class=\"combos\"><li>Combo T1+T4 = Shift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T2+T5 = Alt-Tab (cursor layer)</li><li>Combo T5+T6 = Ctrl-Tab (cursor layer)</li><li>Combo T3+T6 = Win-Tab (cursor layer)</li><li>Combo T1+T2 = sticky RAlt (AltGr) modifier</li><li>Combo T2+T3 = sticky Globe (macOS) or Win</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
+    "<ul class=\"combos\"><li>Combo T1+T4 = Shift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T2+T5 = Alt+Tab menu (tap: switch)</li><li>Combo T3+T6 = Ctrl+Tab menu (tap: switch)</li><li>Combo T5+T6 = Win+Tab menu (tap: switch)</li><li>Combo T1+T2 = sticky RAlt (AltGr)</li><li>Combo T2+T3 = sticky Globe (macOS) or Win</li><li>Combo T1+T2+T3 = Unlock to base layer</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
-    "<ul class=\"combos\"><li>Combo T1+T4 = RShift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T2+T5 = Hyper (all modifiers)</li><li>Combo T5+T6 = Meh (Alt+Ctrl+Shift)</li><li>Combo T3+T6 = Turbo (Ctrl+Shift)</li><li>Combo T1+T2 = sticky RAlt (AltGr) modifier</li><li>Combo T2+T3 = sticky Globe (macOS) or Win</li><li>Combo C1R5+C2R6 = Typing layer on/off</li></ul>"
+    "<ul class=\"combos\"><li>Combo T1+T4 = RShift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T2+T5 = Hyper (Win+Alt+Ctrl+Shift)</li><li>Combo T3+T6 = Meh (Alt+Ctrl+Shift)</li><li>Combo T5+T6 = Turbo (Ctrl+Shift)</li><li>Combo T1+T2 = sticky RAlt (AltGr)</li><li>Combo T2+T3 = sticky Globe (macOS) or Win</li><li>Combo T1+T2+T3 = Unlock to base layer</li><li>Combo C1R5+C2R6 = Typing layer on/off</li></ul>"
   ],
   [
     {
@@ -528,7 +530,7 @@
       "a": 5,
       "f": 4
     },
-    "{\n["
+    "<\n("
   ],
   [
     {
@@ -570,7 +572,7 @@
       "a": 5,
       "f": 4
     },
-    "}\n]"
+    ">\n)"
   ],
   [
     {

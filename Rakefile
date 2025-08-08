@@ -102,7 +102,6 @@ layers_pdf_sequence = %w[
   base-layer-diagram-Colemak
   base-layer-diagram-QWERTY
   base-layer-diagram-ColemakDH
-  base-layer-diagram-Canary
 
   cursor-layer-diagram
   number-layer-diagram

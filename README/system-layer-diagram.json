@@ -199,11 +199,11 @@
       "g": false,
       "f": 3
     },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
+    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
     {
       "f": 3
     },
-    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
     {
       "c": "#ffccbc",
       "fa": [
@@ -504,14 +504,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold C2R6 to activate the <i class='fa fa-linux'></i> Magic SysRq overlay, which takes you to the base layer where you can type command keys such as <tt>REISUB</tt> to safely reboot your Linux system.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.5,
+      "h": 3.75,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold T1 to activate this layer.</li><li>Release T1 to deactivate this layer.</li><li>Tap T1 to unlock this layer, if locked.</li></ul>"
