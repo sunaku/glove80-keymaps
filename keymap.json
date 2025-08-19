@@ -676,19 +676,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -1323,19 +1323,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -1970,19 +1970,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -2617,19 +2617,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -3264,19 +3264,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -3911,19 +3911,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -4558,19 +4558,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -13294,10 +13294,10 @@
         "params": []
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_LEFT",
+            "value": "&msc MOUSE_SCROLL_LEFT",
             "params": []
           }
         ]
@@ -13312,10 +13312,10 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_RIGHT",
+            "value": "&msc MOUSE_SCROLL_RIGHT",
             "params": []
           }
         ]
@@ -13378,10 +13378,10 @@
         "params": []
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
@@ -13414,19 +13414,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_UP",
+            "value": "&msc MOUSE_SCROLL_UP",
             "params": []
           }
         ]
@@ -13481,10 +13481,10 @@
         "params": []
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -13517,10 +13517,10 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
@@ -13570,19 +13570,19 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_DOWN",
+            "value": "&msc MOUSE_SCROLL_DOWN",
             "params": []
           }
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_LEFT",
+            "value": "&msc MOUSE_SCROLL_LEFT",
             "params": []
           }
         ]
@@ -13597,10 +13597,10 @@
         ]
       },
       {
-        "value": "&msc",
+        "value": "Custom",
         "params": [
           {
-            "value": "SCRL_RIGHT",
+            "value": "&msc MOUSE_SCROLL_RIGHT",
             "params": []
           }
         ]
