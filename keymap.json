@@ -5366,16 +5366,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_pinky_tap KEY_LH_T1",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_pinky_tap KEY_LH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_pinky_tap KEY_LH_T3",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -5454,16 +5469,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_pinky_tap KEY_LH_T4",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_pinky_tap KEY_LH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_pinky_tap KEY_LH_T6",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -5863,16 +5893,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_ringy_tap KEY_LH_T1",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_ringy_tap KEY_LH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_ringy_tap KEY_LH_T3",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -5951,16 +5996,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_ringy_tap KEY_LH_T4",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_ringy_tap KEY_LH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_ringy_tap KEY_LH_T6",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -6360,16 +6420,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_middy_tap KEY_LH_T1",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_middy_tap KEY_LH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_middy_tap KEY_LH_T3",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -6448,16 +6523,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_middy_tap KEY_LH_T4",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_middy_tap KEY_LH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_middy_tap KEY_LH_T6",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -6857,16 +6947,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_index_tap KEY_LH_T1",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_index_tap KEY_LH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_index_tap KEY_LH_T3",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -6945,16 +7050,31 @@
         ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_index_tap KEY_LH_T4",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_index_tap KEY_LH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&left_index_tap KEY_LH_T6",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -7341,16 +7461,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T3",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T1",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -7434,16 +7569,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T6",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T4",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -7838,16 +7988,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_T3",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_T1",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -7931,16 +8096,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_T6",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_T4",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -8335,16 +8515,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_middy_tap KEY_RH_T3",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_middy_tap KEY_RH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_middy_tap KEY_RH_T1",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -8428,16 +8623,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_middy_tap KEY_RH_T6",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_middy_tap KEY_RH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_middy_tap KEY_RH_T4",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -8832,16 +9042,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_T3",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_T2",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_T1",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -8925,16 +9150,31 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_T6",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_T5",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_T4",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
