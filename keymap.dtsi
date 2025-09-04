@@ -347,7 +347,7 @@
 #define KEY_LH_C6R2 0
 #define KEY_LH_C5R2 N1
 #define KEY_LH_C4R2 N2
-#define KEY_LH_C3R2 RBKT
+#define KEY_LH_C3R2 N3
 #define KEY_LH_C2R2 N4
 #define KEY_LH_C1R2 N5
 #define KEY_RH_C1R2 N6
