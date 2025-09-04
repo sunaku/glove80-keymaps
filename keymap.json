@@ -11949,13 +11949,8 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_degree_sign",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "Custom",
@@ -11985,8 +11980,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_angle",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&none",
@@ -12023,13 +12023,8 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_sign_base",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "Custom",
@@ -12068,8 +12063,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_exclaim",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&none",
@@ -12137,7 +12137,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_exclaim_left",
+            "value": "&world_sign_dash",
             "params": []
           }
         ]
@@ -12146,7 +12146,82 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_question_left",
+            "value": "&world_sign_landmark",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_ordinal",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_question",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_base",
             "params": []
           }
         ]
@@ -12171,91 +12246,6 @@
       {
         "value": "&none",
         "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_micro_sign",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_section_sign",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_paragraph_sign",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_o_ordinal",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_a_ordinal",
-            "params": []
-          }
-        ]
       },
       {
         "value": "&none",

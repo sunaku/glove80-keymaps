@@ -16,7 +16,7 @@ transforms:
   O: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: slash,  LCTL_RSFT: tilde,    RCTL_RSFT: slash   }
   U: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                                                         }
   consonants:
-     { base: cedilla, LCTL: ntilde,    RCTL: eszett                                                                                          }
+     { base: cedilla, LCTL: ntilde,    RCTL: eszett,     RSFT: micro                                                                         }
   quotes_left:
      { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2, LCTL_RSFT: corner1, RCTL_RSFT: corner2 }
   quotes_right:
@@ -71,6 +71,7 @@ characters:
     cedilla:    { lower: "ç",  upper: "Ç"  }
     eszett:     { lower: "ß",  upper: "ẞ"  }
     ntilde:     { lower: "ñ",  upper: "Ñ"  }
+    micro:               "µ"
   quotes_left:
     angle:      { lower: "‹",  upper: "«"  }
     curly:      { lower: "‘",  upper: "“"  }
@@ -95,24 +96,21 @@ characters:
   sign:
     copyright: { regular: "©", shifted: "®" }
     trademark: { regular: "™", shifted: "℠" }
+    landmark:  { section: "§", pilcrow: "¶" }
+    exclaim:   { left:    "¡", right:   "!" }
+    question:  { left:    "¿", right:   "?" }
+    ordinal:   { o:       "º", a:       "ª" }
+    angle:     { degree:  "°", pi:      "π" }
+    dash:      { emdash:  "—", endash:  "–" }
 
 #
 # codepoints:
 #   <name>: "<string_of_unicode_characters>"
 #
 codepoints:
-  degree_sign:     "°"
-  section_sign:    "§"
-  paragraph_sign:  "¶"
-  o_ordinal:       "º"
-  a_ordinal:       "ª"
-  exclaim_left:    "¡"
-  question_left:   "¿"
   currency_crypto: "₿"
   currency_cent:   "¢"
   currency_sign:   "¤"
-  currency_crypto: "₿"
-  micro_sign:      "µ"
 
 #
 # compositions:
