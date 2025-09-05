@@ -16,7 +16,7 @@ transforms:
   O: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: slash,  LCTL_RSFT: tilde,    RCTL_RSFT: slash   }
   U: { base: acute,   LCTL: diaeresis, RCTL: circumflex, RSFT: grave                                                                         }
   consonants:
-     { base: cedilla, LCTL: ntilde,    RCTL: eszett,     RSFT: micro                                                                         }
+     { base: cedilla, LCTL: eszett,    RCTL: ntilde,     RSFT: micro                                                                         }
   quotes_left:
      { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2, LCTL_RSFT: corner1, RCTL_RSFT: corner2 }
   quotes_right:

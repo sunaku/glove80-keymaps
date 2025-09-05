@@ -7598,13 +7598,13 @@ UNICODE_MORPH_MODS
   world_consonants_LCTL: world_consonants_LCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_consonants_ntilde>, <&world_consonants_RCTL>;
+    bindings = <&world_consonants_eszett>, <&world_consonants_RCTL>;
     mods = <(MOD_RCTL|MOD_RSFT)>;
   };
   world_consonants_RCTL: world_consonants_RCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_consonants_eszett>, <&world_consonants_micro>;
+    bindings = <&world_consonants_ntilde>, <&world_consonants_micro>;
     mods = <(MOD_RSFT)>;
   };
   world_quotes_left_base: world_quotes_left_base {
