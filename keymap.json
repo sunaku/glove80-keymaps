@@ -12351,34 +12351,34 @@
         "value": "&kp",
         "params": [
           {
+            "value": "LBKT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LBRC",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBRC",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
             "value": "RBKT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LPAR",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RPAR",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SEMI",
             "params": []
           }
         ]
@@ -12420,15 +12420,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LBKT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "EXCL",
             "params": []
           }
@@ -12438,25 +12429,34 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LBRC",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBRC",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "COMMA",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LPAR",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RPAR",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "SEMI",
             "params": []
           }
         ]
