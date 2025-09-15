@@ -580,7 +580,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -607,7 +607,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji GRAVE",
+            "value": "&thumb LAYER_Emoji BSLH",
             "params": []
           }
         ]
@@ -1227,7 +1227,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -1254,7 +1254,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji GRAVE",
+            "value": "&thumb LAYER_Emoji BSLH",
             "params": []
           }
         ]
@@ -2521,7 +2521,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -2548,7 +2548,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji GRAVE",
+            "value": "&thumb LAYER_Emoji BSLH",
             "params": []
           }
         ]
@@ -3168,7 +3168,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -3195,7 +3195,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji GRAVE",
+            "value": "&thumb LAYER_Emoji BSLH",
             "params": []
           }
         ]
@@ -3815,7 +3815,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -3842,7 +3842,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji GRAVE",
+            "value": "&thumb LAYER_Emoji BSLH",
             "params": []
           }
         ]
@@ -4462,7 +4462,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSLH",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -4489,7 +4489,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji GRAVE",
+            "value": "&thumb LAYER_Emoji BSLH",
             "params": []
           }
         ]
