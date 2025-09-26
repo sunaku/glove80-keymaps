@@ -135,45 +135,47 @@
 #define KEY_RH_C5R4 S
 #define KEY_RH_C6R4 F
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 SQT
 #define KEY_LH_C4R5 MINUS
 #define KEY_LH_C3R5 EQUAL
 #define KEY_LH_C2R5 DOT
 #define KEY_LH_C1R5 FSLH
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 J
 #define KEY_RH_C2R5 M
 #define KEY_RH_C3R5 G
 #define KEY_RH_C4R5 B
 #define KEY_RH_C5R5 V
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 GRAVE
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 BSLH
-#define EXP_LH_C2R6 thumb LAYER_Emoji
+#define LAY_LH_C2R6 LAYER_Emoji
 #define KEY_LH_T4 SPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 TAB
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
-#define EXP_LH_T6 thumb LAYER_Typing
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 DELETE
-#define EXP_RH_T6 thumb LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 BACKSPACE
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 R
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN
@@ -227,45 +229,47 @@
 #define KEY_RH_C5R4 N
 #define KEY_RH_C6R4 Q
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 G
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 J
 #define KEY_LH_C2R5 K
 #define KEY_LH_C1R5 MINUS
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 FSLH
 #define KEY_RH_C2R5 R
 #define KEY_RH_C3R5 M
 #define KEY_RH_C4R5 F
 #define KEY_RH_C5R5 P
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 GRAVE
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 BSLH
-#define EXP_LH_C2R6 thumb LAYER_Emoji
+#define LAY_LH_C2R6 LAYER_Emoji
 #define KEY_LH_T4 BACKSPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 DELETE
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
-#define EXP_LH_T6 thumb LAYER_Typing
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 0
-#define EXP_RH_T6 mo LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 TAB
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 SPACE
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN
@@ -319,44 +323,46 @@
 #define KEY_RH_C5R4 N
 #define KEY_RH_C6R4 Q
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 G
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 J
 #define KEY_LH_C2R5 K
 #define KEY_LH_C1R5 MINUS
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 QMARK
 #define KEY_RH_C2R5 R
 #define KEY_RH_C3R5 M
 #define KEY_RH_C4R5 F
 #define KEY_RH_C5R5 P
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 FSLH
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 AT
 #define KEY_LH_T4 BACKSPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 DELETE
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
-#define EXP_LH_T6 thumb LAYER_Typing
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 0
-#define EXP_RH_T6 mo LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 TAB
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 SPACE
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN
@@ -410,45 +416,47 @@
 #define KEY_RH_C5R4 S
 #define KEY_RH_C6R4 MINUS
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 SEMI
 #define KEY_LH_C4R5 Q
 #define KEY_LH_C3R5 J
 #define KEY_LH_C2R5 K
 #define KEY_LH_C1R5 X
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 B
 #define KEY_RH_C2R5 M
 #define KEY_RH_C3R5 W
 #define KEY_RH_C4R5 V
 #define KEY_RH_C5R5 Z
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 GRAVE
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 BSLH
-#define EXP_LH_C2R6 thumb LAYER_Emoji
+#define LAY_LH_C2R6 LAYER_Emoji
 #define KEY_LH_T4 BACKSPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 DELETE
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
-#define EXP_LH_T6 thumb LAYER_Typing
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 0
-#define EXP_RH_T6 mo LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 TAB
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 SPACE
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN
@@ -502,44 +510,47 @@
 #define KEY_RH_C5R4 O
 #define KEY_RH_C6R4 SQT
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
 #define KEY_LH_C2R5 V
 #define KEY_LH_C1R5 B
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 K
 #define KEY_RH_C2R5 M
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 GRAVE
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 BSLH
-#define EXP_LH_C2R6 thumb LAYER_Emoji
+#define LAY_LH_C2R6 LAYER_Emoji
 #define KEY_LH_T4 BACKSPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 DELETE
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 0
-#define EXP_RH_T6 mo LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 TAB
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 SPACE
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN
@@ -593,45 +604,47 @@
 #define KEY_RH_C5R4 SEMI
 #define KEY_RH_C6R4 SQT
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
 #define KEY_LH_C2R5 V
 #define KEY_LH_C1R5 B
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 N
 #define KEY_RH_C2R5 M
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 GRAVE
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 BSLH
-#define EXP_LH_C2R6 thumb LAYER_Emoji
+#define LAY_LH_C2R6 LAYER_Emoji
 #define KEY_LH_T4 BACKSPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 DELETE
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
-#define EXP_LH_T6 thumb LAYER_Typing
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 0
-#define EXP_RH_T6 mo LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 TAB
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 SPACE
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN
@@ -685,45 +698,47 @@
 #define KEY_RH_C5R4 O
 #define KEY_RH_C6R4 SQT
 #define KEY_LH_C6R5 0
+#define LAY_LH_C6R5 LAYER_Lower
 #define KEY_LH_C5R5 Z
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 C
 #define KEY_LH_C2R5 D
 #define KEY_LH_C1R5 V
 #define KEY_LH_T1 ESC
-#define EXP_LH_T1 thumb LAYER_Function
+#define LAY_LH_T1 LAYER_Function
 #define KEY_LH_T2 LPAR
 #define KEY_LH_T3 RPAR
 #define KEY_RH_T3 _HOME
 #define KEY_RH_T2 _END
 #define KEY_RH_T1 ENTER
-#define EXP_RH_T1 thumb LAYER_System
+#define LAY_RH_T1 LAYER_System
 #define KEY_RH_C1R5 K
 #define KEY_RH_C2R5 H
 #define KEY_RH_C3R5 COMMA
 #define KEY_RH_C4R5 DOT
 #define KEY_RH_C5R5 FSLH
 #define KEY_RH_C6R5 0
+#define LAY_RH_C6R5 LAYER_Lower
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 GRAVE
 #define KEY_LH_C4R6 LBKT
 #define KEY_LH_C3R6 RBKT
 #define KEY_LH_C2R6 BSLH
-#define EXP_LH_C2R6 thumb LAYER_Emoji
+#define LAY_LH_C2R6 LAYER_Emoji
 #define KEY_LH_T4 BACKSPACE
-#define EXP_LH_T4 thumb LAYER_Cursor
+#define LAY_LH_T4 LAYER_Cursor
 #define KEY_LH_T5 DELETE
-#define EXP_LH_T5 thumb LAYER_Number
+#define LAY_LH_T5 LAYER_Number
 #define KEY_LH_T6 INSERT
-#define EXP_LH_T6 thumb LAYER_Typing
+#define LAY_LH_T6 LAYER_Typing
 #define KEY_RH_T6 0
-#define EXP_RH_T6 mo LAYER_Typing
+#define LAY_RH_T6 LAYER_Typing
 #define KEY_RH_T5 TAB
-#define EXP_RH_T5 thumb LAYER_Mouse
+#define LAY_RH_T5 LAYER_Mouse
 #define KEY_RH_T4 SPACE
-#define EXP_RH_T4 space LAYER_Symbol
+#define LAY_RH_T4 LAYER_Symbol
 #define KEY_RH_C2R6 PAGE_UP
-#define EXP_RH_C2R6 thumb LAYER_World
+#define LAY_RH_C2R6 LAYER_World
 #define KEY_RH_C3R6 MOUSE_SCROLL_UP
 #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
 #define KEY_RH_C5R6 PG_DN

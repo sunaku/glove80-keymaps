@@ -135,7 +135,7 @@
       params = key.dig("params", 0, "value")
 
       tap = 0 # &kp 0 is functionally equivalent to &none
-      exp = nil
+      lay = nil
       case behavior
       when "&kp"
         tap = resolve_nested_keystrokes(key)
@@ -150,12 +150,9 @@
           tap = "LPAR"
         when /parang_right/
           tap = "RPAR"
-        when /mo\s+LAYER_Typing/
-          exp = $&
-          tap = '0'
-        when /(thumb|space)\s+(\w+)\s+/
-          exp = $&
-          tap = $'
+        when /\s+(LAYER_\w+)\s*/
+          lay = $1
+          tap = $' unless $'.empty?
         when /([A-Z0-9_]+)(\s+0)*$/
           tap = $1
         end
@@ -165,9 +162,9 @@
 %>
 #define KEY_<%= coords %> <%= tap %>
 <%
-      if exp
+      if lay
 %>
-#define EXP_<%= coords %> <%= exp %>
+#define LAY_<%= coords %> <%= lay %>
 <%
       end
     end
