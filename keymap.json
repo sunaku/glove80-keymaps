@@ -11444,7 +11444,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&emoji_female_sign",
+            "value": "&emoji_male_sign",
             "params": []
           }
         ]
@@ -11489,7 +11489,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&emoji_male_sign",
+            "value": "&emoji_female_sign",
             "params": []
           }
         ]
@@ -11552,34 +11552,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&emoji_old_woman",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&emoji_woman",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&emoji_girl",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&emoji_boy",
+            "value": "&emoji_old_man",
             "params": []
           }
         ]
@@ -11597,7 +11570,34 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&emoji_old_man",
+            "value": "&emoji_boy",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&emoji_girl",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&emoji_woman",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&emoji_old_woman",
             "params": []
           }
         ]
