@@ -267,22 +267,28 @@
     {
       "y": -0.5,
       "x": 3,
-      "c": "#FFCCBC",
+      "c": "#dcedc8",
       "t": "#000000",
       "f": 3
     },
     "Skin tone <small>preset</small>",
     {
-      "c": "#dcedc8"
+      "c": "#ffecb3"
     },
     "Gender sign <small>preset</small>\n\n\n\nShift",
     {
-      "c": "#BBDEFB"
+      "c": "#d7ccc8",
+      "p": "SPACE",
+      "a": 5,
+      "fa": [
+        2
+      ]
     },
-    "Hair style <small>preset</small>",
+    "sticky\n\n\n\nShift\n\nShift",
     {
       "c": "#fcfcfc",
       "p": "FLAT",
+      "a": 7,
       "f": 9
     },
     "♂️\n\n\n\nCtrl",
@@ -315,11 +321,11 @@
     },
     "♀️\n\n\n\nAlt",
     {
-      "c": "#ffecb3",
+      "c": "#BBDEFB",
       "p": "CHICKLET",
       "f": 3
     },
-    "ZWJ <small>combine</small>\n\n\n\nWin",
+    "Hair style <small>preset</small>",
     {
       "x": 15.25,
       "c": "#fcfcfc",
@@ -506,15 +512,11 @@
     {
       "y": 0.09999999999999964,
       "x": -1,
-      "c": "#D7CCC8",
-      "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ]
+      "c": "#ffccbc",
+      "p": "CHICKLET",
+      "f": 3
     },
-    "sticky\n\n\n\nShift\n\nShift"
+    "ZWJ <small>combine</small>\n\n\n\nShift"
   ],
   [
     {
@@ -522,8 +524,6 @@
       "x": -1,
       "c": "#cccccc",
       "t": "#9E9E9E",
-      "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },

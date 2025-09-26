@@ -11453,7 +11453,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&emoji_zwj",
+            "value": "&emoji_hair_style_preset",
             "params": []
           }
         ]
@@ -11477,10 +11477,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&sk",
         "params": [
           {
-            "value": "&emoji_hair_style_preset",
+            "value": "LSHFT",
             "params": []
           }
         ]
@@ -11756,10 +11756,10 @@
         ]
       },
       {
-        "value": "&sk",
+        "value": "Custom",
         "params": [
           {
-            "value": "LSHFT",
+            "value": "&emoji_zwj",
             "params": []
           }
         ]
