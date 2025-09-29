@@ -854,34 +854,34 @@ combos {
     layers = <0 1 2 3 4 5 6 7>;
   };
 
-  // T3+T6
+  // T5+T6
 
   combo_caps_word_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T3 POS_LH_T6>;
+    key-positions = <POS_LH_T5 POS_LH_T6>;
     bindings = <&caps_word>;
     layers = <0 1 2 3 4 5 6>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T3 POS_RH_T6>;
+    key-positions = <POS_RH_T5 POS_RH_T6>;
     bindings = <&caps_word>;
     layers = <0 1 2 3 4 5 6>;
   };
 
-  // T2+T6
+  // T3+T6
 
   combo_caps_lock_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T6>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&kp CAPSLOCK>;
     layers = <0 1 2 3 4 5 6>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T6>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&kp CAPSLOCK>;
     layers = <0 1 2 3 4 5 6>;
   };
