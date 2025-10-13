@@ -113,9 +113,9 @@
   #define KEY_LH_C6R3 0
   #define KEY_LH_C5R3 Z
   #define KEY_LH_C4R3 Y
-  #define KEY_LH_C3R3 U
-  #define KEY_LH_C2R3 O
-  #define KEY_LH_C1R3 SEMI
+  #define KEY_LH_C3R3 O
+  #define KEY_LH_C2R3 U
+  #define KEY_LH_C1R3 EQUAL
   #define KEY_RH_C1R3 Q
   #define KEY_RH_C2R3 L
   #define KEY_RH_C3R3 D
@@ -125,9 +125,9 @@
   #define KEY_LH_C6R4 W
   #define KEY_LH_C5R4 C
   #define KEY_LH_C4R4 I
-  #define KEY_LH_C3R4 E
-  #define KEY_LH_C2R4 A
-  #define KEY_LH_C1R4 COMMA
+  #define KEY_LH_C3R4 A
+  #define KEY_LH_C2R4 E
+  #define KEY_LH_C1R4 SEMI
   #define KEY_RH_C1R4 K
   #define KEY_RH_C2R4 H
   #define KEY_RH_C3R4 T
@@ -138,7 +138,7 @@
   #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 SQT
   #define KEY_LH_C4R5 MINUS
-  #define KEY_LH_C3R5 EQUAL
+  #define KEY_LH_C3R5 COMMA
   #define KEY_LH_C2R5 DOT
   #define KEY_LH_C1R5 FSLH
   #define KEY_LH_T1 ESC
