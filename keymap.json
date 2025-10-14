@@ -13783,18 +13783,28 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp _PASTE",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _CUT",
+            "value": "&kp _COPY",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp _PASTE",
             "params": []
           }
         ]
@@ -13921,13 +13931,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _PASTE",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "Custom",
@@ -13939,13 +13944,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _COPY",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&mmv",

@@ -344,8 +344,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG AZU SPG ___                                     ___ YLW GRN CYN MAJ PUR
           ___ SPG AZU AZU AZU SPG                                     SPG FST SLO FIN WRP GDN
-	  ___ SPG BLU BLU BLU SPG     GDN PUR GDN     ___ ___ BLU     SPG SPG AZU SPG GDN GDN
-	  ___ WRP FIN SLO FST         GDN GDN GDN     BLU RED BLU         AZU AZU AZU GDN GDN
+	  ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG AZU SPG GDN GDN
+	  ___ WRP FIN SLO FST         GDN GDN GDN     ___ RED ___         AZU AZU AZU GDN GDN
 	>;
         layer-id = <LAYER_Mouse>;
       };
@@ -358,8 +358,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG FST SPG ___                                     ___ YLW GRN CYN MAJ PUR
           ___ SPG FST FST FST SPG                                     SPG FST FST FST FST GDN
-          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     ___ ___ BLU     SPG SPG FST SPG GDN GDN
-          ___ FST FST FST FST         GDN GDN GDN     BLU RED BLU         FST FST FST GDN GDN
+          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG FST SPG GDN GDN
+          ___ FST FST FST FST         GDN GDN GDN     ___ RED ___         FST FST FST GDN GDN
         >;
         layer-id = <LAYER_MouseFast>;
       };
@@ -372,8 +372,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG WRP SPG ___                                     ___ YLW GRN CYN MAJ PUR
           ___ SPG WRP WRP WRP SPG                                     SPG WRP WRP WRP WRP GDN
-          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     ___ ___ BLU     SPG SPG WRP SPG GDN GDN
-          ___ WRP WRP WRP WRP         GDN GDN GDN     BLU RED BLU         WRP WRP WRP GDN GDN
+          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG WRP SPG GDN GDN
+          ___ WRP WRP WRP WRP         GDN GDN GDN     ___ RED ___         WRP WRP WRP GDN GDN
         >;
         layer-id = <LAYER_MouseWarp>;
       };
@@ -386,8 +386,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG SLO SPG ___                                     ___ YLW GRN CYN MAJ PUR
           ___ SPG SLO SLO SLO SPG                                     SPG SLO SLO SLO SLO GDN
-          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     ___ ___ BLU     SPG SPG SLO SPG GDN GDN
-          ___ SLO SLO SLO SLO         GDN GDN GDN     BLU RED BLU         SLO SLO SLO GDN GDN
+          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG SLO SPG GDN GDN
+          ___ SLO SLO SLO SLO         GDN GDN GDN     ___ RED ___         SLO SLO SLO GDN GDN
         >;
         layer-id = <LAYER_MouseSlow>;
       };
@@ -400,8 +400,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG FIN SPG ___                                     ___ YLW GRN CYN MAJ PUR
           ___ SPG FIN FIN FIN SPG                                     SPG FIN FIN FIN FIN GDN
-          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     ___ ___ BLU     SPG SPG FIN SPG GDN GDN
-          ___ FIN FIN FIN FIN         GDN GDN GDN     BLU RED BLU         FIN FIN FIN GDN GDN
+          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SPG FIN SPG GDN GDN
+          ___ FIN FIN FIN FIN         GDN GDN GDN     ___ RED ___         FIN FIN FIN GDN GDN
         >;
         layer-id = <LAYER_MouseFine>;
       };
