@@ -55,7 +55,7 @@
     windows: "'W'"
   }.each_with_index do |(os, char), index|
 %>
-<%= "//" if index > 0 %>#define OPERATING_SYSTEM <%= char %> // <%= os %>
+<%= index > 0 ? "//" : "  " %>#define OPERATING_SYSTEM <%= char %> // <%= os %>
 <%
   end
 %>
@@ -160,11 +160,11 @@
 
       coords = KEY_BY_POS[index]
 %>
-#define KEY_<%= coords %> <%= tap %>
+  #define KEY_<%= coords %> <%= tap %>
 <%
       if lay
 %>
-#define LAY_<%= coords %> <%= lay %>
+  #define LAY_<%= coords %> <%= lay %>
 <%
       end
     end
@@ -846,10 +846,10 @@ behaviors {
       unless chord
     %>
     #ifdef SHIFT_FORGIVENESS
-    #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
+      #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap; // tap on standalone hold
+      #endif
     #endif
     <%
       end
@@ -905,9 +905,9 @@ behaviors {
   #define <%= target_CamelCase %>_unroll(layer_index) <%= target_CamelCase %>_concat(<%= target_CamelCase %>_layer, layer_index)
   #define <%= target_CamelCase %>_concat(prefix, layer_index) prefix ## layer_index
   #ifdef ENFORCE_BILATERAL
-  #define <%= target %>_layer0_variant <%= target %>_bilateral
+    #define <%= target %>_layer0_variant <%= target %>_bilateral
   #else
-  #define <%= target %>_layer0_variant <%= target %>
+    #define <%= target %>_layer0_variant <%= target %>
   #endif
   <%
         ALPHA_LAYERS.each_with_index do |(layer_name, _layer_keys), layer_index|
@@ -1655,15 +1655,15 @@ macros {
         if composition_for_os
   %>
       #ifdef WORLD_USE_COMPOSE
-      #define <%= has_compose %>
-      <%=
-        resolve_compose_keystrokes(composition_for_os, os).join(", ")
-      %>
+        #define <%= has_compose %>
+        <%=
+          resolve_compose_keystrokes(composition_for_os, os).join(", ")
+        %>
       #else
   <%
         end
   %>
-      <%= sequence.join(", ") %>
+      <%= "  " if composition_for_os %><%= sequence.join(", ") %>
   <%
         if composition_for_os
   %>
@@ -1680,9 +1680,9 @@ macros {
       mask = [
         "(~(", # the negation suppresses any unrelated mods
           "#ifdef #{has_compose}",
-            "COMPOSE_MORPH_MODS",
+            "  COMPOSE_MORPH_MODS",
           "#else",
-            "UNICODE_MORPH_MODS",
+            "  UNICODE_MORPH_MODS",
           "#endif",
         "))"
       ].join("\n")
