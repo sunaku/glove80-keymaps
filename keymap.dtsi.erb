@@ -192,6 +192,15 @@ combos {
     emit_setting_ifndef.(:COMBO_FIRING_DECAY, 50)
   %>
 
+  //
+  // SHIFT_FIRING_DECAY defines how much time you have left (milliseconds)
+  // after pressing the first key in the one-shot sticky shift ZMK combo
+  // (on index finger's home + lower row keys) to finish the whole chord.
+  //
+  <%
+    emit_setting_ifndef.(:SHIFT_FIRING_DECAY, 100)
+  %>
+
   // T2+T3
 
   combo_sticky_globe_left {
@@ -279,14 +288,14 @@ combos {
   // T1+T4
 
   combo_sticky_shift_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
+    timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T4>;
     bindings = <&sticky_key_modtap LSFT LSFT>;
     layers = <<%= typing_layer_ids %>>;
   };
 
   combo_sticky_shift_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
+    timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T4>;
     bindings = <&sticky_key_modtap RSFT RSFT>;
     layers = <<%= typing_layer_ids %>>;

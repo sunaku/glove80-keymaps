@@ -7,6 +7,8 @@ digraph settings {
 
     COMBO_FIRING_DECAY -> NUMBER_50
 
+    SHIFT_FIRING_DECAY -> NUMBER_100
+
     TAPPING_RESOLUTION -> NUMBER_150
 
     RINGY_FINGER_MOD -> LALT
@@ -557,6 +559,8 @@ digraph settings {
 
     
       NUMBER_50 [label="50", style=filled, fillcolor=yellow, shape=signature]
+    
+      NUMBER_100 [label="100", style=filled, fillcolor=yellow, shape=signature]
     
       NUMBER_150 [label="150", style=filled, fillcolor=yellow, shape=signature]
     
