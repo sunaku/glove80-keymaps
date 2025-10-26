@@ -12352,15 +12352,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LBRC",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "LBKT",
             "params": []
           }
@@ -12370,7 +12361,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "RBKT",
+            "value": "LBRC",
             "params": []
           }
         ]
@@ -12380,6 +12371,15 @@
         "params": [
           {
             "value": "RBRC",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT",
             "params": []
           }
         ]
