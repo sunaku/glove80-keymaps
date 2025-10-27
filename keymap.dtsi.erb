@@ -285,18 +285,18 @@ combos {
     layers = <<%= alpha_layer_ids %>>;
   };
 
-  // home row index + lateral
+  // C2R4+C2R5
 
   combo_sticky_shift_left {
     timeout-ms = <SHIFT_FIRING_DECAY>;
-    key-positions = <POS_LH_C1R4 POS_LH_C2R4>;
+    key-positions = <POS_LH_C2R4 POS_LH_C2R5>;
     bindings = <&sticky_key_modtap LSFT LSFT>;
     layers = <<%= typing_layer_ids %>>;
   };
 
   combo_sticky_shift_right {
     timeout-ms = <SHIFT_FIRING_DECAY>;
-    key-positions = <POS_RH_C1R4 POS_RH_C2R4>;
+    key-positions = <POS_RH_C2R4 POS_RH_C2R5>;
     bindings = <&sticky_key_modtap RSFT RSFT>;
     layers = <<%= typing_layer_ids %>>;
   };
