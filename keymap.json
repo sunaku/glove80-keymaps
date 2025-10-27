@@ -9598,27 +9598,12 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LS",
-            "params": [
-              {
-                "value": "TAB",
-                "params": []
-              }
-            ]
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "TAB",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&none",
