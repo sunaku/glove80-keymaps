@@ -179,111 +179,6 @@
     {
       "y": -0.5,
       "x": 3,
-      "t": "#000000",
-      "g": true,
-      "a": 5,
-      "f": 3,
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
-    },
-    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
-    {
-      "c": "#c5cae9",
-      "g": false,
-      "f": 3
-    },
-    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
-    {
-      "f": 3
-    },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
-    {
-      "c": "#ffccbc",
-      "fa": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
-    },
-    "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
-    {
-      "x": 7.25
-    },
-    "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
-    {
-      "c": "#D7CCC8",
-      "p": "SPACE",
-      "fa": [
-        2
-      ]
-    },
-    "sticky\n\n\n\nShift\n\nShift",
-    "sticky\n\n\n\nCtrl\n\nCtrl",
-    "sticky\n\n\n\nAlt\n\nAlt"
-  ],
-  [
-    {
-      "y": -0.5,
-      "c": "#cccccc",
-      "t": "#9E9E9E",
-      "p": "CHICKLET",
-      "a": 7,
-      "f": 5,
-      "d": true
-    },
-    "R3",
-    {
-      "t": "#000000",
-      "g": true,
-      "f": 6
-    },
-    "",
-    {
-      "f": 5
-    },
-    "",
-    {
-      "x": 15.25,
-      "c": "#D7CCC8",
-      "g": false,
-      "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ]
-    },
-    "sticky\n\n\n\nWin\n\nWin",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET",
-      "a": 7
-    },
-    "",
-    {
-      "t": "#9E9E9E",
-      "g": false,
-      "f": 5,
-      "d": true
-    },
-    "R3"
-  ],
-  [
-    {
-      "y": -0.5,
-      "x": 3,
       "c": "#bbdefb",
       "t": "#000000",
       "f": 3
@@ -328,10 +223,11 @@
       "f": 5,
       "d": true
     },
-    "R4",
+    "R3",
     {
       "t": "#000000",
-      "g": true
+      "g": true,
+      "f": 6
     },
     "",
     {
@@ -345,13 +241,17 @@
     },
     "Speed<br><i class='fa fa-plus'></i>",
     {
-      "x": 1,
       "c": "#cccccc",
+      "g": true
+    },
+    "",
+    {
       "t": "#9E9E9E",
+      "g": false,
       "f": 5,
       "d": true
     },
-    "R4"
+    "R3"
   ],
   [
     {
@@ -399,16 +299,16 @@
       "f": 5,
       "d": true
     },
-    "R5",
+    "R4",
     {
       "t": "#000000",
-      "g": true,
-      "f": 3
+      "g": true
     },
-    "\n\n\n\nLower",
+    "",
     {
       "c": "#FFCDD2",
-      "g": false
+      "g": false,
+      "f": 3
     },
     "Speed<br><i class='fa fa-minus'></i>",
     {
@@ -419,6 +319,107 @@
       "x": 1,
       "c": "#cccccc",
       "t": "#9E9E9E",
+      "f": 5,
+      "d": true
+    },
+    "R4"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 3,
+      "t": "#000000",
+      "g": true,
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
+    {
+      "c": "#c5cae9",
+      "g": false,
+      "f": 3
+    },
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
+    {
+      "f": 3
+    },
+    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
+    {
+      "c": "#ffccbc",
+      "fa": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
+    {
+      "x": 7.25
+    },
+    "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
+    {
+      "c": "#D7CCC8",
+      "p": "SPACE",
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nShift\n\nShift",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nAlt\n\nAlt"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R5",
+    {
+      "t": "#000000",
+      "g": true,
+      "f": 3
+    },
+    "\n\n\n\nLower",
+    {
+      "f": 5
+    },
+    "",
+    {
+      "x": 15.25,
+      "c": "#D7CCC8",
+      "g": false,
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nWin\n\nWin",
+    {
+      "x": 1,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
       "f": 5,
       "d": true
     },
