@@ -12337,7 +12337,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LBRC",
+            "value": "COMMA",
             "params": []
           }
         ]
@@ -12346,7 +12346,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LBKT",
+            "value": "LPAR",
             "params": []
           }
         ]
@@ -12355,7 +12355,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "RBKT",
+            "value": "RPAR",
             "params": []
           }
         ]
@@ -12364,7 +12364,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "RBRC",
+            "value": "SEMI",
             "params": []
           }
         ]
@@ -12415,7 +12415,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "COMMA",
+            "value": "LBKT",
             "params": []
           }
         ]
@@ -12424,7 +12424,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LPAR",
+            "value": "LBRC",
             "params": []
           }
         ]
@@ -12433,7 +12433,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "RPAR",
+            "value": "RBRC",
             "params": []
           }
         ]
@@ -12442,7 +12442,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI",
+            "value": "RBKT",
             "params": []
           }
         ]
