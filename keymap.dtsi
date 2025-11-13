@@ -765,34 +765,34 @@ combos {
   #define SHIFT_FIRING_DECAY 100
   #endif
 
-  // T2+T3
+  // T3+T6
 
   combo_sticky_globe_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T3>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&sk _GLOBE>;
     layers = <0 1 2 3 4 5 6>;
   };
 
   combo_sticky_globe_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T3>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&sk _GLOBE>;
     layers = <0 1 2 3 4 5 6>;
   };
 
-  // T1+T2
+  // T2+T5
 
   combo_sticky_ralt_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T2>;
+    key-positions = <POS_LH_T2 POS_LH_T5>;
     bindings = <&sk RALT>;
     layers = <0 1 2 3 4 5 6>;
   };
 
   combo_sticky_ralt_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T2>;
+    key-positions = <POS_RH_T2 POS_RH_T5>;
     bindings = <&sk RALT>;
     layers = <0 1 2 3 4 5 6>;
   };
