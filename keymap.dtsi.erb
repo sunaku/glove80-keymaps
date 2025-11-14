@@ -301,34 +301,34 @@ combos {
     layers = <<%= typing_layer_ids %>>;
   };
 
-  // T1+C1R4
+  // T1+C2R4+C3R4
 
   combo_caps_word_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_C1R4>;
+    key-positions = <POS_LH_T1 POS_LH_C2R4 POS_LH_C3R4>;
     bindings = <&caps_word>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_C1R4>;
+    key-positions = <POS_RH_T1 POS_RH_C2R4 POS_RH_C3R4>;
     bindings = <&caps_word>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
-  // T1+C1R4+C2R4
+  // T1+C2R4+C3R4+C4R4
 
   combo_caps_lock_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_C1R4 POS_LH_C2R4>;
+    key-positions = <POS_LH_T1 POS_LH_C2R4 POS_LH_C3R4 POS_LH_C4R4>;
     bindings = <&kp CAPSLOCK>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_C1R4 POS_RH_C2R4>;
+    key-positions = <POS_RH_T1 POS_RH_C2R4 POS_RH_C3R4 POS_RH_C4R4>;
     bindings = <&kp CAPSLOCK>;
     layers = <<%= alpha_layer_ids %>>;
   };
