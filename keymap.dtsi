@@ -847,50 +847,50 @@ combos {
     layers = <0 1 2 3 4 5 6>;
   };
 
-  // T4+T5
+  // T1+C2R4
 
   combo_sticky_shift_left {
     timeout-ms = <SHIFT_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T5>;
+    key-positions = <POS_LH_T1 POS_LH_C2R4>;
     bindings = <&sticky_key_modtap LSFT LSFT>;
     layers = <0 1 2 3 4 5 6 7>;
   };
 
   combo_sticky_shift_right {
     timeout-ms = <SHIFT_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T5>;
+    key-positions = <POS_RH_T1 POS_RH_C2R4>;
     bindings = <&sticky_key_modtap RSFT RSFT>;
     layers = <0 1 2 3 4 5 6 7>;
   };
 
-  // T5+T6
+  // T4+T5
 
   combo_caps_word_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T5 POS_LH_T6>;
+    key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&caps_word>;
     layers = <0 1 2 3 4 5 6>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T5 POS_RH_T6>;
+    key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&caps_word>;
     layers = <0 1 2 3 4 5 6>;
   };
 
-  // T4+T6
+  // T5+T6
 
   combo_caps_lock_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T6>;
+    key-positions = <POS_LH_T5 POS_LH_T6>;
     bindings = <&kp CAPSLOCK>;
     layers = <0 1 2 3 4 5 6>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T6>;
+    key-positions = <POS_RH_T5 POS_RH_T6>;
     bindings = <&kp CAPSLOCK>;
     layers = <0 1 2 3 4 5 6>;
   };
