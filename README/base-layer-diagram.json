@@ -451,14 +451,14 @@
       "h": 3.75,
       "d": true
     },
-    "<ul class=\"combos left\"><li>Combo T1+C3R4 = Shift (tap: sticky one-shot)</li><li>Combo T1+C4R4 = CapsWord on/off</li><li>Combo T1+C5R4 = CapsLock on/off</li><li>Combo T1+T4 = Alt+Tab menu (tap: switch)</li><li>Combo T4+T5 = Ctrl+Tab menu (tap: switch)</li><li>Combo T5+T6 = Win+Tab menu (tap: switch)</li><li>Combo T2+T5 = sticky RAlt (AltGr)</li><li>Combo T3+T6 = sticky Globe (macOS) or Win</li><li>Combo T1+T2+T3 = unlock all, go to base layer</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
+    "<ul class=\"combos left\"><li>Combo T1+C2R4 = Shift (tap: sticky one-shot)</li><li>Combo T1+C3R4 = CapsWord on/off</li><li>Combo T1+C4R4 = CapsLock on/off</li><li>Combo T1+T4 = Alt+Tab menu (tap: switch)</li><li>Combo T4+T5 = Ctrl+Tab menu (tap: switch)</li><li>Combo T5+T6 = Win+Tab menu (tap: switch)</li><li>Combo T2+T5 = sticky RAlt (AltGr)</li><li>Combo T3+T6 = sticky Globe (macOS) or Win</li><li>Combo T1+T2+T3 = unlock all, go to base layer</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
     {
       "x": 9.5,
       "w": 5,
       "h": 3.75,
       "d": true
     },
-    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T1+C3R4</li><li>CapsWord on/off = Combo T1+C4R4</li><li>CapsLock on/off = Combo T1+C5R4</li><li>Hyper (Win+Alt+Ctrl+Shift) = Combo T1+T4</li><li>Meh (Alt+Ctrl+Shift) = Combo T4+T5</li><li>Turbo (Ctrl+Shift) = Combo T5+T6</li><li>sticky RAlt (AltGr) = Combo T2+T5</li><li>sticky Globe (macOS) or Win = Combo T3+T6</li><li>unlock all, go to base layer = Combo T1+T2+T3</li><li>Typing layer on/off = Combo C1R5+C2R6</li></ul>"
+    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T1+C2R4</li><li>CapsWord on/off = Combo T1+C3R4</li><li>CapsLock on/off = Combo T1+C4R4</li><li>Hyper (Win+Alt+Ctrl+Shift) = Combo T1+T4</li><li>Meh (Alt+Ctrl+Shift) = Combo T4+T5</li><li>Turbo (Ctrl+Shift) = Combo T5+T6</li><li>sticky RAlt (AltGr) = Combo T2+T5</li><li>sticky Globe (macOS) or Win = Combo T3+T6</li><li>unlock all, go to base layer = Combo T1+T2+T3</li><li>Typing layer on/off = Combo C1R5+C2R6</li></ul>"
   ],
   [
     {
