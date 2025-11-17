@@ -762,7 +762,7 @@ combos {
   // (on index finger home + thumb cluster T4) to finish the whole chord.
   //
   #ifndef SHIFT_FIRING_DECAY
-  #define SHIFT_FIRING_DECAY 100
+  #define SHIFT_FIRING_DECAY 50
   #endif
 
   // T2+T3

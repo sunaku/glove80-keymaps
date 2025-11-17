@@ -2,7 +2,7 @@
   "defaults": {
     "OPERATING_SYSTEM": "L",
     "COMBO_FIRING_DECAY": 50,
-    "SHIFT_FIRING_DECAY": 100,
+    "SHIFT_FIRING_DECAY": 50,
     "TAPPING_RESOLUTION": 150,
     "HOMEY_HOLDING_TYPE": "tap-preferred",
     "HOMEY_HOLDING_TIME": 240,
