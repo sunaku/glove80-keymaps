@@ -849,6 +849,13 @@ combos {
 
   // T4+C2R4
 
+  combo_sticky_shift_left2 {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_C2R4 POS_LH_C2R6>;
+    bindings = <&sticky_key_modtap LSFT LSFT>;
+    layers = <0 1 2 3 4 5 6 7>;
+  };
+
   combo_sticky_shift_left {
     timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_LH_T4 POS_LH_C2R4>;
@@ -859,6 +866,13 @@ combos {
   combo_sticky_shift_right {
     timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_RH_T4 POS_RH_C2R4>;
+    bindings = <&sticky_key_modtap RSFT RSFT>;
+    layers = <0 1 2 3 4 5 6 7>;
+  };
+
+  combo_sticky_shift_right2 {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_C2R4 POS_RH_C2R6>;
     bindings = <&sticky_key_modtap RSFT RSFT>;
     layers = <0 1 2 3 4 5 6 7>;
   };
