@@ -415,7 +415,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&stumb LAYER_Lower LSFT",
             "params": []
           }
         ]
@@ -568,7 +568,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&stumb LAYER_Lower RSFT",
             "params": []
           }
         ]
@@ -4816,8 +4816,13 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&sticky_key_oneshot LSFT",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -4894,8 +4899,13 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&sticky_key_oneshot RSFT",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -17012,7 +17022,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
@@ -17115,7 +17125,7 @@
         ]
       },
       {
-        "value": "&trans",
+        "value": "&none",
         "params": []
       },
       {
