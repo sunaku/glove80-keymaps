@@ -342,9 +342,13 @@
       "t": "#000000",
       "p": "SPACE",
       "a": 5,
-      "f": 3
+      "f": 3,
+      "fa": [
+        2,
+        1
+      ]
     },
-    "<i class='fa fa-lock'></i>\nlayer<sub><sup>&hellip;</sup></sub>\n\n\nLower\n\nLock",
+    "<i class='fa fa-lock'></i> Lock layer&hellip;\nOSS Shift\n\n\nLower",
     {
       "c": "#cccccc",
       "p": "CHICKLET",
@@ -361,9 +365,13 @@
     {
       "c": "#ffccbc",
       "p": "SPACE",
-      "f": 3
+      "f": 3,
+      "fa": [
+        2,
+        1
+      ]
     },
-    "<i class='fa fa-lock'></i>\nlayer<sub><sup>&hellip;</sup></sub>\n\n\nLower\n\nLock",
+    "<i class='fa fa-lock'></i> Lock layer&hellip;\nOSS Shift\n\n\nLower",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
