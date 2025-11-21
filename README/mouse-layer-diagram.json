@@ -135,28 +135,18 @@
     "",
     {
       "x": 7.25,
-      "c": "#dcedc8",
-      "g": false,
-      "a": 5,
       "f": 3
     },
-    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-up'></i>\n\n\n\n\nScroll",
-    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-left'></i>\n\n\n\n\nScroll",
-    {
-      "c": "#BBDEFB"
-    },
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-up'></i>\n\n\n\n\nPoint",
-    {
-      "c": "#dcedc8"
-    },
-    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll"
+    "",
+    "Cut<br><i class='fa fa-cut'></i>",
+    "Copy <i class='fa fa-copy'></i>",
+    "Paste <i class='fa fa-paste'></i>"
   ],
   [
     {
       "y": -0.5,
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "a": 7,
+      "g": false,
       "f": 5,
       "d": true
     },
@@ -212,18 +202,14 @@
     },
     "",
     {
-      "x": 7.25,
-      "c": "#dcedc8",
+      "x": 8.25,
+      "c": "#ffecb3",
       "g": false,
       "a": 5
     },
-    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
-    {
-      "c": "#BBDEFB"
-    },
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-left'></i>\n\n\n\n\nPoint",
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-down'></i>\n\n\n\n\nPoint",
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-right'></i>\n\n\n\n\nPoint"
+    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
+    "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\n\n\nClick",
+    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick"
   ],
   [
     {
@@ -246,9 +232,14 @@
     },
     "",
     {
-      "x": 17.25,
+      "x": 16.25,
+      "f": 3
+    },
+    "",
+    {
       "t": "#9E9E9E",
       "g": false,
+      "f": 5,
       "d": true
     },
     "R3"
@@ -307,9 +298,9 @@
     },
     "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     {
-      "c": "#ffecb3"
+      "c": "#dcedc8"
     },
-    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-left'></i>\n\n\n\n\nScroll",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -383,11 +374,11 @@
     },
     "sticky\n\n\n\nWin\n\nWin",
     {
-      "c": "#ffecb3",
+      "c": "#dcedc8",
       "p": "CHICKLET",
       "f": 3
     },
-    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick",
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -401,19 +392,21 @@
     {
       "y": -0.5,
       "x": 15.25,
-      "c": "#c5cae9",
+      "c": "#BBDEFB",
       "t": "#000000",
+      "a": 5,
       "f": 3
     },
-    "Cut<br><i class='fa fa-cut'></i>",
-    "Copy <i class='fa fa-copy'></i>",
-    "Paste <i class='fa fa-paste'></i>"
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-left'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-up'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-down'></i>\n\n\n\n\nPoint"
   ],
   [
     {
       "y": -0.5,
       "c": "#cccccc",
       "t": "#9E9E9E",
+      "a": 7,
       "f": 5,
       "d": true
     },
@@ -426,9 +419,13 @@
     "\n\n\n\nLower",
     {
       "x": 16.25,
-      "c": "#d1c4e9",
+      "c": "#BBDEFB",
       "g": false,
-      "a": 5,
+      "a": 5
+    },
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-right'></i>\n\n\n\n\nPoint",
+    {
+      "c": "#d1c4e9",
       "fa": [
         0,
         0,
@@ -440,11 +437,6 @@
       ]
     },
     "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
-    {
-      "c": "#ffecb3",
-      "f": 3
-    },
-    "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\n\n\nClick",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -503,11 +495,17 @@
     {
       "rx": 0.25,
       "ry": 0,
-      "y": 3.5,
-      "x": 18,
+      "y": 3,
+      "x": 14,
       "c": "#ffecb3"
     },
-    "<i class='fa fa-hand-pointer-o'></i>\n#4\n\n\n\n\nClick",
+    "<i class='fa fa-hand-pointer-o'></i>\n#4\n\n\n\n\nClick"
+  ],
+  [
+    {
+      "y": -0.5,
+      "x": 18
+    },
     "<i class='fa fa-hand-pointer-o'></i>\n#5\n\n\n\n\nClick"
   ],
   [
@@ -658,8 +656,8 @@
     {
       "y": -0.27500000000000036,
       "x": -1.9000000000000004,
+      "c": "#c5cae9",
       "t": "#000000",
-      "g": true,
       "f": 3
     },
     "Cut<br><i class='fa fa-cut'></i>\n\n\n\nLower"
@@ -667,7 +665,9 @@
   [
     {
       "y": 0.15000000000000036,
-      "x": -1.6999999999999993
+      "x": -1.6999999999999993,
+      "c": "#cccccc",
+      "g": true
     },
     "\n\n\n\nTyping"
   ],
@@ -695,8 +695,8 @@
     {
       "y": -0.27500000000000036,
       "x": -1.25,
+      "c": "#c5cae9",
       "t": "#000000",
-      "g": true,
       "f": 3
     },
     "Copy <i class='fa fa-copy'></i>"
@@ -706,7 +706,6 @@
       "y": 0.15000000000000036,
       "x": -0.8499999999999996,
       "c": "#ffff8d",
-      "g": false,
       "p": "SA SPACE"
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMouse"
@@ -736,8 +735,8 @@
     {
       "y": -0.27500000000000036,
       "x": -0.5999999999999996,
+      "c": "#c5cae9",
       "t": "#000000",
-      "g": true,
       "f": 3
     },
     "Paste <i class='fa fa-paste'></i>\n\n\n\nSystem"
@@ -745,6 +744,8 @@
   [
     {
       "y": 0.09999999999999964,
+      "c": "#cccccc",
+      "g": true,
       "n": true
     },
     "\n\n\n\nSymbol"
