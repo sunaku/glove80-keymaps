@@ -213,7 +213,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "Z",
+            "value": "Q",
             "params": []
           }
         ]
@@ -258,7 +258,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "Q",
+            "value": "X",
             "params": []
           }
         ]
@@ -285,7 +285,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "P",
+            "value": "W",
             "params": []
           }
         ]
@@ -294,7 +294,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "X",
+            "value": "Z",
             "params": []
           }
         ]
@@ -307,7 +307,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "W",
+            "value": "B",
             "params": []
           }
         ]
@@ -352,7 +352,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI",
+            "value": "MINUS",
             "params": []
           }
         ]
@@ -433,15 +433,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "MINUS",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "COMMA",
             "params": []
           }
@@ -452,6 +443,15 @@
         "params": [
           {
             "value": "DOT",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "SEMI",
             "params": []
           }
         ]
@@ -550,7 +550,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "B",
+            "value": "P",
             "params": []
           }
         ]
