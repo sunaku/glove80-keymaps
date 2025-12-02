@@ -2,7 +2,7 @@
 
 This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
-Colemak/DH, etc.) are also provided to ease your transition to the full glory.
+Colemak/DH, etc.) and pinky shifts are also provided to ease your transition.
 
 ![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](
 README/base-layer-photograph-Enthium.webp )
@@ -16,9 +16,9 @@ README/base-layer-photograph-Enthium.webp )
 
 ## Keymap
 
-Version 42-rc6 (PREVIEW)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc6
-- Release: https://my.glove80.com/#/layout/user/7cf03288-20db-42e0-9b80-4ace1c2fdbde
+Version 42-rc7 (PREVIEW)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc7
+- Release: https://my.glove80.com/#/layout/user/52ffe111-b87d-45c2-8a27-8d0f7ac3d479
 
 ### Legend
 
