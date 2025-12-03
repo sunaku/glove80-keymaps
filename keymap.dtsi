@@ -135,7 +135,6 @@
   #define KEY_RH_C5R4 S
   #define KEY_RH_C6R4 F
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 SQT
   #define KEY_LH_C4R5 COMMA
   #define KEY_LH_C3R5 DOT
@@ -155,7 +154,6 @@
   #define KEY_RH_C4R5 P
   #define KEY_RH_C5R5 V
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 GRAVE
   #define KEY_LH_C4R6 LBKT
@@ -167,9 +165,9 @@
   #define KEY_LH_T5 TAB
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 DELETE
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 BACKSPACE
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 R
@@ -229,7 +227,6 @@
   #define KEY_RH_C5R4 N
   #define KEY_RH_C6R4 Q
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 G
   #define KEY_LH_C4R5 X
   #define KEY_LH_C3R5 J
@@ -249,7 +246,6 @@
   #define KEY_RH_C4R5 F
   #define KEY_RH_C5R5 P
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 GRAVE
   #define KEY_LH_C4R6 LBKT
@@ -261,9 +257,9 @@
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 0
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
@@ -323,7 +319,6 @@
   #define KEY_RH_C5R4 N
   #define KEY_RH_C6R4 Q
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 G
   #define KEY_LH_C4R5 X
   #define KEY_LH_C3R5 J
@@ -343,7 +338,6 @@
   #define KEY_RH_C4R5 F
   #define KEY_RH_C5R5 P
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 FSLH
   #define KEY_LH_C4R6 LBKT
@@ -354,9 +348,9 @@
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 0
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
@@ -416,7 +410,6 @@
   #define KEY_RH_C5R4 S
   #define KEY_RH_C6R4 MINUS
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 SEMI
   #define KEY_LH_C4R5 Q
   #define KEY_LH_C3R5 J
@@ -436,7 +429,6 @@
   #define KEY_RH_C4R5 V
   #define KEY_RH_C5R5 Z
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 GRAVE
   #define KEY_LH_C4R6 LBKT
@@ -448,9 +440,9 @@
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 0
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
@@ -510,7 +502,6 @@
   #define KEY_RH_C5R4 O
   #define KEY_RH_C6R4 SQT
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 Z
   #define KEY_LH_C4R5 X
   #define KEY_LH_C3R5 C
@@ -530,7 +521,6 @@
   #define KEY_RH_C4R5 DOT
   #define KEY_RH_C5R5 FSLH
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 GRAVE
   #define KEY_LH_C4R6 LBKT
@@ -542,9 +532,9 @@
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 0
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
@@ -604,7 +594,6 @@
   #define KEY_RH_C5R4 SEMI
   #define KEY_RH_C6R4 SQT
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 Z
   #define KEY_LH_C4R5 X
   #define KEY_LH_C3R5 C
@@ -624,7 +613,6 @@
   #define KEY_RH_C4R5 DOT
   #define KEY_RH_C5R5 FSLH
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 GRAVE
   #define KEY_LH_C4R6 LBKT
@@ -636,9 +624,9 @@
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 0
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
@@ -698,7 +686,6 @@
   #define KEY_RH_C5R4 O
   #define KEY_RH_C6R4 SQT
   #define KEY_LH_C6R5 LSFT
-  #define LAY_LH_C6R5 LAYER_Lower
   #define KEY_LH_C5R5 Z
   #define KEY_LH_C4R5 X
   #define KEY_LH_C3R5 C
@@ -718,7 +705,6 @@
   #define KEY_RH_C4R5 DOT
   #define KEY_RH_C5R5 FSLH
   #define KEY_RH_C6R5 RSFT
-  #define LAY_RH_C6R5 LAYER_Lower
   #define KEY_LH_C6R6 0
   #define KEY_LH_C5R6 GRAVE
   #define KEY_LH_C4R6 LBKT
@@ -730,9 +716,9 @@
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
   #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Typing
+  #define LAY_LH_T6 LAYER_Lower
   #define KEY_RH_T6 0
-  #define LAY_RH_T6 LAYER_Typing
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE

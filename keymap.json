@@ -415,7 +415,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -568,7 +568,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -635,7 +635,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -644,7 +644,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing DELETE",
+            "value": "&thumb LAYER_Lower DELETE",
             "params": []
           }
         ]
@@ -1062,7 +1062,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -1215,7 +1215,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -1282,7 +1282,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -1291,7 +1291,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Typing",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -1709,7 +1709,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -1862,7 +1862,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -1929,7 +1929,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -1938,7 +1938,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Typing",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -2356,7 +2356,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -2509,7 +2509,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -2576,7 +2576,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -2585,7 +2585,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Typing",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -3003,7 +3003,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -3156,7 +3156,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -3223,7 +3223,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&crumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -3232,7 +3232,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Typing",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -3650,7 +3650,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -3803,7 +3803,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -3870,7 +3870,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -3879,7 +3879,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Typing",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -4297,7 +4297,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower LSFT",
+            "value": "&sticky_key_modtap LSFT LSFT",
             "params": []
           }
         ]
@@ -4450,7 +4450,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&stumb LAYER_Lower RSFT",
+            "value": "&sticky_key_modtap RSFT RSFT",
             "params": []
           }
         ]
@@ -4517,7 +4517,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Typing INSERT",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -4526,7 +4526,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Typing",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -4816,13 +4816,8 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&sticky_key_oneshot LSFT",
-            "params": []
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&trans",
@@ -4899,13 +4894,8 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&sticky_key_oneshot RSFT",
-            "params": []
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&trans",
@@ -9746,6 +9736,14 @@
         ]
       },
       {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
         "value": "Custom",
         "params": [
           {
@@ -9753,14 +9751,6 @@
             "params": []
           }
         ]
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
       },
       {
         "value": "Custom",
@@ -10482,6 +10472,10 @@
         "params": []
       },
       {
+        "value": "&none",
+        "params": []
+      },
+      {
         "value": "Custom",
         "params": [
           {
@@ -10489,10 +10483,6 @@
             "params": []
           }
         ]
-      },
-      {
-        "value": "&none",
-        "params": []
       },
       {
         "value": "&kp",
@@ -10987,13 +10977,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&tog LAYER_Function",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&none",
@@ -11133,8 +11118,13 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&tog LAYER_Function",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -11823,13 +11813,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&tog LAYER_Emoji",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "Custom",
@@ -11853,7 +11838,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&emoji_sunrise_mountains",
+            "value": "&tog LAYER_Emoji",
             "params": []
           }
         ]
@@ -12336,18 +12321,6 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "Custom",
         "params": [
           {
@@ -12355,6 +12328,18 @@
             "params": []
           }
         ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&none",
@@ -13033,14 +13018,6 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "Custom",
         "params": [
           {
@@ -13048,6 +13025,14 @@
             "params": []
           }
         ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&none",
@@ -13435,13 +13420,8 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&tog LAYER_System",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&rgb_ug",
@@ -13550,8 +13530,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&tog LAYER_System",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&kp",
