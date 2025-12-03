@@ -9736,14 +9736,6 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "Custom",
         "params": [
           {
@@ -9751,6 +9743,14 @@
             "params": []
           }
         ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
       },
       {
         "value": "Custom",
@@ -10472,10 +10472,6 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "Custom",
         "params": [
           {
@@ -10483,6 +10479,10 @@
             "params": []
           }
         ]
+      },
+      {
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&kp",
@@ -10977,8 +10977,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&tog LAYER_Function",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&none",
@@ -11118,13 +11123,8 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&tog LAYER_Function",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&kp",
@@ -11813,8 +11813,13 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&tog LAYER_Emoji",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -11838,7 +11843,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&tog LAYER_Emoji",
+            "value": "&emoji_sunrise_mountains",
             "params": []
           }
         ]
@@ -12321,6 +12326,18 @@
         "params": []
       },
       {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
         "value": "Custom",
         "params": [
           {
@@ -12328,18 +12345,6 @@
             "params": []
           }
         ]
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
       },
       {
         "value": "&none",
@@ -13018,6 +13023,14 @@
         ]
       },
       {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
         "value": "Custom",
         "params": [
           {
@@ -13025,14 +13038,6 @@
             "params": []
           }
         ]
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
       },
       {
         "value": "&none",
@@ -13420,8 +13425,13 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&tog LAYER_System",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&rgb_ug",
@@ -13530,13 +13540,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&tog LAYER_System",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&kp",
