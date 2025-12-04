@@ -344,17 +344,16 @@
     },
     "R5",
     {
-      "c": "#ffccbc",
+      "c": "#ffecb3",
       "t": "#000000",
       "p": "SPACE",
       "a": 5,
       "f": 3,
       "fa": [
-        2,
         1
       ]
     },
-    "<i class='fa fa-lock'></i> Lock layer&hellip;\nOSS Shift\n\n\nLower",
+    "tap:sticky one-shot\nShift\n\n\nShift",
     {
       "c": "#cccccc",
       "p": "CHICKLET",
@@ -367,16 +366,15 @@
     },
     "P",
     {
-      "c": "#ffccbc",
+      "c": "#ffecb3",
       "p": "SPACE",
       "a": 5,
       "f": 3,
       "fa": [
-        2,
         1
       ]
     },
-    "<i class='fa fa-lock'></i> Lock layer&hellip;\nOSS Shift\n\n\nLower",
+    "tap:sticky one-shot\nRShift\n\n\nRShift",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -588,7 +586,7 @@
       "a": 7,
       "f": 3
     },
-    "Insert\n\n\n\nTyping"
+    "Insert\n\n\n\nLower"
   ],
   [
     {
@@ -632,9 +630,9 @@
       "x": -1.6999999999999993,
       "c": "#ffccbc",
       "p": "SPACE",
-      "a": 7
+      "f": 3
     },
-    "\n\n\n\nTyping"
+    "<i class='fa fa-lock'></i>\nLock layer...\n\n\nLower"
   ],
   [
     {
@@ -643,6 +641,7 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
+      "a": 7,
       "f": 5,
       "d": true
     },

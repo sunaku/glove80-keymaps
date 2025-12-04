@@ -338,17 +338,16 @@
     },
     "R5",
     {
-      "c": "#ffccbc",
+      "c": "#ffecb3",
       "t": "#000000",
       "p": "SPACE",
       "a": 5,
       "f": 3,
       "fa": [
-        2,
         1
       ]
     },
-    "<i class='fa fa-lock'></i> Lock layer&hellip;\nOSS Shift\n\n\nLower",
+    "tap:sticky one-shot\nShift\n\n\nShift",
     {
       "c": "#cccccc",
       "p": "CHICKLET",
@@ -361,16 +360,15 @@
     },
     "",
     {
-      "c": "#ffccbc",
+      "c": "#ffecb3",
       "p": "SPACE",
       "a": 5,
       "f": 3,
       "fa": [
-        2,
         1
       ]
     },
-    "<i class='fa fa-lock'></i> Lock layer&hellip;\nOSS Shift\n\n\nLower",
+    "tap:sticky one-shot\nRShift\n\n\nRShift",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -582,7 +580,7 @@
       "a": 7,
       "f": 3
     },
-    "\n\n\n\nTyping"
+    "\n\n\n\nLower"
   ],
   [
     {
@@ -628,7 +626,7 @@
       "p": "SPACE",
       "a": 7
     },
-    "\n\n\n\nTyping"
+    "\n\n\n\nLower"
   ],
   [
     {
