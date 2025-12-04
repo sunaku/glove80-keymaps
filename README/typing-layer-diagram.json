@@ -303,11 +303,20 @@
     },
     "R5",
     {
+      "c": "#ffecb3",
       "t": "#000000",
-      "f": 3
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1
+      ]
     },
-    "\n\n\n\nLower",
+    "tap:sticky one-shot\nShift\n\n\nShift",
     {
+      "c": "#cccccc",
+      "p": "CHICKLET",
+      "a": 7,
       "f": 5
     },
     "",
@@ -316,11 +325,20 @@
     },
     "",
     {
-      "f": 3
+      "c": "#ffecb3",
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        1
+      ]
     },
-    "\n\n\n\nLower",
+    "tap:sticky one-shot\nRShift\n\n\nRShift",
     {
+      "c": "#cccccc",
       "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
       "f": 5,
       "d": true
     },
