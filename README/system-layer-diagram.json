@@ -373,13 +373,11 @@
     {
       "c": "#D7CCC8",
       "p": "SPACE",
-      "fa": [
-        2
-      ]
+      "a": 7
     },
-    "sticky\n\n\n\nShift\n\nShift",
-    "sticky\n\n\n\nCtrl\n\nCtrl",
-    "sticky\n\n\n\nAlt\n\nAlt"
+    "Shift\n\n\n\nShift",
+    "Ctrl\n\n\n\nCtrl",
+    "Alt\n\n\n\nAlt"
   ],
   [
     {
@@ -387,7 +385,6 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },
@@ -407,19 +404,14 @@
       "c": "#D7CCC8",
       "g": false,
       "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ]
+      "f": 3
     },
-    "sticky\n\n\n\nWin\n\nWin",
+    "Win\n\n\n\nWin",
     {
       "x": 1,
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },

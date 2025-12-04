@@ -73,34 +73,17 @@
     "",
     {
       "x": 9.25,
-      "c": "#ffcdd2",
-      "g": false
+      "f": 5
     },
-    "Num lock",
-    {
-      "c": "#e8f5e9",
-      "a": 5,
-      "fa": [
-        2,
-        7
-      ]
-    },
-    "Numpad\n/",
-    {
-      "fa": [
-        2,
-        9
-      ]
-    },
-    "Numpad\n*"
+    "",
+    "",
+    ""
   ],
   [
     {
       "y": -0.5,
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "a": 7,
-      "f": 5,
+      "g": false,
       "d": true
     },
     "R1",
@@ -113,29 +96,11 @@
     "",
     {
       "x": 15.25,
-      "c": "#0277bd",
-      "p": "SPACE",
-      "f": 4,
-      "h": 2
+      "f": 5
     },
     "",
     {
-      "x": -1,
-      "c": "#e8f5e9",
-      "g": false,
-      "p": "CHICKLET",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2,
-        9
-      ]
-    },
-    "Numpad\n-",
-    {
-      "c": "#cccccc",
-      "g": true,
-      "a": 7
+      "f": 3
     },
     "",
     {
@@ -172,35 +137,18 @@
     "",
     "",
     {
-      "x": 7.25,
-      "c": "#ffcdd2",
-      "g": false,
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2,
-        4
-      ]
+      "x": 7.25
     },
-    "Numpad\nClear",
-    {
-      "c": "#fff3e0",
-      "fa": [
-        2,
-        8
-      ]
-    },
-    "Numpad\n7",
-    "Numpad\n8\n\n\nAltGr",
-    "Numpad\n9"
+    "",
+    "",
+    "",
+    ""
   ],
   [
     {
       "y": -0.5,
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "a": 7,
-      "f": 5,
+      "g": false,
       "d": true
     },
     "R2",
@@ -215,29 +163,13 @@
     },
     "",
     {
-      "x": 15.25,
-      "c": "#e8f5e9",
-      "g": false,
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2,
-        9
-      ]
+      "x": 15.25
     },
-    "Numpad\n-",
+    "",
+    "",
     {
-      "fa": [
-        2,
-        7
-      ]
-    },
-    "Numpad\n/",
-    {
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "a": 7,
-      "f": 5,
+      "g": false,
       "d": true
     },
     "R2"
@@ -246,35 +178,26 @@
     {
       "y": -0.5,
       "x": 3,
+      "c": "#fff3e0",
       "t": "#000000",
-      "g": true
-    },
-    "",
-    "",
-    "",
-    "",
-    {
-      "x": 7.25,
-      "c": "#e8f5e9",
-      "g": false,
       "a": 5,
       "f": 3,
-      "fa": [
-        2,
-        7
-      ]
-    },
-    "Numpad\n(",
-    {
-      "c": "#fff3e0",
       "fa": [
         2,
         8
       ]
     },
+    "Numpad\n2",
+    "Numpad\n3",
     "Numpad\n4\n\n\nShift",
     "Numpad\n5\n\n\nCtrl",
-    "Numpad\n6\n\n\nAlt"
+    {
+      "x": 7.25
+    },
+    "Numpad\n6\n\n\nAlt",
+    "Numpad\n7",
+    "Numpad\n8\n\n\nAltGr",
+    "Numpad\n9"
   ],
   [
     {
@@ -293,27 +216,30 @@
     },
     "",
     {
-      "f": 5
-    },
-    "",
-    {
-      "x": 15.25,
-      "c": "#e8f5e9",
+      "c": "#fff3e0",
       "g": false,
       "a": 5,
       "f": 3,
       "fa": [
         2,
-        9
+        8
       ]
     },
-    "Numpad\n+",
-    "Numpad\n*",
+    "Numpad\n1",
+    {
+      "x": 15.25
+    },
+    "Numpad\n0",
     {
       "c": "#cccccc",
-      "t": "#9E9E9E",
+      "g": true,
       "a": 7,
-      "f": 5,
+      "f": 5
+    },
+    "",
+    {
+      "t": "#9E9E9E",
+      "g": false,
       "d": true
     },
     "R3"
@@ -322,61 +248,74 @@
     {
       "y": -0.5,
       "x": 3,
-      "t": "#000000",
-      "g": true
-    },
-    "",
-    "",
-    {
-      "n": true
-    },
-    "",
-    "",
-    {
-      "x": 7.25,
-      "c": "#e8f5e9",
-      "g": false,
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2,
-        7
-      ]
-    },
-    "Numpad\n)",
-    {
-      "c": "#fff3e0",
-      "fa": [
-        2,
-        8
-      ]
-    },
-    "Numpad\n1",
-    "Numpad\n2",
-    "Numpad\n3"
-  ],
-  [
-    {
-      "y": -0.5,
-      "c": "#cccccc",
-      "t": "#9E9E9E",
-      "a": 7,
-      "f": 5,
-      "d": true
-    },
-    "R4",
-    {
       "c": "#D7CCC8",
       "t": "#000000",
       "p": "SPACE",
       "a": 5,
       "f": 3,
       "fa": [
-        1,
         2
       ]
     },
-    "&nbsp;\n(AltGr)\n\n\nRAlt\n\nRAlt",
+    "sticky\n\n\n\nAlt\n\nAlt",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nShift\n\nShift",
+    {
+      "c": "#e8f5e9",
+      "p": "CHICKLET",
+      "fa": [
+        2,
+        9
+      ]
+    },
+    "Numpad\n-",
+    {
+      "x": 7.25,
+      "fa": [
+        2,
+        7
+      ]
+    },
+    "Numpad\n/",
+    {
+      "c": "#D7CCC8",
+      "p": "SPACE"
+    },
+    "sticky\n\n\n\nShift\n\nShift",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nAlt\n\nAlt"
+  ],
+  [
+    {
+      "y": -0.5,
+      "c": "#cccccc",
+      "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
+      "f": 5,
+      "d": true
+    },
+    "R4",
+    {
+      "t": "#000000",
+      "g": true
+    },
+    "",
+    {
+      "c": "#D7CCC8",
+      "g": false,
+      "p": "SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        2
+      ]
+    },
+    "sticky\n\n\n\nWin\n\nWin",
+    {
+      "x": 15.25
+    },
+    "sticky\n\n\n\nWin\n\nWin",
     {
       "c": "#cccccc",
       "g": true,
@@ -386,39 +325,8 @@
     },
     "",
     {
-      "x": 15.25,
-      "c": "#0277bd",
-      "p": "SPACE",
-      "f": 4,
-      "h": 2
-    },
-    "",
-    {
-      "x": -1,
-      "c": "#ffcdd2",
-      "g": false,
-      "p": "CHICKLET",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2,
-        4
-      ]
-    },
-    "Numpad\nEnter",
-    {
-      "c": "#e8f5e9",
-      "fa": [
-        2,
-        9
-      ]
-    },
-    "Numpad\n=",
-    {
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "a": 7,
-      "f": 5,
+      "g": false,
       "d": true
     },
     "R4"
@@ -427,35 +335,49 @@
     {
       "y": -0.5,
       "x": 3,
+      "c": "#e8f5e9",
       "t": "#000000",
-      "g": true
-    },
-    "",
-    "",
-    "",
-    "",
-    {
-      "x": 7.25,
-      "c": "#0277bd",
-      "p": "SPACE",
-      "f": 4,
-      "w": 2
-    },
-    "",
-    {
-      "x": -2,
-      "c": "#fff3e0",
-      "g": false,
-      "p": "CHICKLET",
       "a": 5,
       "f": 3,
       "fa": [
         2,
-        8
+        9
       ]
     },
-    "Numpad\n0",
-    "Numpad\n0",
+    "Numpad\n,",
+    "Numpad\n.",
+    {
+      "fa": [
+        2,
+        7
+      ]
+    },
+    "Numpad\n)",
+    {
+      "fa": [
+        2,
+        9
+      ]
+    },
+    "Numpad\n+",
+    {
+      "x": 7.25
+    },
+    "Numpad\n*",
+    {
+      "c": "#ffcdd2",
+      "a": 7,
+      "f": 3
+    },
+    "Num lock",
+    {
+      "a": 5,
+      "fa": [
+        2,
+        4
+      ]
+    },
+    "Numpad\nClear",
     {
       "c": "#e8f5e9",
       "fa": [
@@ -463,8 +385,7 @@
         9
       ]
     },
-    "Numpad\n,",
-    "Numpad\n."
+    "Numpad\n="
   ],
   [
     {
@@ -477,28 +398,24 @@
     },
     "R5",
     {
-      "c": "#ffff8d",
       "t": "#000000",
-      "p": "SA SPACE",
-      "f": 3,
-      "fa": [
-        9
-      ]
-    },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower",
-    {
-      "c": "#cccccc",
       "g": true,
-      "p": "CHICKLET",
-      "f": 5
+      "f": 3
     },
     "",
     {
-      "x": 15.25,
-      "c": "#ffcdd2",
+      "c": "#e8f5e9",
       "g": false,
       "a": 5,
-      "f": 3,
+      "fa": [
+        2,
+        7
+      ]
+    },
+    "Numpad\n(",
+    {
+      "x": 15.25,
+      "c": "#ffcdd2",
       "fa": [
         2,
         4
@@ -506,18 +423,14 @@
     },
     "Numpad\nEnter",
     {
-      "c": "#ffff8d",
-      "p": "SA SPACE",
-      "a": 7,
-      "fa": [
-        9
-      ]
-    },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower",
-    {
       "c": "#cccccc",
+      "g": true,
+      "a": 7
+    },
+    "",
+    {
       "t": "#9E9E9E",
-      "p": "CHICKLET",
+      "g": false,
       "f": 5,
       "d": true
     },
@@ -598,14 +511,14 @@
       "h": 3.75,
       "d": true
     },
-    "<ul class=\"combos\"><li>Hold any C6R5 to activate this layer.</li><li>Release C6R5 to deactivate this layer.</li></ul>",
+    "<ul class=\"combos\"><li>Hold any T6 to activate this layer.</li><li>Release T6 to deactivate this layer.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
       "h": 3.75,
       "d": true
     },
-    "<ul class=\"combos\"><li>Hold any C6R5 to activate this layer.</li><li>Release C6R5 to deactivate this layer.</li></ul>"
+    "<ul class=\"combos\"><li>Hold any T6 to activate this layer.</li><li>Release T6 to deactivate this layer.</li></ul>"
   ],
   [
     {
@@ -715,26 +628,29 @@
     {
       "y": -0.27500000000000036,
       "x": 0.9000000000000004,
+      "c": "#d7ccc8",
       "t": "#000000",
-      "g": true,
+      "p": "SPACE",
       "f": 3
     },
-    "\n\n\n\nLower"
+    "AltGr\n\n\n\nRAlt"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": 0.7000000000000002,
-      "f": 4
+      "c": "#ffff8d",
+      "p": "SA SPACE"
     },
-    "\n\n\n\nTyping"
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": 0.7000000000000002,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -754,26 +670,29 @@
     {
       "y": -0.27500000000000036,
       "x": -1.9000000000000004,
+      "c": "#d7ccc8",
       "t": "#000000",
-      "g": true,
+      "p": "SPACE",
       "f": 3
     },
-    "\n\n\n\nLower"
+    "AltGr\n\n\n\nRAlt"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -1.6999999999999993,
-      "f": 4
+      "c": "#ffff8d",
+      "p": "SA SPACE"
     },
-    "\n\n\n\nTyping"
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -1.6999999999999993,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
