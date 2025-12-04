@@ -497,22 +497,18 @@
       "y": -0.5,
       "x": 15.25,
       "c": "#D7CCC8",
-      "p": "SPACE",
-      "a": 5,
-      "fa": [
-        2
-      ]
+      "p": "SPACE"
     },
-    "sticky\n\n\n\nShift\n\nShift",
-    "sticky\n\n\n\nCtrl\n\nCtrl",
-    "sticky\n\n\n\nAlt\n\nAlt"
+    "Shift\n\n\n\nShift",
+    "Ctrl\n\n\n\nCtrl",
+    "Alt\n\n\n\nAlt"
   ],
   [
     {
       "y": -0.5,
       "x": 18.25
     },
-    "sticky\n\n\n\nWin\n\nWin"
+    "Win\n\n\n\nWin"
   ],
   [
     {
@@ -524,7 +520,6 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },

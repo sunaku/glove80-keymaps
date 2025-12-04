@@ -333,13 +333,11 @@
     {
       "c": "#D7CCC8",
       "p": "SPACE",
-      "fa": [
-        2
-      ]
+      "a": 7
     },
-    "sticky\n\n\n\nShift\n\nShift",
-    "sticky\n\n\n\nCtrl\n\nCtrl",
-    "sticky\n\n\n\nAlt\n\nAlt"
+    "Shift\n\n\n\nShift",
+    "Ctrl\n\n\n\nCtrl",
+    "Alt\n\n\n\nAlt"
   ],
   [
     {
@@ -347,7 +345,6 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },
@@ -368,15 +365,13 @@
       "x": 15.25,
       "c": "#D7CCC8",
       "p": "SPACE",
-      "fa": [
-        2
-      ]
+      "a": 7
     },
-    "sticky\n\n\n\nWin\n\nWin",
+    "Win\n\n\n\nWin",
     {
       "c": "#dcedc8",
       "p": "CHICKLET",
-      "f": 3
+      "a": 5
     },
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll",
     {
