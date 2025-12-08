@@ -483,14 +483,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     "<ul class=\"combos\"><li>Magic + T3 = Factory layer on/off</li><li>Magic + C6R2 = Go to base layer</li><li>Magic + <i>N</i> = Go to layer number <i>N</i></li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     ""

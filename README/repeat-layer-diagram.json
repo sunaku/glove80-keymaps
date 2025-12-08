@@ -441,14 +441,14 @@
       "t": "#000000",
       "f": 8,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
-    "<ul class=\"combos\"><li><u>Step 1. Layer Activation</u></li><li>Hold one of the #1 keys to activate this layer.</li><li>Release the held #1 key to deactivate this layer.</li></ul>",
+    "<ul class=\"combos\"><li><u>Step 1. Layer Activation</u></li><li>Hold a T3+T6 combo (either #1A or #1B) to activate this layer.</li><li>Release the held combo to deactivate this layer.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     "<ul class=\"combos\"><li><u>Step 2. Key Repetition</u></li><li>Hold the desired #2 key to start auto-repeat.</li><li>Release the held #2 key to stop auto-repeat.</li></ul>"
@@ -551,24 +551,18 @@
     {
       "y": -0.27500000000000036,
       "x": 0.9000000000000004,
-      "t": "#000000",
-      "g": true,
-      "a": 5,
-      "f": 4
+      "c": "#ffccbc",
+      "t": "#000000"
     },
-    "}\n]"
+    "#1A"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": 0.7000000000000002,
-      "c": "#ffccbc",
-      "g": false,
-      "p": "SPACE",
-      "a": 7,
-      "f": 5
+      "p": "SPACE"
     },
-    "#1\n\n\n\nTyping"
+    "#1A\n\n\n\nLower"
   ],
   [
     {
@@ -595,28 +589,18 @@
     {
       "y": -0.27500000000000036,
       "x": -1.9000000000000004,
-      "t": "#000000",
-      "g": true,
-      "a": 5,
-      "f": 3,
-      "fa": [
-        1,
-        1
-      ]
+      "c": "#ffccbc",
+      "t": "#000000"
     },
-    "&nbsp;\n(⌘+Left)\n\n\nLower\n\nHome"
+    "#1B\n\n\n\nLower"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -1.6999999999999993,
-      "c": "#ffccbc",
-      "g": false,
-      "p": "SPACE",
-      "a": 7,
-      "f": 5
+      "p": "SPACE"
     },
-    "#1\n\n\n\nTyping"
+    "#1B\n\n\n\nLower"
   ],
   [
     {

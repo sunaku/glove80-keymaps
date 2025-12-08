@@ -508,14 +508,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold any T6 to activate this layer.</li><li>Release T6 to deactivate this layer.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold any T6 to activate this layer.</li><li>Release T6 to deactivate this layer.</li></ul>"

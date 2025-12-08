@@ -497,14 +497,14 @@
       "t": "#000000",
       "f": 3,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold C2R6 to activate the <i class='fa fa-linux'></i> Magic SysRq overlay, which takes you to the base layer where you can type command keys such as <tt>REISUB</tt> to safely reboot your Linux system.</li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
-      "h": 3.75,
+      "h": 4,
       "d": true
     },
     "<ul class=\"combos\"><li>Hold T1 to activate this layer.</li><li>Release T1 to deactivate this layer.</li><li>Tap T1 to unlock this layer, if locked.</li></ul>"
