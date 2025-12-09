@@ -1,6 +1,6 @@
 [
   {
-    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}"
+    "css": "/* legend */\n.keylabel10 div { \n    font-size: xx-small;\n    font-style: italic;\n    font-weight: bolder;\n    text-shadow: 1px 1px 2px yellow;\n}\n/* title */\ncenter h1 {\n    font-weight: bold;\n}\ncenter h2 {\n    margin-top: -0.5ex;\n    font-weight: bold;\n}\ncenter ul, ul.combos {\n    padding: 0;\n}\ncenter ul {\n    margin-top: 1em;\n    padding-top: 1em;\n    font-size: smaller;\n}\ncenter ul li, .combos li {\n    margin-top: 1ex;\n    list-style-type: none;\n}\ncenter ul li a {\n    font-weight: bold;\n}\n.combos.left {\n    text-align: left;\n}\n.combos.right {\n    text-align: right;\n}"
   },
   [
     {
@@ -424,21 +424,21 @@
   [
     {
       "y": 0.25,
-      "x": 1,
+      "x": 0.9,
       "t": "#000000",
       "f": 3,
-      "w": 4.75,
+      "w": 5,
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos\"><li>Combo T1+T4 = Shift (tap: sticky one-shot)</li></ul>",
+    "<ul class=\"combos left\"><li>Combo T1+T4 = Shift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li></ul>",
     {
-      "x": 9.75,
-      "w": 4.75,
+      "x": 9.5,
+      "w": 5,
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos\"><li>Combo T1+T4 = RShift (tap: sticky one-shot)</li><li><b>Combo C1R5+C2R6 = Typing layer on/off</b></li></ul>"
+    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T1+T4</li><li>CapsWord on/off = Combo T4+T5</li><li>CapsLock on/off = Combo T1+T5</li><li><b>Typing layer on/off = Combo C1R5+C2R6</b></li></ul>"
   ],
   [
     {

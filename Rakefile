@@ -103,6 +103,10 @@ layers_pdf_sequence = %w[
   base-layer-diagram-QWERTY
   base-layer-diagram-ColemakDH
 
+  repeat-layer-diagram
+  typing-layer-diagram
+  gaming-layer-diagram
+
   cursor-layer-diagram
   number-layer-diagram
   function-layer-diagram
@@ -113,10 +117,6 @@ layers_pdf_sequence = %w[
 
   emoji-layer-diagram
   world-layer-diagram
-
-  gaming-layer-diagram
-  typing-layer-diagram
-  repeat-layer-diagram
 
   lower-layer-diagram
   magic-layer-diagram
