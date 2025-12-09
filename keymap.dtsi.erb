@@ -1658,6 +1658,7 @@ macros {
 
     emit_unicode_macro = lambda do |id, character|
       macro_id = "#{id}_macro"
+      can_compose = id !~ /^emoji/
       has_compose = "WORLD_USE_COMPOSE_FOR_#{id}"
   %>
   UNICODE(<%= macro_id %>, /* <%= character %> */
@@ -1706,13 +1707,21 @@ macros {
   <%
       mask = [
         "(~(", # the negation suppresses any unrelated mods
-          "#ifdef #{has_compose}",
-            "  COMPOSE_MORPH_MODS",
-          "#else",
-            "  UNICODE_MORPH_MODS",
-          "#endif",
+          if can_compose
+            [
+              nil,
+              "#ifdef #{has_compose}",
+                "  COMPOSE_MORPH_MODS",
+              "#else",
+                "  UNICODE_MORPH_MODS",
+              "#endif",
+              nil
+            ].join("\n")
+          else
+            "UNICODE_MORPH_MODS"
+          end,
         "))"
-      ].join("\n")
+      ].join
       emit_zmk_mod_morph.(id, macro_id, macro_id, mask)
     end
 

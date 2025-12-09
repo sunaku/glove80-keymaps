@@ -7896,13 +7896,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_zwj_macro>, <&emoji_zwj_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_zwj
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_male_sign_macro, /* ♂️ */
     #if OPERATING_SYSTEM == 'L'
@@ -7917,13 +7911,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_male_sign_macro>, <&emoji_male_sign_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_male_sign
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_female_sign_macro, /* ♀️ */
     #if OPERATING_SYSTEM == 'L'
@@ -7938,13 +7926,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_female_sign_macro>, <&emoji_female_sign_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_female_sign
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_right_arrow_macro, /* ➡️ */
     #if OPERATING_SYSTEM == 'L'
@@ -7959,13 +7941,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_right_arrow_macro>, <&emoji_right_arrow_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_right_arrow
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_left_arrow_macro, /* ⬅️ */
     #if OPERATING_SYSTEM == 'L'
@@ -7980,13 +7956,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_left_arrow_macro>, <&emoji_left_arrow_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_left_arrow
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_rainbow_macro, /* 🌈 */
     #if OPERATING_SYSTEM == 'L'
@@ -8001,13 +7971,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_rainbow_macro>, <&emoji_rainbow_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_rainbow
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_cloudy_macro, /* ️☁️ */
     #if OPERATING_SYSTEM == 'L'
@@ -8022,13 +7986,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_cloudy_macro>, <&emoji_cloudy_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_cloudy
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_mostly_cloudy_macro, /* 🌥 */
     #if OPERATING_SYSTEM == 'L'
@@ -8043,13 +8001,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_mostly_cloudy_macro>, <&emoji_mostly_cloudy_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_mostly_cloudy
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_partly_cloudy_macro, /* ⛅ */
     #if OPERATING_SYSTEM == 'L'
@@ -8064,13 +8016,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_partly_cloudy_macro>, <&emoji_partly_cloudy_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_partly_cloudy
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_mostly_sunny_macro, /* ️🌤️ */
     #if OPERATING_SYSTEM == 'L'
@@ -8085,13 +8031,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_mostly_sunny_macro>, <&emoji_mostly_sunny_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_mostly_sunny
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_sunny_macro, /* ☀️ */
     #if OPERATING_SYSTEM == 'L'
@@ -8106,13 +8046,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_sunny_macro>, <&emoji_sunny_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_sunny
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_sunrise_macro, /* 🌅 */
     #if OPERATING_SYSTEM == 'L'
@@ -8127,13 +8061,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_sunrise_macro>, <&emoji_sunrise_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_sunrise
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_sunrise_mountains_macro, /* 🌄 */
     #if OPERATING_SYSTEM == 'L'
@@ -8148,13 +8076,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_sunrise_mountains_macro>, <&emoji_sunrise_mountains_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_sunrise_mountains
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_cityscape_macro, /* ️🏙️ */
     #if OPERATING_SYSTEM == 'L'
@@ -8169,13 +8091,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_cityscape_macro>, <&emoji_cityscape_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_cityscape
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_cityscape_dusk_macro, /* ️🌇 */
     #if OPERATING_SYSTEM == 'L'
@@ -8190,13 +8106,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_cityscape_dusk_macro>, <&emoji_cityscape_dusk_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_cityscape_dusk
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_cityscape_night_macro, /* 🌃 */
     #if OPERATING_SYSTEM == 'L'
@@ -8211,13 +8121,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_cityscape_night_macro>, <&emoji_cityscape_night_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_cityscape_night
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_light_skin_tone_macro, /* 🏻 */
     #if OPERATING_SYSTEM == 'L'
@@ -8232,13 +8136,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_light_skin_tone_macro>, <&emoji_light_skin_tone_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_light_skin_tone
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_medium_light_skin_tone_macro, /* 🏼 */
     #if OPERATING_SYSTEM == 'L'
@@ -8253,13 +8151,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_medium_light_skin_tone_macro>, <&emoji_medium_light_skin_tone_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_medium_light_skin_tone
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_medium_skin_tone_macro, /* 🏽 */
     #if OPERATING_SYSTEM == 'L'
@@ -8274,13 +8166,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_medium_skin_tone_macro>, <&emoji_medium_skin_tone_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_medium_skin_tone
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_medium_dark_skin_tone_macro, /* 🏾 */
     #if OPERATING_SYSTEM == 'L'
@@ -8295,13 +8181,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_medium_dark_skin_tone_macro>, <&emoji_medium_dark_skin_tone_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_medium_dark_skin_tone
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_dark_skin_tone_macro, /* 🏿 */
     #if OPERATING_SYSTEM == 'L'
@@ -8316,13 +8196,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_dark_skin_tone_macro>, <&emoji_dark_skin_tone_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_dark_skin_tone
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_baby_bottle_macro, /* 🍼 */
     #if OPERATING_SYSTEM == 'L'
@@ -8337,13 +8211,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_baby_bottle_macro>, <&emoji_baby_bottle_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_baby_bottle
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_baby_macro, /* 👶 */
     #if OPERATING_SYSTEM == 'L'
@@ -8358,13 +8226,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_baby_macro>, <&emoji_baby_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_baby
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_boy_macro, /* 👦 */
     #if OPERATING_SYSTEM == 'L'
@@ -8379,13 +8241,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_boy_macro>, <&emoji_boy_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_boy
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_girl_macro, /* 👧 */
     #if OPERATING_SYSTEM == 'L'
@@ -8400,13 +8256,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_girl_macro>, <&emoji_girl_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_girl
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_man_macro, /* 👨 */
     #if OPERATING_SYSTEM == 'L'
@@ -8421,13 +8271,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_man_macro>, <&emoji_man_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_man
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_woman_macro, /* 👩 */
     #if OPERATING_SYSTEM == 'L'
@@ -8442,13 +8286,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_woman_macro>, <&emoji_woman_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_woman
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_old_man_macro, /* 👴 */
     #if OPERATING_SYSTEM == 'L'
@@ -8463,13 +8301,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_old_man_macro>, <&emoji_old_man_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_old_man
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_old_woman_macro, /* 👵 */
     #if OPERATING_SYSTEM == 'L'
@@ -8484,13 +8316,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_old_woman_macro>, <&emoji_old_woman_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_old_woman
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_white_hair_macro, /* 🦳 */
     #if OPERATING_SYSTEM == 'L'
@@ -8505,13 +8331,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_white_hair_macro>, <&emoji_white_hair_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_white_hair
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_curly_hair_macro, /* 🦱 */
     #if OPERATING_SYSTEM == 'L'
@@ -8526,13 +8346,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_curly_hair_macro>, <&emoji_curly_hair_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_curly_hair
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_red_hair_macro, /* 🦰 */
     #if OPERATING_SYSTEM == 'L'
@@ -8547,13 +8361,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_red_hair_macro>, <&emoji_red_hair_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_red_hair
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_bald_macro, /* 🦲 */
     #if OPERATING_SYSTEM == 'L'
@@ -8568,13 +8376,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_bald_macro>, <&emoji_bald_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_bald
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_new_moon_macro, /* 🌑 */
     #if OPERATING_SYSTEM == 'L'
@@ -8589,13 +8391,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_new_moon_macro>, <&emoji_new_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_new_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_waxing_crescent_moon_macro, /* 🌒 */
     #if OPERATING_SYSTEM == 'L'
@@ -8610,13 +8406,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_waxing_crescent_moon_macro>, <&emoji_waxing_crescent_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_waxing_crescent_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_first_quarter_moon_macro, /* 🌓 */
     #if OPERATING_SYSTEM == 'L'
@@ -8631,13 +8421,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_first_quarter_moon_macro>, <&emoji_first_quarter_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_first_quarter_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_waxing_gibbous_moon_macro, /* 🌔 */
     #if OPERATING_SYSTEM == 'L'
@@ -8652,13 +8436,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_waxing_gibbous_moon_macro>, <&emoji_waxing_gibbous_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_waxing_gibbous_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_full_moon_macro, /* 🌕 */
     #if OPERATING_SYSTEM == 'L'
@@ -8673,13 +8451,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_full_moon_macro>, <&emoji_full_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_full_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_waning_gibbous_moon_macro, /* 🌖 */
     #if OPERATING_SYSTEM == 'L'
@@ -8694,13 +8466,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_waning_gibbous_moon_macro>, <&emoji_waning_gibbous_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_waning_gibbous_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_last_quarter_moon_macro, /* 🌗 */
     #if OPERATING_SYSTEM == 'L'
@@ -8715,13 +8481,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_last_quarter_moon_macro>, <&emoji_last_quarter_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_last_quarter_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_waning_crescent_moon_macro, /* 🌘 */
     #if OPERATING_SYSTEM == 'L'
@@ -8736,13 +8496,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_waning_crescent_moon_macro>, <&emoji_waning_crescent_moon_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_waning_crescent_moon
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_tada_macro, /* 🎉 */
     #if OPERATING_SYSTEM == 'L'
@@ -8757,13 +8511,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_tada_macro>, <&emoji_tada_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_tada
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_heart_macro, /* ️❤️ */
     #if OPERATING_SYSTEM == 'L'
@@ -8778,13 +8526,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_heart_macro>, <&emoji_heart_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_heart
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_fire_macro, /* 🔥 */
     #if OPERATING_SYSTEM == 'L'
@@ -8799,13 +8541,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_fire_macro>, <&emoji_fire_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_fire
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_muscle_macro, /* 💪 */
     #if OPERATING_SYSTEM == 'L'
@@ -8820,13 +8556,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_muscle_macro>, <&emoji_muscle_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_muscle
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_climbing_macro, /* 🧗 */
     #if OPERATING_SYSTEM == 'L'
@@ -8841,13 +8571,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_climbing_macro>, <&emoji_person_climbing_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_climbing
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_lab_coat_macro, /* 🥼 */
     #if OPERATING_SYSTEM == 'L'
@@ -8862,13 +8586,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_lab_coat_macro>, <&emoji_lab_coat_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_lab_coat
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_rocket_macro, /* 🚀 */
     #if OPERATING_SYSTEM == 'L'
@@ -8883,13 +8601,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_rocket_macro>, <&emoji_rocket_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_rocket
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_joy_macro, /* 😂 */
     #if OPERATING_SYSTEM == 'L'
@@ -8904,13 +8616,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_joy_macro>, <&emoji_joy_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_joy
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_rofl_macro, /* 🤣 */
     #if OPERATING_SYSTEM == 'L'
@@ -8925,13 +8631,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_rofl_macro>, <&emoji_rofl_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_rofl
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_star_struck_macro, /* 🤩 */
     #if OPERATING_SYSTEM == 'L'
@@ -8946,13 +8646,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_star_struck_macro>, <&emoji_star_struck_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_star_struck
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_love_struck_macro, /* 😍 */
     #if OPERATING_SYSTEM == 'L'
@@ -8967,13 +8661,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_love_struck_macro>, <&emoji_love_struck_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_love_struck
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_saluting_face_macro, /* 🫡 */
     #if OPERATING_SYSTEM == 'L'
@@ -8988,13 +8676,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_saluting_face_macro>, <&emoji_saluting_face_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_saluting_face
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_shocked_face_macro, /* 🤯 */
     #if OPERATING_SYSTEM == 'L'
@@ -9009,13 +8691,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_shocked_face_macro>, <&emoji_shocked_face_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_shocked_face
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_cold_sweat_macro, /* 😰 */
     #if OPERATING_SYSTEM == 'L'
@@ -9030,13 +8706,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_cold_sweat_macro>, <&emoji_cold_sweat_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_cold_sweat
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_monocle_face_macro, /* 🧐 */
     #if OPERATING_SYSTEM == 'L'
@@ -9051,13 +8721,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_monocle_face_macro>, <&emoji_monocle_face_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_monocle_face
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_snap_fingers_macro, /* 🫰 */
     #if OPERATING_SYSTEM == 'L'
@@ -9072,13 +8736,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_snap_fingers_macro>, <&emoji_snap_fingers_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_snap_fingers
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_ok_hand_macro, /* 👌 */
     #if OPERATING_SYSTEM == 'L'
@@ -9093,13 +8751,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_ok_hand_macro>, <&emoji_ok_hand_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_ok_hand
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_pray_macro, /* 🙏 */
     #if OPERATING_SYSTEM == 'L'
@@ -9114,13 +8766,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_pray_macro>, <&emoji_pray_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_pray
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_sweat_smile_macro, /* 😅 */
     #if OPERATING_SYSTEM == 'L'
@@ -9135,13 +8781,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_sweat_smile_macro>, <&emoji_sweat_smile_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_sweat_smile
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_disappointed_macro, /* 😞 */
     #if OPERATING_SYSTEM == 'L'
@@ -9156,13 +8796,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_disappointed_macro>, <&emoji_disappointed_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_disappointed
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_thinking_macro, /* 🤔 */
     #if OPERATING_SYSTEM == 'L'
@@ -9177,13 +8811,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_thinking_macro>, <&emoji_thinking_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_thinking
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_tipping_hand_macro, /* 💁 */
     #if OPERATING_SYSTEM == 'L'
@@ -9198,13 +8826,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_tipping_hand_macro>, <&emoji_person_tipping_hand_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_tipping_hand
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_gesturing_ok_macro, /* 🙆 */
     #if OPERATING_SYSTEM == 'L'
@@ -9219,13 +8841,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_gesturing_ok_macro>, <&emoji_person_gesturing_ok_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_gesturing_ok
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_bowing_macro, /* 🙇 */
     #if OPERATING_SYSTEM == 'L'
@@ -9240,13 +8856,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_bowing_macro>, <&emoji_person_bowing_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_bowing
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_raising_hand_macro, /* 🙋 */
     #if OPERATING_SYSTEM == 'L'
@@ -9261,13 +8871,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_raising_hand_macro>, <&emoji_person_raising_hand_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_raising_hand
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_gesturing_no_macro, /* 🙅 */
     #if OPERATING_SYSTEM == 'L'
@@ -9282,13 +8886,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_gesturing_no_macro>, <&emoji_person_gesturing_no_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_gesturing_no
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_person_shrugging_macro, /* 🤷 */
     #if OPERATING_SYSTEM == 'L'
@@ -9303,13 +8901,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_person_shrugging_macro>, <&emoji_person_shrugging_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_person_shrugging
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_check_macro, /* ✅ */
     #if OPERATING_SYSTEM == 'L'
@@ -9324,13 +8916,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_check_macro>, <&emoji_check_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_check
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_100_macro, /* 💯 */
     #if OPERATING_SYSTEM == 'L'
@@ -9345,13 +8931,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_100_macro>, <&emoji_100_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_100
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_warning_macro, /* ⚠️ */
     #if OPERATING_SYSTEM == 'L'
@@ -9366,13 +8946,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_warning_macro>, <&emoji_warning_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_warning
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_cross_macro, /* ❌ */
     #if OPERATING_SYSTEM == 'L'
@@ -9387,13 +8961,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_cross_macro>, <&emoji_cross_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_cross
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_question_macro, /* ❓ */
     #if OPERATING_SYSTEM == 'L'
@@ -9408,13 +8976,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_question_macro>, <&emoji_question_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_question
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_astronaut_macro, /* 🧑‍🚀 */
     #if OPERATING_SYSTEM == 'L'
@@ -9429,13 +8991,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_astronaut_macro>, <&emoji_astronaut_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_astronaut
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_nerd_macro, /* 🤓 */
     #if OPERATING_SYSTEM == 'L'
@@ -9450,13 +9006,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_nerd_macro>, <&emoji_nerd_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_nerd
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_sparkles_macro, /* ✨ */
     #if OPERATING_SYSTEM == 'L'
@@ -9471,13 +9021,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_sparkles_macro>, <&emoji_sparkles_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_sparkles
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_raised_hands_macro, /* 🙌 */
     #if OPERATING_SYSTEM == 'L'
@@ -9492,13 +9036,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_raised_hands_macro>, <&emoji_raised_hands_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_raised_hands
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_point_up_macro, /* ☝️ */
     #if OPERATING_SYSTEM == 'L'
@@ -9513,13 +9051,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_point_up_macro>, <&emoji_point_up_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_point_up
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_thumbs_up_macro, /* 👍 */
     #if OPERATING_SYSTEM == 'L'
@@ -9534,13 +9066,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_thumbs_up_macro>, <&emoji_thumbs_up_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_thumbs_up
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
 
   //
@@ -9583,13 +9109,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_smile_up_macro>, <&emoji_face_smile_up_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_smile_up
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_face_smile_down_macro, /* 🙃 */
     #if OPERATING_SYSTEM == 'L'
@@ -9604,13 +9124,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_smile_down_macro>, <&emoji_face_smile_down_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_smile_down
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_face_smile: emoji_face_smile {
     compatible = "zmk,behavior-mod-morph";
@@ -9643,13 +9157,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_joke_wink_macro>, <&emoji_face_joke_wink_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_joke_wink
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_face_joke_tongue_macro, /* 😜 */
     #if OPERATING_SYSTEM == 'L'
@@ -9664,13 +9172,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_joke_tongue_macro>, <&emoji_face_joke_tongue_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_joke_tongue
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_face_joke: emoji_face_joke {
     compatible = "zmk,behavior-mod-morph";
@@ -9691,13 +9193,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_fear_scared_macro>, <&emoji_face_fear_scared_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_fear_scared
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_face_fear_scream_macro, /* 😱 */
     #if OPERATING_SYSTEM == 'L'
@@ -9712,13 +9208,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_fear_scream_macro>, <&emoji_face_fear_scream_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_fear_scream
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_face_fear: emoji_face_fear {
     compatible = "zmk,behavior-mod-morph";
@@ -9739,13 +9229,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_face_surprise_dizzy_macro>, <&emoji_face_surprise_dizzy_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_face_surprise_dizzy
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_face_surprise: emoji_face_surprise {
     compatible = "zmk,behavior-mod-morph";
@@ -9766,13 +9250,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_gesture_attention_wave_macro>, <&emoji_gesture_attention_wave_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_attention_wave
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_gesture_attention: emoji_gesture_attention {
     compatible = "zmk,behavior-mod-morph";
@@ -9793,13 +9271,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_gesture_approval_cool_macro>, <&emoji_gesture_approval_cool_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_approval_cool
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_gesture_approval: emoji_gesture_approval {
     compatible = "zmk,behavior-mod-morph";
@@ -9832,13 +9304,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_gesture_despair_cry_macro>, <&emoji_gesture_despair_cry_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_despair_cry
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_gesture_despair: emoji_gesture_despair {
     compatible = "zmk,behavior-mod-morph";
@@ -9865,13 +9331,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_gesture_point_you_macro>, <&emoji_gesture_point_you_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_point_you
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_gesture_point: emoji_gesture_point {
     compatible = "zmk,behavior-mod-morph";
@@ -9892,13 +9352,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_gesture_thumbs_down_macro>, <&emoji_gesture_thumbs_down_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_thumbs_down
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_gesture_thumbs: emoji_gesture_thumbs {
     compatible = "zmk,behavior-mod-morph";
@@ -9919,13 +9373,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_gesture_hands_clap_macro>, <&emoji_gesture_hands_clap_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_gesture_hands_clap
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_gesture_hands: emoji_gesture_hands {
     compatible = "zmk,behavior-mod-morph";
@@ -9946,13 +9394,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_awesome_shine_macro>, <&emoji_theme_awesome_shine_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_awesome_shine
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_awesome: emoji_theme_awesome {
     compatible = "zmk,behavior-mod-morph";
@@ -9973,13 +9415,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_magic_wand_macro>, <&emoji_theme_magic_wand_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_magic_wand
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_theme_magic_wizard_macro, /* 🧙 */
     #if OPERATING_SYSTEM == 'L'
@@ -9994,13 +9430,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_magic_wizard_macro>, <&emoji_theme_magic_wizard_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_magic_wizard
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_magic: emoji_theme_magic {
     compatible = "zmk,behavior-mod-morph";
@@ -10033,13 +9463,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_strength_lifting_macro>, <&emoji_theme_strength_lifting_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_strength_lifting
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_strength: emoji_theme_strength {
     compatible = "zmk,behavior-mod-morph";
@@ -10060,13 +9484,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_effort_juggle_macro>, <&emoji_theme_effort_juggle_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_effort_juggle
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_effort: emoji_theme_effort {
     compatible = "zmk,behavior-mod-morph";
@@ -10087,13 +9505,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_nature_water_macro>, <&emoji_theme_nature_water_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_nature_water
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_nature: emoji_theme_nature {
     compatible = "zmk,behavior-mod-morph";
@@ -10114,13 +9526,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_love_heart_macro>, <&emoji_theme_love_heart_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_love_heart
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_theme_love_face_macro, /* 🥰 */
     #if OPERATING_SYSTEM == 'L'
@@ -10135,13 +9541,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_love_face_macro>, <&emoji_theme_love_face_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_love_face
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_love: emoji_theme_love {
     compatible = "zmk,behavior-mod-morph";
@@ -10162,13 +9562,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_party_face_macro>, <&emoji_theme_party_face_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_party_face
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_party: emoji_theme_party {
     compatible = "zmk,behavior-mod-morph";
@@ -10189,13 +9583,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_game_dart_macro>, <&emoji_theme_game_dart_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_game_dart
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_theme_game_dice_macro, /* 🎲 */
     #if OPERATING_SYSTEM == 'L'
@@ -10210,13 +9598,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_game_dice_macro>, <&emoji_theme_game_dice_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_game_dice
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_game: emoji_theme_game {
     compatible = "zmk,behavior-mod-morph";
@@ -10237,13 +9619,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_trend_up_macro>, <&emoji_theme_trend_up_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_trend_up
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   UNICODE(emoji_theme_trend_down_macro, /* 📉 */
     #if OPERATING_SYSTEM == 'L'
@@ -10258,13 +9634,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_trend_down_macro>, <&emoji_theme_trend_down_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_trend_down
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_trend: emoji_theme_trend {
     compatible = "zmk,behavior-mod-morph";
@@ -10285,13 +9655,7 @@ macros {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&emoji_theme_sigh_fail_macro>, <&emoji_theme_sigh_fail_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_emoji_theme_sigh_fail
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
+    mods = <(~(UNICODE_MORPH_MODS))>;
   };
   emoji_theme_sigh: emoji_theme_sigh {
     compatible = "zmk,behavior-mod-morph";

@@ -822,13 +822,7 @@ emoji_unamused_face: emoji_unamused_face {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
   bindings = <&emoji_unamused_face_macro>, <&emoji_unamused_face_macro>;
-  mods = <(~(
-    #ifdef WORLD_USE_COMPOSE_FOR_emoji_unamused_face
-      COMPOSE_MORPH_MODS
-    #else
-      UNICODE_MORPH_MODS
-    #endif
-  ))>;
+  mods = <(~(UNICODE_MORPH_MODS))>;
 };
 ```
 
@@ -872,13 +866,7 @@ emoji_face_unamused_regular: emoji_face_unamused_regular {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
   bindings = <&emoji_face_unamused_regular_macro>, <&emoji_face_unamused_regular_macro>;
-  mods = <(~(
-    #ifdef WORLD_USE_COMPOSE_FOR_emoji_face_unamused_regular
-      COMPOSE_MORPH_MODS
-    #else
-      UNICODE_MORPH_MODS
-    #endif
-  ))>;
+  mods = <(~(UNICODE_MORPH_MODS))>;
 };
 UNICODE(emoji_face_unamused_shifted_macro, /* 🙄 */
   #if OPERATING_SYSTEM == 'L'
@@ -893,13 +881,7 @@ emoji_face_unamused_shifted: emoji_face_unamused_shifted {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
   bindings = <&emoji_face_unamused_shifted_macro>, <&emoji_face_unamused_shifted_macro>;
-  mods = <(~(
-    #ifdef WORLD_USE_COMPOSE_FOR_emoji_face_unamused_shifted
-      COMPOSE_MORPH_MODS
-    #else
-      UNICODE_MORPH_MODS
-    #endif
-  ))>;
+  mods = <(~(UNICODE_MORPH_MODS))>;
 };
 emoji_face_unamused: emoji_face_unamused {
   compatible = "zmk,behavior-mod-morph";
