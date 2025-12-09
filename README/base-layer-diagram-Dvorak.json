@@ -583,10 +583,9 @@
       "x": 0.7000000000000002,
       "c": "#ffccbc",
       "p": "SPACE",
-      "a": 7,
       "f": 3
     },
-    "Insert\n\n\n\nLower"
+    "<i class='fa fa-lock'></i>\nLock layer...\n\n\nLower"
   ],
   [
     {
@@ -595,6 +594,7 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
+      "a": 7,
       "f": 5,
       "d": true
     },
@@ -630,9 +630,10 @@
       "x": -1.6999999999999993,
       "c": "#ffccbc",
       "p": "SPACE",
+      "a": 7,
       "f": 3
     },
-    "<i class='fa fa-lock'></i>\nLock layer...\n\n\nLower"
+    "Insert\n\n\n\nLower"
   ],
   [
     {
@@ -641,7 +642,6 @@
       "c": "#cccccc",
       "t": "#9E9E9E",
       "p": "CHICKLET",
-      "a": 7,
       "f": 5,
       "d": true
     },

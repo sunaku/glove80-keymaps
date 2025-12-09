@@ -256,9 +256,9 @@
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
+  #define KEY_LH_T6 0
   #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 0
+  #define KEY_RH_T6 INSERT
   #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
@@ -347,9 +347,9 @@
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
+  #define KEY_LH_T6 0
   #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 0
+  #define KEY_RH_T6 INSERT
   #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
@@ -439,9 +439,9 @@
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
+  #define KEY_LH_T6 0
   #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 0
+  #define KEY_RH_T6 INSERT
   #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
@@ -531,9 +531,9 @@
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
+  #define KEY_LH_T6 0
   #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 0
+  #define KEY_RH_T6 INSERT
   #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
@@ -623,9 +623,9 @@
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
+  #define KEY_LH_T6 0
   #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 0
+  #define KEY_RH_T6 INSERT
   #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
@@ -715,9 +715,9 @@
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
+  #define KEY_LH_T6 0
   #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 0
+  #define KEY_RH_T6 INSERT
   #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse

@@ -1282,7 +1282,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -1291,7 +1291,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -1929,7 +1929,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -1938,7 +1938,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -2576,7 +2576,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -2585,7 +2585,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -3223,7 +3223,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -3232,7 +3232,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -3870,7 +3870,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -3879,7 +3879,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
@@ -4517,7 +4517,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT",
+            "value": "&mo LAYER_Lower",
             "params": []
           }
         ]
@@ -4526,7 +4526,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_Lower",
+            "value": "&thumb LAYER_Lower INSERT",
             "params": []
           }
         ]
