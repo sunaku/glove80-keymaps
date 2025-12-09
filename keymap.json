@@ -12132,7 +12132,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_sign_exclaim",
+            "value": "&world_sign_dash",
             "params": []
           }
         ]
@@ -12203,15 +12203,6 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_sign_dash",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
             "value": "&world_sign_landmark",
             "params": []
           }
@@ -12222,6 +12213,15 @@
         "params": [
           {
             "value": "&world_sign_ordinal",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_exclaim",
             "params": []
           }
         ]

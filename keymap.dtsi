@@ -7464,27 +7464,6 @@ macros {
     bindings = <&world_sign_angle_degree>, <&world_sign_angle_pi>;
     mods = <MOD_LSFT>;
   };
-  UNICODE(world_sign_dash_emdash_macro, /* — */
-    #if OPERATING_SYSTEM == 'L'
-      UNICODE_SEQ_LINUX(&kp _N2 &kp _N0 &kp _N1 &kp _N4)
-    #elif OPERATING_SYSTEM == 'M'
-      UNICODE_SEQ_MACOS(&kp _N2 &kp _N0 &kp _N1 &kp _N4)
-    #elif OPERATING_SYSTEM == 'W'
-      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N0 &kp _N1 &kp _N4)
-    #endif
-  )
-  world_sign_dash_emdash: world_sign_dash_emdash {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&world_sign_dash_emdash_macro>, <&world_sign_dash_emdash_macro>;
-    mods = <(~(
-#ifdef WORLD_USE_COMPOSE_FOR_world_sign_dash_emdash
-  COMPOSE_MORPH_MODS
-#else
-  UNICODE_MORPH_MODS
-#endif
-))>;
-  };
   UNICODE(world_sign_dash_endash_macro, /* – */
     #if OPERATING_SYSTEM == 'L'
       UNICODE_SEQ_LINUX(&kp _N2 &kp _N0 &kp _N1 &kp _N3)
@@ -7506,10 +7485,31 @@ macros {
 #endif
 ))>;
   };
+  UNICODE(world_sign_dash_emdash_macro, /* — */
+    #if OPERATING_SYSTEM == 'L'
+      UNICODE_SEQ_LINUX(&kp _N2 &kp _N0 &kp _N1 &kp _N4)
+    #elif OPERATING_SYSTEM == 'M'
+      UNICODE_SEQ_MACOS(&kp _N2 &kp _N0 &kp _N1 &kp _N4)
+    #elif OPERATING_SYSTEM == 'W'
+      UNICODE_SEQ_WINDOWS(&kp _N0 &kp _N2 &kp _N0 &kp _N1 &kp _N4)
+    #endif
+  )
+  world_sign_dash_emdash: world_sign_dash_emdash {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&world_sign_dash_emdash_macro>, <&world_sign_dash_emdash_macro>;
+    mods = <(~(
+#ifdef WORLD_USE_COMPOSE_FOR_world_sign_dash_emdash
+  COMPOSE_MORPH_MODS
+#else
+  UNICODE_MORPH_MODS
+#endif
+))>;
+  };
   world_sign_dash: world_sign_dash {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_sign_dash_emdash>, <&world_sign_dash_endash>;
+    bindings = <&world_sign_dash_endash>, <&world_sign_dash_emdash>;
     mods = <MOD_LSFT>;
   };
 

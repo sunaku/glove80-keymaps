@@ -101,7 +101,7 @@ characters:
     question:  { left:    "¿", right:   "?" }
     ordinal:   { o:       "º", a:       "ª" }
     angle:     { degree:  "°", pi:      "π" }
-    dash:      { emdash:  "—", endash:  "–" }
+    dash:      { endash:  "–", emdash:  "—" }
 
 #
 # codepoints:
