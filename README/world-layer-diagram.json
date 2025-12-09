@@ -510,28 +510,42 @@
   ],
   [
     {
-      "y": -0.5,
+      "y": -0.75,
+      "x": 1.25,
+      "p": "",
+      "sm": "",
+      "sb": "",
+      "st": "",
+      "f": 7,
+      "w": 2.75,
+      "h": 1.25,
+      "d": true
+    },
+    "ℹ️ <b>Legend</b> ℹ️",
+    {
+      "c": "#e8f5e9",
+      "p": "FLAT",
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
+      "a": 5,
+      "f": 6,
+      "w": 1.5,
+      "h": 1.25
+    },
+    "LSFT\nBase\n\n\n️‍‍"
+  ],
+  [
+    {
+      "y": 0.25,
       "x": 1.25,
       "c": "#e0f2f1",
-      "p": "DSA SPACE",
       "a": 4,
-      "f": 6,
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        5
-      ],
+      "f": 9,
       "w": 4.25,
-      "h": 3
+      "h": 2.25
     },
-    "LALT <br><small><sup><sub>(LCTL+RSFT)</sub></sup></small>\nLCTL\nRALT <br><small><sup><sub>(RCTL+RSFT)</sub></sup></small>\nRCTL\n️‍‍\n\n\n\nRSFT\nℹ️ <small><b>Legend</b></small> ℹ️\nBase/LSFT"
+    "LALT <br><small><sup><sub>(LCTL+RSFT)</sub></sup></small>\nLCTL\nRALT <br><small><sup><sub>(RCTL+RSFT)</sub></sup></small>\nRCTL\n️‍‍\n\n\n\nRSFT\n\nLSFT/<br>Base"
   ],
   [
     {
