@@ -105,16 +105,16 @@
   //
   // underglow for keyboard locks on the Base layer
   //
-  #define BSL &ug_sl LAC_RGB ORN_RGB // ScrollLock COLOR_OFF COLOR_ON
-  #define BNL &ug_nl LAC_RGB ORN_RGB // NumLock    COLOR_OFF COLOR_ON
-  #define BCL &ug_cl COR_RGB ORN_RGB // CapsLock   COLOR_OFF COLOR_ON
+  #define BSL &ug_sl LAC_RGB WHT_RGB // ScrollLock COLOR_OFF COLOR_ON
+  #define BNL &ug_nl LAC_RGB WHT_RGB // NumLock    COLOR_OFF COLOR_ON
+  #define BCL &ug_cl COR_RGB WHT_RGB // CapsLock   COLOR_OFF COLOR_ON
 
   //
   // underglow for keyboard locks on the System layer
   //
-  #define SSL &ug_sl BLK_RGB ORN_RGB // ScrollLock COLOR_OFF COLOR_ON
-  #define SNL &ug_nl BLK_RGB ORN_RGB // NumLock    COLOR_OFF COLOR_ON
-  #define SCL &ug_cl BLK_RGB ORN_RGB // CapsLock   COLOR_OFF COLOR_ON
+  #define SSL &ug_sl BLK_RGB WHT_RGB // ScrollLock COLOR_OFF COLOR_ON
+  #define SNL &ug_nl BLK_RGB WHT_RGB // NumLock    COLOR_OFF COLOR_ON
+  #define SCL &ug_cl BLK_RGB WHT_RGB // CapsLock   COLOR_OFF COLOR_ON
 
   //
   // colors for mouse speed scaling in Mouse layers
@@ -415,7 +415,7 @@
           ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK ___
           ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK PUR
           ___ ___ ___ BLU BLU COR     PUR PUR PUR     ___ ___ RED     COR YLW GRN CYN MAJ PUR
-          ___ ___ ___ ___ WHT         SSL SNL SCL     ___ BLU BLU         WHT SSL SNL SCL PUR
+          ___ ___ ___ ___ ORN         SSL SNL SCL     ___ BLU BLU         ORN SSL SNL SCL PUR
         >;
         layer-id = <LAYER_System>;
       };
