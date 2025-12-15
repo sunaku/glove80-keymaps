@@ -328,8 +328,8 @@
     {
       "y": -0.5,
       "x": 3,
+      "c": "#c5cae9",
       "t": "#000000",
-      "g": true,
       "a": 5,
       "f": 3,
       "fa": [
@@ -344,8 +344,6 @@
     },
     "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
     {
-      "c": "#c5cae9",
-      "g": false,
       "f": 3
     },
     "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
@@ -596,8 +594,7 @@
       "y": 0.09999999999999964,
       "x": -1,
       "c": "#e8f5e9",
-      "a": 7,
-      "n": true
+      "a": 7
     },
     "Scroll lock\n\n\n\nCursor"
   ],
@@ -734,9 +731,20 @@
   [
     {
       "y": 0.15000000000000036,
-      "x": -1.6999999999999993
+      "x": -1.6999999999999993,
+      "c": "#c5cae9",
+      "g": false,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
     },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\nTyping\n\nPause"
+    "<i class='fa fa-bars'></i>\nmenu\n\n\nTyping\n\nContext"
   ],
   [
     {
@@ -744,7 +752,6 @@
       "x": -1.6999999999999993,
       "c": "#D1C4E9",
       "t": "#9E9E9E",
-      "g": false,
       "a": 7,
       "f": 5,
       "d": true
@@ -779,7 +786,7 @@
       "g": false,
       "a": 5
     },
-    "<i class='fa fa-camera'></i>\nscreen\n\n\nMouse\n\nPrint"
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\nMouse\n\nPause"
   ],
   [
     {
@@ -820,7 +827,7 @@
       "p": "CHICKLET",
       "a": 5
     },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\nSymbol\n\nPause"
+    "<i class='fa fa-camera'></i>\nscreen\n\n\nSymbol\n\nPrint"
   ],
   [
     {

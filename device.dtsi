@@ -414,8 +414,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK ___
           ___ PNK AZU SPG GDN COR                                     COR GDN SPG AZU PNK PUR
-          ___ ___ ___ BLU BLU COR     PUR PUR PUR     ___ ___ RED     COR YLW GRN CYN MAJ PUR
-          ___ ___ ___ ___ ORN         SSL SNL SCL     ___ BLU BLU         ORN SSL SNL SCL PUR
+          ___ ___ BLU BLU BLU COR     PUR PUR PUR     ___ ___ RED     COR YLW GRN CYN MAJ PUR
+          ___ ___ ___ ___ ORN         SSL SNL SCL     BLU BLU BLU         ORN SSL SNL SCL PUR
         >;
         layer-id = <LAYER_System>;
       };

@@ -13359,14 +13359,10 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "&kp",
         "params": [
           {
-            "value": "PAUSE_BREAK",
+            "value": "K_APP",
             "params": []
           }
         ]
@@ -13376,6 +13372,15 @@
         "params": [
           {
             "value": "PSCRN",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PAUSE_BREAK",
             "params": []
           }
         ]
@@ -13540,14 +13545,10 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
-      },
-      {
         "value": "&kp",
         "params": [
           {
-            "value": "PSCRN",
+            "value": "K_APP",
             "params": []
           }
         ]
@@ -13557,6 +13558,15 @@
         "params": [
           {
             "value": "PAUSE_BREAK",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PSCRN",
             "params": []
           }
         ]
