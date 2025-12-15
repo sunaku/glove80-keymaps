@@ -11,6 +11,8 @@ digraph settings {
 
     TAPPING_RESOLUTION -> NUMBER_150
 
+    SPACE_HOLDING_TYPE -> "\"tap-preferred\""
+
     RINGY_FINGER_MOD -> LALT
 
     INDEX_FINGER_MOD -> LSFT

@@ -515,6 +515,11 @@ behaviors {
   // RGB indicators (PR30) for layers accessed via thumb layer access keys.
   //
   //#define SPACE_FORGIVENESS
+  #ifdef SPACE_FORGIVENESS
+  <%
+    emit_setting_ifndef.(:SPACE_HOLDING_TYPE, '"tap-preferred"')
+  %>
+  #endif
 
   //
   // The *_FINGER_MOD specify which modifiers are used by home row mod keys.
