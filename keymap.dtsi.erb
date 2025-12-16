@@ -269,18 +269,18 @@ combos {
     layers = <<%= alpha_layer_ids %>>;
   };
 
-  // T5+T6
+  // T3+T6
 
   combo_ctrl_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T5 POS_LH_T6>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
     layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_meh_ACS_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T5 POS_RH_T6>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&kp LA(LC(LSHFT))>;
     layers = <<%= alpha_layer_ids %>>;
   };
@@ -333,19 +333,19 @@ combos {
     layers = <<%= typing_layer_ids %>>;
   };
 
-  // T3+T6
+  // T5+T6
 
   #ifdef LAYER_Typing
   combo_typing_layer_access_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T3 POS_LH_T6>;
+    key-positions = <POS_LH_T5 POS_LH_T6>;
     bindings = <&mo LAYER_Typing>;
     layers = <<%= normal_layer_ids %>>;
   };
 
   combo_typing_layer_access_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T3 POS_RH_T6>;
+    key-positions = <POS_RH_T5 POS_RH_T6>;
     bindings = <&mo LAYER_Typing>;
     layers = <<%= normal_layer_ids %>>;
   };
