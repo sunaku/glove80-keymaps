@@ -65,7 +65,7 @@ digraph settings {
 
     THUMB_HOLDING_TYPE -> "\"balanced\""
 
-    THUMB_HOLDING_TIME -> "+50"
+    THUMB_HOLDING_TIME -> INDEX_HOLDING_TIME
 
     THUMB_REPEAT_DECAY -> "+150"
 
