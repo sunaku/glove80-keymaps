@@ -512,40 +512,34 @@
     {
       "y": -0.75,
       "x": 1.25,
-      "p": "",
-      "sm": "",
-      "sb": "",
-      "st": "",
-      "f": 7,
-      "w": 2.75,
+      "f": 9,
+      "w": 3.25,
       "h": 1.25,
       "d": true
     },
-    "ℹ️ <b>Legend</b> ℹ️",
+    "ℹ️ <b>Legend</b> ℹ️"
+  ],
+  [
     {
+      "y": -0.75,
+      "x": 4.5,
       "c": "#e8f5e9",
       "p": "FLAT",
-      "sm": "kailh-choc",
-      "sb": "kailh",
-      "st": "Kailh Choc v1",
       "a": 5,
-      "f": 8,
-      "w": 1.5,
-      "h": 1.25
+      "f": 5
     },
     "LSFT\nBase\n\n\n️‍‍"
   ],
   [
     {
-      "y": 0.25,
       "x": 1.25,
       "c": "#e0f2f1",
       "a": 4,
-      "f": 9,
+      "f": 6,
       "w": 4.25,
       "h": 2.25
     },
-    "LALT <br><small><sup><sub>(LCTL+RSFT)</sub></sup></small>\nLCTL\nRALT <br><small><sup><sub>(RCTL+RSFT)</sub></sup></small>\nRCTL\n️‍‍\n\n\n\nRSFT\n\nLSFT/<br>Base"
+    "LALT <br><small><sup><sub>(LCTL+RSFT)</sub></sup></small>\nLCTL\nRALT <br><small><sup><sub>(RCTL+RSFT)</sub></sup></small>\nRCTL\n️‍‍\n\n\n\nRSFT\n\nLSFT<br>Base"
   ],
   [
     {
