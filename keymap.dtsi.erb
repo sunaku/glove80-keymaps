@@ -144,9 +144,6 @@
         case params.lstrip.sub(/^&/, '').rstrip
         when /(?:Left|Right)\w+\s*\(\s*(\w+)/
           tap = $1
-        when /engram_(\w+)(?:\s+(LAYER_\w+))?/
-          tap = $1
-          lay = $2
         when /parang_left/
           tap = "LPAR"
         when /parang_right/
@@ -1015,25 +1012,6 @@ behaviors {
     bindings = <&mo>, <&parang_right>;
     retro-tap; // tap on standalone hold
   };
-  #ifdef LAYER_Engram
-  crumb_engram_FSLH: crumb_layer_access_engram_FSLH {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = THUMB_HOLDING_TYPE;
-    tapping-term-ms = <THUMB_HOLDING_TIME>;
-    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-    #binding-cells = <2>;
-    bindings = <&mo>, <&engram_FSLH>;
-    retro-tap; // tap on standalone hold
-  };
-  thumb_engram_FSLH: thumb_layer_access_engram_FSLH {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = THUMB_HOLDING_TYPE;
-    tapping-term-ms = <THUMB_HOLDING_TIME>;
-    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-    #binding-cells = <2>;
-    bindings = <&mo>, <&engram_FSLH>;
-  };
-  #endif
   space: thumb_layer_access_spacebar {
     compatible = "zmk,behavior-hold-tap";
     flavor = SPACE_HOLDING_TYPE;
@@ -1065,46 +1043,6 @@ behaviors {
     bindings = <&kp RPAR>, <&kp GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-
-  //
-  // Custom shifted pairs for the Engram layout
-  // - https://engram.dev/
-  // - https://sunaku.github.io/engram-keyboard-layout.html
-  //
-  #ifdef LAYER_Engram
-  <%
-    {
-      "N1"    => "PIPE",
-      "N2"    => "EQUAL",
-      "N3"    => "TILDE",
-      "N4"    => "PLUS",
-      "N5"    => "LT",
-      "N6"    => "GT",
-      "N7"    => "CARET",
-      "N8"    => "AMPS",
-      "N9"    => "PRCNT",
-      "N0"    => "STAR",
-      "SQT"   => "LPAR",
-      "DQT"   => "RPAR",
-      "COMMA" => "SEMI",
-      "DOT"   => "COLON",
-      "QMARK" => "EXCL",
-      "HASH"  => "DLLR",
-      "AT"    => "GRAVE",
-      "FSLH"  => "BSLH",
-    }
-    .each do |normal, shifted|
-  %>
-  engram_<%= normal %>: engram_shift_<%= normal %>_<%= shifted %> {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp <%= normal %>>, <&kp <%= shifted %>>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  <%
-    end
-  %>
-  #endif
 
   //////////////////////////////////////////////////////////////////////////
   //
