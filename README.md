@@ -1,6 +1,6 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
+This is [my Glove80] keymap featuring the [Enthium] and [Engrammer] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
 Colemak/DH, etc.) and pinky shifts are also provided to ease your transition.
 
@@ -9,7 +9,6 @@ README/base-layer-photograph-Enthium.webp )
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
-[Engram]:        https://sunaku.github.io/engram-keyboard-layout.html
 [Engrammer]:     https://sunaku.github.io/engrammer-keyboard-layout.html
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [home row mods]: https://sunaku.github.io/home-row-mods.html
@@ -286,11 +285,10 @@ by holding the Magic key and tapping the respective number key for that layer.
 | --------- | ------------ | ----------------------------------- |
 | Magic+`=` | 0            | Enthium (base layer; your choice)   |
 | Magic+`1` | 1            | Engrammer                           |
-| Magic+`2` | 2            | Engram                              |
-| Magic+`3` | 3            | Dvorak                              |
-| Magic+`4` | 4            | Colemak                             |
+| Magic+`2` | 2            | ColemakDH                           |
+| Magic+`3` | 3            | Colemak                             |
+| Magic+`4` | 4            | Dvorak                              |
 | Magic+`5` | 5            | QWERTY                              |
-| Magic+`6` | 6            | ColemakDH                           |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
