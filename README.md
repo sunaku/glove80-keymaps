@@ -291,7 +291,6 @@ by holding the Magic key and tapping the respective number key for that layer.
 | Magic+`4` | 4            | Colemak                             |
 | Magic+`5` | 5            | QWERTY                              |
 | Magic+`6` | 6            | ColemakDH                           |
-| Magic+`7` | 7            | Canary                              |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
