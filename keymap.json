@@ -289,7 +289,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "W",
+            "value": "P",
             "params": []
           }
         ]
@@ -410,7 +410,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "F",
+            "value": "W",
             "params": []
           }
         ]
@@ -455,7 +455,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI",
+            "value": "FSLH",
             "params": []
           }
         ]
@@ -464,7 +464,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "FSLH",
+            "value": "SEMI",
             "params": []
           }
         ]
@@ -554,7 +554,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "P",
+            "value": "F",
             "params": []
           }
         ]
