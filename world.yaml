@@ -38,7 +38,7 @@ characters:
     diaeresis:  { lower: "ï",  upper: "Ï"  }
     circumflex: { lower: "î",  upper: "Î"  }
     grave:      { lower: "ì",  upper: "Ì"  }
-    macron:     { lower: "ī",  upper: "Ī"  }
+    # macron:     { lower: "ī",  upper: "Ī"  }
   E:
     acute:      { lower: "é",  upper: "É"  }
     diaeresis:  { lower: "ë",  upper: "Ë"  }
@@ -46,7 +46,7 @@ characters:
     grave:      { lower: "è",  upper: "È"  }
     oe:         { lower: "œ",  upper: "Œ"  }
     ae:         { lower: "æ",  upper: "Æ"  }
-    macron:     { lower: "ē",  upper: "Ē"  }
+    # macron:     { lower: "ē",  upper: "Ē"  }
   A:
     acute:      { lower: "á",  upper: "Á"  }
     diaeresis:  { lower: "ä",  upper: "Ä"  }
@@ -54,7 +54,7 @@ characters:
     grave:      { lower: "à",  upper: "À"  }
     tilde:      { lower: "ã",  upper: "Ã"  }
     ring:       { lower: "å",  upper: "Å"  }
-    macron:     { lower: "ā",  upper: "Ā"  }
+    # macron:     { lower: "ā",  upper: "Ā"  }
   Y:
     acute:      { lower: "ý",  upper: "Ý"  }
     diaeresis:  { lower: "ÿ",  upper: "Ÿ"  }
@@ -65,32 +65,32 @@ characters:
     grave:      { lower: "ò",  upper: "Ò"  }
     tilde:      { lower: "õ",  upper: "Õ"  }
     slash:      { lower: "ø",  upper: "Ø"  }
-    macron:     { lower: "ō",  upper: "Ō"  }
+    # macron:     { lower: "ō",  upper: "Ō"  }
   U:
     acute:      { lower: "ú",  upper: "Ú"  }
     diaeresis:  { lower: "ü",  upper: "Ü"  }
     circumflex: { lower: "û",  upper: "Û"  }
     grave:      { lower: "ù",  upper: "Ù"  }
-    macron:     { lower: "ū",  upper: "Ū"  }
-  C:
-    cedilla:    { lower: "ç",  upper: "Ç"  }
-    caron:      { lower: "č",  upper: "Č"  }
-  S:
-    eszett:     { lower: "ß",  upper: "ẞ"  }
-    caron:      { lower: "š",  upper: "Š"  }
-  N:
-    tilde:      { lower: "ñ",  upper: "Ñ"  }
-    cedilla:    { lower: "ņ",  upper: "Ņ"  }
-  G:
-    cedilla:    { lower: "ģ",  upper: "Ģ"  }
-  K:
-    cedilla:    { lower: "ķ",  upper: "Ķ"  }
-  L:
-    cedilla:    { lower: "ļ",  upper: "Ļ"  }
-  Z:
-    caron:      { lower: "ž",  upper: "Ž"  }
-  R:
-    cedilla:    { lower: "ŗ",  upper: "Ŗ"  }
+    # macron:     { lower: "ū",  upper: "Ū"  }
+  # C:
+  #   cedilla:    { lower: "ç",  upper: "Ç"  }
+  #   caron:      { lower: "č",  upper: "Č"  }
+  # S:
+  #   eszett:     { lower: "ß",  upper: "ẞ"  }
+  #   caron:      { lower: "š",  upper: "Š"  }
+  # N:
+  #   tilde:      { lower: "ñ",  upper: "Ñ"  }
+  #   cedilla:    { lower: "ņ",  upper: "Ņ"  }
+  # G:
+  #   cedilla:    { lower: "ģ",  upper: "Ģ"  }
+  # K:
+  #   cedilla:    { lower: "ķ",  upper: "Ķ"  }
+  # L:
+  #   cedilla:    { lower: "ļ",  upper: "Ļ"  }
+  # Z:
+  #   caron:      { lower: "ž",  upper: "Ž"  }
+  # R:
+  #   cedilla:    { lower: "ŗ",  upper: "Ŗ"  }
   consonants:
     cedilla:    { lower: "ç",  upper: "Ç"  }
     eszett:     { lower: "ß",  upper: "ẞ"  }
