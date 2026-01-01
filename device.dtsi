@@ -155,6 +155,20 @@
         layer-id = <0>;
       };
 
+      #ifdef LAYER_macOS
+      macOS {
+        bindings = <
+          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
+          ___ GRN CYN MAJ YLW ___                                     ___ YLW MAJ CYN GRN ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          RED RED ___ ___ LAC         BSL BNL BCL     COR LAC LAC         LAC ___ ___ RED RED
+        >;
+        layer-id = <LAYER_macOS>;
+      };
+      #endif
+
       #ifdef LAYER_LeftPinky
       LeftPinky {
         bindings = <
