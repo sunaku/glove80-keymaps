@@ -11762,10 +11762,10 @@
         "params": []
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "GRAVE",
+            "value": "&triple_backtick",
             "params": []
           }
         ]
@@ -11774,7 +11774,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "COMMA",
+            "value": "GRAVE",
             "params": []
           }
         ]
@@ -11820,7 +11820,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "DOT",
+            "value": "COMMA",
             "params": []
           }
         ]
@@ -11927,7 +11927,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE",
+            "value": "DOT",
             "params": []
           }
         ]
@@ -12060,13 +12060,8 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LS",
-            "params": [
-              {
-                "value": "SINGLE_QUOTE",
-                "params": []
-              }
-            ]
+            "value": "COMMA",
+            "params": []
           }
         ]
       },
@@ -12232,49 +12227,54 @@
         "value": "&kp",
         "params": [
           {
+            "value": "SEMI",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LS",
+            "params": [
+              {
+                "value": "SINGLE_QUOTE",
+                "params": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
             "value": "SQT",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&kp RIGHT_INDEX_MOD",
+            "value": "GRAVE",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&kp RIGHT_MIDDY_MOD",
+            "value": "BSLH",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp RIGHT_RINGY_MOD",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp RIGHT_PINKY_MOD",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&none",
+        "value": "&trans",
         "params": []
       },
       {
@@ -12316,7 +12316,7 @@
             "value": "LS",
             "params": [
               {
-                "value": "SINGLE_QUOTE",
+                "value": "SQT",
                 "params": []
               }
             ]
@@ -12397,20 +12397,40 @@
         ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_INDEX_MOD",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_MIDDY_MOD",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_RINGY_MOD",
+            "params": []
+          }
+        ]
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_PINKY_MOD",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&none",
@@ -12699,13 +12719,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _LOCK",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&none",
@@ -12783,8 +12798,13 @@
         "params": []
       },
       {
-        "value": "&none",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&linux_magic_sysrq",
+            "params": []
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -12805,10 +12825,28 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&kp RIGHT_INDEX_MOD",
+            "value": "SLCK",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "KP_NUM",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "CAPS",
             "params": []
           }
         ]
@@ -12817,25 +12855,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp RIGHT_MIDDY_MOD",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp RIGHT_RINGY_MOD",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp RIGHT_PINKY_MOD",
+            "value": "&kp _LOCK",
             "params": []
           }
         ]
@@ -12914,7 +12934,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PAUSE_BREAK",
+            "value": "PSCRN",
             "params": []
           }
         ]
@@ -12923,7 +12943,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PSCRN",
+            "value": "PAUSE_BREAK",
             "params": []
           }
         ]
@@ -12932,34 +12952,34 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&linux_magic_sysrq",
+            "value": "&kp RIGHT_INDEX_MOD",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "SLCK",
+            "value": "&kp RIGHT_MIDDY_MOD",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "KP_NUM",
+            "value": "&kp RIGHT_RINGY_MOD",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "CAPS",
+            "value": "&kp RIGHT_PINKY_MOD",
             "params": []
           }
         ]
@@ -13103,10 +13123,10 @@
         "params": []
       },
       {
-        "value": "&mkp",
+        "value": "Custom",
         "params": [
           {
-            "value": "MB4",
+            "value": "&msc MOUSE_SCROLL_LEFT",
             "params": []
           }
         ]
@@ -13139,10 +13159,10 @@
         ]
       },
       {
-        "value": "&mkp",
+        "value": "Custom",
         "params": [
           {
-            "value": "MB5",
+            "value": "&msc MOUSE_SCROLL_RIGHT",
             "params": []
           }
         ]
@@ -13246,10 +13266,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&mkp",
         "params": [
           {
-            "value": "&msc MOUSE_SCROLL_LEFT",
+            "value": "MB4",
             "params": []
           }
         ]
@@ -13367,46 +13387,46 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&mmv",
         "params": [
           {
-            "value": "&kp RIGHT_INDEX_MOD",
+            "value": "MOVE_LEFT",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&mmv",
         "params": [
           {
-            "value": "&kp RIGHT_MIDDY_MOD",
+            "value": "MOVE_UP",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&mmv",
         "params": [
           {
-            "value": "&kp RIGHT_RINGY_MOD",
+            "value": "MOVE_DOWN",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&mmv",
         "params": [
           {
-            "value": "&kp RIGHT_PINKY_MOD",
+            "value": "MOVE_RIGHT",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&mkp",
         "params": [
           {
-            "value": "&msc MOUSE_SCROLL_RIGHT",
+            "value": "MB5",
             "params": []
           }
         ]
@@ -13496,37 +13516,37 @@
         "params": []
       },
       {
-        "value": "&mmv",
+        "value": "Custom",
         "params": [
           {
-            "value": "MOVE_LEFT",
+            "value": "&kp RIGHT_INDEX_MOD",
             "params": []
           }
         ]
       },
       {
-        "value": "&mmv",
+        "value": "Custom",
         "params": [
           {
-            "value": "MOVE_UP",
+            "value": "&kp RIGHT_MIDDY_MOD",
             "params": []
           }
         ]
       },
       {
-        "value": "&mmv",
+        "value": "Custom",
         "params": [
           {
-            "value": "MOVE_DOWN",
+            "value": "&kp RIGHT_RINGY_MOD",
             "params": []
           }
         ]
       },
       {
-        "value": "&mmv",
+        "value": "Custom",
         "params": [
           {
-            "value": "MOVE_RIGHT",
+            "value": "&kp RIGHT_PINKY_MOD",
             "params": []
           }
         ]

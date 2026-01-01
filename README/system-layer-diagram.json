@@ -316,9 +316,13 @@
     },
     "Speed<br><i class='fa fa-minus'></i>",
     {
-      "x": 1,
       "c": "#cccccc",
+      "g": true
+    },
+    "",
+    {
       "t": "#9E9E9E",
+      "g": false,
       "f": 5,
       "d": true
     },
@@ -346,11 +350,11 @@
     {
       "f": 3
     },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
+    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
     {
       "f": 3
     },
-    "<i class='fa fa-camera'></i>\nscreen\n\n\n\n\nPrint",
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\n\n\nPause",
     {
       "c": "#ffccbc",
       "fa": [
@@ -369,20 +373,18 @@
     },
     "<i class='fa fa-lightbulb-o'></i>\non/off\n\n\n\n\nRGB",
     {
-      "c": "#D7CCC8",
-      "p": "SPACE",
+      "c": "#e8f5e9",
       "a": 7
     },
-    "Shift\n\n\n\nShift",
-    "Ctrl\n\n\n\nCtrl",
-    "Alt\n\n\n\nAlt"
+    "Scroll lock",
+    "Num lock",
+    "Caps lock"
   ],
   [
     {
       "y": -0.5,
       "c": "#cccccc",
       "t": "#9E9E9E",
-      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -398,19 +400,9 @@
     },
     "",
     {
-      "x": 15.25,
-      "c": "#D7CCC8",
-      "g": false,
-      "p": "SPACE",
-      "f": 3
-    },
-    "Win\n\n\n\nWin",
-    {
-      "x": 1,
-      "c": "#cccccc",
+      "x": 17.25,
       "t": "#9E9E9E",
-      "p": "CHICKLET",
-      "f": 5,
+      "g": false,
       "d": true
     },
     "R5"
@@ -438,26 +430,28 @@
     },
     "<i class='fa fa-linux'></i>\nMagic SysRq\n\n\nBase",
     {
-      "x": 9.25
-    },
-    "<i class='fa fa-linux'></i>\nMagic SysRq\n\n\nBase",
-    {
-      "c": "#e8f5e9",
-      "p": "CHICKLET",
+      "x": 9.25,
+      "c": "#D7CCC8",
+      "p": "SPACE",
       "a": 7,
       "f": 3
     },
-    "Scroll lock",
+    "Shift\n\n\n\nShift",
     {
       "f": 3
     },
-    "Num lock"
+    "Ctrl\n\n\n\nCtrl",
+    {
+      "f": 3
+    },
+    "Alt\n\n\n\nAlt"
   ],
   [
     {
       "y": -0.5,
       "c": "#cccccc",
       "t": "#9E9E9E",
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -474,15 +468,17 @@
     "",
     {
       "x": 15.25,
-      "c": "#e8f5e9",
+      "c": "#D7CCC8",
       "g": false,
+      "p": "SPACE",
       "f": 3
     },
-    "Caps lock",
+    "Win\n\n\n\nWin",
     {
       "x": 1,
       "c": "#cccccc",
       "t": "#9E9E9E",
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -534,17 +530,14 @@
   [
     {
       "rx": 0.5,
-      "y": 4.5,
-      "x": 18.75,
+      "y": 5.5,
+      "x": 17.75,
       "c": "#d1c4e9",
       "g": false,
       "a": 5
     },
-    "<i class='fa fa-lock'></i>\nscreen\n\n\n\n\nLock"
-  ],
-  [
+    "<i class='fa fa-lock'></i>\nscreen\n\n\n\n\nLock",
     {
-      "x": 18.75,
       "fa": [
         0,
         2,
@@ -771,22 +764,27 @@
     {
       "y": -0.27500000000000036,
       "x": -1.25,
-      "c": "#cccccc",
+      "c": "#E1BEE7",
       "t": "#000000",
-      "g": true,
-      "f": 3
+      "p": "SA SPACE",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        6,
+        2
+      ]
     },
-    ""
+    "<i class='fa fa-linux'></i>\nMagic SysRq\n\n\nBase"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -0.8499999999999996,
       "c": "#c5cae9",
-      "g": false,
-      "a": 5
+      "p": "CHICKLET",
+      "f": 3
     },
-    "<i class='fa fa-coffee'></i>\nbreak\n\n\nMouse\n\nPause"
+    "<i class='fa fa-camera'></i>\nscreen\n\n\nMouse\n\nPrint"
   ],
   [
     {
@@ -827,7 +825,7 @@
       "p": "CHICKLET",
       "a": 5
     },
-    "<i class='fa fa-camera'></i>\nscreen\n\n\nSymbol\n\nPrint"
+    "<i class='fa fa-coffee'></i>\nbreak\n\n\nSymbol\n\nPause"
   ],
   [
     {
