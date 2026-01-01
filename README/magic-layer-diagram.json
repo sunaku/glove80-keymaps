@@ -141,18 +141,14 @@
     "Go to\n#4\n\n\n\n\nlayer",
     "Go to\n#5\n\n\n\n\nlayer",
     {
-      "x": 7.25
-    },
-    "Go to\n#6\n\n\n\n\nlayer",
-    {
+      "x": 7.25,
       "c": "#cccccc",
-      "g": true
-    },
-    "Go to\n#7\n\n\n\n\nlayer",
-    {
+      "g": true,
       "a": 7,
       "f": 5
     },
+    "",
+    "",
     "",
     ""
   ],
@@ -414,13 +410,9 @@
     },
     "Page up",
     "Page down",
+    "Home",
     {
-      "a": 5
-    },
-    "Output\n4\n\n\n\n\nto BT",
-    {
-      "x": 9.25,
-      "a": 7
+      "x": 9.25
     },
     "",
     {
@@ -449,21 +441,28 @@
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMagic",
     {
-      "c": "#cccccc",
-      "g": true,
+      "c": "#D1C4E9",
       "p": "CHICKLET",
-      "f": 3
+      "a": 5,
+      "fa": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
     },
-    "Home",
+    "macOS\non/off\n\n\n\n\n<i class='fa fa-apple'></i>",
     {
-      "x": 15.25,
-      "f": 4
+      "x": 15.25
     },
-    "",
+    "macOS\non/off\n\n\n\n\n<i class='fa fa-apple'></i>",
     {
       "c": "#ffff8d",
-      "g": false,
       "p": "SA SPACE",
+      "a": 7,
       "f": 3
     },
     "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nMagic",
@@ -486,14 +485,14 @@
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos\"><li>Magic + T3 = Factory layer on/off</li><li>Magic + C6R2 = Go to base layer</li><li>Magic + <i>N</i> = Go to layer number <i>N</i></li></ul>",
+    "<ul class=\"combos\"><li>Magic + C6R2 = Go to base layer</li><li>Magic + <i>N</i> = Go to layer number <i>N</i></li><li>Magic + T3 = Factory layer on/off</li><li>Magic + C5R6 = macOS <i class='fa fa-apple'></i> on/off<br><small>(home row mods order: GACS &rArr; CAGS)</small><br><br>ℹ️ <b>Note:</b> if you compiled this keymap with <sub><code>#define OPERATING_SYSTEM 'M' /*macOS*/</code></sub> then:</li><li>Magic + C5R6 = Windows <i class='kb kb-logo-windows-7'></i> on/off<br><small>(home row mods order: CAGS &rArr; GACS)</small></li></ul>",
     {
       "x": 9.75,
       "w": 4.75,
       "h": 4,
       "d": true
     },
-    ""
+    "<ul class=\"combos\"><li>Magic + C5R6 = macOS <i class='fa fa-apple'></i> on/off<br><small>(home row mods order: GACS &rArr; CAGS)</small><br><br>ℹ️ <b>Note:</b> if you compiled this keymap with <sub><code>#define OPERATING_SYSTEM 'M' /*macOS*/</code></sub> then:</li><li>Magic + C5R6 = Windows <i class='kb kb-logo-windows-7'></i> on/off<br><small>(home row mods order: CAGS &rArr; GACS)</small></li></ul>"
   ],
   [
     {
