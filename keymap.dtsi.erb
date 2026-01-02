@@ -687,7 +687,7 @@ behaviors {
   // a thumb key to activate a layer.  Shorter holds are treated as taps.
   //
   <%
-    emit_setting_ifndef.(:THUMB_HOLDING_TIME, :INDEX_HOLDING_TIME)
+    emit_setting_ifndef.(:THUMB_HOLDING_TIME, resolve_tap_timing.(200))
   %>
 
   //
