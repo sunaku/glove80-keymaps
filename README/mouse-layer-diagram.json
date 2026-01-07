@@ -281,7 +281,8 @@
       "c": "#ffcdd2"
     },
     "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed",
-    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed"
+    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed"
   ],
   [
     {
@@ -307,9 +308,18 @@
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-up'></i>\n\n\n\n\nScroll",
     {
       "x": 15.25,
-      "c": "#ffcdd2"
+      "c": "#d1c4e9",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
     },
-    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
     {
       "x": 1,
       "c": "#cccccc",
@@ -413,32 +423,23 @@
       "f": 3
     },
     "\n\n\n\nLower",
+    "\n\n\n\nLower",
     {
-      "x": 16.25,
+      "x": 15.25,
       "c": "#D7CCC8",
       "g": false,
       "p": "SPACE"
     },
     "Win\n\n\n\nWin",
     {
-      "c": "#d1c4e9",
-      "p": "CHICKLET",
-      "a": 5,
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
-    },
-    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
-    {
       "c": "#cccccc",
+      "g": true,
+      "p": "CHICKLET"
+    },
+    "",
+    {
       "t": "#9E9E9E",
-      "a": 7,
+      "g": false,
       "f": 5,
       "d": true
     },
@@ -466,28 +467,14 @@
   [
     {
       "ry": 0.25,
-      "y": 3.75,
-      "x": 17.25,
+      "y": 5.75,
+      "x": 3,
       "c": "#ffcdd2",
       "a": 5
     },
-    "<i class='fa fa-barcode'></i>\nfine\n\n\n\n\nSpeed"
-  ],
-  [
-    {
-      "y": 1,
-      "x": 3
-    },
-    "<i class='fa fa-barcode'></i>\nfine\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
     "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed"
-  ],
-  [
-    {
-      "y": -0.5,
-      "x": 2
-    },
-    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed"
   ],
   [
     {

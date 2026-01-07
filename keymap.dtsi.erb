@@ -172,6 +172,39 @@
   end
 %>
 
+conditional_layers {
+  compatible = "zmk,conditional-layers";
+
+  #ifdef LAYER_macOS
+<%
+  {
+    "left" => %w[ Cursor Number Function ],
+    "right" => %w[ Symbol Mouse System ]
+  }
+  .each do |hand, layers|
+    then_layer = "LAYER_macOS_#{hand}"
+%>
+  #ifdef <%= then_layer %>
+  <%
+    layers.each do |layer|
+      if_layer = "LAYER_#{layer}"
+  %>
+    #ifdef <%= if_layer %>
+    if_<%= if_layer %>_then_<%= then_layer %> {
+      if-layers = <LAYER_macOS <%= if_layer %>>;
+      then-layer = <<%= then_layer %>>;
+    };
+    #endif
+  <%
+    end
+  %>
+  #endif
+<%
+  end
+%>
+  #endif
+};
+
 combos {
   compatible = "zmk,combos";
   <%
@@ -1984,19 +2017,11 @@ macros {
 #endif
 
 //
-// MOUSE_SCALER_FINE sets parameters for the &zip_xy_scaler input processor:
-// https://zmk.dev/docs/keymaps/input-processors/scaler
-//
-#ifndef MOUSE_SCALER_FINE
-#define MOUSE_SCALER_FINE 1 16
-#endif
-
-//
 // MOUSE_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 4
+#define MOUSE_SCALER_SLOW 1 16
 #endif
 
 //
@@ -2039,12 +2064,6 @@ macros {
   //
   #include <input/processors.dtsi>
   &mmv_input_listener {
-    #ifdef LAYER_MouseFine
-    fine {
-      layers = <LAYER_MouseFine>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_FINE>;
-    };
-    #endif
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
@@ -2081,12 +2100,6 @@ macros {
     };
   };
   &msc_input_listener {
-    #ifdef LAYER_MouseFine
-    fine {
-      layers = <LAYER_MouseFine>;
-      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FINE>;
-    };
-    #endif
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;

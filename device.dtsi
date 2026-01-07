@@ -41,7 +41,7 @@
       defined(LAC) || defined(LAC_RGB) || \
       defined(BSL) || defined(BNL) || defined(BCL) || \
       defined(SSL) || defined(SNL) || defined(SCL) || \
-      defined(FST) || defined(WRP) || defined(SLO) || defined(FIN)
+      defined(FST) || defined(WRP) || defined(SLO)
   #error "Naming conflict: 3-letter color abbreviation already defined!"
   #endif
 
@@ -121,7 +121,6 @@
   //
   #define FST GOL
   #define SLO PNK
-  #define FIN COR
   #define WRP CHU
 
   // ==== PER-KEY-RGB <section begins> ====
@@ -357,9 +356,9 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG AZU SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG AZU AZU AZU SPG                                     SPG FST SLO FIN WRP SPG
+          ___ SPG AZU AZU AZU SPG                                     SPG FST SLO WRP PUR SPG
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG AZU AZU AZU AZU SPG
-          ___ WRP FIN SLO FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
+          ___ ___ WRP SLO FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
         layer-id = <LAYER_Mouse>;
       };
@@ -371,9 +370,9 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG FST SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG FST FST FST SPG                                     SPG FST SLO FIN WRP GDN
+          ___ SPG FST FST FST SPG                                     SPG FST SLO WRP PUR GDN
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG FST FST FST FST GDN
-          ___ FST FST FST FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
+          ___ ___ FST FST FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
         layer-id = <LAYER_MouseFast>;
       };
@@ -385,9 +384,9 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG WRP SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG WRP WRP WRP SPG                                     SPG FST SLO FIN WRP GDN
+          ___ SPG WRP WRP WRP SPG                                     SPG FST SLO WRP PUR GDN
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG WRP WRP WRP WRP GDN
-          ___ WRP WRP WRP WRP         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
+          ___ ___ WRP WRP WRP         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
         layer-id = <LAYER_MouseWarp>;
       };
@@ -399,25 +398,11 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG SLO SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG SLO SLO SLO SPG                                     SPG FST SLO FIN WRP GDN
+          ___ SPG SLO SLO SLO SPG                                     SPG FST SLO WRP PUR GDN
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SLO SLO SLO SLO GDN
-          ___ SLO SLO SLO SLO         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
+          ___ ___ SLO SLO SLO         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
         >;
         layer-id = <LAYER_MouseSlow>;
-      };
-      #endif
-
-      #ifdef LAYER_MouseFine
-      MouseFine {
-        bindings = <
-          ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
-          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ ___ SPG FIN SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG FIN FIN FIN SPG                                     SPG FST SLO FIN WRP GDN
-          ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG YLW GRN CYN MAJ GDN
-          ___ FIN FIN FIN FIN         GDN GDN GDN     ___ RED ___         FIN FIN FIN FIN PUR
-        >;
-        layer-id = <LAYER_MouseFine>;
       };
       #endif
 
@@ -564,5 +549,4 @@
   #undef FST
   #undef WRP
   #undef SLO
-  #undef FIN
 #endif

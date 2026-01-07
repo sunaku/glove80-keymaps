@@ -21,10 +21,9 @@
     "unicode",
     "emoji",
     "enthium",
-    "engram",
-    "dvorak",
+    "engrammer",
     "colemak",
-    "colemak-dh"
+    "dvorak",
     "qwerty",
     "macos"
   ],
@@ -40,7 +39,6 @@
   "layer_names": [
     "Enthium",
     "Engrammer",
-    "ColemakDH",
     "Colemak",
     "Dvorak",
     "QWERTY",
@@ -62,10 +60,11 @@
     "Symbol",
     "System",
     "Mouse",
-    "MouseFine",
     "MouseSlow",
     "MouseFast",
     "MouseWarp",
+    "macOS_left",
+    "macOS_right",
     "Gaming",
     "Factory",
     "Lower",
@@ -1213,653 +1212,6 @@
         "params": [
           {
             "value": "P",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&sticky_key_modtap RSFT RSFT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&magic",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "GRAVE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LBKT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBKT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_Emoji BSLH",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_Cursor BACKSPACE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_Number DELETE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAYER_Lower",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_Lower INSERT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_Mouse TAB",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&space LAYER_Symbol SPACE",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_World PAGE_UP",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_UP",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_DOWN",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "PG_DN",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&magic",
-        "params": []
-      }
-    ],
-    [
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N1",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N2",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N3",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N4",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N5",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N6",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N7",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N8",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N9",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N0",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "Q",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "W",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "P",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "B",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "J",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "L",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "U",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "Y",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SEMI",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "MINUS",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "EQUAL",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftPinky (A, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftRingy (R, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftMiddy (S, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&LeftIndex (T, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "G",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "M",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightIndex (N, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightMiddy (E, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightRingy (I, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightPinky (O, LAYER_ColemakDH)",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SQT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&sticky_key_modtap LSFT LSFT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "Z",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "X",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "C",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "D",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "V",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_Function ESC",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&parang_left",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&parang_right",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _HOME",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _END",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&thumb LAYER_System ENTER",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "K",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "H",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "COMMA",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "DOT",
-            "params": []
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "FSLH",
             "params": []
           }
         ]
@@ -13615,16 +12967,16 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseFine",
+            "value": "&mo LAYER_MouseWarp",
             "params": []
           }
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp",
+            "value": "K_APP",
             "params": []
           }
         ]
@@ -13800,19 +13152,14 @@
         "params": []
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAYER_MouseWarp",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseFine",
+            "value": "&mo LAYER_MouseWarp",
             "params": []
           }
         ]
@@ -13916,493 +13263,1152 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "&none",
+        "params": []
+      }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
         "params": [
           {
-            "value": "K_APP",
+            "value": "&kp LEFT_MIDDY_MOD",
             "params": []
           }
         ]
-      }
-    ],
-    [
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      }
-    ],
-    [
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
       },
       {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_RINGY_MOD",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_PINKY_MOD",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_INDEX_MOD",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -14871,342 +14877,40 @@
         "params": []
       },
       {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      }
-    ],
-    [
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_INDEX_MOD",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_PINKY_MOD",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_RINGY_MOD",
+            "params": []
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp RIGHT_MIDDY_MOD",
+            "params": []
+          }
+        ]
       },
       {
         "value": "&trans",
@@ -17266,13 +16970,8 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&to 5",
-            "params": []
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&none",
@@ -17529,7 +17228,7 @@
         "value": "&tog",
         "params": [
           {
-            "value": 6,
+            "value": 5,
             "params": []
           }
         ]
@@ -17591,7 +17290,7 @@
         "value": "&tog",
         "params": [
           {
-            "value": 6,
+            "value": 5,
             "params": []
           }
         ]

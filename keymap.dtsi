@@ -271,98 +271,6 @@
   #define KEY_RH_C5R6 PG_DN
   #define KEY_RH_C6R6 0
 #endif
-#if defined(LAYER_ColemakDH) && LAYER_ColemakDH == 0
-  #define KEY_LH_C6R1 0
-  #define KEY_LH_C5R1 0
-  #define KEY_LH_C4R1 0
-  #define KEY_LH_C3R1 0
-  #define KEY_LH_C2R1 0
-  #define KEY_RH_C2R1 0
-  #define KEY_RH_C3R1 0
-  #define KEY_RH_C4R1 0
-  #define KEY_RH_C5R1 0
-  #define KEY_RH_C6R1 0
-  #define KEY_LH_C6R2 0
-  #define KEY_LH_C5R2 N1
-  #define KEY_LH_C4R2 N2
-  #define KEY_LH_C3R2 N3
-  #define KEY_LH_C2R2 N4
-  #define KEY_LH_C1R2 N5
-  #define KEY_RH_C1R2 N6
-  #define KEY_RH_C2R2 N7
-  #define KEY_RH_C3R2 N8
-  #define KEY_RH_C4R2 N9
-  #define KEY_RH_C5R2 N0
-  #define KEY_RH_C6R2 0
-  #define KEY_LH_C6R3 0
-  #define KEY_LH_C5R3 Q
-  #define KEY_LH_C4R3 W
-  #define KEY_LH_C3R3 F
-  #define KEY_LH_C2R3 P
-  #define KEY_LH_C1R3 B
-  #define KEY_RH_C1R3 J
-  #define KEY_RH_C2R3 L
-  #define KEY_RH_C3R3 U
-  #define KEY_RH_C4R3 Y
-  #define KEY_RH_C5R3 SEMI
-  #define KEY_RH_C6R3 MINUS
-  #define KEY_LH_C6R4 EQUAL
-  #define KEY_LH_C5R4 A
-  #define KEY_LH_C4R4 R
-  #define KEY_LH_C3R4 S
-  #define KEY_LH_C2R4 T
-  #define KEY_LH_C1R4 G
-  #define KEY_RH_C1R4 M
-  #define KEY_RH_C2R4 N
-  #define KEY_RH_C3R4 E
-  #define KEY_RH_C4R4 I
-  #define KEY_RH_C5R4 O
-  #define KEY_RH_C6R4 SQT
-  #define KEY_LH_C6R5 LSFT
-  #define KEY_LH_C5R5 Z
-  #define KEY_LH_C4R5 X
-  #define KEY_LH_C3R5 C
-  #define KEY_LH_C2R5 D
-  #define KEY_LH_C1R5 V
-  #define KEY_LH_T1 ESC
-  #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 LPAR
-  #define KEY_LH_T3 RPAR
-  #define KEY_RH_T3 _HOME
-  #define KEY_RH_T2 _END
-  #define KEY_RH_T1 ENTER
-  #define LAY_RH_T1 LAYER_System
-  #define KEY_RH_C1R5 K
-  #define KEY_RH_C2R5 H
-  #define KEY_RH_C3R5 COMMA
-  #define KEY_RH_C4R5 DOT
-  #define KEY_RH_C5R5 FSLH
-  #define KEY_RH_C6R5 RSFT
-  #define KEY_LH_C6R6 0
-  #define KEY_LH_C5R6 GRAVE
-  #define KEY_LH_C4R6 LBKT
-  #define KEY_LH_C3R6 RBKT
-  #define KEY_LH_C2R6 BSLH
-  #define LAY_LH_C2R6 LAYER_Emoji
-  #define KEY_LH_T4 BACKSPACE
-  #define LAY_LH_T4 LAYER_Cursor
-  #define KEY_LH_T5 DELETE
-  #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 0
-  #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 INSERT
-  #define LAY_RH_T6 LAYER_Lower
-  #define KEY_RH_T5 TAB
-  #define LAY_RH_T5 LAYER_Mouse
-  #define KEY_RH_T4 SPACE
-  #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 PAGE_UP
-  #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 MOUSE_SCROLL_UP
-  #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
-  #define KEY_RH_C5R6 PG_DN
-  #define KEY_RH_C6R6 0
-#endif
 #if defined(LAYER_Colemak) && LAYER_Colemak == 0
   #define KEY_LH_C6R1 0
   #define KEY_LH_C5R1 0
@@ -722,6 +630,52 @@
   #define KEY_RH_C6R6 0
 #endif
 
+conditional_layers {
+  compatible = "zmk,conditional-layers";
+  #ifdef LAYER_macOS
+  #ifdef LAYER_macOS_left
+    #ifdef LAYER_Cursor
+    if_LAYER_Cursor_then_LAYER_macOS_left {
+      if-layers = <LAYER_macOS LAYER_Cursor>;
+      then-layer = <LAYER_macOS_left>;
+    };
+    #endif
+    #ifdef LAYER_Number
+    if_LAYER_Number_then_LAYER_macOS_left {
+      if-layers = <LAYER_macOS LAYER_Number>;
+      then-layer = <LAYER_macOS_left>;
+    };
+    #endif
+    #ifdef LAYER_Function
+    if_LAYER_Function_then_LAYER_macOS_left {
+      if-layers = <LAYER_macOS LAYER_Function>;
+      then-layer = <LAYER_macOS_left>;
+    };
+    #endif
+  #endif
+  #ifdef LAYER_macOS_right
+    #ifdef LAYER_Symbol
+    if_LAYER_Symbol_then_LAYER_macOS_right {
+      if-layers = <LAYER_macOS LAYER_Symbol>;
+      then-layer = <LAYER_macOS_right>;
+    };
+    #endif
+    #ifdef LAYER_Mouse
+    if_LAYER_Mouse_then_LAYER_macOS_right {
+      if-layers = <LAYER_macOS LAYER_Mouse>;
+      then-layer = <LAYER_macOS_right>;
+    };
+    #endif
+    #ifdef LAYER_System
+    if_LAYER_System_then_LAYER_macOS_right {
+      if-layers = <LAYER_macOS LAYER_System>;
+      then-layer = <LAYER_macOS_right>;
+    };
+    #endif
+  #endif
+  #endif
+};
+
 combos {
   compatible = "zmk,combos";
 
@@ -748,14 +702,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T3>;
     bindings = <&sk _GLOBE>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   combo_sticky_globe_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T3>;
     bindings = <&sk _GLOBE>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   // T1+T2
@@ -764,14 +718,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T2>;
     bindings = <&sk RALT>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   combo_sticky_altgr_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T2>;
     bindings = <&sk RALT>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   // T2+T5
@@ -780,7 +734,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T5>;
     bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
   #endif
 
@@ -788,7 +742,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T5>;
     bindings = <&kp LG(LA(LC(LSHFT)))>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   // T2+T6
@@ -797,7 +751,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T6>;
     bindings = <&mod_tab_chord _G_TAB LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
   #endif
 
@@ -805,7 +759,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T6>;
     bindings = <&kp LC(LSHFT)>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   // T3+T6
@@ -814,14 +768,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   combo_meh_ACS_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&kp LA(LC(LSHFT))>;
-    layers = <0 1 2 3 4 5 6>;
+    layers = <0 1 2 3 4 5>;
   };
 
   // T1+T4
@@ -830,14 +784,14 @@ combos {
     timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T4>;
     bindings = <&sticky_key_modtap LSFT LSFT>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6>;
   };
 
   combo_sticky_shift_right {
     timeout-ms = <SHIFT_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T4>;
     bindings = <&sticky_key_modtap RSFT RSFT>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6>;
   };
 
   // T4+T5
@@ -846,14 +800,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&caps_word>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&caps_word>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6>;
   };
 
   // T1+T5
@@ -862,14 +816,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T5>;
     bindings = <&kp CAPSLOCK>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T5>;
     bindings = <&kp CAPSLOCK>;
-    layers = <0 1 2 3 4 5 6 7>;
+    layers = <0 1 2 3 4 5 6>;
   };
 
   // T5+T6
@@ -1608,7 +1562,6 @@ behaviors {
   #define LeftPinky_layer3(key) left_pinky LEFT_PINKY_MOD key
   #define LeftPinky_layer4(key) left_pinky LEFT_PINKY_MOD key
   #define LeftPinky_layer5(key) left_pinky LEFT_PINKY_MOD key
-  #define LeftPinky_layer6(key) left_pinky LEFT_PINKY_MOD key
   #ifndef RIGHT_PINKY_HOLDING_TYPE
   #define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
   #endif
@@ -1704,7 +1657,6 @@ behaviors {
   #define RightPinky_layer3(key) right_pinky RIGHT_PINKY_MOD key
   #define RightPinky_layer4(key) right_pinky RIGHT_PINKY_MOD key
   #define RightPinky_layer5(key) right_pinky RIGHT_PINKY_MOD key
-  #define RightPinky_layer6(key) right_pinky RIGHT_PINKY_MOD key
   #ifndef LEFT_RINGY_HOLDING_TYPE
   #define LEFT_RINGY_HOLDING_TYPE RINGY_HOLDING_TYPE
   #endif
@@ -1800,7 +1752,6 @@ behaviors {
   #define LeftRingy_layer3(key) left_ringy LEFT_RINGY_MOD key
   #define LeftRingy_layer4(key) left_ringy LEFT_RINGY_MOD key
   #define LeftRingy_layer5(key) left_ringy LEFT_RINGY_MOD key
-  #define LeftRingy_layer6(key) left_ringy LEFT_RINGY_MOD key
   #ifndef RIGHT_RINGY_HOLDING_TYPE
   #define RIGHT_RINGY_HOLDING_TYPE RINGY_HOLDING_TYPE
   #endif
@@ -1896,7 +1847,6 @@ behaviors {
   #define RightRingy_layer3(key) right_ringy RIGHT_RINGY_MOD key
   #define RightRingy_layer4(key) right_ringy RIGHT_RINGY_MOD key
   #define RightRingy_layer5(key) right_ringy RIGHT_RINGY_MOD key
-  #define RightRingy_layer6(key) right_ringy RIGHT_RINGY_MOD key
   #ifndef LEFT_MIDDY_HOLDING_TYPE
   #define LEFT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
   #endif
@@ -1992,7 +1942,6 @@ behaviors {
   #define LeftMiddy_layer3(key) left_middy LEFT_MIDDY_MOD key
   #define LeftMiddy_layer4(key) left_middy LEFT_MIDDY_MOD key
   #define LeftMiddy_layer5(key) left_middy LEFT_MIDDY_MOD key
-  #define LeftMiddy_layer6(key) left_middy LEFT_MIDDY_MOD key
   #ifndef RIGHT_MIDDY_HOLDING_TYPE
   #define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
   #endif
@@ -2088,7 +2037,6 @@ behaviors {
   #define RightMiddy_layer3(key) right_middy RIGHT_MIDDY_MOD key
   #define RightMiddy_layer4(key) right_middy RIGHT_MIDDY_MOD key
   #define RightMiddy_layer5(key) right_middy RIGHT_MIDDY_MOD key
-  #define RightMiddy_layer6(key) right_middy RIGHT_MIDDY_MOD key
   #ifndef LEFT_INDEX_HOLDING_TYPE
   #define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
   #endif
@@ -2184,7 +2132,6 @@ behaviors {
   #define LeftIndex_layer3(key) left_index LEFT_INDEX_MOD key
   #define LeftIndex_layer4(key) left_index LEFT_INDEX_MOD key
   #define LeftIndex_layer5(key) left_index LEFT_INDEX_MOD key
-  #define LeftIndex_layer6(key) left_index LEFT_INDEX_MOD key
   #ifndef RIGHT_INDEX_HOLDING_TYPE
   #define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
   #endif
@@ -2280,7 +2227,6 @@ behaviors {
   #define RightIndex_layer3(key) right_index RIGHT_INDEX_MOD key
   #define RightIndex_layer4(key) right_index RIGHT_INDEX_MOD key
   #define RightIndex_layer5(key) right_index RIGHT_INDEX_MOD key
-  #define RightIndex_layer6(key) right_index RIGHT_INDEX_MOD key
   #ifndef LEFT_RINGY_PINKY_HOLDING_TYPE
   #define LEFT_RINGY_PINKY_HOLDING_TYPE LEFT_RINGY_CHORD_HOLDING_TYPE
   #endif
@@ -9674,19 +9620,11 @@ macros {
 #endif
 
 //
-// MOUSE_SCALER_FINE sets parameters for the &zip_xy_scaler input processor:
-// https://zmk.dev/docs/keymaps/input-processors/scaler
-//
-#ifndef MOUSE_SCALER_FINE
-#define MOUSE_SCALER_FINE 1 16
-#endif
-
-//
 // MOUSE_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 4
+#define MOUSE_SCALER_SLOW 1 16
 #endif
 
 //
@@ -9726,12 +9664,6 @@ macros {
   //
   #include <input/processors.dtsi>
   &mmv_input_listener {
-    #ifdef LAYER_MouseFine
-    fine {
-      layers = <LAYER_MouseFine>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_FINE>;
-    };
-    #endif
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
@@ -9768,12 +9700,6 @@ macros {
     };
   };
   &msc_input_listener {
-    #ifdef LAYER_MouseFine
-    fine {
-      layers = <LAYER_MouseFine>;
-      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FINE>;
-    };
-    #endif
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
