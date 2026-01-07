@@ -284,17 +284,16 @@ by holding the Magic key and tapping the respective number key for that layer.
 | Shortcut  | Layer number | Alpha layout                        |
 | --------- | ------------ | ----------------------------------- |
 | Magic+`=` | 0            | Enthium (base layer; your choice)   |
-| Magic+`1` | 1            | Engrammer                           |
-| Magic+`2` | 2            | Colemak                             |
-| Magic+`3` | 3            | Dvorak                              |
-| Magic+`4` | 4            | QWERTY                              |
+| Magic+`1` | 1            | Colemak                             |
+| Magic+`2` | 2            | Dvorak                              |
+| Magic+`3` | 3            | QWERTY                              |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate
-the QWERTY layout by typing Magic+`4` and that we've forgotten about it after
+the QWERTY layout by typing Magic+`3` and that we've forgotten about it after
 some time... 😅 how can we know which alpha layout is currently active?  Well,
-by simply tapping the Magic key, we'll see that number 4 illuminates in pink 🚨
-thereby indicating that the QWERTY alpha layout (at layer number 4) is active.
+by simply tapping the Magic key, we'll see that number 3 illuminates in pink 🚨
+thereby indicating that the QWERTY alpha layout (at layer number 3) is active.
 
 However, note that number row illumination isn't available for layer 6 onwards.
 That's just how the Glove80's firmware is currently implemented today; you have
