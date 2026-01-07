@@ -139,13 +139,25 @@
     "Go to\n#2\n\n\n\n\nlayer",
     "Go to\n#3\n\n\n\n\nlayer",
     {
-      "c": "#cccccc",
-      "g": true
+      "fa": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
     },
-    "Go to\n#4\n\n\n\n\nlayer",
-    "Go to\n#5\n\n\n\n\nlayer",
+    "macOS\non/off\n\n\n\n\n<i class='fa fa-apple'></i>",
+    {
+      "f2": 2
+    },
+    "Typing\non/off\n\n\n\n\nlayer",
     {
       "x": 7.25,
+      "c": "#cccccc",
+      "g": true,
       "a": 7,
       "f": 5
     },
