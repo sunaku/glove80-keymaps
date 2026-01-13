@@ -1228,6 +1228,7 @@
   #define KEY_LH_C4R6 LBKT
   #define KEY_LH_C3R6 RBKT
   #define KEY_LH_C2R6 AT
+  #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE

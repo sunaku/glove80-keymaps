@@ -144,8 +144,9 @@
         case params.lstrip.sub(/^&/, '').rstrip
         when /(?:Left|Right)\w+\s*\(\s*(\w+)/
           tap = $1
-        when /engram_(\w+)/
+        when /engram_(\w+)(?:\s+(LAYER_\w+))?/
           tap = $1
+          lay = $2
         when /parang_left/
           tap = "LPAR"
         when /parang_right/
