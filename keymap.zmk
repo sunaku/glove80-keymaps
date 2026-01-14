@@ -1224,10 +1224,10 @@
   #define KEY_RH_C5R5 P
   #define KEY_RH_C6R5 RSFT
   #define KEY_LH_C6R6 0
-  #define KEY_LH_C5R6 FSLH
+  #define KEY_LH_C5R6 AT
   #define KEY_LH_C4R6 LBKT
   #define KEY_LH_C3R6 RBKT
-  #define KEY_LH_C2R6 AT
+  #define KEY_LH_C2R6 FSLH
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
@@ -4067,22 +4067,22 @@ behaviors {
     retro-tap; // tap on standalone hold
   };
   #ifdef LAYER_Engram
-  crumb_engram_AT: crumb_layer_access_engram_AT {
+  crumb_engram_FSLH: crumb_layer_access_engram_FSLH {
     compatible = "zmk,behavior-hold-tap";
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
-    bindings = <&mo>, <&engram_AT>;
+    bindings = <&mo>, <&engram_FSLH>;
     retro-tap; // tap on standalone hold
   };
-  thumb_engram_AT: thumb_layer_access_engram_AT {
+  thumb_engram_FSLH: thumb_layer_access_engram_FSLH {
     compatible = "zmk,behavior-hold-tap";
     flavor = THUMB_HOLDING_TYPE;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
-    bindings = <&mo>, <&engram_AT>;
+    bindings = <&mo>, <&engram_FSLH>;
   };
   #endif
   space: thumb_layer_access_spacebar {
@@ -10894,12 +10894,12 @@ macros {
 
         layer_Engram {
             bindings = <
-                        &none                         &none                         &none                         &none                           &none                                                                                                                                                                                                                  &none                          &none                          &none                          &none                         &none
-                        &none                    &engram_N1                    &engram_N2                    &engram_N3                      &engram_N4     &engram_N5                                                                                                                                                               &engram_N6                     &engram_N7                     &engram_N8                     &engram_N9                     &engram_N0                         &none
-                        &none                         &kp B                         &kp Y                         &kp O                           &kp U    &engram_SQT                                                                                                                                                              &engram_DQT                          &kp L                          &kp D                          &kp W                          &kp V                         &kp Z
-                 &engram_HASH  &LeftPinky (C, LAYER_Engram)  &LeftRingy (I, LAYER_Engram)  &LeftMiddy (E, LAYER_Engram)    &LeftIndex (A, LAYER_Engram)  &engram_COMMA                                                                                                                                                              &engram_DOT  &RightIndex (H, LAYER_Engram)  &RightMiddy (T, LAYER_Engram)  &RightRingy (S, LAYER_Engram)  &RightPinky (N, LAYER_Engram)                         &kp Q
- &sticky_key_modtap LSFT LSFT                         &kp G                         &kp X                         &kp J                           &kp K      &kp MINUS      &thumb LAYER_Function ESC                &parang_left    &parang_right                  &kp _HOME                &kp _END  &thumb LAYER_System ENTER  &engram_QMARK                          &kp R                          &kp M                          &kp F                          &kp P  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                  &engram_FSLH                      &kp LBKT                      &kp RBKT  &thumb_engram_AT LAYER_Emoji 0                 &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                    &thumb LAYER_World PAGE_UP           &msc MOUSE_SCROLL_UP         &msc MOUSE_SCROLL_DOWN                      &kp PG_DN          &magic LAYER_Magic 0
+                        &none                         &none                         &none                         &none                             &none                                                                                                                                                                                                                  &none                          &none                          &none                          &none                         &none
+                        &none                    &engram_N1                    &engram_N2                    &engram_N3                        &engram_N4     &engram_N5                                                                                                                                                               &engram_N6                     &engram_N7                     &engram_N8                     &engram_N9                     &engram_N0                         &none
+                        &none                         &kp B                         &kp Y                         &kp O                             &kp U    &engram_SQT                                                                                                                                                              &engram_DQT                          &kp L                          &kp D                          &kp W                          &kp V                         &kp Z
+                 &engram_HASH  &LeftPinky (C, LAYER_Engram)  &LeftRingy (I, LAYER_Engram)  &LeftMiddy (E, LAYER_Engram)      &LeftIndex (A, LAYER_Engram)  &engram_COMMA                                                                                                                                                              &engram_DOT  &RightIndex (H, LAYER_Engram)  &RightMiddy (T, LAYER_Engram)  &RightRingy (S, LAYER_Engram)  &RightPinky (N, LAYER_Engram)                         &kp Q
+ &sticky_key_modtap LSFT LSFT                         &kp G                         &kp X                         &kp J                             &kp K      &kp MINUS      &thumb LAYER_Function ESC                &parang_left    &parang_right                  &kp _HOME                &kp _END  &thumb LAYER_System ENTER  &engram_QMARK                          &kp R                          &kp M                          &kp F                          &kp P  &sticky_key_modtap RSFT RSFT
+         &magic LAYER_Magic 0                    &engram_AT                      &kp LBKT                      &kp RBKT  &thumb_engram_FSLH LAYER_Emoji 0                 &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &mo LAYER_Lower  &thumb LAYER_Lower INSERT  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                    &thumb LAYER_World PAGE_UP           &msc MOUSE_SCROLL_UP         &msc MOUSE_SCROLL_DOWN                      &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
