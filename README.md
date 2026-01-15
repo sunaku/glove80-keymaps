@@ -1,23 +1,22 @@
 # "Glorious Engrammer" keymap for MoErgo Glove80
 
-This is [my Glove80] keymap featuring the [Enthium] and [Engrammer] layouts with
-[Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
-Colemak/DH, etc.) and pinky shifts are also provided to ease your transition.
+This is [my Glove80] keymap featuring the [Enthium] layout with [Miryoku]-style
+layers and [home row mods].  Other layouts (**QWERTY**, Dvorak, and Colemak)
+as well as traditional pinky shifts are also provided to ease your transition.
 
 ![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](
 README/base-layer-photograph-Enthium.webp )
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
-[Engrammer]:     https://sunaku.github.io/engrammer-keyboard-layout.html
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [home row mods]: https://sunaku.github.io/home-row-mods.html
 
 ## Keymap
 
-Version 42-rc8 (PREVIEW)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc8
-- Release: https://my.moergo.com/glove80/#/layout/user/380402b4-66e5-4329-bf74-c3e01df44aa8
+Version 42-rc9 (PREVIEW)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc9
+- Release: https://my.moergo.com/glove80/#/layout/user/2314c452-bfff-4b59-95cf-bdf037ccdaad
 
 ### Legend
 
