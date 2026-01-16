@@ -356,9 +356,9 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG AZU SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG AZU AZU AZU SPG                                     SPG FST SLO WRP PUR SPG
+          ___ SPG AZU AZU AZU SPG                                     SPG FST WRP SLO PUR SPG
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG AZU AZU AZU AZU SPG
-          ___ ___ WRP SLO FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
+          ___ ___ SLO WRP FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
         layer-id = <LAYER_Mouse>;
       };
@@ -370,7 +370,7 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG FST SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG FST FST FST SPG                                     SPG FST SLO WRP PUR GDN
+          ___ SPG FST FST FST SPG                                     SPG FST WRP SLO PUR GDN
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG FST FST FST FST GDN
           ___ ___ FST FST FST         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
@@ -384,7 +384,7 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG WRP SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG WRP WRP WRP SPG                                     SPG FST SLO WRP PUR GDN
+          ___ SPG WRP WRP WRP SPG                                     SPG FST WRP SLO PUR GDN
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG WRP WRP WRP WRP GDN
           ___ ___ WRP WRP WRP         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
@@ -398,7 +398,7 @@
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ SPG SLO SPG ___                                     GDN GDN GDN GDN GDN ___
-          ___ SPG SLO SLO SLO SPG                                     SPG FST SLO WRP PUR GDN
+          ___ SPG SLO SLO SLO SPG                                     SPG FST WRP SLO PUR GDN
           ___ SPG BLU BLU BLU SPG     GDN PUR GDN     BLU BLU BLU     SPG SLO SLO SLO SLO GDN
           ___ ___ SLO SLO SLO         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
         >;

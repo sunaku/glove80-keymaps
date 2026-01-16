@@ -10589,7 +10589,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow"
+            "value": "&mo LAYER_MouseWarp"
           }
         ]
       },
@@ -10597,7 +10597,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp"
+            "value": "&mo LAYER_MouseSlow"
           }
         ]
       },
@@ -10766,7 +10766,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp"
+            "value": "&mo LAYER_MouseSlow"
           }
         ]
       },
@@ -10774,7 +10774,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow"
+            "value": "&mo LAYER_MouseWarp"
           }
         ]
       },

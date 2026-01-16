@@ -281,8 +281,8 @@
       "c": "#ffcdd2"
     },
     "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed",
-    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
-    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed"
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed"
   ],
   [
     {
@@ -472,8 +472,8 @@
       "c": "#ffcdd2",
       "a": 5
     },
-    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     "<i class='fa fa-barcode'></i>\nslow\n\n\n\n\nSpeed",
+    "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     "<i class='fa fa-barcode'></i>\nfast\n\n\n\n\nSpeed"
   ],
   [
