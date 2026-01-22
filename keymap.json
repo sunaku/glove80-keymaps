@@ -406,7 +406,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "FSLH"
+            "value": "SEMI"
           }
         ]
       },
@@ -414,7 +414,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SEMI"
+            "value": "FSLH"
           }
         ]
       },

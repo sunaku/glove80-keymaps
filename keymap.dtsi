@@ -138,8 +138,8 @@
   #define KEY_LH_C5R5 SQT
   #define KEY_LH_C4R5 COMMA
   #define KEY_LH_C3R5 DOT
-  #define KEY_LH_C2R5 FSLH
-  #define KEY_LH_C1R5 SEMI
+  #define KEY_LH_C2R5 SEMI
+  #define KEY_LH_C1R5 FSLH
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
   #define KEY_LH_T2 LPAR
