@@ -390,7 +390,11 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_C1R5 POS_LH_C2R6>;
     bindings = <&tog LAYER_Gaming>;
-    layers = <0 LAYER_macOS LAYER_Gaming>;
+    layers = <0 LAYER_Gaming
+      #ifdef LAYER_macOS
+      LAYER_macOS
+      #endif
+    >;
   };
   #endif
 
@@ -399,7 +403,11 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_C1R5 POS_RH_C2R6>;
     bindings = <&tog LAYER_Typing>;
-    layers = <0 LAYER_macOS LAYER_Typing>;
+    layers = <0 LAYER_Typing
+      #ifdef LAYER_macOS
+      LAYER_macOS
+      #endif
+    >;
   };
   #endif
 
