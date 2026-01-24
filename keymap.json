@@ -9301,12 +9301,7 @@
         "value": "&none"
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&triple_backtick"
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&kp",
@@ -9606,7 +9601,12 @@
         ]
       },
       {
-        "value": "&none"
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&triple_backtick"
+          }
+        ]
       },
       {
         "value": "&kp",
