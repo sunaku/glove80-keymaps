@@ -10632,7 +10632,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _CUT"
+            "value": "&mo LAYER_MouseSlow"
           }
         ]
       },
@@ -10640,7 +10640,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _COPY"
+            "value": "&mo LAYER_MouseWarp"
           }
         ]
       },
@@ -10648,7 +10648,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _PASTE"
+            "value": "&mo LAYER_MouseFast"
           }
         ]
       },
@@ -10766,7 +10766,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow"
+            "value": "&kp _CUT"
           }
         ]
       },
@@ -10774,7 +10774,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp"
+            "value": "&kp _COPY"
           }
         ]
       },
@@ -10782,7 +10782,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseFast"
+            "value": "&kp _PASTE"
           }
         ]
       },

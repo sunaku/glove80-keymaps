@@ -333,17 +333,11 @@
   [
     {
       "y": -0.5,
-      "x": 3,
-      "c": "#c5cae9",
-      "t": "#000000",
-      "f": 3
-    },
-    "Cut<br><i class='fa fa-cut'></i>",
-    "Copy <i class='fa fa-copy'></i>",
-    "Paste <i class='fa fa-paste'></i>",
-    {
+      "x": 6,
       "c": "#dcedc8",
-      "a": 5
+      "t": "#000000",
+      "a": 5,
+      "f": 3
     },
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
     {
@@ -397,11 +391,18 @@
   [
     {
       "y": -0.5,
-      "x": 15.25,
-      "c": "#D7CCC8",
+      "x": 3,
+      "c": "#c5cae9",
       "t": "#000000",
-      "p": "SPACE",
       "f": 3
+    },
+    "Cut<br><i class='fa fa-cut'></i>",
+    "Copy <i class='fa fa-copy'></i>",
+    "Paste <i class='fa fa-paste'></i>",
+    {
+      "x": 9.25,
+      "c": "#D7CCC8",
+      "p": "SPACE"
     },
     "Shift\n\n\n\nShift",
     "Ctrl\n\n\n\nCtrl",
@@ -467,7 +468,7 @@
   [
     {
       "ry": 0.25,
-      "y": 5.75,
+      "y": 4.75,
       "x": 3,
       "c": "#ffcdd2",
       "a": 5
