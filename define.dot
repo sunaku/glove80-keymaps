@@ -525,6 +525,8 @@ digraph settings {
 
     MOUSE_SCROLL_MAXIMUM_SPEED -> NUMBER_10
 
+    THUMB_MOUSE_SCROLL_SPEED -> NUMBER_33
+
 
   "+90" -> TAPPING_RESOLUTION [color=red]
 
@@ -575,6 +577,8 @@ digraph settings {
       NUMBER_300 [label="300", style=filled, fillcolor=yellow, shape=signature]
     
       NUMBER_600 [label="600", style=filled, fillcolor=yellow, shape=signature]
+    
+      NUMBER_33 [label="33", style=filled, fillcolor=yellow, shape=signature]
     
 
     

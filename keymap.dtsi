@@ -9452,11 +9452,13 @@ macros {
   #define MOUSE_SCROLL_DOWN  SCRL_UP
   #define MOUSE_SCROLL_LEFT  SCRL_RIGHT
   #define MOUSE_SCROLL_RIGHT SCRL_LEFT
+  #define NATURAL_SCROLLING_FACTOR -1
 #else
   #define MOUSE_SCROLL_UP    SCRL_UP
   #define MOUSE_SCROLL_DOWN  SCRL_DOWN
   #define MOUSE_SCROLL_LEFT  SCRL_LEFT
   #define MOUSE_SCROLL_RIGHT SCRL_RIGHT
+  #define NATURAL_SCROLLING_FACTOR 1
 #endif
 
 //
@@ -9526,6 +9528,16 @@ macros {
 #ifndef MOUSE_SCROLL_MAXIMUM_SPEED
 #define MOUSE_SCROLL_MAXIMUM_SPEED 10
 #endif
+
+//
+// THUMB_MOUSE_SCROLL_SPEED applies to base layer's scroll up/down keys.
+//
+#ifndef THUMB_MOUSE_SCROLL_SPEED
+#define THUMB_MOUSE_SCROLL_SPEED 33
+#endif
+
+#define thums_up   msc MOVE_Y(THUMB_MOUSE_SCROLL_SPEED * NATURAL_SCROLLING_FACTOR)
+#define thums_down msc MOVE_Y(THUMB_MOUSE_SCROLL_SPEED * NATURAL_SCROLLING_FACTOR * -1)
 
 //
 // MOUSE_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
