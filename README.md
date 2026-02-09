@@ -280,12 +280,12 @@ This keymap lets you dynamically switch to alpha layouts (such as QWERTY and
 Dvorak) other than the one you chose for your base layer during installation,
 by holding the Magic key and tapping the respective number key for that layer.
 
-| Shortcut  | Layer number | Alpha layout                        |
-| --------- | ------------ | ----------------------------------- |
-| Magic+`=` | 0            | Enthium (base layer; your choice)   |
-| Magic+`1` | 1            | Colemak                             |
-| Magic+`2` | 2            | Dvorak                              |
-| Magic+`3` | 3            | QWERTY                              |
+| Shortcut  | Layer number | Alpha layout |
+| --------- | ------------ | ------------ |
+| Magic+`=` | 0            | [Enthium]    |
+| Magic+`1` | 1            | Dvorak       |
+| Magic+`2` | 2            | Colemak      |
+| Magic+`3` | 3            | QWERTY       |
 
 For the first 5 alpha layouts, the respective number key for each layout will
 illuminate when you tap the Magic key.  For example, suppose that we activate

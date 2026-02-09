@@ -96,8 +96,8 @@ task :pdf => layers_pdf
 layers_pdf_sequence = %w[
   base-layer-diagram
   base-layer-diagram-Enthium
-  base-layer-diagram-Colemak
   base-layer-diagram-Dvorak
+  base-layer-diagram-Colemak
   base-layer-diagram-QWERTY
 
   repeat-layer-diagram
