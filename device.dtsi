@@ -364,8 +364,8 @@
       };
       #endif
 
-      #ifdef LAYER_MouseFast
-      MouseFast {
+      #ifdef LAYER_Mouse_fast
+      Mouse_fast {
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
@@ -374,12 +374,12 @@
           ___ SPG FST FST FST SPG     GDN PUR GDN     BLU BLU BLU     SPG FST FST FST FST GDN
           ___ ___ BLU BLU BLU         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
-        layer-id = <LAYER_MouseFast>;
+        layer-id = <LAYER_Mouse_fast>;
       };
       #endif
 
-      #ifdef LAYER_MouseWarp
-      MouseWarp {
+      #ifdef LAYER_Mouse_warp
+      Mouse_warp {
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
@@ -388,12 +388,12 @@
           ___ SPG WRP WRP WRP SPG     GDN PUR GDN     BLU BLU BLU     SPG WRP WRP WRP WRP GDN
           ___ ___ BLU BLU BLU         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ ___
         >;
-        layer-id = <LAYER_MouseWarp>;
+        layer-id = <LAYER_Mouse_warp>;
       };
       #endif
 
-      #ifdef LAYER_MouseSlow
-      MouseSlow {
+      #ifdef LAYER_Mouse_slow
+      Mouse_slow {
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
@@ -402,7 +402,7 @@
           ___ SPG SLO SLO SLO SPG     GDN PUR GDN     BLU BLU BLU     SPG SLO SLO SLO SLO GDN
           ___ ___ BLU BLU BLU         GDN GDN GDN     ___ RED ___         YLW GRN CYN MAJ PUR
         >;
-        layer-id = <LAYER_MouseSlow>;
+        layer-id = <LAYER_Mouse_slow>;
       };
       #endif
 

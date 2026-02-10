@@ -59,9 +59,9 @@
     "Symbol",
     "System",
     "Mouse",
-    "MouseSlow",
-    "MouseFast",
-    "MouseWarp",
+    "Mouse_slow",
+    "Mouse_fast",
+    "Mouse_warp",
     "Gaming",
     "Factory",
     "Lower",
@@ -11286,7 +11286,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseFast"
+            "value": "&mo LAYER_Mouse_fast"
           }
         ]
       },
@@ -11294,7 +11294,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp"
+            "value": "&mo LAYER_Mouse_warp"
           }
         ]
       },
@@ -11302,7 +11302,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow"
+            "value": "&mo LAYER_Mouse_slow"
           }
         ]
       },
@@ -11338,7 +11338,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseSlow"
+            "value": "&mo LAYER_Mouse_slow"
           }
         ]
       },
@@ -11346,7 +11346,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseWarp"
+            "value": "&mo LAYER_Mouse_warp"
           }
         ]
       },
@@ -11354,7 +11354,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAYER_MouseFast"
+            "value": "&mo LAYER_Mouse_fast"
           }
         ]
       },
