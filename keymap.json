@@ -7768,12 +7768,8 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "E"
-          }
-        ]
+        "value": "&none",
+        "params": []
       },
       {
         "value": "&kp",
@@ -7983,12 +7979,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LS",
-            "params": [
-              {
-                "value": "MINUS"
-              }
-            ]
+            "value": "E"
           }
         ]
       },
@@ -8132,7 +8123,17 @@
         ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LS",
+            "params": [
+              {
+                "value": "MINUS"
+              }
+            ]
+          }
+        ]
       },
       {
         "value": "Custom",
