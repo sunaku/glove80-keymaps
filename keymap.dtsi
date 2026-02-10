@@ -9584,21 +9584,21 @@ macros {
   //
   #include <input/processors.dtsi>
   &mmv_input_listener {
-    #ifdef LAYER_MouseSlow
+    #ifdef LAYER_Mouse_slow
     slow {
-      layers = <LAYER_MouseSlow>;
+      layers = <LAYER_Mouse_slow>;
       input-processors = <&zip_xy_scaler MOUSE_SCALER_SLOW>;
     };
     #endif
-    #ifdef LAYER_MouseWarp
+    #ifdef LAYER_Mouse_warp
     warp {
-      layers = <LAYER_MouseWarp>;
+      layers = <LAYER_Mouse_warp>;
       input-processors = <&zip_xy_scaler MOUSE_SCALER_WARP>;
     };
     #endif
-    #ifdef LAYER_MouseFast
+    #ifdef LAYER_Mouse_fast
     fast {
-      layers = <LAYER_MouseFast>;
+      layers = <LAYER_Mouse_fast>;
       input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
     };
     #endif
@@ -9620,21 +9620,21 @@ macros {
     };
   };
   &msc_input_listener {
-    #ifdef LAYER_MouseSlow
+    #ifdef LAYER_Mouse_slow
     slow {
-      layers = <LAYER_MouseSlow>;
+      layers = <LAYER_Mouse_slow>;
       input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_SLOW>;
     };
     #endif
-    #ifdef LAYER_MouseWarp
+    #ifdef LAYER_Mouse_warp
     warp {
-      layers = <LAYER_MouseWarp>;
+      layers = <LAYER_Mouse_warp>;
       input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_WARP>;
     };
     #endif
-    #ifdef LAYER_MouseFast
+    #ifdef LAYER_Mouse_fast
     fast {
-      layers = <LAYER_MouseFast>;
+      layers = <LAYER_Mouse_fast>;
       input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FAST>;
     };
     #endif
