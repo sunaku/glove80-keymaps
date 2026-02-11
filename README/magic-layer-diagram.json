@@ -139,26 +139,20 @@
     "Go to\n#2\n\n\n\n\nlayer",
     "Go to\n#3\n\n\n\n\nlayer",
     {
-      "fa": [
-        2,
-        2,
-        0,
-        0,
-        0,
-        0,
-        5
-      ]
-    },
-    "macOS\non/off\n\n\n\n\n<i class='fa fa-apple'></i>",
-    {
-      "f2": 2
-    },
-    "Typing\non/off\n\n\n\n\nlayer",
-    {
-      "x": 7.25,
       "c": "#cccccc",
       "g": true,
-      "a": 7,
+      "sm": "",
+      "sb": "",
+      "st": "",
+      "a": 7
+    },
+    "",
+    "",
+    {
+      "x": 7.25,
+      "sm": "kailh-choc",
+      "sb": "kailh",
+      "st": "Kailh Choc v1",
       "f": 5
     },
     "",

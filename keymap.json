@@ -15408,20 +15408,12 @@
         ]
       },
       {
-        "value": "&tog",
-        "params": [
-          {
-            "value": 4
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
-        "value": "&tog",
-        "params": [
-          {
-            "value": 5
-          }
-        ]
+        "value": "&trans",
+        "params": []
       },
       {
         "value": "&none",
