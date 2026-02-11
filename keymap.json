@@ -47,10 +47,10 @@
     "LeftRingy",
     "LeftMiddy",
     "LeftIndex",
-    "RightPinky",
-    "RightRingy",
-    "RightMiddy",
     "RightIndex",
+    "RightMiddy",
+    "RightRingy",
+    "RightPinky",
     "Gaming",
     "Cursor",
     "Number",
@@ -5112,7 +5112,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C2R1"
+            "value": "&right_index_tap KEY_RH_C2R1"
           }
         ]
       },
@@ -5120,7 +5120,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C3R1"
+            "value": "&right_index_tap KEY_RH_C3R1"
           }
         ]
       },
@@ -5128,7 +5128,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C4R1"
+            "value": "&right_index_tap KEY_RH_C4R1"
           }
         ]
       },
@@ -5136,7 +5136,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C5R1"
+            "value": "&right_index_tap KEY_RH_C5R1"
           }
         ]
       },
@@ -5144,79 +5144,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C6R1"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_pinky_tap KEY_RH_C1R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_pinky_tap KEY_RH_C2R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_pinky_tap KEY_RH_C3R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_pinky_tap KEY_RH_C4R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_pinky_tap KEY_RH_C5R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_pinky_tap KEY_RH_C6R2"
+            "value": "&right_index_tap KEY_RH_C6R1"
           }
         ]
       },
@@ -5248,7 +5176,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C1R3"
+            "value": "&right_index_tap KEY_RH_C1R2"
           }
         ]
       },
@@ -5256,7 +5184,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C2R3"
+            "value": "&right_index_tap KEY_RH_C2R2"
           }
         ]
       },
@@ -5264,7 +5192,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C3R3"
+            "value": "&right_index_tap KEY_RH_C3R2"
           }
         ]
       },
@@ -5272,7 +5200,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C4R3"
+            "value": "&right_index_tap KEY_RH_C4R2"
           }
         ]
       },
@@ -5280,7 +5208,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C5R3"
+            "value": "&right_index_tap KEY_RH_C5R2"
           }
         ]
       },
@@ -5288,7 +5216,79 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C6R3"
+            "value": "&right_index_tap KEY_RH_C6R2"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C1R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C2R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C3R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C4R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C5R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C6R3"
           }
         ]
       },
@@ -5336,31 +5336,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C1R4"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightPinkyIndex"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightPinkyMiddy"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightPinkyRingy"
+            "value": "&right_index_tap KEY_RH_C1R4"
           }
         ]
       },
@@ -5372,7 +5348,31 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C6R4"
+            "value": "&RightIndexMiddy"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightIndexRingy"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightIndexPinky"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_index_tap KEY_RH_C6R4"
           }
         ]
       },
@@ -5416,7 +5416,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_T3"
+            "value": "&right_index_tap KEY_RH_T3"
           }
         ]
       },
@@ -5424,7 +5424,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_T2"
+            "value": "&right_index_tap KEY_RH_T2"
           }
         ]
       },
@@ -5440,7 +5440,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C1R5"
+            "value": "&right_index_tap KEY_RH_C1R5"
           }
         ]
       },
@@ -5448,7 +5448,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C2R5"
+            "value": "&right_index_tap KEY_RH_C2R5"
           }
         ]
       },
@@ -5456,7 +5456,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C3R5"
+            "value": "&right_index_tap KEY_RH_C3R5"
           }
         ]
       },
@@ -5464,7 +5464,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C4R5"
+            "value": "&right_index_tap KEY_RH_C4R5"
           }
         ]
       },
@@ -5472,7 +5472,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C5R5"
+            "value": "&right_index_tap KEY_RH_C5R5"
           }
         ]
       },
@@ -5548,7 +5548,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C3R6"
+            "value": "&right_index_tap KEY_RH_C3R6"
           }
         ]
       },
@@ -5556,7 +5556,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C4R6"
+            "value": "&right_index_tap KEY_RH_C4R6"
           }
         ]
       },
@@ -5564,493 +5564,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_C5R6"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      }
-    ],
-    [
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C2R1"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C3R1"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C4R1"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C5R1"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C6R1"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C1R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C2R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C3R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C4R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C5R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C6R2"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C1R3"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C2R3"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C3R3"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C4R3"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C5R3"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C6R3"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp LEFT_PINKY_KEY"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp LEFT_RINGY_KEY"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp LEFT_MIDDY_KEY"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp LEFT_INDEX_KEY"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C1R4"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightRingyIndex"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightRingyMiddy"
-          }
-        ]
-      },
-      {
-        "value": "&none",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightRingyPinky"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C6R4"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_T3"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_T2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAY_RH_T1"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C1R5"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C2R5"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C3R5"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C4R5"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C5R5"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAY_RH_T6"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAY_RH_T5"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAY_RH_T4"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&mo LAY_RH_C2R6"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C3R6"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C4R6"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_ringy_tap KEY_RH_C5R6"
+            "value": "&right_index_tap KEY_RH_C5R6"
           }
         ]
       },
@@ -6570,7 +6084,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C2R1"
+            "value": "&right_ringy_tap KEY_RH_C2R1"
           }
         ]
       },
@@ -6578,7 +6092,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C3R1"
+            "value": "&right_ringy_tap KEY_RH_C3R1"
           }
         ]
       },
@@ -6586,7 +6100,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C4R1"
+            "value": "&right_ringy_tap KEY_RH_C4R1"
           }
         ]
       },
@@ -6594,7 +6108,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C5R1"
+            "value": "&right_ringy_tap KEY_RH_C5R1"
           }
         ]
       },
@@ -6602,79 +6116,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C6R1"
-          }
-        ]
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "&trans",
-        "params": []
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C1R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C2R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C3R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C4R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C5R2"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C6R2"
+            "value": "&right_ringy_tap KEY_RH_C6R1"
           }
         ]
       },
@@ -6706,7 +6148,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C1R3"
+            "value": "&right_ringy_tap KEY_RH_C1R2"
           }
         ]
       },
@@ -6714,7 +6156,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C2R3"
+            "value": "&right_ringy_tap KEY_RH_C2R2"
           }
         ]
       },
@@ -6722,7 +6164,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C3R3"
+            "value": "&right_ringy_tap KEY_RH_C3R2"
           }
         ]
       },
@@ -6730,7 +6172,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C4R3"
+            "value": "&right_ringy_tap KEY_RH_C4R2"
           }
         ]
       },
@@ -6738,7 +6180,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C5R3"
+            "value": "&right_ringy_tap KEY_RH_C5R2"
           }
         ]
       },
@@ -6746,7 +6188,79 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C6R3"
+            "value": "&right_ringy_tap KEY_RH_C6R2"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_C1R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_C2R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_C3R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_C4R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_C5R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_ringy_tap KEY_RH_C6R3"
           }
         ]
       },
@@ -6794,7 +6308,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C1R4"
+            "value": "&right_ringy_tap KEY_RH_C1R4"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightRingyIndex"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightRingyMiddy"
           }
         ]
       },
@@ -6806,7 +6336,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndexMiddy"
+            "value": "&RightRingyPinky"
           }
         ]
       },
@@ -6814,23 +6344,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&RightIndexRingy"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&RightIndexPinky"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&right_index_tap KEY_RH_C6R4"
+            "value": "&right_ringy_tap KEY_RH_C6R4"
           }
         ]
       },
@@ -6874,7 +6388,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_T3"
+            "value": "&right_ringy_tap KEY_RH_T3"
           }
         ]
       },
@@ -6882,7 +6396,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_T2"
+            "value": "&right_ringy_tap KEY_RH_T2"
           }
         ]
       },
@@ -6898,7 +6412,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C1R5"
+            "value": "&right_ringy_tap KEY_RH_C1R5"
           }
         ]
       },
@@ -6906,7 +6420,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C2R5"
+            "value": "&right_ringy_tap KEY_RH_C2R5"
           }
         ]
       },
@@ -6914,7 +6428,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C3R5"
+            "value": "&right_ringy_tap KEY_RH_C3R5"
           }
         ]
       },
@@ -6922,7 +6436,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C4R5"
+            "value": "&right_ringy_tap KEY_RH_C4R5"
           }
         ]
       },
@@ -6930,7 +6444,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C5R5"
+            "value": "&right_ringy_tap KEY_RH_C5R5"
           }
         ]
       },
@@ -7006,7 +6520,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C3R6"
+            "value": "&right_ringy_tap KEY_RH_C3R6"
           }
         ]
       },
@@ -7014,7 +6528,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C4R6"
+            "value": "&right_ringy_tap KEY_RH_C4R6"
           }
         ]
       },
@@ -7022,7 +6536,493 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_C5R6"
+            "value": "&right_ringy_tap KEY_RH_C5R6"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      }
+    ],
+    [
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C2R1"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C3R1"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C4R1"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C5R1"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C6R1"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C1R2"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C2R2"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C3R2"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C4R2"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C5R2"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C6R2"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C1R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C2R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C3R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C4R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C5R3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C6R3"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_PINKY_KEY"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_RINGY_KEY"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_MIDDY_KEY"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp LEFT_INDEX_KEY"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C1R4"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightPinkyIndex"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightPinkyMiddy"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&RightPinkyRingy"
+          }
+        ]
+      },
+      {
+        "value": "&none",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C6R4"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T3"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_T2"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAY_RH_T1"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C1R5"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C2R5"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C3R5"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C4R5"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C5R5"
+          }
+        ]
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "&trans",
+        "params": []
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAY_RH_T6"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAY_RH_T5"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAY_RH_T4"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&mo LAY_RH_C2R6"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C3R6"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C4R6"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&right_pinky_tap KEY_RH_C5R6"
           }
         ]
       },
