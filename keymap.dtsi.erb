@@ -2030,27 +2030,51 @@ macros {
 #define thums_down msc MOVE_Y(THUMB_MOUSE_SCROLL_SPEED * NATURAL_SCROLLING_FACTOR * -1)
 
 //
-// MOUSE_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
+// MOUSE_MOTION_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
-#ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 16
+#ifndef MOUSE_MOTION_SCALER_SLOW
+#define MOUSE_MOTION_SCALER_SLOW 1 16
 #endif
 
 //
-// MOUSE_SCALER_FAST sets parameters for the &zip_xy_scaler input processor:
+// MOUSE_MOTION_SCALER_FAST sets parameters for the &zip_xy_scaler input processor:
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
-#ifndef MOUSE_SCALER_FAST
-#define MOUSE_SCALER_FAST 4 1
+#ifndef MOUSE_MOTION_SCALER_FAST
+#define MOUSE_MOTION_SCALER_FAST 6 1
 #endif
 
 //
-// MOUSE_SCALER_WARP sets parameters for the &zip_xy_scaler input processor:
+// MOUSE_MOTION_SCALER_WARP sets parameters for the &zip_xy_scaler input processor:
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
-#ifndef MOUSE_SCALER_WARP
-#define MOUSE_SCALER_WARP 12 1
+#ifndef MOUSE_MOTION_SCALER_WARP
+#define MOUSE_MOTION_SCALER_WARP 12 1
+#endif
+
+//
+// MOUSE_SCROLL_SCALER_SLOW sets parameters for the &zip_scroll_scaling_processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+//
+#ifndef MOUSE_SCROLL_SCALER_SLOW
+#define MOUSE_SCROLL_SCALER_SLOW 1 4
+#endif
+
+//
+// MOUSE_SCROLL_SCALER_FAST sets parameters for the &zip_scroll_scaling_processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+//
+#ifndef MOUSE_SCROLL_SCALER_FAST
+#define MOUSE_SCROLL_SCALER_FAST 4 1
+#endif
+
+//
+// MOUSE_SCROLL_SCALER_WARP sets parameters for the &zip_scroll_scaling_processor:
+// https://zmk.dev/docs/keymaps/input-processors/scaler
+//
+#ifndef MOUSE_SCROLL_SCALER_WARP
+#define MOUSE_SCROLL_SCALER_WARP 8 1
 #endif
 
 <%
@@ -2080,19 +2104,19 @@ macros {
     #ifdef LAYER_Mouse_slow
     slow {
       layers = <LAYER_Mouse_slow>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_SLOW>;
+      input-processors = <&zip_xy_scaler MOUSE_MOTION_SCALER_SLOW>;
     };
     #endif
     #ifdef LAYER_Mouse_warp
     warp {
       layers = <LAYER_Mouse_warp>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_WARP>;
+      input-processors = <&zip_xy_scaler MOUSE_MOTION_SCALER_WARP>;
     };
     #endif
     #ifdef LAYER_Mouse_fast
     fast {
       layers = <LAYER_Mouse_fast>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
+      input-processors = <&zip_xy_scaler MOUSE_MOTION_SCALER_FAST>;
     };
     #endif
   };
@@ -2116,19 +2140,19 @@ macros {
     #ifdef LAYER_Mouse_slow
     slow {
       layers = <LAYER_Mouse_slow>;
-      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_SLOW>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCROLL_SCALER_SLOW>;
     };
     #endif
     #ifdef LAYER_Mouse_warp
     warp {
       layers = <LAYER_Mouse_warp>;
-      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_WARP>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCROLL_SCALER_WARP>;
     };
     #endif
     #ifdef LAYER_Mouse_fast
     fast {
       layers = <LAYER_Mouse_fast>;
-      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FAST>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCROLL_SCALER_FAST>;
     };
     #endif
   };
