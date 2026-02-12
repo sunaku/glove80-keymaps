@@ -430,7 +430,15 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_left"
+            "value": "&thumb LAYER_Lower INSERT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PG_UP"
           }
         ]
       },
@@ -438,7 +446,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_right"
+            "value": "&thums_up"
           }
         ]
       },
@@ -446,15 +454,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _HOME"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _END"
+            "value": "&thumb LAYER_Lower DELETE"
           }
         ]
       },
@@ -521,23 +521,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LBKT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBKT"
+            "value": "BSLH"
           }
         ]
       },
@@ -545,7 +529,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji BSLH"
+            "value": "&parang_left"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&parang_right"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&stumb LAYER_Emoji LSFT"
           }
         ]
       },
@@ -566,10 +566,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT"
+            "value": "PG_DN"
           }
         ]
       },
@@ -577,7 +577,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower DELETE"
+            "value": "&thums_down"
           }
         ]
       },
@@ -601,23 +601,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_World PAGE_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_DOWN"
+            "value": "&stumb LAYER_World RSFT"
           }
         ]
       },
@@ -625,7 +609,23 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PG_DN"
+            "value": "LBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GRAVE"
           }
         ]
       },
@@ -997,7 +997,15 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_left"
+            "value": "&mo LAYER_Lower"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PG_UP"
           }
         ]
       },
@@ -1005,7 +1013,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_right"
+            "value": "&thums_up"
           }
         ]
       },
@@ -1013,15 +1021,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _HOME"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _END"
+            "value": "&thumb LAYER_Lower INSERT"
           }
         ]
       },
@@ -1088,23 +1088,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LBKT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBKT"
+            "value": "BSLH"
           }
         ]
       },
@@ -1112,7 +1096,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji BSLH"
+            "value": "&parang_left"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&parang_right"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&stumb LAYER_Emoji LSFT"
           }
         ]
       },
@@ -1133,10 +1133,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&mo LAYER_Lower"
+            "value": "PG_DN"
           }
         ]
       },
@@ -1144,7 +1144,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT"
+            "value": "&thums_down"
           }
         ]
       },
@@ -1168,23 +1168,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_World PAGE_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_DOWN"
+            "value": "&stumb LAYER_World RSFT"
           }
         ]
       },
@@ -1192,7 +1176,23 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PG_DN"
+            "value": "LBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GRAVE"
           }
         ]
       },
@@ -1564,7 +1564,15 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_left"
+            "value": "&mo LAYER_Lower"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PG_UP"
           }
         ]
       },
@@ -1572,7 +1580,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_right"
+            "value": "&thums_up"
           }
         ]
       },
@@ -1580,15 +1588,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _HOME"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _END"
+            "value": "&thumb LAYER_Lower INSERT"
           }
         ]
       },
@@ -1655,23 +1655,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LBKT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBKT"
+            "value": "BSLH"
           }
         ]
       },
@@ -1679,7 +1663,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji BSLH"
+            "value": "&parang_left"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&parang_right"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&stumb LAYER_Emoji LSFT"
           }
         ]
       },
@@ -1700,10 +1700,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&mo LAYER_Lower"
+            "value": "PG_DN"
           }
         ]
       },
@@ -1711,7 +1711,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT"
+            "value": "&thums_down"
           }
         ]
       },
@@ -1735,23 +1735,8 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_World PAGE_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_DOWN"
+            "value": "&stumb LAYER_World RSFT",
+            "params": []
           }
         ]
       },
@@ -1759,7 +1744,23 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PG_DN"
+            "value": "LBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GRAVE"
           }
         ]
       },
@@ -2131,7 +2132,15 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_left"
+            "value": "&mo LAYER_Lower"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PG_UP"
           }
         ]
       },
@@ -2139,7 +2148,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&parang_right"
+            "value": "&thums_up"
           }
         ]
       },
@@ -2147,15 +2156,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&kp _HOME"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp _END"
+            "value": "&thumb LAYER_Lower INSERT"
           }
         ]
       },
@@ -2222,23 +2223,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "GRAVE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LBKT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBKT"
+            "value": "BSLH"
           }
         ]
       },
@@ -2246,7 +2231,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Emoji BSLH"
+            "value": "&parang_left"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&parang_right"
+          }
+        ]
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&stumb LAYER_Emoji LSFT"
           }
         ]
       },
@@ -2267,10 +2268,10 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&mo LAYER_Lower"
+            "value": "PG_DN"
           }
         ]
       },
@@ -2278,7 +2279,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Lower INSERT"
+            "value": "&thums_down"
           }
         ]
       },
@@ -2302,23 +2303,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_World PAGE_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_UP"
-          }
-        ]
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&msc MOUSE_SCROLL_DOWN"
+            "value": "&stumb LAYER_World RSFT"
           }
         ]
       },
@@ -2326,7 +2311,23 @@
         "value": "&kp",
         "params": [
           {
-            "value": "PG_DN"
+            "value": "LBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GRAVE"
           }
         ]
       },
@@ -2822,7 +2823,12 @@
         ]
       },
       {
-        "value": "&trans"
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp KEY_LH_T2"
+          }
+        ]
       },
       {
         "value": "&trans"
@@ -2831,7 +2837,12 @@
         "value": "&trans"
       },
       {
-        "value": "&trans"
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&kp KEY_RH_T2"
+          }
+        ]
       },
       {
         "value": "Custom",
@@ -2896,20 +2907,10 @@
         ]
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp KEY_LH_T6"
-          }
-        ]
+        "value": "&trans"
       },
       {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&kp KEY_RH_T6"
-          }
-        ]
+        "value": "&trans"
       },
       {
         "value": "Custom",
@@ -3272,7 +3273,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&left_pinky_tap KEY_LH_T2"
+            "value": "&mo LAY_LH_T2"
           }
         ]
       },
@@ -3366,7 +3367,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_LH_T6"
+            "value": "&left_pinky_tap KEY_LH_T6"
           }
         ]
       },
@@ -3719,7 +3720,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&left_ringy_tap KEY_LH_T2"
+            "value": "&mo LAY_LH_T2"
           }
         ]
       },
@@ -3813,7 +3814,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_LH_T6"
+            "value": "&left_ringy_tap KEY_LH_T6"
           }
         ]
       },
@@ -4166,7 +4167,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&left_middy_tap KEY_LH_T2"
+            "value": "&mo LAY_LH_T2"
           }
         ]
       },
@@ -4260,7 +4261,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_LH_T6"
+            "value": "&left_middy_tap KEY_LH_T6"
           }
         ]
       },
@@ -4613,7 +4614,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&left_index_tap KEY_LH_T2"
+            "value": "&mo LAY_LH_T2"
           }
         ]
       },
@@ -4707,7 +4708,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_LH_T6"
+            "value": "&left_index_tap KEY_LH_T6"
           }
         ]
       },
@@ -5044,7 +5045,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_index_tap KEY_RH_T2"
+            "value": "&mo LAY_RH_T2"
           }
         ]
       },
@@ -5127,7 +5128,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_RH_T6"
+            "value": "&right_index_tap KEY_RH_T6"
           }
         ]
       },
@@ -5491,7 +5492,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_middy_tap KEY_RH_T2"
+            "value": "&mo LAY_RH_T2"
           }
         ]
       },
@@ -5574,7 +5575,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_RH_T6"
+            "value": "&right_middy_tap KEY_RH_T6"
           }
         ]
       },
@@ -5938,7 +5939,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_ringy_tap KEY_RH_T2"
+            "value": "&mo LAY_RH_T2"
           }
         ]
       },
@@ -6021,7 +6022,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_RH_T6"
+            "value": "&right_ringy_tap KEY_RH_T6"
           }
         ]
       },
@@ -6385,7 +6386,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&right_pinky_tap KEY_RH_T2"
+            "value": "&mo LAY_RH_T2"
           }
         ]
       },
@@ -6468,7 +6469,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&mo LAY_RH_T6"
+            "value": "&right_pinky_tap KEY_RH_T6"
           }
         ]
       },
