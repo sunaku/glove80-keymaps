@@ -142,10 +142,12 @@
   #define KEY_LH_C1R5 FSLH
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 LPAR
-  #define KEY_LH_T3 RPAR
-  #define KEY_RH_T3 _HOME
-  #define KEY_RH_T2 _END
+  #define KEY_LH_T2 INSERT
+  #define LAY_LH_T2 LAYER_Lower
+  #define KEY_LH_T3 PG_UP
+  #define KEY_RH_T3 0
+  #define KEY_RH_T2 DELETE
+  #define LAY_RH_T2 LAYER_Lower
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 J
@@ -155,28 +157,26 @@
   #define KEY_RH_C5R5 V
   #define KEY_RH_C6R5 RSFT
   #define KEY_LH_C6R6 0
-  #define KEY_LH_C5R6 GRAVE
-  #define KEY_LH_C4R6 LBKT
-  #define KEY_LH_C3R6 RBKT
-  #define KEY_LH_C2R6 BSLH
+  #define KEY_LH_C5R6 BSLH
+  #define KEY_LH_C4R6 LPAR
+  #define KEY_LH_C3R6 RPAR
+  #define KEY_LH_C2R6 LSFT
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 SPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 TAB
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 INSERT
-  #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 DELETE
-  #define LAY_RH_T6 LAYER_Lower
+  #define KEY_LH_T6 PG_DN
+  #define KEY_RH_T6 0
   #define KEY_RH_T5 BACKSPACE
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 R
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 PAGE_UP
+  #define KEY_RH_C2R6 RSFT
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 MOUSE_SCROLL_UP
-  #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
-  #define KEY_RH_C5R6 PG_DN
+  #define KEY_RH_C3R6 LBKT
+  #define KEY_RH_C4R6 RBKT
+  #define KEY_RH_C5R6 GRAVE
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_Dvorak) && LAYER_Dvorak == 0
@@ -234,10 +234,12 @@
   #define KEY_LH_C1R5 X
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 LPAR
-  #define KEY_LH_T3 RPAR
-  #define KEY_RH_T3 _HOME
-  #define KEY_RH_T2 _END
+  #define KEY_LH_T2 0
+  #define LAY_LH_T2 LAYER_Lower
+  #define KEY_LH_T3 PG_UP
+  #define KEY_RH_T3 0
+  #define KEY_RH_T2 INSERT
+  #define LAY_RH_T2 LAYER_Lower
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 B
@@ -247,28 +249,26 @@
   #define KEY_RH_C5R5 Z
   #define KEY_RH_C6R5 RSFT
   #define KEY_LH_C6R6 0
-  #define KEY_LH_C5R6 GRAVE
-  #define KEY_LH_C4R6 LBKT
-  #define KEY_LH_C3R6 RBKT
-  #define KEY_LH_C2R6 BSLH
+  #define KEY_LH_C5R6 BSLH
+  #define KEY_LH_C4R6 LPAR
+  #define KEY_LH_C3R6 RPAR
+  #define KEY_LH_C2R6 LSFT
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 0
-  #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 INSERT
-  #define LAY_RH_T6 LAYER_Lower
+  #define KEY_LH_T6 PG_DN
+  #define KEY_RH_T6 0
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 PAGE_UP
+  #define KEY_RH_C2R6 RSFT
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 MOUSE_SCROLL_UP
-  #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
-  #define KEY_RH_C5R6 PG_DN
+  #define KEY_RH_C3R6 LBKT
+  #define KEY_RH_C4R6 RBKT
+  #define KEY_RH_C5R6 GRAVE
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_Colemak) && LAYER_Colemak == 0
@@ -326,10 +326,12 @@
   #define KEY_LH_C1R5 B
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 LPAR
-  #define KEY_LH_T3 RPAR
-  #define KEY_RH_T3 _HOME
-  #define KEY_RH_T2 _END
+  #define KEY_LH_T2 0
+  #define LAY_LH_T2 LAYER_Lower
+  #define KEY_LH_T3 PG_UP
+  #define KEY_RH_T3 0
+  #define KEY_RH_T2 INSERT
+  #define LAY_RH_T2 LAYER_Lower
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 K
@@ -339,28 +341,26 @@
   #define KEY_RH_C5R5 FSLH
   #define KEY_RH_C6R5 RSFT
   #define KEY_LH_C6R6 0
-  #define KEY_LH_C5R6 GRAVE
-  #define KEY_LH_C4R6 LBKT
-  #define KEY_LH_C3R6 RBKT
-  #define KEY_LH_C2R6 BSLH
+  #define KEY_LH_C5R6 BSLH
+  #define KEY_LH_C4R6 LPAR
+  #define KEY_LH_C3R6 RPAR
+  #define KEY_LH_C2R6 LSFT
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 0
-  #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 INSERT
-  #define LAY_RH_T6 LAYER_Lower
+  #define KEY_LH_T6 PG_DN
+  #define KEY_RH_T6 0
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 PAGE_UP
+  #define KEY_RH_C2R6 RSFT
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 MOUSE_SCROLL_UP
-  #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
-  #define KEY_RH_C5R6 PG_DN
+  #define KEY_RH_C3R6 LBKT
+  #define KEY_RH_C4R6 RBKT
+  #define KEY_RH_C5R6 GRAVE
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_QWERTY) && LAYER_QWERTY == 0
@@ -418,10 +418,12 @@
   #define KEY_LH_C1R5 B
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 LPAR
-  #define KEY_LH_T3 RPAR
-  #define KEY_RH_T3 _HOME
-  #define KEY_RH_T2 _END
+  #define KEY_LH_T2 0
+  #define LAY_LH_T2 LAYER_Lower
+  #define KEY_LH_T3 PG_UP
+  #define KEY_RH_T3 0
+  #define KEY_RH_T2 INSERT
+  #define LAY_RH_T2 LAYER_Lower
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 N
@@ -431,28 +433,26 @@
   #define KEY_RH_C5R5 FSLH
   #define KEY_RH_C6R5 RSFT
   #define KEY_LH_C6R6 0
-  #define KEY_LH_C5R6 GRAVE
-  #define KEY_LH_C4R6 LBKT
-  #define KEY_LH_C3R6 RBKT
-  #define KEY_LH_C2R6 BSLH
+  #define KEY_LH_C5R6 BSLH
+  #define KEY_LH_C4R6 LPAR
+  #define KEY_LH_C3R6 RPAR
+  #define KEY_LH_C2R6 LSFT
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 0
-  #define LAY_LH_T6 LAYER_Lower
-  #define KEY_RH_T6 INSERT
-  #define LAY_RH_T6 LAYER_Lower
+  #define KEY_LH_T6 PG_DN
+  #define KEY_RH_T6 0
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 PAGE_UP
+  #define KEY_RH_C2R6 RSFT
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 MOUSE_SCROLL_UP
-  #define KEY_RH_C4R6 MOUSE_SCROLL_DOWN
-  #define KEY_RH_C5R6 PG_DN
+  #define KEY_RH_C3R6 LBKT
+  #define KEY_RH_C4R6 RBKT
+  #define KEY_RH_C5R6 GRAVE
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_macOS) && LAYER_macOS == 0
