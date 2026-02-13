@@ -8731,14 +8731,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "C_PP"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "C_PREV"
           }
         ]
@@ -8747,7 +8739,15 @@
         "value": "&kp",
         "params": [
           {
-            "value": "C_NEXT"
+            "value": "C_PP"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "C_MUTE"
           }
         ]
       },
@@ -8847,7 +8847,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "C_MUTE"
+            "value": "C_NEXT"
           }
         ]
       },
