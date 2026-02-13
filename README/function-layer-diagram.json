@@ -623,17 +623,16 @@
       "x": -1.9000000000000004,
       "c": "#e0f2f1",
       "t": "#000000",
-      "f": 4
+      "f": 6
     },
-    "<i class='fa fa-play'></i> <br> <i class='fa fa-pause'></i>\n\n\n\nLower"
+    "<i class='fa fa-step-backward'></i>\n\n\n\nLower"
   ],
   [
     {
       "y": 0.15000000000000036,
-      "x": -1.6999999999999993,
-      "f": 6
+      "x": -1.6999999999999993
     },
-    "<i class='fa fa-volume-off'></i><sub><sup><sub>&nbsp;</sub><sup><i class='fa fa-times'></i></sup></sup></sub>"
+    "<i class='fa fa-step-forward'></i>"
   ],
   [
     {
@@ -660,15 +659,16 @@
       "y": -0.27500000000000036,
       "x": -1.25,
       "c": "#e0f2f1",
-      "t": "#000000"
+      "t": "#000000",
+      "f": 4
     },
-    "<i class='fa fa-step-backward'></i>"
+    "<i class='fa fa-play'></i> <br> <i class='fa fa-pause'></i>"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -0.8499999999999996,
-      "f": 6
+      "f": 7
     },
     "<i class='fa fa-volume-down'></i>\n\n\n\nMouse"
   ],
@@ -698,9 +698,9 @@
       "x": -0.5999999999999996,
       "c": "#e0f2f1",
       "t": "#000000",
-      "f": 4
+      "f": 7
     },
-    "<i class='fa fa-step-forward'></i>\n\n\n\nSystem"
+    "<i class='fa fa-volume-off'></i><sub><sup><sub>&nbsp;</sub><sup><i class='fa fa-times'></i></sup></sup></sub>\n\n\n\nSystem"
   ],
   [
     {
