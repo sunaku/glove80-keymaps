@@ -8152,12 +8152,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LS",
-            "params": [
-              {
-                "value": "DOT"
-              }
-            ]
+            "value": "EQUAL"
           }
         ]
       },
@@ -8285,7 +8280,12 @@
         "value": "&kp",
         "params": [
           {
-            "value": "EQUAL"
+            "value": "LS",
+            "params": [
+              {
+                "value": "DOT"
+              }
+            ]
           }
         ]
       },
