@@ -9492,7 +9492,7 @@ macros {
 // MOUSE_MOTION_MAXIMUM_SPEED defines how quickly the mouse pointer can move.
 //
 #ifndef MOUSE_MOTION_MAXIMUM_SPEED
-#define MOUSE_MOTION_MAXIMUM_SPEED 600
+#define MOUSE_MOTION_MAXIMUM_SPEED 200
 #endif
 
 //
@@ -9544,7 +9544,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_MOTION_SCALER_SLOW
-#define MOUSE_MOTION_SCALER_SLOW 1 16
+#define MOUSE_MOTION_SCALER_SLOW 1 12
 #endif
 
 //
@@ -9552,7 +9552,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_MOTION_SCALER_FAST
-#define MOUSE_MOTION_SCALER_FAST 6 1
+#define MOUSE_MOTION_SCALER_FAST 4 1
 #endif
 
 //
@@ -9568,7 +9568,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCROLL_SCALER_SLOW
-#define MOUSE_SCROLL_SCALER_SLOW 1 4
+#define MOUSE_SCROLL_SCALER_SLOW 1 9
 #endif
 
 //
@@ -9576,7 +9576,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCROLL_SCALER_FAST
-#define MOUSE_SCROLL_SCALER_FAST 4 1
+#define MOUSE_SCROLL_SCALER_FAST 3 1
 #endif
 
 //
@@ -9584,7 +9584,7 @@ macros {
 // https://zmk.dev/docs/keymaps/input-processors/scaler
 //
 #ifndef MOUSE_SCROLL_SCALER_WARP
-#define MOUSE_SCROLL_SCALER_WARP 8 1
+#define MOUSE_SCROLL_SCALER_WARP 9 1
 #endif
 /*HACK*/};
 #ifdef ENABLE_MOUSE_KEYS
