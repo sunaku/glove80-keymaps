@@ -1,4 +1,4 @@
-# "Glorious Engrammer" keymap for MoErgo Glove80
+# Glorious Engrammer v52 🧑‍🚀🚀✨ keymap for Glove80
 
 This is [my Glove80] keymap featuring the [Enthium] layout with [Miryoku]-style
 layers and [home row mods].  Other layouts (**QWERTY**, Dvorak, and Colemak)
@@ -14,9 +14,17 @@ README/base-layer-photograph-Enthium.webp )
 
 ## Keymap
 
-Version 42-rc9 (PREVIEW)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc9
-- Release: https://my.moergo.com/glove80/#/layout/user/2314c452-bfff-4b59-95cf-bdf037ccdaad
+Open the following link to clone/customize/build this keymap for your Glove80:
+
+- https://my.moergo.com/glove80/#/layout/user/909a8599-903f-44f3-a51e-5130ecdf2999
+
+For your reference, here are my personal customizations on top of the defaults:
+
+```cpp
+#define SPACE_FORGIVENESS // for lingering taps on thumb letter R in Enthium
+#define THUMB_HOLDING_TIME 200 // prefer typing over faster layer activation
+#define RIGHT_INDEX_STREAK_DECAY 80 // faster HRM shift cooldown (gcA alias)
+```
 
 ### Legend
 
@@ -29,46 +37,55 @@ See [release notes][rel] for a visual overview of recent updates.
 [pdf]: README/all-layer-diagrams.pdf
 [rel]: https://github.com/sunaku/glove80-keymaps/releases
 
-### Contents
+### Community
+
+Join the [`#glorious-engrammer`][ch] channel on [MoErgo's discord][sv].
+
+[ch]: https://discord.com/channels/877392805654306816/1111469812850380831
+[sv]: https://www.moergo.com/discord
+
+### Documentation
+
+>TIP: You can "talk" to this codebase here:
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sunaku/glove80-keymaps)
 
 <!-- vim-markdown-toc GFM -->
 
 * [Guide](#guide)
-  * [Factory layout](#factory-layout)
-  * [Operating system](#operating-system)
-  * [Home row mods](#home-row-mods)
-    * [Difficulty level](#difficulty-level)
-    * [One-shot shifts](#one-shot-shifts)
-    * [Shift forgiveness](#shift-forgiveness)
-    * [Bilateral combinations](#bilateral-combinations)
-      * [One-handed shortcuts](#one-handed-shortcuts)
-  * [Layer access keys](#layer-access-keys)
-  * [Key auto-repeat](#key-auto-repeat)
-  * [Alpha layouts](#alpha-layouts)
-  * [Unicode and Emoji](#unicode-and-emoji)
-    * [OS-native compose](#os-native-compose)
+    * [Factory layout](#factory-layout)
+    * [Operating system](#operating-system)
+    * [Home row mods](#home-row-mods)
+        * [Difficulty level](#difficulty-level)
+        * [One-shot shifts](#one-shot-shifts)
+        * [Shift forgiveness](#shift-forgiveness)
+        * [Bilateral combinations](#bilateral-combinations)
+            * [One-handed shortcuts](#one-handed-shortcuts)
+    * [Layer access keys](#layer-access-keys)
+    * [Key auto-repeat](#key-auto-repeat)
+    * [Alpha layouts](#alpha-layouts)
+    * [Unicode and Emoji](#unicode-and-emoji)
+        * [OS-native compose](#os-native-compose)
 * [Installing](#installing)
-  * [Enabling mouse emulation](#enabling-mouse-emulation)
-    * [Choose a firmware that supports mouse emulation](#choose-a-firmware-that-supports-mouse-emulation)
-  * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
-  * [Flashing](#flashing)
+    * [Enabling mouse emulation](#enabling-mouse-emulation)
+        * [Choose a firmware that supports mouse emulation](#choose-a-firmware-that-supports-mouse-emulation)
+    * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
+    * [Flashing](#flashing)
 * [Upgrading](#upgrading)
 * [Customizing](#customizing)
-  * [Overriding the defaults](#overriding-the-defaults)
-    * [Reordering home row mods](#reordering-home-row-mods)
-    * [Fine-tuning the timing](#fine-tuning-the-timing)
-  * [Compiling from source](#compiling-from-source)
-    * [World and Emoji characters](#world-and-emoji-characters)
-      * [Adding a new World character](#adding-a-new-world-character)
-      * [Shift key for World characters](#shift-key-for-world-characters)
-      * [Modifiers for World characters](#modifiers-for-world-characters)
-      * [Compose for World characters](#compose-for-world-characters)
-      * [Adding a new Emoji character](#adding-a-new-emoji-character)
-      * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
-    * [Editing layer map diagrams](#editing-layer-map-diagrams)
-    * [Rearranging the base layer](#rearranging-the-base-layer)
-      * [Mirroring horizontally](#mirroring-horizontally)
-* [Discussion](#discussion)
+    * [Overriding the defaults](#overriding-the-defaults)
+        * [Reordering home row mods](#reordering-home-row-mods)
+        * [Fine-tuning the timing](#fine-tuning-the-timing)
+    * [Compiling from source](#compiling-from-source)
+        * [World and Emoji characters](#world-and-emoji-characters)
+            * [Adding a new World character](#adding-a-new-world-character)
+            * [Shift key for World characters](#shift-key-for-world-characters)
+            * [Modifiers for World characters](#modifiers-for-world-characters)
+            * [Compose for World characters](#compose-for-world-characters)
+            * [Adding a new Emoji character](#adding-a-new-emoji-character)
+            * [Shift key for Emoji characters](#shift-key-for-emoji-characters)
+        * [Editing layer map diagrams](#editing-layer-map-diagrams)
+        * [Rearranging the base layer](#rearranging-the-base-layer)
+            * [Mirroring horizontally](#mirroring-horizontally)
 * [License](#license)
 
 <!-- vim-markdown-toc -->
@@ -995,13 +1012,6 @@ mirrored_layout = Object.assign({}, layout);
 mirrored_layout["layers"] = mirrored_layers;
 mirrored_layout; /* dumps to the console for copying */
 ```
-
-## Discussion
-
-Join the [`#glorious-engrammer`][ch] channel on [MoErgo's discord server][sv].
-
-[ch]: https://discord.com/channels/877392805654306816/1111469812850380831
-[sv]: https://www.moergo.com/discord
 
 ## License
 
