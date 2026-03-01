@@ -41,6 +41,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [One-shot shifts](#one-shot-shifts)
     * [Shift forgiveness](#shift-forgiveness)
     * [Bilateral combinations](#bilateral-combinations)
+      * [One-handed shortcuts](#one-handed-shortcuts)
   * [Layer access keys](#layer-access-keys)
   * [Key auto-repeat](#key-auto-repeat)
   * [Alpha layouts](#alpha-layouts)
@@ -241,11 +242,22 @@ In contrast, one-handed shortcuts can be more strenuous as you have to contort
 your hand to hold a modifier _and_ tap modified keys; plus the act of holding a
 modifier limits the hand's range of motion when reaching for keys to be tapped.
 
-Nevertheless, if you still prefer using one-handed shortcuts, you can disable
-bilateral combinations enforcement by removing the `#define ENFORCE_BILATERAL`
-line and, optionally, deleting the bilateral combinations layers in the keymap.
-
 [same-hand chords]: https://sunaku.github.io/home-row-mods.html#same-hand-chords
+
+##### One-handed shortcuts
+
+You can use the Lower layer's _sticky_ home row modifiers to perform one-handed
+shortcuts, bypassing bilateral combinations enforcement, as needed or preferred.
+
+For example, to type the Ctrl+Q shortcut in QWERTY using only the left hand:
+1. Hold LT2 (T2 key on left thumb cluster) to access the Lower layer.
+2. Tap the left hand's C3R4 key (home row modifier for _sticky_ Ctrl).
+3. Release LT2 from step 1 to return to your previously active layer.
+4. Tap Q, which will now be "wrapped" by the _sticky_ Ctrl from step 2.
+
+Alternatively, you can disable bilateral combinations enforcement entirely by
+removing the `#define ENFORCE_BILATERAL` line and then, optionally, deleting
+all of the per-finger bilateral combinations enforcement layers in the keymap.
 
 ### Layer access keys
 
