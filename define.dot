@@ -515,7 +515,7 @@ digraph settings {
 
     MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED -> NUMBER_300
 
-    MOUSE_MOTION_MAXIMUM_SPEED -> NUMBER_600
+    MOUSE_MOTION_MAXIMUM_SPEED -> NUMBER_200
 
     MOUSE_SCROLL_DELAY -> NUMBER_0
 
@@ -576,7 +576,7 @@ digraph settings {
     
       NUMBER_300 [label="300", style=filled, fillcolor=yellow, shape=signature]
     
-      NUMBER_600 [label="600", style=filled, fillcolor=yellow, shape=signature]
+      NUMBER_200 [label="200", style=filled, fillcolor=yellow, shape=signature]
     
       NUMBER_33 [label="33", style=filled, fillcolor=yellow, shape=signature]
     

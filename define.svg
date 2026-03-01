@@ -3336,18 +3336,18 @@
 <ellipse fill="none" stroke="black" cx="810.33" cy="-4749" rx="187.67" ry="18"/>
 <text text-anchor="middle" x="810.33" y="-4745.3" font-family="Times,serif" font-size="14.00">MOUSE_MOTION_MAXIMUM_SPEED</text>
 </g>
-<!-- NUMBER_600 -->
+<!-- NUMBER_200 -->
 <g id="node288" class="node">
-<title>NUMBER_600</title>
+<title>NUMBER_200</title>
 <polygon fill="yellow" stroke="black" points="437.37,-4761 383.37,-4761 383.37,-4737 437.37,-4737 437.37,-4761"/>
 <polyline fill="none" stroke="black" points="386.37,-4750.5 389.37,-4747.5 "/>
 <polyline fill="none" stroke="black" points="386.37,-4747.5 389.37,-4750.5 "/>
 <polyline fill="none" stroke="black" points="386.37,-4740 434.37,-4740 "/>
-<text text-anchor="middle" x="410.37" y="-4745.3" font-family="Times,serif" font-size="14.00">600</text>
+<text text-anchor="middle" x="410.37" y="-4745.3" font-family="Times,serif" font-size="14.00">200</text>
 </g>
-<!-- MOUSE_MOTION_MAXIMUM_SPEED&#45;&gt;NUMBER_600 -->
+<!-- MOUSE_MOTION_MAXIMUM_SPEED&#45;&gt;NUMBER_200 -->
 <g id="edge257" class="edge">
-<title>MOUSE_MOTION_MAXIMUM_SPEED&#45;&gt;NUMBER_600</title>
+<title>MOUSE_MOTION_MAXIMUM_SPEED&#45;&gt;NUMBER_200</title>
 <path fill="none" stroke="black" d="M622.29,-4749C555.98,-4749 487.9,-4749 447.64,-4749"/>
 <polygon fill="black" stroke="black" points="447.53,-4745.5 437.53,-4749 447.53,-4752.5 447.53,-4745.5"/>
 </g>
