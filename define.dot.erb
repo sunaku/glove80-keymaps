@@ -14,9 +14,9 @@ digraph settings {
       warn({ formula: {key => $~} })
       value = "#{$1}#{$2}".inspect
       tapping_resolution_formulas << value
-    when /^["']/
+    when /^["']|\s+\d+$/
       warn({ string: {key => value} })
-      value = value.rstrip.inspect
+      value = value.strip.inspect
     when /^\d+$/
       warn({ number: {key => value} })
       numbers << value

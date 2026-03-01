@@ -527,6 +527,18 @@ digraph settings {
 
     THUMB_MOUSE_SCROLL_SPEED -> NUMBER_33
 
+    MOUSE_MOTION_SCALER_SLOW -> "1 12"
+
+    MOUSE_MOTION_SCALER_FAST -> "4 1"
+
+    MOUSE_MOTION_SCALER_WARP -> "12 1"
+
+    MOUSE_SCROLL_SCALER_SLOW -> "1 9"
+
+    MOUSE_SCROLL_SCALER_FAST -> "3 1"
+
+    MOUSE_SCROLL_SCALER_WARP -> "9 1"
+
 
   "+90" -> TAPPING_RESOLUTION [color=red]
 
@@ -559,6 +571,18 @@ digraph settings {
       "+50" [label="+50", style=filled, fillcolor=cyan, shape=signature]
     
       "'N'" [label="'N'", style=filled, fillcolor=cyan, shape=signature]
+    
+      "1 12" [label="1 12", style=filled, fillcolor=cyan, shape=signature]
+    
+      "4 1" [label="4 1", style=filled, fillcolor=cyan, shape=signature]
+    
+      "12 1" [label="12 1", style=filled, fillcolor=cyan, shape=signature]
+    
+      "1 9" [label="1 9", style=filled, fillcolor=cyan, shape=signature]
+    
+      "3 1" [label="3 1", style=filled, fillcolor=cyan, shape=signature]
+    
+      "9 1" [label="9 1", style=filled, fillcolor=cyan, shape=signature]
     
 
     
