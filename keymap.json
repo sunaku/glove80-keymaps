@@ -497,7 +497,7 @@
           "label": "Ins",
           "icon": "fa-angle-double-down",
           "background": "#ffccbcff",
-          "description": "Hold for Lower layer. Tap for Delete."
+          "description": "Hold for Lower layer. Tap for Insert."
         }
       },
       {
