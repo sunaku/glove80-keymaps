@@ -27,7 +27,7 @@ dtsi_files = FileList['*.dtsi.erb'].each do |erb|
   file dtsi_min => dtsi
   CLOBBER.include dtsi_min
 end
-task :dtsi => dtsi_files
+task :dtsi => dtsi_files.pathmap('%X')
 
 rule '.dtsi' => '.dtsi.erb' do |t|
   input = File.read(t.source)
