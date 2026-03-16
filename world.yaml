@@ -38,6 +38,7 @@ characters:
     diaeresis:  { lower: "ï",  upper: "Ï"  }
     circumflex: { lower: "î",  upper: "Î"  }
     grave:      { lower: "ì",  upper: "Ì"  }
+    # macron:     { lower: "ī",  upper: "Ī"  }
   E:
     acute:      { lower: "é",  upper: "É"  }
     diaeresis:  { lower: "ë",  upper: "Ë"  }
@@ -45,6 +46,7 @@ characters:
     grave:      { lower: "è",  upper: "È"  }
     oe:         { lower: "œ",  upper: "Œ"  }
     ae:         { lower: "æ",  upper: "Æ"  }
+    # macron:     { lower: "ē",  upper: "Ē"  }
   A:
     acute:      { lower: "á",  upper: "Á"  }
     diaeresis:  { lower: "ä",  upper: "Ä"  }
@@ -52,6 +54,7 @@ characters:
     grave:      { lower: "à",  upper: "À"  }
     tilde:      { lower: "ã",  upper: "Ã"  }
     ring:       { lower: "å",  upper: "Å"  }
+    # macron:     { lower: "ā",  upper: "Ā"  }
   Y:
     acute:      { lower: "ý",  upper: "Ý"  }
     diaeresis:  { lower: "ÿ",  upper: "Ÿ"  }
@@ -62,11 +65,32 @@ characters:
     grave:      { lower: "ò",  upper: "Ò"  }
     tilde:      { lower: "õ",  upper: "Õ"  }
     slash:      { lower: "ø",  upper: "Ø"  }
+    # macron:     { lower: "ō",  upper: "Ō"  }
   U:
     acute:      { lower: "ú",  upper: "Ú"  }
     diaeresis:  { lower: "ü",  upper: "Ü"  }
     circumflex: { lower: "û",  upper: "Û"  }
     grave:      { lower: "ù",  upper: "Ù"  }
+    # macron:     { lower: "ū",  upper: "Ū"  }
+  # C:
+  #   cedilla:    { lower: "ç",  upper: "Ç"  }
+  #   caron:      { lower: "č",  upper: "Č"  }
+  # S:
+  #   eszett:     { lower: "ß",  upper: "ẞ"  }
+  #   caron:      { lower: "š",  upper: "Š"  }
+  # N:
+  #   tilde:      { lower: "ñ",  upper: "Ñ"  }
+  #   cedilla:    { lower: "ņ",  upper: "Ņ"  }
+  # G:
+  #   cedilla:    { lower: "ģ",  upper: "Ģ"  }
+  # K:
+  #   cedilla:    { lower: "ķ",  upper: "Ķ"  }
+  # L:
+  #   cedilla:    { lower: "ļ",  upper: "Ļ"  }
+  # Z:
+  #   caron:      { lower: "ž",  upper: "Ž"  }
+  # R:
+  #   cedilla:    { lower: "ŗ",  upper: "Ŗ"  }
   consonants:
     cedilla:    { lower: "ç",  upper: "Ç"  }
     eszett:     { lower: "ß",  upper: "ẞ"  }
@@ -144,6 +168,16 @@ compositions:
     macos:   LA(LS(C))
     windows: ALT+0199
 
+  "č":
+    linux:   COMPOSE C C
+    macos:   LA(V) C
+    windows: ALT+0269
+
+  "Č":
+    linux:   COMPOSE C LS(C)
+    macos:   LA(V) LS(C)
+    windows: ALT+0268
+
   ###
   ## I
   #
@@ -188,6 +222,16 @@ compositions:
     macos:   LA(GRAVE) LS(I)
     windows: ALT+0206
 
+  "ī":
+    linux:   COMPOSE MINUS I
+    macos:   LA(A) I
+    windows: ALT+0299
+
+  "Ī":
+    linux:   COMPOSE MINUS LS(I)
+    macos:   LA(A) LS(I)
+    windows: ALT+0298
+
   ###
   ## E
   #
@@ -231,6 +275,16 @@ compositions:
     linux:   COMPOSE GRAVE LS(E)
     macos:   LA(GRAVE) LS(E)
     windows: ALT+0200
+
+  "ē":
+    linux:   COMPOSE MINUS E
+    macos:   LA(A) E
+    windows: ALT+0275
+
+  "Ē":
+    linux:   COMPOSE MINUS LS(E)
+    macos:   LA(A) LS(E)
+    windows: ALT+0274
 
   "œ":
     linux:   COMPOSE O E
@@ -315,6 +369,16 @@ compositions:
     linux:   COMPOSE O LS(A)
     macos:   LA(LS(A))
     windows: ALT+0197
+
+  "ā":
+    linux:   COMPOSE MINUS A
+    macos:   LA(A) A
+    windows: ALT+0257
+
+  "Ā":
+    linux:   COMPOSE MINUS LS(A)
+    macos:   LA(A) LS(A)
+    windows: ALT+0256
 
   ###
   ## Y
@@ -404,6 +468,16 @@ compositions:
     macos:   LA(LS(O))
     windows: ALT+0216
 
+  "ō":
+    linux:   COMPOSE MINUS O
+    macos:   LA(A) O
+    windows: ALT+0333
+
+  "Ō":
+    linux:   COMPOSE MINUS LS(O)
+    macos:   LA(A) LS(O)
+    windows: ALT+0332
+
   ###
   ## U
   #
@@ -448,6 +522,16 @@ compositions:
     macos:   LA(GRAVE) LS(U)
     windows: ALT+0217
 
+  "ū":
+    linux:   COMPOSE MINUS U
+    macos:   LA(A) U
+    windows: ALT+0363
+
+  "Ū":
+    linux:   COMPOSE MINUS LS(U)
+    macos:   LA(A) LS(U)
+    windows: ALT+0362
+
   ###
   ## S
   #
@@ -462,6 +546,16 @@ compositions:
     macos:   LA(LS(S))
     windows: # NOTE: U+1E9E has no alt-code per charmap.exe
 
+  "š":
+    linux:   COMPOSE C S
+    macos:   LA(V) S
+    windows: ALT+0154
+
+  "Š":
+    linux:   COMPOSE C LS(S)
+    macos:   LA(V) LS(S)
+    windows: ALT+0138
+
   ###
   ## N
   #
@@ -475,6 +569,86 @@ compositions:
     linux:   COMPOSE TILDE LS(N)
     macos:   LA(N) LS(N)
     windows: ALT+0209
+
+  "ņ":
+    linux:   COMPOSE COMMA N
+    macos:   LA(C) N
+    windows: ALT+0326
+
+  "Ņ":
+    linux:   COMPOSE COMMA LS(N)
+    macos:   LA(C) LS(N)
+    windows: ALT+0325
+
+  ###
+  ## G
+  #
+
+  "ģ":
+    linux:   COMPOSE COMMA G
+    macos:   LA(C) U
+    windows: ALT+0291
+
+  "Ģ":
+    linux:   COMPOSE COMMA LS(G)
+    macos:   LA(C) LS(G)
+    windows: ALT+0290
+
+  ###
+  ## K
+  #
+
+  "ķ":
+    linux:   COMPOSE COMMA K
+    macos:   LA(C) K
+    windows: ALT+0311
+
+  "Ķ":
+    linux:   COMPOSE COMMA LS(K)
+    macos:   LA(C) LS(K)
+    windows: ALT+0310
+
+  ###
+  ## L
+  #
+
+  "ļ":
+    linux:   COMPOSE COMMA L
+    macos:   LA(C) L
+    windows: ALT+0316
+
+  "Ļ":
+    linux:   COMPOSE COMMA LS(L)
+    macos:   LA(C) LS(L)
+    windows: ALT+0315
+
+  ###
+  ## Z
+  #
+
+  "ž":
+    linux:   COMPOSE C Z
+    macos:   LA(V) Z
+    windows: ALT+0158
+
+  "Ž":
+    linux:   COMPOSE C LS(Z)
+    macos:   LA(V) LS(Z)
+    windows: ALT+0142
+
+  ###
+  ## R
+  #
+
+  "ŗ":
+    linux:   COMPOSE COMMA N
+    macos:   LA(C) N
+    windows: ALT+0343
+
+  "Ŗ":
+    linux:   COMPOSE COMMA LS(N)
+    macos:   LA(C) LS(N)
+    windows: ALT+0342
 
   ###
   ## signs
