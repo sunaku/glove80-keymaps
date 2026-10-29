@@ -17,7 +17,7 @@ POS_BY_KEY = keymap_zmk.grep(/^#define POS_[LR]H_\w+ \d+/).map do |line|
 end.to_h
 KEY_BY_POS = POS_BY_KEY.invert
 
-dtsi_files = FileList['*.dtsi.erb'].each do |erb|
+dtsi_min_files = FileList['*.dtsi.erb'].map do |erb|
   dtsi = erb.pathmap('%X')
   dtsi_base = dtsi.pathmap('%X')
   file dtsi => FileList[erb, "#{dtsi_base}.{json,zmk}", '*.yaml', __FILE__]
@@ -26,8 +26,9 @@ dtsi_files = FileList['*.dtsi.erb'].each do |erb|
   dtsi_min = "#{dtsi}.min"
   file dtsi_min => dtsi
   CLOBBER.include dtsi_min
+  dtsi_min
 end
-task :dtsi => dtsi_files.pathmap('%X')
+task :dtsi => dtsi_min_files
 
 rule '.dtsi' => '.dtsi.erb' do |t|
   input = File.read(t.source)
