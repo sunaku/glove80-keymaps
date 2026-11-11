@@ -209,7 +209,7 @@
   //
   #define BSL &ug_sl LAC_RGB WHT_RGB // ScrollLock COLOR_OFF COLOR_ON
   #define BNL &ug_nl LAC_RGB WHT_RGB // NumLock    COLOR_OFF COLOR_ON
-  #define BCL &ug_cl BLK_RGB WHT_RGB // CapsLock   COLOR_OFF COLOR_ON
+  #define BCL &ug_cl LAC_RGB WHT_RGB // CapsLock   COLOR_OFF COLOR_ON
 
   //
   // underglow for keyboard locks on the System layer
@@ -250,8 +250,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <0>;
       };
@@ -263,8 +263,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ GRN CYN MAJ YLW ___                                     ___ YLW MAJ CYN GRN ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          RED RED ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ RED RED
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          RED RED ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ RED RED
         >;
         layer-id = <LAYER_macOS>;
       };
@@ -277,8 +277,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftPinky>;
       };
@@ -291,8 +291,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftRingy>;
       };
@@ -305,8 +305,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftMiddy>;
       };
@@ -319,8 +319,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_LeftIndex>;
       };
@@ -333,8 +333,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightIndex>;
       };
@@ -347,8 +347,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightMiddy>;
       };
@@ -361,8 +361,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightRingy>;
       };
@@ -375,8 +375,8 @@
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                                     ___ YLW GRN CYN MAJ ___
-          YLW ___ ___ ___ ___ ___     LAC COR ___     ___ COR LAC     ___ ___ ___ ___ ___ YLW
-          ___ ___ ___ ___ LAC         BSL BNL BCL     ___ LAC LAC         LAC ___ ___ ___ ___
+          YLW ___ ___ ___ ___ ___     LAC ___ ___     ___ ___ LAC     ___ ___ ___ ___ ___ YLW
+          ___ ___ ___ ___ LAC         BSL BNL BCL     LAC LAC LAC         LAC ___ ___ ___ ___
         >;
         layer-id = <LAYER_RightPinky>;
       };
@@ -417,8 +417,8 @@
           ___ COR COR COR COR ___                                     AZU AZU AZU AZU AZU AZU
           ___ COR COR COR COR GDN                                     GDN PNK PNK PNK PNK PNK
           YLW MAJ CYN GRN YLW GDN                                     GDN PNK PNK PNK PNK PNK
-          ___ SPG SPG SPG PUR GDN     RED ___ ___     AZU BLU BLU     GDN PNK PNK PNK PNK PNK
-          ___ PUR PUR PUR PUR         ___ ___ ___     AZU AZU AZU         CHU CHU CHU CHU CHU
+          ___ SPG SPG SPG PUR GDN     RED ___ ___     AZU AZU AZU     GDN PNK PNK PNK PNK PNK
+          ___ PUR PUR PUR PUR         ___ ___ ___     BLU BLU BLU         CHU CHU CHU CHU CHU
         >;
         layer-id = <LAYER_Function>;
       };
@@ -442,11 +442,11 @@
       Symbol {
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
-          COR PNK AZU AZU CHU CHU                                     ___ ___ ___ ___ ___ ___
-          PUR AZU AZU AZU AZU GDN                                     CHU COR COR COR COR ___
-          GDN GDN SPG BLU GDN GDN                                     CHU COR COR COR COR ___
-          PUR SPG SPG SPG SPG GDN     PUR CHU GDN     ___ ___ ___     CHU PNK PNK PNK PUR YLW
-          COR BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         YLW GRN CYN MAJ ___
+          ___ PNK AZU AZU CHU CHU                                     ___ ___ ___ ___ ___ ___
+          PUR AZU AZU AZU AZU GDN                                     ___ COR COR COR COR ___
+          GDN GDN SPG BLU GDN GDN                                     CHU COR COR COR COR CHU
+          PUR SPG SPG SPG SPG GDN     PUR CHU GDN     ___ ___ ___     CHU WHT PNK PNK PNK PUR
+          WHT BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         YLW GRN CYN MAJ ___
         >;
         layer-id = <LAYER_Symbol>;
       };
@@ -569,7 +569,7 @@
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ GOL GOL GOL GOL GOL                                     GOL GOL GOL GOL GOL ___
+          ___ GDN GDN GDN GDN GDN                                     GDN GDN GDN GDN GDN ___
           ___ MAJ CYN GRN YLW SPG                                     SPG YLW GRN CYN MAJ ___
           ___ SPG SPG SPG SPG SPG     RED ___ BLU     BLU ___ RED     SPG PNK PNK SPG PNK ___
           ___ ___ ___ ___ RED         RED RED COR     COR RED RED         RED ___ ___ ___ ___
@@ -881,6 +881,20 @@
 
 /* Custom Defined Behaviors */
 / {
+//////////////////////////////////////////////////////////////////////////////
+// BEGIN my personal overrides for this DEVELOPMENT snapshot
+//////////////////////////////////////////////////////////////////////////////
+
+#define SPACE_FORGIVENESS // for lingering taps on thumb letter R in Enthium
+//#define THUMB_HOLDING_TIME 200 // prefer typing over faster layer activation
+#define RIGHT_INDEX_STREAK_DECAY 80 // faster HRM shift cooldown (gcA alias)
+#define LEFT_INDEX_STREAK_DECAY 80 // faster HRM shift cooldown (Shift-Enter)
+#define MOUSE_MOTION_SCALER_FAST 3 1 // slower Fast speed for more precision
+
+//////////////////////////////////////////////////////////////////////////////
+// END of my personal overrides for this DEVELOPMENT snapshot
+//////////////////////////////////////////////////////////////////////////////
+
 // NOTE: Use the many #define settings below to customize this keymap!
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
@@ -996,9 +1010,9 @@
   #define KEY_LH_C6R3 0
   #define KEY_LH_C5R3 Q
   #define KEY_LH_C4R3 Y
-  #define KEY_LH_C3R3 O
-  #define KEY_LH_C2R3 U
-  #define KEY_LH_C1R3 EQUAL
+  #define KEY_LH_C3R3 U
+  #define KEY_LH_C2R3 O
+  #define KEY_LH_C1R3 SEMI
   #define KEY_RH_C1R3 X
   #define KEY_RH_C2R3 L
   #define KEY_RH_C3R3 D
@@ -1008,9 +1022,9 @@
   #define KEY_LH_C6R4 B
   #define KEY_LH_C5R4 C
   #define KEY_LH_C4R4 I
-  #define KEY_LH_C3R4 A
-  #define KEY_LH_C2R4 E
-  #define KEY_LH_C1R4 MINUS
+  #define KEY_LH_C3R4 E
+  #define KEY_LH_C2R4 A
+  #define KEY_LH_C1R4 COMMA
   #define KEY_RH_C1R4 K
   #define KEY_RH_C2R4 H
   #define KEY_RH_C3R4 T
@@ -1019,18 +1033,16 @@
   #define KEY_RH_C6R4 W
   #define KEY_LH_C6R5 LSFT
   #define KEY_LH_C5R5 SQT
-  #define KEY_LH_C4R5 COMMA
-  #define KEY_LH_C3R5 DOT
-  #define KEY_LH_C2R5 SEMI
+  #define KEY_LH_C4R5 MINUS
+  #define KEY_LH_C3R5 EQUAL
+  #define KEY_LH_C2R5 DOT
   #define KEY_LH_C1R5 FSLH
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 INSERT
-  #define LAY_LH_T2 LAYER_Lower
-  #define KEY_LH_T3 PG_UP
+  #define KEY_LH_T2 INS
+  #define KEY_LH_T3 0
   #define KEY_RH_T3 0
-  #define KEY_RH_T2 DELETE
-  #define LAY_RH_T2 LAYER_Lower
+  #define KEY_RH_T2 DEL
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 J
@@ -1043,23 +1055,25 @@
   #define KEY_LH_C5R6 BSLH
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
-  #define KEY_LH_C2R6 LSFT
+  #define KEY_LH_C2R6 GRAVE
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 SPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 TAB
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 PG_DN
-  #define KEY_RH_T6 0
+  #define KEY_LH_T6 LBKT
+  #define LAY_LH_T6 LAYER_Lower
+  #define KEY_RH_T6 RBKT
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 BACKSPACE
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 R
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 RSFT
+  #define KEY_RH_C2R6 PAGE_UP
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 LBKT
-  #define KEY_RH_C4R6 RBKT
-  #define KEY_RH_C5R6 GRAVE
+  #define KEY_RH_C3R6 0
+  #define KEY_RH_C4R6 0
+  #define KEY_RH_C5R6 PG_DN
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_Dvorak) && LAYER_Dvorak == 0
@@ -1097,7 +1111,7 @@
   #define KEY_RH_C4R3 R
   #define KEY_RH_C5R3 L
   #define KEY_RH_C6R3 SLASH
-  #define KEY_LH_C6R4 EQUAL
+  #define KEY_LH_C6R4 CAPS
   #define KEY_LH_C5R4 A
   #define KEY_LH_C4R4 O
   #define KEY_LH_C3R4 E
@@ -1117,12 +1131,10 @@
   #define KEY_LH_C1R5 X
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 0
-  #define LAY_LH_T2 LAYER_Lower
-  #define KEY_LH_T3 PG_UP
+  #define KEY_LH_T2 MINUS
+  #define KEY_LH_T3 EQUAL
   #define KEY_RH_T3 0
-  #define KEY_RH_T2 INSERT
-  #define LAY_RH_T2 LAYER_Lower
+  #define KEY_RH_T2 INS
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 B
@@ -1135,23 +1147,25 @@
   #define KEY_LH_C5R6 BSLH
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
-  #define KEY_LH_C2R6 LSFT
+  #define KEY_LH_C2R6 GRAVE
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 PG_DN
-  #define KEY_RH_T6 0
+  #define KEY_LH_T6 LBKT
+  #define LAY_LH_T6 LAYER_Lower
+  #define KEY_RH_T6 RBKT
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 RSFT
+  #define KEY_RH_C2R6 PAGE_UP
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 LBKT
-  #define KEY_RH_C4R6 RBKT
-  #define KEY_RH_C5R6 GRAVE
+  #define KEY_RH_C3R6 0
+  #define KEY_RH_C4R6 0
+  #define KEY_RH_C5R6 PG_DN
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_Colemak) && LAYER_Colemak == 0
@@ -1188,8 +1202,8 @@
   #define KEY_RH_C3R3 U
   #define KEY_RH_C4R3 Y
   #define KEY_RH_C5R3 SEMI
-  #define KEY_RH_C6R3 MINUS
-  #define KEY_LH_C6R4 EQUAL
+  #define KEY_RH_C6R3 0
+  #define KEY_LH_C6R4 CAPS
   #define KEY_LH_C5R4 A
   #define KEY_LH_C4R4 R
   #define KEY_LH_C3R4 S
@@ -1209,12 +1223,10 @@
   #define KEY_LH_C1R5 B
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 0
-  #define LAY_LH_T2 LAYER_Lower
-  #define KEY_LH_T3 PG_UP
+  #define KEY_LH_T2 MINUS
+  #define KEY_LH_T3 EQUAL
   #define KEY_RH_T3 0
-  #define KEY_RH_T2 INSERT
-  #define LAY_RH_T2 LAYER_Lower
+  #define KEY_RH_T2 INS
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 K
@@ -1227,23 +1239,25 @@
   #define KEY_LH_C5R6 BSLH
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
-  #define KEY_LH_C2R6 LSFT
+  #define KEY_LH_C2R6 GRAVE
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 PG_DN
-  #define KEY_RH_T6 0
+  #define KEY_LH_T6 LBKT
+  #define LAY_LH_T6 LAYER_Lower
+  #define KEY_RH_T6 RBKT
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 RSFT
+  #define KEY_RH_C2R6 PAGE_UP
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 LBKT
-  #define KEY_RH_C4R6 RBKT
-  #define KEY_RH_C5R6 GRAVE
+  #define KEY_RH_C3R6 0
+  #define KEY_RH_C4R6 0
+  #define KEY_RH_C5R6 PG_DN
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_QWERTY) && LAYER_QWERTY == 0
@@ -1280,8 +1294,8 @@
   #define KEY_RH_C3R3 I
   #define KEY_RH_C4R3 O
   #define KEY_RH_C5R3 P
-  #define KEY_RH_C6R3 MINUS
-  #define KEY_LH_C6R4 EQUAL
+  #define KEY_RH_C6R3 0
+  #define KEY_LH_C6R4 CAPS
   #define KEY_LH_C5R4 A
   #define KEY_LH_C4R4 S
   #define KEY_LH_C3R4 D
@@ -1301,12 +1315,10 @@
   #define KEY_LH_C1R5 B
   #define KEY_LH_T1 ESC
   #define LAY_LH_T1 LAYER_Function
-  #define KEY_LH_T2 0
-  #define LAY_LH_T2 LAYER_Lower
-  #define KEY_LH_T3 PG_UP
+  #define KEY_LH_T2 MINUS
+  #define KEY_LH_T3 EQUAL
   #define KEY_RH_T3 0
-  #define KEY_RH_T2 INSERT
-  #define LAY_RH_T2 LAYER_Lower
+  #define KEY_RH_T2 INS
   #define KEY_RH_T1 ENTER
   #define LAY_RH_T1 LAYER_System
   #define KEY_RH_C1R5 N
@@ -1319,23 +1331,25 @@
   #define KEY_LH_C5R6 BSLH
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
-  #define KEY_LH_C2R6 LSFT
+  #define KEY_LH_C2R6 GRAVE
   #define LAY_LH_C2R6 LAYER_Emoji
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
   #define LAY_LH_T5 LAYER_Number
-  #define KEY_LH_T6 PG_DN
-  #define KEY_RH_T6 0
+  #define KEY_LH_T6 LBKT
+  #define LAY_LH_T6 LAYER_Lower
+  #define KEY_RH_T6 RBKT
+  #define LAY_RH_T6 LAYER_Lower
   #define KEY_RH_T5 TAB
   #define LAY_RH_T5 LAYER_Mouse
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
-  #define KEY_RH_C2R6 RSFT
+  #define KEY_RH_C2R6 PAGE_UP
   #define LAY_RH_C2R6 LAYER_World
-  #define KEY_RH_C3R6 LBKT
-  #define KEY_RH_C4R6 RBKT
-  #define KEY_RH_C5R6 GRAVE
+  #define KEY_RH_C3R6 0
+  #define KEY_RH_C4R6 0
+  #define KEY_RH_C5R6 PG_DN
   #define KEY_RH_C6R6 0
 #endif
 #if defined(LAYER_macOS) && LAYER_macOS == 0
@@ -1577,50 +1591,50 @@ combos {
     layers = <0 1 2 3 4>;
   };
 
-  // T1+T5
+  // T4+T5
 
   combo_sticky_shift_left {
     timeout-ms = <SHIFT_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T5>;
+    key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&sticky_key_modtap LSFT LSFT>;
     layers = <0 1 2 3 4 5>;
   };
 
   combo_sticky_shift_right {
     timeout-ms = <SHIFT_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T5>;
+    key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&sticky_key_modtap RSFT RSFT>;
     layers = <0 1 2 3 4 5>;
   };
 
-  // T4+T5
+  // T1+T4+T5
 
   combo_caps_word_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T5>;
+    key-positions = <POS_LH_T1 POS_LH_T4 POS_LH_T5>;
     bindings = <&caps_word>;
     layers = <0 1 2 3 4 5>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T5>;
+    key-positions = <POS_RH_T1 POS_RH_T4 POS_RH_T5>;
     bindings = <&caps_word>;
     layers = <0 1 2 3 4 5>;
   };
 
-  // T2+T6
+  // T1+T5
 
   combo_caps_lock_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T6>;
+    key-positions = <POS_LH_T1 POS_LH_T5>;
     bindings = <&kp CAPSLOCK>;
     layers = <0 1 2 3 4 5>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T6>;
+    key-positions = <POS_RH_T1 POS_RH_T5>;
     bindings = <&kp CAPSLOCK>;
     layers = <0 1 2 3 4 5>;
   };
@@ -3888,6 +3902,14 @@ behaviors {
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
     bindings = <&mo>, <&sticky_key_oneshot>;
+  };
+  cwoth: thumb_layer_access_caps_word {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&caps_word>;
   };
   crumb: thumb_layer_access_retro_tap {
     compatible = "zmk,behavior-hold-tap";
@@ -10609,45 +10631,45 @@ macros {
 
         layer_Enthium {
             bindings = <
-                        &none                          &none                          &none                          &none                          &none                                                                                                                                                                                     &none                           &none                           &none                           &none                         &none
-                        &none                         &kp N1                         &kp N2                         &kp N3                         &kp N4     &kp N5                                                                                                                                         &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                         &none
-                        &none                          &kp Q                          &kp Y                          &kp O                          &kp U  &kp EQUAL                                                                                                                                          &kp X                           &kp L                           &kp D                           &kp P                           &kp Z                         &none
-                        &kp B  &LeftPinky (C, LAYER_Enthium)  &LeftRingy (I, LAYER_Enthium)  &LeftMiddy (A, LAYER_Enthium)  &LeftIndex (E, LAYER_Enthium)  &kp MINUS                                                                                                                                          &kp K  &RightIndex (H, LAYER_Enthium)  &RightMiddy (T, LAYER_Enthium)  &RightRingy (N, LAYER_Enthium)  &RightPinky (S, LAYER_Enthium)                         &kp W
- &sticky_key_modtap LSFT LSFT                        &kp SQT                      &kp COMMA                        &kp DOT                       &kp SEMI   &kp FSLH  &thumb LAYER_Function ESC  &thumb LAYER_Lower INSERT  &kp PG_UP    &thums_up     &thumb LAYER_Lower DELETE  &thumb LAYER_System ENTER   &kp J                           &kp M                           &kp G                           &kp F                           &kp V  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right        &stumb LAYER_Emoji LSFT             &thumb LAYER_Cursor SPACE    &thumb LAYER_Number TAB  &kp PG_DN  &thums_down  &thumb LAYER_Mouse BACKSPACE      &space LAYER_Symbol R                 &stumb LAYER_World RSFT                        &kp LBKT                        &kp RBKT                       &kp GRAVE          &magic LAYER_Magic 0
+                        &none                          &none                          &none                          &none                          &none                                                                                                                                                                                                             &none                           &none                           &none                           &none                         &none
+                        &none                         &kp N1                         &kp N2                         &kp N3                         &kp N4     &kp N5                                                                                                                                                                 &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                         &none
+                        &none                          &kp Q                          &kp Y                          &kp U                          &kp O   &kp SEMI                                                                                                                                                                  &kp X                           &kp L                           &kp D                           &kp P                           &kp Z                         &none
+                        &kp B  &LeftPinky (C, LAYER_Enthium)  &LeftRingy (I, LAYER_Enthium)  &LeftMiddy (E, LAYER_Enthium)  &LeftIndex (A, LAYER_Enthium)  &kp COMMA                                                                                                                                                                  &kp K  &RightIndex (H, LAYER_Enthium)  &RightMiddy (T, LAYER_Enthium)  &RightRingy (N, LAYER_Enthium)  &RightPinky (S, LAYER_Enthium)                         &kp W
+ &sticky_key_modtap LSFT LSFT                        &kp SQT                      &kp MINUS                      &kp EQUAL                        &kp DOT   &kp FSLH  &thumb LAYER_Function ESC                  &kp INS                    &none                    &none                       &kp DEL  &thumb LAYER_System ENTER   &kp J                           &kp M                           &kp G                           &kp F                           &kp V  &sticky_key_modtap RSFT RSFT
+         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right       &thumb LAYER_Emoji GRAVE             &thumb LAYER_Cursor SPACE  &thumb LAYER_Number TAB  &thumb LAYER_Lower LBKT  &thumb LAYER_Lower RBKT  &thumb LAYER_Mouse BACKSPACE      &space LAYER_Symbol R              &thumb LAYER_World PAGE_UP                       &thums_up                     &thums_down                       &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
         layer_Dvorak {
             bindings = <
-                        &none                         &none                         &none                         &none                         &none                                                                                                                                                                                   &none                          &none                          &none                          &none                         &none
-                        &none                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                           &kp N6                         &kp N7                         &kp N8                         &kp N9                         &kp N0                         &none
-                        &none                       &kp SQT                     &kp COMMA                       &kp DOT                         &kp P   &kp Y                                                                                                                                            &kp F                          &kp G                          &kp C                          &kp R                          &kp L                     &kp SLASH
-                    &kp EQUAL  &LeftPinky (A, LAYER_Dvorak)  &LeftRingy (O, LAYER_Dvorak)  &LeftMiddy (E, LAYER_Dvorak)  &LeftIndex (U, LAYER_Dvorak)   &kp I                                                                                                                                            &kp D  &RightIndex (H, LAYER_Dvorak)  &RightMiddy (T, LAYER_Dvorak)  &RightRingy (N, LAYER_Dvorak)  &RightPinky (S, LAYER_Dvorak)                     &kp MINUS
- &sticky_key_modtap LSFT LSFT                      &kp SEMI                         &kp Q                         &kp J                         &kp K   &kp X      &thumb LAYER_Function ESC             &mo LAYER_Lower  &kp PG_UP    &thums_up  &thumb LAYER_Lower INSERT  &thumb LAYER_System ENTER   &kp B                          &kp M                          &kp W                          &kp V                          &kp Z  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right       &stumb LAYER_Emoji LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                &stumb LAYER_World RSFT                       &kp LBKT                       &kp RBKT                      &kp GRAVE          &magic LAYER_Magic 0
+                        &none                         &none                         &none                         &none                         &none                                                                                                                                                                                                          &none                          &none                          &none                          &none                         &none
+                        &none                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                                                  &kp N6                         &kp N7                         &kp N8                         &kp N9                         &kp N0                         &none
+                        &none                       &kp SQT                     &kp COMMA                       &kp DOT                         &kp P   &kp Y                                                                                                                                                                   &kp F                          &kp G                          &kp C                          &kp R                          &kp L                     &kp SLASH
+                     &kp CAPS  &LeftPinky (A, LAYER_Dvorak)  &LeftRingy (O, LAYER_Dvorak)  &LeftMiddy (E, LAYER_Dvorak)  &LeftIndex (U, LAYER_Dvorak)   &kp I                                                                                                                                                                   &kp D  &RightIndex (H, LAYER_Dvorak)  &RightMiddy (T, LAYER_Dvorak)  &RightRingy (N, LAYER_Dvorak)  &RightPinky (S, LAYER_Dvorak)                     &kp MINUS
+ &sticky_key_modtap LSFT LSFT                      &kp SEMI                         &kp Q                         &kp J                         &kp K   &kp X      &thumb LAYER_Function ESC                   &kp MINUS                &kp EQUAL                    &none                 &kp INS  &thumb LAYER_System ENTER   &kp B                          &kp M                          &kp W                          &kp V                          &kp Z  &sticky_key_modtap RSFT RSFT
+         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right      &thumb LAYER_Emoji GRAVE          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &thumb LAYER_Lower LBKT  &thumb LAYER_Lower RBKT  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE             &thumb LAYER_World PAGE_UP                      &thums_up                    &thums_down                      &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
         layer_Colemak {
             bindings = <
-                        &none                          &none                          &none                          &none                          &none                                                                                                                                                                                    &none                           &none                           &none                           &none                         &none
-                        &none                         &kp N1                         &kp N2                         &kp N3                         &kp N4  &kp N5                                                                                                                                           &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                         &none
-                        &none                          &kp Q                          &kp W                          &kp F                          &kp P   &kp G                                                                                                                                            &kp J                           &kp L                           &kp U                           &kp Y                        &kp SEMI                     &kp MINUS
-                    &kp EQUAL  &LeftPinky (A, LAYER_Colemak)  &LeftRingy (R, LAYER_Colemak)  &LeftMiddy (S, LAYER_Colemak)  &LeftIndex (T, LAYER_Colemak)   &kp D                                                                                                                                            &kp H  &RightIndex (N, LAYER_Colemak)  &RightMiddy (E, LAYER_Colemak)  &RightRingy (I, LAYER_Colemak)  &RightPinky (O, LAYER_Colemak)                       &kp SQT
- &sticky_key_modtap LSFT LSFT                          &kp Z                          &kp X                          &kp C                          &kp V   &kp B      &thumb LAYER_Function ESC             &mo LAYER_Lower  &kp PG_UP    &thums_up  &thumb LAYER_Lower INSERT  &thumb LAYER_System ENTER   &kp K                           &kp M                       &kp COMMA                         &kp DOT                        &kp FSLH  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right        &stumb LAYER_Emoji LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                 &stumb LAYER_World RSFT                        &kp LBKT                        &kp RBKT                       &kp GRAVE          &magic LAYER_Magic 0
+                        &none                          &none                          &none                          &none                          &none                                                                                                                                                                                                           &none                           &none                           &none                           &none                         &none
+                        &none                         &kp N1                         &kp N2                         &kp N3                         &kp N4  &kp N5                                                                                                                                                                  &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                         &none
+                        &none                          &kp Q                          &kp W                          &kp F                          &kp P   &kp G                                                                                                                                                                   &kp J                           &kp L                           &kp U                           &kp Y                        &kp SEMI                         &none
+                     &kp CAPS  &LeftPinky (A, LAYER_Colemak)  &LeftRingy (R, LAYER_Colemak)  &LeftMiddy (S, LAYER_Colemak)  &LeftIndex (T, LAYER_Colemak)   &kp D                                                                                                                                                                   &kp H  &RightIndex (N, LAYER_Colemak)  &RightMiddy (E, LAYER_Colemak)  &RightRingy (I, LAYER_Colemak)  &RightPinky (O, LAYER_Colemak)                       &kp SQT
+ &sticky_key_modtap LSFT LSFT                          &kp Z                          &kp X                          &kp C                          &kp V   &kp B      &thumb LAYER_Function ESC                   &kp MINUS                &kp EQUAL                    &none                 &kp INS  &thumb LAYER_System ENTER   &kp K                           &kp M                       &kp COMMA                         &kp DOT                        &kp FSLH  &sticky_key_modtap RSFT RSFT
+         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right       &thumb LAYER_Emoji GRAVE          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &thumb LAYER_Lower LBKT  &thumb LAYER_Lower RBKT  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE              &thumb LAYER_World PAGE_UP                       &thums_up                     &thums_down                       &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
         layer_QWERTY {
             bindings = <
-                        &none                         &none                         &none                         &none                         &none                                                                                                                                                                                   &none                          &none                          &none                             &none                         &none
-                        &none                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                           &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0                         &none
-                        &none                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                            &kp Y                          &kp U                          &kp I                          &kp O                             &kp P                     &kp MINUS
-                    &kp EQUAL  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                            &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)                       &kp SQT
- &sticky_key_modtap LSFT LSFT                         &kp Z                         &kp X                         &kp C                         &kp V   &kp B      &thumb LAYER_Function ESC             &mo LAYER_Lower  &kp PG_UP    &thums_up  &thumb LAYER_Lower INSERT  &thumb LAYER_System ENTER   &kp N                          &kp M                      &kp COMMA                        &kp DOT                          &kp FSLH  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right       &stumb LAYER_Emoji LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                &stumb LAYER_World RSFT                       &kp LBKT                       &kp RBKT                         &kp GRAVE          &magic LAYER_Magic 0
+                        &none                         &none                         &none                         &none                         &none                                                                                                                                                                                                          &none                          &none                          &none                             &none                         &none
+                        &none                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                                                  &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0                         &none
+                        &none                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                                                   &kp Y                          &kp U                          &kp I                          &kp O                             &kp P                         &none
+                     &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                                                   &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)                       &kp SQT
+ &sticky_key_modtap LSFT LSFT                         &kp Z                         &kp X                         &kp C                         &kp V   &kp B      &thumb LAYER_Function ESC                   &kp MINUS                &kp EQUAL                    &none                 &kp INS  &thumb LAYER_System ENTER   &kp N                          &kp M                      &kp COMMA                        &kp DOT                          &kp FSLH  &sticky_key_modtap RSFT RSFT
+         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right      &thumb LAYER_Emoji GRAVE          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &thumb LAYER_Lower LBKT  &thumb LAYER_Lower RBKT  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE             &thumb LAYER_World PAGE_UP                      &thums_up                    &thums_down                         &kp PG_DN          &magic LAYER_Magic 0
             >;
         };
 
@@ -10664,100 +10686,100 @@ macros {
 
         layer_Typing {
             bindings = <
- &trans              &trans              &trans              &trans              &trans                                                                                                           &trans               &trans               &trans               &trans  &trans
- &trans              &trans              &trans              &trans              &trans  &trans                                                                              &trans               &trans               &trans               &trans               &trans  &trans
- &trans              &trans              &trans              &trans              &trans  &trans                                                                              &trans               &trans               &trans               &trans               &trans  &trans
- &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                              &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
- &trans              &trans              &trans              &trans              &trans  &trans  &kp KEY_LH_T1  &kp KEY_LH_T2  &trans  &trans  &kp KEY_RH_T2  &kp KEY_RH_T1  &trans               &trans               &trans               &trans               &trans  &trans
- &trans              &trans              &trans              &trans     &kp KEY_LH_C2R6          &kp KEY_LH_T4  &kp KEY_LH_T5  &trans  &trans  &kp KEY_RH_T5  &kp KEY_RH_T4              &kp KEY_RH_C2R6               &trans               &trans               &trans  &trans
+ &trans              &trans              &trans              &trans              &trans                                                                                                                         &trans               &trans               &trans               &trans  &trans
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                            &trans               &trans               &trans               &trans               &trans  &trans
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                            &trans               &trans               &trans               &trans               &trans  &trans
+ &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                            &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
+ &trans              &trans              &trans              &trans              &trans  &trans  &kp KEY_LH_T1         &trans         &trans         &trans         &trans  &kp KEY_RH_T1  &trans               &trans               &trans               &trans               &trans  &trans
+ &trans              &trans              &trans              &trans     &kp KEY_LH_C2R6          &kp KEY_LH_T4  &kp KEY_LH_T5  &kp KEY_LH_T6  &kp KEY_RH_T6  &kp KEY_RH_T5  &kp KEY_RH_T4              &kp KEY_RH_C2R6               &trans               &trans               &trans  &trans
             >;
         };
 
         layer_LeftPinky {
             bindings = <
- &left_pinky_tap KEY_LH_C6R1  &left_pinky_tap KEY_LH_C5R1  &left_pinky_tap KEY_LH_C4R1  &left_pinky_tap KEY_LH_C3R1  &left_pinky_tap KEY_LH_C2R1                                                                                                                                     &trans               &trans               &trans               &trans  &trans
- &left_pinky_tap KEY_LH_C6R2  &left_pinky_tap KEY_LH_C5R2  &left_pinky_tap KEY_LH_C4R2  &left_pinky_tap KEY_LH_C3R2  &left_pinky_tap KEY_LH_C2R2  &left_pinky_tap KEY_LH_C1R2                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_pinky_tap KEY_LH_C6R3  &left_pinky_tap KEY_LH_C5R3  &left_pinky_tap KEY_LH_C4R3  &left_pinky_tap KEY_LH_C3R3  &left_pinky_tap KEY_LH_C2R3  &left_pinky_tap KEY_LH_C1R3                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_pinky_tap KEY_LH_C6R4                        &none              &LeftPinkyRingy              &LeftPinkyMiddy              &LeftPinkyIndex  &left_pinky_tap KEY_LH_C1R4                                                                                   &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
-                      &trans  &left_pinky_tap KEY_LH_C5R5  &left_pinky_tap KEY_LH_C4R5  &left_pinky_tap KEY_LH_C3R5  &left_pinky_tap KEY_LH_C2R5  &left_pinky_tap KEY_LH_C1R5  &mo LAY_LH_T1  &mo LAY_LH_T2  &left_pinky_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
-                      &trans  &left_pinky_tap KEY_LH_C5R6  &left_pinky_tap KEY_LH_C4R6  &left_pinky_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4  &mo LAY_LH_T5  &left_pinky_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
+ &left_pinky_tap KEY_LH_C6R1  &left_pinky_tap KEY_LH_C5R1  &left_pinky_tap KEY_LH_C4R1  &left_pinky_tap KEY_LH_C3R1  &left_pinky_tap KEY_LH_C2R1                                                                                                                                                 &trans               &trans               &trans               &trans  &trans
+ &left_pinky_tap KEY_LH_C6R2  &left_pinky_tap KEY_LH_C5R2  &left_pinky_tap KEY_LH_C4R2  &left_pinky_tap KEY_LH_C3R2  &left_pinky_tap KEY_LH_C2R2  &left_pinky_tap KEY_LH_C1R2                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_pinky_tap KEY_LH_C6R3  &left_pinky_tap KEY_LH_C5R3  &left_pinky_tap KEY_LH_C4R3  &left_pinky_tap KEY_LH_C3R3  &left_pinky_tap KEY_LH_C2R3  &left_pinky_tap KEY_LH_C1R3                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_pinky_tap KEY_LH_C6R4                        &none              &LeftPinkyRingy              &LeftPinkyMiddy              &LeftPinkyIndex  &left_pinky_tap KEY_LH_C1R4                                                                                               &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
+                      &trans  &left_pinky_tap KEY_LH_C5R5  &left_pinky_tap KEY_LH_C4R5  &left_pinky_tap KEY_LH_C3R5  &left_pinky_tap KEY_LH_C2R5  &left_pinky_tap KEY_LH_C1R5  &mo LAY_LH_T1  &left_pinky_tap KEY_LH_T2  &left_pinky_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_pinky_tap KEY_LH_C5R6  &left_pinky_tap KEY_LH_C4R6  &left_pinky_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4              &mo LAY_LH_T5  &left_pinky_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
             >;
         };
 
         layer_LeftRingy {
             bindings = <
- &left_ringy_tap KEY_LH_C6R1  &left_ringy_tap KEY_LH_C5R1  &left_ringy_tap KEY_LH_C4R1  &left_ringy_tap KEY_LH_C3R1  &left_ringy_tap KEY_LH_C2R1                                                                                                                                     &trans               &trans               &trans               &trans  &trans
- &left_ringy_tap KEY_LH_C6R2  &left_ringy_tap KEY_LH_C5R2  &left_ringy_tap KEY_LH_C4R2  &left_ringy_tap KEY_LH_C3R2  &left_ringy_tap KEY_LH_C2R2  &left_ringy_tap KEY_LH_C1R2                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_ringy_tap KEY_LH_C6R3  &left_ringy_tap KEY_LH_C5R3  &left_ringy_tap KEY_LH_C4R3  &left_ringy_tap KEY_LH_C3R3  &left_ringy_tap KEY_LH_C2R3  &left_ringy_tap KEY_LH_C1R3                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_ringy_tap KEY_LH_C6R4              &LeftRingyPinky                        &none              &LeftRingyMiddy              &LeftRingyIndex  &left_ringy_tap KEY_LH_C1R4                                                                                   &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
-                      &trans  &left_ringy_tap KEY_LH_C5R5  &left_ringy_tap KEY_LH_C4R5  &left_ringy_tap KEY_LH_C3R5  &left_ringy_tap KEY_LH_C2R5  &left_ringy_tap KEY_LH_C1R5  &mo LAY_LH_T1  &mo LAY_LH_T2  &left_ringy_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
-                      &trans  &left_ringy_tap KEY_LH_C5R6  &left_ringy_tap KEY_LH_C4R6  &left_ringy_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4  &mo LAY_LH_T5  &left_ringy_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
+ &left_ringy_tap KEY_LH_C6R1  &left_ringy_tap KEY_LH_C5R1  &left_ringy_tap KEY_LH_C4R1  &left_ringy_tap KEY_LH_C3R1  &left_ringy_tap KEY_LH_C2R1                                                                                                                                                 &trans               &trans               &trans               &trans  &trans
+ &left_ringy_tap KEY_LH_C6R2  &left_ringy_tap KEY_LH_C5R2  &left_ringy_tap KEY_LH_C4R2  &left_ringy_tap KEY_LH_C3R2  &left_ringy_tap KEY_LH_C2R2  &left_ringy_tap KEY_LH_C1R2                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_ringy_tap KEY_LH_C6R3  &left_ringy_tap KEY_LH_C5R3  &left_ringy_tap KEY_LH_C4R3  &left_ringy_tap KEY_LH_C3R3  &left_ringy_tap KEY_LH_C2R3  &left_ringy_tap KEY_LH_C1R3                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_ringy_tap KEY_LH_C6R4              &LeftRingyPinky                        &none              &LeftRingyMiddy              &LeftRingyIndex  &left_ringy_tap KEY_LH_C1R4                                                                                               &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
+                      &trans  &left_ringy_tap KEY_LH_C5R5  &left_ringy_tap KEY_LH_C4R5  &left_ringy_tap KEY_LH_C3R5  &left_ringy_tap KEY_LH_C2R5  &left_ringy_tap KEY_LH_C1R5  &mo LAY_LH_T1  &left_ringy_tap KEY_LH_T2  &left_ringy_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_ringy_tap KEY_LH_C5R6  &left_ringy_tap KEY_LH_C4R6  &left_ringy_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4              &mo LAY_LH_T5  &left_ringy_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
             >;
         };
 
         layer_LeftMiddy {
             bindings = <
- &left_middy_tap KEY_LH_C6R1  &left_middy_tap KEY_LH_C5R1  &left_middy_tap KEY_LH_C4R1  &left_middy_tap KEY_LH_C3R1  &left_middy_tap KEY_LH_C2R1                                                                                                                                     &trans               &trans               &trans               &trans  &trans
- &left_middy_tap KEY_LH_C6R2  &left_middy_tap KEY_LH_C5R2  &left_middy_tap KEY_LH_C4R2  &left_middy_tap KEY_LH_C3R2  &left_middy_tap KEY_LH_C2R2  &left_middy_tap KEY_LH_C1R2                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_middy_tap KEY_LH_C6R3  &left_middy_tap KEY_LH_C5R3  &left_middy_tap KEY_LH_C4R3  &left_middy_tap KEY_LH_C3R3  &left_middy_tap KEY_LH_C2R3  &left_middy_tap KEY_LH_C1R3                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_middy_tap KEY_LH_C6R4              &LeftMiddyPinky              &LeftMiddyRingy                        &none              &LeftMiddyIndex  &left_middy_tap KEY_LH_C1R4                                                                                   &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
-                      &trans  &left_middy_tap KEY_LH_C5R5  &left_middy_tap KEY_LH_C4R5  &left_middy_tap KEY_LH_C3R5  &left_middy_tap KEY_LH_C2R5  &left_middy_tap KEY_LH_C1R5  &mo LAY_LH_T1  &mo LAY_LH_T2  &left_middy_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
-                      &trans  &left_middy_tap KEY_LH_C5R6  &left_middy_tap KEY_LH_C4R6  &left_middy_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4  &mo LAY_LH_T5  &left_middy_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
+ &left_middy_tap KEY_LH_C6R1  &left_middy_tap KEY_LH_C5R1  &left_middy_tap KEY_LH_C4R1  &left_middy_tap KEY_LH_C3R1  &left_middy_tap KEY_LH_C2R1                                                                                                                                                 &trans               &trans               &trans               &trans  &trans
+ &left_middy_tap KEY_LH_C6R2  &left_middy_tap KEY_LH_C5R2  &left_middy_tap KEY_LH_C4R2  &left_middy_tap KEY_LH_C3R2  &left_middy_tap KEY_LH_C2R2  &left_middy_tap KEY_LH_C1R2                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_middy_tap KEY_LH_C6R3  &left_middy_tap KEY_LH_C5R3  &left_middy_tap KEY_LH_C4R3  &left_middy_tap KEY_LH_C3R3  &left_middy_tap KEY_LH_C2R3  &left_middy_tap KEY_LH_C1R3                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_middy_tap KEY_LH_C6R4              &LeftMiddyPinky              &LeftMiddyRingy                        &none              &LeftMiddyIndex  &left_middy_tap KEY_LH_C1R4                                                                                               &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
+                      &trans  &left_middy_tap KEY_LH_C5R5  &left_middy_tap KEY_LH_C4R5  &left_middy_tap KEY_LH_C3R5  &left_middy_tap KEY_LH_C2R5  &left_middy_tap KEY_LH_C1R5  &mo LAY_LH_T1  &left_middy_tap KEY_LH_T2  &left_middy_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_middy_tap KEY_LH_C5R6  &left_middy_tap KEY_LH_C4R6  &left_middy_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4              &mo LAY_LH_T5  &left_middy_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
             >;
         };
 
         layer_LeftIndex {
             bindings = <
- &left_index_tap KEY_LH_C6R1  &left_index_tap KEY_LH_C5R1  &left_index_tap KEY_LH_C4R1  &left_index_tap KEY_LH_C3R1  &left_index_tap KEY_LH_C2R1                                                                                                                                     &trans               &trans               &trans               &trans  &trans
- &left_index_tap KEY_LH_C6R2  &left_index_tap KEY_LH_C5R2  &left_index_tap KEY_LH_C4R2  &left_index_tap KEY_LH_C3R2  &left_index_tap KEY_LH_C2R2  &left_index_tap KEY_LH_C1R2                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_index_tap KEY_LH_C6R3  &left_index_tap KEY_LH_C5R3  &left_index_tap KEY_LH_C4R3  &left_index_tap KEY_LH_C3R3  &left_index_tap KEY_LH_C2R3  &left_index_tap KEY_LH_C1R3                                                                                   &trans               &trans               &trans               &trans               &trans  &trans
- &left_index_tap KEY_LH_C6R4              &LeftIndexPinky              &LeftIndexRingy              &LeftIndexMiddy                        &none  &left_index_tap KEY_LH_C1R4                                                                                   &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
-                      &trans  &left_index_tap KEY_LH_C5R5  &left_index_tap KEY_LH_C4R5  &left_index_tap KEY_LH_C3R5  &left_index_tap KEY_LH_C2R5  &left_index_tap KEY_LH_C1R5  &mo LAY_LH_T1  &mo LAY_LH_T2  &left_index_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
-                      &trans  &left_index_tap KEY_LH_C5R6  &left_index_tap KEY_LH_C4R6  &left_index_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4  &mo LAY_LH_T5  &left_index_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
+ &left_index_tap KEY_LH_C6R1  &left_index_tap KEY_LH_C5R1  &left_index_tap KEY_LH_C4R1  &left_index_tap KEY_LH_C3R1  &left_index_tap KEY_LH_C2R1                                                                                                                                                 &trans               &trans               &trans               &trans  &trans
+ &left_index_tap KEY_LH_C6R2  &left_index_tap KEY_LH_C5R2  &left_index_tap KEY_LH_C4R2  &left_index_tap KEY_LH_C3R2  &left_index_tap KEY_LH_C2R2  &left_index_tap KEY_LH_C1R2                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_index_tap KEY_LH_C6R3  &left_index_tap KEY_LH_C5R3  &left_index_tap KEY_LH_C4R3  &left_index_tap KEY_LH_C3R3  &left_index_tap KEY_LH_C2R3  &left_index_tap KEY_LH_C1R3                                                                                               &trans               &trans               &trans               &trans               &trans  &trans
+ &left_index_tap KEY_LH_C6R4              &LeftIndexPinky              &LeftIndexRingy              &LeftIndexMiddy                        &none  &left_index_tap KEY_LH_C1R4                                                                                               &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
+                      &trans  &left_index_tap KEY_LH_C5R5  &left_index_tap KEY_LH_C4R5  &left_index_tap KEY_LH_C3R5  &left_index_tap KEY_LH_C2R5  &left_index_tap KEY_LH_C1R5  &mo LAY_LH_T1  &left_index_tap KEY_LH_T2  &left_index_tap KEY_LH_T3  &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans  &trans
+                      &trans  &left_index_tap KEY_LH_C5R6  &left_index_tap KEY_LH_C4R6  &left_index_tap KEY_LH_C3R6              &mo LAY_LH_C2R6                               &mo LAY_LH_T4              &mo LAY_LH_T5  &left_index_tap KEY_LH_T6  &trans  &trans  &trans                       &trans               &trans               &trans               &trans  &trans
             >;
         };
 
         layer_RightIndex {
             bindings = <
- &trans              &trans              &trans              &trans              &trans                                                                                                                          &right_index_tap KEY_RH_C2R1  &right_index_tap KEY_RH_C3R1  &right_index_tap KEY_RH_C4R1  &right_index_tap KEY_RH_C5R1  &right_index_tap KEY_RH_C6R1
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_index_tap KEY_RH_C1R2  &right_index_tap KEY_RH_C2R2  &right_index_tap KEY_RH_C3R2  &right_index_tap KEY_RH_C4R2  &right_index_tap KEY_RH_C5R2  &right_index_tap KEY_RH_C6R2
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_index_tap KEY_RH_C1R3  &right_index_tap KEY_RH_C2R3  &right_index_tap KEY_RH_C3R3  &right_index_tap KEY_RH_C4R3  &right_index_tap KEY_RH_C5R3  &right_index_tap KEY_RH_C6R3
- &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                    &right_index_tap KEY_RH_C1R4                         &none              &RightIndexMiddy              &RightIndexRingy              &RightIndexPinky  &right_index_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_index_tap KEY_RH_T3  &mo LAY_RH_T2  &mo LAY_RH_T1  &right_index_tap KEY_RH_C1R5  &right_index_tap KEY_RH_C2R5  &right_index_tap KEY_RH_C3R5  &right_index_tap KEY_RH_C4R5  &right_index_tap KEY_RH_C5R5                        &trans
- &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_index_tap KEY_RH_T6  &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_index_tap KEY_RH_C3R6  &right_index_tap KEY_RH_C4R6  &right_index_tap KEY_RH_C5R6                        &trans
+ &trans              &trans              &trans              &trans              &trans                                                                                                                                       &right_index_tap KEY_RH_C2R1  &right_index_tap KEY_RH_C3R1  &right_index_tap KEY_RH_C4R1  &right_index_tap KEY_RH_C5R1  &right_index_tap KEY_RH_C6R1
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_index_tap KEY_RH_C1R2  &right_index_tap KEY_RH_C2R2  &right_index_tap KEY_RH_C3R2  &right_index_tap KEY_RH_C4R2  &right_index_tap KEY_RH_C5R2  &right_index_tap KEY_RH_C6R2
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_index_tap KEY_RH_C1R3  &right_index_tap KEY_RH_C2R3  &right_index_tap KEY_RH_C3R3  &right_index_tap KEY_RH_C4R3  &right_index_tap KEY_RH_C5R3  &right_index_tap KEY_RH_C6R3
+ &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                                 &right_index_tap KEY_RH_C1R4                         &none              &RightIndexMiddy              &RightIndexRingy              &RightIndexPinky  &right_index_tap KEY_RH_C6R4
+ &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_index_tap KEY_RH_T3  &right_index_tap KEY_RH_T2  &mo LAY_RH_T1  &right_index_tap KEY_RH_C1R5  &right_index_tap KEY_RH_C2R5  &right_index_tap KEY_RH_C3R5  &right_index_tap KEY_RH_C4R5  &right_index_tap KEY_RH_C5R5                        &trans
+ &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_index_tap KEY_RH_T6               &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_index_tap KEY_RH_C3R6  &right_index_tap KEY_RH_C4R6  &right_index_tap KEY_RH_C5R6                        &trans
             >;
         };
 
         layer_RightMiddy {
             bindings = <
- &trans              &trans              &trans              &trans              &trans                                                                                                                          &right_middy_tap KEY_RH_C2R1  &right_middy_tap KEY_RH_C3R1  &right_middy_tap KEY_RH_C4R1  &right_middy_tap KEY_RH_C5R1  &right_middy_tap KEY_RH_C6R1
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_middy_tap KEY_RH_C1R2  &right_middy_tap KEY_RH_C2R2  &right_middy_tap KEY_RH_C3R2  &right_middy_tap KEY_RH_C4R2  &right_middy_tap KEY_RH_C5R2  &right_middy_tap KEY_RH_C6R2
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_middy_tap KEY_RH_C1R3  &right_middy_tap KEY_RH_C2R3  &right_middy_tap KEY_RH_C3R3  &right_middy_tap KEY_RH_C4R3  &right_middy_tap KEY_RH_C5R3  &right_middy_tap KEY_RH_C6R3
- &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                    &right_middy_tap KEY_RH_C1R4              &RightMiddyIndex                         &none              &RightMiddyRingy              &RightMiddyPinky  &right_middy_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_middy_tap KEY_RH_T3  &mo LAY_RH_T2  &mo LAY_RH_T1  &right_middy_tap KEY_RH_C1R5  &right_middy_tap KEY_RH_C2R5  &right_middy_tap KEY_RH_C3R5  &right_middy_tap KEY_RH_C4R5  &right_middy_tap KEY_RH_C5R5                        &trans
- &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_middy_tap KEY_RH_T6  &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_middy_tap KEY_RH_C3R6  &right_middy_tap KEY_RH_C4R6  &right_middy_tap KEY_RH_C5R6                        &trans
+ &trans              &trans              &trans              &trans              &trans                                                                                                                                       &right_middy_tap KEY_RH_C2R1  &right_middy_tap KEY_RH_C3R1  &right_middy_tap KEY_RH_C4R1  &right_middy_tap KEY_RH_C5R1  &right_middy_tap KEY_RH_C6R1
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_middy_tap KEY_RH_C1R2  &right_middy_tap KEY_RH_C2R2  &right_middy_tap KEY_RH_C3R2  &right_middy_tap KEY_RH_C4R2  &right_middy_tap KEY_RH_C5R2  &right_middy_tap KEY_RH_C6R2
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_middy_tap KEY_RH_C1R3  &right_middy_tap KEY_RH_C2R3  &right_middy_tap KEY_RH_C3R3  &right_middy_tap KEY_RH_C4R3  &right_middy_tap KEY_RH_C5R3  &right_middy_tap KEY_RH_C6R3
+ &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                                 &right_middy_tap KEY_RH_C1R4              &RightMiddyIndex                         &none              &RightMiddyRingy              &RightMiddyPinky  &right_middy_tap KEY_RH_C6R4
+ &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_middy_tap KEY_RH_T3  &right_middy_tap KEY_RH_T2  &mo LAY_RH_T1  &right_middy_tap KEY_RH_C1R5  &right_middy_tap KEY_RH_C2R5  &right_middy_tap KEY_RH_C3R5  &right_middy_tap KEY_RH_C4R5  &right_middy_tap KEY_RH_C5R5                        &trans
+ &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_middy_tap KEY_RH_T6               &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_middy_tap KEY_RH_C3R6  &right_middy_tap KEY_RH_C4R6  &right_middy_tap KEY_RH_C5R6                        &trans
             >;
         };
 
         layer_RightRingy {
             bindings = <
- &trans              &trans              &trans              &trans              &trans                                                                                                                          &right_ringy_tap KEY_RH_C2R1  &right_ringy_tap KEY_RH_C3R1  &right_ringy_tap KEY_RH_C4R1  &right_ringy_tap KEY_RH_C5R1  &right_ringy_tap KEY_RH_C6R1
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_ringy_tap KEY_RH_C1R2  &right_ringy_tap KEY_RH_C2R2  &right_ringy_tap KEY_RH_C3R2  &right_ringy_tap KEY_RH_C4R2  &right_ringy_tap KEY_RH_C5R2  &right_ringy_tap KEY_RH_C6R2
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_ringy_tap KEY_RH_C1R3  &right_ringy_tap KEY_RH_C2R3  &right_ringy_tap KEY_RH_C3R3  &right_ringy_tap KEY_RH_C4R3  &right_ringy_tap KEY_RH_C5R3  &right_ringy_tap KEY_RH_C6R3
- &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                    &right_ringy_tap KEY_RH_C1R4              &RightRingyIndex              &RightRingyMiddy                         &none              &RightRingyPinky  &right_ringy_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_ringy_tap KEY_RH_T3  &mo LAY_RH_T2  &mo LAY_RH_T1  &right_ringy_tap KEY_RH_C1R5  &right_ringy_tap KEY_RH_C2R5  &right_ringy_tap KEY_RH_C3R5  &right_ringy_tap KEY_RH_C4R5  &right_ringy_tap KEY_RH_C5R5                        &trans
- &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_ringy_tap KEY_RH_T6  &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_ringy_tap KEY_RH_C3R6  &right_ringy_tap KEY_RH_C4R6  &right_ringy_tap KEY_RH_C5R6                        &trans
+ &trans              &trans              &trans              &trans              &trans                                                                                                                                       &right_ringy_tap KEY_RH_C2R1  &right_ringy_tap KEY_RH_C3R1  &right_ringy_tap KEY_RH_C4R1  &right_ringy_tap KEY_RH_C5R1  &right_ringy_tap KEY_RH_C6R1
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_ringy_tap KEY_RH_C1R2  &right_ringy_tap KEY_RH_C2R2  &right_ringy_tap KEY_RH_C3R2  &right_ringy_tap KEY_RH_C4R2  &right_ringy_tap KEY_RH_C5R2  &right_ringy_tap KEY_RH_C6R2
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_ringy_tap KEY_RH_C1R3  &right_ringy_tap KEY_RH_C2R3  &right_ringy_tap KEY_RH_C3R3  &right_ringy_tap KEY_RH_C4R3  &right_ringy_tap KEY_RH_C5R3  &right_ringy_tap KEY_RH_C6R3
+ &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                                 &right_ringy_tap KEY_RH_C1R4              &RightRingyIndex              &RightRingyMiddy                         &none              &RightRingyPinky  &right_ringy_tap KEY_RH_C6R4
+ &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_ringy_tap KEY_RH_T3  &right_ringy_tap KEY_RH_T2  &mo LAY_RH_T1  &right_ringy_tap KEY_RH_C1R5  &right_ringy_tap KEY_RH_C2R5  &right_ringy_tap KEY_RH_C3R5  &right_ringy_tap KEY_RH_C4R5  &right_ringy_tap KEY_RH_C5R5                        &trans
+ &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_ringy_tap KEY_RH_T6               &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_ringy_tap KEY_RH_C3R6  &right_ringy_tap KEY_RH_C4R6  &right_ringy_tap KEY_RH_C5R6                        &trans
             >;
         };
 
         layer_RightPinky {
             bindings = <
- &trans              &trans              &trans              &trans              &trans                                                                                                                          &right_pinky_tap KEY_RH_C2R1  &right_pinky_tap KEY_RH_C3R1  &right_pinky_tap KEY_RH_C4R1  &right_pinky_tap KEY_RH_C5R1  &right_pinky_tap KEY_RH_C6R1
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_pinky_tap KEY_RH_C1R2  &right_pinky_tap KEY_RH_C2R2  &right_pinky_tap KEY_RH_C3R2  &right_pinky_tap KEY_RH_C4R2  &right_pinky_tap KEY_RH_C5R2  &right_pinky_tap KEY_RH_C6R2
- &trans              &trans              &trans              &trans              &trans  &trans                                                                                    &right_pinky_tap KEY_RH_C1R3  &right_pinky_tap KEY_RH_C2R3  &right_pinky_tap KEY_RH_C3R3  &right_pinky_tap KEY_RH_C4R3  &right_pinky_tap KEY_RH_C5R3  &right_pinky_tap KEY_RH_C6R3
- &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                    &right_pinky_tap KEY_RH_C1R4              &RightPinkyIndex              &RightPinkyMiddy              &RightPinkyRingy                         &none  &right_pinky_tap KEY_RH_C6R4
- &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_pinky_tap KEY_RH_T3  &mo LAY_RH_T2  &mo LAY_RH_T1  &right_pinky_tap KEY_RH_C1R5  &right_pinky_tap KEY_RH_C2R5  &right_pinky_tap KEY_RH_C3R5  &right_pinky_tap KEY_RH_C4R5  &right_pinky_tap KEY_RH_C5R5                        &trans
- &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_pinky_tap KEY_RH_T6  &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_pinky_tap KEY_RH_C3R6  &right_pinky_tap KEY_RH_C4R6  &right_pinky_tap KEY_RH_C5R6                        &trans
+ &trans              &trans              &trans              &trans              &trans                                                                                                                                       &right_pinky_tap KEY_RH_C2R1  &right_pinky_tap KEY_RH_C3R1  &right_pinky_tap KEY_RH_C4R1  &right_pinky_tap KEY_RH_C5R1  &right_pinky_tap KEY_RH_C6R1
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_pinky_tap KEY_RH_C1R2  &right_pinky_tap KEY_RH_C2R2  &right_pinky_tap KEY_RH_C3R2  &right_pinky_tap KEY_RH_C4R2  &right_pinky_tap KEY_RH_C5R2  &right_pinky_tap KEY_RH_C6R2
+ &trans              &trans              &trans              &trans              &trans  &trans                                                                                                 &right_pinky_tap KEY_RH_C1R3  &right_pinky_tap KEY_RH_C2R3  &right_pinky_tap KEY_RH_C3R3  &right_pinky_tap KEY_RH_C4R3  &right_pinky_tap KEY_RH_C5R3  &right_pinky_tap KEY_RH_C6R3
+ &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY  &trans                                                                                                 &right_pinky_tap KEY_RH_C1R4              &RightPinkyIndex              &RightPinkyMiddy              &RightPinkyRingy                         &none  &right_pinky_tap KEY_RH_C6R4
+ &trans              &trans              &trans              &trans              &trans  &trans  &trans  &trans  &trans  &right_pinky_tap KEY_RH_T3  &right_pinky_tap KEY_RH_T2  &mo LAY_RH_T1  &right_pinky_tap KEY_RH_C1R5  &right_pinky_tap KEY_RH_C2R5  &right_pinky_tap KEY_RH_C3R5  &right_pinky_tap KEY_RH_C4R5  &right_pinky_tap KEY_RH_C5R5                        &trans
+ &trans              &trans              &trans              &trans              &trans          &trans  &trans  &trans  &right_pinky_tap KEY_RH_T6               &mo LAY_RH_T5  &mo LAY_RH_T4                                             &mo LAY_RH_C2R6  &right_pinky_tap KEY_RH_C3R6  &right_pinky_tap KEY_RH_C4R6  &right_pinky_tap KEY_RH_C5R6                        &trans
             >;
         };
 
@@ -10800,8 +10822,8 @@ macros {
      &none             &kp ESC             &kp INS         &kp LS(TAB)             &kp DEL       &none                                                                               &kp C_MEDIA_HOME     &kp C_PLAY    &kp C_PREV    &kp C_NEXT     &kp C_STOP     &kp C_EJECT
      &none             &kp RET           &kp SPACE             &kp TAB            &kp BSPC  &kp K_CALC                                                                                     &kp K_CALC         &kp F7        &kp F8        &kp F9        &kp F10         &kp F13
  &sk LSHFT  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &kp K_WWW                                                                                      &kp K_WWW         &kp F4        &kp F5        &kp F6        &kp F11         &kp F14
-     &none         &select_all        &select_line        &select_word           &kp _FIND  &kp _FILES  &tog LAYER_Function   &none   &none  &kp C_PREV      &kp C_PP    &kp C_MUTE        &kp _FILES         &kp F1        &kp F2        &kp F3        &kp F12         &kp F15
-     &none           &kp _UNDO           &kp _REDO      &kp _FIND_PREV      &kp _FIND_NEXT                            &none   &none   &none  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP                    &kp C_BRI_MAX  &kp C_BRI_UP  &kp C_BRI_DN  &kp C_BRI_MIN  &kp C_BRI_AUTO
+     &none         &select_all        &select_line        &select_word           &kp _FIND  &kp _FILES  &tog LAYER_Function   &none   &none    &kp C_PP    &kp C_PREV    &kp C_NEXT        &kp _FILES         &kp F1        &kp F2        &kp F3        &kp F12         &kp F15
+     &none           &kp _UNDO           &kp _REDO      &kp _FIND_PREV      &kp _FIND_NEXT                            &none   &none   &none  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                    &kp C_BRI_MAX  &kp C_BRI_UP  &kp C_BRI_DN  &kp C_BRI_MIN  &kp C_BRI_AUTO
             >;
         };
 
@@ -10818,12 +10840,12 @@ macros {
 
         layer_Symbol {
             bindings = <
-         &none          &none         &none          &none          &none                                                                                                                   &none                &none                &none                &none             &none
-         &none      &kp GRAVE    &kp LS(N9)     &kp LS(N0)       &kp SEMI     &kp COMMA                                                                               &none                 &none                &none                &none                &none             &none
-    &kp LS(N1)       &kp LBKT  &kp LS(LBKT)   &kp LS(RBKT)       &kp RBKT  &kp LS(FSLH)                                                                             &kp DOT               &kp DEL          &kp LS(TAB)              &kp INS              &kp ESC             &none
-    &kp LS(N3)     &kp LS(N6)     &kp EQUAL  &kp LS(MINUS)     &kp LS(N4)    &kp LS(N8)                                                                           &kp COMMA              &kp BSPC              &kp TAB            &kp SPACE              &kp RET  &triple_backtick
- &kp LS(GRAVE)  &kp LS(COMMA)  &kp LS(BSLH)      &kp MINUS    &kp LS(DOT)      &kp FSLH    &kp BSLH       &kp DOT  &kp LS(N8)   &none   &none              &none   &kp SEMI  &kp LS(SINGLE_QUOTE)              &kp SQT            &kp GRAVE             &kp BSLH            &trans
-      &dot_dot     &kp LS(N7)       &kp SQT    &kp LS(SQT)  &kp LS(EQUAL)                &kp LS(N5)  &kp LS(SEMI)  &kp LS(N2)   &none   &none  &tog LAYER_Symbol              &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD             &none
+         &none          &none         &none          &none          &none                                                                                                                  &none                 &none                &none                &none     &none
+         &none      &kp GRAVE    &kp LS(N9)     &kp LS(N0)       &kp SEMI     &kp COMMA                                                                               &none                &none                 &none                &none                &none     &none
+    &kp LS(N1)       &kp LBKT  &kp LS(LBKT)   &kp LS(RBKT)       &kp RBKT  &kp LS(FSLH)                                                                               &none              &kp DEL           &kp LS(TAB)              &kp INS              &kp ESC     &none
+    &kp LS(N3)     &kp LS(N6)     &kp EQUAL  &kp LS(MINUS)     &kp LS(N4)    &kp LS(N8)                                                                           &kp COMMA             &kp BSPC               &kp TAB            &kp SPACE              &kp RET   &kp DOT
+ &kp LS(GRAVE)  &kp LS(COMMA)  &kp LS(BSLH)      &kp MINUS    &kp LS(DOT)      &kp FSLH    &kp BSLH       &kp DOT  &kp LS(N8)   &none   &none              &none   &kp SEMI     &triple_backtick  &kp LS(SINGLE_QUOTE)              &kp SQT            &kp GRAVE  &kp BSLH
+      &dot_dot     &kp LS(N7)       &kp SQT    &kp LS(SQT)  &kp LS(EQUAL)                &kp LS(N5)  &kp LS(SEMI)  &kp LS(N2)   &none   &none  &tog LAYER_Symbol             &kp RIGHT_INDEX_MOD   &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD     &none
             >;
         };
 
@@ -10873,12 +10895,12 @@ macros {
 
         layer_World {
             bindings = <
-                &none                     &none                 &none                &none                &none                                                                                           &none      &none      &none      &none   &none
-                &none                     &none                 &none                &none                &none                 &none                                                   &none             &none      &none      &none      &none   &none
-                &none                     &none         &world_y_base        &world_o_base        &world_u_base     &world_sign_angle                                                   &none             &none   &sk LALT   &sk RALT      &none   &none
-                &none    &world_consonants_base         &world_i_base        &world_a_base        &world_e_base      &world_sign_dash                                                   &none         &sk LSHFT  &sk LCTRL  &sk RCTRL  &sk RSHFT   &none
- &world_currency_base   &world_quotes_left_base  &world_sign_landmark  &world_sign_ordinal  &world_sign_exclaim  &world_sign_question   &none   &none   &none   &none   &none   &none   &none             &none      &none      &none      &none   &none
-     &world_sign_base  &world_quotes_right_base                 &none                &none                &none                         &none   &none   &none   &none   &none   &none          &tog LAYER_World      &none      &none      &none   &none
+                &none                     &none             &none              &none                 &none                                                                                           &none      &none      &none      &none   &none
+                &none                     &none             &none              &none                 &none                 &none                                                   &none             &none      &none      &none      &none   &none
+                &none                     &none     &world_y_base      &world_u_base         &world_o_base   &world_sign_ordinal                                                   &none             &none   &sk LALT   &sk RALT      &none   &none
+                &none    &world_consonants_base     &world_i_base      &world_e_base         &world_a_base   &world_sign_exclaim                                                   &none         &sk LSHFT  &sk LCTRL  &sk RCTRL  &sk RSHFT   &none
+ &world_currency_base   &world_quotes_left_base  &world_sign_dash  &world_sign_angle  &world_sign_landmark  &world_sign_question   &none   &none   &none   &none   &none   &none   &none             &none      &none      &none      &none   &none
+     &world_sign_base  &world_quotes_right_base             &none              &none                 &none                         &none   &none   &none   &none   &none   &none          &tog LAYER_World      &none      &none      &none   &none
             >;
         };
 

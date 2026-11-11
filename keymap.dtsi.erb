@@ -137,6 +137,9 @@
       tap = 0 # &kp 0 is functionally equivalent to &none
       lay = nil
       case behavior
+      when "&none"
+        warn "got &none: i=#{index} k=#{key} p=#{KEY_BY_POS[index]}"
+
       when "&kp"
         tap = resolve_nested_keystrokes(key)
 

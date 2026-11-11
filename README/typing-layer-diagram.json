@@ -431,14 +431,14 @@
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos left\"><li>Combo T1+T4 = Shift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li></ul>",
+    "<ul class=\"combos left\"><li>Combo T4+T5 = Shift (tap: sticky one-shot)</li><li>Combo T1+T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li></ul>",
     {
       "x": 9.5,
       "w": 5,
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T1+T4</li><li>CapsWord on/off = Combo T4+T5</li><li>CapsLock on/off = Combo T1+T5</li><li><b>Typing layer on/off = Combo C1R5+C2R6</b></li></ul>"
+    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T4+T5</li><li>CapsWord on/off = Combo T1+T4+T5</li><li>CapsLock on/off = Combo T1+T5</li><li><b>Typing layer on/off = Combo C1R5+C2R6</b></li></ul>"
   ],
   [
     {

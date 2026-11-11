@@ -583,19 +583,18 @@
     {
       "y": -0.27500000000000036,
       "x": 0.25,
-      "c": "#ffff8d",
       "t": "#000000",
-      "p": "SA SPACE",
+      "g": true,
       "f": 3
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower"
+    ""
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -0.15000000000000036,
       "c": "#d1c4e9",
-      "p": "CHICKLET",
+      "g": false,
       "a": 5,
       "fa": [
         2,
@@ -640,18 +639,18 @@
     {
       "y": 0.15000000000000036,
       "x": 0.7000000000000002,
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET"
+      "c": "#ffff8d",
+      "p": "SA SPACE"
     },
-    ""
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": 0.7000000000000002,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -682,18 +681,18 @@
     {
       "y": 0.15000000000000036,
       "x": -1.6999999999999993,
-      "c": "#cccccc",
-      "g": true,
-      "p": "CHICKLET"
+      "c": "#ffff8d",
+      "p": "SA SPACE"
     },
-    ""
+    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -1.6999999999999993,
+      "c": "#cccccc",
       "t": "#9E9E9E",
-      "g": false,
+      "p": "CHICKLET",
       "f": 5,
       "d": true
     },
@@ -712,19 +711,18 @@
     {
       "y": -0.27500000000000036,
       "x": -1.25,
-      "c": "#ffff8d",
       "t": "#000000",
-      "p": "SA SPACE",
+      "g": true,
       "f": 3
     },
-    "<img src=\"https://openclipart.org/download/278214/fingerprint.svg\" width=\"36\" height=\"36\" />\n\n\n\nLower"
+    ""
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -0.8499999999999996,
       "c": "#d1c4e9",
-      "p": "CHICKLET",
+      "g": false,
       "a": 5,
       "fa": [
         2
