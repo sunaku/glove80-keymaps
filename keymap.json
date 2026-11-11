@@ -12086,12 +12086,7 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "DOT"
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&kp",
@@ -12247,15 +12242,12 @@
         ]
       },
       {
-        "value": "Custom",
+        "value": "&kp",
         "params": [
           {
-            "value": "&triple_backtick"
+            "value": "DOT"
           }
-        ],
-        "decoration": {
-          "label": "```"
-        }
+        ]
       },
       {
         "value": "&kp",
@@ -12372,6 +12364,17 @@
         ]
       },
       {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&triple_backtick"
+          }
+        ],
+        "decoration": {
+          "label": "```"
+        }
+      },
+      {
         "value": "&kp",
         "params": [
           {
@@ -12407,9 +12410,6 @@
             "value": "BSLH"
           }
         ]
-      },
-      {
-        "value": "&trans"
       },
       {
         "value": "Custom",

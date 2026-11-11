@@ -340,11 +340,11 @@
       Symbol {
         bindings = <
           ___ ___ ___ ___ ___                                             ___ ___ ___ ___ ___
-          COR PNK AZU AZU CHU CHU                                     ___ ___ ___ ___ ___ ___
-          PUR AZU AZU AZU AZU GDN                                     CHU COR COR COR COR ___
-          GDN GDN SPG BLU GDN GDN                                     CHU COR COR COR COR ___
-          PUR SPG SPG SPG SPG GDN     PUR CHU GDN     ___ ___ ___     CHU PNK PNK PNK PUR YLW
-          COR BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         YLW GRN CYN MAJ ___
+          ___ PNK AZU AZU CHU CHU                                     ___ ___ ___ ___ ___ ___
+          PUR AZU AZU AZU AZU GDN                                     ___ COR COR COR COR ___
+          GDN GDN SPG BLU GDN GDN                                     CHU COR COR COR COR CHU
+          PUR SPG SPG SPG SPG GDN     PUR CHU GDN     ___ ___ ___     CHU WHT PNK PNK PNK PUR
+          WHT BLU PNK PNK BLU         GDN GDN GDN     ___ ___ RED         YLW GRN CYN MAJ ___
         >;
         layer-id = <LAYER_Symbol>;
       };
