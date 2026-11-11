@@ -137,6 +137,9 @@
       tap = 0 # &kp 0 is functionally equivalent to &none
       lay = nil
       case behavior
+      when "&none"
+        warn "got &none: i=#{index} k=#{key} p=#{KEY_BY_POS[index]}"
+
       when "&kp"
         tap = resolve_nested_keystrokes(key)
 
@@ -233,90 +236,6 @@ combos {
     emit_setting_ifndef.(:SHIFT_FIRING_DECAY, 50)
   %>
 
-  // T2+T3
-
-  combo_sticky_globe_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T3>;
-    bindings = <&sk _GLOBE>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_sticky_globe_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T3>;
-    bindings = <&sk _GLOBE>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  // T1+T2
-
-  combo_sticky_altgr_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T2>;
-    bindings = <&sk RALT>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_sticky_altgr_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T2>;
-    bindings = <&sk RALT>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  // T1+T4
-
-  #if defined(_A_TAB) && defined(LAYER_Cursor)
-  combo_alt_tab_switcher_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T1 POS_LH_T4>;
-    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-  #endif
-
-  combo_hyper_GACS_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T4>;
-    bindings = <&kp LG(LA(LC(LSHFT)))>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  // T3+T6
-
-  #if defined(_G_TAB) && defined(LAYER_Cursor)
-  combo_win_tab_switcher_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T3 POS_LH_T6>;
-    bindings = <&mod_tab_chord _G_TAB LAYER_Cursor>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-  #endif
-
-  combo_turbo_CS_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T3 POS_RH_T6>;
-    bindings = <&kp LC(LSHFT)>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  // T2+T5
-
-  combo_ctrl_tab_switcher_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T5>;
-    bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
-  combo_meh_ACS_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T5>;
-    bindings = <&kp LA(LC(LSHFT))>;
-    layers = <<%= alpha_layer_ids %>>;
-  };
-
   // T4+T5
 
   combo_sticky_shift_left {
@@ -363,6 +282,90 @@ combos {
     key-positions = <POS_RH_T1 POS_RH_T5>;
     bindings = <&kp CAPSLOCK>;
     layers = <<%= typing_layer_ids %>>;
+  };
+
+  // T1+T4
+
+  #if defined(_A_TAB) && defined(LAYER_Cursor)
+  combo_alt_tab_switcher_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T4>;
+    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+  #endif
+
+  combo_hyper_GACS_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T4>;
+    bindings = <&kp LG(LA(LC(LSHFT)))>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T2+T5
+
+  combo_ctrl_tab_switcher_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T2 POS_LH_T5>;
+    bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_meh_ACS_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T2 POS_RH_T5>;
+    bindings = <&kp LA(LC(LSHFT))>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T3+T6
+
+  #if defined(_G_TAB) && defined(LAYER_Cursor)
+  combo_win_tab_switcher_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T3 POS_LH_T6>;
+    bindings = <&mod_tab_chord _G_TAB LAYER_Cursor>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+  #endif
+
+  combo_turbo_CS_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T3 POS_RH_T6>;
+    bindings = <&kp LC(LSHFT)>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T1+T2
+
+  combo_sticky_altgr_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T1 POS_LH_T2>;
+    bindings = <&sk RALT>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_sticky_altgr_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T1 POS_RH_T2>;
+    bindings = <&sk RALT>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  // T2+T3
+
+  combo_sticky_globe_left {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_LH_T2 POS_LH_T3>;
+    bindings = <&sk _GLOBE>;
+    layers = <<%= alpha_layer_ids %>>;
+  };
+
+  combo_sticky_globe_right {
+    timeout-ms = <COMBO_FIRING_DECAY>;
+    key-positions = <POS_RH_T2 POS_RH_T3>;
+    bindings = <&sk _GLOBE>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T5+T6

@@ -81,7 +81,7 @@
       "h": 4.75,
       "d": true
     },
-    "<center><h1>Base Layer</h1><h2>(Enthium v14)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
+    "<center><h1>Base Layer</h1><h2>(Enthium v15)</h2><p>MoErgo Glove80 keyboard</p><ul><li><a href='https://github.com/manna-harbour/miryoku'>Miryoku</a> layers & home row mods</li><li><a href='https://github.com/sunaku/glove80-keymaps'>Glorious Engrammer</a> keymap</li><li>See <a href='https://is.gd/sunaku_glove80'>is.gd/sunaku_glove80</a></li></ul></center>",
     {
       "x": 1,
       "c": "#cccccc",
@@ -187,12 +187,12 @@
       "t": "#000000"
     },
     "Y",
-    "O",
     "U",
+    "O",
     {
       "a": 5
     },
-    "+\n=",
+    ":\n;",
     {
       "x": 7.25,
       "a": 7
@@ -249,18 +249,18 @@
     {
       "c": "#dcedc8"
     },
-    "A\n\n\n\nCtrl",
+    "E\n\n\n\nCtrl",
     {
       "c": "#ffecb3",
       "n": true
     },
-    "E\n\n\n\nShift",
+    "A\n\n\n\nShift",
     {
       "c": "#cccccc",
       "p": "CHICKLET",
       "a": 5
     },
-    "_\n-",
+    "<\n,",
     {
       "x": 7.25,
       "a": 7
@@ -321,9 +321,9 @@
       "t": "#000000",
       "a": 5
     },
-    "<\n,",
+    "_\n-",
+    "+\n=",
     ">\n.",
-    ":\n;",
     {
       "f": 4
     },
@@ -400,23 +400,22 @@
     {
       "c": "#d1c4e9",
       "p": "SPACE",
-      "f": 3,
-      "fa": [
-        1
-      ]
+      "f": 5
     },
-    "tap:sticky one-shot Shift\n\n\n\nEmoji",
+    "~\n`\n\n\nEmoji",
     {
-      "x": 9.25
+      "x": 9.25,
+      "a": 7,
+      "f": 3
     },
-    "tap:sticky one-shot RShift\n\n\n\nWorld",
+    "Page up\n\n\n\nWorld",
     {
       "c": "#cccccc",
       "p": "CHICKLET",
-      "f": 4
+      "a": 5
     },
-    "{\n[",
-    "}\n]"
+    "<i class='fa fa-mouse-pointer'></i>\nup\n\n\n\n\nScroll",
+    "<i class='fa fa-mouse-pointer'></i>\ndown\n\n\n\n\nScroll"
   ],
   [
     {
@@ -441,13 +440,12 @@
     "|\n\\",
     {
       "x": 15.25,
-      "f": 5
-    },
-    "~\n`",
-    {
-      "p": "SA SPACE",
       "a": 7,
       "f": 3
+    },
+    "Page down",
+    {
+      "p": "SA SPACE"
     },
     "Magic\n\n\n\nMagic",
     {
@@ -468,14 +466,14 @@
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos left\"><li>Combo T1+T5 = Shift (tap: sticky one-shot)</li><li>Combo T4+T5 = CapsWord on/off</li><li>Combo T2+T6 = CapsLock on/off</li><li>Combo T1+T4 = Alt+Tab menu (tap: switch)</li><li>Combo T2+T5 = Ctrl+Tab menu (tap: switch)</li><li>Combo T3+T6 = Win+Tab menu (tap: switch)</li><li>Combo T1+T2 = sticky RAlt (AltGr)</li><li>Combo T2+T3 = sticky Globe (macOS) or Win</li><li>Combo T5+T6 = Typing layer (key auto-repeat)</li><li>Combo T1+T2+T3 = unlock all, go to base layer</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
+    "<ul class=\"combos left\"><li>Combo T4+T5 = Shift (tap: sticky one-shot)</li><li>Combo T1+T4+T5 = CapsWord on/off</li><li>Combo T1+T5 = CapsLock on/off</li><li>Combo T1+T4 = Alt+Tab menu (tap: switch)</li><li>Combo T2+T5 = Ctrl+Tab menu (tap: switch)</li><li>Combo T3+T6 = Win+Tab menu (tap: switch)</li><li>Combo T1+T2 = sticky RAlt (AltGr)</li><li>Combo T2+T3 = sticky Globe (macOS) or Win</li><li>Combo T5+T6 = Typing layer (key auto-repeat)</li><li>Combo T1+T2+T3 = unlock all, go to base layer</li><li>Combo C1R5+C2R6 = Gaming layer on/off</li></ul>",
     {
       "x": 9.5,
       "w": 5,
       "h": 4,
       "d": true
     },
-    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T1+T5</li><li>CapsWord on/off = Combo T4+T5</li><li>CapsLock on/off = Combo T2+T6</li><li>Hyper (Win+Alt+Ctrl+Shift) = Combo T1+T4</li><li>Meh (Alt+Ctrl+Shift) = Combo T2+T5</li><li>Turbo (Ctrl+Shift) = Combo T3+T6</li><li>sticky RAlt (AltGr) = Combo T1+T2</li><li>sticky Globe (macOS) or Win = Combo T2+T3</li><li>Typing layer (key auto-repeat) = Combo T5+T6</li><li>unlock all, go to base layer = Combo T1+T2+T3</li><li>Typing layer on/off = Combo C1R5+C2R6</li></ul>"
+    "<ul class=\"combos right\"><li>RShift (tap: sticky one-shot) = Combo T4+T5</li><li>CapsWord on/off = Combo T1+T4+T5</li><li>CapsLock on/off = Combo T1+T5</li><li>Hyper (Win+Alt+Ctrl+Shift) = Combo T1+T4</li><li>Meh (Alt+Ctrl+Shift) = Combo T2+T5</li><li>Turbo (Ctrl+Shift) = Combo T3+T6</li><li>sticky RAlt (AltGr) = Combo T1+T2</li><li>sticky Globe (macOS) or Win = Combo T2+T3</li><li>Typing layer (key auto-repeat) = Combo T5+T6</li><li>unlock all, go to base layer = Combo T1+T2+T3</li><li>Typing layer on/off = Combo C1R5+C2R6</li></ul>"
   ],
   [
     {
@@ -534,18 +532,17 @@
     {
       "y": -0.27500000000000036,
       "x": 0.25,
-      "c": "#ffccbc",
       "t": "#000000",
-      "p": "SPACE",
       "f": 3
     },
-    "Insert\n\n\n\nLower"
+    "Insert"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -0.15000000000000036,
-      "c": "#d1c4e9"
+      "c": "#d1c4e9",
+      "p": "SPACE"
     },
     "Tab\n\n\n\nNumber"
   ],
@@ -575,22 +572,31 @@
       "y": -0.27500000000000036,
       "x": 0.9000000000000004,
       "t": "#000000",
+      "g": true,
       "f": 3
     },
-    "Page up"
+    ""
   ],
   [
     {
       "y": 0.15000000000000036,
-      "x": 0.7000000000000002
+      "x": 0.7000000000000002,
+      "c": "#ffccbc",
+      "g": false,
+      "p": "SPACE",
+      "a": 5,
+      "f": 4
     },
-    "Page down"
+    "{\n[\n\n\nLower"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": 0.7000000000000002,
+      "c": "#cccccc",
       "t": "#9E9E9E",
+      "p": "CHICKLET",
+      "a": 7,
       "f": 5,
       "d": true
     },
@@ -611,23 +617,30 @@
       "y": -0.27500000000000036,
       "x": -1.9000000000000004,
       "t": "#000000",
-      "a": 5,
+      "g": true,
       "f": 3
     },
-    "<i class='fa fa-mouse-pointer'></i>\nup\n\n\nLower\n\nScroll"
+    ""
   ],
   [
     {
       "y": 0.15000000000000036,
-      "x": -1.6999999999999993
+      "x": -1.6999999999999993,
+      "c": "#ffccbc",
+      "g": false,
+      "p": "SPACE",
+      "a": 5,
+      "f": 4
     },
-    "<i class='fa fa-mouse-pointer'></i>\ndown\n\n\n\n\nScroll"
+    "}\n]\n\n\nLower"
   ],
   [
     {
       "y": -0.20000000000000018,
       "x": -1.6999999999999993,
+      "c": "#cccccc",
       "t": "#9E9E9E",
+      "p": "CHICKLET",
       "a": 7,
       "f": 5,
       "d": true
@@ -647,18 +660,17 @@
     {
       "y": -0.27500000000000036,
       "x": -1.25,
-      "c": "#ffccbc",
       "t": "#000000",
-      "p": "SPACE",
       "f": 3
     },
-    "Delete\n\n\n\nLower"
+    "Delete"
   ],
   [
     {
       "y": 0.15000000000000036,
       "x": -0.8499999999999996,
-      "c": "#d1c4e9"
+      "c": "#d1c4e9",
+      "p": "SPACE"
     },
     "Back space\n\n\n\nMouse"
   ],

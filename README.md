@@ -1,4 +1,4 @@
-# Glorious Engrammer v52 🧑‍🚀🚀✨ keymap for Glove80
+# Glorious Engrammer v53a candidate keymap for Glove80
 
 This is [my Glove80] keymap featuring the [Enthium] layout with [Miryoku]-style
 layers and [home row mods].  Other layouts (**QWERTY**, Dvorak, and Colemak)
@@ -16,7 +16,7 @@ README/base-layer-photograph-Enthium.webp )
 
 Open the following link to clone/customize/build this keymap for your Glove80:
 
-- https://my.moergo.com/glove80/#/layout/user/909a8599-903f-44f3-a51e-5130ecdf2999
+- https://my.moergo.com/glove80/#/layout/user/a45ff7d5-a536-49a3-81e9-ed5024b7c8e1
 
 For your reference, here are my personal customizations on top of the defaults:
 
