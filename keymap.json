@@ -211,14 +211,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "O"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "U"
           }
         ]
@@ -227,7 +219,15 @@
         "value": "&kp",
         "params": [
           {
-            "value": "EQUAL"
+            "value": "O"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "SEMI"
           }
         ]
       },
@@ -314,11 +314,11 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftMiddy (A, LAYER_Enthium)"
+            "value": "&LeftMiddy (E, LAYER_Enthium)"
           }
         ],
         "decoration": {
-          "label": "A",
+          "label": "E",
           "icon": "fa-align-left",
           "background": "#dcedc8ff",
           "description": "Hold for Ctrl on Linux and Windows, or Cmd on macOS."
@@ -328,11 +328,11 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&LeftIndex (E, LAYER_Enthium)"
+            "value": "&LeftIndex (A, LAYER_Enthium)"
           }
         ],
         "decoration": {
-          "label": "E",
+          "label": "A",
           "icon": "fa-align-left",
           "background": "#ffecb3ff",
           "description": "Hold for Shift."
@@ -342,7 +342,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "MINUS"
+            "value": "COMMA"
           }
         ]
       },
@@ -444,7 +444,15 @@
         "value": "&kp",
         "params": [
           {
-            "value": "COMMA"
+            "value": "MINUS"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "EQUAL"
           }
         ]
       },
@@ -453,14 +461,6 @@
         "params": [
           {
             "value": "DOT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SEMI"
           }
         ]
       },
@@ -15055,18 +15055,6 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_o_base"
-          }
-        ],
-        "decoration": {
-          "label": "Ó",
-          "background": "#e0f2f1"
-        }
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
             "value": "&world_u_base"
           }
         ],
@@ -15079,11 +15067,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_sign_angle"
+            "value": "&world_o_base"
           }
         ],
         "decoration": {
-          "label": "° π",
+          "label": "Ó",
+          "background": "#e0f2f1"
+        }
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_ordinal"
+          }
+        ],
+        "decoration": {
+          "label": "º ª",
           "background": "#e8f5e9"
         }
       },
@@ -15158,18 +15158,6 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_a_base"
-          }
-        ],
-        "decoration": {
-          "label": "Á",
-          "background": "#e0f2f1"
-        }
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
             "value": "&world_e_base"
           }
         ],
@@ -15182,11 +15170,23 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&world_sign_dash"
+            "value": "&world_a_base"
           }
         ],
         "decoration": {
-          "label": "– —",
+          "label": "Á",
+          "background": "#e0f2f1"
+        }
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_exclaim"
+          }
+        ],
+        "decoration": {
+          "label": "¡ !",
           "background": "#e8f5e9"
         }
       },
@@ -15280,35 +15280,35 @@
         "value": "Custom",
         "params": [
           {
+            "value": "&world_sign_dash"
+          }
+        ],
+        "decoration": {
+          "label": "– —",
+          "background": "#e8f5e9"
+        }
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
+            "value": "&world_sign_angle"
+          }
+        ],
+        "decoration": {
+          "label": "° π",
+          "background": "#e8f5e9"
+        }
+      },
+      {
+        "value": "Custom",
+        "params": [
+          {
             "value": "&world_sign_landmark"
           }
         ],
         "decoration": {
           "label": "§ ¶",
-          "background": "#e8f5e9"
-        }
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_sign_ordinal"
-          }
-        ],
-        "decoration": {
-          "label": "º ª",
-          "background": "#e8f5e9"
-        }
-      },
-      {
-        "value": "Custom",
-        "params": [
-          {
-            "value": "&world_sign_exclaim"
-          }
-        ],
-        "decoration": {
-          "label": "¡ !",
           "background": "#e8f5e9"
         }
       },
